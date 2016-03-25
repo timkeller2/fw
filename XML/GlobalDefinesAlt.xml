@@ -10,6 +10,10 @@
         <iDefineIntVal>0</iDefineIntVal>
     </Define>
     <Define>
+		<DefineName>COMMERCE_PERCENT_CHANGE_INCREMENTS</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+    </Define>
+    <Define>
         <DefineName>START_YEAR</DefineName>
         <iDefineIntVal>0</iDefineIntVal>
     </Define>
@@ -123,7 +127,7 @@
     </Define>
     <Define>
         <DefineName>ALIGNMENT_ATTITUDE_GOOD_TO_EVIL</DefineName>
-        <iDefineIntVal>-4</iDefineIntVal>
+        <iDefineIntVal>-6</iDefineIntVal>
     </Define>
     <Define>
         <DefineName>ALIGNMENT_ATTITUDE_NEUTRAL_TO_GOOD</DefineName>
@@ -139,7 +143,7 @@
     </Define>
     <Define>
         <DefineName>ALIGNMENT_ATTITUDE_EVIL_TO_GOOD</DefineName>
-        <iDefineIntVal>-2</iDefineIntVal>
+        <iDefineIntVal>-4</iDefineIntVal>
     </Define>
     <Define>
         <DefineName>ALIGNMENT_ATTITUDE_EVIL_TO_NEUTRAL</DefineName>
@@ -452,5 +456,13 @@
     <Define>
         <DefineName>CITY_HEAL_RATE</DefineName>
         <iDefineIntVal>12</iDefineIntVal>
+    </Define>
+    <Define>
+		<DefineName>WATER_POTENTIAL_CITY_WORK_FOR_AREA</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+    </Define>
+    <Define>
+		<DefineName>LAND_UNITS_CAN_ATTACK_WATER_CITIES</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
     </Define>
 </Civ4Defines>
