@@ -9,6 +9,8 @@ import sys
 import PyHelpers
 import CustomFunctions
 import ScenarioFunctions
+import pickle
+import math
 
 PyInfo = PyHelpers.PyInfo
 PyPlayer = PyHelpers.PyPlayer
@@ -3663,3 +3665,170 @@ def voteFundDissidents():
 					if CyGame().getSorenRandNum(100, "Fund Dissidents") < 50:
 						pCity = pyCity.GetCy()
 						pCity.changeHurryAngerTimer(1 + CyGame().getSorenRandNum(3, "Fund Dissidents"))
+						
+### FW Changes
+
+def reqBuilding(caster,sBuilding,sPromotion):
+	pCity = caster.plot().getPlotCity()
+
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString(sBuilding)) == 0:
+		return False
+
+	if caster.isHasPromotion(gc.getInfoTypeForString(sPromotion)):
+		return False
+
+	if pCity.isSettlement() == True:
+		return False
+
+	# TODO: Evaluate Removing This
+	#strCheckData = pickle.loads(pCity.getScriptData())
+	#if (sBuilding == 'BUILDING_CRAFTSMEN_GUILD' and strCheckData['BUILDING_CRAFTSMEN_GUILD'] > CyGame().getGameTurn()):
+	#	return False
+	#if (sBuilding == 'BUILDING_HERBALIST' and strCheckData['BUILDING_HERBALIST'] > CyGame().getGameTurn()):
+	#	return False
+	# if (sBuilding == 'BUILDING_ALCHEMY_LAB' and strCheckData['BUILDING_ALCHEMY_LAB'] > CyGame().getGameTurn()):
+		# return False
+	# if (sBuilding == 'BUILDING_MAGE_GUILD' and strCheckData['BUILDING_MAGE_GUILD'] > CyGame().getGameTurn()):
+		# return False
+	# if (sBuilding == 'BUILDING_LIBRARY' and strCheckData['BUILDING_LIBRARY'] > CyGame().getGameTurn()):
+		# return False
+
+	return True
+
+def reqBecomeChief(caster):
+	iChief = gc.getInfoTypeForString('PROMOTION_CHIEF')
+	
+	if not reqBuilding(caster,'BUILDING_ELDER_COUNCIL','PROMOTION_CHIEF'):
+		return False
+	if caster.getLevel() < 5:
+		return False
+	if caster.isHasPromotion(iChief):
+		return False
+
+	iClassUnits = 0
+	iChiefUnits = 0
+	SearchClass = caster.getUnitClassType()
+	py = PyPlayer(caster.getOwner())
+	for pUnit in py.getUnitList():
+		if pUnit.getUnitClassType() == SearchClass:
+			iClassUnits += 1
+			if pUnit.isHasPromotion(iChief):
+				iChiefUnits += 1
+	if iChiefUnits < iClassUnits / 10 + 1:
+		return True
+
+	return False
+	
+def reqBecomeGrandMaster(caster):
+	if caster.getLevel() < 6:
+		return False
+	#if caster.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE'):
+	#	return False
+	iGrandMaster = gc.getInfoTypeForString('PROMOTION_GRAND_MASTER')
+	if caster.isHasPromotion(iGrandMaster):
+		return False
+	iCount = 0
+
+	for iPlayer in range(gc.getMAX_PLAYERS()):
+		pPlayer = gc.getPlayer(iPlayer)
+		if pPlayer.isAlive():
+			py = PyPlayer(iPlayer)
+			for pUnit in py.getUnitList():
+				if pUnit.getUnitClassType() == caster.getUnitClassType():
+					iCount = iCount + 1
+					if pUnit.isHasPromotion(iGrandMaster):
+						if caster.getLevel() <= pUnit.getLevel():
+							return False
+
+	if iCount < 12:
+		return False
+
+	return True
+	
+def spellBecomeGrandMaster(caster):
+	iGrandMaster = gc.getInfoTypeForString('PROMOTION_GRAND_MASTER')
+	destPlayer = gc.getPlayer(caster.getOwner())
+	sMsg = 'A ' + caster.getName() + ' in the service of ' + destPlayer.getName() + ' claims the title of grand master!'
+	for iPlayer in range(gc.getMAX_PLAYERS()):
+		pPlayer = gc.getPlayer(iPlayer)
+		if pPlayer.isAlive():
+			py = PyPlayer(iPlayer)
+			CyInterface().addMessage(iPlayer,true,25,sMsg,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			for pUnit in py.getUnitList():
+				if (pUnit.isHasPromotion(iGrandMaster) and pUnit.getUnitClassType() == caster.getUnitClassType()):
+					pUnit.setHasPromotion(iGrandMaster, False)
+
+	caster.setHasPromotion(iGrandMaster, True)
+	
+def reqCommandMorale(caster):
+	if not (caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER1')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHIEF')) or caster.getUnitType() == gc.getInfoTypeForString('UNIT_MARDERO')):
+		return False
+	# strCheckData = pickle.loads(caster.getScriptData())
+	# if strCheckData['Command'] == str(CyGame().getGameTurn()):
+		# return False
+	iBlessAll = 1
+	if not caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER1')):
+		iBlessAll = 0
+	UnitType = caster.getUnitType()
+	if caster.getUnitType() == gc.getInfoTypeForString('UNIT_MARDERO'):
+		UnitType = gc.getInfoTypeForString('UNIT_SUCCUBUS')
+
+	iNumBlessed = caster.getLevel()
+	# if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER2')):
+		# iNumBlessed = iNumBlessed + 4
+	# if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER3')):
+		# iNumBlessed = iNumBlessed + 8
+	iRange = iNumBlessed / 8
+
+	for iiX in range(caster.getX()-iRange, caster.getX()+iRange+1, 1):
+		for iiY in range(caster.getY()-iRange, caster.getY()+iRange+1, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMAND_MORALE')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHIEF')) == False and caster.getTeam() == pUnit.getTeam()):
+					if (pUnit.getUnitType() == UnitType or iBlessAll == 1):
+						return True
+	return False
+
+def spellCommandMorale(caster):
+	# strSetData = pickle.loads(caster.getScriptData())
+	# strSetData['Command'] = str(CyGame().getGameTurn())
+	# caster.setScriptData(pickle.dumps(strSetData))
+
+	iNumBlessed=caster.getLevel()
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER2')):
+		iNumBlessed = iNumBlessed + 4
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER3')):
+		iNumBlessed = iNumBlessed + 8
+	iRange = iNumBlessed / 8
+
+	iBlessAll = 1
+	if not caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER1')):
+		iBlessAll = 0
+	UnitType = caster.getUnitType()
+	if caster.getUnitType() == gc.getInfoTypeForString('UNIT_MARDERO'):
+		UnitType = gc.getInfoTypeForString('UNIT_SUCCUBUS')
+
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if not (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMAND_MORALE'))):
+			if (iBlessAll == 1 or UnitType == pUnit.getUnitType()):
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMAND_MORALE'),True)
+				iNumBlessed = iNumBlessed - 1
+				if (iNumBlessed < 1):
+					return
+
+	for iiX in range(caster.getX()-iRange, caster.getX()+iRange+1, 1):
+		for iiY in range(caster.getY()-iRange, caster.getY()+iRange+1, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMAND_MORALE')) and caster.getTeam() == pUnit.getTeam():
+					if (iBlessAll == 1 or UnitType == pUnit.getUnitType()):
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMAND_MORALE'),True)
+						iNumBlessed = iNumBlessed - 1
+						if (iNumBlessed < 1):
+							return
+
+
