@@ -23123,7 +23123,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -23345,7 +23345,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -23567,7 +23567,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -23789,7 +23789,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -24011,7 +24011,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -24233,7 +24233,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -24455,7 +24455,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -24677,7 +24677,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -24899,7 +24899,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -25121,7 +25121,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -25343,7 +25343,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>25</iDefense>
+            <iDefense>200</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -25571,7 +25571,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>20</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -25793,7 +25793,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -26015,7 +26015,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -26240,7 +26240,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -26462,7 +26462,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -26684,7 +26684,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -26906,7 +26906,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -27131,7 +27131,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -27353,7 +27353,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -27639,7 +27639,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
+            <iDefense>100</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -27865,7 +27865,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>10</iDefense>
+            <iDefense>25</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -38179,7 +38179,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>25</iDefense>
+            <iDefense>50</iDefense>
             <iBombardDefense>25</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
@@ -38399,7 +38399,7 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>25</iDefense>
+            <iDefense>50</iDefense>
             <iBombardDefense>25</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>

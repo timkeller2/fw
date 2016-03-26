@@ -6,6 +6,8 @@ import ScreenInput
 import CvScreenEnums
 import CvEventInterface
 import time
+import cPickle
+import math
 
 #FfH: Added by Kael 10/21/2008
 import ScenarioFunctions
@@ -2050,7 +2052,17 @@ class CvMainInterface:
 			
 			if (gc.getPlayer(ePlayer).isAlive()):
 				
-				szText = CyGameTextMgr().getGoldStr(ePlayer)
+#				szText = CyGameTextMgr().getGoldStr(ePlayer)
+#mtk FW
+				try:
+					sPD = cPickle.loads(gc.getPlayer(ePlayer).getScriptData())
+				except EOFError:
+					sPD = { 'CUSTOM_INCOME': 0, 'ECON': 0 }
+				
+				if sPD['CUSTOM_INCOME'] > -1:
+					szText = CyGameTextMgr().getGoldStr(ePlayer) + '+' + str(sPD['CUSTOM_INCOME'])
+				else:
+					szText = CyGameTextMgr().getGoldStr(ePlayer) + str(sPD['CUSTOM_INCOME'])
 
 #FfH: Added by Kael 12/08/2007
 				if (gc.getPlayer(ePlayer).getCivilizationType() == gc.getInfoTypeForString('CIVILIZATION_KHAZAD') and gc.getPlayer(ePlayer).getNumCities() > 0):

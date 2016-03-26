@@ -19,6 +19,8 @@ import sys
 import CvWorldBuilderScreen
 import CvAdvisorUtils
 import CvTechChooser
+import cPickle
+import math
 
 import CvIntroMovieScreen
 import CustomFunctions
@@ -1458,6 +1460,8 @@ class CvEventManager:
 		player = PyPlayer(iPlayer)
 		attacker = PyPlayer(iAttacker)
 		pPlayer = gc.getPlayer(iPlayer)
+		aPlayer = gc.getPlayer(iAttacker)
+		iGameTurn = CyGame().getGameTurn()
 
 		if (unit.isAlive() and unit.isImmortal() == False):
 			iX = unit.getX()
@@ -1507,6 +1511,23 @@ class CvEventManager:
 						pUnit.changeExperience(iXP, -1, false, false, false)
 						unit.changeExperience(iXP * -1, -1, false, false, false)
 						CyInterface().addMessage(unit.getOwner(),True,25,CyTranslator().getText("TXT_KEY_MESSAGE_SPIRIT_GUIDE",()),'AS2D_DISCOVERBONUS',1,'Art/Interface/Buttons/Promotions/SpiritGuide.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
+
+		if ((unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ORC')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL')) and pPlayer.isBarbarian()):
+			iGold = unit.baseCombatStr() * unit.baseCombatStr()
+			iGold = CyGame().getSorenRandNum(iGold, "treasure") + iGold / 3
+			if iGameTurn > 150:
+				iGold = int((iGold * iGameTurn) / 150)
+			# if (unit.getUnitType() == gc.getInfoTypeForString('UNIT_SEA_SERPENT') or unit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT') or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL')):
+				# iGold = iGold * 2
+			if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURNING_BLOOD')):
+				iGold = 0
+			if iGold > 0:
+				if aPlayer.isHuman():
+					sPD = cPickle.loads(aPlayer.getScriptData())
+					sPD['PLUNDER'] += iGold
+					aPlayer.setScriptData(cPickle.dumps(sPD))
+				else:		
+					attacker.setGold( attacker.getGold() + iGold )
 
 		if unit.getUnitType() == gc.getInfoTypeForString('UNIT_ACHERON'):
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HELD'), False)

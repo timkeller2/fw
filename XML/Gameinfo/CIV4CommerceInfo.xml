@@ -9,7 +9,7 @@
 		<CommerceInfo>
 			<Type>COMMERCE_GOLD</Type>
 			<Description>TXT_KEY_COMMERCE_GOLD</Description>
-			<iInitialPercent>0</iInitialPercent>
+			<iInitialPercent>30</iInitialPercent>
 			<iInitialHappiness>0</iInitialHappiness>
 			<iAIWeightPercent>100</iAIWeightPercent>
 			<bFlexiblePercent>0</bFlexiblePercent>
@@ -18,7 +18,7 @@
 		<CommerceInfo>
 			<Type>COMMERCE_RESEARCH</Type>
 			<Description>TXT_KEY_COMMERCE_RESEARCH</Description>
-			<iInitialPercent>100</iInitialPercent>
+			<iInitialPercent>70</iInitialPercent>
 			<iInitialHappiness>0</iInitialHappiness>
 			<iAIWeightPercent>125</iAIWeightPercent>
 			<bFlexiblePercent>1</bFlexiblePercent>
