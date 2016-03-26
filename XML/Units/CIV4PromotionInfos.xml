@@ -7644,7 +7644,7 @@
             <bHillsDoubleMove>0</bHillsDoubleMove>
             <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
             <iVisibilityChange>1</iVisibilityChange>
-            <iMovesChange>0</iMovesChange>
+            <iMovesChange>1</iMovesChange>
             <iMoveDiscountChange>0</iMoveDiscountChange>
             <iAirRangeChange>0</iAirRangeChange>
             <iInterceptChange>0</iInterceptChange>
@@ -7660,7 +7660,7 @@
             <iFriendlyHealChange>0</iFriendlyHealChange>
             <iSameTileHealChange>0</iSameTileHealChange>
             <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>25</iCombatPercent>
+            <iCombatPercent>0</iCombatPercent>
             <iCityAttack>0</iCityAttack>
             <iCityDefense>0</iCityDefense>
             <iHillsAttack>0</iHillsAttack>
@@ -7728,12 +7728,12 @@
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
             <iCombatHealPercent>0</iCombatHealPercent>
-            <iCombatPercentDefense>25</iCombatPercentDefense>
+            <iCombatPercentDefense>0</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
-            <iExtraCombatStr>0</iExtraCombatStr>
-            <iExtraCombatDefense>0</iExtraCombatDefense>
+            <iExtraCombatStr>1</iExtraCombatStr>
+            <iExtraCombatDefense>1</iExtraCombatDefense>
             <iFreeXPPerTurn>0</iFreeXPPerTurn>
             <iFreeXPFromCombat>0</iFreeXPFromCombat>
             <iModifyGlobalCounter>0</iModifyGlobalCounter>
@@ -8135,7 +8135,7 @@
             <bAlwaysHeal>0</bAlwaysHeal>
             <bHillsDoubleMove>0</bHillsDoubleMove>
             <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
-            <iVisibilityChange>1</iVisibilityChange>
+            <iVisibilityChange>0</iVisibilityChange>
             <iMovesChange>0</iMovesChange>
             <iMoveDiscountChange>0</iMoveDiscountChange>
             <iAirRangeChange>0</iAirRangeChange>
@@ -8307,7 +8307,7 @@
             <bAlwaysHeal>0</bAlwaysHeal>
             <bHillsDoubleMove>0</bHillsDoubleMove>
             <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
-            <iVisibilityChange>1</iVisibilityChange>
+            <iVisibilityChange>0</iVisibilityChange>
             <iMovesChange>0</iMovesChange>
             <iMoveDiscountChange>0</iMoveDiscountChange>
             <iAirRangeChange>0</iAirRangeChange>

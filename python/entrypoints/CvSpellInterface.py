@@ -3763,9 +3763,8 @@ def spellBecomeGrandMaster(caster):
 def reqCommandMorale(caster):
 	if not (caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER1')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHIEF')) or caster.getUnitType() == gc.getInfoTypeForString('UNIT_MARDERO')):
 		return False
-	# strCheckData = pickle.loads(caster.getScriptData())
-	# if strCheckData['Command'] == str(CyGame().getGameTurn()):
-		# return False
+	if cf.getObjectInt(caster,'Command') == CyGame().getGameTurn():
+		return False
 	iBlessAll = 1
 	if not caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER1')):
 		iBlessAll = 0
@@ -3774,10 +3773,10 @@ def reqCommandMorale(caster):
 		UnitType = gc.getInfoTypeForString('UNIT_SUCCUBUS')
 
 	iNumBlessed = caster.getLevel()
-	# if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER2')):
-		# iNumBlessed = iNumBlessed + 4
-	# if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER3')):
-		# iNumBlessed = iNumBlessed + 8
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER2')):
+		iNumBlessed = iNumBlessed + caster.getLevel()
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER3')):
+		iNumBlessed = iNumBlessed + caster.getLevel()
 	iRange = iNumBlessed / 8
 
 	for iiX in range(caster.getX()-iRange, caster.getX()+iRange+1, 1):
@@ -3791,15 +3790,13 @@ def reqCommandMorale(caster):
 	return False
 
 def spellCommandMorale(caster):
-	# strSetData = pickle.loads(caster.getScriptData())
-	# strSetData['Command'] = str(CyGame().getGameTurn())
-	# caster.setScriptData(pickle.dumps(strSetData))
+	cf.setObjectInt(caster,'Command',CyGame().getGameTurn())
 
 	iNumBlessed=caster.getLevel()
 	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER2')):
-		iNumBlessed = iNumBlessed + 4
+		iNumBlessed = iNumBlessed + caster.getLevel()
 	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER3')):
-		iNumBlessed = iNumBlessed + 8
+		iNumBlessed = iNumBlessed + caster.getLevel()
 	iRange = iNumBlessed / 8
 
 	iBlessAll = 1

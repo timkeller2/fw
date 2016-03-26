@@ -7,12 +7,71 @@ import Popup as PyPopup
 import PyHelpers
 import CvScreenEnums
 import CvCameraControls
+import cPickle
+import math
 
 # globals
 gc = CyGlobalContext()
 PyPlayer = PyHelpers.PyPlayer
+CyGameInstance = gc.getGame()
 
 class CustomFunctions:
+
+	def setObjectInt(self,city,svar,ival):
+		sSet = {}
+		try:
+			sSet = cPickle.loads(city.getScriptData())
+		except:
+			sSet = {}
+		
+		sSet[svar] =  ival
+		city.setScriptData(cPickle.dumps(sSet))
+
+	def getObjectInt(self,city,svar):
+		try:
+			iGet = cPickle.loads(city.getScriptData())
+		except:
+			return 0
+			
+		return iGet[svar]
+
+	def setObjectStr(self,city,svar,sval):
+		try:
+			sSet = cPickle.loads(city.getScriptData())
+		except:
+			sSet = {}
+		
+		if svar not in sSet:
+			sSet[svar] = sval
+		sSet[svar] =  sval
+		city.setScriptData(cPickle.dumps(sSet))
+
+	def getObjectStr(self,city,svar):
+		try:
+			sGet = cPickle.loads(city.getScriptData())
+		except:
+			return ''
+			
+		return sGet[svar]
+
+	def setGameVar(self,svar,sval):
+		try:
+			sSet = cPickle.loads(CyGameInstance.getScriptData())
+		except:
+			sSet = {}
+			
+		sSet[svar] =  sval
+		CyGameInstance.setScriptData(cPickle.dumps(sSet))
+
+	def getGameVar(self,svar):
+		try:
+			sGet = cPickle.loads(CyGameInstance.getScriptData())
+		except:
+			return ''
+			
+		return sGet[svar]
+		
+	### FW Changes above
 
 	def addBonus(self, iBonus, iNum, sIcon):
 		listPlots = []
