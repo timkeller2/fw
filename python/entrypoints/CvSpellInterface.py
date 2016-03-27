@@ -3828,4 +3828,1871 @@ def spellCommandMorale(caster):
 						if (iNumBlessed < 1):
 							return
 
+def retSearch(unit):
+	i = 0
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1')):
+		i += 1
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2')):
+		i += 1
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY')):
+		i += 1
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY2')):
+		i += 1
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL1')):
+		i += 1
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL2')):
+		i += 1
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL3')):
+		i += 1
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL4')):
+		i += 1
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR1')):
+		i += 1
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR2')):
+		i += 2
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR3')):
+		i += 3
 
+	iExtendedSearch = unit.getFortifyTurns()
+	if iExtendedSearch > int( i / 2 ):
+		iExtendedSearch = int( i / 2 )
+	if iExtendedSearch > 5:
+		iExtendedSearch = 5
+
+	i += iExtendedSearch	
+
+	return i
+
+def retCombat(unit):
+	i = 0
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2')):
+		i += 1
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT3')):
+		i += 1
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT4')):
+		i += 1
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT5')):
+		i += 1
+	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
+		i += 1
+	else:
+		i = 0
+
+	return i
+
+def reqDonateItem(caster):
+	if caster.baseCombatStr() < 1 and caster.maxMoves() < 1 and caster.hillsAttackModifier() > 0:
+		return True
+	return False
+
+def donateItem(caster):
+	bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
+	newUnit = bPlayer.initUnit(caster.getUnitType(), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+	newUnit.convert(caster)
+
+def reqSellToMarket(caster):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if pUnit.baseCombatStr() < 1 and pUnit.maxMoves() < 1 and pUnit.hillsAttackModifier() > 0:
+			return True
+	return False
+
+def sellToMarket(caster):
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iItems = 1
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR2')):
+		iItems += 1
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR3')):
+		iItems += 1
+
+	target = []
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if pUnit.baseCombatStr() < 1 and pUnit.maxMoves() < 1 and pUnit.hillsAttackModifier() > 0 and iItems > 0:
+			iItems -= 1
+			target.append(pUnit)
+			iPrice = ( pUnit.hillsAttackModifier() * ( 80 + retSearch(caster) * 5 ) ) / 100
+			pPlayer.setGold( pPlayer.getGold() + iPrice )
+
+			sGameData = pickle.loads(CyGameInstance.getScriptData())
+			## Potions
+			if 'BUILDING_HERBALIST' not in sGameData:
+				sGameData['BUILDING_HERBALIST'] = 0
+			if 'BUILDING_CRAFTSMEN_GUILD' not in sGameData:
+				sGameData['BUILDING_CRAFTSMEN_GUILD'] = 0
+			if 'BUILDING_LIBRARY' not in sGameData:
+				sGameData['BUILDING_LIBRARY'] = 0
+			if 'BUILDING_MAGE_GUILD' not in sGameData:
+				sGameData['BUILDING_MAGE_GUILD'] = 0
+			if 'BUILDING_ALCHEMY_LAB' not in sGameData:
+				sGameData['BUILDING_ALCHEMY_LAB'] = 0
+
+			if pUnit.getName().find('Potion') > -1:
+				sGameData['BUILDING_HERBALIST'] += ( iPrice / 3 )
+			elif pUnit.getName().find('Weap') > -1:
+				sGameData['BUILDING_CRAFTSMEN_GUILD'] += ( iPrice / 3 )
+			elif pUnit.getName().find('Armo') > -1:
+				sGameData['BUILDING_CRAFTSMEN_GUILD'] += ( iPrice / 3 )
+			elif pUnit.getName().find('Scro') > -1:
+				sGameData['BUILDING_MAGE_GUILD'] += ( iPrice / 3 )
+			else:
+				sGameData['BUILDING_ALCHEMY_LAB'] += ( iPrice / 3 )
+
+			CyGameInstance.setScriptData(pickle.dumps(sGameData))
+			caster.changeExperience(1, -1, False, False, False)
+
+			sMsg = 'Your ' + caster.getName() + ' sells a ' + pUnit.getName() + ' for ' + str( iPrice ) + 'gp...  (Burglar Skill: '+str(retSearch(caster))+')'
+			CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addCombatMessage(caster.getOwner(),sMsg)
+
+	for pUnit in target:
+		pUnit.kill(True,0)
+
+
+def reqWorkerAddToCity(caster):
+	pCity = caster.plot().getPlotCity()
+	if pCity.getPopulation() < 6:
+		return True
+	return False
+
+def reqBurglar(caster):
+	iX = caster.getX()
+	iY = caster.getY()
+
+	pCasterPlot = caster.plot()
+	if pCasterPlot.isCity():
+		return False
+
+	for iiX in range(iX-1, iX+2, 1):
+		for iiY in range(iY-1, iY+2, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			if pPlot != pCasterPlot:
+				for i in range(pPlot.getNumUnits()):
+					pUnit = pPlot.getUnit(i)
+					if pUnit.baseCombatStr() < 1 and pUnit.maxMoves() < 1:
+						return true
+	return false
+
+def spellBurglar(caster):
+	iX = caster.getX()
+	iY = caster.getY()
+
+	iL = 0
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR1')):
+		iL += 1
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR2')):
+		iL += 1
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR3')):
+		iL += 1
+
+	pCasterPlot = caster.plot()
+	
+	target = []
+	for iiX in range(iX-1, iX+2, 1):
+		for iiY in range(iY-1, iY+2, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			if pPlot != pCasterPlot:
+				for i in range(pPlot.getNumUnits()):
+					pUnit = pPlot.getUnit(i)
+					if pUnit.baseCombatStr() < 1 and pUnit.maxMoves() < 1 and iL > 0:
+						target.append(pUnit)
+						iL = iL - 1
+
+	for pUnit in target:
+		pUnit.setXY(iX, iY, true, true, false)
+
+
+def reqSustain(caster):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		bUnit = True
+		if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MAGIC_MISSILE') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_FIREBALL') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_METEOR') ):
+			bUnit = False
+		if ( pUnit.getDuration() > 0 and pUnit.baseCombatStr() <= caster.baseCombatStr() * 2 and bUnit ):
+			return True
+
+	return False
+
+def spellSustain(caster):
+	iSustain = 1
+	bPlayer = gc.getPlayer(caster.getOwner())
+	if bPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_SUMMONER')):
+		iSustain = 2
+	iDuration = 99
+	pBestUnit = -1
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		bUnit = True
+		if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MAGIC_MISSILE') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_FIREBALL') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_METEOR') ):
+			bUnit = False
+		if ( pUnit.getDuration() > 0 and pUnit.baseCombatStr() <= caster.baseCombatStr() * 2 and bUnit ):
+			if ( pUnit.getDuration() < iDuration ):
+				pBestUnit = pUnit
+				iDuration = pUnit.getDuration()
+
+	if pBestUnit != -1:
+		pBestUnit.setDuration( iDuration + iSustain )
+		
+
+def reqTakeEquipment(caster,unit):
+	if caster.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_SIEGE'):
+		return False
+	if caster.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
+		return False
+	if caster.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BEAST'):
+		return False
+	if caster.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_AIR'):
+		return False
+	if caster.getSpecialUnitType() == gc.getInfoTypeForString('SPECIALUNIT_SPELL'):
+		return False
+
+	iUnit = gc.getInfoTypeForString(unit)
+	iProm = gc.getUnitInfo(iUnit).getEquipmentPromotion()
+	if caster.isHasPromotion(iProm):
+		return False
+	if iProm == gc.getInfoTypeForString('PROMOTION_IMPROVED_WEAPONS') or iProm == gc.getInfoTypeForString('PROMOTION_HEAVY_WEAPONS') or iProm == gc.getInfoTypeForString('PROMOTION_IMPROVED_ARMOR') or iProm == gc.getInfoTypeForString('PROMOTION_HEAVY_ARMOR'):
+		if not cf.cantake(caster,iProm):
+			return False
+	iPlayer = caster.getOwner()
+	pPlayer = gc.getPlayer(iPlayer)
+	pPlot = caster.plot()
+	pHolder = -1
+	bValid = False
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if (pUnit.getOwner() == iPlayer and pUnit.isHasPromotion(iProm) and not pUnit.isMadeAttack()):
+			pHolder = pUnit
+			bValid = True
+		if pUnit.getUnitType() == iUnit:
+			if pUnit.isDelayedDeath() == False:
+				pHolder = pUnit
+				bValid = True
+	if bValid == False and (iProm == gc.getInfoTypeForString('PROMOTION_TREASURE1') or iProm == gc.getInfoTypeForString('PROMOTION_TREASURE2') or iProm == gc.getInfoTypeForString('PROMOTION_TREASURE3')):
+		return False
+
+	if pPlot.isCity():
+		if pPlot.getPlotCity().getOwner() == iPlayer:
+			for i in range(gc.getNumBuildingInfos()):
+				if gc.getUnitInfo(iUnit).getBuildings(i):
+					if pPlot.getPlotCity().getNumRealBuilding(i) > 0:
+						bValid = True
+	if bValid == False:
+		return False
+	if pHolder != -1:
+		if pHolder.getUnitType() == gc.getInfoTypeForString('UNIT_BARNAXUS'):
+			if iProm == gc.getInfoTypeForString('PROMOTION_PIECES_OF_BARNAXUS'):
+				return False
+		if pHolder.isHasCasted():
+			return False
+	if pPlayer.isHuman() == False:
+		if pHolder == -1:
+			return False
+		if caster.baseCombatStr() - 2 <= pHolder.baseCombatStr():
+			return False
+	return True
+
+def spellTakeEquipment(caster,unit):
+	iUnit = gc.getInfoTypeForString(unit)
+	iProm = gc.getUnitInfo(iUnit).getEquipmentPromotion()
+	iPlayer = caster.getOwner()
+	pPlot = caster.plot()
+	bValid = False
+	pHolder = -1
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if (pUnit.getOwner() == iPlayer and pUnit.isHasPromotion(iProm) and not pUnit.isMadeAttack()):
+			pHolder = pUnit
+			bValid = True
+		if pUnit.getUnitType() == iUnit:
+			if pUnit.isDelayedDeath() == False:
+				pHolder = pUnit
+				bValid = True
+	if pHolder != -1:
+		if pHolder.getUnitType() == iUnit:
+			pHolder.kill(True, 0)
+		else:
+			pHolder.setHasPromotion(iProm, False)
+
+	if pPlot.isCity() and not bValid:
+		if pPlot.getPlotCity().getOwner() == iPlayer:
+			for i in range(gc.getNumBuildingInfos()):
+				if gc.getUnitInfo(iUnit).getBuildings(i):
+					pPlot.getPlotCity().setNumRealBuilding(i, 0)
+					bValid = True
+	if bValid:
+		caster.setHasPromotion(iProm, True)
+
+def spellTeleport(caster,loc):
+	player = caster.getOwner()
+	pPlayer = gc.getPlayer(player)
+	pCity = pPlayer.getCapitalCity()
+
+	iMana = -1
+
+	itx = pCity.getX()
+	ity = pCity.getY()
+
+	if loc == 'Mana Node':
+		py = PyPlayer(player)
+		for pUnit in py.getUnitList():
+			if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MAGIC_MISSILE') and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIMENSIONAL1')):
+				itx = pUnit.getX()
+				ity = pUnit.getY()
+				iMana = -2
+				pUnit.kill(True,0)
+				break
+
+		if iMana > -2:
+			for i in range (CyMap().numPlots()):
+				pPlot = CyMap().plotByIndex(i)
+				iRoll = CyGame().getSorenRandNum(100, "findManaPlot")
+				if (pPlot.getBonusType(-1) == gc.getInfoTypeForString('BONUS_MANA')):
+					iRoll += 100;
+				if (not pPlot.isOwned() and not pPlot.isWater() and not pPlot.isImpassable() and iRoll > iMana and pPlot.getNumUnits() == 0):
+					iMana = iRoll		
+					itx = pPlot.getX()
+					ity = pPlot.getY()
+
+	iPassengers = caster.getLevel() / 4
+	if (caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIMENSIONAL2')) and caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING2'))):
+		iPassengers = caster.getLevel() / 2
+	if (caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIMENSIONAL3')) and caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3'))):
+		iPassengers = caster.getLevel()
+
+	pPlot = caster.plot()
+	caster.setXY(itx, ity, true, true, false)
+
+	if iPassengers > 0:
+		for i in range(pPlot.getNumUnits()):
+			if iPassengers > 0:
+				iPassengers -= 1
+				pUnit = pPlot.getUnit(0)
+				pUnit.setXY(itx, ity, true, true, false)
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CHARMED'), True)
+
+
+def reqCreateBuccaneer(caster):
+	pPlayer = gc.getPlayer(caster.getOwner())
+
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')):
+		return False
+
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHARMED')):
+		return False
+
+	iCount = pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_FRIGATE'))
+	iCount += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_BLACK_WIND'))
+	iCount += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_DRAGONSHIP'))
+	iCount += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_TRIREME'))
+	iCount += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_CARAVEL'))
+	iCount += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_GALLEON'))
+	iCount += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_MAN_O_WAR'))
+	iCount += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_DREADNAUGHT'))
+	iCount += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_PRIVATEER'))
+	iCount += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_QUEEN_OF_THE_LINE'))
+
+	iBuc = pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_BUCCANEER'))
+
+	if iBuc >= iCount / 2:
+		return False
+	
+	return True
+
+def reqBecomePatriarch(caster):
+	if (caster.getUnitType() != gc.getInfoTypeForString('UNIT_HIGH_PRIEST_OF_THE_EMPYREAN') and caster.getUnitType() != gc.getInfoTypeForString('UNIT_HIGH_PRIEST_OF_KILMORPH') and caster.getUnitType() != gc.getInfoTypeForString('UNIT_HIGH_PRIEST_OF_LEAVES') and caster.getUnitType() != gc.getInfoTypeForString('UNIT_HIGH_PRIEST_OF_THE_ORDER') and caster.getUnitType() != gc.getInfoTypeForString('UNIT_HIGH_PRIEST_OF_THE_OVERLORDS') and caster.getUnitType() != gc.getInfoTypeForString('UNIT_HIGH_PRIEST_OF_THE_VEIL') and caster.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_PRIVATEER')):
+		return False
+	if caster.getLevel() < 6:
+		return False
+	iPromPatriarch = gc.getInfoTypeForString('PROMOTION_PATRIARCH')
+	if caster.isHasPromotion(iPromPatriarch):
+		return False
+
+#	Dread Pirate Roberts
+	if caster.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_PRIVATEER'):
+		for iPlayer in range(gc.getMAX_PLAYERS()):
+			pPlayer = gc.getPlayer(iPlayer)
+			if pPlayer.isAlive():
+				py = PyPlayer(iPlayer)
+				for pUnit in py.getUnitList():
+					if (pUnit.isHasPromotion(iPromPatriarch) and pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_PRIVATEER')):
+						if caster.getLevel() <= pUnit.getLevel():
+							return False
+	else:
+		pCasterPlayer = gc.getPlayer(caster.getOwner())
+		iReligion = pCasterPlayer.getStateReligion()
+		for iPlayer in range(gc.getMAX_PLAYERS()):
+			pPlayer = gc.getPlayer(iPlayer)
+			if pPlayer.isAlive():
+				if pPlayer.getStateReligion() == iReligion:
+					py = PyPlayer(iPlayer)
+					for pUnit in py.getUnitList():
+						if pUnit.isHasPromotion(iPromPatriarch):
+							if caster.getLevel() <= pUnit.getLevel():
+								return False
+	return True
+
+
+def spellBecomePatriarch(caster):
+	pCasterPlayer = gc.getPlayer(caster.getOwner())
+	iReligion = pCasterPlayer.getStateReligion()
+	iPromPatriarch = gc.getInfoTypeForString('PROMOTION_PATRIARCH')
+	for iPlayer in range(gc.getMAX_PLAYERS()):
+		pPlayer = gc.getPlayer(iPlayer)
+		if pPlayer.isAlive():
+			if (pPlayer.getStateReligion() == iReligion or caster.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_PRIVATEER')):
+				py = PyPlayer(iPlayer)
+				for pUnit in py.getUnitList():
+					if (pUnit.isHasPromotion(iPromPatriarch) and pUnit.getUnitClassType() == caster.getUnitClassType()):
+						pUnit.setHasPromotion(iPromPatriarch, False)
+						if caster.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_PRIVATEER'):
+							pUnit.setName("")
+	caster.setHasPromotion(iPromPatriarch, True)
+	if caster.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_PRIVATEER'):
+		caster.setName("The Dread Pirate Roberts")
+
+
+def spellTurnUndead(caster):
+	iX = caster.getX()
+	iY = caster.getY()
+	iL = caster.getLevel()
+	iNumTurned = 1
+	for iiX in range(iX-1, iX+2, 1):
+		for iiY in range(iY-1, iY+2, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				if pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_UNDEAD') and pUnit.maxCombatStr(pPlot,caster) / 100 < iL + 4 and (pUnit.getDamage() < 50 or not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLINDED'))):
+					iNumTurned = iNumTurned + 1
+					iMod = iL + 4 - pUnit.maxCombatStr(pPlot,caster) / 100
+					if iMod > 0:
+						iMod = iMod * 5
+					if iMod < 0:
+						iMod = iMod * 2
+					iDamage = 5 + iMod + CyGame().getSorenRandNum(5, "turnUndead")
+					if iDamage > 0:
+						pUnit.doDamage(iDamage, iDamage * 2, caster, gc.getInfoTypeForString('DAMAGE_HOLY'), true)
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SLEEPING'), False)
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLINDED'), True)
+						if iNumTurned > 1 + int(iL / 2):
+							return
+
+def reqMageArmor(caster):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGE_ARMOR')):
+			return True
+	return False
+
+def spellMageArmor(caster):
+	iNumArmored = caster.getLevel() / 2 + retCombat(caster)
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGE_ARMOR')):
+			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGE_ARMOR'),True)
+			iNumArmored = iNumArmored - 1
+			if ( iNumArmored < 1 ):
+				return
+
+def spellHealingTouch(caster,amount):
+	iL = caster.getLevel()
+	iNumHealed = 0
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if (pUnit.isAlive() and pUnit.getDamage() > 0):
+			iDefStr = pUnit.baseCombatStr()
+			if iDefStr < 1:
+				iDefStr = 1
+			iMod = ( iL * 10 ) / iDefStr + 5
+			iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
+			pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
+			iNumHealed = iNumHealed + 1
+			if ( iNumHealed + 1 > iL / 3 ):
+				return
+
+def reqNoBuilding(caster,sBuilding):
+	pCity = caster.plot().getPlotCity()
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString(sBuilding)) > 0:
+		return False
+	return True
+
+def reqBuilding(caster,sBuilding,sPromotion):
+	pCity = caster.plot().getPlotCity()
+
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString(sBuilding)) == 0:
+		return False
+
+	if caster.isHasPromotion(gc.getInfoTypeForString(sPromotion)):
+		return False
+
+	if pCity.isSettlement() == True:
+		return False
+
+	strCheckData = pickle.loads(pCity.getScriptData())
+	if (sBuilding == 'BUILDING_CRAFTSMEN_GUILD' and strCheckData['BUILDING_CRAFTSMEN_GUILD'] > CyGame().getGameTurn()):
+		return False
+	if (sBuilding == 'BUILDING_HERBALIST' and strCheckData['BUILDING_HERBALIST'] > CyGame().getGameTurn()):
+		return False
+	if (sBuilding == 'BUILDING_ALCHEMY_LAB' and strCheckData['BUILDING_ALCHEMY_LAB'] > CyGame().getGameTurn()):
+		return False
+	if (sBuilding == 'BUILDING_MAGE_GUILD' and strCheckData['BUILDING_MAGE_GUILD'] > CyGame().getGameTurn()):
+		return False
+	if (sBuilding == 'BUILDING_LIBRARY' and strCheckData['BUILDING_LIBRARY'] > CyGame().getGameTurn()):
+		return False
+
+	return True
+
+def reqLearnMagic(caster):
+	pCity = caster.plot().getPlotCity()
+	pPlayer = gc.getPlayer(caster.getOwner())
+
+	iCost = 50
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING1')):
+		iCost += 50
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING2')):
+		iCost += 50
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3')):
+		iCost += 50
+
+	if pPlayer.getGold() < iCost:
+		return False	
+
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_MAGE_GUILD')) == 0:
+		return False
+
+	strCheckData = pickle.loads(pCity.getScriptData())
+	if strCheckData['BUILDING_MAGE_GUILD'] > CyGame().getGameTurn():
+		return False
+
+	return True
+
+def pay(pCity,sBuilding,iCost,iPlayer,sDesc):
+	## Load Global Market Stock
+	sGameData = pickle.loads(CyGameInstance.getScriptData())
+	if 'BUILDING_HERBALIST' not in sGameData:
+		sGameData['BUILDING_HERBALIST'] = 0
+	if 'BUILDING_CRAFTSMEN_GUILD' not in sGameData:
+		sGameData['BUILDING_CRAFTSMEN_GUILD'] = 0
+	if 'BUILDING_LIBRARY' not in sGameData:
+		sGameData['BUILDING_LIBRARY'] = 0
+	if 'BUILDING_MAGE_GUILD' not in sGameData:
+		sGameData['BUILDING_MAGE_GUILD'] = 0
+	if 'BUILDING_ALCHEMY_LAB' not in sGameData:
+		sGameData['BUILDING_ALCHEMY_LAB'] = 0
+
+	## Load City Stock
+	strSetData = pickle.loads(pCity.getScriptData())
+	if strSetData[sBuilding] < CyGame().getGameTurn() - pCity.getPopulation() * 3:
+		strSetData[sBuilding] = CyGame().getGameTurn() - pCity.getPopulation() * 3
+
+	## Use Global Market Stock if possible, if not, use the city stock
+	if sGameData[sBuilding] > iCost:
+		sGameData[sBuilding] -= iCost
+		CyGameInstance.setScriptData(pickle.dumps(sGameData))
+	else:
+		strSetData[sBuilding] = strSetData[sBuilding] + iCost 
+		pCity.setScriptData(pickle.dumps(strSetData))
+
+	iStock = CyGame().getGameTurn() - strSetData[sBuilding]
+	iMaxStock = pCity.getPopulation() * 3
+	if iMaxStock < 1:
+		iMaxStock = 1
+	iPercent = ( iStock * 100 ) / iMaxStock
+	sMsg = 'The ' + sDesc + ' has roughly ' + str(iStock*3) + 'gp worth of stock remaining (' + str(iPercent) + '%).  The global market has roughly '+str(sGameData[sBuilding]*3)+' gold pieces worth of stock remaining...'
+	CyInterface().addMessage(iPlayer,True,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+
+def spellLearnMagic(caster):
+	pCity = caster.plot().getPlotCity()
+	pPlayer = gc.getPlayer(caster.getOwner())
+
+	iCost = 50
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING1')):
+		iCost += 50
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING2')):
+		iCost += 50
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3')):
+		iCost += 50
+
+	pPlayer.setGold( pPlayer.getGold() - iCost )
+	pay(pCity,'BUILDING_MAGE_GUILD',iCost/3,caster.getOwner(),'mage guild')
+
+	caster.setPromotionReady(true)
+	caster.setLevel(caster.getLevel()-1)
+
+
+def spellImmoblize(caster,turns):
+	caster.setImmobileTimer(turns)
+
+
+def retRange(unit1,unit2):
+	iRange = int( math.fabs(unit1.getX()-unit2.getX()) )
+	if iRange < int( math.fabs(unit1.getY()-unit2.getY()) ):
+		iRange = int( math.fabs(unit1.getY()-unit2.getY()) )
+
+	return iRange	
+
+def retDir(x,y,tx,ty):
+	sDirection = ''
+	if ty > y:
+		sDirection = 'north'
+	if ty < y:
+		sDirection = 'south'
+	if tx < x:
+		sDirection = sDirection + 'west'
+	if tx > x:
+		sDirection = sDirection + 'east'
+
+	return sDirection
+
+def reqInteractCache(caster,mode):
+	iX = caster.getX()
+	iY = caster.getY()
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iMult = 0
+
+	iSearch = retSearch(caster)
+
+	if caster.plot().isCity():
+		pCity = caster.plot().getPlotCity()
+		iMult = pCity.getPopulation()
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TAVERN')) != 0:
+			iMult += iSearch
+	else:
+		if mode == 9:
+			if caster.getFortifyTurns() < 1:
+				return False
+	
+	# Learn about caches worldwide
+	if mode == 8 or mode == 9:
+		# Learn about caches
+		py = PyPlayer( gc.getBARBARIAN_PLAYER() )
+		for pUnit in py.getUnitList():
+			if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'):
+				iRange = retRange(caster,pUnit)
+				if pUnit.getLevel() <= iSearch + iSearch / 2 and iRange <= iSearch + iMult and mode == 9:
+					if iRange > -1 and iRange < 99:
+						return True
+				if pUnit.getLevel() <= iSearch + iSearch / 2 and iRange > iSearch + iMult and mode == 8:
+					if iRange > -1 and iRange < 99:
+						return True
+		return False
+
+
+	iR = int( iSearch / 4 )
+	for iiX in range(iX-iR, iX+iR+1, 1):
+		for iiY in range(iY-iR, iY+iR+1, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			for i in range(pPlot.getNumUnits()):
+				iRange = int( math.fabs(iiX-iX) )
+				if iRange < int( math.fabs(iiY-iY) ):
+					iRange = int( math.fabs(iiY-iY) )
+
+				pUnit = pPlot.getUnit(i)
+				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE') and pUnit.getLevel() + iRange * 2 <= iSearch:
+					if mode == 3 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
+						return False
+					return True
+	return False	
+
+def spellExamineCache(caster,mode):
+	iX = caster.getX()
+	iY = caster.getY()
+	pPlayer = gc.getPlayer(caster.getOwner())
+	bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
+	iMult = 0
+
+	iSearch = retSearch(caster)
+
+	sName = 'here'
+	sPref = ''
+	if caster.plot().isCity():
+		pCity = caster.plot().getPlotCity()
+		sName = pCity.getName()
+		iMult = pCity.getPopulation()
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TAVERN')) != 0:
+			iMult += iSearch
+
+	bCreep = True
+	bKill = False
+
+	iR = int( iSearch / 4 )
+
+	# Learn about caches worldwide
+	if mode == 8 or mode == 9:
+		# Learn about caches
+		py = PyPlayer( gc.getBARBARIAN_PLAYER() )
+		iCaches = 0
+		iCachesLev = 0
+		iBestRange = 999
+		iNextBestRange = 999
+		iFarRange = 999
+		for pUnit in py.getUnitList():
+			if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'):
+				iCaches += 1
+				iRange = retRange(caster,pUnit)
+				if iRange > -1 and iRange < iFarRange and iRange > iSearch + iMult:
+					iFarRange = iRange
+					fx = pUnit.getX()
+					fy = pUnit.getY()
+				if iRange > -1 and iRange < iNextBestRange and iRange <= iSearch + iMult:
+					iNextBestRange = iRange
+					tx = pUnit.getX()
+					ty = pUnit.getY()
+				if pUnit.getLevel() <= iSearch:
+					iCachesLev += 1
+					if iRange > -1 and iRange < iBestRange and iRange <= iSearch + iMult:
+						iBestRange = iRange
+
+		if iBestRange == 999:
+			iBestRange = iNextBestRange
+			sPref = ', though it is above your experience level'
+
+		if iBestRange < 999:
+			sDirection = ' to the ' + retDir(iX,iY,tx,ty)
+			if sDirection == ' to the ':
+				sDirection = ''
+
+			if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR3')):
+				sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is around ' + str(iBestRange-1+CyGame().getSorenRandNum(3, "Roll It")) + ' tiles away from ' + sName + sDirection + sPref + '...'
+			elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR2')) or iBestRange <= caster.getFortifyTurns():
+				sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is around ' + str(iBestRange-2+CyGame().getSorenRandNum(5, "Roll It")) + ' tiles away from ' + sName + sDirection + sPref + '...'
+			else:
+				sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is around ' + str(iBestRange-2+CyGame().getSorenRandNum(5, "Roll It")) + ' tiles away from ' + sName + sPref + '...'
+		else:
+			sDirection = ' to the ' + retDir(caster.getX(),caster.getY(),fx,fy)
+			if sDirection == ' to the ':
+				sDirection = ''
+
+			if iFarRange < 999:
+				sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is far from ' + sName + sDirection + sPref + '...'
+			else:
+				sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, but there are no known caches within range of ' + sName + '...'
+
+		## Additional Information
+		## Serpent Report
+		iSerpentCount = bPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_SEA_SERPENT'))
+		iGreatSerpentCount = bPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_GIANT_SEA_SERPENT'))
+		if CyGame().getSorenRandNum(100, "Serpent Report") < iSerpentCount + iGreatSerpentCount and iMult > 0:
+			sDip = sDip + '  Sailors tell tales of giant beasts in the sea.  The population of greater serpents is estimated at ' + str(iGreatSerpentCount) + '.  The population of smaller serpents is estimated at ' + str(iSerpentCount) + '.'
+
+		CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+		CyInterface().addCombatMessage(caster.getOwner(),sDip)
+
+		return
+
+	pBestUnit = -1
+	iClosest = 999
+	iR = int( iSearch / 4 )
+	for iiX in range(iX-iR, iX+iR+1, 1):
+		for iiY in range(iY-iR, iY+iR+1, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			for i in range(pPlot.getNumUnits()):
+				iRange = int( math.fabs(iiX-iX) )
+				if iRange < int( math.fabs(iiY-iY) ):
+					iRange = int( math.fabs(iiY-iY) )
+
+				pUnit = pPlot.getUnit(i)
+				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE') and pUnit.getLevel() + iRange * 2 <= iSearch:
+					if iClosest > iRange:
+						iBX = iiX
+						iBY = iiY
+						iClosest = iRange
+						pBestUnit = pUnit
+
+	if pBestUnit != -1:	
+		pUnit = pBestUnit	
+		iRange = iClosest
+		iiX = iBX
+		iiY = iBY
+		# Found Cache
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MASTER_CRAFTED_WEAPONS')):
+			iSearch += 1
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MASTER_CRAFTED_ARMOR')):
+			iSearch += 1
+		iDiv = ( pUnit.baseCombatStrDefense() + iRange * 3 + iSearch + 1 )
+		if iDiv < 1:
+			iDiv = 1
+		iChance = int( ( iSearch * 100 + 50 ) / iDiv )
+		sSpec = ''
+		sGuard = ' barbarian'
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL1')):
+			sGuard = ' undead'
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL2')):
+			sGuard = ' evil'
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL3')):
+			sGuard = ''
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1')):
+			sSpec += ', poison'
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER2')):
+			sSpec += ', disease'
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER3')):
+			sSpec += ', plague'
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
+			if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL4')):
+				iPower = retCombat(pUnit)
+				sGuard = ' dragon'
+				if iPower < 4:
+					sSpec += ', a wyrmling'
+				elif iPower == 4:
+					sSpec += ', a young dragon'
+				else:
+					sSpec += ', a dragon!'
+			else:
+				sSpec += ', ' + str( retCombat(pUnit) ) + sGuard + ' guards'
+
+		# Examine Cache
+		if mode == 1:
+			sDir = retDir(iX,iY,iiX,iiY)
+			sDip = 'Examing a hidden cache... Distance: '+str(iRange)+' '+sDir+' Skill: '+str(iSearch)+' Dif: ' + str(pUnit.baseCombatStrDefense()+iRange*3) + ' Chance: ' + str( iChance ) + ' Danger: ' + str(pUnit.baseCombatStr()) + sSpec
+			CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addCombatMessage(caster.getOwner(),sDip)
+
+			if caster.getFortifyTurns() == 5 and CyGame().getSorenRandNum(3, "Roll d3") == 1:
+				sDip = 'Coming up with a plan to loot the cache!  Difficulty reduced by 1!'
+				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				CyInterface().addCombatMessage(caster.getOwner(),sDip)
+				if pUnit.baseCombatStr() > 1:
+					pUnit.setBaseCombatStr(pUnit.baseCombatStr() - 1)
+				else:
+					pUnit.setBaseCombatStr(1)
+
+				if pUnit.baseCombatStrDefense() > 1:
+					pUnit.setBaseCombatStrDefense(pUnit.baseCombatStrDefense() - 1)
+				else:
+					pUnit.setBaseCombatStrDefense(1)
+
+			return
+
+		# Loot Cache
+		if mode == 2:
+			sDip = 'Attempting to loot a hidden cache... Skill: '+str(iSearch)+' Dif: ' + str(pUnit.baseCombatStrDefense()+iRange*3) + ' Chance: ' + str( iChance ) + ' Danger: ' + str(pUnit.baseCombatStr()) + sSpec
+			CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addCombatMessage(caster.getOwner(),sDip)
+			iRoll = CyGame().getSorenRandNum(100, "Roll It")
+			if iRoll <= iChance:
+				# Success!
+#				pUnit.setXY(iX, iY, true, true, false)
+				iXP = (100 - iChance) / 20 + pUnit.baseCombatStr() / 2 + pUnit.getLevel() / 2
+				caster.changeExperience( iXP , -1, False, False, False)
+				bKill = True
+				iGold = CyGame().getSorenRandNum( pUnit.baseCombatStr() * 25, "Find Gold") + pUnit.baseCombatStr() * 10
+				sDip = 'Success!  You find '+str(iGold)+' gold pieces and gain '+str(iXP)+'xp!'
+				pPlayer.setGold( pPlayer.getGold() + iGold )
+				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				CyInterface().addCombatMessage(caster.getOwner(),sDip)
+
+			elif iRoll > iChance and iRoll < iChance + 25 and iRoll < 95:
+				# Failure
+				sDip = 'Failure'
+				if CyGame().getSorenRandNum(100, "Roll It2") < 35:
+					bCreep = False
+				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				CyInterface().addCombatMessage(caster.getOwner(),sDip)
+
+			else:
+				# Detonation
+				sDip = 'Critical Failure'
+				bCreep = False
+				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				CyInterface().addCombatMessage(caster.getOwner(),sDip)
+
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1')):
+					caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'),True)
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER2')):
+					caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'),True)
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER3')):
+					caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'),True)
+	
+				bcs = caster.baseCombatStr()
+				if bcs < 1:
+					bcs = 1
+				iDamage = CyGame().getSorenRandNum(pUnit.baseCombatStr()*100, "Damage") / bcs
+				caster.doDamageNoCaster(iDamage, 100, gc.getInfoTypeForString('DAMAGE_PHYSICAL'), false)						
+
+		# Draw Guards Away
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
+			iPow = retCombat( pUnit )
+			iNum = iPow
+			bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
+			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1'),False)
+			iii = 0
+			if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL4')):
+				iNum = 1
+				if iPow < 4:
+					sEnemy = 'UNIT_WYRMLING'
+				if iPow == 4:
+					sEnemy = 'UNIT_YOUNG_DRAGON'
+				if iPow == 5:
+					sEnemy = 'UNIT_DRAGON'
+
+			for iEnemy in range( iNum ):
+				if sGuard == '':
+					sEnemy = cf.sComputerUnit()
+				elif sGuard == ' barbarian':
+					sEnemy = cf.sBarbUnit()
+				elif sGuard == ' undead':
+					sEnemy = cf.sUndeadUnit()
+				elif sGuard == ' evil':
+					sEnemy = cf.sEvilUnit()
+
+				iPX = iX
+				if iMult > 0:
+					iPX += 1
+				newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sEnemy), iPX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
+				cf.equip(newUnit)
+				if sEnemy == 'UNIT_WYRMLING' or sEnemy == 'UNIT_YOUNG_DRAGON' or sEnemy == 'UNIT_DRAGON':
+					newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LOYALTY'),True)
+					newUnit.setDuration( 30 + CyGame().getSorenRandNum(70, "Dragon Duration") )
+				if bCreep:
+					newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'),True)
+
+			if mode == 3:
+				if pUnit.baseCombatStr() > 2:
+					pUnit.setBaseCombatStr(pUnit.baseCombatStr() - 2)
+				else:
+					pUnit.setBaseCombatStr(1)
+
+				if pUnit.baseCombatStrDefense() > 2:
+					pUnit.setBaseCombatStrDefense(pUnit.baseCombatStrDefense() - 2)
+				else:
+					pUnit.setBaseCombatStrDefense(1)
+
+		if bKill:
+			if iMult > 0:
+				pUnit.setXY(iX + 1, iY, true, true, false)
+			pUnit.kill(False,0)
+					
+		caster.setFortifyTurns(0)
+
+def reqJudge(caster):
+	pCity = caster.plot().getPlotCity()
+
+	sInfo = pickle.loads(pCity.getScriptData())
+
+	if 'JUDGE' not in sInfo:
+		sInfo['JUDGE'] = 0
+
+	if sInfo['JUDGE'] > 0:
+		return True
+
+	return False
+
+def spellJudge(caster):
+	pCity = caster.plot().getPlotCity()
+	pPlayer = gc.getPlayer(caster.getOwner())
+	cPlayer = gc.getPlayer(pCity.getOwner())
+
+	sInfo = pickle.loads(pCity.getScriptData())
+	
+	iDiv = ( cf.iNoble(caster) + 1 + sInfo['JUDGE'] )
+	if iDiv < 1:
+		iDiv = 1
+	iChance = ( ( cf.iNoble(caster) + 1 ) * 100 ) / iDiv
+	if CyGame().getSorenRandNum(cf.iNoble(caster)+1, "Judge") >= CyGame().getSorenRandNum(sInfo['JUDGE']+1, "Problem"):
+		## Success!
+		iGain = sInfo['JUDGE'] * 10 + 15
+		if caster.getOwner() == pCity.getOwner():
+			iGain = iGain * 2
+		iXP = sInfo['JUDGE'] / 2 + 1
+		caster.changeExperience( iXP , -1, False, False, False )
+		CyInterface().addMessage(caster.getOwner(),true,25,'Success! ('+str(iChance)+'% chance) '+caster.getName() + ' resolved a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!  You gain '+str(iGain)+' gold pieces and '+str(iXP)+'xp!','AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+		CyInterface().addCombatMessage(caster.getOwner(),caster.getName() + ' resolved a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!  You gain '+str(iGain)+' gold pieces and '+str(iXP)+'xp!' )
+		pPlayer.setGold( pPlayer.getGold() + sInfo['JUDGE'] * 10 + 15 )
+		cPlayer.setGold( cPlayer.getGold() + sInfo['JUDGE'] * 10 + 15 )
+		sInfo['JUDGE'] = 0
+		pCity.setScriptData(pickle.dumps(sInfo))
+	else:
+		## Failure, this turn...
+		CyInterface().addMessage(caster.getOwner(),true,25,'Failure. ('+str(iChance)+'% chance) '+caster.getName() + ' failed to resolve a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!','AS2D_PILLAGE',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+		CyInterface().addCombatMessage(caster.getOwner(),caster.getName() + ' failed to resolve a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!' )
+	
+def spellNeedJudge(caster):
+	for iPlayer in range(gc.getMAX_PLAYERS()):
+		pPlayer = gc.getPlayer(iPlayer)
+		if pPlayer.isAlive() and pPlayer.getNumCities() > 0:  
+			for i in range (pPlayer.getNumCities()):
+				pCity = pPlayer.getCity(i)
+				try:
+					sCityInfo = pickle.loads(pCity.getScriptData())
+				except EOFError:
+					cf.initCityVars(pCity)
+				if 'JUDGE' not in sCityInfo:
+					sCityInfo['JUDGE'] = 0
+				if sCityInfo['JUDGE'] > 0 and (pPlayer.canContact(caster.getOwner()) or iPlayer == caster.getOwner()):
+					sMsg = 'The people of ' + pCity.getName() + ' owned by ' + pPlayer.getName() + ' still await a noble to help them resolve a ' + cf.sDisputeLevel(sCityInfo['JUDGE']) + ' dispute...'
+					CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+					CyInterface().addCombatMessage(caster.getOwner(),sMsg )
+
+def reqDiplomacy(caster):
+	iX = caster.getX()
+	iY = caster.getY()
+	pPlayer = gc.getPlayer(caster.getOwner())
+
+	for iiX in range(iX-1, iX+2, 1):
+		for iiY in range(iY-1, iY+2, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				iValue = pUnit.maxCombatStr(pPlot,caster) / 100 + pUnit.getLevel()
+				if pUnit.getOwner() != caster.getOwner() and ( pUnit.maxMoves() > 0 or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) ) and iValue * 15 < pPlayer.getGold() and iValue > 0 and pUnit.getLevel() + pUnit.baseCombatStr() <= caster.getLevel() + caster.baseCombatStr() and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE'):
+					return True
+
+	return False
+
+def spellDiplomacy(caster):
+	iX = caster.getX()
+	iY = caster.getY()
+
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iTeam = pPlayer.getTeam()
+	eTeam = gc.getTeam(iTeam)
+
+	# Determine Diplomacy Strength
+	iL = cf.iNoble(caster) 
+
+	# Calculate Enemy Support
+	iSupport = {}
+	for iiX in range(iX-5, iX+6, 1):
+		for iiY in range(iY-5, iY+6, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				if pUnit.getOwner() != caster.getOwner() and pUnit.baseCombatStr() > 0 and ( pUnit.maxMoves() > 0 or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) ):
+					if pUnit.getOwner() in iSupport:
+						iSupport[pUnit.getOwner()] += pUnit.baseCombatStr()
+					else:
+						iSupport[pUnit.getOwner()] = pUnit.baseCombatStr()
+
+	# Determine Best Unit to try to hire
+	sDip = 'Evaluating diplomacy options...'
+	CyInterface().addCombatMessage(caster.getOwner(),sDip)
+	iBestValue = 0
+	pBestUnit = -1
+	for iiX in range(iX-1, iX+2, 1):
+		for iiY in range(iY-1, iY+2, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				if pUnit.getOwner() != caster.getOwner() and (pUnit.maxMoves() > 0 or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'))):
+					iValue = pUnit.maxCombatStr(pPlot,caster) / 100 + pUnit.getLevel()
+					iDif = iValue
+					if iDif < 1:
+						iDif = 1
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LOYALTY')):
+						iDif = iDif * 2
+					if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_RECON'):
+						iDif = iDif * 2
+					if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
+						iDif = iDif * 2
+					if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BEAST'):
+						iDif = iDif * 2
+					if not pUnit.isAlive():
+						iDif = iDif * 2
+					if pUnit.getOwner() in iSupport:
+						iDif += ( iSupport[pUnit.getOwner()] - pUnit.baseCombatStr() )
+					else:
+						iSupport[pUnit.getOwner()] = 0
+
+					iDiv = ( iDif + iL )
+					if iDiv < 1:
+						iDiv = 1
+					iChance = int( ( iL * 100 ) / iDiv )
+
+					# The more likely we will get them, the more value the target
+					iWeight = iValue * iChance
+					if eTeam.isAtWar(pUnit.getTeam()):
+						iWeight = iWeight * 3
+
+					sDip = pUnit.getName() + ': Diplomacy: '+str(iL)+' Dif: ' + str(iDif) + ' Potential Offer: ' + str( iValue * 15 ) + ' Enemy Help: ' + str( iSupport[pUnit.getOwner()] ) + ' Chance: ' + str( iChance ) + ' Decision: ' + str( iWeight ) + '...'
+					CyInterface().addCombatMessage(caster.getOwner(),sDip)
+
+					if iWeight > iBestValue and iChance > 1 and iValue * 15 < pPlayer.getGold() and iValue > 0 and pUnit.getLevel() + pUnit.baseCombatStr() <= caster.getLevel() + caster.baseCombatStr() and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE'):
+						iBestValue = iValue
+						iBestWeight = iWeight
+						iBestChance = iChance
+						sBestDip = sDip
+						pBestUnit = pUnit
+
+	# Found a unit that meets our criteria!
+	if pBestUnit != -1:
+		sMsg = 'Attempting to hire a ' + pBestUnit.getName() + ' for ' + str( iBestValue * 15 ) + ' gold with a ' + str(iChance) + '% chance...'
+		CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+		CyInterface().addCombatMessage(caster.getOwner(),sMsg)
+		iRoll = CyGame().getSorenRandNum(100, "Roll It")
+		if iRoll < iChance:
+			CyInterface().addMessage(caster.getOwner(),true,25,'Success! '+sBestDip,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addCombatMessage(caster.getOwner(),'Success! '+sBestDip)
+			pPlayer.setGold( pPlayer.getGold() - iBestValue * 15 )
+			oPlayer = gc.getPlayer(pBestUnit.getOwner())
+			oPlayer.setGold( oPlayer.getGold() + iBestValue * 15 )
+			caster.changeExperience( iBestValue / 3, -1, False, False, False )
+			newUnit = pPlayer.initUnit(pBestUnit.getUnitType(), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+			newUnit.convert(pBestUnit)
+		else:
+			CyInterface().addMessage(caster.getOwner(),true,25,'Failure... '+sBestDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addCombatMessage(caster.getOwner(),'Failure... '+sBestDip)
+			
+
+def spellSummonScroll(caster,sUnit):
+	bPlayer = gc.getPlayer(caster.getOwner())
+	iX = caster.getX()
+	iY = caster.getY()
+	iL = 1
+	if sUnit == 'UNIT_MAGIC_MISSILE':
+		iL = 1 + int( caster.getLevel() / 3 )
+
+	for i in range(iL):
+		newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sUnit), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		if (sUnit == 'UNIT_MAGIC_MISSILE' or sUnit == 'UNIT_FIREBALL'):
+			newUnit.setDuration(1)
+		else:
+			if bPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_SUMMONER')):
+				newUnit.setDuration(5)
+			else:
+				newUnit.setDuration(3)
+
+		newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1'),True)
+
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER2'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT3')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER3'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT4')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER4'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT5')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER5'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION1')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION2')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
+
+		if sUnit == 'UNIT_BUCCANEER':
+			newUnit.setDuration(0)
+			i = caster.baseCombatStr() / 4
+			if i < 1:
+				i = 1
+			newUnit.setBaseCombatStr( i + 1 )
+			newUnit.setBaseCombatStrDefense( i )
+			caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'),True)
+			caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CHARMED'),True)
+			caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BUCCANEERS'),False)
+
+def reqVolley(caster,volleytype):
+	if caster.getUnitType() == gc.getInfoTypeForString('UNIT_BURGLAR'):
+		return False
+
+	iX = caster.getX()
+	iY = caster.getY()
+
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iTeam = pPlayer.getTeam()
+	eTeam = gc.getTeam(iTeam)
+
+	iRange = 1
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION1')):
+		iRange += 1
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION2')):
+		iRange += 1
+
+	if (caster.movesLeft() < 1 and volleytype == 'archer'):
+		return False
+	
+	if volleytype == 'adept':
+		bCan = False
+
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NATURE1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIMENSIONAL1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WATER1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FIRE1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_AIR1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LAW1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHAOS1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SHADOW1')):
+			bCan = True
+
+		if not bCan:
+			return False
+
+	for iiX in range(iX-iRange, iX+iRange+1, 1):
+		for iiY in range(iY-iRange, iY+iRange+1, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				iDefStr = pUnit.baseCombatStr()
+				if iDefStr > 0:
+					iMod = ( caster.baseCombatStr() * 10 ) / iDefStr
+					iMax = 50
+					if volleytype == 'adept':
+						iMax = 20 + 5 * caster.getLevel()
+						if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 35:
+							iMax = 35
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE')):
+							iMax = iMax / 2
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE_TEMP')):
+							iMax = iMax / 2  
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_IMMUNE')):
+							iMax = 0
+					if (eTeam.isAtWar(pUnit.getTeam()) == True and pUnit.getDamage() < iMax and not pUnit.isInvisible(iTeam,False)):
+						return True
+	return False
+
+def spellVolley(caster,volleytype):
+	iX = caster.getX()
+	iY = caster.getY()
+
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iTeam = pPlayer.getTeam()
+	eTeam = gc.getTeam(iTeam)
+
+	iRange = 1
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION1')):
+		iRange += 1
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION2')):
+		iRange += 1
+
+	for i in range((1+int(caster.getLevel()/6))):
+		iBestValue = 0
+		pBestUnit = -1
+		pBestPlot = -1
+		for iiX in range(iX-iRange, iX+iRange+1, 1):
+			for iiY in range(iY-iRange, iY+iRange+1, 1):
+				pPlot = CyMap().plot(iiX,iiY)
+				for i in range(pPlot.getNumUnits()):
+					pUnit = pPlot.getUnit(i)
+					iDefStr = pUnit.baseCombatStr()
+					if iDefStr < 1:
+						iDefStr = 1
+					iMod = ( caster.baseCombatStr() * 10 ) / iDefStr
+					iMax = 50
+					if volleytype == 'adept':
+						iMax = 20 + 5 * caster.getLevel()
+						if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 35:
+							iMax = 35
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE')):
+							iMax = iMax / 2
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE_TEMP')):
+							iMax = iMax / 2  
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_IMMUNE')):
+							iMax = 0
+					iTargetRange = retRange(caster,pUnit)
+					if iTargetRange < 1:
+						iTargetRange = 1
+					if ( eTeam.isAtWar(pUnit.getTeam()) == True and pUnit.getDamage() < iMax and not pUnit.isInvisible(iTeam,False)):
+						iValue = ( pUnit.baseCombatStr() * ( 100 - pUnit.getDamage() ) ) / iTargetRange
+						if iValue > iBestValue:
+							iBestValue = iValue
+							iBestTargetRange = iTargetRange
+							pBestUnit = pUnit
+							pBestPlot = pPlot
+
+		if pBestUnit != -1:
+			iDefStr = pBestUnit.baseCombatStr()
+			if iDefStr < 1:
+				iDefStr = 1
+			iMod = ( caster.baseCombatStr() * 10 ) / iDefStr
+			iMax = 50
+			if volleytype == 'adept':
+				iMax = 20 + 5 * caster.getLevel()
+				if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 35:
+					iMax = 35
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE')):
+						iMax = iMax / 2
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE_TEMP')):
+						iMax = iMax / 2  
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_IMMUNE')):
+						iMax = 0
+			iDamage = iMod + CyGame().getSorenRandNum( iMod , "VolleyOfArrows" )
+			if (pBestUnit.isAlive() == False and volleytype == 'archer'):
+				iDamage = iDamage / 2
+			if pBestUnit.plot().isCity():
+				if volleytype == 'adept':
+					iDamage = iDamage / 2
+				elif volleytype == 'archer':
+					iDamage = iDamage / 3
+			if iBestTargetRange > 0:
+				iDamage = iDamage / iBestTargetRange
+			if volleytype == 'adept':
+				point = pBestPlot.getPoint()
+				## Alteration Manas: Nature, Dimensional, Body, Enchantment
+				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NATURE1')):
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_NATURE_SUMMON'),point)
+					CyAudioGame().Play3DSound('AS3D_SPELL_BLOOM',point.x,point.y,point.z)
+					sDamType = 'DAMAGE_POISON'
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT1')):
+					CyAudioGame().Play3DSound('AS3D_SPELL_HASTE',point.x,point.y,point.z)
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CHARM_PERSON'),point)
+					sDamType = 'DAMAGE_UNHOLY'
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY1')):
+					CyAudioGame().Play3DSound('AS3D_SPELL_HASTE',point.x,point.y,point.z)
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_WIND_SWIRL'),point)
+					sDamType = 'DAMAGE_PHYSICAL'
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIMENSIONAL1')):
+					CyAudioGame().Play3DSound('AS3D_SPELL_HASTE',point.x,point.y,point.z)
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_DISPEL_MAGIC'),point)
+					sDamType = 'DAMAGE_LIGHTNING'
+
+				## Elemental Manas: Air, Water, Earth, Fire
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH1')):
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_STONESKIN'),point)
+					CyAudioGame().Play3DSound('AS3D_SPELL_EARTHQUAKE',point.x,point.y,point.z)
+					sDamType = 'DAMAGE_PHYSICAL'
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WATER1')):
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPRING'),point)
+					CyAudioGame().Play3DSound('AS3D_SPELL_SPRING',point.x,point.y,point.z)
+					sDamType = 'DAMAGE_COLD'
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FIRE1')):
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_FIRE_SUMMON'),point)
+					CyAudioGame().Play3DSound('AS3D_SPELL_FIRE_ELEMENTAL',point.x,point.y,point.z)
+					sDamType = 'DAMAGE_FIRE'
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_AIR1')):
+					sDamType = 'DAMAGE_LIGHTNING'
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_AIR_SUMMON'),point)
+					CyAudioGame().Play3DSound('AS3D_SPELL_LIGHTNING_ELEMENTAL',point.x,point.y,point.z)
+
+				## Divination Manas: Law, Life, Sun, Spirit, Mind
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LAW1')):
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPIRITUAL_HAMMER'),point)
+					CyAudioGame().Play3DSound('AS3D_SPELL_ENCHANTMENT',point.x,point.y,point.z)
+					sDamType = 'DAMAGE_HOLY'
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE1')):
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_BLESS'),point)
+					CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
+					sDamType = 'DAMAGE_HOLY'
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN1')):
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SCORCH'),point)
+					CyAudioGame().Play3DSound('AS3D_SPELL_DEFILE',point.x,point.y,point.z)
+					sDamType = 'DAMAGE_FIRE'
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT1')):
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CREATION'),point)
+					CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
+					sDamType = 'DAMAGE_HOLY'
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND1')):
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL1'),point)
+					CyAudioGame().Play3DSound('AS3D_SPELL_CHARM_PERSON',point.x,point.y,point.z)
+					sDamType = 'DAMAGE_UNHOLY'
+
+				## Necromancy Manas: Death, Entropy, Chaos, Shadow
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH1')):
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_PORTAL_DEATH'),point)
+					CyAudioGame().Play3DSound('AS3D_SPELL_DEFILE',point.x,point.y,point.z)
+					sDamType = 'DAMAGE_DEATH'
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHAOS1')):
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_ENCHANTED_BLADE'),point)
+					CyAudioGame().Play3DSound('AS3D_SPELL_HASTE',point.x,point.y,point.z)
+					sDamType = 'DAMAGE_PHYSICAL'
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY1')):
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SACRIFICE'),point)
+					CyAudioGame().Play3DSound('AS3D_SPELL_SACRIFICE',point.x,point.y,point.z)
+					sDamType = 'DAMAGE_UNHOLY'
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SHADOW1')):
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SMOKECLOUD'),point)
+					CyAudioGame().Play3DSound('AS3D_SPELL_KRAKEN',point.x,point.y,point.z)
+					sDamType = 'DAMAGE_COLD'
+				else: 
+					sDamType = 'DAMAGE_LIGHTNING'
+					CyAudioGame().Play2DSound('AS2D_UNIT_RISES')
+
+				pBestUnit.doDamage(iDamage, iMax, caster, gc.getInfoTypeForString(sDamType), true)
+
+				## Magic Resistance and Immunity Cancels the Affects Below
+				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_IMMUNE')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE_TEMP')):
+					continue
+
+				## Nature Mana can apply poison
+				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NATURE1')) and pBestUnit.isAlive():
+					iChance = 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NATURE2')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NATURE3')):
+						iChance += 1
+					if CyGame().getSorenRandNum(5, "Poison") < iChance:
+						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'), True)
+				
+				## Body Mana can apply withered
+				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY1')) and pBestUnit.isAlive():
+					iChance = 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY2')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY3')):
+						iChance += 1
+					if CyGame().getSorenRandNum(12, "Withered") < iChance:
+						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WITHERED'), True)
+				
+				## Earth Mana can apply rusted
+				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH1')):
+					iChance = 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH2')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH3')):
+						iChance += 1
+					if CyGame().getSorenRandNum(6, "Rusted") < iChance:
+						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_RUSTED'), True)
+				
+				## Entropy Mana can apply enervated
+				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY1')):
+					iChance = 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY2')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY3')):
+						iChance += 1
+					if CyGame().getSorenRandNum(12, "Enervated") < iChance:
+						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ENERVATED'), True)
+				
+				## Death Mana can apply diseased or plagued
+				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH1')) and pBestUnit.isAlive():
+					iChance = 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH2')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH3')):
+						iChance += 1
+					if CyGame().getSorenRandNum(6, "Diseased") < iChance:
+						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'), True)
+					elif CyGame().getSorenRandNum(20, "Plagued") < iChance:
+						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), True)
+				
+				## Sun, Spirit and Life Mana can apply blinded
+				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN1')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE1')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT1')):
+					iChance = 0
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN1')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN2')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN3')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE1')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE2')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE3')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT1')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT2')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT3')):
+						iChance += 1
+					if CyGame().getSorenRandNum(6, "Blinded") < iChance:
+						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLINDED'), True)
+				
+				## Enchantment, Mind Mana can apply charmed
+				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT1')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND1')):
+					iChance = 0
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT1')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT2')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT3')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND1')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND2')):
+						iChance += 1
+					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND3')):
+						iChance += 1
+					if CyGame().getSorenRandNum(6, "Charmed") < iChance:
+						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CHARMED'), True)
+				
+			if volleytype == 'archer':
+				pBestUnit.doDamage(iDamage, iMax, caster, gc.getInfoTypeForString('DAMAGE_PHYSICAL'), true)
+				caster.finishMoves()
+
+
+def reqBlessMinorUndead(caster):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == True):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED_MINOR')) or not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HASTED')):
+				return True
+	return False
+
+def spellBlessMinorUndead(caster):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == True):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED_MINOR')) or not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HASTED')):
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED_MINOR'),True)
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HASTED'),True)
+
+def reqHealingPotionMinor(caster):
+	if (caster.getDamage() == 0 or caster.isAlive() == False):
+		return False
+	pPlayer = gc.getPlayer(caster.getOwner())
+	if pPlayer.isHuman() == False:
+		if caster.getDamage() < 25:
+			return False
+	return True
+
+def spellHealingPotionMinor(caster,iL):
+	pUnit = caster
+	if (pUnit.isAlive() and pUnit.getDamage() > 0):
+		iDefStr = pUnit.baseCombatStr()
+		if iDefStr < 1:
+			iDefStr = 1
+		iMod = ( iL * 10 ) / iDefStr + 5
+		iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
+		pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
+		if CyGame().getSorenRandNum(20, "Chance Cure Poison") < iL:
+			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'),False)
+		if CyGame().getSorenRandNum(40, "Chance Cure Disease") < iL:
+			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'),False)
+
+def spellXPPotion(caster, xp):
+	iXPAmount = int( CyGame().getSorenRandNum(int(xp/2), "XP Amount") + xp - int(xp/5) )
+	caster.changeExperience(iXPAmount, -1, False, False, False)
+
+def reqGrantLife(caster):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False and pUnit.baseCombatStr() < 15):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMORTAL')):
+				return True
+	return False
+
+def spellGrantLife(caster):
+	iNumBlessed = 1
+	iL = caster.getLevel()
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False and pUnit.baseCombatStr() < 15):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMORTAL')):
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMORTAL'),True)
+				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE1')):
+					caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE1'),False)
+					return
+				return
+
+def reqBloom(caster):
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHARMED')):
+		return False
+	return True	
+
+def reqDragonWarrior(caster):
+	strCheckData = pickle.loads(CyGameInstance.getScriptData())
+	if strCheckData['DragonWarrior'] >= caster.getLevel():
+		return False
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRAGON_WARRIOR')):
+		return False
+	if caster.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL'):
+		return False
+	return True	
+
+def spellDragonWarrior(caster):
+	iPromDragonWarrior = gc.getInfoTypeForString('PROMOTION_DRAGON_WARRIOR')
+	for iPlayer in range(gc.getMAX_PLAYERS()):
+		pPlayer = gc.getPlayer(iPlayer)
+		if pPlayer.isAlive():
+			py = PyPlayer(iPlayer)
+			for pUnit in py.getUnitList():
+				if (pUnit.isHasPromotion(iPromDragonWarrior) and pUnit != caster):
+					pUnit.setHasPromotion(iPromDragonWarrior, False)
+	caster.setHasPromotion(iPromDragonWarrior, True)
+	
+	strSetData = pickle.loads(CyGameInstance.getScriptData())
+	strSetData['DragonWarrior'] = caster.getLevel()
+	CyGameInstance.setScriptData(pickle.dumps(strSetData))
+
+def reqBlessMinor(caster):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED_MINOR')):
+				return True
+	return False
+
+def spellBlessMinor(caster):
+	iNumBlessed = 1
+	iL = caster.getLevel()
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')):
+			pUnit.changeDamage(-10,0)
+		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED_MINOR')):
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')):
+					pUnit.changeDamage(-15,0)
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED_MINOR'),True)
+				iNumBlessed = iNumBlessed + 1
+				if (iNumBlessed > 3 + int( iL / 2 ) ):
+					return
+
+def reqEnchantedBlade(caster):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_MELEE'):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTED_BLADE')):
+				return True
+	return False
+
+def spellEnchantedBlade(caster):
+	iNumBlessed = 0
+	iL = caster.getLevel()
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_MELEE'):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTED_BLADE')):
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTED_BLADE'),True)
+				iNumBlessed = iNumBlessed + 1
+				if (iNumBlessed >= int( iL / 3 )):
+					return
+
+def reqCourage(caster):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COURAGE')):
+				return True
+	return False
+
+def spellCourage(caster):
+	iNumBlessed = 0
+	iL = caster.getLevel()
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COURAGE')):
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COURAGE'),True)
+				iNumBlessed = iNumBlessed + 1
+				if (iNumBlessed >= int( iL / 2 )):
+					return
+
+def reqHaste(caster):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False and pUnit.isAlive() == True):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HASTED')):
+				return True
+	return False
+
+def spellHaste(caster):
+	iNumBlessed = 0
+	iL = caster.getLevel()
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False and pUnit.isAlive() == True):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HASTED')):
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HASTED'),True)
+				iNumBlessed = iNumBlessed + 1
+				if (iNumBlessed >= iL):
+					return
+
+def reqPath(caster):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PATH')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PATH_FINDING1')):
+			return True
+	return False
+
+def spellPath(caster):
+	iNumBlessed = 0
+	iL = caster.getLevel() / 2
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PATH_FINDING3')):
+		iL = caster.getLevel()
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PATH')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PATH_FINDING1')):
+			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PATH'),True)
+			iNumBlessed = iNumBlessed + 1
+			if (iNumBlessed >= iL):
+				return
+
+def reqLoyalty(caster,sProm):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if not pUnit.isHasPromotion(gc.getInfoTypeForString(sProm)):
+			if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False):
+				return True
+	return False
+
+def spellLoyalty(caster,sProm,iExtra):
+	iL = caster.getLevel() + iExtra + retCombat(caster)
+	iNumBlessed = 1
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if not pUnit.isHasPromotion(gc.getInfoTypeForString(sProm)):
+			if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False):
+				pUnit.setHasPromotion(gc.getInfoTypeForString(sProm),True)
+				iNumBlessed = iNumBlessed + 1
+				if (iNumBlessed >= iL):
+					return
+
+def reqAlive(caster):
+	if caster.isAlive():
+		return True
+	return False
+
+def reqStartingXP(caster):
+	pCity = caster.plot().getPlotCity()
+	pPlayer = gc.getPlayer(caster.getOwner())
+
+	if CyGame().getGameTurn() != 1:
+		return False
+
+	if pCity.getPopulation() < caster.getExperience():
+		return False
+
+	if pPlayer.getGold() < 10 * ( 1 + ( caster.getExperience() / 10 ) ):
+		return False
+
+	return True
+
+def spellStartingXP(caster):
+	pCity = caster.plot().getPlotCity()
+	pPlayer = gc.getPlayer(caster.getOwner())
+
+	iXPCost = 10 * ( 1 + ( caster.getExperience() / 10 ) )
+
+	caster.changeExperience( 1, -1, False, False, False)
+	pPlayer.changeGold( iXPCost * -1 )
+
+
+def reqXP(caster,reqXP):
+	if caster.getExperience() < reqXP:
+		return False
+	return True
+
+def reqPureAwesomeness(caster):
+	# Pure awesomeness works once every seven years...
+	if int(CyGame().getGameTurn()/7)*7 == CyGame().getGameTurn():
+		return True
+	return False
+
+def spellUnitEvent(caster,sStore):
+	pCity = caster.plot().getPlotCity()
+	owner = gc.getPlayer(caster.getOwner())
+	iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),sStore)
+	if iEvent != -1 and gc.getGame().isEventActive(iEvent) and owner.getEventTriggerWeight(iEvent) >= 0:
+		triggerData = owner.initTriggeredData(iEvent, true, -1, pCity.getX(), pCity.getY(), owner.getID(), pCity.getID(), -1, -1, caster.getID(), -1)
+	
+def spellDispel(caster):
+	iX = caster.getX()
+	iY = caster.getY()
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iTeam = pPlayer.getTeam()
+	eTeam = gc.getTeam(iTeam)
+	iNum = 0
+	promotionsGood = [ 'PROMOTION_BLESSED','PROMOTION_COURAGE','PROMOTION_CROWN_OF_BRILLANCE','PROMOTION_DANCE_OF_BLADES','PROMOTION_ENCHANTED_BLADE','PROMOTION_FAIR_WINDS','PROMOTION_FLAMING_ARROWS','PROMOTION_HASTED','PROMOTION_LOYALTY','PROMOTION_REGENERATION','PROMOTION_SHIELD_OF_FAITH','PROMOTION_SPELLSTAFF','PROMOTION_SPIRIT_GUIDE','PROMOTION_SPIRITUAL_HAMMER','PROMOTION_STONESKIN','PROMOTION_TREETOP_DEFENCE','PROMOTION_VALOR','PROMOTION_MAGE_ARMOR','PROMOTION_BLESSED_MINOR','PROMOTION_BLUR','PROMOTION_STRONG_TEMP' ]
+	promotionsBad  = [ 'PROMOTION_CHARMED','PROMOTION_ENERVATED','PROMOTION_BLINDED' ]
+	for iiX in range(iX-1, iX+2, 1):
+		for iiY in range(iY-1, iY+2, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				if (iNum < caster.getLevel() * 3 and CyGame().getSorenRandNum(10, "Dispel Roll") < caster.getLevel()):
+					iDoIt = 0
+					if eTeam.isAtWar(pUnit.getTeam()):
+						for i in promotionsGood:
+							if pUnit.isHasPromotion(gc.getInfoTypeForString(i)):
+								pUnit.setHasPromotion(gc.getInfoTypeForString(i), False)
+								iDoIt = iDoIt + 1
+					else:
+						for i in promotionsBad:
+							if pUnit.isHasPromotion(gc.getInfoTypeForString(i)):
+								pUnit.setHasPromotion(gc.getInfoTypeForString(i), False)
+								iDoIt = iDoIt + 1
+					if iDoIt > 0:
+						iNum = iNum + iDoIt
+						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPRING'),pPlot.getPoint())
+						CyInterface().addMessage(caster.getOwner(),True,25,pUnit.getName()+' dispelled!','',1,'Art/Interface/Buttons/Buildings/Arena.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				
+def spellCompFireball(caster,ifire):
+	iX = caster.getX()
+	iY = caster.getY()
+
+	pPlayer = gc.getPlayer(caster.getOwner())
+	if pPlayer.isHuman():
+		return
+
+	iTeam = pPlayer.getTeam()
+	eTeam = gc.getTeam(iTeam)
+
+	iRange = 2
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION1')):
+		iRange += 1
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION2')):
+		iRange += 1
+
+	for attacks in range(ifire):
+		iBestValue = 0
+		pBestUnit = -1
+		for iiX in range(iX-(iRange-1), iX+iRange, 1):
+			for iiY in range(iY-(iRange-1), iY+iRange, 1):
+				pPlot = CyMap().plot(iiX,iiY)
+				for i in range(pPlot.getNumUnits()):
+					pUnit = pPlot.getUnit(i)
+					if (pUnit.isAlive() and eTeam.isAtWar(pUnit.getTeam()) == True):
+						iValue = pUnit.baseCombatStr() * ( 100 - pUnit.getDamage() )
+						if iValue > iBestValue:
+							iBestValue = iValue
+							pBestUnit = pUnit
+
+		if pBestUnit != -1:
+			if pBestUnit.baseCombatStr() > 0:
+				iDamage = 150 / pBestUnit.baseCombatStr()
+			else:
+				iDamage = 150
+			pBestUnit.doDamage(iDamage, 100, caster, gc.getInfoTypeForString('DAMAGE_FIRE'), true)
+			pPlot = pBestUnit.plot()
+			point = pPlot.getPoint()
+			CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_PILLAR_OF_FIRE'),point)
+			CyAudioGame().Play3DSound('AS3D_SPELL_FIREBALL',point.x,point.y,point.z)
+			iCollat = pPlot.getNumUnits()
+			if iCollat > 4:
+				iCollat = 4
+			for i in range(iCollat):
+				pUnit = pPlot.getUnit(i)
+				iDiv = pUnit.baseCombatStr()
+				if iDiv < 1:
+					iDiv = 1
+				iDamage = 150 / iDiv
+				pUnit.doDamage(iDamage, 100, caster, gc.getInfoTypeForString('DAMAGE_FIRE'), true)
+			return
+	
