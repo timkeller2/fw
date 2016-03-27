@@ -17,6 +17,760 @@ CyGameInstance = gc.getGame()
 
 class CustomFunctions:
 
+	def generateLoot(self, iUnit, iHaveScrolls):
+		if iHaveScrolls < 1:
+			iHaveScrolls = iUnit.baseCombatStr()
+
+		iWeapons = 0
+		iArmor = 0
+		iTreasure = 0
+		iPotions = 0
+		iScrolls = 0
+		iItems = 0
+		iMessage = 0
+
+		if CyGame().getSorenRandNum(100, "ItemSelect1") < iHaveScrolls:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_IMPROVED_WEAPONS'), True)
+			iWeapons = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ItemSelect2") < iHaveScrolls - 3:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HEAVY_WEAPONS'), True)
+			iWeapons = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ItemSelect3") < iHaveScrolls - 6:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MASTER_CRAFTED_WEAPONS'), True)
+			iWeapons = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ItemSelect4") < iHaveScrolls:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_IMPROVED_ARMOR'), True)
+			iArmor = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ItemSelect5") < iHaveScrolls - 3:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HEAVY_ARMOR'), True)
+			iArmor = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ItemSelect6") < iHaveScrolls - 6:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MASTER_CRAFTED_ARMOR'), True)
+			iArmor = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ItemSelect9") < iHaveScrolls - 3:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TREASURE1'), True)
+			iTreasure = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ItemSelect10") < iHaveScrolls - 6:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TREASURE2'), True)
+			iTreasure = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ItemSelect11") < iHaveScrolls - 9:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TREASURE3'), True)
+			iTreasure = 1
+			iMessage = 1
+
+		## Adept Units have a higher chance of having magical items
+		if iUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ADEPT'):
+			iHaveScrolls = iHaveScrolls * 4
+
+		if CyGame().getSorenRandNum(100, "PotionSelect1") < iHaveScrolls + 4:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POTION_HEALING_MINOR'), True)
+			iPotions = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "PotionSelect1a") < iHaveScrolls + 2:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POTION_HEALING_MODERATE'), True)
+			iPotions = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "PotionSelect3") < iHaveScrolls + 2:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POTION_HASTE'), True)
+			iPotions = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "PotionSelect2") < iHaveScrolls + 2:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POTION_STRENGTH'), True)
+			iPotions = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "PotionSelect0") < iHaveScrolls:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POTION_XP_MINOR'), True)
+			iPotions = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "PotionSelect1c") < iHaveScrolls:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POTION_REGENERATION'), True)
+			iPotions = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "PotionSelect1b") < iHaveScrolls - 2:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POTION_HEALING_GREATER'), True)
+			iPotions = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ScrollSelect1") < iHaveScrolls - 2:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SCROLL_MM'), True)
+			iScrolls = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ScrollSelect2") < iHaveScrolls - 2:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SCROLL_MA'), True)
+			iScrolls = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ScrollSelect3") < iHaveScrolls - 2:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SCROLL_SB'), True)
+			iScrolls = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ScrollSelect4") < iHaveScrolls - 2:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SCROLL_MR'), True)
+			iScrolls = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "PotionSelect2a") < iHaveScrolls - 4:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POTION_STRENGTH_ENDURING'), True)
+			iPotions = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "PotionSelect2b") < iHaveScrolls - 4:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POTION_VAMPIRISM'), True)
+			iPotions = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "PotionSelect0a") < iHaveScrolls - 4:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POTION_XP'), True)
+			iPotions = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ScrollSelect5") < iHaveScrolls - 4:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SCROLL_SK'), True)
+			iScrolls = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ScrollSelect6") < iHaveScrolls - 4:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SCROLL_FB'), True)
+			iScrolls = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ItemSelect8") < iHaveScrolls - 6:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BOOTS_OF_HASTE'), True)
+			iItems = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "PotionSelect4") < iHaveScrolls - 6:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HEALING_SALVE'), True)
+			iPotions = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ScrollSelect7") < iHaveScrolls - 6:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SCROLL_SE'), True)
+			iScrolls = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ScrollSelect8") < iHaveScrolls - 8:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SCROLL_CR'), True)
+			iScrolls = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ScrollSelect9") < iHaveScrolls - 8:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SCROLL_MS'), True)
+			iScrolls = 1
+			iMessage = 1
+
+		if CyGame().getSorenRandNum(100, "ItemSelect7") < iHaveScrolls - 10:
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BATTLE_ROBE'), True)
+			iItems = 1
+			iMessage = 1
+
+		if iUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MERCHANT_SHIP') and iMessage > 0:
+			sMsg = ''
+			if iWeapons > 0:
+				sMsg = sMsg + 'weapons, '
+			if iArmor > 0:
+				sMsg = sMsg + 'armor, '
+			if iTreasure > 0:
+				sMsg = sMsg + 'treasure, '
+			if iPotions > 0:
+				sMsg = sMsg + 'potions, '
+			if iScrolls > 0:
+				sMsg = sMsg + 'scrolls, '
+			if iItems > 0:
+				sMsg = sMsg + 'magical items, '
+
+			CyInterface().addMessage(iUnit.getOwner(),false,25,'Your '+iUnit.getName()+' has gained '+sMsg+'gold and experience in recent trades!','',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),iUnit.getX(),iUnit.getY(),True,True)
+			CyInterface().addCombatMessage(iUnit.getOwner(),'Your '+iUnit.getName()+' has gained '+sMsg+'gold and experience in recent trades!')
+
+
+	def equip(self, iUnit):
+		if iUnit.baseCombatStr() < 1:
+			return
+		if iUnit.getDuration() > 0:
+			return
+
+		iGameTurn = CyGame().getGameTurn()
+		iHaveScrolls = 0
+		# Initiate Hidden Caches
+		if iUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE') and not iUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FEAR')):
+			iSkl = CyGame().getSorenRandNum(12, "Cache") - 2
+			if iSkl < 1:
+				iSkl = 1
+			iUnit.setLevel( iSkl )
+
+			iStr = CyGame().getSorenRandNum(10, "CacheStr") + iGameTurn / 50 - 2
+			if iStr < 1:
+				iStr = 1
+			iUnit.setBaseCombatStr(iStr)
+
+			iDef = CyGame().getSorenRandNum(12, "CacheDef") + iGameTurn / 50
+			if iDef < 1:
+				iDef = 1
+			iUnit.setBaseCombatStrDefense(iDef)
+
+			iHaveScrolls = int( iSkl + iStr + iDef ) + 5
+
+			# Mark this cache as having been processed
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FEAR'),True)
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_THROWING_AXES'), True)
+
+			iRoll = CyGame().getSorenRandNum(20, "Guards")
+			if iRoll > 10:
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1'),True)
+			if iRoll > 12:
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2'),True)
+			if iRoll > 14:
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT3'),True)
+			if iRoll > 16:
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT4'),True)
+			if iRoll > 18:
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT5'),True)
+			if iRoll > 10:
+				iRoll = CyGame().getSorenRandNum(5, "GuardType")
+				if iRoll == 1:
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL1'),True)
+				if iRoll == 2:
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL2'),True)
+				if iRoll == 3:
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL3'),True)
+				if iRoll == 4:
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL4'),True)
+
+			if CyGame().getSorenRandNum(20+iStr/2, "Trap1") > 12:
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1'),True)
+			if CyGame().getSorenRandNum(20+iStr/2, "Trap2") > 15:
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER2'),True)
+			if CyGame().getSorenRandNum(20+iStr/2, "Trap3") > 18:
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER3'),True)
+
+			if iDef > 8:
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TREASURE2'),True)
+			if iDef > 12:
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TREASURE3'),True)
+
+		iMod = 0
+		iFix = 0
+
+		if self.bTechExist('TECH_BRONZE_WORKING'):
+			iFix += 15
+		if self.bTechExist('TECH_IRON_WORKING'):
+			iFix += 15
+		if self.bTechExist('TECH_MITHRIL_WORKING'):
+			iFix += 30
+
+		iCreep = CyGame().getSorenRandNum(4, "IsCreep")
+		if (iUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_BEAST') and iCreep == 1 and iUnit.baseCombatStr() > 0 and iUnit.baseCombatStr() < 12 and CyGame().getSorenRandNum(150, "FewEarlyCreeps") < CyGame().getGameTurn() ):
+			iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), True)
+
+		if iUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')):
+			iMod = 60
+
+		if (iUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_MELEE') or iUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL')):
+			i = CyGame().getSorenRandNum(100+iMod, "EquipmentSelect") + iFix
+			if(i>100 and i<125):
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BRONZE_WEAPONS'), True)
+			elif(i>124):
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_IRON_WEAPONS'), True)
+			elif(i>149):
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MITHRIL_WEAPONS'), True)
+
+		if iUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_RECON'):
+			i = CyGame().getSorenRandNum(400+iMod, "EquipmentSelect") + iFix
+			if(i>250 and i<375):
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONOUS'), True)
+			elif(i>374):
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED_BLADE'), True)
+
+		if iUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ARCHER'):
+			i = CyGame().getSorenRandNum(400+iMod, "EquipmentSelect") + iFix
+			if(i>300):
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONOUS'), True)
+
+		if (iUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') and iUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_NAVAL') and iUnit.getUnitType() != gc.getInfoTypeForString('UNIT_SEA_SERPENT') and iUnit.getUnitType() != gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT')):
+			if iUnit.getUnitType() == gc.getInfoTypeForString('UNIT_CONJURER') or iUnit.getUnitType() == gc.getInfoTypeForString('UNIT_LICH'):
+				iSphere = CyGame().getSorenRandNum(9, "SphereSelect")				
+				if iSphere == 0:
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FIRE1'), True)
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FIRE2'), True)
+				elif iSphere == 1:
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WATER1'), True)
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WATER2'), True)
+				elif iSphere == 2:
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH1'), True)
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH2'), True)
+				elif iSphere == 3:
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_AIR1'), True)
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_AIR2'), True)
+				elif iSphere == 4:
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH1'), True)
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH2'), True)
+				elif iSphere == 5:
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY1'), True)
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY2'), True)
+				elif iSphere == 6:
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE1'), True)
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE2'), True)
+				elif iSphere == 7:
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CHAOS1'), True)
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CHAOS2'), True)
+				elif iSphere == 8:
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHADOW1'), True)
+					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHADOW2'), True)
+
+				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), True)
+				if self.bTechExist('TECH_KNOWLEDGE_OF_THE_ETHER'):
+					iUnit.setExperience(CyGame().getSorenRandNum(iGameTurn/20, "Conjurer Experience")+iGameTurn/20, -1)
+
+			self.generateLoot(iUnit,iHaveScrolls)
+
+
+	def sBarbUnit(self):
+		i = CyGame().getSorenRandNum(100, "BarbUnitSelect")
+
+		if self.bTechExist('TECH_BRONZE_WORKING'):
+			i += 30
+		if self.bTechExist('TECH_IRON_WORKING'):
+			i += 30
+		if self.bTechExist('TECH_MITHRIL_WORKING'):
+			i += 60
+
+		if(i<50):
+			return 'UNIT_GOBLIN'
+		elif(i<100):
+			return 'UNIT_WARRIOR'
+		elif(i<150):
+			ii = CyGame().getSorenRandNum(6, "BarbUnitSelectTier")
+			if( ii < 3 ):
+				return 'UNIT_AXEMAN'
+			elif( ii < 5 ):
+				return 'UNIT_ARCHER'
+			elif( ii == 5 ):
+				return 'UNIT_ADEPT'
+		elif(i<200):
+			ii = CyGame().getSorenRandNum(6, "BarbUnitSelectTier")
+			if( ii < 3 ):
+				return 'UNIT_CHAMPION'
+			elif( ii < 4 ):
+				return 'UNIT_CONJURER'
+			elif( ii < 5 ):
+				return 'UNIT_WOLF_RIDER'
+			elif( ii == 5 ):
+				return 'UNIT_LIZARDMAN'
+		elif(i>200):
+			return 'UNIT_OGRE'
+		return 'UNIT_WARRIOR'
+
+	def sComputerUnit(self):
+		i = CyGame().getSorenRandNum(100, "CompUnitSelect")
+
+		if self.bTechExist('TECH_BRONZE_WORKING'):
+			i += 30
+		if self.bTechExist('TECH_IRON_WORKING'):
+			i += 30
+		if self.bTechExist('TECH_MITHRIL_WORKING'):
+			i += 60
+
+		if(i<50):
+			return 'UNIT_SCOUT'
+		elif(i<100):
+			return 'UNIT_WARRIOR'
+		elif(i<150):
+			ii = CyGame().getSorenRandNum(6, "CompUnitSelectTier")
+			if( ii == 0 ):
+				return 'UNIT_HORSEMAN'
+			if( ii < 3 ):
+				return 'UNIT_AXEMAN'
+			elif( ii < 5 ):
+				return 'UNIT_ARCHER'
+			elif( ii == 5 ):
+				return 'UNIT_ADEPT'
+		elif(i>149):
+			ii = CyGame().getSorenRandNum(6, "CompUnitSelectTier")
+			if( ii < 3 ):
+				return 'UNIT_CHAMPION'
+			elif( ii < 4 ):
+				return 'UNIT_CONJURER'
+			elif( ii < 5 ):
+				return 'UNIT_LONGBOWMAN'
+			elif( ii == 5 ):
+				return 'UNIT_RANGER'
+
+		return 'UNIT_WARRIOR'
+
+	def sUndeadUnit(self):
+		i = CyGame().getSorenRandNum(100, "BarbUnitSelect")
+
+		if self.bTechExist('TECH_BRONZE_WORKING'):
+			i += 30
+		if self.bTechExist('TECH_IRON_WORKING'):
+			i += 30
+		if self.bTechExist('TECH_MITHRIL_WORKING'):
+			i += 60
+
+		if(i<50):
+			return 'UNIT_ZOMBIE_1'
+		elif(i<100):
+			ii = CyGame().getSorenRandNum(6, "BarbUnitSelectTier")
+			if( ii < 2 ):
+				return 'UNIT_SKELETON'
+			elif( ii < 4 ):
+				return 'UNIT_ZOMBIE_2'
+			elif( ii < 5 ):
+				return 'UNIT_ZOMBIE'
+			elif( ii == 5 ):
+				return 'UNIT_DROWN'
+		elif(i<150):
+			ii = CyGame().getSorenRandNum(6, "BarbUnitSelectTier")
+			if( ii < 3 ):
+				return 'UNIT_SPECTRE'
+			elif( ii < 5 ):
+				return 'UNIT_PYRE_ZOMBIE'
+			elif( ii == 5 ):
+				return 'UNIT_DISEASED_CORPSE'
+		elif(i<200):
+			ii = CyGame().getSorenRandNum(6, "BarbUnitSelectTier")
+			if( ii < 3 ):
+				return 'UNIT_SKELETON_WARRIOR'
+			elif( ii == 3 ):
+				return 'UNIT_LICH'
+			elif( ii == 4 ):
+				return 'UNIT_WRAITH'
+			elif( ii == 5 ):
+				return 'UNIT_DEATH_KNIGHT'
+		elif(i>200):
+			return 'UNIT_DEATH_KNIGHT'
+		return 'UNIT_SKELETON'
+
+	def sEvilUnit(self):
+		i = CyGame().getSorenRandNum(100, "BarbUnitSelect")
+
+		if self.bTechExist('TECH_BRONZE_WORKING'):
+			i += 30
+		if self.bTechExist('TECH_IRON_WORKING'):
+			i += 30
+		if self.bTechExist('TECH_MITHRIL_WORKING'):
+			i += 60
+
+		if(i<100):
+			ii = CyGame().getSorenRandNum(6, "BarbUnitSelectTier")
+			if( ii < 5 ):
+				return 'UNIT_IMP'
+			elif( ii == 5 ):
+				return 'UNIT_CHAOS_MARAUDER'
+		elif(i<150):
+			ii = CyGame().getSorenRandNum(6, "BarbUnitSelectTier")
+			if( ii < 1 ):
+				return 'UNIT_CHAOS_MARAUDER'
+			elif( ii < 3 ):
+				return 'UNIT_SUCCUBUS'
+			elif( ii < 5 ):
+				return 'UNIT_SECT_OF_FLIES'
+			elif( ii == 5 ):
+				return 'UNIT_TAR_DEMON_MED'
+		elif(i<200):
+			ii = CyGame().getSorenRandNum(6, "BarbUnitSelectTier")
+			if( ii < 3 ):
+				return 'UNIT_STYGIAN_GUARD'
+			elif( ii < 5 ):
+				return 'UNIT_PIT_BEAST'
+			elif( ii == 5 ):
+				return 'UNIT_TAR_DEMON'
+		elif(i>200):
+			return 'UNIT_BALOR'
+		return 'UNIT_IMP'
+
+	def sAnimalUnit(self):
+		i = CyGame().getSorenRandNum(8, "AnimalUnitSelect") + 1
+		if(i==1):
+			return 'UNIT_BABY_SPIDER'
+		elif(i==2):
+			return 'UNIT_BEAR'
+		elif(i==3):
+			return 'UNIT_ELEPHANT'
+		elif(i==4):
+			return 'UNIT_GIANT_SPIDER'
+		elif(i==5):
+			return 'UNIT_GORILLA'
+		elif(i==6):
+			return 'UNIT_LION'
+		elif(i==7):
+			return 'UNIT_TIGER'
+		elif(i==8):
+			return 'UNIT_WOLF'
+
+		return 'UNIT_GIANT_SPIDER'
+
+	def cantake(self,pUnit,iProm):
+		if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_MELEE'):
+			return True
+		if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_MOUNTED'):
+			return True
+		if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BEAST'):
+			return True
+		if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL'):
+			return True
+		if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_SIEGE'):
+			return True
+
+		if iProm == gc.getInfoTypeForString('PROMOTION_IMPROVED_WEAPONS'):
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
+				return True
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ARCHER'):
+				return True
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_DISCIPLE'):
+				return True
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_RECON'):
+				return True
+
+		if iProm == gc.getInfoTypeForString('PROMOTION_IMPROVED_ARMOR'):
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
+				return True
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_DISCIPLE'):
+				return True
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_RECON'):
+				return True
+
+		if iProm == gc.getInfoTypeForString('PROMOTION_HEAVY_ARMOR'):
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_DISCIPLE'):
+				return True
+
+		return False
+
+	def addUnit(self, iUnit):
+		biPlayer = gc.getBARBARIAN_PLAYER()
+		pBestPlot = -1
+		iBestPlot = -1
+		for i in range (CyMap().numPlots()):
+			pPlot = CyMap().plotByIndex(i)
+			iPlot = -1
+			if pPlot.isWater() == False:
+				if pPlot.getNumUnits() == 0:
+					if pPlot.isCity() == False:
+						if pPlot.isImpassable() == False:
+							iPlot = CyGame().getSorenRandNum(500, "Add Unit")
+							iPlot = iPlot + (pPlot.area().getNumTiles() * 10)
+							if pPlot.isBarbarian():
+								iPlot = iPlot + 200
+							if (pPlot.isOwned() and pPlot.isBarbarian() != True):
+								iPlot = iPlot / 2
+							if pPlot.isVisibleEnemyUnit(biPlayer):
+								iPlot = iPlot / 2
+							if iPlot > iBestPlot:
+								iBestPlot = iPlot
+								pBestPlot = pPlot
+		if iBestPlot != -1:
+			bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
+			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+			newUnit.finishMoves()
+#			self.equip(newUnit)
+			return newUnit
+
+	def addBarbUnit(self, iUnit):
+		biPlayer = gc.getBARBARIAN_PLAYER()
+		pBestPlot = -1
+		iBestPlot = -1
+		iJungle = gc.getInfoTypeForString('FEATURE_JUNGLE')
+		iJungleUnit = CyGame().getSorenRandNum(3, "Jungle Unit")
+		for i in range (CyMap().numPlots()):
+			pPlot = CyMap().plotByIndex(i)
+			iPlot = -1
+			if pPlot.isWater() == False:
+				if pPlot.isImpassable() == False:
+					if pPlot.getNumUnits() == 0:
+						iPlot = CyGame().getSorenRandNum(1000, "Add Unit")
+						if (pPlot.getFeatureType() == iJungle and iJungleUnit == 1):
+							iPlot = iPlot + 100
+						if (pPlot.isOwned() and pPlot.isBarbarian() != True):
+							iPlot = iPlot / 2
+						if pPlot.isVisibleEnemyUnit(biPlayer):
+							iPlot = iPlot / 2
+						if iPlot > iBestPlot:
+							iBestPlot = iPlot
+							pBestPlot = pPlot
+		if iBestPlot != -1:
+			bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
+			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+			newUnit.finishMoves()
+#			self.equip(newUnit)
+
+	def addBarbUnitA(self, iUnit):
+		biPlayer = gc.getBARBARIAN_PLAYER()
+		pBestPlot = -1
+		iBestPlot = -1
+		for i in range (CyMap().numPlots()):
+			pPlot = CyMap().plotByIndex(i)
+			iPlot = -1
+			if pPlot.isWater() == False:
+				if pPlot.isImpassable() == False:
+					if pPlot.getNumUnits() == 0:
+						iPlot = CyGame().getSorenRandNum(500, "Add Unit")
+						if iPlot > iBestPlot:
+							iBestPlot = iPlot
+							pBestPlot = pPlot
+		if iBestPlot != -1:
+			bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
+			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+			newUnit.finishMoves()
+#			self.equip(newUnit)
+
+	def unitAptitude(self, newUnit):
+		iAptitude = CyGame().getSorenRandNum(6, "Aptitude") + 1
+		iStrong = CyGame().getSorenRandNum(3, "Strong") + 1
+		iImmortal = CyGame().getSorenRandNum(3, "Immortal") + 1
+		iHero =  CyGame().getSorenRandNum(6, "Noble") + 1
+
+		if iAptitude > 1:
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1'), True)
+		if iAptitude > 2:
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER2'), True)
+		if iAptitude > 3:
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER3'), True)
+		if iAptitude > 4:
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER4'), True)
+		if iAptitude > 5:
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER5'), True)
+
+		if iStrong == 1:
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG'), True)
+
+		if iImmortal > 0:
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMORTAL'), True)
+
+		if CyGame().getSorenRandNum(3, "Mobile") == 1:
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'), True)
+
+		# if iHero == 1:
+			# newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_NOBILITY'), True)
+
+	def sDisputeLevel(self, i):
+		if i < 3:
+			return 'minor'
+		if i < 6:
+			return 'small'
+		if i < 9:
+			return ''
+		if i < 12:
+			return 'large'
+		if i < 15:
+			return 'very large'
+		if i < 20:
+			return 'extremely large'
+		if i < 30:
+			return 'citywide'
+		if i < 50:
+			return 'nationwide'
+
+		return 'global'
+
+	def iAutoBuffRange(self,pUnit):
+		iABR = pUnit.getLevel() + pUnit.getFortifyTurns()
+		if iABR > pUnit.getLevel() * 2:
+			iABR = pUnit.getLevel() * 2
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION1')):
+			iABR += 2
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION2')):
+			iABR += 3
+		return iABR
+
+	def finalWar(self):
+		iPlayer = CyGame().getRankPlayer(0)
+		pPlayer = gc.getPlayer(iPlayer)
+		iLead = CyGame().getPlayerScore(iPlayer) - CyGame().getPlayerScore(CyGame().getRankPlayer(1))
+		if (CyGame().getPlayerScore(iPlayer) >= 650 + CyGame().getPlayerScore(CyGame().getRankPlayer(1)) and (CyGame().getSorenRandNum(6, "Warn Leading Player") == 1 or CyGame().getPlayerScore(iPlayer) >= 2 * CyGame().getPlayerScore(CyGame().getRankPlayer(1)) )):
+			iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),'EVENTTRIGGER_WARN_ABOUT_TO_WIN')
+			triggerData = pPlayer.initTriggeredData(iEvent, true, -1, -1, -1, iPlayer, -1, -1, -1, -1, -1)
+
+			# Final War started no more often than every 15 turns
+			strSetData = cPickle.loads(CyGameInstance.getScriptData())
+			if strSetData['FinalWar'] > CyGame().getGameTurn() - 15:
+				return
+
+			if (CyGame().getPlayerScore(iPlayer) >= 1000 and CyGame().getSorenRandNum(iLead, "Go To War") > 750):
+				strSetData['FinalWar'] = CyGame().getGameTurn()
+				CyGameInstance.setScriptData(pickle.dumps(strSetData))
+				pTeam = pPlayer.getTeam()
+				for iTeam in range(gc.getMAX_CIV_TEAMS()):
+					eTeam = gc.getTeam(iTeam)
+					if iTeam != pPlayer.getTeam() and eTeam.isAlive() and not eTeam.isHuman() and eTeam.isAVassal() == False:
+						eTeam.declareWar(pTeam, false, WarPlanTypes.WARPLAN_TOTAL)
+
+	def iNoble(self, unit):
+		iNob = 0
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NOBILITY')):
+			iNob += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GREAT_COMMANDER')):
+			iNob += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER1')):
+			iNob += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER2')):
+			iNob += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER3')):
+			iNob += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES1')):
+			iNob += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES2')):
+			iNob += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES3')):
+			iNob += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR1')):
+			iNob += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR2')):
+			iNob += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR3')):
+			iNob += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHIEF')):
+			iNob += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GRAND_MASTER')):
+			iNob += 1
+
+		iArmy = 0
+		pPlot = CyMap().plot(unit.getX(),unit.getY())
+		for i in range(pPlot.getNumUnits()):
+			pUnit = pPlot.getUnit(i)
+			if pUnit.getOwner() == unit.getOwner():
+				iArmy += pUnit.baseCombatStr()
+
+		iNob += ( iArmy / 7 )
+
+		iNob += ( unit.baseCombatStr() / 2 )
+
+		return iNob
+
+	def bTechExist(self, sTech):
+		bFoundValid = false
+		iTech = CvUtil.findInfoTypeNum(gc.getTechInfo, gc.getNumTechInfos(), sTech)
+		for iPlayer in range(gc.getMAX_CIV_PLAYERS()):			
+			loopPlayer = gc.getPlayer(iPlayer)
+			if loopPlayer.isAlive():
+				if gc.getTeam(loopPlayer.getTeam()).isHasTech(iTech):
+					bFoundValid = true
+					break
+		return bFoundValid
+
 	def iValidCity(self,pPlayer):
 		for i in range (pPlayer.getNumCities()):
 			pCity = pPlayer.getCity(i)
@@ -111,25 +865,25 @@ class CustomFunctions:
 		popupInfo.addPythonButton(CyTranslator().getText("TXT_KEY_POPUP_CLOSE", ()), "")
 		popupInfo.addPopup(iPlayer)
 
-	def addUnit(self, iUnit):
-		pBestPlot = -1
-		iBestPlot = -1
-		for i in range (CyMap().numPlots()):
-			pPlot = CyMap().plotByIndex(i)
-			iPlot = -1
-			if pPlot.isWater() == False:
-				if pPlot.getNumUnits() == 0:
-					if pPlot.isCity() == False:
-						if pPlot.isImpassable() == False:
-							iPlot = CyGame().getSorenRandNum(500, "Add Unit")
-							iPlot = iPlot + (pPlot.area().getNumTiles() * 10)
-							if pPlot.isBarbarian():
-								iPlot = iPlot + 200
-							if pPlot.isOwned():
-								iPlot = iPlot / 2
-							if iPlot > iBestPlot:
-								iBestPlot = iPlot
-								pBestPlot = pPlot
+	# def addUnit(self, iUnit):
+		# pBestPlot = -1
+		# iBestPlot = -1
+		# for i in range (CyMap().numPlots()):
+			# pPlot = CyMap().plotByIndex(i)
+			# iPlot = -1
+			# if pPlot.isWater() == False:
+				# if pPlot.getNumUnits() == 0:
+					# if pPlot.isCity() == False:
+						# if pPlot.isImpassable() == False:
+							# iPlot = CyGame().getSorenRandNum(500, "Add Unit")
+							# iPlot = iPlot + (pPlot.area().getNumTiles() * 10)
+							# if pPlot.isBarbarian():
+								# iPlot = iPlot + 200
+							# if pPlot.isOwned():
+								# iPlot = iPlot / 2
+							# if iPlot > iBestPlot:
+								# iBestPlot = iPlot
+								# pBestPlot = pPlot
 		if iBestPlot != -1:
 			bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
 			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
@@ -716,6 +1470,37 @@ class CustomFunctions:
 		iCount = CyGame().getGlobalCounter()
 		
 		### FW Changes
+		iAdj = 0
+
+		if CyMap().getWorldSize() == gc.getInfoTypeForString('WORLDSIZE_DUEL'):
+			iAdj = 6
+		if CyMap().getWorldSize() == gc.getInfoTypeForString('WORLDSIZE_TINY'):
+			iAdj = 4
+		if CyMap().getWorldSize() == gc.getInfoTypeForString('WORLDSIZE_SMALL'):
+			iAdj = 2
+		if CyMap().getWorldSize() == gc.getInfoTypeForString('WORLDSIZE_LARGE'):
+			iAdj = -1
+		if CyMap().getWorldSize() == gc.getInfoTypeForString('WORLDSIZE_HUGE'):
+			iAdj = -2
+
+		if CyGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_NORMAL'):
+			iAdj = iAdj + 4
+		if CyGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_EPIC'):
+			iAdj = iAdj + 8
+		if CyGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_MARATHON'):
+			iAdj = iAdj + 12
+
+		# if self.bTechExist('TECH_INFERNAL_PACT') == False and CyGame().getSorenRandNum(6+iAdj, "AnimalStuff") == 1:
+			# self.addUnit(gc.getInfoTypeForString(self.sAnimalUnit()))
+		# if CyGame().getSorenRandNum(4+iAdj, "BarbarianStuff") == 1:
+			# self.addBarbUnit(gc.getInfoTypeForString(self.sBarbUnit()))
+		# if CyGame().getSorenRandNum(10+iAdj, "HiddenCache") == 1 or iGameTurn < 6:
+			# self.addBarbUnitA(gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'))
+		# if self.bTechExist('TECH_NECROMANCY') and CyGame().getSorenRandNum(4+iAdj, "UndeadStuff") == 1:
+			# self.addBarbUnit(gc.getInfoTypeForString(self.sUndeadUnit()))
+		# if self.bTechExist('TECH_CORRUPTION_OF_SPIRIT') and CyGame().getSorenRandNum(4+iAdj, "EvilStuff") == 1:
+			# self.addBarbUnit(gc.getInfoTypeForString(self.sEvilUnit()))
+
 		# Crowded squares are crowded - FW
 		for i in range (CyMap().numPlots()):
 			crowdMessage = True
