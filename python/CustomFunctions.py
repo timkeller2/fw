@@ -780,11 +780,16 @@ class CustomFunctions:
 						if bonus.getDescription() == 'Mithril':
 							iNum += 4
 							iDiv = 2
-						pPlayer.setGold( pPlayer.getGold() + iNum * ( iNum / iDiv + 1 ) )
-						iExtraResources += iNum * ( iNum / iDiv + 1 )
-						sExtraResources += bonus.getDescription() + ' ' + str( iNum * ( iNum / iDiv + 1 ) ) + ', '
+						iPrice = ( iNum * 100 ) / iDiv
+						iTotal = ( iNum * iPrice ) / 100
+						if iTotal < iNum:
+							iTotal = iNum
+						pPlayer.setGold( pPlayer.getGold() + iTotal )
+						iExtraResources += iTotal
+						sExtraResources += bonus.getDescription() + ' ' + str( iTotal ) + ', '
 				
 				if iExtraResources > 0 and pPlayer.isHuman() == True:
+					sExtraResources = sExtraResources[:-2]
 					sPD['CUSTOM_INCOME'] += iExtraResources
 					## Give message when resource income changes
 					if 'RESOURCE_INCOME' not in sPD:
