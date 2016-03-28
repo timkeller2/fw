@@ -2446,5 +2446,95 @@
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MAGICIAN</DefaultUnit>
 		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_POTION_XP_MINOR</Type>
+			<Description>Minor Potion of Experience</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_POTION_XP_MINOR</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_POTION_XP</Type>
+			<Description>Potion of Experience</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_POTION_XP</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_POTION_HEALING_MINOR</Type>
+			<Description>Minor Healing Potion</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_POTION_HEALING_MINOR</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_POTION_HEALING_MODERATE</Type>
+			<Description>Moderate Healing Potion</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_POTION_HEALING_MODERATE</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_POTION_HEALING_GREATER</Type>
+			<Description>Greater Healing Potion</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_POTION_HEALING_GREATER</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_POTION_VAMPIRISM</Type>
+			<Description>Potion of Vampirism</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_POTION_VAMPIRISM</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_POTION_STRENGTH_ENDURING</Type>
+			<Description>Potion of Enduring Strength</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_POTION_STRENGTH_ENDURING</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_POTION_REGENERATION</Type>
+			<Description>Potion of Regeneration</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_POTION_REGENERATION</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_POTION_STRENGTH</Type>
+			<Description>Potion of Strength</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_POTION_STRENGTH</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_POTION_HASTE</Type>
+			<Description>Potion of Haste</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_POTION_HASTE</DefaultUnit>
+		</UnitClassInfo>
 	</UnitClassInfos>
 </Civ4UnitClassInfos>
