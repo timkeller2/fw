@@ -2608,5 +2608,86 @@
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>EQUIPMENT_BOOTS_OF_HASTE</DefaultUnit>
 		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_SCROLL_MM</Type>
+			<Description>Scroll of Magic Missile</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_SCROLL_MM</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_SCROLL_MA</Type>
+			<Description>Scroll of Mage Armor</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_SCROLL_MA</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_SCROLL_SB</Type>
+			<Description>Scroll of Summon Beastman</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_SCROLL_SB</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_SCROLL_FB</Type>
+			<Description>Scroll of Fire Ball</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_SCROLL_FB</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_SCROLL_MR</Type>
+			<Description>Scroll of Magic Resistance</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_SCROLL_MR</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_SCROLL_SK</Type>
+			<Description>Scroll of Summon Kikijub</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_SCROLL_SK</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_SCROLL_CR</Type>
+			<Description>Scroll of Crush</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_SCROLL_CR</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_SCROLL_MS</Type>
+			<Description>Scroll of Maelstrom</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_SCROLL_MS</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_SCROLL_SE</Type>
+			<Description>Scroll of Summon Earth Elemental</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_SCROLL_SE</DefaultUnit>
+		</UnitClassInfo>
 	</UnitClassInfos>
 </Civ4UnitClassInfos>
