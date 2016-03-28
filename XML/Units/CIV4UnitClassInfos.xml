@@ -2536,5 +2536,77 @@
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>EQUIPMENT_POTION_HASTE</DefaultUnit>
 		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_ARMOR</Type>
+			<Description>Master Crafted Armor</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_ARMOR</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_IMPROVED_ARMOR</Type>
+			<Description>Improved Armor</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_IMPROVED_ARMOR</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_HEAVY_ARMOR</Type>
+			<Description>Heavy Armor</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_HEAVY_ARMOR</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_IMPROVED_WEAPONS</Type>
+			<Description>Improved Weapons</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_IMPROVED_WEAPONS</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_HEAVY_WEAPONS</Type>
+			<Description>Heavy Weapons</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_HEAVY_WEAPONS</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_WEAPONS</Type>
+			<Description>Master Crafted Weapons</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_WEAPONS</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_BATTLE_ROBE</Type>
+			<Description>Mage's Battle Robe</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_BATTLE_ROBE</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>EQUIPMENTCLASS_BOOTS_OF_HASTE</Type>
+			<Description>Boots of Haste</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<iInstanceCostModifier>0</iInstanceCostModifier>
+			<DefaultUnit>EQUIPMENT_BOOTS_OF_HASTE</DefaultUnit>
+		</UnitClassInfo>
 	</UnitClassInfos>
 </Civ4UnitClassInfos>
