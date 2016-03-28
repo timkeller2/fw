@@ -616,6 +616,8 @@ class CustomFunctions:
 			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 			newUnit.finishMoves()
 #			self.equip(newUnit)
+			return newUnit
+
 
 	def addBarbUnitA(self, iUnit):
 		biPlayer = gc.getBARBARIAN_PLAYER()

@@ -34308,6 +34308,12 @@
             <iLeaderExperience>0</iLeaderExperience>
             <iCombatDefense>4</iCombatDefense>
             <iTier>1</iTier>
+            <BonusAffinities>
+                <BonusAffinity>
+                    <BonusType>BONUS_BANANA</BonusType>
+                    <iAffinity>1</iAffinity>
+                </BonusAffinity>
+            </BonusAffinities>
         </UnitInfo>
         <UnitInfo>
             <Class>UNITCLASS_GOVANNON</Class>
@@ -69831,6 +69837,10 @@
             <UnitClassDefenseMods>
             </UnitClassDefenseMods>
             <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+                    <iUnitCombatMod>125</iUnitCombatMod>
+                </UnitCombatMod>
             </UnitCombatMods>
             <UnitCombatCollateralImmunes>
             </UnitCombatCollateralImmunes>
@@ -72820,7 +72830,7 @@
             <Domain>DOMAIN_LAND</Domain>
             <DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
             <Invisible>NONE</Invisible>
-            <SeeInvisible>NONE</SeeInvisible>
+            <SeeInvisible>INVISIBLE_ANIMAL</SeeInvisible>
             <Description>TXT_KEY_UNIT_WOLF</Description>
             <Civilopedia>TXT_KEY_UNIT_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>TXT_KEY_UNIT_WOLF_STRATEGY</Strategy>
@@ -73030,7 +73040,7 @@
             <iCombatDefense>2</iCombatDefense>
             <iTier>1</iTier>
             <UnitConvertFromCombat>UNIT_WOLF_PACK</UnitConvertFromCombat>
-            <iUnitConvertFromCombatChance>10</iUnitConvertFromCombatChance>
+            <iUnitConvertFromCombatChance>25</iUnitConvertFromCombatChance>
         </UnitInfo>
         <UnitInfo>
             <Class>UNITCLASS_WOLF_PACK</Class>
@@ -73043,7 +73053,7 @@
             <Domain>DOMAIN_LAND</Domain>
             <DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
             <Invisible>NONE</Invisible>
-            <SeeInvisible>NONE</SeeInvisible>
+            <SeeInvisible>INVISIBLE_ANIMAL</SeeInvisible>
             <Description>TXT_KEY_UNIT_WOLF_PACK</Description>
             <Civilopedia>TXT_KEY_UNIT_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>TXT_KEY_UNIT_WOLF_STRATEGY</Strategy>
@@ -73241,7 +73251,7 @@
             <iCombatDefense>3</iCombatDefense>
             <iTier>2</iTier>
             <UnitCreateFromCombat>UNIT_WOLF</UnitCreateFromCombat>
-            <iUnitCreateFromCombatChance>10</iUnitCreateFromCombatChance>
+            <iUnitCreateFromCombatChance>25</iUnitCreateFromCombatChance>
         </UnitInfo>
         <UnitInfo>
             <Class>UNITCLASS_WORKBOAT</Class>

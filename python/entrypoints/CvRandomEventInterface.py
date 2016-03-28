@@ -6621,3 +6621,231 @@ def canTriggerImpeachmentCity(argsList):
 		return true
 	return false
 
+### FW Changes - MTK
+
+def doIndustriousBuilder1(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pCity = bPlayer.getCity(kTriggeredData.iCityId)
+
+	listBuildings = []
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GAMBLING_HOUSE')) == 0:
+		listBuildings.append('BUILDING_GAMBLING_HOUSE')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ALCHEMY_LAB')) == 0:
+		listBuildings.append('BUILDING_ALCHEMY_LAB')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_AQUEDUCT')) == 0:
+		listBuildings.append('BUILDING_AQUEDUCT')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_COMMAND_POST')) == 0:
+		listBuildings.append('BUILDING_COMMAND_POST')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_BOWYER')) == 0:
+		listBuildings.append('BUILDING_BOWYER')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_HIPPODROME')) == 0:
+		listBuildings.append('BUILDING_HIPPODROME')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_WEAPONSMITH')) == 0:
+		listBuildings.append('BUILDING_WEAPONSMITH')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_PUBLIC_BATHS')) == 0:
+		listBuildings.append('BUILDING_PUBLIC_BATHS')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ASYLUM')) == 0:
+		listBuildings.append('BUILDING_ASYLUM')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TAVERN')) == 0:
+		listBuildings.append('BUILDING_TAVERN')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_MONEYCHANGER')) == 0:
+		listBuildings.append('BUILDING_MONEYCHANGER')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_INFIRMARY')) == 0:
+		listBuildings.append('BUILDING_INFIRMARY')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_LARGE_ANIMAL_STABLE')) == 0:
+		listBuildings.append('BUILDING_LARGE_ANIMAL_STABLE')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_THEATRE')) == 0:
+		listBuildings.append('BUILDING_THEATRE')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GROVE')) == 0:
+		listBuildings.append('BUILDING_GROVE')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_MACHINISTS_SHOP')) == 0:
+		listBuildings.append('BUILDING_MACHINISTS_SHOP')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TAX_OFFICE')) == 0:
+		listBuildings.append('BUILDING_TAX_OFFICE')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_DUNGEON')) == 0:
+		listBuildings.append('BUILDING_DUNGEON')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_COURTHOUSE')) == 0:
+		listBuildings.append('BUILDING_COURTHOUSE')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_INN')) == 0:
+		listBuildings.append('BUILDING_INN')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_WALLS')) == 0:
+		listBuildings.append('BUILDING_WALLS')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_FORGE')) == 0:
+		listBuildings.append('BUILDING_FORGE')
+#	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_PLANAR_GATE')) == 0:
+#		listBuildings.append('BUILDING_PLANAR_GATE')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ACADEMY')) == 0:
+		listBuildings.append('BUILDING_ACADEMY')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_OBSIDIAN_GATE')) == 0:
+		listBuildings.append('BUILDING_OBSIDIAN_GATE')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ARCHMAGE_STUDY')) == 0:
+		listBuildings.append('BUILDING_ARCHMAGE_STUDY')
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_DRAGON_NEST')) == 0:
+		listBuildings.append('BUILDING_DRAGON_NEST')
+
+	sBuildingType = listBuildings[ CyGame().getSorenRandNum(len(listBuildings), "BuildingType") ]
+	pCity.setNumRealBuilding(gc.getInfoTypeForString(sBuildingType), 1)
+	CyInterface().addMessage(iPlayer,True,25,'The industrious builder builds a(n) '+CyTranslator().getText("TXT_KEY_" + sBuildingType, ()),'',1,'Art/Interface/Buttons/Actions/Pillage.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+
+def doIndustriousBuilder2(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pCity = bPlayer.getCity(kTriggeredData.iCityId)
+
+	iBuildings = CyGame().getSorenRandNum(3, "GroupSize") + 2
+
+	for i in range(iBuildings):
+		listBuildings = []
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GAMBLING_HOUSE')) == 0:
+			listBuildings.append('BUILDING_GAMBLING_HOUSE')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ALCHEMY_LAB')) == 0:
+			listBuildings.append('BUILDING_ALCHEMY_LAB')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_AQUEDUCT')) == 0:
+			listBuildings.append('BUILDING_AQUEDUCT')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_COMMAND_POST')) == 0:
+			listBuildings.append('BUILDING_COMMAND_POST')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_BOWYER')) == 0:
+			listBuildings.append('BUILDING_BOWYER')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_HIPPODROME')) == 0:
+			listBuildings.append('BUILDING_HIPPODROME')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_WEAPONSMITH')) == 0:
+			listBuildings.append('BUILDING_WEAPONSMITH')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_PUBLIC_BATHS')) == 0:
+			listBuildings.append('BUILDING_PUBLIC_BATHS')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ASYLUM')) == 0:
+			listBuildings.append('BUILDING_ASYLUM')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TAVERN')) == 0:
+			listBuildings.append('BUILDING_TAVERN')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_MONEYCHANGER')) == 0:
+			listBuildings.append('BUILDING_MONEYCHANGER')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_INFIRMARY')) == 0:
+			listBuildings.append('BUILDING_INFIRMARY')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_LARGE_ANIMAL_STABLE')) == 0:
+			listBuildings.append('BUILDING_LARGE_ANIMAL_STABLE')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_THEATRE')) == 0:
+			listBuildings.append('BUILDING_THEATRE')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GROVE')) == 0:
+			listBuildings.append('BUILDING_GROVE')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_MACHINISTS_SHOP')) == 0:
+			listBuildings.append('BUILDING_MACHINISTS_SHOP')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TAX_OFFICE')) == 0:
+			listBuildings.append('BUILDING_TAX_OFFICE')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_DUNGEON')) == 0:
+			listBuildings.append('BUILDING_DUNGEON')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_COURTHOUSE')) == 0:
+			listBuildings.append('BUILDING_COURTHOUSE')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_INN')) == 0:
+			listBuildings.append('BUILDING_INN')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_WALLS')) == 0:
+			listBuildings.append('BUILDING_WALLS')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_FORGE')) == 0:
+			listBuildings.append('BUILDING_FORGE')
+#		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_PLANAR_GATE')) == 0:
+#			listBuildings.append('BUILDING_PLANAR_GATE')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ACADEMY')) == 0:
+			listBuildings.append('BUILDING_ACADEMY')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_OBSIDIAN_GATE')) == 0:
+			listBuildings.append('BUILDING_OBSIDIAN_GATE')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ARCHMAGE_STUDY')) == 0:
+			listBuildings.append('BUILDING_ARCHMAGE_STUDY')
+		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_DRAGON_NEST')) == 0:
+			listBuildings.append('BUILDING_DRAGON_NEST')
+
+		sBuildingType = listBuildings[ CyGame().getSorenRandNum(len(listBuildings), "BuildingType") ]
+		pCity.setNumRealBuilding(gc.getInfoTypeForString(sBuildingType), 1)
+		CyInterface().addMessage(iPlayer,True,25,'The industrious builder builds a(n) '+CyTranslator().getText("TXT_KEY_" + sBuildingType, ()),'',1,'Art/Interface/Buttons/Actions/Pillage.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+
+def doDireBeasts(argsList):
+	kTriggeredData = argsList[0]
+
+	iZombies = 6
+	map = gc.getMap()	
+	if map.getWorldSize() == CvUtil.findInfoTypeNum(gc.getWorldInfo, gc.getNumWorldInfos(), 'WORLDSIZE_DUEL'):
+		iZombies = 1
+	elif map.getWorldSize() == CvUtil.findInfoTypeNum(gc.getWorldInfo, gc.getNumWorldInfos(), 'WORLDSIZE_TINY'):
+		iZombies = 2
+	elif map.getWorldSize() == CvUtil.findInfoTypeNum(gc.getWorldInfo, gc.getNumWorldInfos(), 'WORLDSIZE_SMALL'):
+		iZombies = 3
+	elif map.getWorldSize() == CvUtil.findInfoTypeNum(gc.getWorldInfo, gc.getNumWorldInfos(), 'WORLDSIZE_STANDARD'):
+		iZombies = 4
+	elif map.getWorldSize() == CvUtil.findInfoTypeNum(gc.getWorldInfo, gc.getNumWorldInfos(), 'WORLDSIZE_LARGE'):
+		iZombies = 5
+
+	iGameModifier = int( CyGame().getGameTurn() / 50 ) + 1
+
+	if iZombies > iGameModifier:
+		iZombies = iGameModifier
+
+        if iZombies > CyGame().getUnitCreatedCount(gc.getInfoTypeForString('UNIT_TIGER')):
+	       newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_TIGER'))
+		newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE'), True)
+		newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_WOLF'))
+		newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE'), True)
+		if ( CyGame().getSorenRandNum(2, "Spider") == 1):
+		       newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_GIANT_SPIDER'))
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE'), True)
+		if ( CyGame().getSorenRandNum(2, "Bear") == 1):
+		       newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_BEAR'))
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE'), True)
+		if ( CyGame().getSorenRandNum(2, "Lion") == 1):
+		       newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_LION'))
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE'), True)
+		if ( CyGame().getSorenRandNum(2, "Ape") == 1):
+			newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_GORILLA'))
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE'), True)
+		if ( CyGame().getSorenRandNum(3, "Wyrmling") == 1):
+		        cf.addIslandUnit(gc.getInfoTypeForString('UNIT_YOUNG_DRAGON'))
+
+def doRogueVampire(argsList):
+	kTriggeredData = argsList[0]
+
+	iZombies = 6
+	map = gc.getMap()	
+	if map.getWorldSize() == CvUtil.findInfoTypeNum(gc.getWorldInfo, gc.getNumWorldInfos(), 'WORLDSIZE_DUEL'):
+		iZombies = 1
+	elif map.getWorldSize() == CvUtil.findInfoTypeNum(gc.getWorldInfo, gc.getNumWorldInfos(), 'WORLDSIZE_TINY'):
+		iZombies = 2
+	elif map.getWorldSize() == CvUtil.findInfoTypeNum(gc.getWorldInfo, gc.getNumWorldInfos(), 'WORLDSIZE_SMALL'):
+		iZombies = 3
+	elif map.getWorldSize() == CvUtil.findInfoTypeNum(gc.getWorldInfo, gc.getNumWorldInfos(), 'WORLDSIZE_STANDARD'):
+		iZombies = 4
+	elif map.getWorldSize() == CvUtil.findInfoTypeNum(gc.getWorldInfo, gc.getNumWorldInfos(), 'WORLDSIZE_LARGE'):
+		iZombies = 5
+
+	iZombies = 1
+        if iZombies > CyGame().getUnitCreatedCount(gc.getInfoTypeForString('UNIT_VAMPIRE')):
+	        cf.addBarbUnit(gc.getInfoTypeForString('UNIT_VAMPIRE'))
+	        cf.addBarbUnit(gc.getInfoTypeForString('UNIT_WEREWOLF'))
+
+def doKraken(argsList):
+	kTriggeredData = argsList[0]
+	iUnit = gc.getInfoTypeForString('UNIT_KRAKEN')
+	if CyGame().getUnitCreatedCount(iUnit) == 0:
+		pBestPlot = -1
+		iBestPlot = -1
+		for i in range (CyMap().numPlots()):
+			pPlot = CyMap().plotByIndex(i)
+			iPlot = -1
+			if pPlot.isWater():
+				if pPlot.getNumUnits() == 0:
+					iPlot = CyGame().getSorenRandNum(500, "Leviathan")
+					iPlot = iPlot + (pPlot.area().getNumTiles() * 10)
+					if pPlot.isBarbarian():
+						iPlot = iPlot + 200
+			if iPlot > iBestPlot:
+				iBestPlot = iPlot
+				pBestPlot = pPlot
+		if iBestPlot != -1:
+			bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
+			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+			iUnit = gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT')
+			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+
+				
