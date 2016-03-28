@@ -6848,4 +6848,34 @@ def doKraken(argsList):
 			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 
+def canTriggerAdventurers(argsList):
+	iGameTurn = CyGame().getGameTurn()
+	if iGameTurn > 6:
+		return true
+	return false
+
+def doAdventurers(argsList):
+	kTriggeredData = argsList[0]
+	bPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pCity = bPlayer.getCity(kTriggeredData.iCityId)
+
+	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GYPSY_CAMP')) == 1:
+		return
+
+	pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GYPSY_CAMP'), 1)
+
+	iGroupSize = CyGame().getSorenRandNum(2, "GroupSize") + 2
+	sPatrons = [ 'UNIT_BURGLAR','UNIT_HUNTER','UNIT_ADEPT','UNIT_ARCHER','UNIT_PRIEST','UNIT_AXEMAN','UNIT_IMP','UNIT_DWARVEN_SLINGER','UNIT_JAVELIN_THROWER','UNIT_PYRE_ZOMBIE','UNIT_SWORDSMAN','UNIT_CHAOS_MARAUDER','UNIT_FAWN','UNIT_BOAR_RIDER','UNIT_CENTAUR','UNIT_HORSEMAN','UNIT_WOLF_RIDER', 'UNIT_LIZARDMAN','UNIT_KIKIJUB','UNIT_TAR_DEMON_MED','UNIT_ANGEL' ]
+
+	for i in range(iGroupSize):
+		sPatronType = sPatrons[ CyGame().getSorenRandNum(len(sPatrons), "PatronType") ]
+		newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sPatronType), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		cf.unitAptitude(newUnit)
+
+	for i in range(iGroupSize / 2):
+		newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_SETTLER'), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+
+	for i in range(iGroupSize / 2):
+		newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_WORKER'), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+
 				

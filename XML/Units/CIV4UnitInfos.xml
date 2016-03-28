@@ -34311,7 +34311,7 @@
             <BonusAffinities>
                 <BonusAffinity>
                     <BonusType>BONUS_BANANA</BonusType>
-                    <iAffinity>1</iAffinity>
+                    <iAffinity>2</iAffinity>
                 </BonusAffinity>
             </BonusAffinities>
         </UnitInfo>
