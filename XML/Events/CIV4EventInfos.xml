@@ -54609,7 +54609,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -54707,7 +54710,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -54740,7 +54746,7 @@
             <iTechPercent>0</iTechPercent>
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-            <PrereqTech>TECH_ARCANE_ITEMS_2</PrereqTech>
+            <PrereqTech>TECH_SORCERY</PrereqTech>
             <UnitClass>NONE</UnitClass>
             <iNumFreeUnits>0</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
@@ -54805,7 +54811,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -54903,7 +54912,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -55001,7 +55013,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -55099,7 +55114,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -55197,7 +55215,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -55295,7 +55316,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -55393,7 +55417,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -55491,7 +55518,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -55589,7 +55619,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -55687,7 +55720,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -55785,7 +55821,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -55883,7 +55922,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -55981,7 +56023,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -56014,7 +56059,7 @@
             <iTechPercent>0</iTechPercent>
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-            <PrereqTech>TECH_ARCANE_ITEMS</PrereqTech>
+            <PrereqTech>TECH_SORCERY</PrereqTech>
             <UnitClass>NONE</UnitClass>
             <iNumFreeUnits>0</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
@@ -56079,7 +56124,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -56112,7 +56160,7 @@
             <iTechPercent>0</iTechPercent>
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-            <PrereqTech>TECH_ARCANE_ITEMS_2</PrereqTech>
+            <PrereqTech>TECH_ARCANE_LORE</PrereqTech>
             <UnitClass>NONE</UnitClass>
             <iNumFreeUnits>0</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
@@ -56177,7 +56225,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -56210,7 +56261,7 @@
             <iTechPercent>0</iTechPercent>
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-            <PrereqTech>TECH_ARCANE_ITEMS_2</PrereqTech>
+            <PrereqTech>TECH_ARCANE_LORE</PrereqTech>
             <UnitClass>NONE</UnitClass>
             <iNumFreeUnits>0</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
@@ -56275,7 +56326,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -56373,7 +56427,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -56471,7 +56528,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -56569,7 +56629,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -56667,7 +56730,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -56765,7 +56831,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -56863,7 +56932,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -56961,7 +57033,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -57059,7 +57134,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -57157,7 +57235,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -57255,7 +57336,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -57353,7 +57437,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -57451,7 +57538,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
@@ -57484,7 +57574,7 @@
             <iTechPercent>0</iTechPercent>
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-            <PrereqTech>TECH_ARCANE_ITEMS_2</PrereqTech>
+            <PrereqTech>TECH_ARCANE_LORE</PrereqTech>
             <UnitClass>NONE</UnitClass>
             <iNumFreeUnits>0</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
@@ -57549,7 +57639,10 @@
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
             <iCrime>0</iCrime>
-            <PrereqCorporation>NONE</PrereqCorporation>
+            <iGlobalCounter>0</iGlobalCounter>
+            <PrereqAlignment>NONE</PrereqAlignment>
+            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>

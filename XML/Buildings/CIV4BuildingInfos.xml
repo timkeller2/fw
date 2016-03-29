@@ -40564,7 +40564,7 @@
             <FreeStartEra>NONE</FreeStartEra>
             <MaxStartEra>NONE</MaxStartEra>
             <ObsoleteTech>NONE</ObsoleteTech>
-            <PrereqTech>TECH_NEVER</PrereqTech>
+            <PrereqTech>TECH_ANIMAL_MASTERY</PrereqTech>
             <TechTypes>
             </TechTypes>
             <Bonus>NONE</Bonus>

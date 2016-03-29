@@ -759,6 +759,48 @@ class CvEventManager:
 					if pCity.getOwner() == CyGame().getActivePlayer():
 						cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_INFERNAL_GRIMOIRE_BALOR",()), 'art/interface/popups/Balor.dds')
 
+		if iBuildingType == gc.getInfoTypeForString('BUILDING_TREASURE1'):
+			if 'TR1' not in sCityInfo:
+				sCityInfo['TR1'] = 0
+			sCityInfo['TR1'] = CyGame().getGameTurn() + 12
+			pCity.setScriptData(cPickle.dumps(sCityInfo))
+
+		if iBuildingType == gc.getInfoTypeForString('BUILDING_TREASURE2'):
+			if 'TR2' not in sCityInfo:
+				sCityInfo['TR2'] = 0
+			sCityInfo['TR2'] = CyGame().getGameTurn() + 12
+			pCity.setScriptData(cPickle.dumps(sCityInfo))
+
+		if iBuildingType == gc.getInfoTypeForString('BUILDING_TREASURE3'):
+			if 'TR3' not in sCityInfo:
+				sCityInfo['TR3'] = 0
+			sCityInfo['TR3'] = CyGame().getGameTurn() + 12
+			pCity.setScriptData(cPickle.dumps(sCityInfo))
+
+		if iBuildingType == gc.getInfoTypeForString('COUNCIL'):
+			sCityInfo['COUNCIL'] = 0
+			pCity.setScriptData(cPickle.dumps(sCityInfo))
+			
+		if iBuildingType == gc.getInfoTypeForString('BUILDING_LIBRARY'):
+			sCityInfo['BUILDING_LIBRARY'] = CyGame().getGameTurn()
+			pCity.setScriptData(cPickle.dumps(sCityInfo))
+			
+		if iBuildingType == gc.getInfoTypeForString('BUILDING_CRAFTSMEN_GUILD'):
+			sCityInfo['BUILDING_CRAFTSMEN_GUILD'] = CyGame().getGameTurn()
+			pCity.setScriptData(cPickle.dumps(sCityInfo))
+			
+		if iBuildingType == gc.getInfoTypeForString('BUILDING_HERBALIST'):
+			sCityInfo['BUILDING_HERBALIST'] = CyGame().getGameTurn()
+			pCity.setScriptData(cPickle.dumps(sCityInfo))
+			
+		if iBuildingType == gc.getInfoTypeForString('BUILDING_ALCHEMY_LAB'):
+			sCityInfo['BUILDING_ALCHEMY_LAB'] = CyGame().getGameTurn()
+			pCity.setScriptData(cPickle.dumps(sCityInfo))
+			
+		if iBuildingType == gc.getInfoTypeForString('BUILDING_MAGE_GUILD'):
+			sCityInfo['BUILDING_MAGE_GUILD'] = CyGame().getGameTurn()
+			pCity.setScriptData(cPickle.dumps(sCityInfo))
+						
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_ALTAR_OF_THE_LUONNOTAR_FINAL'):
 			pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ALTAR_OF_THE_LUONNOTAR_EXALTED'), 0)
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_ALTAR_OF_THE_LUONNOTAR_EXALTED'):
@@ -1328,9 +1370,66 @@ class CvEventManager:
 		unit = argsList[1]
 		player = PyPlayer(city.getOwner())
 		pPlayer = gc.getPlayer(unit.getOwner())
-
+		iPlayer = unit.getOwner()
 		iFreeProm = unit.getFreePromotionPick()
 
+		try:
+			sCityInfo = cPickle.loads(city.getScriptData())
+		except EOFError:
+			cf.initCityVars(city)
+			sCityInfo = cPickle.loads(city.getScriptData())
+			## sCityInfo = { 'OBELISK': 1, 'TEMPLE': 1 }
+
+		strSetData = { 'LastConsume': 0, 'Command': -1, 'Value3': -1 }
+		unit.setScriptData(cPickle.dumps(strSetData))
+
+		## Cities specialize in producing certain types of units
+		sUTK = 'UT' + str( unit.getUnitClassType() )
+		if sUTK not in sCityInfo:
+			sCityInfo[sUTK] = 0
+		sCityInfo[sUTK] = sCityInfo[sUTK] + gc.getUnitInfo(unit.getUnitType()).getProductionCost()
+		city.setScriptData(cPickle.dumps(sCityInfo))
+
+		i = int( math.sqrt( sCityInfo[sUTK] / 100 ) )
+		if i > 0:
+			unit.changeExperience(i, -1, False, False, False)
+			sMsg = city.getName() + ' trains a specialized ' + unit.getName() + ' ('+str(i)+'xp)'
+			CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),city.getX(),city.getY(),True,True)
+			CyInterface().addCombatMessage(iPlayer,sMsg)
+
+		## Announce the training of powerful units
+		if unit.baseCombatStr() > 5 and pPlayer.getUnitClassCount(unit.getUnitClassType()) == 1 and CyGame().isUnitClassMaxedOut(unit.getUnitClassType(), 0) == False:
+			sMsg = 'It is reported that ' + pPlayer.getName() + ' now has ' + unit.getName() + 's...'
+			cf.msgAll(sMsg,unit.getX(),unit.getY(),unit.getOwner())
+
+		if CyGame().getSorenRandNum(20, "RandomHero") == 1:
+			if pPlayer.isHuman() or unit.baseCombatStr() > 0:
+				cf.unitAptitude(unit)
+			sMsg = 'A ' + str( unit.getName() ) + ' of unusual skill has been identified among the new recruits in ' + str( city.getName() ) + '!'
+			CyInterface().addMessage(unit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),unit.getX(),unit.getY(),True,True)
+		
+		if sCityInfo[ 'COUNCIL' ] == 0 and city.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ELDER_COUNCIL')) > 0 and unit.baseCombatStr() > 2 and ( unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_MELEE') or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ARCHER')):
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CITY_GARRISON3'), True)
+			sCityInfo[ 'COUNCIL' ] = 1
+			city.setScriptData(cPickle.dumps(sCityInfo))
+			sMsg = 'A ' + str( unit.getName() ) + ' in ' + str( city.getName() ) + ' has been inspired to defend the city better by the new elder council there!'
+			CyInterface().addMessage(unit.getOwner(),false,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),unit.getX(),unit.getY(),True,True)
+
+		if unit.getUnitType() == gc.getInfoTypeForString('UNIT_PRIEST'):
+			sCityInfo[ 'TEMPLE' ] = 1
+			city.setScriptData(cPickle.dumps(sCityInfo))
+			if city.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_PAGAN_TEMPLE')) > 0:
+				unit.setName("Priest of " + city.getName())
+				unit.changeExperience(3, -1, False, False, False)
+		
+		if unit.getUnitType() == gc.getInfoTypeForString('UNIT_MAGICIAN'):
+			sCityInfo[ 'OBELISK' ] = 1
+			city.setScriptData(cPickle.dumps(sCityInfo))
+			if city.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_OBELISK')) > 0:
+				unit.setName("Magician of " + city.getName())
+				unit.changeExperience(2, -1, False, False, False)
+
+		
 #Sephi
 					
 #UNITAI for AdeptUnits
@@ -1512,13 +1611,52 @@ class CvEventManager:
 						unit.changeExperience(iXP * -1, -1, false, false, false)
 						CyInterface().addMessage(unit.getOwner(),True,25,CyTranslator().getText("TXT_KEY_MESSAGE_SPIRIT_GUIDE",()),'AS2D_DISCOVERBONUS',1,'Art/Interface/Buttons/Promotions/SpiritGuide.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
 
+		#if bKillEquipment:
+		if unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL'):
+			for i in range(gc.getNumPromotionInfos()):
+				if gc.getPromotionInfo(i).isEquipment() == True:
+					unit.setHasPromotion(i, False)
+
+		# Some Items can be destroyed when their owner is killed
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMPROVED_WEAPONS')):
+			if CyGame().getSorenRandNum(100, "Weapons Ruined") < 30:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_IMPROVED_WEAPONS'), False)
+				
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HEAVY_WEAPONS')):
+			if CyGame().getSorenRandNum(100, "Weapons Ruined") < 20:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HEAVY_WEAPONS'), False)
+				
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MASTER_CRAFTED_WEAPONS')):
+			if CyGame().getSorenRandNum(100, "Weapons Ruined") < 10:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MASTER_CRAFTED_WEAPONS'), False)
+				
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMPROVED_ARMOR')):
+			if CyGame().getSorenRandNum(100, "Armor Ruined") < 30:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_IMPROVED_ARMOR'), False)
+				
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HEAVY_ARMOR')):
+			if CyGame().getSorenRandNum(100, "Armor Ruined") < 20:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HEAVY_ARMOR'), False)
+				
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MASTER_CRAFTED_ARMOR')):
+			if CyGame().getSorenRandNum(100, "Armor Ruined") < 10:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MASTER_CRAFTED_ARMOR'), False)
+				
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BATTLE_ROBE')):
+			if CyGame().getSorenRandNum(100, "Robe Ruined") < 30:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BATTLE_ROBE'), False)
+
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BOOTS_OF_HASTE')):
+			if CyGame().getSorenRandNum(100, "Boots Ruined") < 30:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BOOTS_OF_HASTE'), False)
+						
 		if ((unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ORC')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL')) and pPlayer.isBarbarian()):
 			iGold = unit.baseCombatStr() * unit.baseCombatStr()
 			iGold = CyGame().getSorenRandNum(iGold, "treasure") + iGold / 3
 			if iGameTurn > 150:
 				iGold = int((iGold * iGameTurn) / 150)
-			# if (unit.getUnitType() == gc.getInfoTypeForString('UNIT_SEA_SERPENT') or unit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT') or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL')):
-				# iGold = iGold * 2
+			if (unit.getUnitType() == gc.getInfoTypeForString('UNIT_SEA_SERPENT') or unit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT') or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL')):
+				 iGold = iGold * 2
 			if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURNING_BLOOD')):
 				iGold = 0
 			if iGold > 0:

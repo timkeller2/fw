@@ -9,7 +9,7 @@ import sys
 import PyHelpers
 import CustomFunctions
 import ScenarioFunctions
-import pickle
+import cPickle
 import math
 
 PyInfo = PyHelpers.PyInfo
@@ -3681,17 +3681,15 @@ def reqBuilding(caster,sBuilding,sPromotion):
 		return False
 
 	# TODO: Evaluate Removing This
-	#strCheckData = pickle.loads(pCity.getScriptData())
-	#if (sBuilding == 'BUILDING_CRAFTSMEN_GUILD' and strCheckData['BUILDING_CRAFTSMEN_GUILD'] > CyGame().getGameTurn()):
-	#	return False
-	#if (sBuilding == 'BUILDING_HERBALIST' and strCheckData['BUILDING_HERBALIST'] > CyGame().getGameTurn()):
-	#	return False
-	# if (sBuilding == 'BUILDING_ALCHEMY_LAB' and strCheckData['BUILDING_ALCHEMY_LAB'] > CyGame().getGameTurn()):
-		# return False
-	# if (sBuilding == 'BUILDING_MAGE_GUILD' and strCheckData['BUILDING_MAGE_GUILD'] > CyGame().getGameTurn()):
-		# return False
-	# if (sBuilding == 'BUILDING_LIBRARY' and strCheckData['BUILDING_LIBRARY'] > CyGame().getGameTurn()):
-		# return False
+	strCheckData =cPickle.loads(pCity.getScriptData())
+	if (sBuilding == 'BUILDING_HERBALIST' and strCheckData['BUILDING_HERBALIST'] > CyGame().getGameTurn()):
+		return False
+	if (sBuilding == 'BUILDING_ALCHEMY_LAB' and strCheckData['BUILDING_ALCHEMY_LAB'] > CyGame().getGameTurn()):
+		return False
+	if (sBuilding == 'BUILDING_MAGE_GUILD' and strCheckData['BUILDING_MAGE_GUILD'] > CyGame().getGameTurn()):
+		return False
+	if (sBuilding == 'BUILDING_LIBRARY' and strCheckData['BUILDING_LIBRARY'] > CyGame().getGameTurn()):
+		return False
 
 	return True
 
@@ -3714,7 +3712,7 @@ def reqBecomeChief(caster):
 			iClassUnits += 1
 			if pUnit.isHasPromotion(iChief):
 				iChiefUnits += 1
-	if iChiefUnits < iClassUnits / 10 + 1:
+	if iChiefUnits < iClassUnits / 10 :
 		return True
 
 	return False
@@ -3916,7 +3914,7 @@ def sellToMarket(caster):
 			iPrice = ( pUnit.hillsAttackModifier() * ( 80 + retSearch(caster) * 5 ) ) / 100
 			pPlayer.setGold( pPlayer.getGold() + iPrice )
 
-			sGameData = pickle.loads(CyGameInstance.getScriptData())
+			sGameData = cPickle.loads(CyGameInstance.getScriptData())
 			## Potions
 			if 'BUILDING_HERBALIST' not in sGameData:
 				sGameData['BUILDING_HERBALIST'] = 0
@@ -3940,7 +3938,7 @@ def sellToMarket(caster):
 			else:
 				sGameData['BUILDING_ALCHEMY_LAB'] += ( iPrice / 3 )
 
-			CyGameInstance.setScriptData(pickle.dumps(sGameData))
+			CyGameInstance.setScriptData(cPickle.dumps(sGameData))
 			caster.changeExperience(1, -1, False, False, False)
 
 			sMsg = 'Your ' + caster.getName() + ' sells a ' + pUnit.getName() + ' for ' + str( iPrice ) + 'gp...  (Burglar Skill: '+str(retSearch(caster))+')'
@@ -4334,7 +4332,7 @@ def reqBuilding(caster,sBuilding,sPromotion):
 	if pCity.isSettlement() == True:
 		return False
 
-	strCheckData = pickle.loads(pCity.getScriptData())
+	strCheckData = cPickle.loads(pCity.getScriptData())
 	if (sBuilding == 'BUILDING_CRAFTSMEN_GUILD' and strCheckData['BUILDING_CRAFTSMEN_GUILD'] > CyGame().getGameTurn()):
 		return False
 	if (sBuilding == 'BUILDING_HERBALIST' and strCheckData['BUILDING_HERBALIST'] > CyGame().getGameTurn()):
@@ -4366,7 +4364,7 @@ def reqLearnMagic(caster):
 	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_MAGE_GUILD')) == 0:
 		return False
 
-	strCheckData = pickle.loads(pCity.getScriptData())
+	strCheckData = cPickle.loads(pCity.getScriptData())
 	if strCheckData['BUILDING_MAGE_GUILD'] > CyGame().getGameTurn():
 		return False
 
@@ -4374,7 +4372,7 @@ def reqLearnMagic(caster):
 
 def pay(pCity,sBuilding,iCost,iPlayer,sDesc):
 	## Load Global Market Stock
-	sGameData = pickle.loads(CyGameInstance.getScriptData())
+	sGameData = cPickle.loads(CyGameInstance.getScriptData())
 	if 'BUILDING_HERBALIST' not in sGameData:
 		sGameData['BUILDING_HERBALIST'] = 0
 	if 'BUILDING_CRAFTSMEN_GUILD' not in sGameData:
@@ -4387,17 +4385,17 @@ def pay(pCity,sBuilding,iCost,iPlayer,sDesc):
 		sGameData['BUILDING_ALCHEMY_LAB'] = 0
 
 	## Load City Stock
-	strSetData = pickle.loads(pCity.getScriptData())
+	strSetData = cPickle.loads(pCity.getScriptData())
 	if strSetData[sBuilding] < CyGame().getGameTurn() - pCity.getPopulation() * 3:
 		strSetData[sBuilding] = CyGame().getGameTurn() - pCity.getPopulation() * 3
 
 	## Use Global Market Stock if possible, if not, use the city stock
 	if sGameData[sBuilding] > iCost:
 		sGameData[sBuilding] -= iCost
-		CyGameInstance.setScriptData(pickle.dumps(sGameData))
+		CyGameInstance.setScriptData(cPickle.dumps(sGameData))
 	else:
 		strSetData[sBuilding] = strSetData[sBuilding] + iCost 
-		pCity.setScriptData(pickle.dumps(strSetData))
+		pCity.setScriptData(cPickle.dumps(strSetData))
 
 	iStock = CyGame().getGameTurn() - strSetData[sBuilding]
 	iMaxStock = pCity.getPopulation() * 3
@@ -4773,7 +4771,7 @@ def spellExamineCache(caster,mode):
 def reqJudge(caster):
 	pCity = caster.plot().getPlotCity()
 
-	sInfo = pickle.loads(pCity.getScriptData())
+	sInfo = cPickle.loads(pCity.getScriptData())
 
 	if 'JUDGE' not in sInfo:
 		sInfo['JUDGE'] = 0
@@ -4788,7 +4786,7 @@ def spellJudge(caster):
 	pPlayer = gc.getPlayer(caster.getOwner())
 	cPlayer = gc.getPlayer(pCity.getOwner())
 
-	sInfo = pickle.loads(pCity.getScriptData())
+	sInfo = cPickle.loads(pCity.getScriptData())
 	
 	iDiv = ( cf.iNoble(caster) + 1 + sInfo['JUDGE'] )
 	if iDiv < 1:
@@ -4806,7 +4804,7 @@ def spellJudge(caster):
 		pPlayer.setGold( pPlayer.getGold() + sInfo['JUDGE'] * 10 + 15 )
 		cPlayer.setGold( cPlayer.getGold() + sInfo['JUDGE'] * 10 + 15 )
 		sInfo['JUDGE'] = 0
-		pCity.setScriptData(pickle.dumps(sInfo))
+		pCity.setScriptData(cPickle.dumps(sInfo))
 	else:
 		## Failure, this turn...
 		CyInterface().addMessage(caster.getOwner(),true,25,'Failure. ('+str(iChance)+'% chance) '+caster.getName() + ' failed to resolve a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!','AS2D_PILLAGE',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
@@ -4819,7 +4817,7 @@ def spellNeedJudge(caster):
 			for i in range (pPlayer.getNumCities()):
 				pCity = pPlayer.getCity(i)
 				try:
-					sCityInfo = pickle.loads(pCity.getScriptData())
+					sCityInfo = cPickle.loads(pCity.getScriptData())
 				except EOFError:
 					cf.initCityVars(pCity)
 				if 'JUDGE' not in sCityInfo:
@@ -5404,7 +5402,7 @@ def reqBloom(caster):
 	return True	
 
 def reqDragonWarrior(caster):
-	strCheckData = pickle.loads(CyGameInstance.getScriptData())
+	strCheckData = cPickle.loads(CyGameInstance.getScriptData())
 	if strCheckData['DragonWarrior'] >= caster.getLevel():
 		return False
 	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRAGON_WARRIOR')):
@@ -5424,9 +5422,9 @@ def spellDragonWarrior(caster):
 					pUnit.setHasPromotion(iPromDragonWarrior, False)
 	caster.setHasPromotion(iPromDragonWarrior, True)
 	
-	strSetData = pickle.loads(CyGameInstance.getScriptData())
+	strSetData = cPickle.loads(CyGameInstance.getScriptData())
 	strSetData['DragonWarrior'] = caster.getLevel()
-	CyGameInstance.setScriptData(pickle.dumps(strSetData))
+	CyGameInstance.setScriptData(cPickle.dumps(strSetData))
 
 def reqBlessMinor(caster):
 	pPlot = caster.plot()

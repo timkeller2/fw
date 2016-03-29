@@ -8,6 +8,8 @@ from CvPythonExtensions import *
 import CvEventInterface
 import CustomFunctions
 import ScenarioFunctions
+import cPickle
+import math
 
 import PyHelpers
 PyPlayer = PyHelpers.PyPlayer
@@ -292,6 +294,13 @@ class CvGameUtils:
 		eUnitClass = gc.getUnitInfo(eUnit).getUnitClassType()
 		eTeam = gc.getTeam(pPlayer.getTeam())
 
+		sCityInfo = { 'OBELISK': 1, 'TEMPLE': 1 }
+		if pPlayer.isHuman() or pCity.getPopulation() > 1:
+			try:
+				sCityInfo =cPickle.loads(pCity.getScriptData())
+			except EOFError:
+				sCityInfo = { 'OBELISK': 1, 'TEMPLE': 1 }
+
 		if pPlayer.isHuman() == False:
 			infoCiv = gc.getCivilizationInfo(pPlayer.getCivilizationType())
 			if eUnitClass == gc.getInfoTypeForString('UNITCLASS_SCOUT'):
@@ -423,7 +432,22 @@ class CvGameUtils:
 			bBlock = sf.cannotTrain(pCity, eUnit, bContinue, bTestVisible, bIgnoreCost, bIgnoreUpgrades)
 			if bBlock:
 				return True
-		
+
+		if eUnit == gc.getInfoTypeForString('UNIT_MAGICIAN'):
+			if 'OBELISK' not in sCityInfo:
+				sCityInfo['OBELISK'] = 1
+			if sCityInfo['OBELISK'] > 0:
+				return True
+
+		if eUnit == gc.getInfoTypeForString('UNIT_PRIEST'):
+			if 'TEMPLE' not in sCityInfo:
+				sCityInfo['TEMPLE'] = 1
+			if sCityInfo['TEMPLE'] > 0:
+				return True
+
+		if eUnit == gc.getInfoTypeForString('UNIT_RECRUIT'):
+			if CyGame().getGameTurn() > 0:
+				return True
 
 		return False
 
@@ -444,6 +468,8 @@ class CvGameUtils:
 		pPlayer = gc.getPlayer(pCity.getOwner())
 		iBuildingClass = gc.getBuildingInfo(eBuilding).getBuildingClassType()
 		eTeam = gc.getTeam(pPlayer.getTeam())
+		pPlot = pCity.plot()
+		iAreaSize = pPlot.area().getNumTiles()
 				
 		if pPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_AGNOSTIC')):		
 			if eBuilding == gc.getInfoTypeForString('BUILDING_TEMPLE_OF_LEAVES'):
@@ -493,6 +519,10 @@ class CvGameUtils:
 			if eBuilding == gc.getInfoTypeForString('BUILDING_ALCHEMY_LAB'):
 				return True
 			if eBuilding == gc.getInfoTypeForString('BUILDING_BREWERY'):
+				return True
+
+		if eBuilding == gc.getInfoTypeForString('BUILDING_ISLAND_RESORT'):
+			if iAreaSize > 7:
 				return True
 
 		if eBuilding == gc.getInfoTypeForString('BUILDING_SHRINE_OF_THE_CHAMPION'):

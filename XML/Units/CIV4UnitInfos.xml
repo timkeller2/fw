@@ -75847,7 +75847,7 @@
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>BUILDING_DRAGON_NEST</PrereqBuilding>
-            <PrereqTech>NONE</PrereqTech>
+            <PrereqTech>TECH_ANIMAL_MASTERY</PrereqTech>
             <TechTypes>
             </TechTypes>
             <BonusType>NONE</BonusType>
