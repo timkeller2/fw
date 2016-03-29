@@ -1,1 +1,1 @@
-
+reqBuilding(pCaster,'BUILDING_HERBALIST','PROMOTION_CREEP')

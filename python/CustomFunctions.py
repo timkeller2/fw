@@ -17,6 +17,37 @@ CyGameInstance = gc.getGame()
 
 class CustomFunctions:
 
+	def initCityVars(self, city):
+		try:
+			strSetData = pickle.loads(city.getScriptData())
+		except EOFError:
+			strSetData = {}
+		strSetData['BUILDING_LIBRARY'] = CyGame().getGameTurn()
+		strSetData['BUILDING_CRAFTSMEN_GUILD'] = CyGame().getGameTurn()
+		strSetData['BUILDING_HERBALIST'] = CyGame().getGameTurn()
+		strSetData['BUILDING_ALCHEMY_LAB'] = CyGame().getGameTurn()
+		strSetData['BUILDING_MAGE_GUILD'] = CyGame().getGameTurn()
+		strSetData['TrainMage'] = 0
+		strSetData['TrainingYard'] = 0
+		strSetData['OBELISK'] = 0
+		strSetData['COUNCIL'] = 0
+		strSetData['TEMPLE'] = 0 
+		strSetData['PLUNDER'] = 0 
+		strSetData['ECON'] = 0 
+		## strSetData['JUDGE'] = 0 
+		## strSetData['TR1'] = 0 
+		## strSetData['TR2'] = 0 
+		## strSetData['TR3'] = 0 
+		city.setScriptData(pickle.dumps(strSetData))
+
+	def msgAll(self, sMsg, x, y, sendingPlayer):
+		for iPlayer in range(gc.getMAX_PLAYERS()):
+			mPlayer = gc.getPlayer(iPlayer)
+			if mPlayer.isAlive() and (mPlayer.canContact(sendingPlayer) or iPlayer == sendingPlayer):
+				py = PyPlayer(iPlayer)
+				CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),x,y,True,True)
+				CyInterface().addCombatMessage(iPlayer,sMsg)
+
 	def generateLoot(self, iUnit, iHaveScrolls):
 		if iHaveScrolls < 1:
 			iHaveScrolls = iUnit.baseCombatStr()

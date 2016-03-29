@@ -6878,4 +6878,39 @@ def doAdventurers(argsList):
 	for i in range(iGroupSize / 2):
 		newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_WORKER'), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
-				
+def isHuman(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	if pPlayer.isHuman():
+		return True
+
+	return False
+
+def canPay6(argsList):	
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	if pCity.getFood() > 5:
+		return True
+		
+	return False
+	
+def herbalist6(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	#pCity.changeFood(1)
+	pCity.changePopulation(-1)
+	#pay(pCity,'BUILDING_HERBALIST',6,iPlayer,'herbalist')
+
+	return

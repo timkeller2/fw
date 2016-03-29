@@ -8813,7 +8813,7 @@
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
             <PyResult>spellUnitEvent(pCaster,'EVENTTRIGGER_HERBALIST')</PyResult>
-            <PyRequirement>reqBuilding(pCaster,'BUILDING_HERBALIST','PROMOTION_CREEP')</PyRequirement>
+            <PyRequirement></PyRequirement>
             <Effect></Effect>
             <Sound></Sound>
             <HotKey></HotKey>

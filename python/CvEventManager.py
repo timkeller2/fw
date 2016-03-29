@@ -737,6 +737,11 @@ class CvEventManager:
 		pPlot = pCity.plot()
 		game = gc.getGame()
 		iBuildingClass = gc.getBuildingInfo(iBuildingType).getBuildingClassType()
+		try:
+			sCityInfo = cPickle.loads(pCity.getScriptData())
+		except EOFError:
+			cf.initCityVars(pCity)
+			sCityInfo = cPickle.loads(pCity.getScriptData())
 		
 		if ((not gc.getGame().isNetworkMultiPlayer()) and (pCity.getOwner() == gc.getGame().getActivePlayer()) and isWorldWonderClass(iBuildingClass)):
 			if gc.getBuildingInfo(iBuildingType).getMovie():
@@ -2237,6 +2242,8 @@ class CvEventManager:
 		pPlot = city.plot()
 		pPlayer = gc.getPlayer(city.getOwner())
 		
+		cf.initCityVars(city)
+
 		if pPlayer.getCivilizationType() == gc.getInfoTypeForString('CIVILIZATION_INFERNAL'):
 			city.setHasReligion(gc.getInfoTypeForString('RELIGION_THE_ASHEN_VEIL'), True, True, True)
 			city.setPopulation(3)
@@ -2319,6 +2326,8 @@ class CvEventManager:
 		iPreviousOwner,iNewOwner,pCity,bConquest,bTrade = argsList
 		pPlayer = gc.getPlayer(iNewOwner)
 
+		cf.initCityVars(pCity)
+
 		if gc.getPlayer(iPreviousOwner).getCivilizationType() == gc.getInfoTypeForString('CIVILIZATION_INFERNAL'):
 			pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_OBSIDIAN_GATE'), 0)
 
@@ -2373,6 +2382,9 @@ class CvEventManager:
 		pPlot = pCity.plot()
 		iPlayer = pCity.getOwner()
 		pPlayer = gc.getPlayer(iPlayer)
+
+		if pPlayer.isHuman() == False:
+			cf.initCityVars(pCity)
 
 		if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_CITADEL_OF_LIGHT')) > 0:
 			iX = pCity.getX()

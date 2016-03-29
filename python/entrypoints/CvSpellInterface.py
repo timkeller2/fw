@@ -3680,17 +3680,6 @@ def reqBuilding(caster,sBuilding,sPromotion):
 	if pCity.isSettlement() == True:
 		return False
 
-	# TODO: Evaluate Removing This
-	strCheckData =cPickle.loads(pCity.getScriptData())
-	if (sBuilding == 'BUILDING_HERBALIST' and strCheckData['BUILDING_HERBALIST'] > CyGame().getGameTurn()):
-		return False
-	if (sBuilding == 'BUILDING_ALCHEMY_LAB' and strCheckData['BUILDING_ALCHEMY_LAB'] > CyGame().getGameTurn()):
-		return False
-	if (sBuilding == 'BUILDING_MAGE_GUILD' and strCheckData['BUILDING_MAGE_GUILD'] > CyGame().getGameTurn()):
-		return False
-	if (sBuilding == 'BUILDING_LIBRARY' and strCheckData['BUILDING_LIBRARY'] > CyGame().getGameTurn()):
-		return False
-
 	return True
 
 def reqBecomeChief(caster):
