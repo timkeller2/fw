@@ -6781,25 +6781,25 @@ def doDireBeasts(argsList):
 	if iZombies > iGameModifier:
 		iZombies = iGameModifier
 
-        if iZombies > CyGame().getUnitCreatedCount(gc.getInfoTypeForString('UNIT_TIGER')):
-	       newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_TIGER'))
+	if iZombies > CyGame().getUnitCreatedCount(gc.getInfoTypeForString('UNIT_TIGER')):
+		newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_TIGER'))
 		newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE'), True)
 		newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_WOLF'))
 		newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE'), True)
 		if ( CyGame().getSorenRandNum(2, "Spider") == 1):
-		       newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_GIANT_SPIDER'))
+			newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_GIANT_SPIDER'))
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE'), True)
 		if ( CyGame().getSorenRandNum(2, "Bear") == 1):
-		       newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_BEAR'))
+			newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_BEAR'))
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE'), True)
 		if ( CyGame().getSorenRandNum(2, "Lion") == 1):
-		       newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_LION'))
+			newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_LION'))
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE'), True)
 		if ( CyGame().getSorenRandNum(2, "Ape") == 1):
 			newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_GORILLA'))
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE'), True)
 		if ( CyGame().getSorenRandNum(3, "Wyrmling") == 1):
-		        cf.addIslandUnit(gc.getInfoTypeForString('UNIT_YOUNG_DRAGON'))
+			cf.addIslandUnit(gc.getInfoTypeForString('UNIT_YOUNG_DRAGON'))
 
 def doRogueVampire(argsList):
 	kTriggeredData = argsList[0]

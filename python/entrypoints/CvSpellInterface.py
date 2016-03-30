@@ -5350,8 +5350,8 @@ def spellHealingPotionMinor(caster,iL):
 		iDefStr = pUnit.baseCombatStr()
 		if iDefStr < 1:
 			iDefStr = 1
-		iMod = ( iL * 10 ) / iDefStr + 5
-		iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
+		iMod = ( iL * 5 ) / iDefStr + 1
+		iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod / 2
 		pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
 		if CyGame().getSorenRandNum(20, "Chance Cure Poison") < iL:
 			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'),False)

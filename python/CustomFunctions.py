@@ -19,7 +19,7 @@ class CustomFunctions:
 
 	def initCityVars(self, city):
 		try:
-			strSetData = pickle.loads(city.getScriptData())
+			strSetData = cPickle.loads(city.getScriptData())
 		except EOFError:
 			strSetData = {}
 		strSetData['BUILDING_LIBRARY'] = CyGame().getGameTurn()
@@ -38,7 +38,7 @@ class CustomFunctions:
 		## strSetData['TR1'] = 0 
 		## strSetData['TR2'] = 0 
 		## strSetData['TR3'] = 0 
-		city.setScriptData(pickle.dumps(strSetData))
+		city.setScriptData(cPickle.dumps(strSetData))
 
 	def msgAll(self, sMsg, x, y, sendingPlayer):
 		for iPlayer in range(gc.getMAX_PLAYERS()):
@@ -1550,17 +1550,19 @@ class CustomFunctions:
 						iDam = pPlot.getNumUnits() - roomFor
 						pUnit.doDamageNoCaster( iDam, 50, gc.getInfoTypeForString('DAMAGE_PHYSICAL'), false)
 						if crowdMessage:
-							CyInterface().addMessage(pUnit.getOwner(),False,25,CyTranslator().getText("Overcrowding damage!",()),'',1,'Art/Interface/Buttons/Promotions/Demon.dds',ColorTypes(7),pPlot.getX(),pPlot.getY(),True,True)
+							CyInterface().addMessage(pUnit.getOwner(),False,25,"Overcrowding damage!",'',1,'Art/Interface/Buttons/Promotions/Demon.dds',ColorTypes(7),pPlot.getX(),pPlot.getY(),True,True)
 							crowdMessage = False
 					# Injury damage
 					if pUnit.getDamage() > 0 and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_SIEGE'):
 						iDam = CyGame().getSorenRandNum( pUnit.getDamage(), "Injury Damage") / 5 - pUnit.getLevel()
-						if iDam > 10:
-							iDam = 10
-						if iDam > 100 - pUnit.getDamage():
-							CyInterface().addMessage(pUnit.getOwner(),False,25,CyTranslator().getText(str(iDam) + " injury damage!",()),'AS2D_UNIT_FALLS',1,'Art/Interface/Buttons/Promotions/Demon.dds',ColorTypes(7),pPlot.getX(),pPlot.getY(),True,True)
+						if iDam > 12:
+							iDam = 12
+						if iDam > 5:
+							sMess = pUnit.getName() + " suffers " + str( iDam ) + " damage from injuries..."
+							CyInterface().addMessage(pUnit.getOwner(),False,25,sMess,'',1,'',ColorTypes(7),pPlot.getX(),pPlot.getY(),True,True)
 						if iDam > 0:	
-							pUnit.doDamageNoCaster( iDam, 100, gc.getInfoTypeForString('DAMAGE_PHYSICAL'), false)
+							pUnit.changeDamage( iDam, pUnit.getOwner() ) 
+							#pUnit.doDamageNoCaster( iDam, 100, gc.getInfoTypeForString('DAMAGE_PHYSICAL'), false)
 		
 		# Player Processing
 		for iPlayer in range(gc.getMAX_PLAYERS()):

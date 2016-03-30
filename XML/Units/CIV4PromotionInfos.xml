@@ -5590,9 +5590,9 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <bAlwaysHeal>1</bAlwaysHeal>
-            <iEnemyHealChange>-3</iEnemyHealChange>
-            <iNeutralHealChange>-5</iNeutralHealChange>
-            <iFriendlyHealChange>-8</iFriendlyHealChange>
+            <iEnemyHealChange>-4</iEnemyHealChange>
+            <iNeutralHealChange>-4</iNeutralHealChange>
+            <iFriendlyHealChange>-4</iFriendlyHealChange>
             <iCombatPercent>-10</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/Poisoned.dds</Button>
             <bRemovedWhenHealed>1</bRemovedWhenHealed>
