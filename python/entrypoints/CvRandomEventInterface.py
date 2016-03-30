@@ -6888,29 +6888,78 @@ def isHuman(argsList):
 
 	return False
 
-def canPay6(argsList):	
+def canBuyMinorImmortality(argsList):
 	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
-	iPlayer = kTriggeredData.ePlayer
-	bPlayer = gc.getPlayer(iPlayer)
-	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	team = gc.getTeam(pPlayer.getTeam())
+	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	if pCity.getFood() > 5:
+	iMinorBoost = 0
+	if team.isHasTech(CvUtil.findInfoTypeNum(gc.getTechInfo,gc.getNumTechInfos(),'TECH_SORCERY')):
+		iMinorBoost = 1
+	if team.isHasTech(CvUtil.findInfoTypeNum(gc.getTechInfo,gc.getNumTechInfos(),'TECH_ARCANE_LORE')):
+		iMinorBoost = 2
+	if (pUnit.getLevel() > 5 + iMinorBoost or pUnit.baseCombatStr() > 5 + iMinorBoost):
+		return False
+
+	return True
+
+def canBuyImmortality(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+	if pUnit.getLevel() > 14:
+		return False
+	return True
+
+def canthrowaxes(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+	if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_MELEE'):
 		return True
-		
 	return False
-	
-def herbalist6(argsList):
+
+def canimprovedweapons(argsList):
 	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
-	iPlayer = kTriggeredData.ePlayer
-	bPlayer = gc.getPlayer(iPlayer)
-	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+	return cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_IMPROVED_WEAPONS'))
+
+def canheavyweapons(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+
 	pCity = pUnit.plot().getPlotCity()
+	if cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_HEAVY_WEAPONS')):
+		return True
 
-	#pCity.changeFood(1)
-	pCity.changePopulation(-1)
-	#pay(pCity,'BUILDING_HERBALIST',6,iPlayer,'herbalist')
+	return False
 
-	return
+def canimprovedarmor(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+
+	return cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_IMPROVED_ARMOR'))
+
+def canheavyarmor(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+
+	pCity = pUnit.plot().getPlotCity()
+	if cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_HEAVY_ARMOR')):
+		return True
+
+	return False
+

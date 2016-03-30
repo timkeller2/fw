@@ -8826,10 +8826,10 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_LIBRARY_STORE</Type>
-            <Description>Visit the Library</Description>
-            <Civilopedia>Visit the library to purchase various scrolls.</Civilopedia>
+            <Description>Visit the Monument</Description>
+            <Civilopedia>Visit the monument to inscribe various scrolls.</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>Visit the library to purchase various scrolls.</Help>
+            <Help>Visit the monument to inscribe various scrolls.</Help>
             <PromotionPrereq1>NONE</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -8839,7 +8839,7 @@
             <CivilizationPrereq>NONE</CivilizationPrereq>
             <ReligionPrereq>NONE</ReligionPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
-            <TechPrereq>TECH_NEVER</TechPrereq>
+            <TechPrereq>NONE</TechPrereq>
             <bAllowAI>0</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
             <bCausesWar>0</bCausesWar>
@@ -8886,8 +8886,8 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellUnitEvent(pCaster,'EVENTTRIGGER_LIBRARY')</PyResult>
-            <PyRequirement>reqBuilding(pCaster,'BUILDING_LIBRARY','PROMOTION_CREEP')</PyRequirement>
+            <PyResult>spellUnitEvent(pCaster,'EVENTTRIGGER_MONUMENT')</PyResult>
+            <PyRequirement>reqBuilding(pCaster,'BUILDING_MONUMENT','PROMOTION_CREEP')</PyRequirement>
             <Effect></Effect>
             <Sound></Sound>
             <HotKey></HotKey>
@@ -8974,10 +8974,10 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_CRAFTSMEN_GUILD_STORE</Type>
-            <Description>Visit the Craftsmen Guild</Description>
-            <Civilopedia>Visit the craftsmen guild to purchase equipment.</Civilopedia>
+            <Description>Visit the Training Yard</Description>
+            <Civilopedia>Visit the craftsmen to purchase equipment.</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>Visit the craftsmen guild to purchase equipment.</Help>
+            <Help>Visit the craftsmen to purchase equipment.</Help>
             <PromotionPrereq1>NONE</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -9034,8 +9034,8 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellUnitEvent(pCaster,'EVENTTRIGGER_CRAFTSMEN_GUILD')</PyResult>
-            <PyRequirement>reqBuilding(pCaster,'BUILDING_CRAFTSMEN_GUILD','PROMOTION_CREEP')</PyRequirement>
+            <PyResult>spellUnitEvent(pCaster,'EVENTTRIGGER_TRAINING_YARD')</PyResult>
+            <PyRequirement>reqBuilding(pCaster,'BUILDING_TRAINING_YARD','PROMOTION_CREEP')</PyRequirement>
             <Effect></Effect>
             <Sound></Sound>
             <HotKey></HotKey>
@@ -10530,8 +10530,8 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_SCROLL_SK</Type>
-            <Description>Use Scroll of Summon Kikijub</Description>
-            <Civilopedia>Summons a kikijub to aid the caster.</Civilopedia>
+            <Description>Use Scroll of Summon Scorpion</Description>
+            <Civilopedia>Summons a scorpion to aid the caster.</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help></Help>
             <PromotionPrereq1>PROMOTION_SCROLL_SK</PromotionPrereq1>
@@ -10590,7 +10590,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_KIKIJUB')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_SCORPION')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_FIRE_SUMMON</Effect>
             <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>

@@ -2655,7 +2655,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>EQUIPMENTCLASS_SCROLL_SK</Type>
-			<Description>Scroll of Summon Kikijub</Description>
+			<Description>Scroll of Summon Scorpion</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
