@@ -135,7 +135,7 @@
 			</YieldChanges>
 			<RiverYieldChange/>
 			<HillsYieldChange/>
-			<iMovement>2</iMovement>
+			<iMovement>3</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>-25</iHealthPercent>
 			<iDefense>25</iDefense>
