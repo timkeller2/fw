@@ -17,6 +17,17 @@ CyGameInstance = gc.getGame()
 
 class CustomFunctions:
 
+	def bTechExist(self, sTech):
+		bFoundValid = false
+		iTech = CvUtil.findInfoTypeNum(gc.getTechInfo, gc.getNumTechInfos(), sTech)
+		for iPlayer in range(gc.getMAX_CIV_PLAYERS()):			
+			loopPlayer = gc.getPlayer(iPlayer)
+			if loopPlayer.isAlive():
+				if gc.getTeam(loopPlayer.getTeam()).isHasTech(iTech):
+					bFoundValid = true
+					break
+		return bFoundValid
+
 	def initCityVars(self, city):
 		try:
 			strSetData = cPickle.loads(city.getScriptData())
@@ -793,17 +804,6 @@ class CustomFunctions:
 
 		return iNob
 
-	def bTechExist(self, sTech):
-		bFoundValid = false
-		iTech = CvUtil.findInfoTypeNum(gc.getTechInfo, gc.getNumTechInfos(), sTech)
-		for iPlayer in range(gc.getMAX_CIV_PLAYERS()):			
-			loopPlayer = gc.getPlayer(iPlayer)
-			if loopPlayer.isAlive():
-				if gc.getTeam(loopPlayer.getTeam()).isHasTech(iTech):
-					bFoundValid = true
-					break
-		return bFoundValid
-
 	def iValidCity(self,pPlayer):
 		for i in range (pPlayer.getNumCities()):
 			pCity = pPlayer.getCity(i)
@@ -820,6 +820,19 @@ class CustomFunctions:
 		
 		sSet[svar] =  ival
 		city.setScriptData(cPickle.dumps(sSet))
+
+	def changeObjectInt(self,city,svar,ival):
+		sSet = {}
+		try:
+			sSet = cPickle.loads(city.getScriptData())
+		except:
+			sSet = {}
+			sSet[svar] = 0
+		
+		sSet[svar] =  sSet[svar] + ival
+		city.setScriptData(cPickle.dumps(sSet))
+		
+		return sSet[svar]
 
 	def getObjectInt(self,city,svar):
 		try:
@@ -1646,8 +1659,6 @@ class CustomFunctions:
 				if 'COMMERCE_INCOME' not in sPD:
 					sPD['COMMERCE_INCOME'] = 0
 
-				# iIncrement = int( ( math.fabs( sPD['COMMERCE'] - pPlayer.getCommercePercent(0) ) + 1 ) / 10 )
-				# iChange = int( math.fabs( sPD['COMMERCE'] - pPlayer.getCommercePercent(0) ) * math.sqrt( iIncrement ) ) 
 				iChange = int( math.fabs( sPD['COMMERCE'] - pPlayer.getCommercePercent(0) ) / 2 ) - 1
 				if int( math.fabs( sPD['RESEARCH'] - pPlayer.getCommercePercent(1) ) / 2 ) - 1 > iChange:
 					iChange = int( math.fabs( sPD['RESEARCH'] - pPlayer.getCommercePercent(1) ) / 2 ) - 1
