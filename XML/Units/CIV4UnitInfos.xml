@@ -76136,8 +76136,8 @@
             <StateReligion>NONE</StateReligion>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
-            <PrereqBuilding>NONE</PrereqBuilding>
-            <PrereqTech>NONE</PrereqTech>
+            <PrereqBuilding>BUILDING_DRAGON_NEST</PrereqBuilding>
+            <PrereqTech>TECH_ANIMAL_MASTERY</PrereqTech>
             <TechTypes>
             </TechTypes>
             <BonusType>NONE</BonusType>
@@ -76406,8 +76406,8 @@
             <StateReligion>NONE</StateReligion>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
-            <PrereqBuilding>NONE</PrereqBuilding>
-            <PrereqTech>NONE</PrereqTech>
+            <PrereqBuilding>BUILDING_DRAGON_NEST</PrereqBuilding>
+            <PrereqTech>TECH_ANIMAL_MASTERY</PrereqTech>
             <TechTypes>
             </TechTypes>
             <BonusType>NONE</BonusType>
@@ -79531,7 +79531,7 @@
             <StateReligion>NONE</StateReligion>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
-            <PrereqBuilding>NONE</PrereqBuilding>
+            <PrereqBuilding>BUILDING_PAGAN_TEMPLE</PrereqBuilding>
             <PrereqTech>TECH_MYSTICISM</PrereqTech>
             <TechTypes>
             </TechTypes>
@@ -81362,7 +81362,7 @@
             <StateReligion>NONE</StateReligion>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
-            <PrereqBuilding>NONE</PrereqBuilding>
+            <PrereqBuilding>BUILDING_MONUMENT</PrereqBuilding>
             <PrereqTech>TECH_ANCIENT_CHANTS</PrereqTech>
             <TechTypes>
             </TechTypes>

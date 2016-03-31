@@ -1515,6 +1515,15 @@ class CustomFunctions:
 		iWheat = gc.getInfoTypeForString('BONUS_WHEAT')
 		iCount = CyGame().getGlobalCounter()
 		iGameTurn = CyGame().getGameTurn()
+		iJungle = gc.getInfoTypeForString('FEATURE_JUNGLE')
+		iForestBurnt = gc.getInfoTypeForString('FEATURE_FOREST_BURNT')
+		#strCheckData = cPickle.loads(CyGameInstance.getScriptData())
+		#iDragonWarriorLevel = strCheckData['DragonWarrior']
+		iReagents = gc.getInfoTypeForString('BONUS_REAGENTS')
+		iGunPowder = gc.getInfoTypeForString('BONUS_GUNPOWDER')
+		iAncientForest = gc.getInfoTypeForString('FEATURE_FOREST_ANCIENT')
+		iAncientForestChance = gc.getDefineINT('ANCIENT_FOREST_CHANCE')
+		iDesert = gc.getInfoTypeForString('TERRAIN_DESERT')
 		
 		### FW Changes
 		iAdj = 0
@@ -1884,6 +1893,7 @@ class CustomFunctions:
 							
 		### End FW Changes
 						
+		iRoadTax = {}
 		for i in range (CyMap().numPlots()):
 			pPlot = CyMap().plotByIndex(i)
 			iFeature = pPlot.getFeatureType()
@@ -1891,9 +1901,321 @@ class CustomFunctions:
 			iBonus = pPlot.getBonusType(-1)
 			iImprovement = pPlot.getImprovementType()
 			bUntouched = True
+			
+			iThisPlotTrain = 0
+			iThisPlotTrainAnimal = 0
+			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_TOWER'):
+				iThisPlotTrain = 1
+			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_FORT'):
+				iThisPlotTrain = 2
+			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CASTLE'):
+				iThisPlotTrain = 4
+			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CITADEL'):
+				iThisPlotTrain = 6
+			if pPlot.getFeatureType() == iJungle:
+				iThisPlotTrainAnimal = 3
+
+			## Set Up Player and Team Variables for the Plot
+			plotPlayer = gc.getPlayer(pPlot.getOwner())
+			py = PyPlayer(pPlot.getOwner())
+			if pPlot.isOwned() == False:
+				plotPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
+				py = PyPlayer(gc.getBARBARIAN_PLAYER())
+			iPlotTeam = plotPlayer.getTeam()
+			plotTeam = gc.getTeam(iPlotTeam)
+
+			iEntropyMessage = 0
+			bCanCreateUnit = True
+			for ii in range(pPlot.getNumUnits()):
+				if ii > pPlot.getNumUnits():
+					break
+				pUnit = pPlot.getUnit(ii)
+				pPlayer = gc.getPlayer(pUnit.getOwner())
+				iUnitTeam = pPlayer.getTeam()
+				unitTeam = gc.getTeam(iUnitTeam)
+				
+				## Fix an AI spinlock problem...
+				if pUnit.getUnitAIType() == UnitAITypes.UNITAI_WORKER and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_WORKER') and not pPlayer.isHuman():
+					pUnit.setUnitAIType(UnitAITypes.UNITAI_ATTACK)
+
+				## If enemy occupied, do not create units here automatically
+				if plotTeam.isAtWar(iUnitTeam):
+					bCanCreateUnit = False
+
+				## Entropy Mana does damage to enemy human players
+				if pPlot.isOwned() and plotPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_ENTROPY')) > 0 and pUnit.isAlive() and plotTeam.isAtWar(iUnitTeam):
+					iMaxDam = 25
+					if pPlayer.isHuman():
+						iMaxDam = 100
+					pUnit.doDamageNoCaster((plotPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_ENTROPY')) * 5 + 3), iMaxDam, gc.getInfoTypeForString('DAMAGE_UNHOLY'), False)
+					point = pPlot.getPoint()
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SACRIFICE'),point)
+					if iEntropyMessage == 0:
+						iEntropyMessage = 1
+						CyInterface().addMessage(pUnit.getOwner(),false,25,'Your army is suffering from poisonous fumes caused by enemy entropy mana!','',1,'Art/Interface/Buttons/Improvements/Maelstrom.dds',ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
+						CyInterface().addCombatMessage(pUnit.getOwner(),'Your army is suffering from poisonous fumes caused by enemy entropy mana!')
+
+				## Computer Players gain creeps within their borders
+				if (pPlot.isOwned() and pPlayer.isBarbarian() and not plotPlayer.isBarbarian() and not plotPlayer.isHuman() and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE')):
+					pCity = plotPlayer.getCity(self.iValidCity(plotPlayer))
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), False)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SLEEPING'), True)
+					newUnit = plotPlayer.initUnit(pUnit.getUnitType(), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+					newUnit.convert(pUnit)
+
+				## Damaged Creeps Can wake up
+				if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) and pUnit.getDamage() > 5 and CyGame().getSorenRandNum(6, "Wake Creep") == 1):
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), False)
+					pUnit.finishMoves()
+
+				## Sell scrolls and potions owned by computers
+				if CyGame().getSorenRandNum(10, "SellEquipment") == 1:
+					if (pPlayer.isBarbarian() == False and pPlayer.isHuman() == False):
+						SellIt = 0
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('EQUIPMENT_POTION_HEALING_MINOR') ):
+							SellIt = 1
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('EQUIPMENT_POTION_STRENGTH') ):
+							SellIt = 1
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('EQUIPMENT_POTION_HASTE') ):
+							SellIt = 1
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('EQUIPMENT_SCROLL_MM') ):
+							SellIt = 1
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('EQUIPMENT_SCROLL_MA') ):
+							SellIt = 1
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('EQUIPMENT_SCROLL_SB') ):
+							SellIt = 1
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('EQUIPMENT_SCROLL_FB') ):
+							SellIt = 1
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('EQUIPMENT_SCROLL_SK') ):
+							SellIt = 1
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('EQUIPMENT_SCROLL_MR') ):
+							SellIt = 1
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('EQUIPMENT_SCROLL_MS') ):
+							SellIt = 3
+						if SellIt > 0:
+							pUnit.kill(True,0)
+							pPlayer.changeGold(35 * SellIt)
+							
+				## Equip barbarian units
+				if (pPlayer.isBarbarian() and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_THROWING_AXES'))):
+					self.equip(pUnit)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_THROWING_AXES'), False)
+
+				## TODO: Add Auto Buffing
+							
+				## Merchant Ships give income every 10 turns or so
+				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MERCHANT_SHIP') and pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_OCEAN') and CyGame().getSorenRandNum(100, "Merchant") < ( pUnit.getLevel() + pUnit.baseMoves() ) * 2:
+					iRange = 7
+					iX = pUnit.getX()
+					iY = pUnit.getY()
+					sBlock = ''
+
+					## Cut down range close to map borders, frozen waters make merchanteering more difficult
+					if iY < iRange:
+						iRange = iY
+						sBlock = ' limited by frozen waters...'
+					if iY > CyMap().getGridHeight() - 7:
+						iRange = ( CyMap().getGridHeight() - iY )
+						sBlock = ' limited by frozen waters...'
+						
+					for iiX in range(iX-iRange, iX+iRange+1, 1):
+						for iiY in range(iY-iRange, iY+iRange+1, 1):
+							xPlot = CyMap().plot(iiX,iiY)
+							for xi in range(xPlot.getNumUnits()):
+								if CyMap().isPlot(iiX,iiY):
+									xUnit = xPlot.getUnit(xi)
+									if ( xUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MERCHANT_SHIP') or ( unitTeam.isAtWar( xUnit.getTeam() ) and ( xUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL') or xUnit.plot().getTerrainType() == gc.getInfoTypeForString('TERRAIN_OCEAN') ) ) ) and xUnit.getID() != pUnit.getID():
+										if iRange > int( math.fabs( xUnit.getX() - pUnit.getX() ) ):
+											iRange = int( math.fabs( xUnit.getX() - pUnit.getX() ) )
+											sBlock = ' limited by ' + xUnit.getName() + ' actions...'
+										if iRange > int( math.fabs( xUnit.getY() - pUnit.getY() ) ):
+											iRange = int( math.fabs( xUnit.getY() - pUnit.getY() ) )
+											sBlock = ' limited by ' + xUnit.getName() + ' actions...'
+					iRange += pUnit.getLevel() / 2
+					iMerchantIncome = CyGame().getSorenRandNum(10*iRange, "Merchant Mission")
+					if iMerchantIncome > 0:
+						CyInterface().addMessage(pUnit.getOwner(),false,25,'Your '+pUnit.getName()+' completes a merchant mission and gains '+str(iMerchantIncome)+'gp!  Merchanteering range '+str(iRange)+'/7'+sBlock,'',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
+						CyInterface().addCombatMessage(pUnit.getOwner(),'Your '+pUnit.getName()+' completes a merchant mission and gains '+str(iMerchantIncome)+'gp!  Merchanteering range '+str(iRange)+'/7'+sBlock)
+						pPlayer.setGold( pPlayer.getGold() + iMerchantIncome )
+						pUnit.changeExperience(iRange/3, -1, False, False, False)
+						self.generateLoot( pUnit, iRange )
+
+				## Dragons change to the dragon race when fully promoted (from the orcish race...)
+				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_DRAGON'):
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ORC')):
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ORC'), False)
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DRAGON'), True)
+
+				## Give Random XP to all Units
+				iGiveXP = 15
+				if pPlayer.isHuman():
+					iGiveXP = 25
+				if iThisPlotTrainAnimal > 0 and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') or pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_ORC')):
+					iThisPlotTrainAnimal -= 1
+					iGiveXP = 10
+				if iThisPlotTrain > 0:
+					iThisPlotTrain -= 1
+					iGiveXP = 10
+					if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iImprovement == gc.getInfoTypeForString('IMPROVEMENT_TOWER'):
+						iGiveXP = 8
+				if CyGame().getSorenRandNum(iGiveXP, "UnitExperience"+str(pUnit.getID())) == 1:
+					pUnit.changeExperience(1, -1, False, False, False)
+
+				## Giant Sea Serpents can have young
+				if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT') and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
+					iCountS = pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_GIANT_SEA_SERPENT'))
+					iCountS += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_SEA_SERPENT'))
+					if ( CyGame().getSorenRandNum(30+iCountS, "NewSerpents") == 1 and iCountS < 60 ):
+						oNewUnit = gc.getInfoTypeForString('UNIT_SEA_SERPENT')
+						newUnit = pPlayer.initUnit(oNewUnit, pUnit.getX(), pUnit.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
+							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1'),True)
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2')):
+							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER2'),True)
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT3')):
+							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER3'),True)
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT4')):
+							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER4'),True)
+							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT5')):
+							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER5'),True)
+							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
+
+						## Serpent variation in the world
+						if CyGame().getSorenRandNum(10, "NewSerpentWeak") < 4:
+							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WEAK'),True)
+						else:
+							if CyGame().getSorenRandNum(10, "NewSerpentStrong") > 7:
+								newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG'),True)
+						if CyGame().getSorenRandNum(10, "NewSerpentLight") < 4:
+							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LIGHT'),True)
+						else:
+							if CyGame().getSorenRandNum(10, "NewSerpentHeavy") > 7:
+								newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HEAVY'),True)
+
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+
+				## Giant Sea Serpents can die of old age (if over populated - shouldn't happen now, but fixes a current bug after-effect)
+				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT') and pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_GIANT_SEA_SERPENT')) > 60 and pUnit.getLevel() < 5:
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TREASURE1'), False)
+					pUnit.kill(True,0)
+
+				## Computer Strong Workers Become Champions - (Sometimes computer strong workers cause spinlock)
+				if pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_WORKER') and not pPlayer.isHuman() and pUnit.baseCombatStr() > 0:
+					oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_CHAMPION'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+					oNewUnit.convert(pUnit)
+
+				## Angels become evil if owned by an evil player...
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')) and pPlayer.getAlignment() == iEvil:
+					iRoll = CyGame().getSorenRandNum(4, "MiracleRecovery")
+					if iRoll == 1:
+						oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_TAR_DEMON'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+					elif iRoll == 2:
+						oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SUCCUBUS'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+					elif iRoll == 3:
+						oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SECT_OF_FLIES'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+					else:
+						oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_CHAOS_MARAUDER'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL'), False)
+					oNewUnit.convert(pUnit)
+
+				## Barbarian Baby Serpents grow up
+				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_SEA_SERPENT') and pUnit.getLevel() > 3 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and pPlayer.isBarbarian():
+					oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+					oNewUnit.convert(pUnit)
+
+				## Giant and Dire Spiders can have young
+				if (bCanCreateUnit and CyGame().getSorenRandNum(100, "NewSpider") == 1 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_DIRE_SPIDER'))):
+					oNewUnit = gc.getInfoTypeForString('UNIT_BABY_SPIDER')
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+					newUnit = pPlayer.initUnit(oNewUnit, pUnit.getX(), pUnit.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+
+				## Baby Spiders can grow up
+				if (CyGame().getSorenRandNum(50, "NewSpiders") == 1 and pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_BABY_SPIDER')):
+					oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_GIANT_SPIDER'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+					oNewUnit.convert(pUnit)
+					oNewUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), False)
+
+				## Disease and Plague causes damage over time and can be recovered from
+				if pUnit.isAlive() and (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'))):
+					iRecover = 3 - int( pUnit.getDamage() / 10 )
+					if not pPlayer.isHuman():
+						iRecover += 10
+					if pPlot.isCity() == True:
+						iRecover += 2
+						pCity = pUnit.plot().getPlotCity()
+						if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_HERBALIST')) > 0:
+							iRecover += 2
+						if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_INFIRMARY')) > 0:
+							iRecover += 4
+					if iRecover < 1:
+						iRecover = CyGame().getSorenRandNum(3, "MiracleRecovery")
+
+					iDamage = 10 + int( pUnit.getDamage() / 10 )
+					iHalfDamage = int( iDamage / 2 )
+
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED')):
+						if pUnit.getDamage() < 3:
+							pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'), False)
+						else:
+							pUnit.doDamageNoCaster(iHalfDamage, 100, gc.getInfoTypeForString('DAMAGE_POISON'), False)
+
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED')):
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')):
+							pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'), False)
+						else:
+							pUnit.doDamageNoCaster(iDamage, 100, gc.getInfoTypeForString('DAMAGE_POISON'), False)
+							if CyGame().getSorenRandNum(100, "RecoverDisease") < iRecover:
+								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'), False)
+								sMsg = pUnit.getName() + ' recovers from a disease!'
+								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
+						
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')):
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')):
+							pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), False)
+						else:
+							pUnit.doDamageNoCaster(iDamage, 100, gc.getInfoTypeForString('DAMAGE_POISON'), False)
+							if (CyGame().getSorenRandNum(100, "RecoverPlague") < iRecover / 2 or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUE_CARRIER')) ):
+								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), False)
+								sMsg = pUnit.getName() + ' recovers from the plague!'
+								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
+
+				## Jungles can cause disease
+				if pPlot.getFeatureType() == iJungle:
+					if pUnit.isAlive():
+						if not pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_ORC'):
+							if (pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_BEAST')):
+								if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')):
+									if CyGame().getSorenRandNum(100, "JungleFever") < 2:
+										pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'), True)
+										sMsg = pUnit.getName() + ' contracts a disease from the jungle!'
+										CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
+				## Flames damage living units
+				if pPlot.getFeatureType() == iFlames:
+					if (pUnit.isAlive() or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD'))) and pPlayer.isHuman():
+						pUnit.doDamageNoCaster(35, 100, gc.getInfoTypeForString('DAMAGE_FIRE'), False)
+			
+			
 			if pPlot.isOwned():
 				pPlayer = gc.getPlayer(pPlot.getOwner())
 				iAlignment = pPlayer.getAlignment()
+
+				## Road Tax
+				if pPlot.isRoute() and pPlayer.isHuman():
+					if pPlot.getOwner() in iRoadTax:
+						iRoadTax[pPlot.getOwner()] += 1
+					else:
+						iRoadTax[pPlot.getOwner()] = 1
+
+				## Malakim Desert Trading
+				if iTerrain == iDesert and pPlayer.getCivilizationType() == gc.getInfoTypeForString('CIVILIZATION_MALAKIM'):
+					if pPlot.getOwner() in iRoadTax:
+						iRoadTax[pPlot.getOwner()] -= 4
+					else:
+						iRoadTax[pPlot.getOwner()] = -4
+
 				if pPlayer.getCivilizationType() == iInfernal:
 					pPlot.changePlotCounter(100)
 					bUntouched = false
@@ -1972,6 +2294,45 @@ class CustomFunctions:
 					if pPlot.isPeak() == False:
 						if CyGame().getSorenRandNum(100, "Flames") <= iFlamesSpreadChance:
 							pPlot.setFeatureType(iFlames, 0)
+
+			## Recovering Forest will come back as jungle if adjacent to jungle and on grassland
+			if iFeature == iForestBurnt and iTerrain == iGrass and CyGame().getSorenRandNum(100, "Jungle Grow") < 30:
+				iX = pPlot.getX()
+				iY = pPlot.getY()
+				for iiX in range(iX-1, iX+2, 1):
+					for iiY in range(iY-1, iY+2, 1):
+						pAdjacentPlot = CyMap().plot(iiX,iiY)
+						if pAdjacentPlot.getFeatureType() == iJungle:
+							pPlot.setFeatureType(iJungle, 0)
+							
+		## Road Taxes Assessed to Human Players
+		for iPlayer in range(gc.getMAX_PLAYERS()):
+			mPlayer = gc.getPlayer(iPlayer)
+			pCity = mPlayer.getCity(self.iValidCity(mPlayer))
+			if mPlayer.isAlive() and mPlayer.isHuman():
+				if iPlayer not in iRoadTax:
+					iRoadTax[iPlayer] = 0
+				iTax = iRoadTax[iPlayer] / 4
+				if iTax != 0:
+					py = PyPlayer(iPlayer)
+					sPD = cPickle.loads(mPlayer.getScriptData())
+					mPlayer.setGold( mPlayer.getGold() - iTax )					
+					sPD['CUSTOM_INCOME'] -= iTax
+
+					## Message Road Taxes when they change
+					if 'ROAD_TAX' not in sPD:
+						sPD['ROAD_TAX'] = 0
+					if iTax != sPD['ROAD_TAX']:
+						sPD['ROAD_TAX'] = iTax
+						if iTax > 0:
+							sMsg = 'Road Taxes Change: ' + str(iTax) + ' per turn'
+						else:
+							sMsg = 'Desert Trading Income: ' + str(iTax * -1) + ' per turn'
+						CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+						CyInterface().addCombatMessage(iPlayer,sMsg)
+
+					mPlayer.setScriptData(cPickle.dumps(sPD))
+				
 
 	def doTurnKhazad(self, iPlayer):
 		pPlayer = gc.getPlayer(iPlayer)

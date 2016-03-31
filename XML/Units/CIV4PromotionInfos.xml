@@ -5409,9 +5409,15 @@
             <FeatureAttacks>
                 <FeatureAttack>
                     <FeatureType>FEATURE_JUNGLE</FeatureType>
-                    <iFeatureAttack>10</iFeatureAttack>
+                    <iFeatureAttack>20</iFeatureAttack>
                 </FeatureAttack>
             </FeatureAttacks>
+            <FeatureDoubleMoves>
+                <FeatureDoubleMove>
+                    <FeatureType>FEATURE_JUNGLE</FeatureType>
+                    <bFeatureDoubleMove>1</bFeatureDoubleMove>
+                </FeatureDoubleMove>
+            </FeatureDoubleMoves>
             <Button>Art/Interface/Buttons/Promotions/Orc.dds</Button>
             <bRace>1</bRace>
             <iWorkRateModify>-10</iWorkRateModify>
