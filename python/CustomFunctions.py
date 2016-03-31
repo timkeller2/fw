@@ -755,7 +755,7 @@ class CustomFunctions:
 
 			if (CyGame().getPlayerScore(iPlayer) >= 1000 and CyGame().getSorenRandNum(iLead, "Go To War") > 750):
 				strSetData['FinalWar'] = CyGame().getGameTurn()
-				CyGameInstance.setScriptData(pickle.dumps(strSetData))
+				CyGameInstance.setScriptData(cPickle.dumps(strSetData))
 				pTeam = pPlayer.getTeam()
 				for iTeam in range(gc.getMAX_CIV_TEAMS()):
 					eTeam = gc.getTeam(iTeam)
@@ -1536,16 +1536,16 @@ class CustomFunctions:
 		if CyGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_MARATHON'):
 			iAdj = iAdj + 12
 
-		# if self.bTechExist('TECH_INFERNAL_PACT') == False and CyGame().getSorenRandNum(6+iAdj, "AnimalStuff") == 1:
-			# self.addUnit(gc.getInfoTypeForString(self.sAnimalUnit()))
-		# if CyGame().getSorenRandNum(4+iAdj, "BarbarianStuff") == 1:
-			# self.addBarbUnit(gc.getInfoTypeForString(self.sBarbUnit()))
-		# if CyGame().getSorenRandNum(10+iAdj, "HiddenCache") == 1 or iGameTurn < 6:
-			# self.addBarbUnitA(gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'))
-		# if self.bTechExist('TECH_NECROMANCY') and CyGame().getSorenRandNum(4+iAdj, "UndeadStuff") == 1:
-			# self.addBarbUnit(gc.getInfoTypeForString(self.sUndeadUnit()))
-		# if self.bTechExist('TECH_CORRUPTION_OF_SPIRIT') and CyGame().getSorenRandNum(4+iAdj, "EvilStuff") == 1:
-			# self.addBarbUnit(gc.getInfoTypeForString(self.sEvilUnit()))
+		if self.bTechExist('TECH_INFERNAL_PACT') == False and CyGame().getSorenRandNum(6+iAdj, "AnimalStuff") == 1:
+			self.addUnit(gc.getInfoTypeForString(self.sAnimalUnit()))
+		if CyGame().getSorenRandNum(4+iAdj, "BarbarianStuff") == 1:
+			self.addBarbUnit(gc.getInfoTypeForString(self.sBarbUnit()))
+		if CyGame().getSorenRandNum(10+iAdj, "HiddenCache") == 1 or iGameTurn < 6:
+			self.addBarbUnitA(gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'))
+		if self.bTechExist('TECH_NECROMANCY') and CyGame().getSorenRandNum(4+iAdj, "UndeadStuff") == 1:
+			self.addBarbUnit(gc.getInfoTypeForString(self.sUndeadUnit()))
+		if self.bTechExist('TECH_CORRUPTION_OF_SPIRIT') and CyGame().getSorenRandNum(4+iAdj, "EvilStuff") == 1:
+			self.addBarbUnit(gc.getInfoTypeForString(self.sEvilUnit()))
 
 		# Crowded squares are crowded - FW
 		for i in range (CyMap().numPlots()):
@@ -1683,6 +1683,202 @@ class CustomFunctions:
 						sPD['COMMERCE_INCOME'] = iIncome
 
 				pPlayer.setScriptData(cPickle.dumps(sPD))
+
+#			City Processing
+			iDisputes = 1
+			if pPlayer.isAlive() and pPlayer.getNumCities() > 0:  
+				for i in range (pPlayer.getNumCities()):
+					pCity = pPlayer.getCity(i)
+					try:
+						sCityInfo = cPickle.loads(pCity.getScriptData())
+					except EOFError:
+						self.initCityVars(pCity)
+					
+					## Island Resort Vacations
+					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ISLAND_RESORT')) > 0:
+						py = PyPlayer(iPlayer)
+						for pUnit in py.getUnitList():
+							if pUnit.getFortifyTurns() > 4 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED')) and pUnit.isAlive() and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_BEAST') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_AIR'):
+								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED'), True)
+								sMsg = pUnit.getName() + ' visits the ' + pCity.getName() + ' Island Resort for a little rest and relaxation!'
+								CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+								CyInterface().addCombatMessage(iPlayer,sMsg)
+								break
+
+					## Automatic Academy Training
+					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ACADEMY')) > 0:
+						tUnit = -1
+						tXP = -1
+						pPlot = pCity.plot()
+						for ii in range(pPlot.getNumUnits()):
+							pUnit = pPlot.getUnit(ii)
+							if pUnit.getOwner() == pCity.getOwner() and pUnit.getExperience() < pCity.getPopulation() and pUnit.getExperience() > tXP:
+								tUnit = pUnit
+								tXP = pUnit.getExperience()
+
+						if tUnit != -1:
+							tUnit.changeExperience(1, -1, False, False, False)
+							sMsg = tUnit.getName() + ' studies at the ' + pCity.getName() + ' Academy... '
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addCombatMessage(iPlayer,sMsg)
+						else:
+							sMsg = 'The ' + pCity.getName() + ' Academy has an opening for a new student... '
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addCombatMessage(iPlayer,sMsg)
+
+					## Treasure and Noble Building Expiration
+					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE1')) > 0:
+						if 'TR1' not in sCityInfo:
+							sCityInfo['TR1'] = 0
+						if sCityInfo['TR1'] == 0:
+							sCityInfo['TR1'] = CyGame().getGameTurn() + 12
+						if CyGame().getGameTurn() > sCityInfo['TR1']:
+							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE1'), 0)
+							sMsg = 'A treasure runs out in ' + pCity.getName() + '... '
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addCombatMessage(iPlayer,sMsg)
+							sCityInfo['TR1'] = 0
+							pCity.setScriptData(cPickle.dumps(sCityInfo))
+					else:
+						sCityInfo['TR1'] = 0
+						pCity.setScriptData(cPickle.dumps(sCityInfo))
+
+					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE2')) > 0:
+						sCityInfo = cPickle.loads(pCity.getScriptData())
+						if 'TR2' not in sCityInfo:
+							sCityInfo['TR2'] = 0
+						if sCityInfo['TR2'] == 0:
+							sCityInfo['TR2'] = CyGame().getGameTurn() + 12
+						if CyGame().getGameTurn() > sCityInfo['TR2']:
+							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE2'), 0)
+							sMsg = 'A large treasure runs out in ' + pCity.getName() + '... '
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addCombatMessage(iPlayer,sMsg)
+							sCityInfo['TR2'] = 0
+							pCity.setScriptData(cPickle.dumps(sCityInfo))
+					else:
+						sCityInfo['TR2'] = 0
+						pCity.setScriptData(cPickle.dumps(sCityInfo))
+
+					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE3')) > 0:
+						sCityInfo = cPickle.loads(pCity.getScriptData())
+						if 'TR3' not in sCityInfo:
+							sCityInfo['TR3'] = 0
+						if sCityInfo['TR3'] == 0:
+							sCityInfo['TR3'] = CyGame().getGameTurn() + 12
+						if CyGame().getGameTurn() > sCityInfo['TR3']:
+							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE3'), 0)
+							sMsg = 'A grand treasure runs out in ' + pCity.getName() + '... '
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addCombatMessage(iPlayer,sMsg)
+							sCityInfo['TR3'] = 0
+							pCity.setScriptData(cPickle.dumps(sCityInfo))
+					else:
+						sCityInfo['TR3'] = 0
+						pCity.setScriptData(cPickle.dumps(sCityInfo))
+					
+					bRemoveIt = True
+					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE1')) > 0:
+						xPlot = CyMap().plot(pCity.getX(),pCity.getY())
+						for ii in range (xPlot.getNumUnits()):
+							xUnit = xPlot.getUnit(ii)
+							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES1')):
+								bRemoveIt = False
+						if bRemoveIt:
+							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE1'), 0)
+							
+					bRemoveIt = True
+					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE2')) > 0:
+						xPlot = CyMap().plot(pCity.getX(),pCity.getY())
+						for ii in range (xPlot.getNumUnits()):
+							xUnit = xPlot.getUnit(ii)
+							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES2')):
+								bRemoveIt = False
+						if bRemoveIt:
+							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE2'), 0)
+							
+					bRemoveIt = True
+					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE3')) > 0:
+						xPlot = CyMap().plot(pCity.getX(),pCity.getY())
+						for ii in range (xPlot.getNumUnits()):
+							xUnit = xPlot.getUnit(ii)
+							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES3')):
+								bRemoveIt = False
+						if bRemoveIt:
+							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE3'), 0)
+							
+					bRemoveIt = True
+					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV1')) > 0:
+						xPlot = CyMap().plot(pCity.getX(),pCity.getY())
+						for ii in range (xPlot.getNumUnits()):
+							xUnit = xPlot.getUnit(ii)
+							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR1')):
+								bRemoveIt = False
+						if bRemoveIt:
+							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV1'), 0)
+							
+					bRemoveIt = True
+					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV2')) > 0:
+						xPlot = CyMap().plot(pCity.getX(),pCity.getY())
+						for ii in range (xPlot.getNumUnits()):
+							xUnit = xPlot.getUnit(ii)
+							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR2')):
+								bRemoveIt = False
+						if bRemoveIt:
+							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV2'), 0)
+							
+					bRemoveIt = True
+					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV3')) > 0:
+						xPlot = CyMap().plot(pCity.getX(),pCity.getY())
+						for ii in range (xPlot.getNumUnits()):
+							xUnit = xPlot.getUnit(ii)
+							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR3')):
+								bRemoveIt = False
+						if bRemoveIt:
+							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV3'), 0)
+
+					## Process disputes for nobles to solve
+					if 'JUDGE' not in sCityInfo:
+						sCityInfo['JUDGE'] = 0
+					if sCityInfo['JUDGE'] > 0:
+						if CyGame().getSorenRandNum(100, "ReportDispute") < sCityInfo['JUDGE']:
+							if CyGame().getSorenRandNum(sCityInfo['JUDGE'], "Dispute Self Resolved") < 2:
+								sMsg = 'The people of ' + pCity.getName() + ' have resolved their ' + self.sDisputeLevel(sCityInfo['JUDGE']) + ' dispute without a noble!  It caused somewhat of a mess, but it is now resolved...'
+								self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner())
+								pCity.changeHurryAngerTimer((sCityInfo['JUDGE']/2)+1)
+								sCityInfo['JUDGE'] = 0
+							else:
+								sMsg = 'The people of ' + pCity.getName() + ' owned by ' + pPlayer.getName() + ' still await a noble to help them resolve a ' + self.sDisputeLevel(sCityInfo['JUDGE']) + ' dispute...'
+								self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner())
+					else:
+						if iDisputes > 0 and CyGame().getSorenRandNum(2000, "Dispute") < pCity.getPopulation():
+							iSize = CyGame().getSorenRandNum(pCity.getPopulation()*3, "DisputeSize")
+							sMsg = 'A ' + self.sDisputeLevel(iSize) + ' dispute has broken out in ' + pCity.getName() + ' owned by ' + pPlayer.getName() + '.  They seek a noble to help resolve the situation...'
+							self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner())
+							sCityInfo['JUDGE'] = iSize
+							iDisputes -= 1
+	
+					## Give computer players monoliths to help them out a little
+					if pCity.getPopulation() > 2 and pPlayer.isHuman() == False:
+						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_MONOLITH'), 1)
+					else:
+						pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_MONOLITH'), 0)
+
+					## Computer vassal states occasionally give their masters units
+					if not pPlayer.isHuman() and pTeam.isAVassal() and pCity.getPopulation() > CyGame().getSorenRandNum(100, "Vassal Gift Unit") and pPlayer.getNumMilitaryUnits() > pPlayer.getNumCities() * 2:
+						py = PyPlayer(pCity.getOwner())
+						for pUnit in py.getUnitList():
+							if isWorldUnitClass(pUnit.getUnitClassType()) == False:
+								imPlayer = pTeam.getLeaderID()
+								mPlayer = gc.getPlayer(imPlayer)
+								sMsg = pPlayer.getName() + ' sends ' + pUnit.getName() + 's from ' + pCity.getName() + ' to serve the great ' + mPlayer.getName() + '...'
+								CyInterface().addCombatMessage(imPlayer,sMsg)
+								CyInterface().addMessage(imPlayer,false,25,sMsg,'AS2D_GOODY_GOLD',1,str(gc.getUnitInfo(pUnit.getUnitType()).getImage()),ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
+								newUnit = mPlayer.initUnit(pUnit.getUnitType(), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+								newUnit.convert(pUnit)
+								break
+
+					pCity.setScriptData(cPickle.dumps(sCityInfo))
 
 							
 		### End FW Changes

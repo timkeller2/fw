@@ -1221,7 +1221,7 @@
             <bNoFreshWater>0</bNoFreshWater>
             <bRequiresFlatlands>1</bRequiresFlatlands>
             <bRequiresRiverSide>0</bRequiresRiverSide>
-            <bRequiresIrrigation>1</bRequiresIrrigation>
+            <bRequiresIrrigation>0</bRequiresIrrigation>
             <bCarriesIrrigation>1</bCarriesIrrigation>
             <bRequiresFeature>0</bRequiresFeature>
             <bWater>0</bWater>

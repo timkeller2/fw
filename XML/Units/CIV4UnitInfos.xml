@@ -64510,6 +64510,10 @@
                     <PromotionType>PROMOTION_ORC</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_HIDDEN_NATIONALITY</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
