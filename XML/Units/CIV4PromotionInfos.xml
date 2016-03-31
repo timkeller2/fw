@@ -7509,7 +7509,7 @@
             <bAlwaysHeal>0</bAlwaysHeal>
             <bHillsDoubleMove>0</bHillsDoubleMove>
             <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
-            <iVisibilityChange>1</iVisibilityChange>
+            <iVisibilityChange>0</iVisibilityChange>
             <iMovesChange>0</iMovesChange>
             <iMoveDiscountChange>0</iMoveDiscountChange>
             <iAirRangeChange>0</iAirRangeChange>
