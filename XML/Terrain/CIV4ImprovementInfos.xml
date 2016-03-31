@@ -597,9 +597,9 @@
             <iTilesPerGoody>0</iTilesPerGoody>
             <iGoodyRange>0</iGoodyRange>
             <iFeatureGrowth>0</iFeatureGrowth>
-            <iUpgradeTime>40</iUpgradeTime>
+            <iUpgradeTime>0</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
-            <iDefenseModifier>25</iDefenseModifier>
+            <iDefenseModifier>50</iDefenseModifier>
             <iHappiness>0</iHappiness>
             <iPillageGold>10</iPillageGold>
             <bOutsideBorders>1</bOutsideBorders>
@@ -648,7 +648,7 @@
             <FeatureMakesValids>
             </FeatureMakesValids>
             <ImprovementPillage>IMPROVEMENT_FORT</ImprovementPillage>
-            <ImprovementUpgrade>IMPROVEMENT_CITADEL</ImprovementUpgrade>
+            <ImprovementUpgrade></ImprovementUpgrade>
             <TechYieldChanges>
             </TechYieldChanges>
             <RouteYieldChanges>
@@ -659,8 +659,8 @@
             <iAppearanceProbability>0</iAppearanceProbability>
             <iHealRateChange>10</iHealRateChange>
             <iRange>2</iRange>
-            <iRangeDefenseModifier>10</iRangeDefenseModifier>
-            <iVisibilityChange>0</iVisibilityChange>
+            <iRangeDefenseModifier>25</iRangeDefenseModifier>
+            <iVisibilityChange>2</iVisibilityChange>
             <BonusConvert>NONE</BonusConvert>
             <FeatureUpgrade>NONE</FeatureUpgrade>
             <PrereqCivilization>NONE</PrereqCivilization>
@@ -695,8 +695,8 @@
             <iFeatureGrowth>0</iFeatureGrowth>
             <iUpgradeTime>0</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
-            <iDefenseModifier>40</iDefenseModifier>
-            <iHappiness>0</iHappiness>
+            <iDefenseModifier>75</iDefenseModifier>
+            <iHappiness>1</iHappiness>
             <iPillageGold>15</iPillageGold>
             <bOutsideBorders>1</bOutsideBorders>
             <TerrainMakesValids>
@@ -755,8 +755,8 @@
             <iAppearanceProbability>0</iAppearanceProbability>
             <iHealRateChange>20</iHealRateChange>
             <iRange>3</iRange>
-            <iRangeDefenseModifier>15</iRangeDefenseModifier>
-            <iVisibilityChange>1</iVisibilityChange>
+            <iRangeDefenseModifier>30</iRangeDefenseModifier>
+            <iVisibilityChange>3</iVisibilityChange>
             <BonusConvert>NONE</BonusConvert>
             <FeatureUpgrade>NONE</FeatureUpgrade>
             <PrereqCivilization>NONE</PrereqCivilization>
@@ -1458,9 +1458,9 @@
             <iTilesPerGoody>0</iTilesPerGoody>
             <iGoodyRange>0</iGoodyRange>
             <iFeatureGrowth>0</iFeatureGrowth>
-            <iUpgradeTime>20</iUpgradeTime>
+            <iUpgradeTime>0</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
-            <iDefenseModifier>10</iDefenseModifier>
+            <iDefenseModifier>25</iDefenseModifier>
             <iHappiness>0</iHappiness>
             <iPillageGold>5</iPillageGold>
             <bOutsideBorders>1</bOutsideBorders>
@@ -1509,7 +1509,7 @@
             <FeatureMakesValids>
             </FeatureMakesValids>
             <ImprovementPillage></ImprovementPillage>
-            <ImprovementUpgrade>IMPROVEMENT_CASTLE</ImprovementUpgrade>
+            <ImprovementUpgrade></ImprovementUpgrade>
             <TechYieldChanges>
             </TechYieldChanges>
             <RouteYieldChanges>
@@ -1518,10 +1518,10 @@
             <bRequiresPeak>0</bRequiresPeak>
             <bUnique>0</bUnique>
             <iAppearanceProbability>0</iAppearanceProbability>
-            <iHealRateChange>0</iHealRateChange>
+            <iHealRateChange>5</iHealRateChange>
             <iRange>1</iRange>
-            <iRangeDefenseModifier>5</iRangeDefenseModifier>
-            <iVisibilityChange>0</iVisibilityChange>
+            <iRangeDefenseModifier>20</iRangeDefenseModifier>
+            <iVisibilityChange>1</iVisibilityChange>
             <BonusConvert>NONE</BonusConvert>
             <FeatureUpgrade>NONE</FeatureUpgrade>
             <PrereqCivilization>NONE</PrereqCivilization>

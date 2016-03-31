@@ -9274,7 +9274,7 @@
             <Description>Use Minor Healing Potion</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>This will restore a small amount of health to the user. ~(75/Str)%</Help>
+            <Help>This will restore a small amount of health to the user. ~(37/Str)%</Help>
             <PromotionPrereq1>PROMOTION_POTION_HEALING_MINOR</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
