@@ -4590,7 +4590,7 @@
             <bRemoveHasCasted>0</bRemoveHasCasted>
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
-            <iCost>50</iCost>
+            <iCost>75</iCost>
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>

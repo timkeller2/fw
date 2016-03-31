@@ -1545,6 +1545,9 @@ class CustomFunctions:
 			iAdj = iAdj + 8
 		if CyGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_MARATHON'):
 			iAdj = iAdj + 12
+			
+		# Slow Down Barbs for now
+		iAdj += 2
 
 		if self.bTechExist('TECH_INFERNAL_PACT') == False and CyGame().getSorenRandNum(6+iAdj, "AnimalStuff") == 1:
 			self.addUnit(gc.getInfoTypeForString(self.sAnimalUnit()))
@@ -1914,6 +1917,8 @@ class CustomFunctions:
 				iThisPlotTrain = 6
 			if pPlot.getFeatureType() == iJungle:
 				iThisPlotTrainAnimal = 3
+			iDiseaseInPlot = 0
+			iPlagueInPlot = 0
 
 			## Set Up Player and Team Variables for the Plot
 			plotPlayer = gc.getPlayer(pPlot.getOwner())
@@ -2127,7 +2132,7 @@ class CustomFunctions:
 					oNewUnit.convert(pUnit)
 
 				## Giant and Dire Spiders can have young
-				if (bCanCreateUnit and CyGame().getSorenRandNum(100, "NewSpider") == 1 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_DIRE_SPIDER'))):
+				if (bCanCreateUnit and CyGame().getSorenRandNum(100, "NewSpider") == 1 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER'))):
 					oNewUnit = gc.getInfoTypeForString('UNIT_BABY_SPIDER')
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 					newUnit = pPlayer.initUnit(oNewUnit, pUnit.getX(), pUnit.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
@@ -2139,6 +2144,7 @@ class CustomFunctions:
 					oNewUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), False)
 
 				## Disease and Plague causes damage over time and can be recovered from
+				iDisMult = 3
 				if pUnit.isAlive() and (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'))):
 					iRecover = 3 - int( pUnit.getDamage() / 10 )
 					if not pPlayer.isHuman():
@@ -2148,8 +2154,10 @@ class CustomFunctions:
 						pCity = pUnit.plot().getPlotCity()
 						if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_HERBALIST')) > 0:
 							iRecover += 2
+							iDisMult -= 1
 						if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_INFIRMARY')) > 0:
 							iRecover += 4
+							iDisMult = 1
 					if iRecover < 1:
 						iRecover = CyGame().getSorenRandNum(3, "MiracleRecovery")
 
@@ -2163,6 +2171,7 @@ class CustomFunctions:
 							pUnit.doDamageNoCaster(iHalfDamage, 100, gc.getInfoTypeForString('DAMAGE_POISON'), False)
 
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED')):
+						iDiseaseInPlot += 1
 						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')):
 							pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'), False)
 						else:
@@ -2173,6 +2182,7 @@ class CustomFunctions:
 								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
 						
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')):
+						iPlagueInPlot += 1
 						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')):
 							pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), False)
 						else:
@@ -2182,15 +2192,23 @@ class CustomFunctions:
 								sMsg = pUnit.getName() + ' recovers from the plague!'
 								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
 
-				## Jungles can cause disease
+				## Jungles can cause disease and Disease and Plague can spread
 				if pPlot.getFeatureType() == iJungle:
+					iJunglePlot = 2
+				else:
+					iJunglePlot = 0
+				if pPlot.getFeatureType() == iJungle or iDiseaseInPlot > 0 or iPlagueInPlot > 0:
 					if pUnit.isAlive():
 						if not pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_ORC'):
 							if (pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_BEAST')):
 								if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')):
-									if CyGame().getSorenRandNum(100, "JungleFever") < 2:
+									if CyGame().getSorenRandNum(100, "JungleFever") < iJunglePlot + iDiseaseInPlot * iDisMult:
 										pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'), True)
-										sMsg = pUnit.getName() + ' contracts a disease from the jungle!'
+										sMsg = pUnit.getName() + ' contracts a disease!'
+										CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
+									if CyGame().getSorenRandNum(100, "ThePlague") < iPlagueInPlot * iDisMult * 2 and iPlagueInPlot > 0:
+										pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), True)
+										sMsg = pUnit.getName() + ' contracts the plague!'
 										CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
 				## Flames damage living units
 				if pPlot.getFeatureType() == iFlames:
