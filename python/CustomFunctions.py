@@ -1514,6 +1514,7 @@ class CustomFunctions:
 		iToad = gc.getInfoTypeForString('BONUS_TOAD')
 		iWheat = gc.getInfoTypeForString('BONUS_WHEAT')
 		iCount = CyGame().getGlobalCounter()
+		iGameTurn = CyGame().getGameTurn()
 		
 		### FW Changes
 		iAdj = 0
@@ -1698,7 +1699,7 @@ class CustomFunctions:
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ISLAND_RESORT')) > 0:
 						py = PyPlayer(iPlayer)
 						for pUnit in py.getUnitList():
-							if pUnit.getFortifyTurns() > 4 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED')) and pUnit.isAlive() and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_BEAST') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_AIR'):
+							if pUnit.getFortifyTurns() > 4 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED')) and pUnit.isAlive() and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_BEAST') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
 								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED'), True)
 								sMsg = pUnit.getName() + ' visits the ' + pCity.getName() + ' Island Resort for a little rest and relaxation!'
 								CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
