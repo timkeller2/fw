@@ -575,7 +575,7 @@
         <ImprovementInfo>
             <Type>IMPROVEMENT_CASTLE</Type>
             <Description>TXT_KEY_IMPROVEMENT_CASTLE</Description>
-            <Civilopedia></Civilopedia>
+            <Civilopedia>Four units may train in the castle increasing their residual xp gain from 4% to 10%!</Civilopedia>
             <Help></Help>
             <ArtDefineTag>ART_DEF_IMPROVEMENT_CASTLE</ArtDefineTag>
             <bActsAsCity>1</bActsAsCity>
@@ -671,7 +671,7 @@
         <ImprovementInfo>
             <Type>IMPROVEMENT_CITADEL</Type>
             <Description>TXT_KEY_IMPROVEMENT_CITADEL</Description>
-            <Civilopedia></Civilopedia>
+            <Civilopedia>Eight units may train in the citadel increasing their residual xp gain from 4% to 10%!</Civilopedia>
             <Help></Help>
             <ArtDefineTag>ART_DEF_IMPROVEMENT_CITADEL</ArtDefineTag>
             <bActsAsCity>1</bActsAsCity>
@@ -1436,7 +1436,7 @@
         <ImprovementInfo>
             <Type>IMPROVEMENT_FORT</Type>
             <Description>TXT_KEY_IMPROVEMENT_FORT</Description>
-            <Civilopedia></Civilopedia>
+            <Civilopedia>Two units may train in the fort increasing their residual xp gain from 4% to 10%!</Civilopedia>
             <Help></Help>
             <ArtDefineTag>ART_DEF_IMPROVEMENT_FORT</ArtDefineTag>
             <bActsAsCity>1</bActsAsCity>
@@ -5767,7 +5767,7 @@
         <ImprovementInfo>
             <Type>IMPROVEMENT_TOWER</Type>
             <Description>TXT_KEY_IMPROVEMENT_TOWER</Description>
-            <Civilopedia>TXT_KEY_IMPROVEMENT_TOWER_PEDIA</Civilopedia>
+            <Civilopedia>A single unit may train in the ancient tower increasing their residual xp gain from 4% to 10% or 15% for mages!</Civilopedia>
             <Help></Help>
             <ArtDefineTag>ART_DEF_IMPROVEMENT_TOWER</ArtDefineTag>
             <bActsAsCity>0</bActsAsCity>

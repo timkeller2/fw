@@ -1914,7 +1914,7 @@ class CustomFunctions:
 			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CASTLE'):
 				iThisPlotTrain = 4
 			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CITADEL'):
-				iThisPlotTrain = 6
+				iThisPlotTrain = 8
 			if pPlot.getFeatureType() == iJungle:
 				iThisPlotTrainAnimal = 3
 			iDiseaseInPlot = 0
@@ -2062,7 +2062,7 @@ class CustomFunctions:
 					iThisPlotTrain -= 1
 					iGiveXP = 10
 					if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iImprovement == gc.getInfoTypeForString('IMPROVEMENT_TOWER'):
-						iGiveXP = 8
+						iGiveXP = 7
 				if CyGame().getSorenRandNum(iGiveXP, "UnitExperience"+str(pUnit.getID())) == 1:
 					pUnit.changeExperience(1, -1, False, False, False)
 

@@ -5489,6 +5489,8 @@ def reqHaste(caster):
 	pPlot = caster.plot()
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SLOW')):
+			return True
 		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False and pUnit.isAlive() == True):
 			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HASTED')):
 				return True

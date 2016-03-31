@@ -3442,12 +3442,13 @@
             <Button>,Art/Interface/Buttons/Promotions/Guerilla2.dds,Art/Interface/Buttons/Promotions_Atlas.dds,6,5</Button>
         </PromotionInfo>
         <PromotionInfo>
-            <Type>PROMOTION_HASTED</Type>
-            <Description>TXT_KEY_PROMOTION_HASTED</Description>
-            <Sound>AS2D_IF_LEVELUP</Sound>
-            <TechPrereq>TECH_NEVER</TechPrereq>
-            <iMovesChange>1</iMovesChange>
-            <UnitCombats>
+           <Type>PROMOTION_HASTED</Type>
+           <Description>TXT_KEY_PROMOTION_HASTED</Description>
+           <Sound>AS2D_IF_LEVELUP</Sound>
+           <TechPrereq>TECH_NEVER</TechPrereq>
+           <iMovesChange>1</iMovesChange>
+           <iCombatPercent>20</iCombatPercent>
+           <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
@@ -3484,6 +3485,7 @@
             <Button>Art/Interface/Buttons/Promotions/Hasted.dds</Button>
             <bDispellable>1</bDispellable>
             <iAIWeight>50</iAIWeight>
+            <iCombatPercentDefense>20</iCombatPercentDefense>
             <iExpireChance>100</iExpireChance>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
