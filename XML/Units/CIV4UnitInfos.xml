@@ -54914,7 +54914,7 @@
             </TerrainPassableTechs>
             <FeaturePassableTechs>
             </FeaturePassableTechs>
-            <iCombat>5</iCombat>
+            <iCombat>7</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>0</iAirCombat>
             <iAirCombatLimit>0</iAirCombatLimit>
@@ -55005,8 +55005,8 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
-            <iCombatDefense>5</iCombatDefense>
-            <iTier>2</iTier>
+            <iCombatDefense>7</iCombatDefense>
+            <iTier>3</iTier>
             <iWeaponTier>3</iWeaponTier>
             <Image>Art/Interface/Popups/Orthus.dds</Image>
             <PythonPostCombatLost>postCombatOrthus(pCaster,pOpponent)</PythonPostCombatLost>
