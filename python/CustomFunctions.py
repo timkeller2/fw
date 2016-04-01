@@ -56,7 +56,7 @@ class CustomFunctions:
 			mPlayer = gc.getPlayer(iPlayer)
 			if mPlayer.isAlive() and (mPlayer.canContact(sendingPlayer) or iPlayer == sendingPlayer):
 				py = PyPlayer(iPlayer)
-				CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),x,y,True,True)
+				CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),x,y,True,True)
 				CyInterface().addCombatMessage(iPlayer,sMsg)
 
 	def generateLoot(self, iUnit, iHaveScrolls):
@@ -1582,9 +1582,11 @@ class CustomFunctions:
 					# Injury damage
 					if pUnit.getDamage() > 0 and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_SIEGE'):
 						iDam = CyGame().getSorenRandNum( pUnit.getDamage(), "Injury Damage") / 5 - pUnit.getLevel()
+						if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ORC')):
+							iDam = iDam / 2
 						if iDam > 12:
 							iDam = 12
-						if iDam > 5:
+						if iDam > 3:
 							sMess = pUnit.getName() + " suffers " + str( iDam ) + " damage from injuries..."
 							CyInterface().addMessage(pUnit.getOwner(),False,25,sMess,'',1,'',ColorTypes(7),pPlot.getX(),pPlot.getY(),True,True)
 						if iDam > 0:	

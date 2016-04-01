@@ -1231,128 +1231,128 @@ class CvEventManager:
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_AIR'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_AIR1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_AIR2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_AIR3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_BODY'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_CHAOS'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CHAOS1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CHAOS2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CHAOS3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_DEATH'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_EARTH'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_ENCHANTMENT'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_ENTROPY'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_FIRE'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FIRE1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FIRE2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FIRE3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_ICE'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ICE1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ICE2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ICE3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_LAW'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LAW1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LAW2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LAW3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_LIFE'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_METAMAGIC'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_METAMAGIC1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_METAMAGIC2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_METAMAGIC3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_MIND'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_NATURE'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_NATURE1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_NATURE2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_NATURE3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_SHADOW'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHADOW1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHADOW2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHADOW3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_SPIRIT'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_SUN'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN3'), True)
 			iNum = pPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_WATER'))
 			if iNum > 1:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WATER1'), True)
-				if (iNum > 2 and unit.isHasPromotion(iChanneling2)):
+				if iNum > 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WATER2'), True)
-					if (iNum > 3 and unit.isHasPromotion(iChanneling3)):
+					if iNum > 3:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WATER3'), True)
 
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ELEMENTAL')):
@@ -1406,6 +1406,21 @@ class CvEventManager:
 		if unit.baseCombatStr() > 5 and pPlayer.getUnitClassCount(unit.getUnitClassType()) == 1 and CyGame().isUnitClassMaxedOut(unit.getUnitClassType(), 0) == False:
 			sMsg = 'It is reported that ' + pPlayer.getName() + ' now has ' + unit.getName() + 's...'
 			cf.msgAll(sMsg,unit.getX(),unit.getY(),unit.getOwner())
+
+		## Dire beasts and dragons add a chance that new living units will start with the Cult of the Dragon promotion...
+		if unit.isAlive():
+			iDireChance = 0
+			iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_WYRMLING')) * 3
+			iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_YOUNG_DRAGON')) * 6
+			iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_DRAGON')) * 9
+			iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_ACHERON')) * 10
+			iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_ABASHI')) * 10
+			iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_EURABATRES')) * 10
+			if CyGame().getSorenRandNum(100, "RandomDragonCult") < iDireChance:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CULT_OF_THE_DRAGON'), True)
+				sMsg = unit.getName() + ' is born fearing dragons and beasts...'
+				CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Units/Acheron.dds',ColorTypes(8),unit.getX(),unit.getY(),True,True)
+				CyInterface().addCombatMessage(iPlayer,sMsg)
 
 		if CyGame().getSorenRandNum(20, "RandomHero") == 1:
 			if pPlayer.isHuman() or unit.baseCombatStr() > 0:
@@ -1654,7 +1669,132 @@ class CvEventManager:
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BOOTS_OF_HASTE')):
 			if CyGame().getSorenRandNum(100, "Boots Ruined") < 30:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BOOTS_OF_HASTE'), False)
-						
+
+		if ((unit.isAlive() or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL')) and unit.baseCombatStr() > 0):
+			iEat = 0
+			iX = unit.getX()
+			iY = unit.getY()
+			for iiX in range(iX-1, iX+2, 1):
+				for iiY in range(iY-1, iY+2, 1):
+					pPlot = CyMap().plot(iiX,iiY)
+					for i in range(pPlot.getNumUnits()):
+						pUnit = pPlot.getUnit(i)
+						ilX = pUnit.getX()
+						ilY = pUnit.getY()
+
+						if ( pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ORC')) and pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iEat == 0 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHARMED')) ):
+							iEat = 1
+							iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
+							if aPlayer.isBarbarian():
+								iBirthChance = iBirthChance - 25
+							if iBirthChance < 25:
+								pUnit.setPromotionReady(true)
+								pUnit.setLevel(pUnit.getLevel()-1)
+								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CHARMED'), True)
+								sMsg = 'A ' + str( pUnit.getName() ) + ' grows in power!'
+								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
+								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
+
+						if ( (pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_DIRE_SPIDER')) and iEat == 0 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
+							iEat = 1
+							iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
+							if aPlayer.isBarbarian():
+								iBirthChance = iBirthChance - 25
+							if iBirthChance < 15:
+								bPlayer = gc.getPlayer(pUnit.getOwner())
+								newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_BABY_SPIDER'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+								newUnit.finishMoves()
+								newUnit.setHasCasted(True)
+								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+								sMsg = 'A ' + str( pUnit.getName() ) + ' has young...'
+								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
+								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
+
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_DUIN') and iEat == 0 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
+							iEat = 1
+							iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
+							if iBirthChance < 50:
+								bPlayer = gc.getPlayer(pUnit.getOwner())
+								newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+								newUnit.finishMoves()
+								newUnit.setHasCasted(True)
+								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+								sMsg = str( pUnit.getName() ) + ' creates a new werewolf...'
+								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
+								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
+
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GREATER_WEREWOLF') and iEat == 0 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
+							iEat = 1
+							iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
+							if iBirthChance < 35:
+								bPlayer = gc.getPlayer(pUnit.getOwner())
+								newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+								newUnit.finishMoves()
+								newUnit.setHasCasted(True)
+								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+								sMsg = 'A ' + str( pUnit.getName() ) + ' creates a new werewolf...'
+								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
+								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
+
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_WEREWOLF') and iEat == 0 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
+							iEat = 1
+							iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
+							if iBirthChance < 25:
+								bPlayer = gc.getPlayer(pUnit.getOwner())
+								newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+								newUnit.finishMoves()
+								newUnit.setHasCasted(True)
+								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+								sMsg = 'A ' + str( pUnit.getName() ) + ' creates a new werewolf...'
+								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
+								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
+
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF') and iEat == 0 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
+							iEat = 1
+							iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
+							if iBirthChance < 15:
+								bPlayer = gc.getPlayer(pUnit.getOwner())
+								newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+								newUnit.finishMoves()
+								newUnit.setHasCasted(True)
+								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+								sMsg = 'A ' + str( pUnit.getName() ) + ' creates a new werewolf...'
+								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
+								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
+
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT') and iEat == 0 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
+							iEat = 1
+							pPlayer2 = gc.getPlayer(pUnit.getOwner())
+							iArcane = gc.getInfoTypeForString('UNITCLASS_GIANT_SEA_SERPENT')
+							iCaravel = gc.getInfoTypeForString('UNITCLASS_SEA_SERPENT')
+							iCount = pPlayer2.getUnitClassCount(iArcane)
+							iCount += pPlayer2.getUnitClassCount(iCaravel)
+
+							iBirthChance = CyGame().getSorenRandNum(100 + iCount, "serpentbirthchance")
+							if aPlayer.isBarbarian():
+								iBirthChance = iBirthChance - 25
+							if iBirthChance < 50 and iCount < 60:
+								bPlayer = gc.getPlayer(pUnit.getOwner())
+								newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_SEA_SERPENT'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+								newUnit.finishMoves()
+								newUnit.setHasCasted(True)
+								if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
+									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1'),True)
+								if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2')):
+									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER2'),True)
+								if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT3')):
+									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER3'),True)
+								if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT4')):
+									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER4'),True)
+									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
+								if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT5')):
+									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER5'),True)
+									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
+								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+								sMsg = 'A ' + str( pUnit.getName() ) + ' has young!'
+								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
+								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
+				
 		if ((unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ORC')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL')) and pPlayer.isBarbarian()):
 			iGold = unit.baseCombatStr() * unit.baseCombatStr()
 			iGold = CyGame().getSorenRandNum(iGold, "treasure") + iGold / 3

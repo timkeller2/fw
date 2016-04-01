@@ -40606,7 +40606,7 @@
             <bPrereqReligion>0</bPrereqReligion>
             <bCenterInCity>0</bCenterInCity>
             <iAIWeight>0</iAIWeight>
-            <iCost>1000</iCost>
+            <iCost>2000</iCost>
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -40901,8 +40901,8 @@
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
-            <iDefense>0</iDefense>
-            <iBombardDefense>0</iBombardDefense>
+            <iDefense>50</iDefense>
+            <iBombardDefense>25</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
             <iAsset>2</iAsset>
@@ -40916,8 +40916,8 @@
             </GlobalSeaPlotYieldChanges>
             <YieldChanges>
                 <iYield>0</iYield>
-                <iYield>10</iYield>
-                <iYield>10</iYield>
+                <iYield>1</iYield>
+                <iYield>1</iYield>
             </YieldChanges>
             <YieldModifiers>
             </YieldModifiers>

@@ -4568,7 +4568,7 @@ def spellExamineCache(caster,mode):
 		if CyGame().getSorenRandNum(100, "Serpent Report") < iSerpentCount + iGreatSerpentCount and iMult > 0:
 			sDip = sDip + '  Sailors tell tales of giant beasts in the sea.  The population of greater serpents is estimated at ' + str(iGreatSerpentCount) + '.  The population of smaller serpents is estimated at ' + str(iSerpentCount) + '.'
 
-		CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+		CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 		CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
 		return

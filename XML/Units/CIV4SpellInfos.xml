@@ -11148,7 +11148,7 @@
             <Description>Use Scroll of Maelstrom</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>Create an explosion of lightning doing 20% damage to all enemy units within 2 tiles.  Damage is increased by strength promotions on the caster.</Help>
+            <Help>Create an explosion of lightning doing 10% damage to all enemy units within 2 tiles.  Damage is increased by strength promotions on the caster.</Help>
             <PromotionPrereq1>PROMOTION_SCROLL_MS</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
