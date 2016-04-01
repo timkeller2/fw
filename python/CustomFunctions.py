@@ -1524,6 +1524,7 @@ class CustomFunctions:
 		iAncientForest = gc.getInfoTypeForString('FEATURE_FOREST_ANCIENT')
 		iAncientForestChance = gc.getDefineINT('ANCIENT_FOREST_CHANCE')
 		iDesert = gc.getInfoTypeForString('TERRAIN_DESERT')
+		iGrass = gc.getInfoTypeForString('TERRAIN_GRASS')
 		
 		### FW Changes
 		iAdj = 0
