@@ -1174,7 +1174,7 @@ def reqExploreLair(caster):
 
 def spellExploreLair(caster):
 	pPlot = caster.plot()
-	iRnd = CyGame().getSorenRandNum(100, "Explore Lair") + caster.getLevel() + caster.baseCombatStr()
+	iRnd = CyGame().getSorenRandNum(100, "Explore Lair") + caster.getLevel() + caster.baseCombatStr() + retSearch(caster)
 	iDestroyLair = 0
 	if iRnd < 14:
 		iDestroyLair = cf.exploreLairBigBad(caster)
@@ -1195,7 +1195,7 @@ def spellExploreLair(caster):
 
 def spellExploreLairEpic(caster):
 	pPlot = caster.plot()
-	iRnd = CyGame().getSorenRandNum(100, "Explore Lair") + caster.getLevel() + caster.baseCombatStr()
+	iRnd = CyGame().getSorenRandNum(100, "Explore Lair") + caster.getLevel() + caster.baseCombatStr() + retSearch(caster)
 	iDestroyLair = 0
 	if iRnd < 54:
 		iDestroyLair = cf.exploreLairBigBad(caster)

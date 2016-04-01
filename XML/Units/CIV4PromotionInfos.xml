@@ -9543,7 +9543,7 @@
         <PromotionInfo>
             <Type>PROMOTION_BURGLAR1</Type>
             <Description>Burglar I</Description>
-            <Help>Burglar promotions help units find the many secret caches throughout Erebus.  A potentially very rewarding occupation, if also difficult.</Help>
+            <Help>Burglar promotions help units find the many secret caches throughout Erebus.  A potentially very rewarding occupation, if also difficult.  Mobility, sentry, drill and burglar promotions will increase the chances of finding good loot in dungeons and looting hidden caches.  Burglar promotions are the most potent in this regard.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>

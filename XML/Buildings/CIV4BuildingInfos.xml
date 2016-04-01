@@ -13853,7 +13853,7 @@
             <iConquestProb>100</iConquestProb>
             <iCitiesPrereq>0</iCitiesPrereq>
             <iTeamsPrereq>0</iTeamsPrereq>
-            <iLevelPrereq>6</iLevelPrereq>
+            <iLevelPrereq>8</iLevelPrereq>
             <iMinLatitude>0</iMinLatitude>
             <iMaxLatitude>90</iMaxLatitude>
             <iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
