@@ -4159,7 +4159,7 @@
             <Description>TXT_KEY_SPELL_TSUNAMI</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Help>TXT_KEY_SPELL_TSUNAMI_HELP</Help>
-            <PromotionPrereq1>PROMOTION_CHANNELING2</PromotionPrereq1>
+            <PromotionPrereq1>PROMOTION_CHANNELING3</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_DIVINE</PromotionPrereq2>
             <ReligionPrereq>RELIGION_OCTOPUS_OVERLORDS</ReligionPrereq>
             <bAdjacentToWaterOnly>1</bAdjacentToWaterOnly>
@@ -11222,7 +11222,7 @@
             <Description>Use Magic Item Scroll of Maelstrom</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>Create an explosion of lightning doing 20% damage to all enemy units within 2 tiles.  Damage is increased by strength promotions on the caster.</Help>
+            <Help>Create an explosion of lightning doing 10% damage to all enemy units within 2 tiles.  Damage is increased by strength promotions on the caster.</Help>
             <PromotionPrereq1>PROMOTION_SCROLL_MS</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_BURGLAR3</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>

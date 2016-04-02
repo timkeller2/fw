@@ -1895,7 +1895,6 @@ class CustomFunctions:
 								break
 
 					pCity.setScriptData(cPickle.dumps(sCityInfo))
-
 							
 		### End FW Changes
 						
@@ -2134,7 +2133,7 @@ class CustomFunctions:
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 					oNewUnit.convert(pUnit)
 
-				## Giant and Dire Spiders can have young
+				## Giant Spiders can have young
 				if (bCanCreateUnit and CyGame().getSorenRandNum(100, "NewSpider") == 1 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER'))):
 					oNewUnit = gc.getInfoTypeForString('UNIT_BABY_SPIDER')
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
@@ -2224,7 +2223,7 @@ class CustomFunctions:
 				iAlignment = pPlayer.getAlignment()
 
 				## Road Tax
-				if pPlot.isRoute() and pPlayer.isHuman():
+				if pPlot.isRoute() and not pPlot.isRiver() and pPlayer.isHuman():
 					if pPlot.getOwner() in iRoadTax:
 						iRoadTax[pPlot.getOwner()] += 1
 					else:
