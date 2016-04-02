@@ -3740,7 +3740,7 @@ def spellBecomeGrandMaster(caster):
 		pPlayer = gc.getPlayer(iPlayer)
 		if pPlayer.isAlive():
 			py = PyPlayer(iPlayer)
-			CyInterface().addMessage(iPlayer,true,25,sMsg,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addMessage(iPlayer,true,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 			for pUnit in py.getUnitList():
 				if (pUnit.isHasPromotion(iGrandMaster) and pUnit.getUnitClassType() == caster.getUnitClassType()):
 					pUnit.setHasPromotion(iGrandMaster, False)
@@ -3931,7 +3931,7 @@ def sellToMarket(caster):
 			caster.changeExperience(1, -1, False, False, False)
 
 			sMsg = 'Your ' + caster.getName() + ' sells a ' + pUnit.getName() + ' for ' + str( iPrice ) + 'gp...  (Burglar Skill: '+str(retSearch(caster))+')'
-			CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 			CyInterface().addCombatMessage(caster.getOwner(),sMsg)
 
 	for pUnit in target:
@@ -4637,12 +4637,12 @@ def spellExamineCache(caster,mode):
 		if mode == 1:
 			sDir = retDir(iX,iY,iiX,iiY)
 			sDip = 'Examing a hidden cache... Distance: '+str(iRange)+' '+sDir+' Skill: '+str(iSearch)+' Dif: ' + str(pUnit.baseCombatStrDefense()+iRange*3) + ' Chance: ' + str( iChance ) + ' Danger: ' + str(pUnit.baseCombatStr()) + sSpec
-			CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 			CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
 			if caster.getFortifyTurns() == 5 and CyGame().getSorenRandNum(3, "Roll d3") == 1:
 				sDip = 'Coming up with a plan to loot the cache!  Difficulty reduced by 1!'
-				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 				CyInterface().addCombatMessage(caster.getOwner(),sDip)
 				if pUnit.baseCombatStr() > 1:
 					pUnit.setBaseCombatStr(pUnit.baseCombatStr() - 1)
@@ -4659,7 +4659,7 @@ def spellExamineCache(caster,mode):
 		# Loot Cache
 		if mode == 2:
 			sDip = 'Attempting to loot a hidden cache... Skill: '+str(iSearch)+' Dif: ' + str(pUnit.baseCombatStrDefense()+iRange*3) + ' Chance: ' + str( iChance ) + ' Danger: ' + str(pUnit.baseCombatStr()) + sSpec
-			CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 			CyInterface().addCombatMessage(caster.getOwner(),sDip)
 			iRoll = CyGame().getSorenRandNum(100, "Roll It")
 			if iRoll <= iChance:
@@ -4671,7 +4671,7 @@ def spellExamineCache(caster,mode):
 				iGold = CyGame().getSorenRandNum( pUnit.baseCombatStr() * 25, "Find Gold") + pUnit.baseCombatStr() * 10
 				sDip = 'Success!  You find '+str(iGold)+' gold pieces and gain '+str(iXP)+'xp!'
 				pPlayer.setGold( pPlayer.getGold() + iGold )
-				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 				CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
 			elif iRoll > iChance and iRoll < iChance + 25 and iRoll < 95:
@@ -4679,14 +4679,14 @@ def spellExamineCache(caster,mode):
 				sDip = 'Failure'
 				if CyGame().getSorenRandNum(100, "Roll It2") < 35:
 					bCreep = False
-				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 				CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
 			else:
 				# Detonation
 				sDip = 'Critical Failure'
 				bCreep = False
-				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 				CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1')):
@@ -4788,7 +4788,7 @@ def spellJudge(caster):
 			iGain = iGain * 2
 		iXP = sInfo['JUDGE'] / 2 + 1
 		caster.changeExperience( iXP , -1, False, False, False )
-		CyInterface().addMessage(caster.getOwner(),true,25,'Success! ('+str(iChance)+'% chance) '+caster.getName() + ' resolved a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!  You gain '+str(iGain)+' gold pieces and '+str(iXP)+'xp!','AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+		CyInterface().addMessage(caster.getOwner(),true,25,'Success! ('+str(iChance)+'% chance) '+caster.getName() + ' resolved a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!  You gain '+str(iGain)+' gold pieces and '+str(iXP)+'xp!','AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 		CyInterface().addCombatMessage(caster.getOwner(),caster.getName() + ' resolved a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!  You gain '+str(iGain)+' gold pieces and '+str(iXP)+'xp!' )
 		pPlayer.setGold( pPlayer.getGold() + sInfo['JUDGE'] * 10 + 15 )
 		cPlayer.setGold( cPlayer.getGold() + sInfo['JUDGE'] * 10 + 15 )
@@ -4796,7 +4796,7 @@ def spellJudge(caster):
 		pCity.setScriptData(cPickle.dumps(sInfo))
 	else:
 		## Failure, this turn...
-		CyInterface().addMessage(caster.getOwner(),true,25,'Failure. ('+str(iChance)+'% chance) '+caster.getName() + ' failed to resolve a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!','AS2D_PILLAGE',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+		CyInterface().addMessage(caster.getOwner(),true,25,'Failure. ('+str(iChance)+'% chance) '+caster.getName() + ' failed to resolve a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!','AS2D_PILLAGE',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 		CyInterface().addCombatMessage(caster.getOwner(),caster.getName() + ' failed to resolve a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!' )
 	
 def spellNeedJudge(caster):
@@ -4813,7 +4813,7 @@ def spellNeedJudge(caster):
 					sCityInfo['JUDGE'] = 0
 				if sCityInfo['JUDGE'] > 0 and (pPlayer.canContact(caster.getOwner()) or iPlayer == caster.getOwner()):
 					sMsg = 'The people of ' + pCity.getName() + ' owned by ' + pPlayer.getName() + ' still await a noble to help them resolve a ' + cf.sDisputeLevel(sCityInfo['JUDGE']) + ' dispute...'
-					CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+					CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 					CyInterface().addCombatMessage(caster.getOwner(),sMsg )
 
 def reqDiplomacy(caster):
@@ -4909,11 +4909,11 @@ def spellDiplomacy(caster):
 	# Found a unit that meets our criteria!
 	if pBestUnit != -1:
 		sMsg = 'Attempting to hire a ' + pBestUnit.getName() + ' for ' + str( iBestValue * 15 ) + ' gold with a ' + str(iChance) + '% chance...'
-		CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+		CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 		CyInterface().addCombatMessage(caster.getOwner(),sMsg)
 		iRoll = CyGame().getSorenRandNum(100, "Roll It")
 		if iRoll < iChance:
-			CyInterface().addMessage(caster.getOwner(),true,25,'Success! '+sBestDip,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addMessage(caster.getOwner(),true,25,'Success! '+sBestDip,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 			CyInterface().addCombatMessage(caster.getOwner(),'Success! '+sBestDip)
 			pPlayer.setGold( pPlayer.getGold() - iBestValue * 15 )
 			oPlayer = gc.getPlayer(pBestUnit.getOwner())
@@ -4922,7 +4922,7 @@ def spellDiplomacy(caster):
 			newUnit = pPlayer.initUnit(pBestUnit.getUnitType(), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 			newUnit.convert(pBestUnit)
 		else:
-			CyInterface().addMessage(caster.getOwner(),true,25,'Failure... '+sBestDip,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addMessage(caster.getOwner(),true,25,'Failure... '+sBestDip,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 			CyInterface().addCombatMessage(caster.getOwner(),'Failure... '+sBestDip)
 			
 
