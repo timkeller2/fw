@@ -2062,6 +2062,10 @@
             <iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
             <UnitCombats>
                 <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
@@ -2106,6 +2110,10 @@
             <PromotionPrereq>PROMOTION_DRILL1</PromotionPrereq>
             <iFirstStrikesChange>1</iFirstStrikesChange>
             <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
@@ -2152,6 +2160,10 @@
             <iChanceFirstStrikesChange>2</iChanceFirstStrikesChange>
             <iCollateralDamageProtection>20</iCollateralDamageProtection>
             <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
@@ -2200,6 +2212,10 @@
                 </UnitCombatMod>
             </UnitCombatMods>
             <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
@@ -19151,7 +19167,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Promotions/Summoning.dds</Button>
+            <Button>Art/Interface/Buttons/Promotions/Unholytaint.dds</Button>
             <bBoarding>0</bBoarding>
             <bOnlyDefensive>0</bOnlyDefensive>
             <bDispellable>0</bDispellable>
