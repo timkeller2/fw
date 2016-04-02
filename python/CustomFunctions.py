@@ -628,7 +628,7 @@ class CustomFunctions:
 			bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
 			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 			newUnit.finishMoves()
-#			self.equip(newUnit)
+			self.equip(newUnit)
 			return newUnit
 
 	def addBarbUnit(self, iUnit):
@@ -657,7 +657,7 @@ class CustomFunctions:
 			bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
 			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 			newUnit.finishMoves()
-#			self.equip(newUnit)
+			self.equip(newUnit)
 			return newUnit
 
 
@@ -679,7 +679,7 @@ class CustomFunctions:
 			bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
 			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 			newUnit.finishMoves()
-#			self.equip(newUnit)
+			self.equip(newUnit)
 
 	def unitAptitude(self, newUnit):
 		iAptitude = CyGame().getSorenRandNum(6, "Aptitude") + 1

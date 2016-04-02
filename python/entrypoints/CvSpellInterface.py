@@ -3709,8 +3709,8 @@ def reqBecomeChief(caster):
 def reqBecomeGrandMaster(caster):
 	if caster.getLevel() < 6:
 		return False
-	#if caster.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE'):
-	#	return False
+	if caster.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE'):
+		return False
 	iGrandMaster = gc.getInfoTypeForString('PROMOTION_GRAND_MASTER')
 	if caster.isHasPromotion(iGrandMaster):
 		return False
