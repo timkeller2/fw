@@ -10,6 +10,8 @@ import cPickle
 import math
 
 #FfH: Added by Kael 10/21/2008
+import CustomFunctions
+cf = CustomFunctions.CustomFunctions()
 import ScenarioFunctions
 sf = ScenarioFunctions.ScenarioFunctions()
 #FfH: End Add

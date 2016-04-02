@@ -17834,7 +17834,7 @@
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_POTION_HEALING_MINOR</Type>
-            <Description>Minor Healing Potion</Description>
+            <Description>Bandages</Description>
             <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
@@ -17903,7 +17903,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Equipment/HealingSalve.dds</Button>
+            <Button>Art/Interface/Buttons/TechTree/Leaves.dds</Button>
             <bBoarding>0</bBoarding>
             <bOnlyDefensive>0</bOnlyDefensive>
             <bDispellable>0</bDispellable>
@@ -18534,7 +18534,7 @@
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_POTION_STRENGTH</Type>
-            <Description>Potion of Strength</Description>
+            <Description>Hearty Rations</Description>
             <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
@@ -18603,7 +18603,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Equipment/HealingSalve.dds</Button>
+            <Button>Art/Interface/Buttons/TechTree/Animal Husbandry.dds</Button>
             <bBoarding>0</bBoarding>
             <bOnlyDefensive>0</bOnlyDefensive>
             <bDispellable>0</bDispellable>
@@ -18674,7 +18674,7 @@
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_POTION_HASTE</Type>
-            <Description>Potion of Haste</Description>
+            <Description>Extra Rations</Description>
             <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
@@ -18743,7 +18743,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Equipment/HealingSalve.dds</Button>
+            <Button>Art/Interface/Buttons/TechTree/Medicine.dds</Button>
             <bBoarding>0</bBoarding>
             <bOnlyDefensive>0</bOnlyDefensive>
             <bDispellable>0</bDispellable>
@@ -19094,8 +19094,8 @@
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_SUMMONING</Type>
-            <Description>TXT_KEY_PROMOTION_SUMMONING</Description>
-            <Help>TXT_KEY_PROMOTION_SUMMONING_PEDIA</Help>
+            <Description>Summoning</Description>
+            <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>

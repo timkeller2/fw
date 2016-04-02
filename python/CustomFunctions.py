@@ -686,6 +686,7 @@ class CustomFunctions:
 		iStrong = CyGame().getSorenRandNum(3, "Strong") + 1
 		iImmortal = CyGame().getSorenRandNum(3, "Immortal") + 1
 		iHero =  CyGame().getSorenRandNum(6, "Noble") + 1
+		iBurglar =  CyGame().getSorenRandNum(8, "Burglar") + 1
 
 		if iAptitude > 1:
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1'), True)
@@ -707,8 +708,11 @@ class CustomFunctions:
 		if CyGame().getSorenRandNum(3, "Mobile") == 1:
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'), True)
 
-		# if iHero == 1:
-			# newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_NOBILITY'), True)
+		if iHero == 1:
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_NOBILITY'), True)
+
+		if iBurglar == 1:
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR1'), True)
 
 	def sDisputeLevel(self, i):
 		if i < 3:

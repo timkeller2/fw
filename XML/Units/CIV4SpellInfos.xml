@@ -9294,7 +9294,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_POTION_HEALING_MINOR</Type>
-            <Description>Use Minor Healing Potion</Description>
+            <Description>Use Bandages</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>This will restore a small amount of health to the user. ~(37/Str)%</Help>
@@ -9364,7 +9364,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Equipment/HealingSalve.dds</Button>
+            <Button>Art/Interface/Buttons/TechTree/Leaves.dds</Button>
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_POTION_HEALING_MODERATE</Type>
@@ -9664,7 +9664,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_POTION_HASTE</Type>
-            <Description>Use Potion of Haste</Description>
+            <Description>Extra Rations</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>This will make the living user faster temporarily.</Help>
@@ -9734,11 +9734,11 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Equipment/HealingSalve.dds</Button>
+            <Button>Art/Interface/Buttons/TechTree/Medicine.dds</Button>
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_POTION_STRENGTH</Type>
-            <Description>Use Potion of Strength</Description>
+            <Description>Hearty Rations</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>This will make the living user stronger temporarily.</Help>
@@ -9808,7 +9808,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Equipment/HealingSalve.dds</Button>
+            <Button>Art/Interface/Buttons/TechTree/Animal Husbandry.dds</Button>
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_POTION_STRENGTH_ENDURING</Type>

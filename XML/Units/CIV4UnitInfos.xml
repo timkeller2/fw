@@ -82265,7 +82265,7 @@
             <iRangedWaveSize>0</iRangedWaveSize>
                 <UnitMeshGroup>
                     <iRequired>1</iRequired>
-                    <EarlyArtDefineTag>ART_DEF_EQUIPMENT_HEALING_SALVE</EarlyArtDefineTag>
+                    <EarlyArtDefineTag>ART_DEF_EQUIPMENT_TREASURE1</EarlyArtDefineTag>
                 </UnitMeshGroup>
             </UnitMeshGroups>
             <FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -82979,7 +82979,7 @@
             <iRangedWaveSize>0</iRangedWaveSize>
                 <UnitMeshGroup>
                     <iRequired>1</iRequired>
-                    <EarlyArtDefineTag>ART_DEF_EQUIPMENT_HEALING_SALVE</EarlyArtDefineTag>
+                    <EarlyArtDefineTag>ART_DEF_EQUIPMENT_TREASURE1</EarlyArtDefineTag>
                 </UnitMeshGroup>
             </UnitMeshGroups>
             <FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -83217,7 +83217,7 @@
             <iRangedWaveSize>0</iRangedWaveSize>
                 <UnitMeshGroup>
                     <iRequired>1</iRequired>
-                    <EarlyArtDefineTag>ART_DEF_EQUIPMENT_HEALING_SALVE</EarlyArtDefineTag>
+                    <EarlyArtDefineTag>ART_DEF_EQUIPMENT_TREASURE1</EarlyArtDefineTag>
                 </UnitMeshGroup>
             </UnitMeshGroups>
             <FormationType>FORMATION_TYPE_DEFAULT</FormationType>
