@@ -49,6 +49,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Air1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_AIR</BonusPrereq>
             <PromotionNextLevel>PROMOTION_AIR2</PromotionNextLevel>
         </PromotionInfo>
@@ -100,6 +101,7 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Air2.dds</Button>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <iAIWeight>100</iAIWeight>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_AIR3</PromotionNextLevel>
@@ -153,6 +155,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Air3.dds</Button>
             <iAIWeight>150</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
@@ -478,6 +481,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Body1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_BODY</BonusPrereq>
             <PromotionNextLevel>PROMOTION_BODY2</PromotionNextLevel>
         </PromotionInfo>
@@ -530,6 +534,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Body2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_BODY3</PromotionNextLevel>
         </PromotionInfo>
@@ -582,6 +587,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Body3.dds</Button>
             <iAIWeight>150</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
@@ -748,6 +754,7 @@
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>20</iSpellCasterXP>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_CHANNELING2</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
@@ -760,6 +767,7 @@
             <iCasterResistModify>-10</iCasterResistModify>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>30</iSpellCasterXP>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_CHANNELING3</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
@@ -771,6 +779,7 @@
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
             <iCasterResistModify>-10</iCasterResistModify>
             <iMinLevel>-1</iMinLevel>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <iSpellCasterXP>40</iSpellCasterXP>
         </PromotionInfo>
         <PromotionInfo>
@@ -785,6 +794,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Chaos1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_CHAOS</BonusPrereq>
             <PromotionPrereqAnd>PROMOTION_CHANNELING1</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_CHAOS2</PromotionNextLevel>
@@ -838,6 +848,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Chaos2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_CHAOS3</PromotionNextLevel>
         </PromotionInfo>
@@ -889,6 +900,7 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Chaos3.dds</Button>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <iAIWeight>150</iAIWeight>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
@@ -1170,7 +1182,7 @@
             <Button>,Art/Interface/Buttons/Promotions/Combat1.dds,Art/Interface/Buttons/Promotions_Atlas.dds,8,2</Button>
             <bMutation>1</bMutation>
             <iCombatPercentDefense>20</iCombatPercentDefense>
-            <iSpellDamageModify>5</iSpellDamageModify>
+            <iSpellDamageModify>0</iSpellDamageModify>
             <PromotionSummonPerk>PROMOTION_EMPOWER1</PromotionSummonPerk>
             <PromotionNextLevel>PROMOTION_COMBAT2</PromotionNextLevel>
         </PromotionInfo>
@@ -1224,7 +1236,7 @@
             </UnitCombats>
             <Button>,Art/Interface/Buttons/Promotions/Combat2.dds,Art/Interface/Buttons/Promotions_Atlas.dds,1,6</Button>
             <iCombatPercentDefense>20</iCombatPercentDefense>
-            <iSpellDamageModify>5</iSpellDamageModify>
+            <iSpellDamageModify>0</iSpellDamageModify>
             <PromotionSummonPerk>PROMOTION_EMPOWER2</PromotionSummonPerk>
             <PromotionNextLevel>PROMOTION_COMBAT3</PromotionNextLevel>
         </PromotionInfo>
@@ -1278,7 +1290,7 @@
             </UnitCombats>
             <Button>,Art/Interface/Buttons/Promotions/Combat3.dds,Art/Interface/Buttons/Promotions_Atlas.dds,2,6</Button>
             <iCombatPercentDefense>20</iCombatPercentDefense>
-            <iSpellDamageModify>5</iSpellDamageModify>
+            <iSpellDamageModify>0</iSpellDamageModify>
             <PromotionSummonPerk>PROMOTION_EMPOWER3</PromotionSummonPerk>
             <PromotionNextLevel>PROMOTION_COMBAT4</PromotionNextLevel>
         </PromotionInfo>
@@ -1332,7 +1344,7 @@
             </UnitCombats>
             <Button>,Art/Interface/Buttons/Promotions/Combat4.dds,Art/Interface/Buttons/Promotions_Atlas.dds,3,6</Button>
             <iCombatPercentDefense>20</iCombatPercentDefense>
-            <iSpellDamageModify>5</iSpellDamageModify>
+            <iSpellDamageModify>0</iSpellDamageModify>
             <PromotionSummonPerk>PROMOTION_EMPOWER4</PromotionSummonPerk>
             <PromotionNextLevel>PROMOTION_COMBAT5</PromotionNextLevel>
         </PromotionInfo>
@@ -1386,7 +1398,7 @@
             </UnitCombats>
             <Button>,Art/Interface/Buttons/Promotions/Combat5.dds,Art/Interface/Buttons/Promotions_Atlas.dds,4,6</Button>
             <iCombatPercentDefense>20</iCombatPercentDefense>
-            <iSpellDamageModify>5</iSpellDamageModify>
+            <iSpellDamageModify>0</iSpellDamageModify>
             <PromotionSummonPerk>PROMOTION_EMPOWER5</PromotionSummonPerk>
         </PromotionInfo>
         <PromotionInfo>
@@ -1734,6 +1746,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Death1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_DEATH</BonusPrereq>
             <PromotionPrereqAnd>PROMOTION_CHANNELING1</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_DEATH2</PromotionNextLevel>
@@ -1787,6 +1800,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Death2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_DEATH3</PromotionNextLevel>
         </PromotionInfo>
@@ -1839,6 +1853,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Death3.dds</Button>
             <iAIWeight>150</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
@@ -2278,6 +2293,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Earth1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_EARTH</BonusPrereq>
             <PromotionPrereqAnd>PROMOTION_CHANNELING1</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_EARTH2</PromotionNextLevel>
@@ -2331,6 +2347,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Earth2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_EARTH3</PromotionNextLevel>
         </PromotionInfo>
@@ -2383,6 +2400,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Earth3.dds</Button>
             <iAIWeight>150</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
@@ -2533,6 +2551,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Enchantment1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_ENCHANTMENT</BonusPrereq>
             <PromotionPrereqAnd>PROMOTION_CHANNELING1</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_ENCHANTMENT2</PromotionNextLevel>
@@ -2586,6 +2605,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Enchantment2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_ENCHANTMENT3</PromotionNextLevel>
         </PromotionInfo>
@@ -2638,6 +2658,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Enchantment3.dds</Button>
             <iAIWeight>150</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
@@ -2665,6 +2686,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Entropy1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_ENTROPY</BonusPrereq>
             <PromotionPrereqAnd>PROMOTION_CHANNELING1</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_ENTROPY2</PromotionNextLevel>
@@ -2718,6 +2740,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Entropy2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_ENTROPY3</PromotionNextLevel>
         </PromotionInfo>
@@ -2770,6 +2793,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Entropy3.dds</Button>
             <iAIWeight>150</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
@@ -2951,6 +2975,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Fire1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_FIRE</BonusPrereq>
             <PromotionPrereqAnd>PROMOTION_CHANNELING1</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_FIRE2</PromotionNextLevel>
@@ -3004,6 +3029,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Fire2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_FIRE3</PromotionNextLevel>
         </PromotionInfo>
@@ -3056,6 +3082,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Fire3.dds</Button>
             <iAIWeight>150</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
@@ -3905,6 +3932,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Ice1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_ICE</BonusPrereq>
             <PromotionNextLevel>PROMOTION_ICE2</PromotionNextLevel>
         </PromotionInfo>
@@ -3957,6 +3985,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Ice2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_ICE3</PromotionNextLevel>
         </PromotionInfo>
@@ -4009,6 +4038,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Ice3.dds</Button>
             <iAIWeight>150</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
@@ -4193,6 +4223,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Law1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_LAW</BonusPrereq>
             <PromotionPrereqAnd>PROMOTION_CHANNELING1</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_LAW2</PromotionNextLevel>
@@ -4246,6 +4277,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Law2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_LAW3</PromotionNextLevel>
         </PromotionInfo>
@@ -4298,6 +4330,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Law3.dds</Button>
             <iAIWeight>150</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
@@ -4312,6 +4345,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Life1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_LIFE</BonusPrereq>
             <PromotionPrereqAnd>PROMOTION_CHANNELING1</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_LIFE2</PromotionNextLevel>
@@ -4364,6 +4398,7 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Life2.dds</Button>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <iAIWeight>100</iAIWeight>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_LIFE3</PromotionNextLevel>
@@ -4416,6 +4451,7 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Life3.dds</Button>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <iAIWeight>150</iAIWeight>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
@@ -4918,6 +4954,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Mind1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_MIND</BonusPrereq>
             <PromotionNextLevel>PROMOTION_MIND2</PromotionNextLevel>
         </PromotionInfo>
@@ -4970,6 +5007,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Mind2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_MIND3</PromotionNextLevel>
         </PromotionInfo>
@@ -5021,6 +5059,7 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Mind3.dds</Button>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <iAIWeight>150</iAIWeight>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
@@ -5197,6 +5236,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Nature1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_NATURE</BonusPrereq>
             <PromotionNextLevel>PROMOTION_NATURE2</PromotionNextLevel>
         </PromotionInfo>
@@ -5249,6 +5289,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Nature2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_NATURE3</PromotionNextLevel>
         </PromotionInfo>
@@ -5301,6 +5342,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Nature3.dds</Button>
             <iAIWeight>150</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
@@ -5959,6 +6001,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Shadow1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_SHADOW</BonusPrereq>
             <PromotionNextLevel>PROMOTION_SHADOW2</PromotionNextLevel>
         </PromotionInfo>
@@ -6011,6 +6054,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Shadow2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_SHADOW3</PromotionNextLevel>
         </PromotionInfo>
@@ -6063,6 +6107,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Shadow3.dds</Button>
             <iAIWeight>200</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
@@ -6420,6 +6465,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Spirit1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_SPIRIT</BonusPrereq>
             <PromotionPrereqAnd>PROMOTION_CHANNELING1</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_SPIRIT2</PromotionNextLevel>
@@ -6473,6 +6519,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Spirit2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_SPIRIT3</PromotionNextLevel>
         </PromotionInfo>
@@ -6525,6 +6572,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Spirit3.dds</Button>
             <iAIWeight>150</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
@@ -6773,6 +6821,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Sun1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_SUN</BonusPrereq>
             <PromotionNextLevel>PROMOTION_SUN2</PromotionNextLevel>
         </PromotionInfo>
@@ -6825,6 +6874,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Sun2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_SUN3</PromotionNextLevel>
         </PromotionInfo>
@@ -6877,6 +6927,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Sun3.dds</Button>
             <iAIWeight>200</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
@@ -7145,6 +7196,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Water1.dds</Button>
             <iAIWeight>50</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <BonusPrereq>BONUS_MANA_WATER</BonusPrereq>
             <PromotionNextLevel>PROMOTION_WATER2</PromotionNextLevel>
         </PromotionInfo>
@@ -7197,6 +7249,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Water2.dds</Button>
             <iAIWeight>100</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_WATER3</PromotionNextLevel>
         </PromotionInfo>
@@ -7249,6 +7302,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Water3.dds</Button>
             <iAIWeight>150</iAIWeight>
+            <iSpellDamageModify>2</iSpellDamageModify>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
@@ -8486,7 +8540,7 @@
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_CULT_OF_THE_DRAGON</Type>
-            <Description>TXT_KEY_PROMOTION_CULT_OF_THE_DRAGON</Description>
+            <Description>Cult of the Dragon</Description>
             <Help>Units with this promotion are slightly fanatical and gain 15% strength, plus the ability to potentially become the Dragon Warrior!  Owning dire animals and dragons increase the chance that newly trained living units will start with this promotion.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
@@ -8591,7 +8645,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Corporations/CultoftheDragon.dds</Button>
+            <Button>Art/Interface/Popups/Acheron the Red Dragon.dds</Button>
             <bBoarding>0</bBoarding>
             <bOnlyDefensive>0</bOnlyDefensive>
             <bDispellable>0</bDispellable>
@@ -8815,7 +8869,7 @@
             <iModifyGlobalCounter>0</iModifyGlobalCounter>
             <iResistMagic>0</iResistMagic>
             <iSpellCasterXP>0</iSpellCasterXP>
-            <iSpellDamageModify>0</iSpellDamageModify>
+            <iSpellDamageModify>3</iSpellDamageModify>
             <CaptureUnitCombat>NONE</CaptureUnitCombat>
             <PromotionCombatApply>NONE</PromotionCombatApply>
             <PromotionImmune1>NONE</PromotionImmune1>
@@ -8963,7 +9017,7 @@
             <iModifyGlobalCounter>0</iModifyGlobalCounter>
             <iResistMagic>0</iResistMagic>
             <iSpellCasterXP>0</iSpellCasterXP>
-            <iSpellDamageModify>0</iSpellDamageModify>
+            <iSpellDamageModify>3</iSpellDamageModify>
             <CaptureUnitCombat>NONE</CaptureUnitCombat>
             <PromotionCombatApply>NONE</PromotionCombatApply>
             <PromotionImmune1>NONE</PromotionImmune1>
@@ -9111,7 +9165,7 @@
             <iModifyGlobalCounter>0</iModifyGlobalCounter>
             <iResistMagic>0</iResistMagic>
             <iSpellCasterXP>0</iSpellCasterXP>
-            <iSpellDamageModify>0</iSpellDamageModify>
+            <iSpellDamageModify>3</iSpellDamageModify>
             <CaptureUnitCombat>NONE</CaptureUnitCombat>
             <PromotionCombatApply>NONE</PromotionCombatApply>
             <PromotionImmune1>NONE</PromotionImmune1>
@@ -11198,7 +11252,7 @@
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_SPIDER_SILK_STRINGS</Type>
-            <Description>TXT_KEY_PROMOTION_SPIDER_SILK_STRINGS</Description>
+            <Description>Spider Silk Strings</Description>
             <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
@@ -11232,7 +11286,7 @@
             <iFriendlyHealChange>0</iFriendlyHealChange>
             <iSameTileHealChange>0</iSameTileHealChange>
             <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>30</iCombatPercent>
+            <iCombatPercent>20</iCombatPercent>
             <iCityAttack>0</iCityAttack>
             <iCityDefense>0</iCityDefense>
             <iHillsAttack>0</iHillsAttack>
@@ -11304,7 +11358,7 @@
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
             <iCombatHealPercent>0</iCombatHealPercent>
-            <iCombatPercentDefense>30</iCombatPercentDefense>
+            <iCombatPercentDefense>20</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
@@ -12703,7 +12757,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Promotions/Sorcery.dds</Button>
+            <Button>Art/Interface/Buttons/Promotions/Defensive.dds</Button>
             <bBoarding>0</bBoarding>
             <bOnlyDefensive>0</bOnlyDefensive>
             <bDispellable>0</bDispellable>

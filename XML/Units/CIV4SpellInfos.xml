@@ -7886,10 +7886,10 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_SPIDER_SILK_STRINGS</Type>
-            <Description>TXT_KEY_PROMOTION_SPIDER_SILK_STRINGS</Description>
+            <Description>Acquire Spider Silk Strings</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>TXT_KEY_PROMOTION_SPIDER_SILK_STRINGS</Help>
+            <Help>Upgrade the archer's bow to use spider silk!</Help>
             <PromotionPrereq1>NONE</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
