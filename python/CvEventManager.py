@@ -42,6 +42,7 @@ localText = CyTranslator()
 PyPlayer = PyHelpers.PyPlayer
 PyInfo = PyHelpers.PyInfo
 sf = ScenarioFunctions.ScenarioFunctions()
+CyGameInstance = gc.getGame()
 
 #FfH: Card Game: begin
 cs = CvCorporationScreen.cs
@@ -386,6 +387,9 @@ class CvEventManager:
 		else:
 			introMovie = CvIntroMovieScreen.CvIntroMovieScreen()
 			introMovie.interfaceScreen()
+
+		strSetData = { 'DragonWarrior': 5, 'Merc': -1, 'FinalWar': -1, 'val1': -1, 'val2': -1, 'val3': -1 }
+		CyGameInstance.setScriptData(cPickle.dumps(strSetData))
 
 		if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_THAW):
 			iDesert = gc.getInfoTypeForString('TERRAIN_DESERT')
@@ -1565,6 +1569,9 @@ class CvEventManager:
 							newUnit = pPlayer.initUnit(unit.getUnitType(), city.getX(), city.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 							city.applyBuildEffects(newUnit)
 
+		if city.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_DRAGON_NEST')) > 0 and CyGame().getSorenRandNum(100, "Cult Spread") <= 25:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CULT_OF_THE_DRAGON'), True)
+
 		CvAdvisorUtils.unitBuiltFeats(city, unit)
 		
 		if (not self.__LOG_UNITBUILD):
@@ -1812,6 +1819,11 @@ class CvEventManager:
 				else:		
 					attacker.setGold( attacker.getGold() + iGold )
 
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRAGON_WARRIOR')) and not unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMORTAL')):
+			strSetData = cPickle.loads(CyGameInstance.getScriptData())
+			strSetData['DragonWarrior'] = 5
+			CyGameInstance.setScriptData(cPickle.dumps(strSetData))
+
 		if unit.getUnitType() == gc.getInfoTypeForString('UNIT_ACHERON'):
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HELD'), False)
 
@@ -1827,6 +1839,12 @@ class CvEventManager:
 		'Unit Lost'
 		unit = argsList[0]
 		player = PyPlayer(unit.getOwner())
+
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRAGON_WARRIOR')):
+			strSetData = cPickle.loads(CyGameInstance.getScriptData())
+			strSetData['DragonWarrior'] = 5
+			CyGameInstance.setScriptData(cPickle.dumps(strSetData))
+
 		if (not self.__LOG_UNITLOST):
 			return
 		CvUtil.pyPrint('%s was lost by Player %d Civilization %s' 
@@ -1836,6 +1854,12 @@ class CvEventManager:
 		'Unit Promoted'
 		pUnit, iPromotion = argsList
 		player = PyPlayer(pUnit.getOwner())
+		
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRAGON_WARRIOR')):
+			strSetData = cPickle.loads(CyGameInstance.getScriptData())
+			strSetData['DragonWarrior'] = pUnit.getLevel()
+			CyGameInstance.setScriptData(cPickle.dumps(strSetData))
+
 		if (not self.__LOG_UNITPROMOTED):
 			return
 		CvUtil.pyPrint('Unit Promotion Event: %s - %s' %(player.getCivilizationName(), pUnit.getName(),))

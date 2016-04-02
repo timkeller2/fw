@@ -15147,8 +15147,16 @@
             <TerrainDefenses>
             </TerrainDefenses>
             <FeatureAttacks>
+                <FeatureAttack>
+                    <FeatureType>FEATURE_FOREST</FeatureType>
+                    <iFeatureAttack>25</iFeatureAttack>
+                </FeatureAttack>
             </FeatureAttacks>
             <FeatureDefenses>
+                <FeatureDefense>
+                    <FeatureType>FEATURE_FOREST</FeatureType>
+                    <iFeatureDefense>25</iFeatureDefense>
+                </FeatureDefense>
             </FeatureDefenses>
             <UnitClassAttackMods>
             </UnitClassAttackMods>
@@ -15375,8 +15383,16 @@
             <TerrainDefenses>
             </TerrainDefenses>
             <FeatureAttacks>
+                <FeatureAttack>
+                    <FeatureType>FEATURE_FOREST</FeatureType>
+                    <iFeatureAttack>25</iFeatureAttack>
+                </FeatureAttack>
             </FeatureAttacks>
             <FeatureDefenses>
+                <FeatureDefense>
+                    <FeatureType>FEATURE_FOREST</FeatureType>
+                    <iFeatureDefense>25</iFeatureDefense>
+                </FeatureDefense>
             </FeatureDefenses>
             <UnitClassAttackMods>
             </UnitClassAttackMods>
@@ -30431,7 +30447,7 @@
             <iHotKeyPriority>0</iHotKeyPriority>
             <FreePromotions>
                 <FreePromotion>
-                    <PromotionType>PROMOTION_WOODSMAN1</PromotionType>
+                    <PromotionType>PROMOTION_WOODSMAN2</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
             </FreePromotions>
@@ -33391,8 +33407,16 @@
             <TerrainDefenses>
             </TerrainDefenses>
             <FeatureAttacks>
+                <FeatureAttack>
+                    <FeatureType>FEATURE_JUNGLE</FeatureType>
+                    <iFeatureAttack>25</iFeatureAttack>
+                </FeatureAttack>
             </FeatureAttacks>
             <FeatureDefenses>
+                <FeatureDefense>
+                    <FeatureType>FEATURE_JUNGLE</FeatureType>
+                    <iFeatureDefense>25</iFeatureDefense>
+                </FeatureDefense>
             </FeatureDefenses>
             <UnitClassAttackMods>
             </UnitClassAttackMods>
@@ -34287,8 +34311,16 @@
             <TerrainDefenses>
             </TerrainDefenses>
             <FeatureAttacks>
+                <FeatureAttack>
+                    <FeatureType>FEATURE_JUNGLE</FeatureType>
+                    <iFeatureAttack>25</iFeatureAttack>
+                </FeatureAttack>
             </FeatureAttacks>
             <FeatureDefenses>
+                <FeatureDefense>
+                    <FeatureType>FEATURE_JUNGLE</FeatureType>
+                    <iFeatureDefense>25</iFeatureDefense>
+                </FeatureDefense>
             </FeatureDefenses>
             <UnitClassAttackMods>
             </UnitClassAttackMods>
@@ -38901,7 +38933,7 @@
             <iHotKeyPriority>0</iHotKeyPriority>
             <FreePromotions>
                 <FreePromotion>
-                    <PromotionType>PROMOTION_SENTRY</PromotionType>
+                    <PromotionType>PROMOTION_SENTRY2</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
             </FreePromotions>
@@ -63641,7 +63673,7 @@
             <iHotKeyPriority>0</iHotKeyPriority>
             <FreePromotions>
                 <FreePromotion>
-                    <PromotionType>PROMOTION_WOODSMAN1</PromotionType>
+                    <PromotionType>PROMOTION_WOODSMAN2</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
             </FreePromotions>
@@ -64287,8 +64319,16 @@
             <FeatureNatives>
             </FeatureNatives>
             <TerrainAttacks>
+                <TerrainAttack>
+                    <TerrainType>TERRAIN_DESERT</TerrainType>
+                    <iTerrainAttack>50</iTerrainAttack>
+                </TerrainAttack>
             </TerrainAttacks>
             <TerrainDefenses>
+                <TerrainDefense>
+                    <TerrainType>TERRAIN_DESERT</TerrainType>
+                    <iTerrainDefense>50</iTerrainDefense>
+                </TerrainDefense>
             </TerrainDefenses>
             <FeatureAttacks>
             </FeatureAttacks>
@@ -69909,8 +69949,16 @@
             <TerrainDefenses>
             </TerrainDefenses>
             <FeatureAttacks>
+                <FeatureAttack>
+                    <FeatureType>FEATURE_JUNGLE</FeatureType>
+                    <iFeatureAttack>25</iFeatureAttack>
+                </FeatureAttack>
             </FeatureAttacks>
             <FeatureDefenses>
+                <FeatureDefense>
+                    <FeatureType>FEATURE_JUNGLE</FeatureType>
+                    <iFeatureDefense>25</iFeatureDefense>
+                </FeatureDefense>
             </FeatureDefenses>
             <UnitClassAttackMods>
             </UnitClassAttackMods>
@@ -73074,12 +73122,28 @@
                 </FeatureNative>
             </FeatureNatives>
             <TerrainAttacks>
+                <TerrainAttack>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <iTerrainAttack>25</iTerrainAttack>
+                </TerrainAttack>
             </TerrainAttacks>
             <TerrainDefenses>
+                <TerrainDefense>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <iTerrainDefense>25</iTerrainDefense>
+                </TerrainDefense>
             </TerrainDefenses>
             <FeatureAttacks>
+                <FeatureAttack>
+                    <FeatureType>FEATURE_FOREST</FeatureType>
+                    <iFeatureAttack>25</iFeatureAttack>
+                </FeatureAttack>
             </FeatureAttacks>
             <FeatureDefenses>
+                <FeatureDefense>
+                    <FeatureType>FEATURE_FOREST</FeatureType>
+                    <iFeatureDefense>25</iFeatureDefense>
+                </FeatureDefense>
             </FeatureDefenses>
             <UnitClassAttackMods>
             </UnitClassAttackMods>
@@ -73289,12 +73353,28 @@
             <FeatureNatives>
             </FeatureNatives>
             <TerrainAttacks>
+                <TerrainAttack>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <iTerrainAttack>25</iTerrainAttack>
+                </TerrainAttack>
             </TerrainAttacks>
             <TerrainDefenses>
+                <TerrainDefense>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <iTerrainDefense>25</iTerrainDefense>
+                </TerrainDefense>
             </TerrainDefenses>
             <FeatureAttacks>
+                <FeatureAttack>
+                    <FeatureType>FEATURE_FOREST</FeatureType>
+                    <iFeatureAttack>25</iFeatureAttack>
+                </FeatureAttack>
             </FeatureAttacks>
             <FeatureDefenses>
+                <FeatureDefense>
+                    <FeatureType>FEATURE_FOREST</FeatureType>
+                    <iFeatureDefense>25</iFeatureDefense>
+                </FeatureDefense>
             </FeatureDefenses>
             <UnitClassAttackMods>
             </UnitClassAttackMods>
@@ -82089,7 +82169,7 @@
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
-            <Description>Minor Healing Potion</Description>
+            <Description>Bandages</Description>
             <Civilopedia>TXT_KEY_UNIT_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy></Strategy>
             <Advisor>ADVISOR_MILITARY</Advisor>
@@ -82803,7 +82883,7 @@
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
-            <Description>Potion of Strength</Description>
+            <Description>Hearty Rations</Description>
             <Civilopedia>TXT_KEY_UNIT_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy></Strategy>
             <Advisor>ADVISOR_MILITARY</Advisor>
@@ -83041,7 +83121,7 @@
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
-            <Description>Potion of Haste</Description>
+            <Description>Extra Rations</Description>
             <Civilopedia>TXT_KEY_UNIT_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy></Strategy>
             <Advisor>ADVISOR_MILITARY</Advisor>

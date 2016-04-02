@@ -3172,21 +3172,42 @@ def spellTrust(caster):
 	pPlayer.setFeatAccomplished(FeatTypes.FEAT_TRUST, true)
 
 def spellTsunami(caster):
+	iR = 1
+	if pUnit.isHasPromotion(iChanneling3):
+		iR = 2
 	iX = caster.getX()
 	iY = caster.getY()
-	for iiX in range(iX-2, iX+3, 1):
-		for iiY in range(iY-2, iY+3, 1):
+	for iiX in range(iX-iR, iX+iR+1, 1):
+		for iiY in range(iY-iR, iY+iR+1, 1):
 			pPlot = CyMap().plot(iiX,iiY)
 			if pPlot.isAdjacentToWater():
 				if (iX != iiX or iY != iiY):
 					for i in range(pPlot.getNumUnits()):
 						pUnit = pPlot.getUnit(i)
-						pUnit.doDamage(0, 75, caster, gc.getInfoTypeForString('DAMAGE_COLD'), true)
-					if pPlot.getImprovementType() != -1:
+						iDam = iR * 5
+						iMax = iR * 35
+						pUnit.doDamage(iDam, iMax, caster, gc.getInfoTypeForString('DAMAGE_COLD'), true)
+					if pPlot.getImprovementType() != -1 and iR > 1:
 						if gc.getImprovementInfo(pPlot.getImprovementType()).isPermanent() == False:
 							if CyGame().getSorenRandNum(100, "Tsunami") <= 25:
 								pPlot.setImprovementType(-1)
 					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPRING'),pPlot.getPoint())
+
+def spellMaelstrom(caster):
+	iR = 1
+	if pUnit.isHasPromotion(iChanneling3):
+		iR = 2
+	iX = caster.getX()
+	iY = caster.getY()
+	for iiX in range(iX-iR, iX+iR+1, 1):
+		for iiY in range(iY-iR, iY+iR+1, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			if (iX != iiX or iY != iiY):
+				for i in range(pPlot.getNumUnits()):
+					pUnit = pPlot.getUnit(i)
+					iDam = iR * 4
+					iMax = iR * 20
+					pUnit.doDamage(iDam, iMax, caster, gc.getInfoTypeForString('DAMAGE_LIGHTNING'), true)
 
 def spellUnyieldingOrder(caster):
 	pPlot = caster.plot()

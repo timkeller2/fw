@@ -45,10 +45,6 @@ class CustomFunctions:
 		strSetData['TEMPLE'] = 0 
 		strSetData['PLUNDER'] = 0 
 		strSetData['ECON'] = 0 
-		## strSetData['JUDGE'] = 0 
-		## strSetData['TR1'] = 0 
-		## strSetData['TR2'] = 0 
-		## strSetData['TR3'] = 0 
 		city.setScriptData(cPickle.dumps(strSetData))
 
 	def msgAll(self, sMsg, x, y, sendingPlayer):

@@ -1705,13 +1705,23 @@
             <FeatureAttacks>
                 <FeatureAttack>
                     <FeatureType>FEATURE_FOREST</FeatureType>
-                    <iFeatureAttack>10</iFeatureAttack>
+                    <iFeatureAttack>20</iFeatureAttack>
                 </FeatureAttack>
                 <FeatureAttack>
                     <FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
-                    <iFeatureAttack>10</iFeatureAttack>
+                    <iFeatureAttack>30</iFeatureAttack>
                 </FeatureAttack>
             </FeatureAttacks>
+            <FeatureDefenses>
+                <FeatureDefense>
+                    <FeatureType>FEATURE_FOREST</FeatureType>
+                    <iFeatureDefense>20</iFeatureDefense>
+                </FeatureDefense>
+                <FeatureDefense>
+                    <FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+                    <iFeatureDefense>30</iFeatureDefense>
+                </FeatureDefense>
+            </FeatureDefenses>
             <FeatureDoubleMoves>
                 <FeatureDoubleMove>
                     <FeatureType>FEATURE_FOREST</FeatureType>
@@ -1882,29 +1892,29 @@
             <TerrainAttacks>
                 <TerrainAttack>
                     <TerrainType>TERRAIN_BROKEN_LANDS</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
+                    <iTerrainAttack>20</iTerrainAttack>
                 </TerrainAttack>
                 <TerrainAttack>
                     <TerrainType>TERRAIN_FIELDS_OF_PERDITION</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
+                    <iTerrainAttack>20</iTerrainAttack>
                 </TerrainAttack>
                 <TerrainAttack>
                     <TerrainType>TERRAIN_BURNING_SANDS</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
+                    <iTerrainAttack>20</iTerrainAttack>
                 </TerrainAttack>
             </TerrainAttacks>
             <TerrainDefenses>
                 <TerrainDefense>
                     <TerrainType>TERRAIN_BROKEN_LANDS</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
+                    <iTerrainDefense>20</iTerrainDefense>
                 </TerrainDefense>
                 <TerrainDefense>
                     <TerrainType>TERRAIN_FIELDS_OF_PERDITION</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
+                    <iTerrainDefense>20</iTerrainDefense>
                 </TerrainDefense>
                 <TerrainDefense>
                     <TerrainType>TERRAIN_BURNING_SANDS</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
+                    <iTerrainDefense>20</iTerrainDefense>
                 </TerrainDefense>
             </TerrainDefenses>
             <Button>Art/Interface/Buttons/Promotions/Demon.dds</Button>
@@ -2270,6 +2280,8 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <bHillsDoubleMove>1</bHillsDoubleMove>
+            <iHillsAttack>25</iHillsAttack>
+            <iHillsDefense>25</iHillsDefense>
             <Button>Art/Interface/Buttons/Promotions/Dwarf.dds</Button>
             <bRace>1</bRace>
             <iWorkRateModify>25</iWorkRateModify>
@@ -2431,13 +2443,23 @@
             <FeatureAttacks>
                 <FeatureAttack>
                     <FeatureType>FEATURE_FOREST</FeatureType>
-                    <iFeatureAttack>10</iFeatureAttack>
+                    <iFeatureAttack>20</iFeatureAttack>
                 </FeatureAttack>
                 <FeatureAttack>
                     <FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
-                    <iFeatureAttack>10</iFeatureAttack>
+                    <iFeatureAttack>30</iFeatureAttack>
                 </FeatureAttack>
             </FeatureAttacks>
+            <FeatureDefenses>
+                <FeatureDefense>
+                    <FeatureType>FEATURE_FOREST</FeatureType>
+                    <iFeatureDefense>20</iFeatureDefense>
+                </FeatureDefense>
+                <FeatureDefense>
+                    <FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+                    <iFeatureDefense>30</iFeatureDefense>
+                </FeatureDefense>
+            </FeatureDefenses>
             <FeatureDoubleMoves>
                 <FeatureDoubleMove>
                     <FeatureType>FEATURE_FOREST</FeatureType>
@@ -4526,13 +4548,13 @@
             <TerrainAttacks>
                 <TerrainAttack>
                     <TerrainType>TERRAIN_MARSH</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
+                    <iTerrainAttack>40</iTerrainAttack>
                 </TerrainAttack>
             </TerrainAttacks>
             <TerrainDefenses>
                 <TerrainDefense>
                     <TerrainType>TERRAIN_MARSH</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
+                    <iTerrainDefense>40</iTerrainDefense>
                 </TerrainDefense>
             </TerrainDefenses>
             <TerrainDoubleMoves>
@@ -5897,6 +5919,7 @@
                     <iAffinity>1</iAffinity>
                 </BonusAffinity>
             </BonusAffinities>
+            <iSpellDamageModify>5</iSpellDamageModify>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_SCOURGE</Type>
@@ -6414,6 +6437,7 @@
             <Button>Art/Interface/Buttons/Promotions/Spellstaff.dds</Button>
             <bDispellable>1</bDispellable>
             <iAIWeight>150</iAIWeight>
+            <iSpellDamageModify>5</iSpellDamageModify>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
@@ -6594,6 +6618,7 @@
                     <iAffinity>1</iAffinity>
                 </BonusAffinity>
             </BonusAffinities>
+            <iSpellDamageModify>5</iSpellDamageModify>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_STARTING_SETTLER</Type>
@@ -7334,21 +7359,21 @@
             <TerrainAttacks>
                 <TerrainAttack>
                     <TerrainType>TERRAIN_SNOW</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
+                    <iTerrainAttack>40</iTerrainAttack>
                 </TerrainAttack>
                 <TerrainAttack>
                     <TerrainType>TERRAIN_TUNDRA</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
+                    <iTerrainAttack>20</iTerrainAttack>
                 </TerrainAttack>
             </TerrainAttacks>
             <TerrainDefenses>
                 <TerrainDefense>
                     <TerrainType>TERRAIN_SNOW</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
+                    <iTerrainDefense>40</iTerrainDefense>
                 </TerrainDefense>
                 <TerrainDefense>
                     <TerrainType>TERRAIN_TUNDRA</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
+                    <iTerrainDefense>20</iTerrainDefense>
                 </TerrainDefense>
             </TerrainDefenses>
             <UnitCombats>
@@ -13317,7 +13342,7 @@
             <iModifyGlobalCounter>0</iModifyGlobalCounter>
             <iResistMagic>0</iResistMagic>
             <iSpellCasterXP>0</iSpellCasterXP>
-            <iSpellDamageModify>0</iSpellDamageModify>
+            <iSpellDamageModify>5</iSpellDamageModify>
             <CaptureUnitCombat>NONE</CaptureUnitCombat>
             <PromotionCombatApply>NONE</PromotionCombatApply>
             <PromotionImmune1>NONE</PromotionImmune1>
@@ -13805,7 +13830,7 @@
             <iModifyGlobalCounter>0</iModifyGlobalCounter>
             <iResistMagic>0</iResistMagic>
             <iSpellCasterXP>0</iSpellCasterXP>
-            <iSpellDamageModify>0</iSpellDamageModify>
+            <iSpellDamageModify>5</iSpellDamageModify>
             <CaptureUnitCombat>NONE</CaptureUnitCombat>
             <PromotionCombatApply>NONE</PromotionCombatApply>
             <PromotionImmune1>NONE</PromotionImmune1>
