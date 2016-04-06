@@ -2348,7 +2348,7 @@ class CustomFunctions:
 							sMsg = 'Road Taxes Change: ' + str(iTax) + ' per turn'
 						else:
 							sMsg = 'Desert Trading Income: ' + str(iTax * -1) + ' per turn'
-						CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Spells/Banish.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+						CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
 						CyInterface().addCombatMessage(iPlayer,sMsg)
 
 					mPlayer.setScriptData(cPickle.dumps(sPD))

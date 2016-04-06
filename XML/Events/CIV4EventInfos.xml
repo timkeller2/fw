@@ -54517,7 +54517,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_HERBALIST_1</Type>
-            <Description>A Potion of Strength</Description>
+            <Description>Hearty Rations</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -54820,7 +54820,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_HERBALIST_2</Type>
-            <Description>A Potion of Haste</Description>
+            <Description>Extra Rations</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -54921,7 +54921,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_HERBALIST_3</Type>
-            <Description>A Potion of Minor Healing</Description>
+            <Description>Bandages</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>

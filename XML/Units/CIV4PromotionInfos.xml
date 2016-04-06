@@ -4557,12 +4557,30 @@
                     <iTerrainDefense>40</iTerrainDefense>
                 </TerrainDefense>
             </TerrainDefenses>
+            <FeatureAttacks>
+                <FeatureAttack>
+                    <FeatureType>FEATURE_JUNGLE</FeatureType>
+                    <iFeatureAttack>20</iFeatureAttack>
+                </FeatureAttack>
+            </FeatureAttacks>
+            <FeatureDefenses>
+                <FeatureDefense>
+                    <FeatureType>FEATURE_JUNGLE</FeatureType>
+                    <iFeatureDefense>20</iFeatureDefense>
+                </FeatureDefense>
+            </FeatureDefenses>
             <TerrainDoubleMoves>
                 <TerrainDoubleMove>
                     <TerrainType>TERRAIN_MARSH</TerrainType>
                     <bTerrainDoubleMove>1</bTerrainDoubleMove>
                 </TerrainDoubleMove>
             </TerrainDoubleMoves>
+            <FeatureDoubleMoves>
+                <FeatureDoubleMove>
+                    <FeatureType>FEATURE_JUNGLE</FeatureType>
+                    <bFeatureDoubleMove>1</bFeatureDoubleMove>
+                </FeatureDoubleMove>
+            </FeatureDoubleMoves>
             <Button>Art/Interface/Buttons/Promotions/Lizardman.dds</Button>
             <bRace>1</bRace>
             <UnitArtStyleType>UNIT_ARTSTYLE_LIZARDMAN</UnitArtStyleType>

@@ -12033,7 +12033,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_TAKE_POTION_HEALING_MINOR</Type>
-            <Description>Take the minor healing potion...</Description>
+            <Description>Take bandages...</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>Take the minor healing potion...</Help>
@@ -12403,7 +12403,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_TAKE_POTION_STRENGTH</Type>
-            <Description>Take the potion of strength...</Description>
+            <Description>Take hearty rations...</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>TXT_KEY_SPELL_TAKE_EQUIPMENT_HELP</Help>
@@ -12477,7 +12477,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_TAKE_POTION_HASTE</Type>
-            <Description>Take the potion of haste...</Description>
+            <Description>Take extra rations...</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>TXT_KEY_SPELL_TAKE_EQUIPMENT_HELP</Help>
