@@ -1800,7 +1800,7 @@ class CustomFunctions:
 							xUnit = xPlot.getUnit(ii)
 							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES1')):
 								bRemoveIt = False
-						if bRemoveIt:
+						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 1") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE1'), 0)
 							
 					bRemoveIt = True
@@ -1810,7 +1810,7 @@ class CustomFunctions:
 							xUnit = xPlot.getUnit(ii)
 							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES2')):
 								bRemoveIt = False
-						if bRemoveIt:
+						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 2") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE2'), 0)
 							
 					bRemoveIt = True
@@ -1820,7 +1820,7 @@ class CustomFunctions:
 							xUnit = xPlot.getUnit(ii)
 							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES3')):
 								bRemoveIt = False
-						if bRemoveIt:
+						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 3") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE3'), 0)
 							
 					bRemoveIt = True
@@ -1830,7 +1830,7 @@ class CustomFunctions:
 							xUnit = xPlot.getUnit(ii)
 							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR1')):
 								bRemoveIt = False
-						if bRemoveIt:
+						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 4") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV1'), 0)
 							
 					bRemoveIt = True
@@ -1840,7 +1840,7 @@ class CustomFunctions:
 							xUnit = xPlot.getUnit(ii)
 							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR2')):
 								bRemoveIt = False
-						if bRemoveIt:
+						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 5") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV2'), 0)
 							
 					bRemoveIt = True
@@ -1850,7 +1850,7 @@ class CustomFunctions:
 							xUnit = xPlot.getUnit(ii)
 							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR3')):
 								bRemoveIt = False
-						if bRemoveIt:
+						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 6") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV3'), 0)
 
 					## Process disputes for nobles to solve

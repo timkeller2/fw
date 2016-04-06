@@ -5330,7 +5330,7 @@
             <RemovePromotionType1>NONE</RemovePromotionType1>
             <RemovePromotionType2>NONE</RemovePromotionType2>
             <RemovePromotionType3>NONE</RemovePromotionType3>
-            <bBuffCasterOnly>0</bBuffCasterOnly>
+            <bBuffCasterOnly>1</bBuffCasterOnly>
             <ConvertUnitType>NONE</ConvertUnitType>
             <CreateBuildingType>BUILDING_ESTATE1</CreateBuildingType>
             <CreateFeatureType>NONE</CreateFeatureType>
@@ -5351,10 +5351,10 @@
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
             <iCost>0</iCost>
-            <iImmobileTurns>0</iImmobileTurns>
+            <iImmobileTurns>3</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult></PyResult>
+            <PyResult>spellImmoblize(pCaster,3)</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_HOPE</Sound>
@@ -5404,7 +5404,7 @@
             <RemovePromotionType1>NONE</RemovePromotionType1>
             <RemovePromotionType2>NONE</RemovePromotionType2>
             <RemovePromotionType3>NONE</RemovePromotionType3>
-            <bBuffCasterOnly>0</bBuffCasterOnly>
+            <bBuffCasterOnly>1</bBuffCasterOnly>
             <ConvertUnitType>NONE</ConvertUnitType>
             <CreateBuildingType>BUILDING_ESTATE2</CreateBuildingType>
             <CreateFeatureType>NONE</CreateFeatureType>
@@ -5425,10 +5425,10 @@
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
             <iCost>0</iCost>
-            <iImmobileTurns>0</iImmobileTurns>
+            <iImmobileTurns>3</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult></PyResult>
+            <PyResult>spellImmoblize(pCaster,3)</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_HOPE</Sound>
@@ -5478,7 +5478,7 @@
             <RemovePromotionType1>NONE</RemovePromotionType1>
             <RemovePromotionType2>NONE</RemovePromotionType2>
             <RemovePromotionType3>NONE</RemovePromotionType3>
-            <bBuffCasterOnly>0</bBuffCasterOnly>
+            <bBuffCasterOnly>1</bBuffCasterOnly>
             <ConvertUnitType>NONE</ConvertUnitType>
             <CreateBuildingType>BUILDING_ESTATE3</CreateBuildingType>
             <CreateFeatureType>NONE</CreateFeatureType>
@@ -5499,10 +5499,10 @@
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
             <iCost>0</iCost>
-            <iImmobileTurns>0</iImmobileTurns>
+            <iImmobileTurns>3</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult></PyResult>
+            <PyResult>spellImmoblize(pCaster,3)</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_HOPE</Sound>
@@ -5552,7 +5552,7 @@
             <RemovePromotionType1>NONE</RemovePromotionType1>
             <RemovePromotionType2>NONE</RemovePromotionType2>
             <RemovePromotionType3>NONE</RemovePromotionType3>
-            <bBuffCasterOnly>0</bBuffCasterOnly>
+            <bBuffCasterOnly>1</bBuffCasterOnly>
             <ConvertUnitType>NONE</ConvertUnitType>
             <CreateBuildingType>BUILDING_GOV1</CreateBuildingType>
             <CreateFeatureType>NONE</CreateFeatureType>
@@ -5573,10 +5573,10 @@
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
             <iCost>0</iCost>
-            <iImmobileTurns>0</iImmobileTurns>
+            <iImmobileTurns>3</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult></PyResult>
+            <PyResult>spellImmoblize(pCaster,3)</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_HOPE</Sound>
@@ -5626,7 +5626,7 @@
             <RemovePromotionType1>NONE</RemovePromotionType1>
             <RemovePromotionType2>NONE</RemovePromotionType2>
             <RemovePromotionType3>NONE</RemovePromotionType3>
-            <bBuffCasterOnly>0</bBuffCasterOnly>
+            <bBuffCasterOnly>1</bBuffCasterOnly>
             <ConvertUnitType>NONE</ConvertUnitType>
             <CreateBuildingType>BUILDING_GOV2</CreateBuildingType>
             <CreateFeatureType>NONE</CreateFeatureType>
@@ -5647,10 +5647,10 @@
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
             <iCost>0</iCost>
-            <iImmobileTurns>0</iImmobileTurns>
+            <iImmobileTurns>3</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult></PyResult>
+            <PyResult>spellImmoblize(pCaster,3)</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_HOPE</Sound>
@@ -5700,7 +5700,7 @@
             <RemovePromotionType1>NONE</RemovePromotionType1>
             <RemovePromotionType2>NONE</RemovePromotionType2>
             <RemovePromotionType3>NONE</RemovePromotionType3>
-            <bBuffCasterOnly>0</bBuffCasterOnly>
+            <bBuffCasterOnly>1</bBuffCasterOnly>
             <ConvertUnitType>NONE</ConvertUnitType>
             <CreateBuildingType>BUILDING_GOV3</CreateBuildingType>
             <CreateFeatureType>NONE</CreateFeatureType>
@@ -5721,10 +5721,10 @@
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
             <iCost>0</iCost>
-            <iImmobileTurns>0</iImmobileTurns>
+            <iImmobileTurns>3</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult></PyResult>
+            <PyResult>spellImmoblize(pCaster,3)</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_HOPE</Sound>
@@ -7305,7 +7305,7 @@
             <CivilizationPrereq>NONE</CivilizationPrereq>
             <ReligionPrereq>NONE</ReligionPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
-            <TechPrereq>NONE</TechPrereq>
+            <TechPrereq>TECH_NEVER</TechPrereq>
             <bAllowAI>0</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
             <bCausesWar>0</bCausesWar>
