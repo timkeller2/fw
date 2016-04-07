@@ -17,6 +17,7 @@ PyPlayer = PyHelpers.PyPlayer
 gc = CyGlobalContext()
 cf = CustomFunctions.CustomFunctions()
 sf = ScenarioFunctions.ScenarioFunctions()
+CyGameInstance = gc.getGame()
 
 def cast(argsList):
 	pCaster, eSpell = argsList
@@ -5620,7 +5621,7 @@ def spellUnitEvent(caster,sStore):
 	owner = gc.getPlayer(caster.getOwner())
 	iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),sStore)
 	if iEvent != -1 and gc.getGame().isEventActive(iEvent) and owner.getEventTriggerWeight(iEvent) >= 0:
-		triggerData = owner.initTriggeredData(iEvent, true, -1, pCity.getX(), pCity.getY(), owner.getID(), pCity.getID(), -1, -1, caster.getID(), -1)
+		triggerData = owner.initTriggeredData(iEvent, true, pCity.getID(), pCity.getX(), pCity.getY(), owner.getID(), -1, -1, -1, caster.getID(), -1)
 	
 def spellDispel(caster):
 	iX = caster.getX()
