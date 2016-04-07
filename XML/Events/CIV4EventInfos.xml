@@ -56748,7 +56748,7 @@
             <bQuest>0</bQuest>
             <bGlobal>0</bGlobal>
             <bTeam>0</bTeam>
-            <bPickCity>0</bPickCity>
+            <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
             <iGold>-270</iGold>
@@ -56849,7 +56849,7 @@
             <bQuest>0</bQuest>
             <bGlobal>0</bGlobal>
             <bTeam>0</bTeam>
-            <bPickCity>0</bPickCity>
+            <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
             <iGold>-60</iGold>
@@ -56950,7 +56950,7 @@
             <bQuest>0</bQuest>
             <bGlobal>0</bGlobal>
             <bTeam>0</bTeam>
-            <bPickCity>0</bPickCity>
+            <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
             <iGold>-75</iGold>
@@ -57051,7 +57051,7 @@
             <bQuest>0</bQuest>
             <bGlobal>0</bGlobal>
             <bTeam>0</bTeam>
-            <bPickCity>0</bPickCity>
+            <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
             <iGold>-125</iGold>
@@ -57152,7 +57152,7 @@
             <bQuest>0</bQuest>
             <bGlobal>0</bGlobal>
             <bTeam>0</bTeam>
-            <bPickCity>0</bPickCity>
+            <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
             <iGold>-90</iGold>
@@ -57253,7 +57253,7 @@
             <bQuest>0</bQuest>
             <bGlobal>0</bGlobal>
             <bTeam>0</bTeam>
-            <bPickCity>0</bPickCity>
+            <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
             <iGold>-180</iGold>
