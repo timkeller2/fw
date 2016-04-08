@@ -79029,6 +79029,10 @@
             <iHotKeyPriority>0</iHotKeyPriority>
             <FreePromotions>
                 <FreePromotion>
+                    <PromotionType>PROMOTION_THROWING_AXES</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
                     <PromotionType>PROMOTION_TREASURE1</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>

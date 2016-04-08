@@ -1854,12 +1854,17 @@ class CvEventManager:
 		'Unit Promoted'
 		pUnit, iPromotion = argsList
 		player = PyPlayer(pUnit.getOwner())
+		pPlayer = gc.getPlayer(pUnit.getOwner())
 		
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRAGON_WARRIOR')):
 			strSetData = cPickle.loads(CyGameInstance.getScriptData())
 			strSetData['DragonWarrior'] = pUnit.getLevel()
 			CyGameInstance.setScriptData(cPickle.dumps(strSetData))
 
+		#if iPromotion == gc.getInfoTypeForString('PROMOTION_DIRE'):
+		#	pUnit.getArtInfo(pPlayer.getCurrentEra()).setScale(pUnit.getArtInfo(pPlayer.getCurrentEra())*1.35)
+			# pUnit.setScale( pUnit.getScale * 1.35 )
+			
 		if (not self.__LOG_UNITPROMOTED):
 			return
 		CvUtil.pyPrint('Unit Promotion Event: %s - %s' %(player.getCivilizationName(), pUnit.getName(),))

@@ -1547,7 +1547,7 @@ class CustomFunctions:
 		if CyGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_MARATHON'):
 			iAdj = iAdj + 12
 			
-		# Slow Down Barbs for now
+		# Slow Down Barbs for now - MTK recent
 		iAdj += 2
 
 		if self.bTechExist('TECH_INFERNAL_PACT') == False and CyGame().getSorenRandNum(6+iAdj, "AnimalStuff") == 1:
@@ -1586,12 +1586,16 @@ class CustomFunctions:
 							iDam = iDam / 2
 						if iDam > 12:
 							iDam = 12
-						if iDam > 3:
-							sMess = pUnit.getName() + " suffers " + str( iDam ) + " damage from injuries..."
-							CyInterface().addMessage(pUnit.getOwner(),False,25,sMess,'',1,'',ColorTypes(7),pPlot.getX(),pPlot.getY(),True,True)
 						if iDam > 0:	
 							pUnit.changeDamage( iDam, pUnit.getOwner() ) 
-							#pUnit.doDamageNoCaster( iDam, 100, gc.getInfoTypeForString('DAMAGE_PHYSICAL'), false)
+						if pUnit.getDamage() > 99:
+							sMess = pUnit.getName() + " dies from injuries..."
+							CyInterface().addMessage(pUnit.getOwner(),False,25,sMess,'AS2D_UNIT_FALLS',1,pUnit.getButton(),ColorTypes(7),pPlot.getX(),pPlot.getY(),True,True)
+						else:	
+							if iDam > 3:
+								sMess = pUnit.getName() + " suffers " + str( iDam ) + " damage from injuries..."
+								CyInterface().addMessage(pUnit.getOwner(),False,25,sMess,'',1,pUnit.getButton(),ColorTypes(7),pPlot.getX(),pPlot.getY(),True,True)
+							
 		
 		# Player Processing
 		for iPlayer in range(gc.getMAX_PLAYERS()):
@@ -1867,7 +1871,7 @@ class CustomFunctions:
 								sMsg = 'The people of ' + pCity.getName() + ' owned by ' + pPlayer.getName() + ' still await a noble to help them resolve a ' + self.sDisputeLevel(sCityInfo['JUDGE']) + ' dispute...'
 								self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner())
 					else:
-						if iDisputes > 0 and CyGame().getSorenRandNum(2000, "Dispute") < pCity.getPopulation():
+						if iDisputes > 0 and CyGame().getSorenRandNum(3000, "Dispute") < pCity.getPopulation():
 							iSize = CyGame().getSorenRandNum(pCity.getPopulation()*3, "DisputeSize")
 							sMsg = 'A ' + self.sDisputeLevel(iSize) + ' dispute has broken out in ' + pCity.getName() + ' owned by ' + pPlayer.getName() + '.  They seek a noble to help resolve the situation...'
 							self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner())
@@ -2283,17 +2287,17 @@ class CustomFunctions:
 					else:
 						pPlot.setBonusType(iPig)
 				if iBonus == iNightmare:
-					if CyGame().getSorenRandNum(100, "Hell Convert") < 50:
+					if CyGame().getSorenRandNum(100, "Hell Convert 2") < 50:
 						pPlot.setBonusType(iHorse)
 					else:
 						pPlot.setBonusType(iCow)
 				if iBonus == iRazorweed:
-					if CyGame().getSorenRandNum(100, "Hell Convert") < 50:
+					if CyGame().getSorenRandNum(100, "Hell Convert 3") < 50:
 						pPlot.setBonusType(iCotton)
 					else:
 						pPlot.setBonusType(iSilk)
 				if iBonus == iGulagarm:
-					if CyGame().getSorenRandNum(100, "Hell Convert") < 50:
+					if CyGame().getSorenRandNum(100, "Hell Convert 4") < 50:
 						pPlot.setBonusType(iBanana)
 					else:
 						pPlot.setBonusType(iSugar)
