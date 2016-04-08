@@ -32788,7 +32788,7 @@
             <bFreeXP>1</bFreeXP>
             <iCombatDefense>4</iCombatDefense>
             <iFreePromotionPick>1</iFreePromotionPick>
-            <iMinLevel>6</iMinLevel>
+            <iMinLevel>13</iMinLevel>
             <iTier>3</iTier>
             <Image>Art/Interface/Popups/Gaelan.dds</Image>
         </UnitInfo>
@@ -38867,9 +38867,9 @@
             <iInterceptionProbability>0</iInterceptionProbability>
             <iEvasionProbability>0</iEvasionProbability>
             <iWithdrawalProb>0</iWithdrawalProb>
-            <iCollateralDamage>0</iCollateralDamage>
-            <iCollateralDamageLimit>0</iCollateralDamageLimit>
-            <iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
+            <iCollateralDamage>35</iCollateralDamage>
+            <iCollateralDamageLimit>100</iCollateralDamageLimit>
+            <iCollateralDamageMaxUnits>2</iCollateralDamageMaxUnits>
             <iCityAttack>0</iCityAttack>
             <iCityDefense>0</iCityDefense>
             <iAnimalCombat>0</iAnimalCombat>
@@ -65077,7 +65077,7 @@
             </UniqueNames>
             <Special>NONE</Special>
             <Capture>NONE</Capture>
-            <Combat>UNITCOMBAT_ANIMAL</Combat>
+            <Combat>UNITCOMBAT_BEAST</Combat>
             <Domain>DOMAIN_SEA</Domain>
             <DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
             <Invisible>NONE</Invisible>
