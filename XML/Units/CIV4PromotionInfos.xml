@@ -8920,7 +8920,7 @@
             <PromotionImmune3>NONE</PromotionImmune3>
             <PromotionRandomApply>NONE</PromotionRandomApply>
             <PromotionSummonPerk>NONE</PromotionSummonPerk>
-            <BonusPrereq>BONUS_MANA_DIMENSIONAL</BonusPrereq>
+            <BonusPrereq>BONUS_MANA_METAMAGIC</BonusPrereq>
             <PromotionPrereqOr3>NONE</PromotionPrereqOr3>
             <PromotionPrereqOr4>NONE</PromotionPrereqOr4>
             <PromotionPrereqAnd>PROMOTION_CHANNELING1</PromotionPrereqAnd>
@@ -9068,7 +9068,7 @@
             <PromotionImmune3>NONE</PromotionImmune3>
             <PromotionRandomApply>NONE</PromotionRandomApply>
             <PromotionSummonPerk>NONE</PromotionSummonPerk>
-            <BonusPrereq>BONUS_MANA_DIMENSIONAL</BonusPrereq>
+            <BonusPrereq>BONUS_MANA_METAMAGIC</BonusPrereq>
             <PromotionPrereqOr3>NONE</PromotionPrereqOr3>
             <PromotionPrereqOr4>NONE</PromotionPrereqOr4>
             <PromotionPrereqAnd>PROMOTION_CHANNELING2</PromotionPrereqAnd>
@@ -9216,7 +9216,7 @@
             <PromotionImmune3>NONE</PromotionImmune3>
             <PromotionRandomApply>NONE</PromotionRandomApply>
             <PromotionSummonPerk>NONE</PromotionSummonPerk>
-            <BonusPrereq>BONUS_MANA_DIMENSIONAL</BonusPrereq>
+            <BonusPrereq>BONUS_MANA_METAMAGIC</BonusPrereq>
             <PromotionPrereqOr3>NONE</PromotionPrereqOr3>
             <PromotionPrereqOr4>NONE</PromotionPrereqOr4>
             <PromotionPrereqAnd>PROMOTION_CHANNELING3</PromotionPrereqAnd>

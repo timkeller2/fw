@@ -1411,7 +1411,7 @@
 			<Description>TXT_KEY_BUILD_MANA_METAMAGIC</Description>
 			<Help/>
 			<PrereqTech>TECH_SORCERY</PrereqTech>
-			<iTime>1200</iTime>
+			<iTime>3600</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MANA_METAMAGIC</ImprovementType>

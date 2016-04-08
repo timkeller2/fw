@@ -56694,7 +56694,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-100</iFood>
+            <iFood>-60</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -56795,7 +56795,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-100</iFood>
+            <iFood>-60</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -57098,7 +57098,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>0</iFood>
+            <iFood>-30</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -57300,7 +57300,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>0</iFood>
+            <iFood>-30</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>

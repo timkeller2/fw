@@ -4382,31 +4382,13 @@ def reqLearnMagic(caster):
 	return True
 
 def pay(pCity,sBuilding,iCost,iPlayer,sDesc):
-	## Load Global Market Stock
-	sGameData = cPickle.loads(CyGameInstance.getScriptData())
-	if 'BUILDING_HERBALIST' not in sGameData:
-		sGameData['BUILDING_HERBALIST'] = 0
-	if 'BUILDING_CRAFTSMEN_GUILD' not in sGameData:
-		sGameData['BUILDING_CRAFTSMEN_GUILD'] = 0
-	if 'BUILDING_LIBRARY' not in sGameData:
-		sGameData['BUILDING_LIBRARY'] = 0
-	if 'BUILDING_MAGE_GUILD' not in sGameData:
-		sGameData['BUILDING_MAGE_GUILD'] = 0
-	if 'BUILDING_ALCHEMY_LAB' not in sGameData:
-		sGameData['BUILDING_ALCHEMY_LAB'] = 0
-
 	## Load City Stock
 	strSetData = cPickle.loads(pCity.getScriptData())
 	if strSetData[sBuilding] < CyGame().getGameTurn() - pCity.getPopulation() * 3:
 		strSetData[sBuilding] = CyGame().getGameTurn() - pCity.getPopulation() * 3
 
-	## Use Global Market Stock if possible, if not, use the city stock
-	if sGameData[sBuilding] > iCost:
-		sGameData[sBuilding] -= iCost
-		CyGameInstance.setScriptData(cPickle.dumps(sGameData))
-	else:
-		strSetData[sBuilding] = strSetData[sBuilding] + iCost 
-		pCity.setScriptData(cPickle.dumps(strSetData))
+	strSetData[sBuilding] = strSetData[sBuilding] + iCost 
+	pCity.setScriptData(cPickle.dumps(strSetData))
 
 	iStock = CyGame().getGameTurn() - strSetData[sBuilding]
 	iMaxStock = pCity.getPopulation() * 3
