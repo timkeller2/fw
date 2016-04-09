@@ -15861,8 +15861,8 @@
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
-            <iExtraCombatStr>1</iExtraCombatStr>
-            <iExtraCombatDefense>1</iExtraCombatDefense>
+            <iExtraCombatStr>2</iExtraCombatStr>
+            <iExtraCombatDefense>2</iExtraCombatDefense>
             <iFreeXPPerTurn>0</iFreeXPPerTurn>
             <iFreeXPFromCombat>0</iFreeXPFromCombat>
             <iModifyGlobalCounter>0</iModifyGlobalCounter>

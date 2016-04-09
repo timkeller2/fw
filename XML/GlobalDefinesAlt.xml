@@ -467,6 +467,6 @@
     </Define>
 	<Define>
 		<DefineName>EVENT_PROBABILITY_ROLL_SIDES</DefineName>
-		<iDefineIntVal>20</iDefineIntVal>
+		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
 </Civ4Defines>

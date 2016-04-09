@@ -17,6 +17,41 @@ CyGameInstance = gc.getGame()
 
 class CustomFunctions:
 
+	def retSearch(self, unit):
+		i = 0
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY2')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL1')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL2')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL3')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL4')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR1')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR2')):
+			i += 2
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR3')):
+			i += 3
+
+		iExtendedSearch = unit.getFortifyTurns()
+		if iExtendedSearch > int( i / 2 ):
+			iExtendedSearch = int( i / 2 )
+		if iExtendedSearch > 5:
+			iExtendedSearch = 5
+
+		i += iExtendedSearch	
+
+		return i
+
 	def bTechExist(self, sTech):
 		bFoundValid = false
 		iTech = CvUtil.findInfoTypeNum(gc.getTechInfo, gc.getNumTechInfos(), sTech)
@@ -1941,6 +1976,10 @@ class CustomFunctions:
 				pPlayer = gc.getPlayer(pUnit.getOwner())
 				iUnitTeam = pPlayer.getTeam()
 				unitTeam = gc.getTeam(iUnitTeam)
+				
+				## Burglars wake when optimal
+				if pUnit.getFortifyTurns() > 0 and pUnit.getFortifyTurns() < 5 and pUnit.getFortifyTurns() == retSearch(pUnit) / 2:
+					pUnit.changeDamage( 1, pUnit.getOwner() )
 				
 				## Fix an AI spinlock problem...
 				if pUnit.getUnitAIType() == UnitAITypes.UNITAI_WORKER and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_WORKER') and not pPlayer.isHuman():
