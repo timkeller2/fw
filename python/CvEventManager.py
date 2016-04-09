@@ -1432,7 +1432,8 @@ class CvEventManager:
 
 		if CyGame().getSorenRandNum(20, "RandomHero") == 1:
 			if pPlayer.isHuman() or unit.baseCombatStr() > 0:
-				cf.unitAptitude(unit)
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_NO_RANGE'), True)
+				#cf.unitAptitude(unit)
 			sMsg = 'A ' + str( unit.getName() ) + ' of unusual skill has been identified among the new recruits in ' + str( city.getName() ) + '!'
 			CyInterface().addMessage(unit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),unit.getX(),unit.getY(),True,True)
 		
