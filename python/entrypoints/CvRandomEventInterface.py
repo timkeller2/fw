@@ -13,6 +13,8 @@ import CvUtil
 from CvPythonExtensions import *
 import CustomFunctions
 import PyHelpers
+import cPickle
+import math
 
 cf = CustomFunctions.CustomFunctions()
 gc = CyGlobalContext()
@@ -23,7 +25,7 @@ def canTriggerAeronsChosen(argsList):
 	kTriggeredData = argsList[0]
 	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
 	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
-	if pUnit.getLevel() < 5:
+	if pUnit.getLevel() < 8:
 		return False
 	return True
 
@@ -6962,4 +6964,1007 @@ def canheavyarmor(argsList):
 		return True
 
 	return False
+
+def canCulture1(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+	pCity = pPlayer.getCapitalCity()
+
+	if pCity.getCulture(iPlayer) < 6400:
+		return False
+
+	if CyGame().getGameTurn() < 200:
+		return False
+
+	return True
+
+def canCulture2(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+	pCity = pPlayer.getCapitalCity()
+
+	if pCity.getCulture(iPlayer) < 400:
+		return False
+
+	if CyGame().getGameTurn() < 50:
+		return False
+
+	return True
+
+def canCulture3(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+	pCity = pPlayer.getCapitalCity()
+
+	if pCity.getCulture(iPlayer) < 900:
+		return False
+
+	if CyGame().getGameTurn() < 75:
+		return False
+
+	return True
+
+def canCulture4(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+	pCity = pPlayer.getCapitalCity()
+
+	if pCity.getCulture(iPlayer) < 1600:
+		return False
+
+	if CyGame().getGameTurn() < 100:
+		return False
+
+	return True
+
+def canCulture5(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+	pCity = pPlayer.getCapitalCity()
+
+	if pCity.getCulture(iPlayer) < 2500:
+		return False
+
+	if CyGame().getGameTurn() < 125:
+		return False
+
+	return True
+
+def canCulture6(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+	pCity = pPlayer.getCapitalCity()
+
+	if pCity.getCulture(iPlayer) < 3600:
+		return False
+
+	if CyGame().getGameTurn() < 150:
+		return False
+
+	return True
+
+def canCulture7(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+	pCity = pPlayer.getCapitalCity()
+
+	if pCity.getCulture(iPlayer) < 4900:
+		return False
+
+	if CyGame().getGameTurn() < 175:
+		return False
+
+	return True
+
+# Civilization Proficiencies
+def canNavalProficiency1(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	iCountUnit = 0
+	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
+		py = PyPlayer(iPlayer)
+		for pUnit in py.getUnitList():
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL'):
+				iCountUnit += 1
+	if iCountUnit > 11:
+		return True
+
+	return False
+
+def canNavalProficiency2(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	iCountUnit = 0
+	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
+		py = PyPlayer(iPlayer)
+		for pUnit in py.getUnitList():
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL'):
+				iCountUnit += 1
+	if iCountUnit > 23:
+		return True
+
+	return False
+
+def canNavalProficiency3(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	iCountUnit = 0
+	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
+		py = PyPlayer(iPlayer)
+		for pUnit in py.getUnitList():
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL'):
+				iCountUnit += 1
+	if iCountUnit > 35:
+		return True
+
+	return False
+
+def canAnimalProficiency1(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	iCountUnit = 0
+	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
+		py = PyPlayer(iPlayer)
+		for pUnit in py.getUnitList():
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
+				iCountUnit += 1
+	if iCountUnit > 11:
+		return True
+
+	return False
+
+def canAnimalProficiency2(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	iCountUnit = 0
+	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
+		py = PyPlayer(iPlayer)
+		for pUnit in py.getUnitList():
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
+				iCountUnit += 1
+	if iCountUnit > 23:
+		return True
+
+	return False
+
+def canAnimalProficiency3(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	iCountUnit = 0
+	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
+		py = PyPlayer(iPlayer)
+		for pUnit in py.getUnitList():
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
+				iCountUnit += 1
+	if iCountUnit > 35:
+		return True
+
+	return False
+
+def canBeastProficiency1(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	iCountUnit = 0
+	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
+		py = PyPlayer(iPlayer)
+		for pUnit in py.getUnitList():
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BEAST'):
+				iCountUnit += 1
+	if iCountUnit > 5:
+		return True
+
+	return False
+
+def canBeastProficiency2(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	iCountUnit = 0
+	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
+		py = PyPlayer(iPlayer)
+		for pUnit in py.getUnitList():
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BEAST'):
+				iCountUnit += 1
+	if iCountUnit > 11:
+		return True
+
+	return False
+
+def canBeastProficiency3(argsList):
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	iCountUnit = 0
+	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
+		py = PyPlayer(iPlayer)
+		for pUnit in py.getUnitList():
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BEAST'):
+				iCountUnit += 1
+	if iCountUnit > 17:
+		return True
+
+	return False
+
+
+# Custom Non recurring Events
+def doIE1(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['IE1'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doIE2(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['IE2'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doIE3(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['IE3'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doIE4(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['IE4'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doIE5(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['IE5'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doIE6(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['IE6'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doIE7(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['IE7'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doIE8(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['IE8'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doIE9(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['IE9'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doIE10(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['IE10'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doIE11(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['IE11'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doIE12(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['IE12'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doIE13(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['IE13'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doIE14(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['IE14'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doEP1(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['EP1'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doEP2(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['EP2'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doEP3(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['EP3'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doEP4(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['EP4'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doEP5(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['EP5'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doEP6(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['EP6'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doEP7(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['EP7'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doEP8(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['EP8'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doEP9(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['EP9'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doEP10(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['EP10'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def doEP11(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	sPD['EP11'] = 1
+	pPlayer.setScriptData(cPickle.dumps(sPD))
+
+def canIE1(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'IE1' not in sPD:
+		return True
+
+	return False
+
+def canIE2(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'IE2' not in sPD:
+		return True
+
+	return False
+
+def canIE3(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'IE3' not in sPD:
+		return True
+
+	return False
+
+def canIE4(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'IE4' not in sPD:
+		return True
+
+	return False
+
+def canIE5(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'IE5' not in sPD:
+		return True
+
+	return False
+
+def canIE6(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'IE6' not in sPD:
+		return True
+
+	return False
+
+def canIE7(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'IE7' not in sPD:
+		return True
+
+	return False
+
+def canIE8(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'IE8' not in sPD:
+		return True
+
+	return False
+
+def canIE9(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'IE9' not in sPD:
+		return True
+
+	return False
+
+def canIE10(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'IE10' not in sPD:
+		return True
+
+	return False
+
+def canIE11(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'IE11' not in sPD:
+		return True
+
+	return False
+
+def canIE12(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'IE12' not in sPD:
+		return True
+
+	return False
+
+def canIE13(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'IE13' not in sPD:
+		return True
+
+	return False
+
+def canIE14(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'IE14' not in sPD:
+		return True
+
+	return False
+
+def canEP1(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'EP1' not in sPD:
+		return True
+
+	return False
+
+def canEP2(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'EP2' not in sPD:
+		return True
+
+	return False
+
+def canEP3(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'EP3' not in sPD:
+		return True
+
+	return False
+
+def canEP4(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'EP4' not in sPD:
+		return True
+
+	return False
+
+def canEP5(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'EP5' not in sPD:
+		return True
+
+	return False
+
+def canEP6(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'EP6' not in sPD:
+		return True
+
+	return False
+
+def canEP7(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'EP7' not in sPD:
+		return True
+
+	return False
+
+def canEP8(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'EP8' not in sPD:
+		return True
+
+	return False
+
+def canEP9(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'EP9' not in sPD:
+		return True
+
+	return False
+
+def canEP10(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'EP10' not in sPD:
+		return True
+
+	return False
+
+def canEP11(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+
+	try:
+		sPD = cPickle.loads(pPlayer.getScriptData())
+	except EOFError:
+		sPD = {}
+
+	if 'EP11' not in sPD:
+		return True
+
+	return False
+
+def canInitial(argsList):
+	iGameTurn = CyGame().getGameTurn()
+	iCycle = 15
+	for i in range(7):
+		if (i * iCycle) + 10 == iGameTurn:
+			return true
+	return false
 

@@ -4350,9 +4350,11 @@ def reqBuilding(caster,sBuilding,sPromotion):
 		return False
 	if (sBuilding == 'BUILDING_ALCHEMY_LAB' and strCheckData['BUILDING_ALCHEMY_LAB'] > CyGame().getGameTurn()):
 		return False
-	if (sBuilding == 'BUILDING_MAGE_GUILD' and strCheckData['BUILDING_MAGE_GUILD'] > CyGame().getGameTurn()):
-		return False
+#if (sBuilding == 'BUILDING_MAGE_GUILD' and strCheckData['BUILDING_MAGE_GUILD'] > CyGame().getGameTurn()):
+#	return False
 	if (sBuilding == 'BUILDING_LIBRARY' and strCheckData['BUILDING_LIBRARY'] > CyGame().getGameTurn()):
+		return False
+	if (sBuilding == 'BUILDING_TAVERN' and strCheckData['BUILDING_TAVERN'] > CyGame().getGameTurn()):
 		return False
 
 	return True
@@ -4387,7 +4389,9 @@ def pay(pCity,sBuilding,iCost,iPlayer,sDesc):
 	if strSetData[sBuilding] < CyGame().getGameTurn() - pCity.getPopulation() * 3:
 		strSetData[sBuilding] = CyGame().getGameTurn() - pCity.getPopulation() * 3
 
-	strSetData[sBuilding] = strSetData[sBuilding] + iCost 
+	iCostMod = ( iCost * 10 ) / pCity.getPopulation()	
+		
+	strSetData[sBuilding] = strSetData[sBuilding] + iCostMod
 	pCity.setScriptData(cPickle.dumps(strSetData))
 
 	iStock = CyGame().getGameTurn() - strSetData[sBuilding]
@@ -4395,9 +4399,23 @@ def pay(pCity,sBuilding,iCost,iPlayer,sDesc):
 	if iMaxStock < 1:
 		iMaxStock = 1
 	iPercent = ( iStock * 100 ) / iMaxStock
-	sMsg = 'The ' + sDesc + ' has roughly ' + str(iStock*3) + 'gp worth of stock remaining (' + str(iPercent) + '%).  The global market has roughly '+str(sGameData[sBuilding]*3)+' gold pieces worth of stock remaining...'
+	sMsg = 'The ' + sDesc + ' has roughly ' + str(iStock*3) + 'gp worth of stock remaining (' + str(iPercent) + '%)...'
 	CyInterface().addMessage(iPlayer,True,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
 
+def spellHireAdventurer(caster):
+	bPlayer = gc.getPlayer(caster.getOwner())
+	pCity = caster.plot().getPlotCity()
+
+	iGroupSize = 1
+	sPatrons = [ 'UNIT_BURGLAR','UNIT_HUNTER','UNIT_ADEPT','UNIT_ARCHER','UNIT_PRIEST','UNIT_AXEMAN','UNIT_IMP','UNIT_DWARVEN_SLINGER','UNIT_JAVELIN_THROWER','UNIT_PYRE_ZOMBIE','UNIT_SWORDSMAN','UNIT_CHAOS_MARAUDER','UNIT_FAWN','UNIT_BOAR_RIDER','UNIT_CENTAUR','UNIT_HORSEMAN','UNIT_WOLF_RIDER', 'UNIT_LIZARDMAN','UNIT_KIKIJUB','UNIT_TAR_DEMON_MED','UNIT_ANGEL' ]
+
+	for i in range(iGroupSize):
+		sPatronType = sPatrons[ CyGame().getSorenRandNum(len(sPatrons), "PatronType") ]
+		newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sPatronType), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		cf.unitAptitude(newUnit)
+
+	pay(pCity,'BUILDING_TAVERN',83,caster.getOwner(),'tavern')
+	
 def spellLearnMagic(caster):
 	pCity = caster.plot().getPlotCity()
 	pPlayer = gc.getPlayer(caster.getOwner())
