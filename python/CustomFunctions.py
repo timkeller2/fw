@@ -1978,7 +1978,7 @@ class CustomFunctions:
 				unitTeam = gc.getTeam(iUnitTeam)
 				
 				## Burglars wake when optimal
-				if pUnit.getFortifyTurns() > 0 and pUnit.getFortifyTurns() < 5 and pUnit.getFortifyTurns() == retSearch(pUnit) / 2:
+				if pUnit.getFortifyTurns() > 0 and pUnit.getFortifyTurns() < 5 and pUnit.getFortifyTurns() == self.retSearch(pUnit) / 2:
 					pUnit.changeDamage( 1, pUnit.getOwner() )
 				
 				## Fix an AI spinlock problem...
