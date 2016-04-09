@@ -1977,9 +1977,9 @@ class CustomFunctions:
 				iUnitTeam = pPlayer.getTeam()
 				unitTeam = gc.getTeam(iUnitTeam)
 				
-				## Burglars wake when optimal
-				if pUnit.getFortifyTurns() > 0 and pUnit.getFortifyTurns() < 5 and pUnit.getFortifyTurns() == self.retSearch(pUnit) / 2:
-					pUnit.changeDamage( 1, pUnit.getOwner() )
+				# Burglars wake when optimal
+				# if pUnit.getFortifyTurns() > 0 and pUnit.getFortifyTurns() < 5 and pUnit.getFortifyTurns() == self.retSearch(pUnit) / 2:
+					# pUnit.changeDamage( 1, pUnit.getOwner() )
 				
 				## Fix an AI spinlock problem...
 				if pUnit.getUnitAIType() == UnitAITypes.UNITAI_WORKER and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_WORKER') and not pPlayer.isHuman():
@@ -2221,7 +2221,7 @@ class CustomFunctions:
 							if CyGame().getSorenRandNum(100, "RecoverDisease") < iRecover:
 								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'), False)
 								sMsg = pUnit.getName() + ' recovers from a disease!'
-								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
+								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,pUnit.getButton(),ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
 						
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')):
 						iPlagueInPlot += 1
@@ -2232,7 +2232,7 @@ class CustomFunctions:
 							if (CyGame().getSorenRandNum(100, "RecoverPlague") < iRecover / 2 or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUE_CARRIER')) ):
 								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), False)
 								sMsg = pUnit.getName() + ' recovers from the plague!'
-								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
+								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,pUnit.getButton(),ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
 
 				## Jungles can cause disease and Disease and Plague can spread
 				if pPlot.getFeatureType() == iJungle:

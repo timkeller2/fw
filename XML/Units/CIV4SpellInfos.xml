@@ -8991,7 +8991,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Buildings/library.dds</Button>
+            <Button>Art/Interface/Buttons/Buildings/Obelisk.dds</Button>
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_MAGE_GUILD_STORE</Type>
