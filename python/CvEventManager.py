@@ -810,6 +810,10 @@ class CvEventManager:
 			sCityInfo['BUILDING_MAGE_GUILD'] = CyGame().getGameTurn()
 			pCity.setScriptData(cPickle.dumps(sCityInfo))
 						
+		if iBuildingType == gc.getInfoTypeForString('BUILDING_TAVERN'):
+			sCityInfo['BUILDING_TAVERN'] = CyGame().getGameTurn()
+			pCity.setScriptData(cPickle.dumps(sCityInfo))
+						
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_ALTAR_OF_THE_LUONNOTAR_FINAL'):
 			pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ALTAR_OF_THE_LUONNOTAR_EXALTED'), 0)
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_ALTAR_OF_THE_LUONNOTAR_EXALTED'):
@@ -1861,9 +1865,8 @@ class CvEventManager:
 			strSetData['DragonWarrior'] = pUnit.getLevel()
 			CyGameInstance.setScriptData(cPickle.dumps(strSetData))
 
-		#if iPromotion == gc.getInfoTypeForString('PROMOTION_DIRE'):
-		#	pUnit.getArtInfo(pPlayer.getCurrentEra()).setScale(pUnit.getArtInfo(pPlayer.getCurrentEra())*1.35)
-			# pUnit.setScale( pUnit.getScale * 1.35 )
+#		if iPromotion == gc.getInfoTypeForString('PROMOTION_DIRE'):
+#			pUnit.getArtInfo(pPlayer.getCurrentEra(),eraType).setScale(pUnit.getArtInfo(pPlayer.getCurrentEra())*1.35,eraType)
 			
 		if (not self.__LOG_UNITPROMOTED):
 			return

@@ -779,7 +779,7 @@
             <Type>SPELL_CURE_DISEASE</Type>
             <Description>TXT_KEY_SPELL_CURE_DISEASE</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <PromotionPrereq1>PROMOTION_MEDIC2</PromotionPrereq1>
+            <PromotionPrereq1>PROMOTION_MEDIC3</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -5738,7 +5738,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_TRAIN_ANIMAL</Type>
-            <Description>TXT_KEY_SPELL_TRAIN_ANIMAL</Description>
+            <Description>Train Animal</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help></Help>
@@ -7955,6 +7955,80 @@
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
             <Button>Art/Interface/Buttons/Promotions/Marksman.dds</Button>
+        </SpellInfo>
+        <SpellInfo>
+            <Type>SPELL_HIRE_ADVENTURER</Type>
+            <Description>Hire and adventurer</Description>
+            <Civilopedia>Hire an adventurer from the tavern!</Civilopedia>
+            <Strategy>NONE</Strategy>
+            <Help>Hire an adventurer from the tavern!</Help>
+            <PromotionPrereq1>NONE</PromotionPrereq1>
+            <PromotionPrereq2>NONE</PromotionPrereq2>
+            <UnitPrereq>NONE</UnitPrereq>
+            <UnitClassPrereq>NONE</UnitClassPrereq>
+            <UnitCombatPrereq>NONE</UnitCombatPrereq>
+            <UnitInStackPrereq>NONE</UnitInStackPrereq>
+            <CivilizationPrereq>NONE</CivilizationPrereq>
+            <ReligionPrereq>NONE</ReligionPrereq>
+            <StateReligionPrereq>NONE</StateReligionPrereq>
+            <TechPrereq>NONE</TechPrereq>
+            <bAllowAI>0</bAllowAI>
+            <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
+            <bCausesWar>0</bCausesWar>
+            <bGlobal>0</bGlobal>
+            <bInBordersOnly>1</bInBordersOnly>
+            <bInCityOnly>1</bInCityOnly>
+            <iAIWeight>0</iAIWeight>
+            <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
+            <bResistable>0</bResistable>
+            <iRange>0</iRange>
+            <iResistModify>0</iResistModify>
+            <iDamage>0</iDamage>
+            <iDamageLimit>0</iDamageLimit>
+            <DamageType>NONE</DamageType>
+            <AddPromotionType1>NONE</AddPromotionType1>
+            <AddPromotionType2>NONE</AddPromotionType2>
+            <AddPromotionType3>NONE</AddPromotionType3>
+            <RemovePromotionType1>NONE</RemovePromotionType1>
+            <RemovePromotionType2>NONE</RemovePromotionType2>
+            <RemovePromotionType3>NONE</RemovePromotionType3>
+            <bBuffCasterOnly>1</bBuffCasterOnly>
+            <ConvertUnitType>NONE</ConvertUnitType>
+            <CreateBuildingType>NONE</CreateBuildingType>
+            <CreateFeatureType>NONE</CreateFeatureType>
+            <CreateImprovementType>NONE</CreateImprovementType>
+            <SpreadReligion>NONE</SpreadReligion>
+            <CreateUnitType>NONE</CreateUnitType>
+            <iCreateUnitNum>0</iCreateUnitNum>
+            <bPermanentUnitCreate>0</bPermanentUnitCreate>
+            <CreateUnitPromotion>NONE</CreateUnitPromotion>
+            <bImmuneTeam>0</bImmuneTeam>
+            <bImmuneNeutral>0</bImmuneNeutral>
+            <bImmuneEnemy>0</bImmuneEnemy>
+            <bImmuneFlying>0</bImmuneFlying>
+            <bImmuneNotAlive>0</bImmuneNotAlive>
+            <bDispel>0</bDispel>
+            <bPush>0</bPush>
+            <bRemoveHasCasted>0</bRemoveHasCasted>
+            <bSacrificeCaster>0</bSacrificeCaster>
+            <iChangePopulation>0</iChangePopulation>
+            <iCost>250</iCost>
+            <iImmobileTurns>0</iImmobileTurns>
+            <iMiscastChance>0</iMiscastChance>
+            <PyMiscast></PyMiscast>
+            <PyResult>spellHireAdventurer(pCaster)</PyResult>
+            <PyRequirement>reqBuilding(pCaster,'BUILDING_TAVERN','PROMOTION_DIRE')</PyRequirement>
+            <Effect>EFFECT_CREATION</Effect>
+            <Sound>AS3D_SPELL_HOPE</Sound>
+            <HotKey></HotKey>
+            <bAltDown>0</bAltDown>
+            <bShiftDown>0</bShiftDown>
+            <bCtrlDown>0</bCtrlDown>
+            <bGraphicalOnly>0</bGraphicalOnly>
+            <iHotKeyPriority>0</iHotKeyPriority>
+            <Button>Art/Interface/Buttons/Promotions/Tavern.dds</Button>
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_LEARN_MAGIC</Type>
