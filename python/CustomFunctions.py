@@ -1547,9 +1547,6 @@ class CustomFunctions:
 		if CyGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_MARATHON'):
 			iAdj = iAdj + 12
 			
-		# Slow Down Barbs for now - MTK recent
-		iAdj += 2
-
 		if self.bTechExist('TECH_INFERNAL_PACT') == False and CyGame().getSorenRandNum(6+iAdj, "AnimalStuff") == 1:
 			self.addUnit(gc.getInfoTypeForString(self.sAnimalUnit()))
 		if CyGame().getSorenRandNum(4+iAdj, "BarbarianStuff") == 1:
