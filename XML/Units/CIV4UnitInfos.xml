@@ -67279,6 +67279,10 @@
             <UnitClassDefenseMods>
             </UnitClassDefenseMods>
             <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                    <iUnitCombatMod>50</iUnitCombatMod>
+                </UnitCombatMod>
             </UnitCombatMods>
             <UnitCombatCollateralImmunes>
             </UnitCombatCollateralImmunes>
@@ -75610,6 +75614,10 @@
                     <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
                     <iUnitCombatMod>25</iUnitCombatMod>
                 </UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                    <iUnitCombatMod>50</iUnitCombatMod>
+                </UnitCombatMod>
             </UnitCombatMods>
             <UnitCombatCollateralImmunes>
             </UnitCombatCollateralImmunes>
@@ -75864,6 +75872,10 @@
             <UnitClassDefenseMods>
             </UnitClassDefenseMods>
             <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                    <iUnitCombatMod>50</iUnitCombatMod>
+                </UnitCombatMod>
             </UnitCombatMods>
             <UnitCombatCollateralImmunes>
             </UnitCombatCollateralImmunes>
