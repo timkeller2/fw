@@ -17767,7 +17767,7 @@
             <iVisibilityChange>0</iVisibilityChange>
             <iMovesChange>0</iMovesChange>
             <iMoveDiscountChange>0</iMoveDiscountChange>
-            <iAirRangeChange>-5</iAirRangeChange>
+            <iAirRangeChange>0</iAirRangeChange>
             <iInterceptChange>0</iInterceptChange>
             <iEvasionChange>0</iEvasionChange>
             <iWithdrawalChange>0</iWithdrawalChange>

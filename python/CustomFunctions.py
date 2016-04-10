@@ -448,7 +448,7 @@ class CustomFunctions:
 			if( ii < 3 ):
 				return 'UNIT_CHAMPION'
 			elif( ii < 4 ):
-				return 'UNIT_CONJURER'
+				return 'UNIT_MAGE'
 			elif( ii < 5 ):
 				return 'UNIT_WOLF_RIDER'
 			elif( ii == 5 ):
@@ -486,7 +486,7 @@ class CustomFunctions:
 			if( ii < 3 ):
 				return 'UNIT_CHAMPION'
 			elif( ii < 4 ):
-				return 'UNIT_CONJURER'
+				return 'UNIT_MAGE'
 			elif( ii < 5 ):
 				return 'UNIT_LONGBOWMAN'
 			elif( ii == 5 ):
