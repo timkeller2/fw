@@ -6861,10 +6861,10 @@ def doAdventurers(argsList):
 	bPlayer = gc.getPlayer(kTriggeredData.ePlayer)
 	pCity = bPlayer.getCity(kTriggeredData.iCityId)
 
-	if cf.getObjectInt(pCity,'doAdv') == 1:
-		return
+	# if cf.getObjectInt(pCity,'doAdv') == 1:
+		# return
 
-	cf.setObjectInt(pCity,'doAdv',1)
+	#cf.setObjectInt(pCity,'doAdv',1)
 
 	iGroupSize = CyGame().getSorenRandNum(2, "GroupSize") + 2
 	sPatrons = [ 'UNIT_BURGLAR','UNIT_HUNTER','UNIT_ADEPT','UNIT_ARCHER','UNIT_PRIEST','UNIT_AXEMAN','UNIT_IMP','UNIT_DWARVEN_SLINGER','UNIT_JAVELIN_THROWER','UNIT_PYRE_ZOMBIE','UNIT_SWORDSMAN','UNIT_CHAOS_MARAUDER','UNIT_FAWN','UNIT_BOAR_RIDER','UNIT_CENTAUR','UNIT_HORSEMAN','UNIT_WOLF_RIDER', 'UNIT_LIZARDMAN','UNIT_KIKIJUB','UNIT_TAR_DEMON_MED','UNIT_ANGEL' ]
