@@ -1686,7 +1686,7 @@ class CustomFunctions:
 					pPlayer.setScriptData(cPickle.dumps(sPD))
 
 #			Plunder from Barbarians
-			if pPlayer.isHuman() and pPlayer.isAlive() and pPlayer.getNumCities() > 0 and ( CyGame().getGameTurn() / 5 ) * 5 == CyGame().getGameTurn():
+			if pPlayer.isHuman() and pPlayer.isAlive() and pPlayer.getNumCities() > 0:
 				if 'PLUNDER' not in sPD:
 					sPD['PLUNDER'] = 0
 				if sPD['PLUNDER'] > 0 and sPD['PLUNDER'] < 2500:
