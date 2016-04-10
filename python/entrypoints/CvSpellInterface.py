@@ -3174,7 +3174,7 @@ def spellTrust(caster):
 
 def spellTsunami(caster):
 	iR = 1
-	if caster.isHasPromotion(iChanneling3):
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3')):
 		iR = 2
 	iX = caster.getX()
 	iY = caster.getY()
@@ -3196,7 +3196,7 @@ def spellTsunami(caster):
 
 def spellMaelstrom(caster):
 	iR = 1
-	if caster.isHasPromotion(iChanneling3):
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3')):
 		iR = 2
 	iX = caster.getX()
 	iY = caster.getY()
