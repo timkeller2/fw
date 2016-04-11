@@ -14542,7 +14542,7 @@
             <iGlobalHurryModifier>0</iGlobalHurryModifier>
             <iExperience>0</iExperience>
             <iGlobalExperience>0</iGlobalExperience>
-            <iFoodKept>20</iFoodKept>
+            <iFoodKept>15</iFoodKept>
             <iAirlift>0</iAirlift>
             <iAirModifier>0</iAirModifier>
             <iAirUnitCapacity>0</iAirUnitCapacity>
@@ -29895,7 +29895,7 @@
             <iGlobalHurryModifier>0</iGlobalHurryModifier>
             <iExperience>0</iExperience>
             <iGlobalExperience>0</iGlobalExperience>
-            <iFoodKept>20</iFoodKept>
+            <iFoodKept>15</iFoodKept>
             <iAirlift>0</iAirlift>
             <iAirModifier>0</iAirModifier>
             <iAirUnitCapacity>0</iAirUnitCapacity>
@@ -33396,6 +33396,9 @@
             <YieldChanges>
             </YieldChanges>
             <YieldModifiers>
+                <iYield>10</iYield>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
             </YieldModifiers>
             <CommerceChanges>
             </CommerceChanges>
@@ -38961,8 +38964,8 @@
             <BuildingClass>BUILDINGCLASS_ARCHMAGE_STUDY</BuildingClass>
             <Type>BUILDING_ARCHMAGE_STUDY</Type>
             <SpecialBuildingType>NONE</SpecialBuildingType>
-            <Description>TXT_KEY_BUILDING_ARCHMAGE_STUDY</Description>
-            <Civilopedia>Sometimes your archmages and summoners want to settle down and clear the way for younger more powerful mages.  The older mages can contribute to the training of new adepts and boost the research in the town where they settle.</Civilopedia>
+            <Description>Archmage's Study</Description>
+            <Civilopedia>Sometimes your archmages want to settle down and clear the way for younger more powerful mages.  The older mages can contribute to the training of new adepts and boost the research in the town where they settle.</Civilopedia>
             <Strategy></Strategy>
             <Help></Help>
             <Advisor>ADVISOR_SCIENCE</Advisor>
@@ -41244,8 +41247,8 @@
             <Type>BUILDING_TEMPLE_OF_THE_DEEP</Type>
             <SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
             <Description>Temple of the Deep</Description>
-            <Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_THE_OVERLORDS_STRATEGY</Civilopedia>
-            <Strategy>TXT_KEY_BUILDING_TEMPLE_OF_THE_OVERLORDS_STRATEGY</Strategy>
+            <Civilopedia>Temples of the Deep continue to contribute to the religions dedication to the vast oceans.</Civilopedia>
+            <Strategy></Strategy>
             <Help></Help>
             <Advisor>ADVISOR_RELIGION</Advisor>
             <ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OVERLORDS</ArtDefineTag>
@@ -41423,6 +41426,10 @@
             <BonusHappinessChanges>
                 <BonusHappinessChange>
                     <BonusType>BONUS_WHALE</BonusType>
+                    <iHappinessChange>1</iHappinessChange>
+                </BonusHappinessChange>
+                <BonusHappinessChange>
+                    <BonusType>BONUS_PEARL</BonusType>
                     <iHappinessChange>1</iHappinessChange>
                 </BonusHappinessChange>
             </BonusHappinessChanges>

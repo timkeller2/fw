@@ -3162,6 +3162,11 @@ class CvGameUtils:
 		
 	def canFoundCitiesOnWater(self,argsList):
 		iX, iY= argsList
+
+		pPlot = CyMap().plot(iX,iY)
+		for i in range(pPlot.getNumUnits()):
+			if pPlot.getUnit(i).getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_HIGH_PRIEST_OF_THE_OVERLORDS'):
+				return True
 		return False
 		
 	def doCombat(self,argsList):

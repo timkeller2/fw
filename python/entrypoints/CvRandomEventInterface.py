@@ -6966,6 +6966,9 @@ def canCulture1(argsList):
 	pPlayer = gc.getPlayer(iPlayer)
 	pCity = pPlayer.getCapitalCity()
 
+	if not pPlayer.isHuman():
+		return False
+		
 	if pCity.getCulture(iPlayer) < 6400:
 		return False
 
@@ -6980,6 +6983,9 @@ def canCulture2(argsList):
 	pPlayer = gc.getPlayer(iPlayer)
 	pCity = pPlayer.getCapitalCity()
 
+	if not pPlayer.isHuman():
+		return False
+		
 	if pCity.getCulture(iPlayer) < 400:
 		return False
 
@@ -6994,6 +7000,9 @@ def canCulture3(argsList):
 	pPlayer = gc.getPlayer(iPlayer)
 	pCity = pPlayer.getCapitalCity()
 
+	if not pPlayer.isHuman():
+		return False
+		
 	if pCity.getCulture(iPlayer) < 900:
 		return False
 
@@ -7008,6 +7017,9 @@ def canCulture4(argsList):
 	pPlayer = gc.getPlayer(iPlayer)
 	pCity = pPlayer.getCapitalCity()
 
+	if not pPlayer.isHuman():
+		return False
+		
 	if pCity.getCulture(iPlayer) < 1600:
 		return False
 
@@ -7022,6 +7034,9 @@ def canCulture5(argsList):
 	pPlayer = gc.getPlayer(iPlayer)
 	pCity = pPlayer.getCapitalCity()
 
+	if not pPlayer.isHuman():
+		return False
+		
 	if pCity.getCulture(iPlayer) < 2500:
 		return False
 
@@ -7036,6 +7051,9 @@ def canCulture6(argsList):
 	pPlayer = gc.getPlayer(iPlayer)
 	pCity = pPlayer.getCapitalCity()
 
+	if not pPlayer.isHuman():
+		return False
+		
 	if pCity.getCulture(iPlayer) < 3600:
 		return False
 
@@ -7050,6 +7068,9 @@ def canCulture7(argsList):
 	pPlayer = gc.getPlayer(iPlayer)
 	pCity = pPlayer.getCapitalCity()
 
+	if not pPlayer.isHuman():
+		return False
+		
 	if pCity.getCulture(iPlayer) < 4900:
 		return False
 
@@ -7064,6 +7085,9 @@ def canNavalProficiency1(argsList):
 	iPlayer = kTriggeredData.ePlayer
 	pPlayer = gc.getPlayer(iPlayer)
 
+	if not pPlayer.isHuman():
+		return False
+		
 	iCountUnit = 0
 	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
 		py = PyPlayer(iPlayer)
@@ -7080,6 +7104,9 @@ def canNavalProficiency2(argsList):
 	iPlayer = kTriggeredData.ePlayer
 	pPlayer = gc.getPlayer(iPlayer)
 
+	if not pPlayer.isHuman():
+		return False
+		
 	iCountUnit = 0
 	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
 		py = PyPlayer(iPlayer)
@@ -7096,13 +7123,16 @@ def canNavalProficiency3(argsList):
 	iPlayer = kTriggeredData.ePlayer
 	pPlayer = gc.getPlayer(iPlayer)
 
+	if not pPlayer.isHuman():
+		return False
+		
 	iCountUnit = 0
 	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
 		py = PyPlayer(iPlayer)
 		for pUnit in py.getUnitList():
 			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL'):
 				iCountUnit += 1
-	if iCountUnit > 35:
+	if iCountUnit > 47:
 		return True
 
 	return False
@@ -7112,6 +7142,9 @@ def canAnimalProficiency1(argsList):
 	iPlayer = kTriggeredData.ePlayer
 	pPlayer = gc.getPlayer(iPlayer)
 
+	if not pPlayer.isHuman():
+		return False
+		
 	iCountUnit = 0
 	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
 		py = PyPlayer(iPlayer)
@@ -7128,6 +7161,9 @@ def canAnimalProficiency2(argsList):
 	iPlayer = kTriggeredData.ePlayer
 	pPlayer = gc.getPlayer(iPlayer)
 
+	if not pPlayer.isHuman():
+		return False
+		
 	iCountUnit = 0
 	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
 		py = PyPlayer(iPlayer)
@@ -7144,13 +7180,16 @@ def canAnimalProficiency3(argsList):
 	iPlayer = kTriggeredData.ePlayer
 	pPlayer = gc.getPlayer(iPlayer)
 
+	if not pPlayer.isHuman():
+		return False
+		
 	iCountUnit = 0
 	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
 		py = PyPlayer(iPlayer)
 		for pUnit in py.getUnitList():
 			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
 				iCountUnit += 1
-	if iCountUnit > 35:
+	if iCountUnit > 47:
 		return True
 
 	return False
@@ -7160,6 +7199,9 @@ def canBeastProficiency1(argsList):
 	iPlayer = kTriggeredData.ePlayer
 	pPlayer = gc.getPlayer(iPlayer)
 
+	if not pPlayer.isHuman():
+		return False
+		
 	iCountUnit = 0
 	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
 		py = PyPlayer(iPlayer)
@@ -7176,6 +7218,9 @@ def canBeastProficiency2(argsList):
 	iPlayer = kTriggeredData.ePlayer
 	pPlayer = gc.getPlayer(iPlayer)
 
+	if not pPlayer.isHuman():
+		return False
+		
 	iCountUnit = 0
 	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
 		py = PyPlayer(iPlayer)
@@ -7192,13 +7237,16 @@ def canBeastProficiency3(argsList):
 	iPlayer = kTriggeredData.ePlayer
 	pPlayer = gc.getPlayer(iPlayer)
 
+	if not pPlayer.isHuman():
+		return False
+		
 	iCountUnit = 0
 	if (pPlayer.isAlive() and iPlayer != gc.getBARBARIAN_PLAYER()):
 		py = PyPlayer(iPlayer)
 		for pUnit in py.getUnitList():
 			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BEAST'):
 				iCountUnit += 1
-	if iCountUnit > 17:
+	if iCountUnit > 23:
 		return True
 
 	return False

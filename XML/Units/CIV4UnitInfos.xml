@@ -31663,10 +31663,6 @@
                     <UnitClassUpgradeType>UNITCLASS_MAN_O_WAR</UnitClassUpgradeType>
                     <bUnitClassUpgrade>1</bUnitClassUpgrade>
                 </UnitClassUpgrade>
-                <UnitClassUpgrade>
-                    <UnitClassUpgradeType>UNITCLASS_QUEEN_OF_THE_LINE</UnitClassUpgradeType>
-                    <bUnitClassUpgrade>1</bUnitClassUpgrade>
-                </UnitClassUpgrade>
             </UnitClassUpgrades>
             <UnitClassTargets>
             </UnitClassTargets>
@@ -31806,7 +31802,7 @@
             <iBombardRate>20</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>DOMAIN_LAND</DomainCargo>
-            <iCargo>2</iCargo>
+            <iCargo>1</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
             <iExtraCost>0</iExtraCost>
@@ -32844,6 +32840,10 @@
             <bHiddenNationality>0</bHiddenNationality>
             <bAlwaysHostile>0</bAlwaysHostile>
             <UnitClassUpgrades>
+                <UnitClassUpgrade>
+                    <UnitClassUpgradeType>UNITCLASS_QUEEN_OF_THE_LINE</UnitClassUpgradeType>
+                    <bUnitClassUpgrade>1</bUnitClassUpgrade>
+                </UnitClassUpgrade>
             </UnitClassUpgrades>
             <UnitClassTargets>
             </UnitClassTargets>
@@ -32889,7 +32889,7 @@
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>NONE</PrereqBuilding>
-            <PrereqTech>TECH_ASTRONOMY</PrereqTech>
+            <PrereqTech>TECH_OPTICS</PrereqTech>
             <TechTypes>
             </TechTypes>
             <BonusType>NONE</BonusType>
@@ -32979,7 +32979,7 @@
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>DOMAIN_LAND</DomainCargo>
-            <iCargo>3</iCargo>
+            <iCargo>4</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
             <iExtraCost>0</iExtraCost>
@@ -33201,7 +33201,7 @@
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>DOMAIN_LAND</DomainCargo>
-            <iCargo>0</iCargo>
+            <iCargo>1</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
             <iExtraCost>0</iExtraCost>
@@ -49840,6 +49840,10 @@
             <bHiddenNationality>0</bHiddenNationality>
             <bAlwaysHostile>0</bAlwaysHostile>
             <UnitClassUpgrades>
+                <UnitClassUpgrade>
+                    <UnitClassUpgradeType>UNITCLASS_DREADNAUGHT</UnitClassUpgradeType>
+                    <bUnitClassUpgrade>1</bUnitClassUpgrade>
+                </UnitClassUpgrade>
             </UnitClassUpgrades>
             <UnitClassTargets>
             </UnitClassTargets>
@@ -49902,7 +49906,7 @@
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <iMinAreaSize>20</iMinAreaSize>
-            <iMoves>5</iMoves>
+            <iMoves>4</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
             <iAirUnitCap>0</iAirUnitCap>
@@ -49972,7 +49976,7 @@
             <iBombardRate>30</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>DOMAIN_LAND</DomainCargo>
-            <iCargo>2</iCargo>
+            <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
             <iExtraCost>0</iExtraCost>
@@ -59981,7 +59985,7 @@
             </TerrainPassableTechs>
             <FeaturePassableTechs>
             </FeaturePassableTechs>
-            <iCombat>9</iCombat>
+            <iCombat>5</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>0</iAirCombat>
             <iAirCombatLimit>0</iAirCombatLimit>
@@ -60060,7 +60064,7 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
-            <iCombatDefense>9</iCombatDefense>
+            <iCombatDefense>7</iCombatDefense>
             <iTier>4</iTier>
         </UnitInfo>
         <UnitInfo>
@@ -70449,7 +70453,7 @@
             <iBombardRate>10</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>DOMAIN_LAND</DomainCargo>
-            <iCargo>1</iCargo>
+            <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
             <iExtraCost>0</iExtraCost>
@@ -78687,7 +78691,7 @@
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>25</iAdvancedStartCostIncrease>
             <iMinAreaSize>20</iMinAreaSize>
-            <iMoves>6</iMoves>
+            <iMoves>5</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>3</iAirRange>
             <iAirUnitCap>0</iAirUnitCap>
@@ -78793,7 +78797,7 @@
             <bImmortal>0</bImmortal>
             <bNeverObsolete>0</bNeverObsolete>
             <bNoWarWeariness>0</bNoWarWeariness>
-            <iCombatDefense>12</iCombatDefense>
+            <iCombatDefense>13</iCombatDefense>
             <iDurationFromCombat>0</iDurationFromCombat>
             <iEnslavementChance>0</iEnslavementChance>
             <iFreePromotionPick>0</iFreePromotionPick>
@@ -78821,11 +78825,11 @@
             <BonusAffinities>
                 <BonusAffinity>
                     <BonusType>BONUS_GUNPOWDER</BonusType>
-                    <iAffinity>1</iAffinity>
+                    <iAffinity>2</iAffinity>
                 </BonusAffinity>
                 <BonusAffinity>
                     <BonusType>BONUS_MITHRIL</BonusType>
-                    <iAffinity>1</iAffinity>
+                    <iAffinity>2</iAffinity>
                 </BonusAffinity>
             </BonusAffinities>
         </UnitInfo>

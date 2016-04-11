@@ -459,7 +459,7 @@
     </Define>
     <Define>
 		<DefineName>WATER_POTENTIAL_CITY_WORK_FOR_AREA</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
+		<iDefineIntVal>4</iDefineIntVal>
     </Define>
     <Define>
 		<DefineName>LAND_UNITS_CAN_ATTACK_WATER_CITIES</DefineName>

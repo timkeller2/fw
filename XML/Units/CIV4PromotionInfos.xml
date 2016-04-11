@@ -711,8 +711,9 @@
             <Type>PROMOTION_BUCCANEERS</Type>
             <Description>TXT_KEY_PROMOTION_BUCCANEERS</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <TechPrereq>TECH_NEVER</TechPrereq>
+			<TechPrereq>TECH_NEVER</TechPrereq>
             <iMovesChange>-1</iMovesChange>
+            <iCombatPercent>25</iCombatPercent>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_NAVAL</UnitCombatType>
@@ -720,8 +721,7 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Buccaneers.dds</Button>
-            <iExtraCombatStr>1</iExtraCombatStr>
-            <iExtraCombatDefense>1</iExtraCombatDefense>
+            <iCombatPercentDefense>25</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
@@ -3074,6 +3074,7 @@
             <Type>PROMOTION_EXPANDED_HULL</Type>
             <Description>TXT_KEY_PROMOTION_EXPANDED_HULL</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
+            <TechPrereq>TECH_NEVER</TechPrereq>
             <iCargoChange>1</iCargoChange>
             <UnitCombats>
                 <UnitCombat>
@@ -3082,8 +3083,6 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Expandedhull.dds</Button>
-            <iExtraCombatStr>-2</iExtraCombatStr>
-            <iExtraCombatDefense>-2</iExtraCombatDefense>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_EXTENSION1</Type>
@@ -4993,7 +4992,6 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <iMovesChange>1</iMovesChange>
-            <iCargoChange>-2</iCargoChange>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_NAVAL</UnitCombatType>
@@ -6930,8 +6928,6 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Skeletoncrew.dds</Button>
-            <iExtraCombatStr>-2</iExtraCombatStr>
-            <iExtraCombatDefense>-2</iExtraCombatDefense>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
