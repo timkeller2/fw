@@ -3181,7 +3181,7 @@ def spellTsunami(caster):
 				if (iX != iiX or iY != iiY):
 					for i in range(pPlot.getNumUnits()):
 						pUnit = pPlot.getUnit(i)
-						iDam = iR * 5
+						iDam = iR * 8
 						iMax = iR * 35
 						pUnit.doDamage(iDam, iMax, caster, gc.getInfoTypeForString('DAMAGE_COLD'), true)
 					if pPlot.getImprovementType() != -1 and iR > 1:

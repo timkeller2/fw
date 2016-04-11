@@ -712,7 +712,6 @@
             <Description>TXT_KEY_PROMOTION_BUCCANEERS</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_NEVER</TechPrereq>
-            <iMovesChange>-1</iMovesChange>
             <iCombatPercent>25</iCombatPercent>
             <UnitCombats>
                 <UnitCombat>

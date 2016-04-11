@@ -4296,7 +4296,7 @@
             <PowerBonus>NONE</PowerBonus>
             <FreeBonus>NONE</FreeBonus>
             <iNumFreeBonuses>0</iNumFreeBonuses>
-            <FreeBuilding>BUILDINGCLASS_MAGE_GUILD</FreeBuilding>
+            <FreeBuilding>NONE</FreeBuilding>
             <FreePromotion>NONE</FreePromotion>
             <CivicOption>NONE</CivicOption>
             <GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
@@ -4375,7 +4375,7 @@
             <iTradeRouteModifier>0</iTradeRouteModifier>
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
-            <iFreeTechs>0</iFreeTechs>
+            <iFreeTechs>1</iFreeTechs>
             <iDefense>0</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
@@ -4490,6 +4490,22 @@
             <PrereqTrait>NONE</PrereqTrait>
             <RemovePromotion>NONE</RemovePromotion>
             <SpecialistCommerceChanges>
+                <SpecialistCommerceChange>
+                    <SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+                    <CommerceChanges>
+                        <iCommerce>0</iCommerce>
+                        <iCommerce>1</iCommerce>
+                        <iCommerce>0</iCommerce>
+                    </CommerceChanges>
+                </SpecialistCommerceChange>
+                <SpecialistCommerceChange>
+                    <SpecialistType>SPECIALIST_GREAT_SCIENTIST</SpecialistType>
+                    <CommerceChanges>
+                        <iCommerce>0</iCommerce>
+                        <iCommerce>1</iCommerce>
+                        <iCommerce>0</iCommerce>
+                    </CommerceChanges>
+                </SpecialistCommerceChange>
             </SpecialistCommerceChanges>
         </BuildingInfo>
         <BuildingInfo>
@@ -6992,7 +7008,7 @@
             <Type>BUILDING_WARRENS</Type>
             <SpecialBuildingType>NONE</SpecialBuildingType>
             <Description>TXT_KEY_BUILDING_WARRENS</Description>
-            <Civilopedia>TXT_KEY_BUILDING_WARRENS_PEDIA</Civilopedia>
+            <Civilopedia></Civilopedia>
             <Strategy></Strategy>
             <Help>TXT_KEY_BUILDING_WARRENS_HELP</Help>
             <Advisor>ADVISOR_MILITARY</Advisor>
@@ -15697,7 +15713,7 @@
             <PowerBonus>NONE</PowerBonus>
             <FreeBonus>NONE</FreeBonus>
             <iNumFreeBonuses>0</iNumFreeBonuses>
-            <FreeBuilding>BUILDINGCLASS_FORGE</FreeBuilding>
+            <FreeBuilding>NONE</FreeBuilding>
             <FreePromotion>NONE</FreePromotion>
             <CivicOption>NONE</CivicOption>
             <GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
@@ -15853,7 +15869,7 @@
                     <SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>1</iYield>
+                        <iYield>2</iYield>
                         <iYield>0</iYield>
                     </YieldChanges>
                 </SpecialistYieldChange>
@@ -15861,7 +15877,7 @@
                     <SpecialistType>SPECIALIST_GREAT_ENGINEER</SpecialistType>
                     <YieldChanges>
                         <iYield>0</iYield>
-                        <iYield>1</iYield>
+                        <iYield>3</iYield>
                         <iYield>0</iYield>
                     </YieldChanges>
                 </SpecialistYieldChange>
@@ -20599,6 +20615,9 @@
             <GlobalSeaPlotYieldChanges>
             </GlobalSeaPlotYieldChanges>
             <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+                <iYield>0</iYield>
             </YieldChanges>
             <YieldModifiers>
             </YieldModifiers>
@@ -21577,7 +21596,7 @@
             <UnitCombatFreeExperiences>
                 <UnitCombatFreeExperience>
                     <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-                    <iExperience>2</iExperience>
+                    <iExperience>6</iExperience>
                 </UnitCombatFreeExperience>
             </UnitCombatFreeExperiences>
             <DomainFreeExperiences>
@@ -21610,7 +21629,7 @@
             <iHotKeyPriority>0</iHotKeyPriority>
             <bApplyFreePromotionOnMove>0</bApplyFreePromotionOnMove>
             <bEquipment>0</bEquipment>
-            <bHideUnits>1</bHideUnits>
+            <bHideUnits>0</bHideUnits>
             <bNoCivicAnger>0</bNoCivicAnger>
             <bRequiresCaster>0</bRequiresCaster>
             <bSeeInvisible>0</bSeeInvisible>
