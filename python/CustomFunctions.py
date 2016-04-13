@@ -833,9 +833,13 @@ class CustomFunctions:
 			if pUnit.getOwner() == unit.getOwner():
 				iArmy += pUnit.baseCombatStr()
 
-		iNob += ( iArmy / 7 )
-
-		iNob += ( unit.baseCombatStr() / 2 )
+		iBonus = 0
+		iBonus = ( iArmy / 7 )		
+		iBonus += ( unit.baseCombatStr() / 2 )
+		if iBonus > iNob:
+			iBonus = iNob
+		
+		iNob += iBonus
 
 		return iNob
 
@@ -1596,6 +1600,7 @@ class CustomFunctions:
 		# Crowded squares are crowded - FW
 		for i in range (CyMap().numPlots()):
 			crowdMessage = True
+			checkRoom = True
 			roomFor = 10
 			pPlot = CyMap().plotByIndex(i)
 			if pPlot.isCity():
@@ -1606,6 +1611,20 @@ class CustomFunctions:
 				if pPlayer.isHuman():
 					# Crowding damage
 					if pPlot.getNumUnits() > roomFor:
+						# Check for nobility and computer units
+						if checkRoom:
+							checkRoom = False
+							checkNoble = True
+							for ii in range(pPlot.getNumUnits()):
+								oUnit = pPlot.getUnit(ii)
+								# The strongest noble adds room for units
+								if checkNoble:
+									if self.iNoble(oUnit) > 0:
+										checkNoble = False
+										roomFor += self.iNoble(oUnit)
+								# Computer units add room for themselves		
+								if not gc.getPlayer(oUnit.getOwner()).isHuman():
+									roomFor += 1
 						iDam = pPlot.getNumUnits() - roomFor
 						pUnit.doDamageNoCaster( iDam, 50, gc.getInfoTypeForString('DAMAGE_PHYSICAL'), false)
 						if crowdMessage:

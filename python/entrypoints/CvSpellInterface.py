@@ -1171,7 +1171,7 @@ def reqExploreLair(caster):
 
 def spellExploreLair(caster):
 	pPlot = caster.plot()
-	iRnd = CyGame().getSorenRandNum(100, "Explore Lair") + caster.getLevel() + caster.baseCombatStr() + retSearch(caster)
+	iRnd = CyGame().getSorenRandNum(100, "Explore Lair") + caster.getLevel() + caster.baseCombatStr() + cf.retSearch(caster)
 	iDestroyLair = 0
 	if iRnd < 14:
 		iDestroyLair = cf.exploreLairBigBad(caster)
@@ -1192,7 +1192,7 @@ def spellExploreLair(caster):
 
 def spellExploreLairEpic(caster):
 	pPlot = caster.plot()
-	iRnd = CyGame().getSorenRandNum(100, "Explore Lair") + caster.getLevel() + caster.baseCombatStr() + retSearch(caster)
+	iRnd = CyGame().getSorenRandNum(100, "Explore Lair") + caster.getLevel() + caster.baseCombatStr() + cf.retSearch(caster)
 	iDestroyLair = 0
 	if iRnd < 54:
 		iDestroyLair = cf.exploreLairBigBad(caster)
@@ -3833,41 +3833,6 @@ def spellCommandMorale(caster):
 						if (iNumBlessed < 1):
 							return
 
-def retSearch(unit):
-	i = 0
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1')):
-		i += 1
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2')):
-		i += 1
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY')):
-		i += 1
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY2')):
-		i += 1
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL1')):
-		i += 1
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL2')):
-		i += 1
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL3')):
-		i += 1
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL4')):
-		i += 1
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR1')):
-		i += 1
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR2')):
-		i += 2
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR3')):
-		i += 3
-
-	iExtendedSearch = unit.getFortifyTurns()
-	if iExtendedSearch > int( i / 2 ):
-		iExtendedSearch = int( i / 2 )
-	if iExtendedSearch > 5:
-		iExtendedSearch = 5
-
-	i += iExtendedSearch	
-
-	return i
-
 def retCombat(unit):
 	i = 0
 	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2')):
@@ -3918,7 +3883,7 @@ def sellToMarket(caster):
 		if pUnit.baseCombatStr() < 1 and pUnit.maxMoves() < 1 and pUnit.hillsAttackModifier() > 0 and iItems > 0:
 			iItems -= 1
 			target.append(pUnit)
-			iPrice = ( pUnit.hillsAttackModifier() * ( 80 + retSearch(caster) * 5 ) ) / 100
+			iPrice = ( pUnit.hillsAttackModifier() * ( 80 + cf.retSearch(caster) * 5 ) ) / 100
 			pPlayer.setGold( pPlayer.getGold() + iPrice )
 
 			sGameData = cPickle.loads(CyGameInstance.getScriptData())
@@ -3948,7 +3913,7 @@ def sellToMarket(caster):
 			CyGameInstance.setScriptData(cPickle.dumps(sGameData))
 			caster.changeExperience(1, -1, False, False, False)
 
-			sMsg = 'Your ' + caster.getName() + ' sells a ' + pUnit.getName() + ' for ' + str( iPrice ) + 'gp...  (Burglar Skill: '+str(retSearch(caster))+')'
+			sMsg = 'Your ' + caster.getName() + ' sells a ' + pUnit.getName() + ' for ' + str( iPrice ) + 'gp...  (Burglar Skill: '+str(cf.retSearch(caster))+')'
 			CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 			CyInterface().addCombatMessage(caster.getOwner(),sMsg)
 
@@ -4461,7 +4426,7 @@ def reqInteractCache(caster,mode):
 	pPlayer = gc.getPlayer(caster.getOwner())
 	iMult = 0
 
-	iSearch = retSearch(caster)
+	iSearch = cf.retSearch(caster)
 
 	if caster.plot().isCity():
 		pCity = caster.plot().getPlotCity()
@@ -4512,7 +4477,7 @@ def spellExamineCache(caster,mode):
 	bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
 	iMult = 0
 
-	iSearch = retSearch(caster)
+	iSearch = cf.retSearch(caster)
 
 	sName = 'here'
 	sPref = ''
