@@ -1614,17 +1614,17 @@ class CustomFunctions:
 						# Check for nobility and computer units
 						if checkRoom:
 							checkRoom = False
-							checkNoble = True
+							nobLevel = 0
 							for ii in range(pPlot.getNumUnits()):
 								oUnit = pPlot.getUnit(ii)
 								# The strongest noble adds room for units
-								if checkNoble:
-									if self.iNoble(oUnit) > 0:
-										checkNoble = False
-										roomFor += self.iNoble(oUnit)
+								if self.iNoble(oUnit) > nobLevel:
+									nobLevel = self.iNoble(oUnit)
 								# Computer units add room for themselves		
 								if not gc.getPlayer(oUnit.getOwner()).isHuman():
 									roomFor += 1
+							if nobLevel > 0:
+								roomFor += nobLevel
 						iDam = pPlot.getNumUnits() - roomFor
 						pUnit.doDamageNoCaster( iDam, 50, gc.getInfoTypeForString('DAMAGE_PHYSICAL'), false)
 						if crowdMessage:
