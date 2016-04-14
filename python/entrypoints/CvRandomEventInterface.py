@@ -8011,3 +8011,173 @@ def canInitial(argsList):
 			return true
 	return false
 
+def monument3(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	cf.pay(pCity,'BUILDING_MONUMENT',3,iPlayer,'monument')
+	
+def monument5(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	cf.pay(pCity,'BUILDING_MONUMENT',5,iPlayer,'monument')
+	
+def herbalist4(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	cf.pay(pCity,'BUILDING_HERBALIST',4,iPlayer,'herbalist')
+	
+def herbalist6(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	cf.pay(pCity,'BUILDING_HERBALIST',6,iPlayer,'herbalist')
+
+def herbalist20(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	cf.pay(pCity,'BUILDING_HERBALIST',20,iPlayer,'herbalist')
+
+def library3(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	cf.pay(pCity,'BUILDING_MAGE_GUILD',3,iPlayer,'library')
+	
+def mageguild5(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	cf.pay(pCity,'BUILDING_MAGE_GUILD',5,iPlayer,'mage guild')
+	
+def mageguild10(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	cf.pay(pCity,'BUILDING_MAGE_GUILD',10,iPlayer,'mage guild')
+	
+def mageguild25(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	cf.pay(pCity,'BUILDING_MAGE_GUILD',25,iPlayer,'mage guild')
+	
+def mageguild100(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	cf.pay(pCity,'BUILDING_MAGE_GUILD',100,iPlayer,'mage guild')
+	
+def trainingyard2(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	cf.pay(pCity,'BUILDING_TRAINING_YARD',2,iPlayer,'training yard')
+	
+def trainingyard6(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	pay(pCity,'BUILDING_TRAINING_YARD',6,iPlayer,'training yard')
+	
+def trainingyard10(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	pay(pCity,'BUILDING_TRAINING_YARD',10,iPlayer,'training yard')
+	
+def trainingyard25(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	pay(pCity,'BUILDING_TRAINING_YARD',25,iPlayer,'training yard')
+	
+def alchemylab5(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	pay(pCity,'BUILDING_ALCHEMY_LAB',5,iPlayer,'alchemy lab')
+	
+def alchemylab10(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	pay(pCity,'BUILDING_ALCHEMY_LAB',10,iPlayer,'alchemy lab')
+	
+def alchemylab25(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	pay(pCity,'BUILDING_ALCHEMY_LAB',25,iPlayer,'alchemy lab')
+	

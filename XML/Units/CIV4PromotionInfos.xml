@@ -18712,7 +18712,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/TechTree/Leaves.dds</Button>
+            <Button>Art/Interface/Buttons/TechTree/Medicine.dds</Button>
             <bBoarding>0</bBoarding>
             <bOnlyDefensive>0</bOnlyDefensive>
             <bDispellable>0</bDispellable>
@@ -19412,7 +19412,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/TechTree/Hunting.dds</Button>
+            <Button>Art/Interface/Buttons/TechTree/Medicine.dds</Button>
             <bBoarding>0</bBoarding>
             <bOnlyDefensive>0</bOnlyDefensive>
             <bDispellable>0</bDispellable>

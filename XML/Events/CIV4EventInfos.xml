@@ -54529,11 +54529,11 @@
             <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-15</iGold>
+            <iGold>-18</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-2</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -54573,7 +54573,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-6</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -54602,7 +54602,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>herbalist6</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo></PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -54634,7 +54634,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-4</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -54674,7 +54674,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-12</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -54703,7 +54703,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>alchemylab5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -54735,7 +54735,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-4</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -54775,7 +54775,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-12</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -54804,7 +54804,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>alchemylab5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -54832,7 +54832,7 @@
             <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-15</iGold>
+            <iGold>-18</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -54876,7 +54876,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-6</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -54905,7 +54905,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>herbalist6</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -54937,7 +54937,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-1</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -54977,7 +54977,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-2</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -55038,7 +55038,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-2</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -55078,7 +55078,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-4</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -55107,7 +55107,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>alchemylab5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -55139,7 +55139,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-4</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -55179,7 +55179,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-12</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -55208,7 +55208,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>alchemylab10</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -55240,7 +55240,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-2</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -55280,7 +55280,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-12</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -55309,7 +55309,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>alchemylab5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -55341,7 +55341,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-20</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -55381,7 +55381,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-20</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -55410,7 +55410,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>herbalist20</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>canBuyMinorImmortality</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -55442,7 +55442,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-4</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -55482,7 +55482,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-4</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -55511,7 +55511,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>monument3</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -55543,7 +55543,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-6</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -55566,7 +55566,7 @@
             </UnitCombatPromotions>
             <UnitClassPromotions>
             </UnitClassPromotions>
-            <BuildingClass>BUILDINGCLASS_ELDER_COUNCIL</BuildingClass>
+            <BuildingClass></BuildingClass>
             <iBuildingChange>0</iBuildingChange>
             <BuildingExtraYields>
             </BuildingExtraYields>
@@ -55583,7 +55583,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-4</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -55612,7 +55612,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>monument5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -55644,7 +55644,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-6</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -55684,7 +55684,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-2</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -55713,7 +55713,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>monument5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -55745,7 +55745,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-6</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -55785,7 +55785,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-2</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -55814,7 +55814,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>mageguild5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -55846,7 +55846,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-2</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -55886,7 +55886,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-2</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -55915,7 +55915,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>mageguild5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -55947,7 +55947,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-6</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -55987,7 +55987,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-2</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -56016,7 +56016,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>mageguild5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -56048,7 +56048,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-50</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -56088,7 +56088,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-8</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -56117,7 +56117,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>mageguild25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -56149,7 +56149,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-100</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -56189,7 +56189,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-60</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -56218,7 +56218,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>mageguild100</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo></PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -56250,7 +56250,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-20</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -56290,7 +56290,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-20</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -56319,7 +56319,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>mageguild25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -56351,7 +56351,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-50</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -56391,7 +56391,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-40</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -56420,7 +56420,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>mageguild25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -56452,7 +56452,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-50</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -56492,7 +56492,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-40</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -56521,7 +56521,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>mageguild25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -56553,7 +56553,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-4</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -56622,7 +56622,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>trainingyard2</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>canthrowaxes</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -56723,7 +56723,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>trainingyard25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo></PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -56755,7 +56755,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-100</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -56795,7 +56795,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-60</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -56824,7 +56824,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>trainingyard25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo></PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -56856,7 +56856,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-20</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -56925,7 +56925,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>trainingyard10</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo></PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -56957,7 +56957,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-25</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -57026,7 +57026,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>trainingyard6</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>canimprovedweapons</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -57058,7 +57058,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-50</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -57098,7 +57098,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-30</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -57127,7 +57127,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>trainingyard10</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>canheavyweapons</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -57159,7 +57159,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-35</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -57228,7 +57228,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>trainingyard6</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>canimprovedarmor</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -57260,7 +57260,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-75</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -57300,7 +57300,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-30</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -57329,7 +57329,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>trainingyard10</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>canheavyarmor</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -57361,7 +57361,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-25</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -57401,7 +57401,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-75</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -57430,7 +57430,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>alchemylab10</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo></PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -57462,7 +57462,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-50</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -57502,7 +57502,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-100</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -57531,7 +57531,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>alchemylab25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>canBuyImmortality</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -57563,7 +57563,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-50</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -57603,7 +57603,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-50</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -57632,7 +57632,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback></PythonCallback>
+            <PythonCallback>alchemylab25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo></PythonCanDo>
             <PythonHelp></PythonHelp>

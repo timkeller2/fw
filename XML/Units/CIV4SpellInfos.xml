@@ -9446,7 +9446,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/TechTree/Leaves.dds</Button>
+            <Button>Art/Interface/Buttons/TechTree/Medicine.dds</Button>
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_POTION_HEALING_MODERATE</Type>
@@ -9890,7 +9890,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/TechTree/Hunting.dds</Button>
+            <Button>Art/Interface/Buttons/TechTree/Medicine.dds</Button>
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_POTION_STRENGTH_ENDURING</Type>

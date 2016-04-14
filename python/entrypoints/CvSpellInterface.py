@@ -3708,6 +3708,9 @@ def reqBuilding(caster,sBuilding,sPromotion):
 	if pCity.isSettlement() == True:
 		return False
 
+	if cf.getObjectInt(pCity,sBuilding) > CyGame().getGameTurn(): 
+		return False
+	
 	return True
 
 def reqBecomeChief(caster):
@@ -4315,14 +4318,14 @@ def reqBuilding(caster,sBuilding,sPromotion):
 		return False
 
 	strCheckData = cPickle.loads(pCity.getScriptData())
-	if (sBuilding == 'BUILDING_CRAFTSMEN_GUILD' and strCheckData['BUILDING_CRAFTSMEN_GUILD'] > CyGame().getGameTurn()):
+	if (sBuilding == 'BUILDING_TRAINING_YARD' and strCheckData['BUILDING_TRAINING_YARD'] > CyGame().getGameTurn()):
 		return False
 	if (sBuilding == 'BUILDING_HERBALIST' and strCheckData['BUILDING_HERBALIST'] > CyGame().getGameTurn()):
 		return False
 	if (sBuilding == 'BUILDING_ALCHEMY_LAB' and strCheckData['BUILDING_ALCHEMY_LAB'] > CyGame().getGameTurn()):
 		return False
-#if (sBuilding == 'BUILDING_MAGE_GUILD' and strCheckData['BUILDING_MAGE_GUILD'] > CyGame().getGameTurn()):
-#	return False
+	if (sBuilding == 'BUILDING_MAGE_GUILD' and strCheckData['BUILDING_MAGE_GUILD'] > CyGame().getGameTurn()):
+		return False
 	if (sBuilding == 'BUILDING_LIBRARY' and strCheckData['BUILDING_LIBRARY'] > CyGame().getGameTurn()):
 		return False
 	if (sBuilding == 'BUILDING_TAVERN' and strCheckData['BUILDING_TAVERN'] > CyGame().getGameTurn()):
@@ -4354,25 +4357,6 @@ def reqLearnMagic(caster):
 
 	return True
 
-def pay(pCity,sBuilding,iCost,iPlayer,sDesc):
-	## Load City Stock
-	strSetData = cPickle.loads(pCity.getScriptData())
-	if strSetData[sBuilding] < CyGame().getGameTurn() - pCity.getPopulation() * 3:
-		strSetData[sBuilding] = CyGame().getGameTurn() - pCity.getPopulation() * 3
-
-	iCostMod = ( iCost * 10 ) / pCity.getPopulation()	
-		
-	strSetData[sBuilding] = strSetData[sBuilding] + iCostMod
-	pCity.setScriptData(cPickle.dumps(strSetData))
-
-	iStock = CyGame().getGameTurn() - strSetData[sBuilding]
-	iMaxStock = pCity.getPopulation() * 3
-	if iMaxStock < 1:
-		iMaxStock = 1
-	iPercent = ( iStock * 100 ) / iMaxStock
-	sMsg = 'The ' + sDesc + ' has roughly ' + str(iStock*3) + 'gp worth of stock remaining (' + str(iPercent) + '%)...'
-	CyInterface().addMessage(iPlayer,True,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
-
 def spellHireAdventurer(caster):
 	bPlayer = gc.getPlayer(caster.getOwner())
 	pCity = caster.plot().getPlotCity()
@@ -4385,7 +4369,7 @@ def spellHireAdventurer(caster):
 		newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sPatronType), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 		cf.unitAptitude(newUnit)
 
-	pay(pCity,'BUILDING_TAVERN',83,caster.getOwner(),'tavern')
+	cf.pay(pCity,'BUILDING_TAVERN',83,caster.getOwner(),'tavern')
 	
 def spellLearnMagic(caster):
 	pCity = caster.plot().getPlotCity()
@@ -4400,7 +4384,7 @@ def spellLearnMagic(caster):
 		iCost += 50
 
 	pPlayer.setGold( pPlayer.getGold() - iCost )
-	pay(pCity,'BUILDING_MAGE_GUILD',iCost/3,caster.getOwner(),'mage guild')
+	cf.pay(pCity,'BUILDING_MAGE_GUILD',iCost/3,caster.getOwner(),'mage guild')
 
 	caster.setPromotionReady(true)
 	caster.setLevel(caster.getLevel()-1)
