@@ -27,7 +27,7 @@
             <bImmuneToFirstStrikes>1</bImmuneToFirstStrikes>
             <Button>Art/Interface/Buttons/Promotions/AeronsChosen.dds</Button>
             <bImmuneToFear>1</bImmuneToFear>
-            <iCombatHealPercent>20</iCombatHealPercent>
+            <iCombatHealPercent>10</iCombatHealPercent>
             <iMinLevel>-1</iMinLevel>
             <DamageTypeCombats>
                 <DamageTypeCombat>
@@ -3721,6 +3721,10 @@
                     <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Guardsman.dds</Button>
             <bTargetWeakestUnitCounter>1</bTargetWeakestUnitCounter>
@@ -5173,6 +5177,10 @@
                 </UnitCombat>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
             </UnitCombats>
@@ -7690,6 +7698,7 @@
             <Button>Art/Interface/Buttons/Promotions/Undeadslaying.dds</Button>
             <PromotionCombatType>PROMOTION_UNDEAD</PromotionCombatType>
             <iPromotionCombatMod>40</iPromotionCombatMod>
+            <PromotionNextLevel>PROMOTION_UNDEAD_SLAYING2</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_UNHOLY_TAINT</Type>
@@ -12752,7 +12761,7 @@
             <Type>PROMOTION_UNDEAD_SLAYING2</Type>
             <Description>Undead Slaying II</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <PromotionPrereq>PROMOTION_COMBAT1</PromotionPrereq>
+            <PromotionPrereq>PROMOTION_UNDEAD_SLAYING</PromotionPrereq>
             <TechPrereq>TECH_WAY_OF_THE_WISE</TechPrereq>
             <UnitCombats>
                 <UnitCombat>
@@ -13014,10 +13023,6 @@
                 </UnitCombat>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-                    <bUnitCombat>1</bUnitCombat>
-                </UnitCombat>
-                <UnitCombat>
-                    <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
                 <UnitCombat>

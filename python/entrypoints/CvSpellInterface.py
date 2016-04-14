@@ -2271,14 +2271,24 @@ def reqRepair(caster):
 
 def spellRepair(caster,amount):
 	pPlot = caster.plot()
+	iL = caster.getLevel()
+	iNumHealed = 0
 	iGolem = gc.getInfoTypeForString('PROMOTION_GOLEM')
 	iNaval = gc.getInfoTypeForString('UNITCOMBAT_NAVAL')
 	iSiege = gc.getInfoTypeForString('UNITCOMBAT_SIEGE')
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
-		if (pUnit.getUnitCombatType() == iSiege or pUnit.getUnitCombatType() == iNaval or pUnit.isHasPromotion(iGolem)):
-			pUnit.changeDamage(-amount,0)
-
+		if (pUnit.getUnitCombatType() == iSiege or pUnit.getUnitCombatType() == iNaval or pUnit.isHasPromotion(iGolem)) and pUnit.getDamage() > 0:
+			iDefStr = pUnit.baseCombatStr()
+			if iDefStr < 1:
+				iDefStr = 1
+			iMod = ( iL * 20 ) / iDefStr
+			iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
+			pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
+			iNumHealed = iNumHealed + 1
+			if ( iNumHealed > iL ):
+				return
+			
 def reqRessurection(caster):
 	pPlayer = gc.getPlayer(caster.getOwner())
 	iHero = cf.getHero(pPlayer)

@@ -1626,10 +1626,11 @@ class CustomFunctions:
 							if nobLevel > 0:
 								roomFor += nobLevel
 						iDam = pPlot.getNumUnits() - roomFor
-						pUnit.doDamageNoCaster( iDam, 50, gc.getInfoTypeForString('DAMAGE_PHYSICAL'), false)
-						if crowdMessage:
-							CyInterface().addMessage(pUnit.getOwner(),False,25,"Overcrowding damage!",'',1,'Art/Interface/Buttons/Promotions/Demon.dds',ColorTypes(7),pPlot.getX(),pPlot.getY(),True,True)
-							crowdMessage = False
+						if iDam > 0:
+							pUnit.doDamageNoCaster( iDam, 50, gc.getInfoTypeForString('DAMAGE_PHYSICAL'), false)
+							if crowdMessage:
+								CyInterface().addMessage(pUnit.getOwner(),False,25,"Overcrowding damage!",'',1,'Art/Interface/Buttons/Promotions/Demon.dds',ColorTypes(7),pPlot.getX(),pPlot.getY(),True,True)
+								crowdMessage = False
 					# Injury damage
 					if pUnit.getDamage() > 0 and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_SIEGE'):
 						iDam = CyGame().getSorenRandNum( pUnit.getDamage(), "Injury Damage") / 5 - pUnit.getLevel()

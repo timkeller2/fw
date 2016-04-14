@@ -25,7 +25,7 @@ def canTriggerAeronsChosen(argsList):
 	kTriggeredData = argsList[0]
 	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
 	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
-	if pUnit.getLevel() < 8:
+	if pUnit.getLevel() < 10:
 		return False
 	return True
 
