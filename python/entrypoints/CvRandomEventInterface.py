@@ -6969,10 +6969,10 @@ def canCulture1(argsList):
 	if not pPlayer.isHuman():
 		return False
 		
-	if pCity.getCulture(iPlayer) < 6400:
+	if pCity.getCulture(iPlayer) < 100:
 		return False
 
-	if CyGame().getGameTurn() < 200:
+	if CyGame().getGameTurn() < 25:
 		return False
 
 	return True
@@ -6986,7 +6986,7 @@ def canCulture2(argsList):
 	if not pPlayer.isHuman():
 		return False
 		
-	if pCity.getCulture(iPlayer) < 400:
+	if pCity.getCulture(iPlayer) < 900:
 		return False
 
 	if CyGame().getGameTurn() < 50:
@@ -7003,7 +7003,7 @@ def canCulture3(argsList):
 	if not pPlayer.isHuman():
 		return False
 		
-	if pCity.getCulture(iPlayer) < 900:
+	if pCity.getCulture(iPlayer) < 2500:
 		return False
 
 	if CyGame().getGameTurn() < 75:
@@ -7020,7 +7020,7 @@ def canCulture4(argsList):
 	if not pPlayer.isHuman():
 		return False
 		
-	if pCity.getCulture(iPlayer) < 1600:
+	if pCity.getCulture(iPlayer) < 4900:
 		return False
 
 	if CyGame().getGameTurn() < 100:
@@ -7037,7 +7037,7 @@ def canCulture5(argsList):
 	if not pPlayer.isHuman():
 		return False
 		
-	if pCity.getCulture(iPlayer) < 2500:
+	if pCity.getCulture(iPlayer) < 8100:
 		return False
 
 	if CyGame().getGameTurn() < 125:
@@ -7054,7 +7054,7 @@ def canCulture6(argsList):
 	if not pPlayer.isHuman():
 		return False
 		
-	if pCity.getCulture(iPlayer) < 3600:
+	if pCity.getCulture(iPlayer) < 12100:
 		return False
 
 	if CyGame().getGameTurn() < 150:
@@ -7071,7 +7071,7 @@ def canCulture7(argsList):
 	if not pPlayer.isHuman():
 		return False
 		
-	if pCity.getCulture(iPlayer) < 4900:
+	if pCity.getCulture(iPlayer) < 16900:
 		return False
 
 	if CyGame().getGameTurn() < 175:
@@ -7265,7 +7265,7 @@ def doIE1(argsList):
 		sPD = {}
 
 	sPD['IE1'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doIE2(argsList):
 	iEvent = argsList[0]
@@ -7279,7 +7279,7 @@ def doIE2(argsList):
 		sPD = {}
 
 	sPD['IE2'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doIE3(argsList):
 	iEvent = argsList[0]
@@ -7293,7 +7293,7 @@ def doIE3(argsList):
 		sPD = {}
 
 	sPD['IE3'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doIE4(argsList):
 	iEvent = argsList[0]
@@ -7307,7 +7307,7 @@ def doIE4(argsList):
 		sPD = {}
 
 	sPD['IE4'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doIE5(argsList):
 	iEvent = argsList[0]
@@ -7321,7 +7321,7 @@ def doIE5(argsList):
 		sPD = {}
 
 	sPD['IE5'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doIE6(argsList):
 	iEvent = argsList[0]
@@ -7335,7 +7335,7 @@ def doIE6(argsList):
 		sPD = {}
 
 	sPD['IE6'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doIE7(argsList):
 	iEvent = argsList[0]
@@ -7349,7 +7349,7 @@ def doIE7(argsList):
 		sPD = {}
 
 	sPD['IE7'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doIE8(argsList):
 	iEvent = argsList[0]
@@ -7363,7 +7363,7 @@ def doIE8(argsList):
 		sPD = {}
 
 	sPD['IE8'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doIE9(argsList):
 	iEvent = argsList[0]
@@ -7377,7 +7377,7 @@ def doIE9(argsList):
 		sPD = {}
 
 	sPD['IE9'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doIE10(argsList):
 	iEvent = argsList[0]
@@ -7391,7 +7391,7 @@ def doIE10(argsList):
 		sPD = {}
 
 	sPD['IE10'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doIE11(argsList):
 	iEvent = argsList[0]
@@ -7405,7 +7405,7 @@ def doIE11(argsList):
 		sPD = {}
 
 	sPD['IE11'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doIE12(argsList):
 	iEvent = argsList[0]
@@ -7419,7 +7419,7 @@ def doIE12(argsList):
 		sPD = {}
 
 	sPD['IE12'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doIE13(argsList):
 	iEvent = argsList[0]
@@ -7433,7 +7433,7 @@ def doIE13(argsList):
 		sPD = {}
 
 	sPD['IE13'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doIE14(argsList):
 	iEvent = argsList[0]
@@ -7447,7 +7447,7 @@ def doIE14(argsList):
 		sPD = {}
 
 	sPD['IE14'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doEP1(argsList):
 	iEvent = argsList[0]
@@ -7461,7 +7461,7 @@ def doEP1(argsList):
 		sPD = {}
 
 	sPD['EP1'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doEP2(argsList):
 	iEvent = argsList[0]
@@ -7475,7 +7475,7 @@ def doEP2(argsList):
 		sPD = {}
 
 	sPD['EP2'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doEP3(argsList):
 	iEvent = argsList[0]
@@ -7489,7 +7489,7 @@ def doEP3(argsList):
 		sPD = {}
 
 	sPD['EP3'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doEP4(argsList):
 	iEvent = argsList[0]
@@ -7503,7 +7503,7 @@ def doEP4(argsList):
 		sPD = {}
 
 	sPD['EP4'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doEP5(argsList):
 	iEvent = argsList[0]
@@ -7517,7 +7517,7 @@ def doEP5(argsList):
 		sPD = {}
 
 	sPD['EP5'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doEP6(argsList):
 	iEvent = argsList[0]
@@ -7531,7 +7531,7 @@ def doEP6(argsList):
 		sPD = {}
 
 	sPD['EP6'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doEP7(argsList):
 	iEvent = argsList[0]
@@ -7545,7 +7545,7 @@ def doEP7(argsList):
 		sPD = {}
 
 	sPD['EP7'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doEP8(argsList):
 	iEvent = argsList[0]
@@ -7559,7 +7559,7 @@ def doEP8(argsList):
 		sPD = {}
 
 	sPD['EP8'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doEP9(argsList):
 	iEvent = argsList[0]
@@ -7573,7 +7573,7 @@ def doEP9(argsList):
 		sPD = {}
 
 	sPD['EP9'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doEP10(argsList):
 	iEvent = argsList[0]
@@ -7587,7 +7587,7 @@ def doEP10(argsList):
 		sPD = {}
 
 	sPD['EP10'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def doEP11(argsList):
 	iEvent = argsList[0]
@@ -7601,7 +7601,7 @@ def doEP11(argsList):
 		sPD = {}
 
 	sPD['EP11'] = 1
-	pPlayer.setScriptData(cPickle.dumps(sPD))
+	#pPlayer.setScriptData(cPickle.dumps(sPD))
 
 def canIE1(argsList):
 	iEvent = argsList[0]
@@ -8005,9 +8005,9 @@ def canEP11(argsList):
 
 def canInitial(argsList):
 	iGameTurn = CyGame().getGameTurn()
-	iCycle = 15
-	for i in range(7):
-		if (i * iCycle) + 10 == iGameTurn:
+	iCycle = 4
+	for i in range(8):
+		if (i * i * iCycle) + 7 == iGameTurn:
 			return true
 	return false
 

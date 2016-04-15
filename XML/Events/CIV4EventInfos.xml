@@ -57778,7 +57778,7 @@
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
             <UnitClass>UNITCLASS_WORKER</UnitClass>
-            <iNumFreeUnits>2</iNumFreeUnits>
+            <iNumFreeUnits>3</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
@@ -57864,7 +57864,7 @@
             <bDeclareWar>0</bDeclareWar>
             <iGold>300</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
-            <iRandomGold>150</iRandomGold>
+            <iRandomGold>250</iRandomGold>
             <iCulture>0</iCulture>
             <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
@@ -57980,7 +57980,7 @@
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
             <UnitClass>UNITCLASS_WARRIOR</UnitClass>
-            <iNumFreeUnits>3</iNumFreeUnits>
+            <iNumFreeUnits>4</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
@@ -58081,7 +58081,7 @@
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
             <UnitClass>UNITCLASS_CATAPULT</UnitClass>
-            <iNumFreeUnits>1</iNumFreeUnits>
+            <iNumFreeUnits>3</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
@@ -58384,7 +58384,7 @@
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
             <UnitClass>UNITCLASS_GALLEY</UnitClass>
-            <iNumFreeUnits>2</iNumFreeUnits>
+            <iNumFreeUnits>3</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
@@ -58586,7 +58586,7 @@
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
             <UnitClass>UNITCLASS_ANGEL</UnitClass>
-            <iNumFreeUnits>1</iNumFreeUnits>
+            <iNumFreeUnits>2</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
@@ -58888,7 +58888,7 @@
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
-            <UnitClass>UNITCLASS_HORSEMAN</UnitClass>
+            <UnitClass>UNITCLASS_WARRIOR</UnitClass>
             <iNumFreeUnits>1</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
@@ -59899,7 +59899,7 @@
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
             <UnitClass>EQUIPMENTCLASS_SCROLL_MM</UnitClass>
-            <iNumFreeUnits>10</iNumFreeUnits>
+            <iNumFreeUnits>12</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
