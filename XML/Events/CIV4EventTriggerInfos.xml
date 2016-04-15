@@ -32182,7 +32182,7 @@
             <PrereqTrait>NONE</PrereqTrait>
         </EventTriggerInfo>
         <EventTriggerInfo>
-            <Type>EVENTTRIGGER_GOLD_1000</Type>
+            <Type>EVENTTRIGGER_GOLD_1500</Type>
             <WorldNewsTexts>
                 <Text>The %s1_civ_adjective civilization has an impressive treasury.  This feat attracts talented adventurers and their followers.</Text>
             </WorldNewsTexts>
@@ -32198,7 +32198,7 @@
             <bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
             <bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
             <Civic>NONE</Civic>
-            <iMinTreasury>1000</iMinTreasury>
+            <iMinTreasury>1500</iMinTreasury>
             <iMinPopulation>3</iMinPopulation>
             <iMaxPopulation>0</iMaxPopulation>
             <iMinMapLandmass>0</iMinMapLandmass>
@@ -32291,7 +32291,7 @@
             <PrereqTrait>NONE</PrereqTrait>
         </EventTriggerInfo>
         <EventTriggerInfo>
-            <Type>EVENTTRIGGER_GOLD_500</Type>
+            <Type>EVENTTRIGGER_GOLD_3750</Type>
             <WorldNewsTexts>
                 <Text>The %s1_civ_adjective civilization has an impressive treasury.  This feat attracts talented adventurers and their followers.</Text>
             </WorldNewsTexts>
@@ -32307,7 +32307,7 @@
             <bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
             <bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
             <Civic>NONE</Civic>
-            <iMinTreasury>500</iMinTreasury>
+            <iMinTreasury>3750</iMinTreasury>
             <iMinPopulation>3</iMinPopulation>
             <iMaxPopulation>0</iMaxPopulation>
             <iMinMapLandmass>0</iMinMapLandmass>
