@@ -4169,7 +4169,6 @@ def reqCreateBuccaneer(caster):
 
 	iCount = pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_FRIGATE'))
 	iCount += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_BLACK_WIND'))
-	iCount += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_DRAGONSHIP'))
 	iCount += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_TRIREME'))
 	iCount += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_CARAVEL'))
 	iCount += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_GALLEON'))
@@ -4384,7 +4383,7 @@ def spellLearnMagic(caster):
 		iCost += 50
 
 	pPlayer.setGold( pPlayer.getGold() - iCost )
-	cf.pay(pCity,'BUILDING_MAGE_GUILD',iCost/3,caster.getOwner(),'mage guild')
+	cf.pay(pCity,'BUILDING_MAGE_GUILD',iCost/2,caster.getOwner(),'mage guild')
 
 	caster.setPromotionReady(true)
 	caster.setLevel(caster.getLevel()-1)
