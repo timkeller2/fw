@@ -2328,6 +2328,13 @@ class CustomFunctions:
 					else:
 						iRoadTax[pPlot.getOwner()] = -4
 
+				## Check for Jungle Haunt Expiration
+				if pPlot.getImprovementType() == gc.getInfoTypeForString('IMPROVEMENT_JUNGLE_FARM'): 
+					if pPlayer.getCivilizationType() != gc.getInfoTypeForString('CIVILIZATION_CLAN_OF_EMBERS') or pPlot.getFeatureType() != iJungle:
+						if CyGame().getSorenRandNum(100, "Haunt Expiration") < 5 or pPlot.getFeatureType() != iJungle:
+							pPlot.setImprovementType(-1)
+							CyInterface().addMessage(pPlot.getOwner(),false,25,'A jungle haunt is overtaken by the jungle...','AS2D_CHARM_PERSON',1,'Art/Interface/Buttons/Spells/Ressurection.dds',ColorTypes(7),pPlot.getX(),pPlot.getY(),True,True)
+
 				if pPlayer.getCivilizationType() == iInfernal:
 					pPlot.changePlotCounter(100)
 					bUntouched = false

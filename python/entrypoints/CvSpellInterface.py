@@ -2178,6 +2178,8 @@ def spellRecruit(caster):
 
 def reqRecruitMercenary(caster):
 	pPlayer = gc.getPlayer(caster.getOwner())
+	if cf.getObjectInt(caster.plot().getPlotCity(),'RecruitMerc') >= CyGame().getGameTurn():
+		return False
 	if pPlayer.isHuman() == False:
 		pPlot = caster.plot()
 		if pPlayer.getCivilizationType() == gc.getInfoTypeForString('CIVILIZATION_KHAZAD'):
@@ -2207,7 +2209,9 @@ def spellRecruitMercenary(caster):
 	newUnit.setHasCasted(True)
 	if caster.getUnitType() == gc.getInfoTypeForString('UNIT_MAGNADINE'):
 		newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LOYALTY'), True)
-
+	# One per turn	
+	cf.setObjectInt(caster.plot().getPlotCity(),'RecruitMerc',CyGame().getGameTurn())
+	
 def spellReleaseFromCage(caster):
 	pPlot = caster.plot()
 	pPlot.setImprovementType(-1)

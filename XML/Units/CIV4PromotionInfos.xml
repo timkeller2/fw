@@ -6043,9 +6043,10 @@
             <Description>TXT_KEY_EQUIPMENT_ORTHUSS_AXE</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
-            <bBlitz>1</bBlitz>
             <Button>Art/Interface/Buttons/Equipment/Orthussaxe.dds</Button>
             <bEquipment>1</bEquipment>
+            <iExtraCombatStr>2</iExtraCombatStr>
+            <iExtraCombatDefense>0</iExtraCombatDefense>
             <DamageTypeCombats>
                 <DamageTypeCombat>
                     <DamageType>DAMAGE_FIRE</DamageType>
