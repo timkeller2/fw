@@ -6651,7 +6651,7 @@
                     </TechYields>
                 </TechYieldChange>
                 <TechYieldChange>
-                    <PrereqTech>TECH_TRACKING</PrereqTech>
+                    <PrereqTech>TECH_FERAL_BOND</PrereqTech>
                     <TechYields>
                         <iYield>1</iYield>
                         <iYield>0</iYield>
@@ -6670,6 +6670,7 @@
             <RouteYieldChanges>
             </RouteYieldChanges>
             <bGraphicalOnly>0</bGraphicalOnly>
+            <bRequiresPeak>0</bRequiresPeak>
             <bUnique>0</bUnique>
             <iAppearanceProbability>250</iAppearanceProbability>
             <iHealRateChange>0</iHealRateChange>

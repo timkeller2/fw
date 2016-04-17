@@ -940,13 +940,14 @@ def spellDestroyUndead(caster):
 def reqDispelMagic(caster):
 	if caster.canDispel(gc.getInfoTypeForString('SPELL_DISPEL_MAGIC')):
 		return True
-	pPlot = caster.plot()
-	if pPlot.getBonusType(-1) != -1:
-		if gc.getBonusInfo(pPlot.getBonusType(-1)).getBonusClassType() == gc.getInfoTypeForString('BONUSCLASS_MANA'):
-			if pPlot.getImprovementType() == -1:
-				return True
-			if gc.getImprovementInfo(pPlot.getImprovementType()).isPermanent() == False:
-				return True
+	# MTK- don't reset mana nodes	
+	# pPlot = caster.plot()
+	# if pPlot.getBonusType(-1) != -1:
+		# if gc.getBonusInfo(pPlot.getBonusType(-1)).getBonusClassType() == gc.getInfoTypeForString('BONUSCLASS_MANA'):
+			# if pPlot.getImprovementType() == -1:
+				# return True
+			# if gc.getImprovementInfo(pPlot.getImprovementType()).isPermanent() == False:
+				# return True
 	return False
 
 def spellDispelMagic(caster):
@@ -4385,9 +4386,13 @@ def spellLearnMagic(caster):
 		iCost += 50
 	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3')):
 		iCost += 50
+		
+	iStock = iCost / 3
+	if iStock < 25:
+		iStock = 25
 
 	pPlayer.setGold( pPlayer.getGold() - iCost )
-	cf.pay(pCity,'BUILDING_MAGE_GUILD',iCost/2,caster.getOwner(),'mage guild')
+	cf.pay(pCity,'BUILDING_MAGE_GUILD',iStock,caster.getOwner(),'mage guild')
 
 	caster.setPromotionReady(true)
 	caster.setLevel(caster.getLevel()-1)

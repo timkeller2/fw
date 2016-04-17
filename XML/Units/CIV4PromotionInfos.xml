@@ -451,6 +451,12 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <bImmuneToFirstStrikes>1</bImmuneToFirstStrikes>
+            <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                    <iUnitCombatMod>25</iUnitCombatMod>
+                </UnitCombatMod>
+            </UnitCombatMods>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
@@ -3122,6 +3128,7 @@
             <TechPrereq>TECH_NEVER</TechPrereq>
             <iMovesChange>1</iMovesChange>
             <iWithdrawalChange>25</iWithdrawalChange>
+			<iCombatPercent>20</iCombatPercent>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_NAVAL</UnitCombatType>
@@ -3131,6 +3138,7 @@
             <Button>Art/Interface/Buttons/Promotions/Fairwinds.dds</Button>
             <bDispellable>1</bDispellable>
             <iAIWeight>50</iAIWeight>
+			<iCombatPercentDefense>20</iCombatPercentDefense>
             <iExpireChance>5</iExpireChance>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
@@ -3715,7 +3723,7 @@
             <Type>PROMOTION_GUARDSMAN</Type>
             <Description>TXT_KEY_PROMOTION_GUARDSMAN</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <PromotionPrereq>PROMOTION_COMBAT4</PromotionPrereq>
+            <PromotionPrereq>PROMOTION_COMBAT2</PromotionPrereq>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
@@ -3727,8 +3735,6 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Guardsman.dds</Button>
-            <bTargetWeakestUnitCounter>1</bTargetWeakestUnitCounter>
-            <iBetterDefenderThanPercent>100</iBetterDefenderThanPercent>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_GUERILLA1</Type>
@@ -5199,15 +5205,14 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>,Art/Interface/Buttons/Promotions/Medic1.dds,Art/Interface/Buttons/Promotions_Atlas.dds,3,4</Button>
-            <PromotionNextLevel>PROMOTION_MEDIC2</PromotionNextLevel>
+            <PromotionNextLevel>PROMOTION_MEDIC1</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_MEDIC1</Type>
             <Description>TXT_KEY_PROMOTION_MEDIC1</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <TechPrereq>TECH_NEVER</TechPrereq>
+            <PromotionPrereq>PROMOTION_FIELD_MEDIC1</PromotionPrereq>
             <iSameTileHealChange>5</iSameTileHealChange>
-            <iAdjacentTileHealChange>3</iAdjacentTileHealChange>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
@@ -5253,6 +5258,7 @@
             <Description>TXT_KEY_PROMOTION_MEDIC3</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_MEDIC2</PromotionPrereq>
+            <TechPrereq>TECH_NEVER</TechPrereq>
             <iSameTileHealChange>15</iSameTileHealChange>
             <iAdjacentTileHealChange>15</iAdjacentTileHealChange>
             <Button>Art/Interface/Buttons/Promotions/Medic3.dds</Button>
@@ -6030,6 +6036,7 @@
             <Button>Art/Interface/Buttons/Promotions/Orc.dds</Button>
             <bRace>1</bRace>
             <iWorkRateModify>-10</iWorkRateModify>
+            <iCombatHealPercent>3</iCombatHealPercent>
             <UnitArtStyleType>UNIT_ARTSTYLE_ORC</UnitArtStyleType>
             <DamageTypeResists>
                 <DamageTypeResist>
@@ -7776,9 +7783,10 @@
             <iFriendlyHealChange>3</iFriendlyHealChange>
             <iCombatPercent>10</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/Vampire.dds</Button>
+            <iCombatHealPercent>10</iCombatHealPercent>
             <iCombatPercentDefense>10</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-        </PromotionInfo>
+       </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_VILE_TOUCH</Type>
             <Description>TXT_KEY_PROMOTION_VILE_TOUCH</Description>
@@ -8259,6 +8267,44 @@
             <Button>,Art/Interface/Buttons/Promotions/Woodsman2.dds,Art/Interface/Buttons/Promotions_Atlas.dds,7,6</Button>
         </PromotionInfo>
         <PromotionInfo>
+			<Type>PROMOTION_DEVOUR</Type>
+            <Description>Devour</Description>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <PromotionPrereq>PROMOTION_COMBAT2</PromotionPrereq>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_BEAST</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/Cannibalize.dds</Button>
+            <bMutation>1</bMutation>
+            <iCombatHealPercent>15</iCombatHealPercent>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_GUARDING</Type>
+            <Description>Guarding</Description>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <TechPrereq>TECH_NEVER</TechPrereq>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/Guardsman.dds</Button>
+            <bTargetWeakestUnitCounter>1</bTargetWeakestUnitCounter>
+            <iBetterDefenderThanPercent>100</iBetterDefenderThanPercent>
+        </PromotionInfo>
+        <PromotionInfo>
             <Type>PROMOTION_CHIEF</Type>
             <Description>Chief</Description>
             <Help>A 5th level unit may be promoted to chief for every 10 units you have of the same type.  A chief may give command morale to units of his same type up to his level within level/8 range.  This promotion will vanish when this unit is upgraded.</Help>
@@ -8385,6 +8431,150 @@
             <PromotionPrereqOr3>NONE</PromotionPrereqOr3>
             <PromotionPrereqOr4>NONE</PromotionPrereqOr4>
             <PromotionPrereqAnd>NONE</PromotionPrereqAnd>
+            <PromotionNextLevel>NONE</PromotionNextLevel>
+            <PyPerTurn></PyPerTurn>
+            <iGroupSize>0</iGroupSize>
+            <UnitArtStyleType>NONE</UnitArtStyleType>
+            <PromotionCombatType>NONE</PromotionCombatType>
+            <iPromotionCombatMod>0</iPromotionCombatMod>
+            <DamageTypeCombats>
+            </DamageTypeCombats>
+            <BonusAffinities>
+            </BonusAffinities>
+            <DamageTypeResists>
+            </DamageTypeResists>
+        </PromotionInfo>
+        <PromotionInfo>
+			<Type>PROMOTION_DIRE</Type>
+            <Description>Dire</Description>
+            <Help></Help>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <LayerAnimationPath>NONE</LayerAnimationPath>
+            <PromotionPrereq>PROMOTION_COMBAT5</PromotionPrereq>
+            <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
+            <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
+            <TechPrereq>TECH_FERAL_BOND</TechPrereq>
+            <StateReligionPrereq>NONE</StateReligionPrereq>
+            <bLeader>0</bLeader>
+            <bBlitz>1</bBlitz>
+            <bAmphib>0</bAmphib>
+            <bRiver>0</bRiver>
+            <bEnemyRoute>0</bEnemyRoute>
+            <bAlwaysHeal>1</bAlwaysHeal>
+            <bHillsDoubleMove>0</bHillsDoubleMove>
+            <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
+            <iVisibilityChange>0</iVisibilityChange>
+            <iMovesChange>0</iMovesChange>
+            <iMoveDiscountChange>0</iMoveDiscountChange>
+            <iAirRangeChange>0</iAirRangeChange>
+            <iInterceptChange>0</iInterceptChange>
+            <iEvasionChange>0</iEvasionChange>
+            <iWithdrawalChange>0</iWithdrawalChange>
+            <iCargoChange>0</iCargoChange>
+            <iCollateralDamageChange>0</iCollateralDamageChange>
+            <iBombardRateChange>0</iBombardRateChange>
+            <iFirstStrikesChange>0</iFirstStrikesChange>
+            <iChanceFirstStrikesChange>0</iChanceFirstStrikesChange>
+            <iEnemyHealChange>0</iEnemyHealChange>
+            <iNeutralHealChange>0</iNeutralHealChange>
+            <iFriendlyHealChange>0</iFriendlyHealChange>
+            <iSameTileHealChange>0</iSameTileHealChange>
+            <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
+            <iCombatPercent>0</iCombatPercent>
+            <iCityAttack>0</iCityAttack>
+            <iCityDefense>0</iCityDefense>
+            <iHillsAttack>0</iHillsAttack>
+            <iHillsDefense>0</iHillsDefense>
+            <iKamikazePercent>0</iKamikazePercent>
+            <iRevoltProtection>0</iRevoltProtection>
+            <iCollateralDamageProtection>0</iCollateralDamageProtection>
+            <iPillageChange>0</iPillageChange>
+            <iUpgradeDiscount>0</iUpgradeDiscount>
+            <iExperiencePercent>0</iExperiencePercent>
+            <TerrainAttacks>
+            </TerrainAttacks>
+            <TerrainDefenses>
+            </TerrainDefenses>
+            <FeatureAttacks>
+            </FeatureAttacks>
+            <FeatureDefenses>
+            </FeatureDefenses>
+            <UnitCombatMods>
+            </UnitCombatMods>
+            <DomainMods>
+            </DomainMods>
+            <TerrainDoubleMoves>
+            </TerrainDoubleMoves>
+            <FeatureDoubleMoves>
+            </FeatureDoubleMoves>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <HotKey></HotKey>
+            <bAltDown>0</bAltDown>
+            <bShiftDown>0</bShiftDown>
+            <bCtrlDown>0</bCtrlDown>
+            <bGraphicalOnly>0</bGraphicalOnly>
+            <iHotKeyPriority>0</iHotKeyPriority>
+            <Button>Art/Interface/Buttons/Promotions/Strong.dds</Button>
+            <bBoarding>0</bBoarding>
+            <bOnlyDefensive>0</bOnlyDefensive>
+            <bDispellable>1</bDispellable>
+            <bDoubleFortifyBonus>0</bDoubleFortifyBonus>
+            <bEquipment>0</bEquipment>
+            <bFear>0</bFear>
+            <bFlying>0</bFlying>
+            <bHiddenNationality>0</bHiddenNationality>
+            <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
+            <bImmortal>0</bImmortal>
+            <bImmuneToCapture>0</bImmuneToCapture>
+            <bImmuneToFear>0</bImmuneToFear>
+            <bImmuneToMagic>0</bImmuneToMagic>
+            <bInvisible>0</bInvisible>
+            <bMutation>0</bMutation>
+            <bNotAlive>0</bNotAlive>
+            <bPrereqAlive>0</bPrereqAlive>
+            <bRace>0</bRace>
+            <bRemovedByCasting>0</bRemovedByCasting>
+            <bRemovedByCombat>0</bRemovedByCombat>
+            <bRemovedWhenHealed>0</bRemovedWhenHealed>
+            <bTargetWeakestUnit>0</bTargetWeakestUnit>
+            <bTargetWeakestUnitCounter>0</bTargetWeakestUnitCounter>
+            <bTwincast>0</bTwincast>
+            <bValidate>0</bValidate>
+            <bWaterWalking>0</bWaterWalking>
+            <iAIWeight>100</iAIWeight>
+            <iBetrayalChance>0</iBetrayalChance>
+            <iBetterDefenderThanPercent>0</iBetterDefenderThanPercent>
+            <iCasterResistModify>0</iCasterResistModify>
+            <iCombatCapturePercent>0</iCombatCapturePercent>
+            <iCombatHealPercent>0</iCombatHealPercent>
+            <iCombatPercentDefense>0</iCombatPercentDefense>
+            <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
+            <iCombatPercentInBorders>0</iCombatPercentInBorders>
+            <iExpireChance>0</iExpireChance>
+            <iExtraCombatStr>6</iExtraCombatStr>
+            <iExtraCombatDefense>6</iExtraCombatDefense>
+            <iFreeXPPerTurn>0</iFreeXPPerTurn>
+            <iFreeXPFromCombat>0</iFreeXPFromCombat>
+            <iModifyGlobalCounter>0</iModifyGlobalCounter>
+            <iResistMagic>0</iResistMagic>
+            <iSpellCasterXP>0</iSpellCasterXP>
+            <iSpellDamageModify>0</iSpellDamageModify>
+            <CaptureUnitCombat>NONE</CaptureUnitCombat>
+            <PromotionCombatApply>NONE</PromotionCombatApply>
+            <PromotionImmune1>NONE</PromotionImmune1>
+            <PromotionImmune2>NONE</PromotionImmune2>
+            <PromotionImmune3>NONE</PromotionImmune3>
+            <PromotionRandomApply>NONE</PromotionRandomApply>
+            <PromotionSummonPerk>NONE</PromotionSummonPerk>
+            <BonusPrereq>NONE</BonusPrereq>
+            <PromotionPrereqOr3>NONE</PromotionPrereqOr3>
+            <PromotionPrereqOr4>NONE</PromotionPrereqOr4>
+            <PromotionPrereqAnd>PROMOTION_MOBILITY2</PromotionPrereqAnd>
             <PromotionNextLevel>NONE</PromotionNextLevel>
             <PyPerTurn></PyPerTurn>
             <iGroupSize>0</iGroupSize>
@@ -20033,150 +20223,6 @@
             <PromotionPrereqOr3>NONE</PromotionPrereqOr3>
             <PromotionPrereqOr4>NONE</PromotionPrereqOr4>
             <PromotionPrereqAnd>NONE</PromotionPrereqAnd>
-            <PromotionNextLevel>NONE</PromotionNextLevel>
-            <PyPerTurn></PyPerTurn>
-            <iGroupSize>0</iGroupSize>
-            <UnitArtStyleType>NONE</UnitArtStyleType>
-            <PromotionCombatType>NONE</PromotionCombatType>
-            <iPromotionCombatMod>0</iPromotionCombatMod>
-            <DamageTypeCombats>
-            </DamageTypeCombats>
-            <BonusAffinities>
-            </BonusAffinities>
-            <DamageTypeResists>
-            </DamageTypeResists>
-        </PromotionInfo>
-        <PromotionInfo>
-            <Type>PROMOTION_DIRE</Type>
-            <Description>Dire</Description>
-            <Help></Help>
-            <Sound>AS2D_IF_LEVELUP</Sound>
-            <LayerAnimationPath>NONE</LayerAnimationPath>
-            <PromotionPrereq>PROMOTION_COMBAT5</PromotionPrereq>
-            <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
-            <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
-            <TechPrereq>TECH_FERAL_BOND</TechPrereq>
-            <StateReligionPrereq>NONE</StateReligionPrereq>
-            <bLeader>0</bLeader>
-            <bBlitz>1</bBlitz>
-            <bAmphib>0</bAmphib>
-            <bRiver>0</bRiver>
-            <bEnemyRoute>0</bEnemyRoute>
-            <bAlwaysHeal>1</bAlwaysHeal>
-            <bHillsDoubleMove>0</bHillsDoubleMove>
-            <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
-            <iVisibilityChange>0</iVisibilityChange>
-            <iMovesChange>0</iMovesChange>
-            <iMoveDiscountChange>0</iMoveDiscountChange>
-            <iAirRangeChange>0</iAirRangeChange>
-            <iInterceptChange>0</iInterceptChange>
-            <iEvasionChange>0</iEvasionChange>
-            <iWithdrawalChange>0</iWithdrawalChange>
-            <iCargoChange>0</iCargoChange>
-            <iCollateralDamageChange>0</iCollateralDamageChange>
-            <iBombardRateChange>0</iBombardRateChange>
-            <iFirstStrikesChange>0</iFirstStrikesChange>
-            <iChanceFirstStrikesChange>0</iChanceFirstStrikesChange>
-            <iEnemyHealChange>0</iEnemyHealChange>
-            <iNeutralHealChange>0</iNeutralHealChange>
-            <iFriendlyHealChange>0</iFriendlyHealChange>
-            <iSameTileHealChange>0</iSameTileHealChange>
-            <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>0</iCombatPercent>
-            <iCityAttack>0</iCityAttack>
-            <iCityDefense>0</iCityDefense>
-            <iHillsAttack>0</iHillsAttack>
-            <iHillsDefense>0</iHillsDefense>
-            <iKamikazePercent>0</iKamikazePercent>
-            <iRevoltProtection>0</iRevoltProtection>
-            <iCollateralDamageProtection>0</iCollateralDamageProtection>
-            <iPillageChange>0</iPillageChange>
-            <iUpgradeDiscount>0</iUpgradeDiscount>
-            <iExperiencePercent>0</iExperiencePercent>
-            <TerrainAttacks>
-            </TerrainAttacks>
-            <TerrainDefenses>
-            </TerrainDefenses>
-            <FeatureAttacks>
-            </FeatureAttacks>
-            <FeatureDefenses>
-            </FeatureDefenses>
-            <UnitCombatMods>
-            </UnitCombatMods>
-            <DomainMods>
-            </DomainMods>
-            <TerrainDoubleMoves>
-            </TerrainDoubleMoves>
-            <FeatureDoubleMoves>
-            </FeatureDoubleMoves>
-            <UnitCombats>
-                <UnitCombat>
-                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-                    <bUnitCombat>1</bUnitCombat>
-                </UnitCombat>
-            </UnitCombats>
-            <HotKey></HotKey>
-            <bAltDown>0</bAltDown>
-            <bShiftDown>0</bShiftDown>
-            <bCtrlDown>0</bCtrlDown>
-            <bGraphicalOnly>0</bGraphicalOnly>
-            <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Promotions/Strong.dds</Button>
-            <bBoarding>0</bBoarding>
-            <bOnlyDefensive>0</bOnlyDefensive>
-            <bDispellable>1</bDispellable>
-            <bDoubleFortifyBonus>0</bDoubleFortifyBonus>
-            <bEquipment>0</bEquipment>
-            <bFear>0</bFear>
-            <bFlying>0</bFlying>
-            <bHiddenNationality>0</bHiddenNationality>
-            <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
-            <bImmortal>0</bImmortal>
-            <bImmuneToCapture>0</bImmuneToCapture>
-            <bImmuneToFear>0</bImmuneToFear>
-            <bImmuneToMagic>0</bImmuneToMagic>
-            <bInvisible>0</bInvisible>
-            <bMutation>0</bMutation>
-            <bNotAlive>0</bNotAlive>
-            <bPrereqAlive>0</bPrereqAlive>
-            <bRace>0</bRace>
-            <bRemovedByCasting>0</bRemovedByCasting>
-            <bRemovedByCombat>0</bRemovedByCombat>
-            <bRemovedWhenHealed>0</bRemovedWhenHealed>
-            <bTargetWeakestUnit>0</bTargetWeakestUnit>
-            <bTargetWeakestUnitCounter>0</bTargetWeakestUnitCounter>
-            <bTwincast>0</bTwincast>
-            <bValidate>0</bValidate>
-            <bWaterWalking>0</bWaterWalking>
-            <iAIWeight>100</iAIWeight>
-            <iBetrayalChance>0</iBetrayalChance>
-            <iBetterDefenderThanPercent>0</iBetterDefenderThanPercent>
-            <iCasterResistModify>0</iCasterResistModify>
-            <iCombatCapturePercent>0</iCombatCapturePercent>
-            <iCombatHealPercent>0</iCombatHealPercent>
-            <iCombatPercentDefense>0</iCombatPercentDefense>
-            <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
-            <iCombatPercentInBorders>0</iCombatPercentInBorders>
-            <iExpireChance>0</iExpireChance>
-            <iExtraCombatStr>6</iExtraCombatStr>
-            <iExtraCombatDefense>6</iExtraCombatDefense>
-            <iFreeXPPerTurn>0</iFreeXPPerTurn>
-            <iFreeXPFromCombat>0</iFreeXPFromCombat>
-            <iModifyGlobalCounter>0</iModifyGlobalCounter>
-            <iResistMagic>0</iResistMagic>
-            <iSpellCasterXP>0</iSpellCasterXP>
-            <iSpellDamageModify>0</iSpellDamageModify>
-            <CaptureUnitCombat>NONE</CaptureUnitCombat>
-            <PromotionCombatApply>NONE</PromotionCombatApply>
-            <PromotionImmune1>NONE</PromotionImmune1>
-            <PromotionImmune2>NONE</PromotionImmune2>
-            <PromotionImmune3>NONE</PromotionImmune3>
-            <PromotionRandomApply>NONE</PromotionRandomApply>
-            <PromotionSummonPerk>NONE</PromotionSummonPerk>
-            <BonusPrereq>NONE</BonusPrereq>
-            <PromotionPrereqOr3>NONE</PromotionPrereqOr3>
-            <PromotionPrereqOr4>NONE</PromotionPrereqOr4>
-            <PromotionPrereqAnd>PROMOTION_MOBILITY2</PromotionPrereqAnd>
             <PromotionNextLevel>NONE</PromotionNextLevel>
             <PyPerTurn></PyPerTurn>
             <iGroupSize>0</iGroupSize>
