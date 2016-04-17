@@ -1583,13 +1583,12 @@ class CustomFunctions:
 		iGameTurn = CyGame().getGameTurn()
 		iJungle = gc.getInfoTypeForString('FEATURE_JUNGLE')
 		iForestBurnt = gc.getInfoTypeForString('FEATURE_FOREST_BURNT')
-		#strCheckData = cPickle.loads(CyGameInstance.getScriptData())
-		#iDragonWarriorLevel = strCheckData['DragonWarrior']
 		iReagents = gc.getInfoTypeForString('BONUS_REAGENTS')
 		iGunPowder = gc.getInfoTypeForString('BONUS_GUNPOWDER')
 		iAncientForest = gc.getInfoTypeForString('FEATURE_FOREST_ANCIENT')
 		iAncientForestChance = gc.getDefineINT('ANCIENT_FOREST_CHANCE')
 		iDesert = gc.getInfoTypeForString('TERRAIN_DESERT')
+		iOcean = gc.getInfoTypeForString('TERRAIN_OCEAN')
 		iGrass = gc.getInfoTypeForString('TERRAIN_GRASS')
 		
 		### FW Changes
@@ -2101,6 +2100,15 @@ class CustomFunctions:
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_THROWING_AXES'), False)
 
 				## TODO: Add Auto Buffing
+							
+				## Low level vessels can take storm damage
+				if pPlayer.isHuman() and iTerrain == iOcean:
+					if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GALLEY') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_TRIREME'):
+						iDam = CyGame().getSorenRandNum(12, "Storm Damage") - pUnit.baseCombatStr()
+						
+						if iDam > 0:
+							iDam = ( iDam * 100 ) / pUnit.baseCombatStr()
+							pUnit.doDamageNoCaster(iDam, 100, gc.getInfoTypeForString('DAMAGE_LIGHTNING'), False)
 							
 				## Merchant Ships give income every 10 turns or so
 				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MERCHANT_SHIP') and pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_OCEAN') and CyGame().getSorenRandNum(100, "Merchant") < ( pUnit.getLevel() + pUnit.baseMoves() ) * 2:

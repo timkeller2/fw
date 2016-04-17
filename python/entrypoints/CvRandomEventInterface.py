@@ -6969,7 +6969,7 @@ def canCulture1(argsList):
 	if not pPlayer.isHuman():
 		return False
 		
-	if pCity.getCulture(iPlayer) < 100:
+	if pCity.getCulture(iPlayer) < 250:
 		return False
 
 	if CyGame().getGameTurn() < 25:

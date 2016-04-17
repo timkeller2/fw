@@ -58081,7 +58081,7 @@
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
             <UnitClass>UNITCLASS_CATAPULT</UnitClass>
-            <iNumFreeUnits>3</iNumFreeUnits>
+            <iNumFreeUnits>2</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
@@ -58283,11 +58283,11 @@
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
             <UnitClass>UNITCLASS_RECRUIT</UnitClass>
-            <iNumFreeUnits>3</iNumFreeUnits>
+            <iNumFreeUnits>5</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
-            <UnitPromotion>PROMOTION_STRONG</UnitPromotion>
+            <UnitPromotion></UnitPromotion>
             <UnitName></UnitName>
             <UnitCombatPromotions>
             </UnitCombatPromotions>

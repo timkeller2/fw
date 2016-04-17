@@ -33174,10 +33174,6 @@
             <iGreatWorkCulture>0</iGreatWorkCulture>
             <iEspionagePoints>0</iEspionagePoints>
             <TerrainImpassables>
-                <TerrainImpassable>
-                    <TerrainType>TERRAIN_OCEAN</TerrainType>
-                    <bTerrainImpassable>1</bTerrainImpassable>
-                </TerrainImpassable>
             </TerrainImpassables>
             <FeatureImpassables>
             </FeatureImpassables>
@@ -70477,10 +70473,6 @@
             <iGreatWorkCulture>0</iGreatWorkCulture>
             <iEspionagePoints>0</iEspionagePoints>
             <TerrainImpassables>
-                <TerrainImpassable>
-                    <TerrainType>TERRAIN_OCEAN</TerrainType>
-                    <bTerrainImpassable>1</bTerrainImpassable>
-                </TerrainImpassable>
             </TerrainImpassables>
             <FeatureImpassables>
             </FeatureImpassables>
