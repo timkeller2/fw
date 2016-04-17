@@ -1553,6 +1553,8 @@ class CustomFunctions:
 			CyInterface().addMessage(pCity.getOwner(),True,25,CyTranslator().getText("TXT_KEY_MESSAGE_CITY_FIRE_NO_DAMAGE",()),'AS2D_SPELL_FIRE_ELEMENTAL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
 
 	def doHellTerrain(self):
+		iCount = CyGame().getGlobalCounter()
+		iGameTurn = CyGame().getGameTurn()
 		iAshenVeil = gc.getInfoTypeForString('RELIGION_THE_ASHEN_VEIL')
 		iBurningSands = gc.getInfoTypeForString('TERRAIN_BURNING_SANDS')
 		iBanana = gc.getInfoTypeForString('BONUS_BANANA')
@@ -1579,8 +1581,6 @@ class CustomFunctions:
 		iSugar = gc.getInfoTypeForString('BONUS_SUGAR')
 		iToad = gc.getInfoTypeForString('BONUS_TOAD')
 		iWheat = gc.getInfoTypeForString('BONUS_WHEAT')
-		iCount = CyGame().getGlobalCounter()
-		iGameTurn = CyGame().getGameTurn()
 		iJungle = gc.getInfoTypeForString('FEATURE_JUNGLE')
 		iForestBurnt = gc.getInfoTypeForString('FEATURE_FOREST_BURNT')
 		iReagents = gc.getInfoTypeForString('BONUS_REAGENTS')
