@@ -4807,7 +4807,7 @@ def reqDiplomacy(caster):
 			for i in range(pPlot.getNumUnits()):
 				pUnit = pPlot.getUnit(i)
 				iValue = pUnit.maxCombatStr(pPlot,caster) / 100 + pUnit.getLevel()
-				if pUnit.getOwner() != caster.getOwner() and ( pUnit.maxMoves() > 0 or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) ) and iValue * 15 < pPlayer.getGold() and iValue > 0 and pUnit.getLevel() + pUnit.baseCombatStr() <= caster.getLevel() + caster.baseCombatStr() and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE'):
+				if pUnit.getOwner() != caster.getOwner() and ( pUnit.maxMoves() > 0 or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) ) and iValue * 15 < pPlayer.getGold() and iValue > 0 and pUnit.getLevel() + pUnit.baseCombatStr() <= caster.getLevel() + caster.baseCombatStr() and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
 					return True
 
 	return False
