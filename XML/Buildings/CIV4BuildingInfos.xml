@@ -15813,6 +15813,9 @@
             <YieldChanges>
             </YieldChanges>
             <YieldModifiers>
+                <iYield>0</iYield>
+                <iYield>50</iYield>
+                <iYield>0</iYield>
             </YieldModifiers>
             <CommerceChanges>
             </CommerceChanges>
@@ -40499,7 +40502,7 @@
             <SpecialistCounts>
                 <SpecialistCount>
                     <SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-                    <iSpecialistCount>1</iSpecialistCount>
+                    <iSpecialistCount>2</iSpecialistCount>
                 </SpecialistCount>
             </SpecialistCounts>
             <FreeSpecialistCounts>
