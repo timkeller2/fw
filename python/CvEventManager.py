@@ -1811,7 +1811,7 @@ class CvEventManager:
 								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
 								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
 				
-		if ((unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIZARDMAN')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ORC')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL')) and pPlayer.isBarbarian()):
+		if ((unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIZARDMAN')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ORC')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL') or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BEAST')) and pPlayer.isBarbarian()):
 			iGold = unit.baseCombatStr() * unit.baseCombatStr()
 			iGold = CyGame().getSorenRandNum(iGold, "treasure") + iGold / 3
 			if iGameTurn > 150:
