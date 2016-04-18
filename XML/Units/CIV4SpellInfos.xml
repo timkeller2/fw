@@ -2875,7 +2875,7 @@
             <bAllowAutomateTerrain>1</bAllowAutomateTerrain>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <iDelay>6</iDelay>
+            <iDelay>12</iDelay>
             <PyResult>spellSpring(pCaster)</PyResult>
             <PyRequirement>reqSpring(pCaster)</PyRequirement>
             <Effect>EFFECT_SPRING</Effect>
