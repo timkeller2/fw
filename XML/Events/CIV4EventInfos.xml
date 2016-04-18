@@ -61353,7 +61353,7 @@
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
-            <UnitPromotion>PROMOTION_SUBDUE_ANIMAL</UnitPromotion>
+            <UnitPromotion>PROMOTION_SUBDUE_BEASTS</UnitPromotion>
             <UnitName></UnitName>
             <UnitCombatPromotions>
             </UnitCombatPromotions>
