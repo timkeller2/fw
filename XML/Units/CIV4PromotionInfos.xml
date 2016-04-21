@@ -11156,7 +11156,7 @@
             <PromotionPrereq>PROMOTION_NOBILITY</PromotionPrereq>
             <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
-            <TechPrereq>TECH_CALENDAR</TechPrereq>
+            <TechPrereq>NONE</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
             <bBlitz>0</bBlitz>
@@ -11332,7 +11332,7 @@
             <PromotionPrereq>PROMOTION_ESTATES1</PromotionPrereq>
             <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
-            <TechPrereq>TECH_FESTIVALS</TechPrereq>
+            <TechPrereq>TECH_CALENDAR</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
             <bBlitz>0</bBlitz>
@@ -11508,7 +11508,7 @@
             <PromotionPrereq>PROMOTION_ESTATES2</PromotionPrereq>
             <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
-            <TechPrereq>TECH_DRAMA</TechPrereq>
+            <TechPrereq>TECH_FESTIVALS</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
             <bBlitz>0</bBlitz>
@@ -11684,7 +11684,7 @@
             <PromotionPrereq>PROMOTION_NOBILITY</PromotionPrereq>
             <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
-            <TechPrereq>TECH_MASONRY</TechPrereq>
+            <TechPrereq>NONE</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
             <bBlitz>0</bBlitz>
@@ -11860,7 +11860,7 @@
             <PromotionPrereq>PROMOTION_GOVERNOR1</PromotionPrereq>
             <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
-            <TechPrereq>TECH_CONSTRUCTION</TechPrereq>
+            <TechPrereq>TECH_MASONRY</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
             <bBlitz>0</bBlitz>
@@ -12036,7 +12036,7 @@
             <PromotionPrereq>PROMOTION_GOVERNOR2</PromotionPrereq>
             <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
-            <TechPrereq>TECH_SANITATION</TechPrereq>
+            <TechPrereq>TECH_CONSTRUCTION</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
             <bBlitz>0</bBlitz>
