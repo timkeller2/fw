@@ -5248,10 +5248,11 @@
             <Description>TXT_KEY_PROMOTION_MEDIC2</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_MEDIC1</PromotionPrereq>
-            <TechPrereq>TECH_NEVER</TechPrereq>
+            <TechPrereq>NONE</TechPrereq>
             <iSameTileHealChange>10</iSameTileHealChange>
             <iAdjacentTileHealChange>5</iAdjacentTileHealChange>
             <Button>,Art/Interface/Buttons/Promotions/Medic2.dds,Art/Interface/Buttons/Promotions_Atlas.dds,4,4</Button>
+            <PromotionPrereqAnd>PROMOTION_COMBAT4</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_MEDIC3</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
@@ -5259,10 +5260,11 @@
             <Description>TXT_KEY_PROMOTION_MEDIC3</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_MEDIC2</PromotionPrereq>
-            <TechPrereq>TECH_NEVER</TechPrereq>
+            <TechPrereq>NONE</TechPrereq>
             <iSameTileHealChange>15</iSameTileHealChange>
             <iAdjacentTileHealChange>15</iAdjacentTileHealChange>
             <Button>Art/Interface/Buttons/Promotions/Medic3.dds</Button>
+            <PromotionPrereqAnd>PROMOTION_DRILL4</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_METAMAGIC1</Type>
