@@ -797,9 +797,9 @@ class CustomFunctions:
 		if iABR > pUnit.getLevel() * 2:
 			iABR = pUnit.getLevel() * 2
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION1')):
-			iABR += 2
+			iABR = iABR * 2
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION2')):
-			iABR += 3
+			iABR = iABR * 2
 		return iABR
 
 	def finalWar(self):
@@ -2099,8 +2099,250 @@ class CustomFunctions:
 					self.equip(pUnit)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_THROWING_AXES'), False)
 
-				## TODO: Add Auto Buffing
+				## Fortified Priests Auto-Buff if they can
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIVINE')) and pUnit.getFortifyTurns() > 1:
+					py = PyPlayer(pUnit.getOwner())
+					iABR = self.iAutoBuffRange(pUnit)
+					iBuffs = pUnit.getLevel()
+					for iBuff in range( ( pUnit.getLevel() + 2 ) / 3 ):
+						iNoTargets = iBuffs
+						if iBuffs < 1:
+							break
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING2')) and iBuffs > 0 and pUnit.getReligion() == gc.getInfoTypeForString('RELIGION_THE_ORDER'):
+							pBestUnit = -1
+							iBestRange = iABR
+							for tUnit in py.getUnitList():
+								if tUnit.isAlive() and tUnit.isPromotionValid(gc.getInfoTypeForString('PROMOTION_BLESSED')) and not tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED')):
+									iRange = int( math.fabs(pUnit.getX()-tUnit.getX()) )
+									if iRange < int( math.fabs(pUnit.getY()-tUnit.getY()) ):
+										iRange = int( math.fabs(pUnit.getY()-tUnit.getY()) )
+									if iRange < iBestRange:
+										iBestRange = iRange
+										pBestUnit = tUnit
+							if pBestUnit != -1:
+								iBuffs -= 1
+								if iABR > iBestRange:
+									pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED'), True)
+									if pPlayer.isHuman():
+										CyInterface().addMessage(pBestUnit.getOwner(),false,25,'Your '+pBestUnit.getName()+' gains a blessing from your '+pUnit.getName()+'!','',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pBestUnit.getX(),pBestUnit.getY(),True,True)
+										CyInterface().addCombatMessage(pBestUnit.getOwner(),'Your '+pBestUnit.getName()+' gains a blessing from your '+pUnit.getName()+'!')
+										point = pBestUnit.plot().getPoint()
+										CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
+										CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CREATION'),point)
+
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING2')) and iBuffs > 0 and  pUnit.getReligion() == gc.getInfoTypeForString('RELIGION_RUNES_OF_KILMORPH'):
+							pBestUnit = -1
+							iBestRange = iABR
+							for tUnit in py.getUnitList():
+								if tUnit.isPromotionValid(gc.getInfoTypeForString('PROMOTION_SHIELD_OF_FAITH')) and not tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SHIELD_OF_FAITH')):
+									iRange = int( math.fabs(pUnit.getX()-tUnit.getX()) )
+									if iRange < int( math.fabs(pUnit.getY()-tUnit.getY()) ):
+										iRange = int( math.fabs(pUnit.getY()-tUnit.getY()) )
+									if iRange < iBestRange:
+										iBestRange = iRange
+										pBestUnit = tUnit
+							if pBestUnit != -1:
+								iBuffs -= 1
+								if iABR > iBestRange:
+									pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHIELD_OF_FAITH'), True)
+									if pPlayer.isHuman():
+										CyInterface().addMessage(pBestUnit.getOwner(),false,25,'Your '+pBestUnit.getName()+' gains a shield of faith from your '+pUnit.getName()+'!','',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pBestUnit.getX(),pBestUnit.getY(),True,True)
+										CyInterface().addCombatMessage(pBestUnit.getOwner(),'Your '+pBestUnit.getName()+' gains a shield of faith from your '+pUnit.getName()+'!')
+										point = pBestUnit.plot().getPoint()
+										CyAudioGame().Play3DSound('AS3D_SPELL_ENCHANTMENT',point.x,point.y,point.z)
+										CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SWORDS_SPARKS'),point)
+
+						if iNoTargets == iBuffs:
+							break
 							
+				## Fortified Mages Auto-Buff if they can
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING1')) and pUnit.getFortifyTurns() > 1:
+					py = PyPlayer(pUnit.getOwner())
+					iABR = self.iAutoBuffRange(pUnit)
+					iBuffs = pUnit.getLevel()
+					for iBuff in range( ( pUnit.getLevel() + 2 ) / 3 ):
+						iNoTargets = iBuffs
+						if iBuffs < 1:
+							break
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT1')) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING1')) and iBuffs > 0:
+							pBestUnit = -1
+							iBestRange = iABR
+							for tUnit in py.getUnitList():
+								if tUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_MELEE') and not tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTED_BLADE')):
+									iRange = int( math.fabs(pUnit.getX()-tUnit.getX()) )
+									if iRange < int( math.fabs(pUnit.getY()-tUnit.getY()) ):
+										iRange = int( math.fabs(pUnit.getY()-tUnit.getY()) )
+									if iRange < iBestRange:
+										iBestRange = iRange
+										pBestUnit = tUnit
+							if pBestUnit != -1:
+								iBuffs -= 3
+								if iABR > iBestRange:
+									pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTED_BLADE'), True)
+									if pPlayer.isHuman():
+										CyInterface().addMessage(pBestUnit.getOwner(),false,25,'Your '+pBestUnit.getName()+' gains an enchanted blade from your '+pUnit.getName()+'!','',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pBestUnit.getX(),pBestUnit.getY(),True,True)
+										CyInterface().addCombatMessage(pBestUnit.getOwner(),'Your '+pBestUnit.getName()+' gains an enchanted blade from your '+pUnit.getName()+'!')
+										point = pBestUnit.plot().getPoint()
+										CyAudioGame().Play3DSound('AS3D_SPELL_ENCHANTMENT',point.x,point.y,point.z)
+										CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_ENCHANTED_BLADE'),point)
+
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT1')) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING1')) and iBuffs > 0:
+							pBestUnit = -1
+							iBestRange = iABR
+							for tUnit in py.getUnitList():
+								if tUnit.isAlive() and tUnit.isPromotionValid(gc.getInfoTypeForString('PROMOTION_COURAGE')) and not tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COURAGE')):
+									iRange = int( math.fabs(pUnit.getX()-tUnit.getX()) )
+									if iRange < int( math.fabs(pUnit.getY()-tUnit.getY()) ):
+										iRange = int( math.fabs(pUnit.getY()-tUnit.getY()) )
+									if iRange < iBestRange:
+										iBestRange = iRange
+										pBestUnit = tUnit
+							if pBestUnit != -1:
+								iBuffs -= 2
+								if iABR > iBestRange:
+									pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COURAGE'), True)
+									if pPlayer.isHuman():
+										CyInterface().addMessage(pBestUnit.getOwner(),false,25,'Your '+pBestUnit.getName()+' gains courage from your '+pUnit.getName()+'!','',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pBestUnit.getX(),pBestUnit.getY(),True,True)
+										CyInterface().addCombatMessage(pBestUnit.getOwner(),'Your '+pBestUnit.getName()+' gains courage from your '+pUnit.getName()+'!')
+										point = pBestUnit.plot().getPoint()
+										CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
+										CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CREATION'),point)
+
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LAW1')) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING1')) and iBuffs > 0:
+							pBestUnit = -1
+							iBestRange = iABR
+							for tUnit in py.getUnitList():
+								if tUnit.isAlive() and tUnit.isPromotionValid(gc.getInfoTypeForString('PROMOTION_LOYALTY')) and not tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LOYALTY')):
+									iRange = int( math.fabs(pUnit.getX()-tUnit.getX()) )
+									if iRange < int( math.fabs(pUnit.getY()-tUnit.getY()) ):
+										iRange = int( math.fabs(pUnit.getY()-tUnit.getY()) )
+									if iRange < iBestRange:
+										iBestRange = iRange
+										pBestUnit = tUnit
+							if pBestUnit != -1:
+								iBuffs -= 1
+								if iABR > iBestRange:
+									pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LOYALTY'), True)
+									if pPlayer.isHuman():
+										CyInterface().addMessage(pBestUnit.getOwner(),false,25,'Your '+pBestUnit.getName()+' gains loyalty from your '+pUnit.getName()+'!','',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pBestUnit.getX(),pBestUnit.getY(),True,True)
+										CyInterface().addCombatMessage(pBestUnit.getOwner(),'Your '+pBestUnit.getName()+' gains loyalty from your '+pUnit.getName()+'!')
+										point = pBestUnit.plot().getPoint()
+										CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
+										CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CREATION'),point)
+
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LAW3')) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3')) and iBuffs > 0:
+							pBestUnit = -1
+							iBestRange = iABR
+							for tUnit in py.getUnitList():
+								if tUnit.isAlive() and tUnit.isPromotionValid(gc.getInfoTypeForString('PROMOTION_VALOR')) and not tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_VALOR')):
+									iRange = int( math.fabs(pUnit.getX()-tUnit.getX()) )
+									if iRange < int( math.fabs(pUnit.getY()-tUnit.getY()) ):
+										iRange = int( math.fabs(pUnit.getY()-tUnit.getY()) )
+									if iRange < iBestRange:
+										iBestRange = iRange
+										pBestUnit = tUnit
+							if pBestUnit != -1:
+								iBuffs -= 1
+								if iABR > iBestRange:
+									pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_VALOR'), True)
+									if pPlayer.isHuman():
+										CyInterface().addMessage(pBestUnit.getOwner(),false,25,'Your '+pBestUnit.getName()+' gains valor from your '+pUnit.getName()+'!','',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pBestUnit.getX(),pBestUnit.getY(),True,True)
+										CyInterface().addCombatMessage(pBestUnit.getOwner(),'Your '+pBestUnit.getName()+' gains valor from your '+pUnit.getName()+'!')
+										point = pBestUnit.plot().getPoint()
+										CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
+										CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CREATION'),point)
+
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT2')) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING2')) and iBuffs > 0:
+							pBestUnit = -1
+							iBestRange = iABR
+							for tUnit in py.getUnitList():
+								if tUnit.isAlive() and tUnit.isPromotionValid(gc.getInfoTypeForString('PROMOTION_FLAMING_ARROWS')) and not tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FLAMING_ARROWS')):
+									iRange = int( math.fabs(pUnit.getX()-tUnit.getX()) )
+									if iRange < int( math.fabs(pUnit.getY()-tUnit.getY()) ):
+										iRange = int( math.fabs(pUnit.getY()-tUnit.getY()) )
+									if iRange < iBestRange:
+										iBestRange = iRange
+										pBestUnit = tUnit
+							if pBestUnit != -1:
+								iBuffs -= 1
+								if iABR > iBestRange:
+									pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FLAMING_ARROWS'), True)
+									if pPlayer.isHuman():
+										CyInterface().addMessage(pBestUnit.getOwner(),false,25,'Your '+pBestUnit.getName()+' gains flaming arrows from your '+pUnit.getName()+'!','',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pBestUnit.getX(),pBestUnit.getY(),True,True)
+										CyInterface().addCombatMessage(pBestUnit.getOwner(),'Your '+pBestUnit.getName()+' gains flaming arrows from your '+pUnit.getName()+'!')
+										point = pBestUnit.plot().getPoint()
+										CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
+										CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CREATION'),point)
+
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH3')) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3')) and iBuffs > 0:
+							pBestUnit = -1
+							iBestRange = iABR
+							for tUnit in py.getUnitList():
+								if tUnit.isPromotionValid(gc.getInfoTypeForString('PROMOTION_STONESKIN')) and not tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_STONESKIN')):
+									iRange = int( math.fabs(pUnit.getX()-tUnit.getX()) )
+									if iRange < int( math.fabs(pUnit.getY()-tUnit.getY()) ):
+										iRange = int( math.fabs(pUnit.getY()-tUnit.getY()) )
+									if iRange < iBestRange:
+										iBestRange = iRange
+										pBestUnit = tUnit
+							if pBestUnit != -1:
+								iBuffs -= 1
+								if iABR > iBestRange:
+									pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_STONESKIN'), True)
+									if pPlayer.isHuman():
+										CyInterface().addMessage(pBestUnit.getOwner(),false,25,'Your '+pBestUnit.getName()+' gains stoneskin from your '+pUnit.getName()+'!','',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pBestUnit.getX(),pBestUnit.getY(),True,True)
+										CyInterface().addCombatMessage(pBestUnit.getOwner(),'Your '+pBestUnit.getName()+' gains stoneskin from your '+pUnit.getName()+'!')
+										point = pBestUnit.plot().getPoint()
+										CyAudioGame().Play3DSound('AS3D_SPELL_STONESKIN',point.x,point.y,point.z)
+										CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_STONESKIN'),point)
+
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NATURE2')) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING2')) and iBuffs > 0:
+							pBestUnit = -1
+							iBestRange = iABR
+							for tUnit in py.getUnitList():
+								if tUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_RECON') and not tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED_BLADE')):
+									iRange = int( math.fabs(pUnit.getX()-tUnit.getX()) )
+									if iRange < int( math.fabs(pUnit.getY()-tUnit.getY()) ):
+										iRange = int( math.fabs(pUnit.getY()-tUnit.getY()) )
+									if iRange < iBestRange:
+										iBestRange = iRange
+										pBestUnit = tUnit
+							if pBestUnit != -1:
+								iBuffs -= 1
+								if iABR > iBestRange:
+									pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED_BLADE'), True)
+									if pPlayer.isHuman():
+										CyInterface().addMessage(pBestUnit.getOwner(),false,25,'Your '+pBestUnit.getName()+' gains a poisoned blade from your '+pUnit.getName()+'!','',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pBestUnit.getX(),pBestUnit.getY(),True,True)
+										CyInterface().addCombatMessage(pBestUnit.getOwner(),'Your '+pBestUnit.getName()+' gains a poisoned blade from your '+pUnit.getName()+'!')
+										point = pBestUnit.plot().getPoint()
+										CyAudioGame().Play3DSound('AS3D_SPELL_ENCHANTMENT',point.x,point.y,point.z)
+										CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL1'),point)
+
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_AIR1')) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING1')) and iBuffs > 0:
+							pBestUnit = -1
+							iBestRange = iABR
+							for tUnit in py.getUnitList():
+								if tUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL') and not tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FAIR_WINDS')):
+									iRange = int( math.fabs(pUnit.getX()-tUnit.getX()) )
+									if iRange < int( math.fabs(pUnit.getY()-tUnit.getY()) ):
+										iRange = int( math.fabs(pUnit.getY()-tUnit.getY()) )
+									if iRange < iBestRange:
+										iBestRange = iRange
+										pBestUnit = tUnit
+							if pBestUnit != -1:
+								iBuffs -= 1
+								if iABR > iBestRange:
+									pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FAIR_WINDS'), True)
+									if pPlayer.isHuman():
+										CyInterface().addMessage(pBestUnit.getOwner(),false,25,'Your '+pBestUnit.getName()+' experiences fair winds because of '+pUnit.getName()+'!','',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pBestUnit.getX(),pBestUnit.getY(),True,True)
+										CyInterface().addCombatMessage(pBestUnit.getOwner(),'Your '+pBestUnit.getName()+' experiences fair winds because of '+pUnit.getName()+'!')
+										point = pBestUnit.plot().getPoint()
+										CyAudioGame().Play3DSound('AS3D_SPELL_HASTE',point.x,point.y,point.z)
+										CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_WIND_SWIRL'),point)
+
+						if iNoTargets == iBuffs:
+							break
+
 				## Low level vessels can take storm damage
 				if pPlayer.isHuman() and iTerrain == iOcean:
 					if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GALLEY') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_TRIREME'):

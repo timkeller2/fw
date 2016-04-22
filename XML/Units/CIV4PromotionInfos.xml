@@ -1655,6 +1655,8 @@
             <bImmuneToFear>1</bImmuneToFear>
             <iAIWeight>50</iAIWeight>
             <iMinLevel>-1</iMinLevel>
+            <PromotionCombatType>PROMOTION_UNDEAD</PromotionCombatType>
+            <iPromotionCombatMod>10</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_COVER</Type>
@@ -3092,6 +3094,7 @@
         <PromotionInfo>
             <Type>PROMOTION_EXTENSION1</Type>
             <Description>TXT_KEY_PROMOTION_EXTENSION1</Description>
+            <Help>Doubles auto-buff range (normally level + fortified turns).  Auto buffs are: enchanted blade, flaming arrows, courage, loyalty, fair winds, poisoned blade, blessing and shield of faith.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_CHANNELING1</PromotionPrereq>
             <UnitCombats>
@@ -3108,6 +3111,7 @@
         <PromotionInfo>
             <Type>PROMOTION_EXTENSION2</Type>
             <Description>TXT_KEY_PROMOTION_EXTENSION2</Description>
+            <Help>Quadruples auto-buff range (normally level + fortified turns).  Auto buffs are: enchanted blade, flaming arrows, courage, loyalty, fair winds, poisoned blade, blessing and shield of faith.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_EXTENSION1</PromotionPrereq>
             <TechPrereq>TECH_ARCANE_LORE</TechPrereq>
@@ -5055,6 +5059,8 @@
             <bImmuneToCapture>1</bImmuneToCapture>
             <iAIWeight>50</iAIWeight>
             <iMinLevel>-1</iMinLevel>
+            <PromotionCombatType>PROMOTION_DEMON</PromotionCombatType>
+            <iPromotionCombatMod>20</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_MAGIC_IMMUNE</Type>
