@@ -1658,7 +1658,7 @@ class CustomFunctions:
 								CyInterface().addMessage(pUnit.getOwner(),False,25,"Overcrowding damage!",'',1,'Art/Interface/Buttons/Promotions/Demon.dds',ColorTypes(7),pPlot.getX(),pPlot.getY(),True,True)
 								crowdMessage = False
 					# Injury damage
-					if pUnit.getDamage() > 0 and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_SIEGE'):
+					if pUnit.getDamage() > 0 and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_SIEGE') and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOLEM')):
 						iDam = CyGame().getSorenRandNum( pUnit.getDamage(), "Injury Damage") / 5 - pUnit.getLevel()
 						if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ORC')):
 							iDam = iDam / 2
