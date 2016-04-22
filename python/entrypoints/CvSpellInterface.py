@@ -4322,6 +4322,8 @@ def reqBuilding(caster,sBuilding,sPromotion):
 		return False
 
 	strCheckData = cPickle.loads(pCity.getScriptData())
+	if (sBuilding == 'BUILDING_CRAFTSMEN_GUILD' and strCheckData['BUILDING_CRAFTSMEN_GUILD'] > CyGame().getGameTurn()):
+		return False
 	if (sBuilding == 'BUILDING_TRAINING_YARD' and strCheckData['BUILDING_TRAINING_YARD'] > CyGame().getGameTurn()):
 		return False
 	if (sBuilding == 'BUILDING_HERBALIST' and strCheckData['BUILDING_HERBALIST'] > CyGame().getGameTurn()):
@@ -5102,10 +5104,13 @@ def spellVolley(caster,volleytype):
 					iMax = 35
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE')):
 						iMax = iMax / 2
+						iMod = iMod / 2
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE_TEMP')):
-						iMax = iMax / 2  
+						iMax = iMax / 2
+						iMod = iMod / 2
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_IMMUNE')):
 						iMax = 0
+						iMod = 0
 			iDamage = iMod + CyGame().getSorenRandNum( iMod , "VolleyOfArrows" )
 			if (pBestUnit.isAlive() == False and volleytype == 'archer'):
 				iDamage = iDamage / 2
@@ -5467,7 +5472,7 @@ def spellCourage(caster):
 			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COURAGE')):
 				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COURAGE'),True)
 				iNumBlessed = iNumBlessed + 1
-				if (iNumBlessed >= int( iL / 2 )):
+				if (iNumBlessed >= int( iL / 3 )):
 					return
 
 def reqHaste(caster):
@@ -5535,7 +5540,7 @@ def spellLoyalty(caster,sProm,iExtra):
 			if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False):
 				pUnit.setHasPromotion(gc.getInfoTypeForString(sProm),True)
 				iNumBlessed = iNumBlessed + 1
-				if (iNumBlessed >= iL):
+				if (iNumBlessed >= int( iL / 2 )):
 					return
 
 def reqAlive(caster):

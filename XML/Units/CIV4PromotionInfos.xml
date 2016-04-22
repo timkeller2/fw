@@ -1617,9 +1617,9 @@
             <Description>TXT_KEY_PROMOTION_COURAGE</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
-            <iEnemyHealChange>5</iEnemyHealChange>
-            <iNeutralHealChange>5</iNeutralHealChange>
-            <iFriendlyHealChange>5</iFriendlyHealChange>
+            <iEnemyHealChange>3</iEnemyHealChange>
+            <iNeutralHealChange>3</iNeutralHealChange>
+            <iFriendlyHealChange>3</iFriendlyHealChange>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
@@ -8438,7 +8438,7 @@
             <PromotionPrereqAnd>NONE</PromotionPrereqAnd>
             <PromotionNextLevel>NONE</PromotionNextLevel>
             <PyPerTurn></PyPerTurn>
-            <iGroupSize>0</iGroupSize>
+            <iGroupSize>1</iGroupSize>
             <UnitArtStyleType>NONE</UnitArtStyleType>
             <PromotionCombatType>NONE</PromotionCombatType>
             <iPromotionCombatMod>0</iPromotionCombatMod>
@@ -11138,7 +11138,7 @@
             <PromotionPrereqAnd>NONE</PromotionPrereqAnd>
             <PromotionNextLevel>NONE</PromotionNextLevel>
             <PyPerTurn></PyPerTurn>
-            <iGroupSize>0</iGroupSize>
+            <iGroupSize>1</iGroupSize>
             <UnitArtStyleType>NONE</UnitArtStyleType>
             <PromotionCombatType>NONE</PromotionCombatType>
             <iPromotionCombatMod>0</iPromotionCombatMod>

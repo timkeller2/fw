@@ -55364,7 +55364,7 @@
             </UnitCombatPromotions>
             <UnitClassPromotions>
             </UnitClassPromotions>
-            <BuildingClass>BUILDINGCLASS_MONUMENT</BuildingClass>
+            <BuildingClass>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClass>
             <iBuildingChange>0</iBuildingChange>
             <BuildingExtraYields>
             </BuildingExtraYields>
@@ -56576,7 +56576,7 @@
             </UnitCombatPromotions>
             <UnitClassPromotions>
             </UnitClassPromotions>
-            <BuildingClass>BUILDINGCLASS_TRAINING_YARD</BuildingClass>
+            <BuildingClass>BUILDINGCLASS_CRAFTSMEN_GUILD</BuildingClass>
             <iBuildingChange>0</iBuildingChange>
             <BuildingExtraYields>
             </BuildingExtraYields>
@@ -56725,7 +56725,7 @@
             </ClearEvents>
             <PythonCallback>trainingyard25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo></PythonCanDo>
+            <PythonCanDo>canmaster</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -56826,7 +56826,7 @@
             </ClearEvents>
             <PythonCallback>trainingyard25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo></PythonCanDo>
+            <PythonCanDo>canmaster</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>

@@ -568,8 +568,9 @@
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <AddPromotionType1>PROMOTION_COURAGE</AddPromotionType1>
             <bImmuneNotAlive>1</bImmuneNotAlive>
+            <PyResult>spellCourage(pCaster)</PyResult>
+            <PyRequirement>reqCourage(pCaster)</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_BLESS</Sound>
             <Button>Art/Interface/Buttons/Promotions/Courage.dds</Button>
@@ -1035,8 +1036,9 @@
             <iAIWeightWar>100</iAIWeightWar>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <AddPromotionType1>PROMOTION_ENCHANTED_BLADE</AddPromotionType1>
             <RemovePromotionType1>PROMOTION_RUSTED</RemovePromotionType1>
+            <PyResult>spellEnchantedBlade(pCaster)</PyResult>
+            <PyRequirement>reqEnchantedBlade(pCaster)</PyRequirement>
             <Effect>EFFECT_ENCHANTED_BLADE</Effect>
             <Sound>AS3D_SPELL_ENCHANTMENT</Sound>
             <Button>Art/Interface/Buttons/Promotions/Enchantedblade.dds</Button>
@@ -1107,7 +1109,7 @@
         <SpellInfo>
             <Type>SPELL_EXPLORE_LAIR_AIFON_ISLE</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
             <ImprovementPrereq>IMPROVEMENT_AIFON_ISLE</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1122,7 +1124,7 @@
         <SpellInfo>
             <Type>SPELL_EXPLORE_LAIR_BARROW</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
             <ImprovementPrereq>IMPROVEMENT_BARROW</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1137,7 +1139,7 @@
         <SpellInfo>
             <Type>SPELL_EXPLORE_LAIR_BRADELINES_WELL</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
             <ImprovementPrereq>IMPROVEMENT_BRADELINES_WELL</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1152,7 +1154,7 @@
         <SpellInfo>
             <Type>SPELL_EXPLORE_LAIR_BROKEN_SEPULCHER</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
             <ImprovementPrereq>IMPROVEMENT_BROKEN_SEPULCHER</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1167,7 +1169,7 @@
         <SpellInfo>
             <Type>SPELL_EXPLORE_LAIR_DUNGEON</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
             <ImprovementPrereq>IMPROVEMENT_DUNGEON</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1182,7 +1184,7 @@
         <SpellInfo>
             <Type>SPELL_EXPLORE_LAIR_GOBLIN_FORT</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
             <ImprovementPrereq>IMPROVEMENT_GOBLIN_FORT</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1197,7 +1199,7 @@
         <SpellInfo>
             <Type>SPELL_EXPLORE_LAIR_PYRE_OF_THE_SERAPHIC</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
             <ImprovementPrereq>IMPROVEMENT_PYRE_OF_THE_SERAPHIC</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1212,7 +1214,7 @@
         <SpellInfo>
             <Type>SPELL_EXPLORE_LAIR_RUINS</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
             <ImprovementPrereq>IMPROVEMENT_RUINS</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1227,7 +1229,7 @@
         <SpellInfo>
             <Type>SPELL_EXPLORE_LAIR_SHIP_WRECK</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
             <ImprovementPrereq>IMPROVEMENT_SHIP_WRECK</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1906,9 +1908,11 @@
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <AddPromotionType1>PROMOTION_LOYALTY</AddPromotionType1>
             <bImmuneNeutral>1</bImmuneNeutral>
             <bImmuneEnemy>1</bImmuneEnemy>
+            <RemovePromotionType1>PROMOTION_CHARMED</RemovePromotionType1>
+            <PyResult>spellLoyalty(pCaster)</PyResult>
+            <PyRequirement>reqLoyalty(pCaster)</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_BLESS</Sound>
             <Button>Art/Interface/Buttons/Promotions/Loyalty.dds</Button>
@@ -9139,8 +9143,8 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellUnitEvent(pCaster,'EVENTTRIGGER_TRAINING_YARD')</PyResult>
-            <PyRequirement>reqBuilding(pCaster,'BUILDING_TRAINING_YARD','PROMOTION_CREEP')</PyRequirement>
+            <PyResult>spellUnitEvent(pCaster,'EVENTTRIGGER_CRAFTSMEN_GUILD')</PyResult>
+            <PyRequirement>reqBuilding(pCaster,'BUILDING_CRAFTSMEN_GUILD','PROMOTION_CREEP')</PyRequirement>
             <Effect></Effect>
             <Sound></Sound>
             <HotKey></HotKey>

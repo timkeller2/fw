@@ -29911,7 +29911,7 @@
             <PrereqTrait>NONE</PrereqTrait>
         </EventTriggerInfo>
         <EventTriggerInfo>
-            <Type>EVENTTRIGGER_TRAINING_YARD</Type>
+            <Type>EVENTTRIGGER_CRAFTSMEN_GUILD</Type>
             <WorldNewsTexts>
             </WorldNewsTexts>
             <TriggerTexts>
