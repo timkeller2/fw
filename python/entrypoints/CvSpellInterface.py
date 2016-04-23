@@ -2287,7 +2287,7 @@ def spellRepair(caster,amount):
 			iDefStr = pUnit.baseCombatStr()
 			if iDefStr < 1:
 				iDefStr = 1
-			iMod = ( iL * 20 ) / iDefStr
+			iMod = ( iL * 10 ) / iDefStr + 5
 			iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
 			pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
 			iNumHealed = iNumHealed + 1
@@ -4296,7 +4296,7 @@ def spellHealingTouch(caster,amount):
 			iDefStr = pUnit.baseCombatStr()
 			if iDefStr < 1:
 				iDefStr = 1
-			iMod = ( iL * 10 ) / iDefStr + 5
+			iMod = ( iL * 5 ) / iDefStr + 3
 			iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
 			pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
 			iNumHealed = iNumHealed + 1
@@ -5340,7 +5340,10 @@ def spellHealingPotionMinor(caster,iL):
 		iDefStr = pUnit.baseCombatStr()
 		if iDefStr < 1:
 			iDefStr = 1
-		iMod = ( iL * 5 ) / iDefStr + 1
+		# iSafe = pUnit.healRate() / 3
+		# if iSafe > 10:
+			# iSafe = 10
+		iMod = ( iL * 5 ) / iDefStr + 3
 		iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod / 2
 		pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
 		if CyGame().getSorenRandNum(20, "Chance Cure Poison") < iL:
