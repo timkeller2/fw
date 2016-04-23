@@ -9542,7 +9542,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Popups/Acheron the Red Dragon.dds</Button>
+            <Button>Art/Interface/Buttons/Units/Acheron.dds</Button>
             <bBoarding>0</bBoarding>
             <bOnlyDefensive>0</bOnlyDefensive>
             <bDispellable>0</bDispellable>

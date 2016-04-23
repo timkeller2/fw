@@ -6936,7 +6936,7 @@ def canheavyweapons(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	if cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_HEAVY_WEAPONS')):
-		strSetData = pickle.loads(pCity.getScriptData())
+		strSetData = cPickle.loads(pCity.getScriptData())
 		if CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] > 29:
 			return True
 
@@ -6958,7 +6958,7 @@ def canheavyarmor(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	if cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_HEAVY_ARMOR')):
-		strSetData = pickle.loads(pCity.getScriptData())
+		strSetData = cPickle.loads(pCity.getScriptData())
 		if CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] > 29:
 			return True
 
@@ -6971,7 +6971,7 @@ def canmaster(argsList):
 	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
 
 	pCity = pUnit.plot().getPlotCity()
-	strSetData = pickle.loads(pCity.getScriptData())
+	strSetData = cPickle.loads(pCity.getScriptData())
 	if CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] > 44:
 		return True
 
@@ -8146,7 +8146,7 @@ def trainingyard6(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	pay(pCity,'BUILDING_CRAFTSMEN_GUILD',6,iPlayer,'craftsmen guild')
+	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',6,iPlayer,'craftsmen guild')
 	
 def trainingyard10(argsList):
 	iEvent = argsList[0]
@@ -8156,7 +8156,7 @@ def trainingyard10(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	pay(pCity,'BUILDING_CRAFTSMEN_GUILD',10,iPlayer,'craftsmen guild')
+	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',10,iPlayer,'craftsmen guild')
 	
 def trainingyard25(argsList):
 	iEvent = argsList[0]
@@ -8166,7 +8166,7 @@ def trainingyard25(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	pay(pCity,'BUILDING_CRAFTSMEN_GUILD',25,iPlayer,'craftsmen guild')
+	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',25,iPlayer,'craftsmen guild')
 	
 def alchemylab5(argsList):
 	iEvent = argsList[0]
@@ -8176,7 +8176,7 @@ def alchemylab5(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	pay(pCity,'BUILDING_ALCHEMY_LAB',5,iPlayer,'alchemy lab')
+	cf.pay(pCity,'BUILDING_ALCHEMY_LAB',5,iPlayer,'alchemy lab')
 	
 def alchemylab10(argsList):
 	iEvent = argsList[0]
@@ -8186,7 +8186,7 @@ def alchemylab10(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	pay(pCity,'BUILDING_ALCHEMY_LAB',10,iPlayer,'alchemy lab')
+	cf.pay(pCity,'BUILDING_ALCHEMY_LAB',10,iPlayer,'alchemy lab')
 	
 def alchemylab25(argsList):
 	iEvent = argsList[0]
@@ -8196,5 +8196,5 @@ def alchemylab25(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	pay(pCity,'BUILDING_ALCHEMY_LAB',25,iPlayer,'alchemy lab')
+	cf.pay(pCity,'BUILDING_ALCHEMY_LAB',25,iPlayer,'alchemy lab')
 	

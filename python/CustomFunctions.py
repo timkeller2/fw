@@ -27,7 +27,7 @@ class CustomFunctions:
 		if strSetData[sBuilding] < CyGame().getGameTurn() - pCity.getPopulation() * 3:
 			strSetData[sBuilding] = CyGame().getGameTurn() - pCity.getPopulation() * 3
 
-		iCostMod = ( iCost * 10 ) / pCity.getPopulation()	
+		iCostMod = ( iCost * 15 ) / pCity.getPopulation()	
 			
 		strSetData[sBuilding] = strSetData[sBuilding] + iCostMod
 		pCity.setScriptData(cPickle.dumps(strSetData))
@@ -2546,11 +2546,11 @@ class CustomFunctions:
 						if not pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_ORC'):
 							if (pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_BEAST')):
 								if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')):
-									if CyGame().getSorenRandNum(100, "JungleFever") < iJunglePlot + iDiseaseInPlot * iDisMult:
+									if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED')) and CyGame().getSorenRandNum(100, "JungleFever") < iJunglePlot + iDiseaseInPlot * iDisMult + pUnit.getDamage() / 20:
 										pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'), True)
 										sMsg = pUnit.getName() + ' contracts a disease!'
 										CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
-									if CyGame().getSorenRandNum(100, "ThePlague") < iPlagueInPlot * iDisMult * 2 and iPlagueInPlot > 0:
+									if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')) and CyGame().getSorenRandNum(100, "ThePlague") < iPlagueInPlot * iDisMult * 2 and iPlagueInPlot > 0 + pUnit.getDamage() / 10:
 										pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), True)
 										sMsg = pUnit.getName() + ' contracts the plague!'
 										CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
