@@ -1911,7 +1911,7 @@
             <bImmuneNeutral>1</bImmuneNeutral>
             <bImmuneEnemy>1</bImmuneEnemy>
             <RemovePromotionType1>PROMOTION_CHARMED</RemovePromotionType1>
-            <PyResult>spellLoyalty(pCaster)</PyResult>
+            <PyResult>spellLoyalty(pCaster,'PROMOTION_LOYALTY',0)</PyResult>
             <PyRequirement>reqLoyalty(pCaster,'PROMOTION_LOYALTY')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_BLESS</Sound>
