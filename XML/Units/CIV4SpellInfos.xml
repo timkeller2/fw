@@ -8943,7 +8943,7 @@
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
             <UnitClassPrereq>NONE</UnitClassPrereq>
-            <UnitCombatPrereq>UNITCOMBAT_ADEPT</UnitCombatPrereq>
+            <UnitCombatPrereq>NONE</UnitCombatPrereq>
             <UnitInStackPrereq>NONE</UnitInStackPrereq>
             <CivilizationPrereq>NONE</CivilizationPrereq>
             <ReligionPrereq>NONE</ReligionPrereq>
