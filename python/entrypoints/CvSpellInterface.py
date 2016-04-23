@@ -4336,6 +4336,8 @@ def reqNoBuilding(caster,sBuilding):
 		# return False
 	# if (sBuilding == 'BUILDING_TAVERN' and strCheckData['BUILDING_TAVERN'] > CyGame().getGameTurn()):
 		# return False
+	# if (sBuilding == 'BUILDING_MONUMENT' and strCheckData['BUILDING_MONUMENT'] > CyGame().getGameTurn()):
+		# return False
 
 	# return True
 

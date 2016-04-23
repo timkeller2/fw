@@ -895,6 +895,9 @@ class CustomFunctions:
 			sSet = {}
 			sSet[svar] = 0
 		
+		if svar not in iGet:
+			sSet[svar] = ival
+			
 		sSet[svar] =  sSet[svar] + ival
 		city.setScriptData(cPickle.dumps(sSet))
 		
@@ -904,6 +907,9 @@ class CustomFunctions:
 		try:
 			iGet = cPickle.loads(city.getScriptData())
 		except:
+			return 0
+			
+		if svar not in iGet:
 			return 0
 			
 		return iGet[svar]
@@ -916,6 +922,7 @@ class CustomFunctions:
 		
 		if svar not in sSet:
 			sSet[svar] = sval
+			
 		sSet[svar] =  sval
 		city.setScriptData(cPickle.dumps(sSet))
 
@@ -923,6 +930,9 @@ class CustomFunctions:
 		try:
 			sGet = cPickle.loads(city.getScriptData())
 		except:
+			return ''
+			
+		if svar not in sGet:
 			return ''
 			
 		return sGet[svar]
@@ -940,6 +950,9 @@ class CustomFunctions:
 		try:
 			sGet = cPickle.loads(CyGameInstance.getScriptData())
 		except:
+			return ''
+			
+		if svar not in sGet:
 			return ''
 			
 		return sGet[svar]
