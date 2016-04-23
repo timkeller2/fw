@@ -8035,7 +8035,7 @@ def monument3(argsList):
 	bPlayer = gc.getPlayer(iPlayer)
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
-
+				   
 	cf.pay(pCity,'BUILDING_MONUMENT',3,iPlayer,'monument')
 	
 def monument5(argsList):

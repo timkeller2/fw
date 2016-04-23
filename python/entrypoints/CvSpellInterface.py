@@ -4309,35 +4309,35 @@ def reqNoBuilding(caster,sBuilding):
 		return False
 	return True
 
-def reqBuilding(caster,sBuilding,sPromotion):
-	pCity = caster.plot().getPlotCity()
+# def reqBuilding(caster,sBuilding,sPromotion):
+	# pCity = caster.plot().getPlotCity()
 
-	if pCity.getNumRealBuilding(gc.getInfoTypeForString(sBuilding)) == 0:
-		return False
+	# if pCity.getNumRealBuilding(gc.getInfoTypeForString(sBuilding)) == 0:
+		# return False
 
-	if caster.isHasPromotion(gc.getInfoTypeForString(sPromotion)):
-		return False
+	# if caster.isHasPromotion(gc.getInfoTypeForString(sPromotion)):
+		# return False
 
-	if pCity.isSettlement() == True:
-		return False
+	# if pCity.isSettlement() == True:
+		# return False
 
-	strCheckData = cPickle.loads(pCity.getScriptData())
-	if (sBuilding == 'BUILDING_CRAFTSMEN_GUILD' and strCheckData['BUILDING_CRAFTSMEN_GUILD'] > CyGame().getGameTurn()):
-		return False
-	if (sBuilding == 'BUILDING_TRAINING_YARD' and strCheckData['BUILDING_TRAINING_YARD'] > CyGame().getGameTurn()):
-		return False
-	if (sBuilding == 'BUILDING_HERBALIST' and strCheckData['BUILDING_HERBALIST'] > CyGame().getGameTurn()):
-		return False
-	if (sBuilding == 'BUILDING_ALCHEMY_LAB' and strCheckData['BUILDING_ALCHEMY_LAB'] > CyGame().getGameTurn()):
-		return False
-	if (sBuilding == 'BUILDING_MAGE_GUILD' and strCheckData['BUILDING_MAGE_GUILD'] > CyGame().getGameTurn()):
-		return False
-	if (sBuilding == 'BUILDING_LIBRARY' and strCheckData['BUILDING_LIBRARY'] > CyGame().getGameTurn()):
-		return False
-	if (sBuilding == 'BUILDING_TAVERN' and strCheckData['BUILDING_TAVERN'] > CyGame().getGameTurn()):
-		return False
+	# strCheckData = cPickle.loads(pCity.getScriptData())
+	# if (sBuilding == 'BUILDING_CRAFTSMEN_GUILD' and strCheckData['BUILDING_CRAFTSMEN_GUILD'] > CyGame().getGameTurn()):
+		# return False
+	# if (sBuilding == 'BUILDING_TRAINING_YARD' and strCheckData['BUILDING_TRAINING_YARD'] > CyGame().getGameTurn()):
+		# return False
+	# if (sBuilding == 'BUILDING_HERBALIST' and strCheckData['BUILDING_HERBALIST'] > CyGame().getGameTurn()):
+		# return False
+	# if (sBuilding == 'BUILDING_ALCHEMY_LAB' and strCheckData['BUILDING_ALCHEMY_LAB'] > CyGame().getGameTurn()):
+		# return False
+	# if (sBuilding == 'BUILDING_MAGE_GUILD' and strCheckData['BUILDING_MAGE_GUILD'] > CyGame().getGameTurn()):
+		# return False
+	# if (sBuilding == 'BUILDING_LIBRARY' and strCheckData['BUILDING_LIBRARY'] > CyGame().getGameTurn()):
+		# return False
+	# if (sBuilding == 'BUILDING_TAVERN' and strCheckData['BUILDING_TAVERN'] > CyGame().getGameTurn()):
+		# return False
 
-	return True
+	# return True
 
 def reqLearnMagic(caster):
 	pCity = caster.plot().getPlotCity()
