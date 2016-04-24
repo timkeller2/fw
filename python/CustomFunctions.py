@@ -2357,7 +2357,7 @@ class CustomFunctions:
 							break
 
 				## Low level vessels can take storm damage
-				if pPlayer.isHuman() and iTerrain == iOcean:
+				if pPlayer.isHuman() and iTerrain == iOcean and ( not pPlot.isOwned() or pPlot.getOwner() != pUnit.getOwner()):
 					if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GALLEY') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_TRIREME'):
 						iDam = CyGame().getSorenRandNum(12, "Storm Damage") - pUnit.baseCombatStr()
 						
