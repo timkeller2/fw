@@ -9083,7 +9083,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_CRAFTSMEN_GUILD_STORE</Type>
-            <Description>Visit the Training Yard</Description>
+            <Description>Visit the Guild of Craftsmen</Description>
             <Civilopedia>Visit the craftsmen to purchase equipment.</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>Visit the craftsmen to purchase equipment.</Help>
