@@ -3904,31 +3904,31 @@ def sellToMarket(caster):
 			iPrice = ( pUnit.hillsAttackModifier() * ( 80 + cf.retSearch(caster) * 5 ) ) / 100
 			pPlayer.setGold( pPlayer.getGold() + iPrice )
 
-			sGameData = cPickle.loads(CyGameInstance.getScriptData())
-			## Potions
-			if 'BUILDING_HERBALIST' not in sGameData:
-				sGameData['BUILDING_HERBALIST'] = 0
-			if 'BUILDING_CRAFTSMEN_GUILD' not in sGameData:
-				sGameData['BUILDING_CRAFTSMEN_GUILD'] = 0
-			if 'BUILDING_LIBRARY' not in sGameData:
-				sGameData['BUILDING_LIBRARY'] = 0
-			if 'BUILDING_MAGE_GUILD' not in sGameData:
-				sGameData['BUILDING_MAGE_GUILD'] = 0
-			if 'BUILDING_ALCHEMY_LAB' not in sGameData:
-				sGameData['BUILDING_ALCHEMY_LAB'] = 0
+			# sGameData = cPickle.loads(CyGameInstance.getScriptData())
+			# Potions
+			# if 'BUILDING_HERBALIST' not in sGameData:
+				# sGameData['BUILDING_HERBALIST'] = 0
+			# if 'BUILDING_CRAFTSMEN_GUILD' not in sGameData:
+				# sGameData['BUILDING_CRAFTSMEN_GUILD'] = 0
+			# if 'BUILDING_LIBRARY' not in sGameData:
+				# sGameData['BUILDING_LIBRARY'] = 0
+			# if 'BUILDING_MAGE_GUILD' not in sGameData:
+				# sGameData['BUILDING_MAGE_GUILD'] = 0
+			# if 'BUILDING_ALCHEMY_LAB' not in sGameData:
+				# sGameData['BUILDING_ALCHEMY_LAB'] = 0
 
-			if pUnit.getName().find('Potion') > -1:
-				sGameData['BUILDING_HERBALIST'] += ( iPrice / 3 )
-			elif pUnit.getName().find('Weap') > -1:
-				sGameData['BUILDING_CRAFTSMEN_GUILD'] += ( iPrice / 3 )
-			elif pUnit.getName().find('Armo') > -1:
-				sGameData['BUILDING_CRAFTSMEN_GUILD'] += ( iPrice / 3 )
-			elif pUnit.getName().find('Scro') > -1:
-				sGameData['BUILDING_MAGE_GUILD'] += ( iPrice / 3 )
-			else:
-				sGameData['BUILDING_ALCHEMY_LAB'] += ( iPrice / 3 )
+			# if pUnit.getName().find('Potion') > -1:
+				# sGameData['BUILDING_HERBALIST'] += ( iPrice / 3 )
+			# elif pUnit.getName().find('Weap') > -1:
+				# sGameData['BUILDING_CRAFTSMEN_GUILD'] += ( iPrice / 3 )
+			# elif pUnit.getName().find('Armo') > -1:
+				# sGameData['BUILDING_CRAFTSMEN_GUILD'] += ( iPrice / 3 )
+			# elif pUnit.getName().find('Scro') > -1:
+				# sGameData['BUILDING_MAGE_GUILD'] += ( iPrice / 3 )
+			# else:
+				# sGameData['BUILDING_ALCHEMY_LAB'] += ( iPrice / 3 )
 
-			CyGameInstance.setScriptData(cPickle.dumps(sGameData))
+			# CyGameInstance.setScriptData(cPickle.dumps(sGameData))
 			caster.changeExperience(1, -1, False, False, False)
 
 			sMsg = 'Your ' + caster.getName() + ' sells a ' + pUnit.getName() + ' for ' + str( iPrice ) + 'gp...  (Burglar Skill: '+str(cf.retSearch(caster))+')'

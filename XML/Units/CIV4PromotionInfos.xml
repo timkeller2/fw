@@ -2141,7 +2141,6 @@
             <Description>TXT_KEY_PROMOTION_DISEASED</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
-            <bAlwaysHeal>1</bAlwaysHeal>
             <iEnemyHealChange>-10</iEnemyHealChange>
             <iNeutralHealChange>-10</iNeutralHealChange>
             <iFriendlyHealChange>-10</iFriendlyHealChange>
@@ -6114,7 +6113,6 @@
             <Description>TXT_KEY_PROMOTION_PLAGUED</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
-            <bAlwaysHeal>1</bAlwaysHeal>
             <iEnemyHealChange>-20</iEnemyHealChange>
             <iNeutralHealChange>-20</iNeutralHealChange>
             <iFriendlyHealChange>-20</iFriendlyHealChange>
@@ -6221,7 +6219,6 @@
             <Help>TXT_KEY_PROMOTION_POISONED_PEDIA</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
-            <bAlwaysHeal>1</bAlwaysHeal>
             <iEnemyHealChange>-4</iEnemyHealChange>
             <iNeutralHealChange>-4</iNeutralHealChange>
             <iFriendlyHealChange>-4</iFriendlyHealChange>

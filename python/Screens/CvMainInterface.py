@@ -2471,7 +2471,23 @@ class CvMainInterface:
 
 						for k in range(pHeadSelectedCity.getNumBuilding(i)):
 							
-							szLeftBuffer = gc.getBuildingInfo(i).getDescription()
+							## MTK, indicate stock, if any
+							szStock = ""
+							iStock = cf.getObjectInt(pHeadSelectedCity,gc.getBuildingInfo(i).getType())
+							if iStock > 0:
+								iStock = CyGame().getGameTurn() - iStock
+								iMaxStock = pHeadSelectedCity.getPopulation() * 3
+								if iMaxStock < 1:
+									iMaxStock = 1
+								iPercent = ( iStock * 100 ) / iMaxStock
+								if iPercent > 100:
+									iPercent = 100
+								if iPercent > 0:
+									szStock = str(iPercent) + "% "
+							
+							szLeftBuffer = szStock + gc.getBuildingInfo(i).getDescription() 
+							## End MTK
+							#szLeftBuffer = gc.getBuildingInfo(i).getDescription()
 							szRightBuffer = u""
 							bFirst = True
 							
