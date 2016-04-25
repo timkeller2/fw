@@ -2471,6 +2471,9 @@ class CvMainInterface:
 
 						for k in range(pHeadSelectedCity.getNumBuilding(i)):
 							
+							szLeftBuffer = gc.getBuildingInfo(i).getDescription()
+							szRightBuffer = u""
+							bFirst = True
 							## MTK, indicate stock, if any
 							szStock = ""
 							iStock = cf.getObjectInt(pHeadSelectedCity,gc.getBuildingInfo(i).getType())
@@ -2484,12 +2487,10 @@ class CvMainInterface:
 									iPercent = 100
 								if iPercent > 0:
 									szStock = str(iPercent) + "% "
+									bFirst = False
+									szRightBuffer = szRightBuffer + szStock
 							
-							szLeftBuffer = szStock + gc.getBuildingInfo(i).getDescription() 
 							## End MTK
-							#szLeftBuffer = gc.getBuildingInfo(i).getDescription()
-							szRightBuffer = u""
-							bFirst = True
 							
 							if (pHeadSelectedCity.getNumActiveBuilding(i) > 0):
 								iHealth = pHeadSelectedCity.getBuildingHealth(i)
