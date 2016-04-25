@@ -81803,7 +81803,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_POTION_XP_MINOR</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -82041,7 +82041,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_POTION_XP</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -82279,7 +82279,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_POTION_HEALING_MINOR</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -82517,7 +82517,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_POTION_HEALING_MODERATE</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -82755,7 +82755,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_POTION_HEALING_GREATER</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -82993,7 +82993,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_POTION_STRENGTH</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -83231,7 +83231,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_POTION_HASTE</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -83469,7 +83469,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_POTION_VAMPIRISM</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -83707,7 +83707,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_POTION_REGENERATION</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -83945,7 +83945,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_POTION_STRENGTH_ENDURING</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -84183,7 +84183,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_BATTLE_ROBE</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -84421,7 +84421,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_IMPROVED_WEAPONS</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -84659,7 +84659,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_HEAVY_WEAPONS</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -84897,7 +84897,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_WEAPONS</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -85135,7 +85135,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_IMPROVED_ARMOR</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -85373,7 +85373,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_HEAVY_ARMOR</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -85611,7 +85611,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_ARMOR</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -85849,7 +85849,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_BOOTS_OF_HASTE</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -86087,7 +86087,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_SCROLL_MM</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -86325,7 +86325,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_SCROLL_MA</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -86563,7 +86563,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_SCROLL_SB</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -86801,7 +86801,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_SCROLL_FB</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -87039,7 +87039,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_SCROLL_SK</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -87277,7 +87277,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_SCROLL_MR</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -87515,7 +87515,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_SCROLL_CR</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -87753,7 +87753,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_SCROLL_MS</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
@@ -87991,7 +87991,7 @@
             <Special>NONE</Special>
             <Capture>EQUIPMENTCLASS_SCROLL_SE</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_LAND</Domain>
+            <Domain>DOMAIN_IMMOBILE</Domain>
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>

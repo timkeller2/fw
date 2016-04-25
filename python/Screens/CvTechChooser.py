@@ -95,24 +95,29 @@ class CvTechChooser:
 			szText = localText.getText("TXT_KEY_WB_AS_ADD_TECH", ())
 			screen.setButtonGFC( "AddTechButton", szText, "", self.X_ADD_TECH_BUTTON, self.Y_ADD_TECH_BUTTON, self.W_ADD_TECH_BUTTON, self.H_ADD_TECH_BUTTON, WidgetTypes.WIDGET_GENERAL, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD )
 			screen.hide("AddTechButton")
+
+		# Here we set the background widget and exit button, and we show the screen - MTK
+		xRes = screen.getXResolution()
+		yRes = screen.getYResolution()
 			
 		# Here we set the background widget and exit button, and we show the screen
 		screen.showWindowBackground( False )
-		screen.setDimensions(screen.centerX(0), screen.centerY(0), 1024, 768)
-		screen.addPanel( "TechTopPanel", u"", u"", True, False, 0, 0, 1024, 55, PanelStyles.PANEL_STYLE_TOPBAR )
-		screen.addDDSGFC("TechBG", ArtFileMgr.getInterfaceArtInfo("SCREEN_BG").getPath(), 0, 48, 1024, 672, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-		screen.addPanel( "TechBottomPanel", u"", u"", True, False, 0, 713, 1024, 55, PanelStyles.PANEL_STYLE_BOTTOMBAR )
-		screen.setText( "TechChooserExit", "Background", u"<font=4>" + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, 994, 726, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
+		screen.setDimensions(0, 0, xRes, yRes)
+		#screen.setDimensions(screen.centerX(0), screen.centerY(0), 1024, 768)
+		screen.addPanel( "TechTopPanel", u"", u"", True, False, 0, 0, xRes, 55, PanelStyles.PANEL_STYLE_TOPBAR )
+		screen.addDDSGFC("TechBG", ArtFileMgr.getInterfaceArtInfo("SCREEN_BG").getPath(), 0, 48, xRes, yRes - 96, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		screen.addPanel( "TechBottomPanel", u"", u"", True, False, 0, yRes - 55, xRes, 55, PanelStyles.PANEL_STYLE_BOTTOMBAR )
+		screen.setText( "TechChooserExit", "Background", u"<font=4>" + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>", CvUtil.FONT_RIGHT_JUSTIFY, xRes - 30, yRes - 42, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 		screen.setActivation( "TechChooserExit", ActivationTypes.ACTIVATE_MIMICPARENTFOCUS )
 
 		# Header...
 		szText = u"<font=4>"
 		szText = szText + localText.getText("TXT_KEY_TECH_CHOOSER_TITLE", ()).upper()
 		szText = szText + u"</font>"
-		screen.setLabel( "TechTitleHeader", "Background", szText, CvUtil.FONT_CENTER_JUSTIFY, 502, 8, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		screen.setLabel( "TechTitleHeader", "Background", szText, CvUtil.FONT_CENTER_JUSTIFY, xRes / 2 - 8, 8, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		# Make the scrollable area for the city list...
-		screen.addScrollPanel( "TechList", u"", 0, 64, 1024, 626, PanelStyles.PANEL_STYLE_EXTERNAL )
+		screen.addScrollPanel( "TechList", u"", 0, 64, xRes, yRes - 142, PanelStyles.PANEL_STYLE_EXTERNAL )
 		screen.setActivation( "TechList", ActivationTypes.ACTIVATE_NORMAL )
 		screen.hide( "TechList" )
 		
