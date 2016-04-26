@@ -5652,3 +5652,36 @@ def spellCompFireball(caster,ifire):
 				pUnit.doDamage(iDamage, 100, caster, gc.getInfoTypeForString('DAMAGE_FIRE'), true)
 			return
 	
+def reqRecruitGiant(caster):
+	iX = caster.getX()
+	iY = caster.getY()
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iTeam = pPlayer.getTeam()
+	eTeam = gc.getTeam(iTeam)
+	for iiX in range(iX-1, iX+2, 1):
+		for iiY in range(iY-1, iY+2, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				if pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_HILL_GIANT'):
+					if eTeam.isAtWar(pUnit.getTeam()):
+						return True
+	return False
+
+def spellRecruitGiant(caster):
+	iX = caster.getX()
+	iY = caster.getY()
+	pPlayer = gc.getPlayer(caster.getOwner())
+	iTeam = pPlayer.getTeam()
+	eTeam = gc.getTeam(iTeam)
+	for iiX in range(iX-1, iX+2, 1):
+		for iiY in range(iY-1, iY+2, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				if pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_HILL_GIANT'):
+					if eTeam.isAtWar(pUnit.getTeam()):
+						if pUnit.isResisted(caster, gc.getInfoTypeForString('SPELL_RECRUIT_GIANT')) == False:
+							newUnit = pPlayer.initUnit(pUnit.getUnitType(), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+							newUnit.convert(pUnit)
+

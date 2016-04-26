@@ -6428,6 +6428,7 @@
                     <iAffinity>1</iAffinity>
                 </BonusAffinity>
             </BonusAffinities>
+            <iSpellDamageModify>5</iSpellDamageModify>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_RUSTED</Type>

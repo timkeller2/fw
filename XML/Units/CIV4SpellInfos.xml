@@ -8869,7 +8869,7 @@
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
             <UnitClassPrereq>NONE</UnitClassPrereq>
-            <UnitCombatPrereq>NONE</UnitCombatPrereq>
+            <UnitCombatPrereq>UNITCOMBAT_ADEPT</UnitCombatPrereq>
             <UnitInStackPrereq>NONE</UnitInStackPrereq>
             <CivilizationPrereq>NONE</CivilizationPrereq>
             <ReligionPrereq>NONE</ReligionPrereq>
@@ -8884,7 +8884,7 @@
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -8958,7 +8958,7 @@
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -9032,7 +9032,7 @@
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -9106,7 +9106,7 @@
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -9180,7 +9180,7 @@
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -9255,7 +9255,7 @@
             <iAIWeight>100</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <bIgnoreHasCasted>0</bIgnoreHasCasted>
+            <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -9329,7 +9329,7 @@
             <iAIWeight>100</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <bIgnoreHasCasted>0</bIgnoreHasCasted>
+            <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -9403,7 +9403,7 @@
             <iAIWeight>100</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <bIgnoreHasCasted>0</bIgnoreHasCasted>
+            <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -9477,7 +9477,7 @@
             <iAIWeight>100</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <bIgnoreHasCasted>0</bIgnoreHasCasted>
+            <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -9550,7 +9550,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>100</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -9625,7 +9625,7 @@
             <iAIWeight>100</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <bIgnoreHasCasted>0</bIgnoreHasCasted>
+            <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -9698,7 +9698,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>100</iAIWeight>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -9772,7 +9772,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>100</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -9846,7 +9846,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>100</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -9920,7 +9920,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>100</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -9994,7 +9994,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>100</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -10069,7 +10069,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -10143,7 +10143,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -10217,7 +10217,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -10291,7 +10291,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -10365,7 +10365,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>100</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -10439,7 +10439,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>100</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -10513,7 +10513,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -10587,7 +10587,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -10661,7 +10661,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -10713,8 +10713,8 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_SCROLL_SK_BURGLAR</Type>
-            <Description>Use Magic Item Scroll of Summon Kikijub</Description>
-            <Civilopedia>Summons a kikijub to aid the caster.</Civilopedia>
+            <Description>Use Magic Item Scroll of Summon Scorpion</Description>
+            <Civilopedia>Summons a giant scorpion to aid the caster.</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help></Help>
             <PromotionPrereq1>PROMOTION_SCROLL_SK</PromotionPrereq1>
@@ -10735,7 +10735,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -10773,7 +10773,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_KIKIJUB')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_SCORPION')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_FIRE_SUMMON</Effect>
             <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>
@@ -10809,7 +10809,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -10883,7 +10883,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -10957,7 +10957,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -11031,7 +11031,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
@@ -11105,7 +11105,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>2</iRange>
@@ -11179,7 +11179,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>2</iRange>
@@ -11253,7 +11253,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>2</iRange>
@@ -11327,7 +11327,7 @@
             <bInCityOnly>0</bInCityOnly>
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>2</iRange>
@@ -11996,7 +11996,7 @@
             <iAIWeight>50</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -12070,7 +12070,7 @@
             <iAIWeight>50</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -12144,7 +12144,7 @@
             <iAIWeight>50</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -12218,7 +12218,7 @@
             <iAIWeight>50</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -12292,7 +12292,7 @@
             <iAIWeight>50</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -12366,7 +12366,7 @@
             <iAIWeight>50</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -12440,7 +12440,7 @@
             <iAIWeight>50</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -12514,7 +12514,7 @@
             <iAIWeight>50</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -12588,7 +12588,7 @@
             <iAIWeight>50</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -12662,7 +12662,7 @@
             <iAIWeight>50</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -12736,7 +12736,7 @@
             <iAIWeight>50</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>0</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>

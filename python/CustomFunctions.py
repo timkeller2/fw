@@ -71,7 +71,7 @@ class CustomFunctions:
 			iMaxStock = 1
 		iPercent = ( iStock * 100 ) / iMaxStock
 		if iStock > 0:
-			sMsg = 'The ' + pCity.getName() + ' ' + sDesc + ' has roughly ' + str((iStock/iCostMod)*3) + ' turns production of stock remaining (' + str(iPercent) + '%)...'
+			sMsg = 'The ' + pCity.getName() + ' ' + sDesc + ' has roughly ' + str(iStock) + ' turns production of stock remaining (' + str(iPercent) + '%)...'
 		else:	
 			sMsg = 'The ' + pCity.getName() + ' ' + sDesc + ' is out of stock for ' + str(int(math.fabs(iStock))) + ' turns... (Turn ' + str(CyGame().getGameTurn()) + ')'
 		CyInterface().addMessage(iPlayer,True,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
