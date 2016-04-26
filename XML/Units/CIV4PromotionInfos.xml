@@ -5202,7 +5202,6 @@
             <Type>PROMOTION_FIELD_MEDIC1</Type>
             <Description>Field Medic</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iSameTileHealChange>3</iSameTileHealChange>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -5254,7 +5253,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_MEDIC1</PromotionPrereq>
             <TechPrereq>NONE</TechPrereq>
-            <iSameTileHealChange>10</iSameTileHealChange>
+            <iSameTileHealChange>5</iSameTileHealChange>
             <iAdjacentTileHealChange>5</iAdjacentTileHealChange>
             <Button>,Art/Interface/Buttons/Promotions/Medic2.dds,Art/Interface/Buttons/Promotions_Atlas.dds,4,4</Button>
             <PromotionPrereqAnd>PROMOTION_COMBAT4</PromotionPrereqAnd>
@@ -5266,8 +5265,8 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_MEDIC2</PromotionPrereq>
             <TechPrereq>NONE</TechPrereq>
-            <iSameTileHealChange>15</iSameTileHealChange>
-            <iAdjacentTileHealChange>15</iAdjacentTileHealChange>
+            <iSameTileHealChange>5</iSameTileHealChange>
+            <iAdjacentTileHealChange>10</iAdjacentTileHealChange>
             <Button>Art/Interface/Buttons/Promotions/Medic3.dds</Button>
             <PromotionPrereqAnd>PROMOTION_DRILL4</PromotionPrereqAnd>
         </PromotionInfo>

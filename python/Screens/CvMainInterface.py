@@ -3102,15 +3102,22 @@ class CvMainInterface:
 						szLeftBuffer = localText.getText("INTERFACE_PANE_LEVEL", ())
 						szRightBuffer = u"%d" %(pHeadSelectedUnit.getLevel())
 						
-						if cf.iNoble(pHeadSelectedUnit) > 0:
-							szRightBuffer = szRightBuffer + u"%c" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)) + str(cf.iNoble(pHeadSelectedUnit)) 
-						
-						if pHeadSelectedUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR1')) and cf.retSearch(pHeadSelectedUnit) > 0:
-							szRightBuffer = szRightBuffer + u"%c" %(gc.getCommerceInfo(CommerceTypes.COMMERCE_ESPIONAGE).getChar()) + str(cf.retSearch(pHeadSelectedUnit))
+						if pHeadSelectedUnit.getDamage() > 0:
+							iHealth = pHeadSelectedUnit.healRate()
+							if  iHealth > 0:
+								szRightBuffer = szRightBuffer + u"%c" %(CyGame().getSymbolID(FontSymbols.HEALTHY_CHAR)) + str(iHealth) 
+							elif iHealth < 0:
+								szRightBuffer = szRightBuffer + u"%c" %(CyGame().getSymbolID(FontSymbols.UNHEALTHY_CHAR)) + str(math.fabs(iHealth)) 
+						else:
+							if cf.iNoble(pHeadSelectedUnit) > 0:
+								szRightBuffer = szRightBuffer + u"%c" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)) + str(cf.iNoble(pHeadSelectedUnit)) 
+								
+							if pHeadSelectedUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR1')) and cf.retSearch(pHeadSelectedUnit) > 0:
+								szRightBuffer = szRightBuffer + u"%c" %(gc.getCommerceInfo(CommerceTypes.COMMERCE_ESPIONAGE).getChar()) + str(cf.retSearch(pHeadSelectedUnit))
 						
 						iDam = cf.iCrowdingDamage(pHeadSelectedUnit)
 						if  iDam > 0:
-							szRightBuffer = szRightBuffer + u"%c" %(CyGame().getSymbolID(FontSymbols.UNHEALTHY_CHAR)) + str(iDam) 
+							szRightBuffer = szRightBuffer + u"%c" %(CyGame().getSymbolID(FontSymbols.UNHAPPY_CHAR)) + str(iDam) 
 						
 						szBuffer = szLeftBuffer + "  " + szRightBuffer
 						screen.appendTableRow( "SelectedUnitText" )

@@ -37232,7 +37232,7 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
-            <bAbandon>1</bAbandon>
+            <bAbandon>0</bAbandon>
             <bFreeXP>1</bFreeXP>
             <iCombatDefense>7</iCombatDefense>
             <iFreePromotionPick>1</iFreePromotionPick>
@@ -37483,7 +37483,7 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
-            <bAbandon>1</bAbandon>
+            <bAbandon>0</bAbandon>
             <bFreeXP>1</bFreeXP>
             <iCombatDefense>8</iCombatDefense>
             <iFreePromotionPick>1</iFreePromotionPick>
@@ -37728,7 +37728,7 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
-            <bAbandon>1</bAbandon>
+            <bAbandon>0</bAbandon>
             <bFreeXP>1</bFreeXP>
             <iCombatDefense>6</iCombatDefense>
             <iFreePromotionPick>1</iFreePromotionPick>
@@ -38234,7 +38234,7 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
-            <bAbandon>1</bAbandon>
+            <bAbandon>0</bAbandon>
             <bFreeXP>1</bFreeXP>
             <iCombatDefense>7</iCombatDefense>
             <iFreePromotionPick>1</iFreePromotionPick>
@@ -82459,7 +82459,7 @@
             <iRangedWaveSize>0</iRangedWaveSize>
                 <UnitMeshGroup>
                     <iRequired>1</iRequired>
-                    <EarlyArtDefineTag>ART_DEF_EQUIPMENT_TREASURE1</EarlyArtDefineTag>
+                    <EarlyArtDefineTag>ART_DEF_EQUIPMENT_HEALING_SALVE</EarlyArtDefineTag>
                 </UnitMeshGroup>
             </UnitMeshGroups>
             <FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -83173,7 +83173,7 @@
             <iRangedWaveSize>0</iRangedWaveSize>
                 <UnitMeshGroup>
                     <iRequired>1</iRequired>
-                    <EarlyArtDefineTag>ART_DEF_EQUIPMENT_TREASURE1</EarlyArtDefineTag>
+                    <EarlyArtDefineTag>ART_DEF_EQUIPMENT_HEALING_SALVE</EarlyArtDefineTag>
                 </UnitMeshGroup>
             </UnitMeshGroups>
             <FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -83411,7 +83411,7 @@
             <iRangedWaveSize>0</iRangedWaveSize>
                 <UnitMeshGroup>
                     <iRequired>1</iRequired>
-                    <EarlyArtDefineTag>ART_DEF_EQUIPMENT_TREASURE1</EarlyArtDefineTag>
+                    <EarlyArtDefineTag>ART_DEF_EQUIPMENT_HEALING_SALVE</EarlyArtDefineTag>
                 </UnitMeshGroup>
             </UnitMeshGroups>
             <FormationType>FORMATION_TYPE_DEFAULT</FormationType>

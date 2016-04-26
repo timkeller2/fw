@@ -7383,7 +7383,7 @@
             <Description>Healing Touch</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>Heals a unit.  The amount healed is 5-10% plus 2-4% per caster level, less for larger targets.  The number of units healed increases by one at level six and every three levels after that.</Help>
+            <Help>Heals a unit.  The amount healed is 3-6% plus 1-2% per caster level for targets below 6str.  The number of units healed increases by one at level six and every three levels after that.</Help>
             <PromotionPrereq1>PROMOTION_CAST_HEALING_TOUCH</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -7440,7 +7440,81 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellHealingTouch(pCaster,15)</PyResult>
+            <PyResult>spellHealingTouch(pCaster)</PyResult>
+            <PyRequirement>reqHeal(pCaster)</PyRequirement>
+            <Effect>EFFECT_CREATION</Effect>
+            <Sound>AS3D_SPELL_HEAL</Sound>
+            <HotKey></HotKey>
+            <bAltDown>0</bAltDown>
+            <bShiftDown>0</bShiftDown>
+            <bCtrlDown>0</bCtrlDown>
+            <bGraphicalOnly>0</bGraphicalOnly>
+            <iHotKeyPriority>0</iHotKeyPriority>
+            <Button>Art/Interface/Buttons/Spells/curedisease.dds</Button>
+        </SpellInfo>
+        <SpellInfo>
+            <Type>SPELL_FIELD_MEDIC</Type>
+            <Description>Field Medic</Description>
+            <Civilopedia></Civilopedia>
+            <Strategy>NONE</Strategy>
+            <Help>Heals the most damaged unit.  The amount healed is 3-6% plus 1-2% per caster level for targets below 6str.  It heals proportionally less for units of higher strength.</Help>
+            <PromotionPrereq1>PROMOTION_FIELD_MEDIC1</PromotionPrereq1>
+            <PromotionPrereq2>NONE</PromotionPrereq2>
+            <UnitPrereq>NONE</UnitPrereq>
+            <UnitClassPrereq>NONE</UnitClassPrereq>
+            <UnitCombatPrereq>NONE</UnitCombatPrereq>
+            <UnitInStackPrereq>NONE</UnitInStackPrereq>
+            <CivilizationPrereq>NONE</CivilizationPrereq>
+            <ReligionPrereq>NONE</ReligionPrereq>
+            <StateReligionPrereq>NONE</StateReligionPrereq>
+            <TechPrereq>NONE</TechPrereq>
+            <bAllowAI>1</bAllowAI>
+            <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
+            <bCausesWar>0</bCausesWar>
+            <bGlobal>0</bGlobal>
+            <bInBordersOnly>0</bInBordersOnly>
+            <bInCityOnly>0</bInCityOnly>
+            <iAIWeight>0</iAIWeight>
+            <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
+            <bResistable>0</bResistable>
+            <iRange>0</iRange>
+            <iResistModify>0</iResistModify>
+            <iDamage>0</iDamage>
+            <iDamageLimit>0</iDamageLimit>
+            <DamageType>NONE</DamageType>
+            <AddPromotionType1>NONE</AddPromotionType1>
+            <AddPromotionType2>NONE</AddPromotionType2>
+            <AddPromotionType3>NONE</AddPromotionType3>
+            <RemovePromotionType1>NONE</RemovePromotionType1>
+            <RemovePromotionType2>NONE</RemovePromotionType2>
+            <RemovePromotionType3>NONE</RemovePromotionType3>
+            <bBuffCasterOnly>0</bBuffCasterOnly>
+            <ConvertUnitType>NONE</ConvertUnitType>
+            <CreateBuildingType>NONE</CreateBuildingType>
+            <CreateFeatureType>NONE</CreateFeatureType>
+            <CreateImprovementType>NONE</CreateImprovementType>
+            <SpreadReligion>NONE</SpreadReligion>
+            <CreateUnitType>NONE</CreateUnitType>
+            <iCreateUnitNum>0</iCreateUnitNum>
+            <bPermanentUnitCreate>0</bPermanentUnitCreate>
+            <CreateUnitPromotion>NONE</CreateUnitPromotion>
+            <bImmuneTeam>0</bImmuneTeam>
+            <bImmuneNeutral>0</bImmuneNeutral>
+            <bImmuneEnemy>0</bImmuneEnemy>
+            <bImmuneFlying>0</bImmuneFlying>
+            <bImmuneNotAlive>0</bImmuneNotAlive>
+            <bDispel>0</bDispel>
+            <bPush>0</bPush>
+            <bRemoveHasCasted>0</bRemoveHasCasted>
+            <bSacrificeCaster>0</bSacrificeCaster>
+            <iChangePopulation>0</iChangePopulation>
+            <iCost>0</iCost>
+            <iImmobileTurns>0</iImmobileTurns>
+            <iMiscastChance>0</iMiscastChance>
+            <PyMiscast></PyMiscast>
+            <PyResult>spellFieldMedic(pCaster)</PyResult>
             <PyRequirement>reqHeal(pCaster)</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_HEAL</Sound>

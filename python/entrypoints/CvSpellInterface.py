@@ -4258,7 +4258,7 @@ def spellMageArmor(caster):
 			if ( iNumArmored < 1 ):
 				return
 
-def spellHealingTouch(caster,amount):
+def spellHealingTouch(caster):
 	iL = caster.getLevel()
 	iNumHealed = 0
 	pPlot = caster.plot()
@@ -4274,6 +4274,28 @@ def spellHealingTouch(caster,amount):
 			iNumHealed = iNumHealed + 1
 			if ( iNumHealed + 1 > iL / 3 ):
 				return
+
+def spellFieldMedic(caster):
+	iL = caster.getLevel()
+	iNumHealed = 0
+	iBestDamage = 0
+	pPlot = caster.plot()
+	
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if (pUnit.isAlive() and pUnit.getDamage() > 0):
+			if pUnit.getDamage() > iBestDamage:
+				iBestDamage = pUnit.getDamage()
+				iBestUnit = pUnit
+				
+	if iBestDamage > 0:
+		pUnit = iBestUnit
+		iDefStr = pUnit.baseCombatStr()
+		if iDefStr < 1:
+			iDefStr = 1
+		iMod = ( iL * 5 ) / iDefStr + 3
+		iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
+		pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
 
 def reqNoBuilding(caster,sBuilding):
 	pCity = caster.plot().getPlotCity()
