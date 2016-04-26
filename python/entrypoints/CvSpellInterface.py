@@ -3993,38 +3993,10 @@ def spellBurglar(caster):
 
 
 def reqSustain(caster):
-	pPlot = caster.plot()
-	for i in range(pPlot.getNumUnits()):
-		pUnit = pPlot.getUnit(i)
-		bUnit = True
-		if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MAGIC_MISSILE') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_FIREBALL') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_METEOR') ):
-			bUnit = False
-		if ( pUnit.getDuration() > 0 and pUnit.baseCombatStr() <= caster.baseCombatStr() * 2 and bUnit ):
-			return True
-
-	return False
+	return cf.reqSustain(caster)
 
 def spellSustain(caster):
-	iSustain = 1
-	bPlayer = gc.getPlayer(caster.getOwner())
-	if bPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_SUMMONER')):
-		iSustain = 2
-	iDuration = 99
-	pBestUnit = -1
-	pPlot = caster.plot()
-	for i in range(pPlot.getNumUnits()):
-		pUnit = pPlot.getUnit(i)
-		bUnit = True
-		if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MAGIC_MISSILE') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_FIREBALL') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_METEOR') ):
-			bUnit = False
-		if ( pUnit.getDuration() > 0 and pUnit.baseCombatStr() <= caster.baseCombatStr() * 2 and bUnit ):
-			if ( pUnit.getDuration() < iDuration ):
-				pBestUnit = pUnit
-				iDuration = pUnit.getDuration()
-
-	if pBestUnit != -1:
-		pBestUnit.setDuration( iDuration + iSustain )
-		
+	cf.spellSustain(caster)
 
 def reqTakeEquipment(caster,unit):
 	if caster.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_SIEGE'):

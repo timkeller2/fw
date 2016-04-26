@@ -17,6 +17,39 @@ CyGameInstance = gc.getGame()
 
 class CustomFunctions:
 
+	def reqSustain(caster):
+		pPlot = caster.plot()
+		for i in range(pPlot.getNumUnits()):
+			pUnit = pPlot.getUnit(i)
+			bUnit = True
+			if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MAGIC_MISSILE') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_FIREBALL') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_METEOR') ):
+				bUnit = False
+			if ( pUnit.getDuration() > 0 and pUnit.baseCombatStr() <= caster.baseCombatStr() * 2 and bUnit ):
+				return True
+
+		return False
+
+	def spellSustain(caster):
+		iSustain = 1
+		bPlayer = gc.getPlayer(caster.getOwner())
+		if bPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_SUMMONER')):
+			iSustain = 2
+		iDuration = 99
+		pBestUnit = -1
+		pPlot = caster.plot()
+		for i in range(pPlot.getNumUnits()):
+			pUnit = pPlot.getUnit(i)
+			bUnit = True
+			if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MAGIC_MISSILE') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_FIREBALL') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_METEOR') ):
+				bUnit = False
+			if ( pUnit.getDuration() > 0 and pUnit.baseCombatStr() <= caster.baseCombatStr() * 2 and bUnit ):
+				if ( pUnit.getDuration() < iDuration ):
+					pBestUnit = pUnit
+					iDuration = pUnit.getDuration()
+
+		if pBestUnit != -1:
+			pBestUnit.setDuration( iDuration + iSustain )
+		
 	def pay(self, pCity,sBuilding,iCost,iPlayer,sDesc):
 		## Load City Stock
 		strSetData = cPickle.loads(pCity.getScriptData())
@@ -2112,8 +2145,13 @@ class CustomFunctions:
 					self.equip(pUnit)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_THROWING_AXES'), False)
 
+				## Units which can sustain units try if they have done nothing else this turn.	
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUMMONING')) and not pUnit.isHasCasted() and self.reqSustain(pUnit):
+					self.spellSustain(pUnit)
+					pUnit.setHasCasted(True)
+
 				## Fortified Priests Auto-Buff if they can
-				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIVINE')) and pUnit.getFortifyTurns() > 1:
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIVINE')) and pUnit.getFortifyTurns() > 1 and not pUnit.isHasCasted():
 					py = PyPlayer(pUnit.getOwner())
 					iABR = self.iAutoBuffRange(pUnit)
 					iBuffs = pUnit.getLevel()
@@ -2169,7 +2207,7 @@ class CustomFunctions:
 							break
 							
 				## Fortified Mages Auto-Buff if they can
-				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING1')) and pUnit.getFortifyTurns() > 1:
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING1')) and pUnit.getFortifyTurns() > 1 and not pUnit.isHasCasted():
 					py = PyPlayer(pUnit.getOwner())
 					iABR = self.iAutoBuffRange(pUnit)
 					iBuffs = pUnit.getLevel()

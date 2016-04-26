@@ -10420,7 +10420,7 @@
             <Description>Use Magic Item Scroll of Mage Armor</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>Grants mage armor to 2 + 1/2 level units.</Help>
+            <Help>Grants mage armor to (1/2 level + combat promotions) units.</Help>
             <PromotionPrereq1>PROMOTION_SCROLL_MA</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_BURGLAR1</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>

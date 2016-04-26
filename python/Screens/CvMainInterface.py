@@ -2486,9 +2486,9 @@ class CvMainInterface:
 								if iPercent > 100:
 									iPercent = 100
 								if iPercent > 0:
-									szStock = str(iPercent) + "% "
+									szTempBuffer = u"%d" %( iPercent )
 									bFirst = False
-									szRightBuffer = szRightBuffer + szStock
+									szRightBuffer = szRightBuffer + szTempBuffer + "%"
 							
 							## End MTK
 							
