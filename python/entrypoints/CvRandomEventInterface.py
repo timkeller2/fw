@@ -164,14 +164,13 @@ def doArmageddonWrath(argsList):
 	iPlayer = argsList[1]
 	iEnraged = gc.getInfoTypeForString('PROMOTION_ENRAGED')
 	iUnit = gc.getInfoTypeForString('UNIT_WRATH')
-	iLand = gc.getInfoTypeForString('DOMAIN_LAND')
 	iWrathConvertChance = gc.getDefineINT('WRATH_CONVERT_CHANCE')
 	if CyGame().getUnitCreatedCount(iUnit) == 0:
 		cf.addUnit(iUnit)
 	pPlayer = gc.getPlayer(iPlayer)
 	py = PyPlayer(iPlayer)
 	for pUnit in py.getUnitList():
-		if pUnit.getDomainType() == iLand:
+		if pUnit.getDomainType() == gc.getInfoTypeForString('DOMAIN_LAND'):
 			if pUnit.isAlive():
 				if CyGame().getSorenRandNum(100, "Wrath") < iWrathConvertChance:
 					if isWorldUnitClass(pUnit.getUnitClassType()) == False:

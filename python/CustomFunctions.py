@@ -17,7 +17,28 @@ CyGameInstance = gc.getGame()
 
 class CustomFunctions:
 
-	def reqSustain(caster):
+	def iCrowdingDamage(self, pUnit):
+		roomFor = 10
+		pPlot = pUnit.plot()
+		if pPlot.getNumUnits() <= roomFor:
+			return 0
+			
+		nobLevel = 0
+		for ii in range(pPlot.getNumUnits()):
+			oUnit = pPlot.getUnit(ii)
+			# The strongest noble adds room for units
+			if self.iNoble(oUnit) > nobLevel:
+				nobLevel = self.iNoble(oUnit)
+			# Computer units add room for themselves		
+			if not gc.getPlayer(oUnit.getOwner()).isHuman() or oUnit.getDomainType() == gc.getInfoTypeForString('DOMAIN_IMMOBILE'):
+				roomFor += 1
+		if nobLevel > 0:
+			roomFor += nobLevel
+		iDam = pPlot.getNumUnits() - roomFor
+		
+		return iDam
+	
+	def reqSustain(self, caster):
 		pPlot = caster.plot()
 		for i in range(pPlot.getNumUnits()):
 			pUnit = pPlot.getUnit(i)
@@ -29,7 +50,7 @@ class CustomFunctions:
 
 		return False
 
-	def spellSustain(caster):
+	def spellSustain(self, caster):
 		iSustain = 1
 		bPlayer = gc.getPlayer(caster.getOwner())
 		if bPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_SUMMONER')):
@@ -1693,7 +1714,7 @@ class CustomFunctions:
 								if self.iNoble(oUnit) > nobLevel:
 									nobLevel = self.iNoble(oUnit)
 								# Computer units add room for themselves		
-								if not gc.getPlayer(oUnit.getOwner()).isHuman():
+								if not gc.getPlayer(oUnit.getOwner()).isHuman() or oUnit.getDomainType() == gc.getInfoTypeForString('DOMAIN_IMMOBILE'):
 									roomFor += 1
 							if nobLevel > 0:
 								roomFor += nobLevel

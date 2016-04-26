@@ -3105,9 +3105,13 @@ class CvMainInterface:
 						if cf.iNoble(pHeadSelectedUnit) > 0:
 							szRightBuffer = szRightBuffer + u"%c" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)) + str(cf.iNoble(pHeadSelectedUnit)) 
 						
-						if cf.retSearch(pHeadSelectedUnit) > 0:
+						if pHeadSelectedUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR1')) and cf.retSearch(pHeadSelectedUnit) > 0:
 							szRightBuffer = szRightBuffer + u"%c" %(gc.getCommerceInfo(CommerceTypes.COMMERCE_ESPIONAGE).getChar()) + str(cf.retSearch(pHeadSelectedUnit))
-							
+						
+						iDam = cf.iCrowdingDamage(pHeadSelectedUnit)
+						if  iDam > 0:
+							szRightBuffer = szRightBuffer + u"%c" %(CyGame().getSymbolID(FontSymbols.UNHEALTHY_CHAR)) + str(iDam) 
+						
 						szBuffer = szLeftBuffer + "  " + szRightBuffer
 						screen.appendTableRow( "SelectedUnitText" )
 						screen.setTableText( "SelectedUnitText", 0, iRow, szLeftBuffer, "", WidgetTypes.WIDGET_HELP_SELECTED, -1, -1, CvUtil.FONT_LEFT_JUSTIFY )
