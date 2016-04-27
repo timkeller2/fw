@@ -5156,9 +5156,9 @@
             <PromotionPrereqOr1>PROMOTION_COMBAT3</PromotionPrereqOr1>
             <PromotionPrereqOr2>PROMOTION_MEDIC1</PromotionPrereqOr2>
             <bAlwaysHeal>1</bAlwaysHeal>
-            <iEnemyHealChange>5</iEnemyHealChange>
-            <iNeutralHealChange>5</iNeutralHealChange>
-            <iFriendlyHealChange>5</iFriendlyHealChange>
+            <iEnemyHealChange>3</iEnemyHealChange>
+            <iNeutralHealChange>3</iNeutralHealChange>
+            <iFriendlyHealChange>3</iFriendlyHealChange>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_BEAST</UnitCombatType>
