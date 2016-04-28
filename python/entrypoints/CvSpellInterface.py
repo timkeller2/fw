@@ -1388,15 +1388,7 @@ def spellHastursRazor(caster):
 					pUnit.setDamage(iRnd, caster.getOwner())
 
 def reqHeal(caster):
-	pPlot = caster.plot()
-	iPoisoned = gc.getInfoTypeForString('PROMOTION_POISONED')
-	for i in range(pPlot.getNumUnits()):
-		pUnit = pPlot.getUnit(i)
-		if (pUnit.isAlive() and pUnit.getDamage() > 0):
-			return True
-		if pUnit.isHasPromotion(iPoisoned):
-			return True
-	return False
+	return cf.reqHeal(caster)
 
 def spellHeal(caster,amount):
 	pPlot = caster.plot()
@@ -4275,26 +4267,7 @@ def spellHealingTouch(caster):
 				return
 
 def spellFieldMedic(caster):
-	iL = caster.getLevel()
-	iNumHealed = 0
-	iBestDamage = 0
-	pPlot = caster.plot()
-	
-	for i in range(pPlot.getNumUnits()):
-		pUnit = pPlot.getUnit(i)
-		if (pUnit.isAlive() and pUnit.getDamage() > 0):
-			if pUnit.getDamage() > iBestDamage:
-				iBestDamage = pUnit.getDamage()
-				iBestUnit = pUnit
-				
-	if iBestDamage > 0:
-		pUnit = iBestUnit
-		iDefStr = pUnit.baseCombatStr()
-		if iDefStr < 1:
-			iDefStr = 1
-		iMod = ( iL * 5 ) / iDefStr + 3
-		iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
-		pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
+	cf.spellFieldMedic(caster)
 
 def reqNoBuilding(caster,sBuilding):
 	pCity = caster.plot().getPlotCity()

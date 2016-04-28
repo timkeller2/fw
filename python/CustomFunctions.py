@@ -38,6 +38,39 @@ class CustomFunctions:
 		
 		return iDam
 	
+	def reqHeal(self, caster):
+		pPlot = caster.plot()
+		iPoisoned = gc.getInfoTypeForString('PROMOTION_POISONED')
+		for i in range(pPlot.getNumUnits()):
+			pUnit = pPlot.getUnit(i)
+			if (pUnit.isAlive() and pUnit.getDamage() > 0):
+				return True
+			if pUnit.isHasPromotion(iPoisoned):
+				return True
+		return False
+		
+	def spellFieldMedic(self,caster):
+		iL = caster.getLevel()
+		iNumHealed = 0
+		iBestDamage = 0
+		pPlot = caster.plot()
+		
+		for i in range(pPlot.getNumUnits()):
+			pUnit = pPlot.getUnit(i)
+			if (pUnit.isAlive() and pUnit.getDamage() > 0):
+				if pUnit.getDamage() > iBestDamage:
+					iBestDamage = pUnit.getDamage()
+					iBestUnit = pUnit
+					
+		if iBestDamage > 0:
+			pUnit = iBestUnit
+			iDefStr = pUnit.baseCombatStr()
+			if iDefStr < 1:
+				iDefStr = 1
+			iMod = ( iL * 5 ) / iDefStr + 3
+			iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
+			pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
+
 	def reqSustain(self, caster):
 		pPlot = caster.plot()
 		for i in range(pPlot.getNumUnits()):
@@ -2169,6 +2202,11 @@ class CustomFunctions:
 				## Units which can sustain units try if they have done nothing else this turn.	
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUMMONING')) and not pUnit.isHasCasted() and self.reqSustain(pUnit):
 					self.spellSustain(pUnit)
+					pUnit.setHasCasted(True)
+
+				## Units which can sustain units try if they have done nothing else this turn.	
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FIELD_MEDIC')) and not pUnit.isHasCasted() and self.reqHeal(pUnit):
+					self.spellFieldMedic(pUnit)
 					pUnit.setHasCasted(True)
 
 				## Fortified Priests Auto-Buff if they can
