@@ -20527,7 +20527,7 @@
             <NoBonus>NONE</NoBonus>
             <PowerBonus>NONE</PowerBonus>
             <FreeBonus>BONUS_IRON</FreeBonus>
-            <iNumFreeBonuses>3</iNumFreeBonuses>
+            <iNumFreeBonuses>2</iNumFreeBonuses>
             <FreeBuilding>NONE</FreeBuilding>
             <FreePromotion>NONE</FreePromotion>
             <CivicOption>NONE</CivicOption>

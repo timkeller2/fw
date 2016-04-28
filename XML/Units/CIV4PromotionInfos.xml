@@ -6061,12 +6061,6 @@
             <bEquipment>1</bEquipment>
             <iExtraCombatStr>2</iExtraCombatStr>
             <iExtraCombatDefense>0</iExtraCombatDefense>
-            <DamageTypeCombats>
-                <DamageTypeCombat>
-                    <DamageType>DAMAGE_FIRE</DamageType>
-                    <iCombat>1</iCombat>
-                </DamageTypeCombat>
-            </DamageTypeCombats>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_PERFECT_SIGHT</Type>
@@ -9077,7 +9071,7 @@
             <PromotionPrereqAnd>NONE</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_COMMANDER2</PromotionNextLevel>
             <PyPerTurn></PyPerTurn>
-            <iGroupSize>0</iGroupSize>
+            <iGroupSize>1</iGroupSize>
             <UnitArtStyleType>NONE</UnitArtStyleType>
             <PromotionCombatType>NONE</PromotionCombatType>
             <iPromotionCombatMod>0</iPromotionCombatMod>
@@ -9249,7 +9243,7 @@
             <PromotionPrereqAnd>NONE</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_COMMANDER3</PromotionNextLevel>
             <PyPerTurn></PyPerTurn>
-            <iGroupSize>0</iGroupSize>
+            <iGroupSize>1</iGroupSize>
             <UnitArtStyleType>NONE</UnitArtStyleType>
             <PromotionCombatType>NONE</PromotionCombatType>
             <iPromotionCombatMod>0</iPromotionCombatMod>
@@ -9421,7 +9415,7 @@
             <PromotionPrereqAnd>NONE</PromotionPrereqAnd>
             <PromotionNextLevel>NONE</PromotionNextLevel>
             <PyPerTurn></PyPerTurn>
-            <iGroupSize>0</iGroupSize>
+            <iGroupSize>1</iGroupSize>
             <UnitArtStyleType>NONE</UnitArtStyleType>
             <PromotionCombatType>NONE</PromotionCombatType>
             <iPromotionCombatMod>0</iPromotionCombatMod>
@@ -16221,7 +16215,7 @@
             <PromotionPrereqAnd>NONE</PromotionPrereqAnd>
             <PromotionNextLevel>NONE</PromotionNextLevel>
             <PyPerTurn></PyPerTurn>
-            <iGroupSize>0</iGroupSize>
+            <iGroupSize>1</iGroupSize>
             <UnitArtStyleType>NONE</UnitArtStyleType>
             <PromotionCombatType>NONE</PromotionCombatType>
             <iPromotionCombatMod>0</iPromotionCombatMod>
