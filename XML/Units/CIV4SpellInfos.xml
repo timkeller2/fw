@@ -1920,14 +1920,12 @@
         <SpellInfo>
             <Type>SPELL_MAELSTROM</Type>
             <Description>TXT_KEY_SPELL_MAELSTROM</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Civilopedia>Does ( level x 1 ) damage to all units within range 1 except the caster's tile, unless the caster has channeling3 in which case the damage is ( level x 2 ) and range 2.</Civilopedia>
             <PromotionPrereq1>PROMOTION_AIR2</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
-            <bCausesWar>1</bCausesWar>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <PyResult>spellMaelstrom(pCaster)</PyResult>
-            <iRange>2</iRange>
+            <PyResult>spellMaelstrom(pCaster,1)</PyResult>
             <Effect>EFFECT_MAELSTROM</Effect>
             <Sound>AS3D_SPELL_MAELSTROM</Sound>
             <Button>Art/Interface/Buttons/Spells/Maelstrom.dds</Button>
@@ -11308,7 +11306,7 @@
             <Description>Use Scroll of Maelstrom</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>Create an explosion of lightning doing 10% damage to all enemy units within 2 tiles.  Damage is increased by strength promotions on the caster.</Help>
+            <Help>Create an explosion of lightning doing (level x 3) damage to all units within 3 tiles except the tile of the caster.</Help>
             <PromotionPrereq1>PROMOTION_SCROLL_MS</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -11330,10 +11328,10 @@
             <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
-            <iRange>2</iRange>
+            <iRange>0</iRange>
             <iResistModify>0</iResistModify>
-            <iDamage>10</iDamage>
-            <iDamageLimit>50</iDamageLimit>
+            <iDamage>0</iDamage>
+            <iDamageLimit>0</iDamageLimit>
             <DamageType>DAMAGE_LIGHTNING</DamageType>
             <AddPromotionType1>NONE</AddPromotionType1>
             <AddPromotionType2>NONE</AddPromotionType2>
@@ -11351,8 +11349,8 @@
             <iCreateUnitNum>0</iCreateUnitNum>
             <bPermanentUnitCreate>0</bPermanentUnitCreate>
             <CreateUnitPromotion>NONE</CreateUnitPromotion>
-            <bImmuneTeam>1</bImmuneTeam>
-            <bImmuneNeutral>1</bImmuneNeutral>
+            <bImmuneTeam>0</bImmuneTeam>
+            <bImmuneNeutral>0</bImmuneNeutral>
             <bImmuneEnemy>0</bImmuneEnemy>
             <bImmuneFlying>0</bImmuneFlying>
             <bImmuneNotAlive>0</bImmuneNotAlive>
@@ -11365,7 +11363,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult></PyResult>
+            <PyResult>spellMaelstrom(pCaster,3)</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_MAELSTROM</Effect>
             <Sound>AS3D_SPELL_LIGHTNING_ELEMENTAL</Sound>
@@ -11382,7 +11380,7 @@
             <Description>Use Magic Item Scroll of Maelstrom</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>Create an explosion of lightning doing 10% damage to all enemy units within 2 tiles.  Damage is increased by strength promotions on the caster.</Help>
+            <Help>Create an explosion of lightning doing ( level x 3 ) damage to all units within 3 tiles.</Help>
             <PromotionPrereq1>PROMOTION_SCROLL_MS</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_BURGLAR3</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -11404,10 +11402,10 @@
             <bHasCasted>1</bHasCasted>
             <bIgnoreHasCasted>1</bIgnoreHasCasted>
             <bResistable>0</bResistable>
-            <iRange>2</iRange>
+            <iRange>0</iRange>
             <iResistModify>0</iResistModify>
-            <iDamage>10</iDamage>
-            <iDamageLimit>50</iDamageLimit>
+            <iDamage>0</iDamage>
+            <iDamageLimit>0</iDamageLimit>
             <DamageType>DAMAGE_LIGHTNING</DamageType>
             <AddPromotionType1>NONE</AddPromotionType1>
             <AddPromotionType2>NONE</AddPromotionType2>
@@ -11425,8 +11423,8 @@
             <iCreateUnitNum>0</iCreateUnitNum>
             <bPermanentUnitCreate>0</bPermanentUnitCreate>
             <CreateUnitPromotion>NONE</CreateUnitPromotion>
-            <bImmuneTeam>1</bImmuneTeam>
-            <bImmuneNeutral>1</bImmuneNeutral>
+            <bImmuneTeam>0</bImmuneTeam>
+            <bImmuneNeutral>0</bImmuneNeutral>
             <bImmuneEnemy>0</bImmuneEnemy>
             <bImmuneFlying>0</bImmuneFlying>
             <bImmuneNotAlive>0</bImmuneNotAlive>
@@ -11439,7 +11437,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult></PyResult>
+            <PyResult>spellMaelstrom(pCaster,3)</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_MAELSTROM</Effect>
             <Sound>AS3D_SPELL_LIGHTNING_ELEMENTAL</Sound>

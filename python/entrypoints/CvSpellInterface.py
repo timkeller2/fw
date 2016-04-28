@@ -3196,7 +3196,7 @@ def spellTsunami(caster):
 				if (iX != iiX or iY != iiY):
 					for i in range(pPlot.getNumUnits()):
 						pUnit = pPlot.getUnit(i)
-						iDam = iR * 8
+						iDam = iR * ( caster.getLevel() * 2 )
 						iMax = iR * 35
 						pUnit.doDamage(iDam, iMax, caster, gc.getInfoTypeForString('DAMAGE_COLD'), true)
 					if pPlot.getImprovementType() != -1 and iR > 1:
@@ -3205,9 +3205,8 @@ def spellTsunami(caster):
 								pPlot.setImprovementType(-1)
 					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPRING'),pPlot.getPoint())
 
-def spellMaelstrom(caster):
-	iR = 1
-	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3')):
+def spellMaelstrom(caster,iR):
+	if iR < 2 and caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3')):
 		iR = 2
 	iX = caster.getX()
 	iY = caster.getY()
@@ -3217,7 +3216,7 @@ def spellMaelstrom(caster):
 			if (iX != iiX or iY != iiY):
 				for i in range(pPlot.getNumUnits()):
 					pUnit = pPlot.getUnit(i)
-					iDam = iR * 4
+					iDam = iR * ( caster.getLevel() )
 					iMax = iR * 20
 					pUnit.doDamage(iDam, iMax, caster, gc.getInfoTypeForString('DAMAGE_LIGHTNING'), true)
 

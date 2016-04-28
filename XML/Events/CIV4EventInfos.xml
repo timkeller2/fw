@@ -56119,7 +56119,7 @@
             </ClearEvents>
             <PythonCallback>mageguild25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canmageguild25</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -56220,7 +56220,7 @@
             </ClearEvents>
             <PythonCallback>mageguild100</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo></PythonCanDo>
+            <PythonCanDo>canmageguild100</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -56321,7 +56321,7 @@
             </ClearEvents>
             <PythonCallback>mageguild25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canmageguild25</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -56422,7 +56422,7 @@
             </ClearEvents>
             <PythonCallback>mageguild25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canmageguild25</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -56523,7 +56523,7 @@
             </ClearEvents>
             <PythonCallback>mageguild25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canmageguild25</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -57634,7 +57634,7 @@
             </ClearEvents>
             <PythonCallback>alchemylab25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo></PythonCanDo>
+            <PythonCanDo>canalchemylab25</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
