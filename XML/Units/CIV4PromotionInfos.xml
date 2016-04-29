@@ -3623,7 +3623,6 @@
             <Type>PROMOTION_ARCTIC_WARFARE</Type>
             <Description>Arctic Warfare</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <TechPrereq>TECH_NEVER</TechPrereq>
             <TerrainAttacks>
                 <TerrainAttack>
                     <TerrainType>TERRAIN_SNOW</TerrainType>
