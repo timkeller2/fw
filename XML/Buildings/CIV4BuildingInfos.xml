@@ -4375,7 +4375,7 @@
             <iTradeRouteModifier>0</iTradeRouteModifier>
             <iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
-            <iFreeTechs>1</iFreeTechs>
+            <iFreeTechs>0</iFreeTechs>
             <iDefense>0</iDefense>
             <iBombardDefense>0</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
@@ -4406,6 +4406,9 @@
             <CommerceChangeDoubleTimes>
             </CommerceChangeDoubleTimes>
             <CommerceModifiers>
+                <iCommerce>0</iCommerce>
+                <iCommerce>50</iCommerce>
+                <iCommerce>0</iCommerce>
             </CommerceModifiers>
             <GlobalCommerceModifiers>
             </GlobalCommerceModifiers>
@@ -4437,6 +4440,10 @@
             <BonusProductionModifiers>
             </BonusProductionModifiers>
             <UnitCombatFreeExperiences>
+                <UnitCombatFreeExperience>
+                    <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
+                    <iExperience>3</iExperience>
+                </UnitCombatFreeExperience>
             </UnitCombatFreeExperiences>
             <DomainFreeExperiences>
             </DomainFreeExperiences>
@@ -4502,7 +4509,7 @@
                     <SpecialistType>SPECIALIST_GREAT_SCIENTIST</SpecialistType>
                     <CommerceChanges>
                         <iCommerce>0</iCommerce>
-                        <iCommerce>1</iCommerce>
+                        <iCommerce>2</iCommerce>
                         <iCommerce>0</iCommerce>
                     </CommerceChanges>
                 </SpecialistCommerceChange>

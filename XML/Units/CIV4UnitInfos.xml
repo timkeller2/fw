@@ -78907,15 +78907,15 @@
             <BonusAffinities>
                 <BonusAffinity>
                     <BonusType>BONUS_GUNPOWDER</BonusType>
-                    <iAffinity>1</iAffinity>
+                    <iAffinity>2</iAffinity>
                 </BonusAffinity>
                 <BonusAffinity>
                     <BonusType>BONUS_MITHRIL</BonusType>
-                    <iAffinity>1</iAffinity>
+                    <iAffinity>2</iAffinity>
                 </BonusAffinity>
                 <BonusAffinity>
                     <BonusType>BONUS_IRON</BonusType>
-                    <iAffinity>1</iAffinity>
+                    <iAffinity>2</iAffinity>
                 </BonusAffinity>
             </BonusAffinities>
         </UnitInfo>

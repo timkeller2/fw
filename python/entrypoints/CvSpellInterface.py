@@ -4712,6 +4712,12 @@ def spellExamineCache(caster,mode):
 					
 		caster.setFortifyTurns(0)
 
+def spellFireballFeedback(caster):
+	if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_RECON'):
+		iDam = 100 / ( caster.getLevel() + caster.baseCombatStr() )
+		iDam = iDam / 2 + CyGame().getSorenRandNum(iDam, "Fireball Feedback")
+		caster.changeDamage(iDam,0)
+		
 def reqJudge(caster):
 	pCity = caster.plot().getPlotCity()
 
