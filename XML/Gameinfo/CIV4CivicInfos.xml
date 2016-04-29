@@ -111,7 +111,7 @@
             <iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
             <iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
             <iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-            <iDistanceMaintenanceModifier>-80</iDistanceMaintenanceModifier>
+            <iDistanceMaintenanceModifier>-40</iDistanceMaintenanceModifier>
             <iNumCitiesMaintenanceModifier>-25</iNumCitiesMaintenanceModifier>
             <iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
             <iExtraHealth>0</iExtraHealth>
@@ -262,7 +262,11 @@
             <SpecialistValids>
             </SpecialistValids>
             <BuildingHappinessChanges>
-            </BuildingHappinessChanges>
+                 <BuildingHappinessChange>
+                    <BuildingType>BUILDINGCLASS_PALACE</BuildingType>
+                    <iHappinessChange>2</iHappinessChange>
+                </BuildingHappinessChange>
+           </BuildingHappinessChanges>
             <BuildingHealthChanges>
             </BuildingHealthChanges>
             <FeatureHappinessChanges>
