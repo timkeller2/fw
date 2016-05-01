@@ -2681,13 +2681,6 @@ class CustomFunctions:
 					else:
 						iRoadTax[pPlot.getOwner()] = 1
 
-				## Malakim Desert Trading
-				if iTerrain == iDesert and pPlayer.getCivilizationType() == gc.getInfoTypeForString('CIVILIZATION_MALAKIM'):
-					if pPlot.getOwner() in iRoadTax:
-						iRoadTax[pPlot.getOwner()] -= 4
-					else:
-						iRoadTax[pPlot.getOwner()] = -4
-
 				## Check for Jungle Haunt Expiration
 				if pPlot.getImprovementType() == gc.getInfoTypeForString('IMPROVEMENT_JUNGLE_FARM'): 
 					if pPlayer.getCivilizationType() != gc.getInfoTypeForString('CIVILIZATION_CLAN_OF_EMBERS') or pPlot.getFeatureType() != iJungle:
