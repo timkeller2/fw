@@ -2200,8 +2200,8 @@ class CustomFunctions:
 					self.spellSustain(pUnit)
 					pUnit.setHasCasted(True)
 
-				## Units which can sustain units try if they have done nothing else this turn.	
-				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FIELD_MEDIC')) and not pUnit.isHasCasted() and self.reqHeal(pUnit):
+				## Units with field medic auto-use it if they can.
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FIELD_MEDIC1')) and not pUnit.isHasCasted() and self.reqHeal(pUnit):
 					self.spellFieldMedic(pUnit)
 					pUnit.setHasCasted(True)
 
