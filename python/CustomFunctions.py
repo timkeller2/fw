@@ -2128,10 +2128,6 @@ class CustomFunctions:
 					self.unitAptitude(pUnit)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_NO_RANGE'), False)
 				
-				# Burglars wake when optimal
-				if pUnit.getFortifyTurns() > 0 and pUnit.getFortifyTurns() < 5 and pUnit.getFortifyTurns() == self.retSearch(pUnit) / 2:
-					pUnit.changeDamage( 1, pUnit.getOwner() )
-				
 				## Fix an AI spinlock problem...
 				if pUnit.getUnitAIType() == UnitAITypes.UNITAI_WORKER and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_WORKER') and not pPlayer.isHuman():
 					pUnit.setUnitAIType(UnitAITypes.UNITAI_ATTACK)
