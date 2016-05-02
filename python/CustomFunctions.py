@@ -2201,9 +2201,9 @@ class CustomFunctions:
 					pUnit.setHasCasted(True)
 
 				## Units with field medic auto-use it if they can.
-				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FIELD_MEDIC1')) and not pUnit.isHasCasted() and self.reqHeal(pUnit):
-					self.spellFieldMedic(pUnit)
-					pUnit.setHasCasted(True)
+				# if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FIELD_MEDIC1')) and not pUnit.isHasCasted() and self.reqHeal(pUnit):
+					# self.spellFieldMedic(pUnit)
+					# pUnit.setHasCasted(True)
 
 				## Fortified Priests Auto-Buff if they can
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIVINE')) and pUnit.getFortifyTurns() > 1 and not pUnit.isHasCasted():

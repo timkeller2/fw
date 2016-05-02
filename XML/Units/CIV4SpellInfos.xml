@@ -7460,7 +7460,7 @@
             <PromotionPrereq1>PROMOTION_FIELD_MEDIC1</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
-            <UnitClassPrereq>NONE</UnitClassPrereq>
+            <UnitClassPrereq>UNITCLASS_WORKER</UnitClassPrereq>
             <UnitCombatPrereq>NONE</UnitCombatPrereq>
             <UnitInStackPrereq>NONE</UnitInStackPrereq>
             <CivilizationPrereq>NONE</CivilizationPrereq>
