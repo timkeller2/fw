@@ -2875,7 +2875,6 @@
             <PromotionPrereq1>PROMOTION_WATER1</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_CHANNELING1</PromotionPrereq2>
             <bAllowAI>1</bAllowAI>
-            <bAllowAutomateTerrain>1</bAllowAutomateTerrain>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
             <PyResult>spellSpring(pCaster)</PyResult>
