@@ -3623,6 +3623,7 @@
             <Type>PROMOTION_ARCTIC_WARFARE</Type>
             <Description>Arctic Warfare</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
+            <PromotionPrereq>PROMOTION_COMBAT1</PromotionPrereq>
             <TerrainAttacks>
                 <TerrainAttack>
                     <TerrainType>TERRAIN_SNOW</TerrainType>
@@ -8211,6 +8212,7 @@
             <Type>PROMOTION_DESERT_WARFARE</Type>
             <Description>Desert Warfare</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
+            <PromotionPrereq>PROMOTION_COMBAT1</PromotionPrereq>
             <TerrainAttacks>
                 <TerrainAttack>
                     <TerrainType>TERRAIN_DESERT</TerrainType>
@@ -20205,7 +20207,7 @@
             <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
-            <PromotionPrereq>NONE</PromotionPrereq>
+            <PromotionPrereq>PROMOTION_COMBAT2</PromotionPrereq>
             <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
             <TechPrereq>NONE</TechPrereq>
