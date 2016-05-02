@@ -73,6 +73,8 @@ class CustomFunctions:
 
 	def reqSustain(self, caster):
 		pPlot = caster.plot()
+		if caster.getDuration() > 0:
+			return False
 		for i in range(pPlot.getNumUnits()):
 			pUnit = pPlot.getUnit(i)
 			bUnit = True
