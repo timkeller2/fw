@@ -2870,17 +2870,33 @@
         <SpellInfo>
             <Type>SPELL_SPRING</Type>
             <Description>TXT_KEY_SPELL_SPRING</Description>
-            <Civilopedia>TXT_KEY_SPELL_SPRING_PEDIA</Civilopedia>
-            <Help>TXT_KEY_SPELL_SPRING_HELP</Help>
+            <Civilopedia>Extinguish smoke and flames from adjacent tiles!</Civilopedia>
+            <Help>Extinguish smoke and flames from adjacent tiles!</Help>
             <PromotionPrereq1>PROMOTION_WATER1</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_CHANNELING1</PromotionPrereq2>
             <bAllowAI>1</bAllowAI>
             <bAllowAutomateTerrain>1</bAllowAutomateTerrain>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <iDelay>12</iDelay>
             <PyResult>spellSpring(pCaster)</PyResult>
             <PyRequirement>reqSpring(pCaster)</PyRequirement>
+            <Effect>EFFECT_SPRING</Effect>
+            <Sound>AS3D_SPELL_SPRING</Sound>
+            <Button>Art/Interface/Buttons/Spells/Spring.dds</Button>
+        </SpellInfo>
+        <SpellInfo>
+            <Type>SPELL_SPRING_WATER</Type>
+            <Description>Spring Water in the Desert</Description>
+            <Civilopedia>Bring forth plains from the desert!</Civilopedia>
+            <Help>Every (100/level) turns you may convert a desert tile to plains tile!  Water2 is worth 5 levels, Water3 worth 10.</Help>
+            <PromotionPrereq1>PROMOTION_WATER1</PromotionPrereq1>
+            <PromotionPrereq2>PROMOTION_CHANNELING1</PromotionPrereq2>
+            <bAllowAI>1</bAllowAI>
+            <bAllowAutomateTerrain>1</bAllowAutomateTerrain>
+            <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <PyResult>spellSpringTerraform(pCaster)</PyResult>
+            <PyRequirement>reqSpringTerraform(pCaster)</PyRequirement>
             <Effect>EFFECT_SPRING</Effect>
             <Sound>AS3D_SPELL_SPRING</Sound>
             <Button>Art/Interface/Buttons/Spells/Spring.dds</Button>

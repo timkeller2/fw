@@ -5257,6 +5257,10 @@
             <iSameTileHealChange>3</iSameTileHealChange>
             <UnitCombats>
                 <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_DISCIPLE</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
@@ -5269,7 +5273,7 @@
             <Description>TXT_KEY_PROMOTION_MEDIC1</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_FIELD_MEDIC1</PromotionPrereq>
-            <iSameTileHealChange>5</iSameTileHealChange>
+            <iSameTileHealChange>4</iSameTileHealChange>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
@@ -5305,9 +5309,15 @@
             <Description>TXT_KEY_PROMOTION_MEDIC2</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_MEDIC1</PromotionPrereq>
-            <TechPrereq>NONE</TechPrereq>
-            <iSameTileHealChange>5</iSameTileHealChange>
-            <iAdjacentTileHealChange>5</iAdjacentTileHealChange>
+            <TechPrereq>TECH_NEVER</TechPrereq>
+            <iSameTileHealChange>4</iSameTileHealChange>
+            <iAdjacentTileHealChange>4</iAdjacentTileHealChange>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_DISCIPLE</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
             <Button>,Art/Interface/Buttons/Promotions/Medic2.dds,Art/Interface/Buttons/Promotions_Atlas.dds,4,4</Button>
             <PromotionPrereqAnd>PROMOTION_COMBAT5</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_MEDIC3</PromotionNextLevel>
@@ -5318,8 +5328,14 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_MEDIC2</PromotionPrereq>
             <TechPrereq>NONE</TechPrereq>
-            <iSameTileHealChange>5</iSameTileHealChange>
-            <iAdjacentTileHealChange>10</iAdjacentTileHealChange>
+            <iSameTileHealChange>4</iSameTileHealChange>
+            <iAdjacentTileHealChange>8</iAdjacentTileHealChange>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_DISCIPLE</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Medic3.dds</Button>
             <PromotionPrereqAnd>PROMOTION_DRILL4</PromotionPrereqAnd>
         </PromotionInfo>

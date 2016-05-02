@@ -2773,6 +2773,44 @@ def reqSpreadTheCouncilOfEsus(caster):
 			return False
 	return True
 
+def reqSpringTerraform(caster):
+	sData = cPickle.loads(caster.getScriptData())
+
+	if 'Last_Water' not in sData:
+		sData['Last_Water'] = CyGame().getGameTurn()
+		caster.setScriptData(cPickle.dumps(sData))
+	
+	iLastWater = CyGame().getGameTurn() - sData['Last_Water']
+	
+	iDiv = caster.getLevel()
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WATER2')):
+		iDiv += 5
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WATER3')):
+		iDiv += 10
+
+	if iLastWater > 100 / iDiv:
+		return True
+
+	return False
+
+def spellSpringTerraform(caster):
+	pPlot = caster.plot()
+	pPlayer = gc.getPlayer(caster.getOwner())
+
+	if pPlot.getTerrainType() != gc.getInfoTypeForString('TERRAIN_DESERT'):
+		return False
+	if pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS'):
+		return False
+
+	pPlot.setTerrainType(gc.getInfoTypeForString('TERRAIN_PLAINS'),True,True)
+
+	sData = cPickle.loads(caster.getScriptData())
+	sData['Last_Water'] = CyGame().getGameTurn()
+	caster.setScriptData(cPickle.dumps(sData))
+	caster.changeExperience(1, -1, False, False, False)
+
+	return True
+
 def reqSpring(caster):
 	pPlot = caster.plot()
 	pPlayer = gc.getPlayer(caster.getOwner())
@@ -2783,26 +2821,16 @@ def reqSpring(caster):
 		for iiY in range(iY-1, iY+2, 1):
 			pPlot2 = CyMap().plot(iiX,iiY)
 			if pPlot2.getFeatureType() == gc.getInfoTypeForString('FEATURE_FLAMES') or pPlot2.getImprovementType() == gc.getInfoTypeForString('IMPROVEMENT_SMOKE'):
-				bFlames = true
-	if bFlames == False:
-		if pPlot.getTerrainType() != gc.getInfoTypeForString('TERRAIN_DESERT'):
-			return False
-		if pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS'):
-			return False
-		if pPlayer.isHuman() == False:
-			if caster.getOwner() != pPlot.getOwner():
-				return False
-	if pPlayer.isHuman() == False:
-		if pPlayer.getCivilizationType() == gc.getInfoTypeForString('CIVILIZATION_INFERNAL'):
-			return False
-	return True
+				if pPlayer.isHuman():
+					return True
+				else:
+					if caster.getOwner() == pPlot.getOwner() and pPlayer.getCivilizationType() != gc.getInfoTypeForString('CIVILIZATION_INFERNAL'):
+						return True
+	return False
 
 def spellSpring(caster):
 	pPlot = caster.plot()
-	if (pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_DESERT') and pPlot.getFeatureType() != gc.getInfoTypeForString('FEATURE_FLOOD_PLAINS')):
-		pPlot.setTerrainType(gc.getInfoTypeForString('TERRAIN_PLAINS'),True,True)
-		if pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_SCRUB'):
-			pPlot.setFeatureType(-1, -1)
+	pPlayer = gc.getPlayer(caster.getOwner())
 	iX = pPlot.getX()
 	iY = pPlot.getY()
 	for iiX in range(iX-1, iX+2, 1):
