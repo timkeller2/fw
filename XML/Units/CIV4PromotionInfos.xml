@@ -5311,7 +5311,7 @@
             <PromotionPrereq>PROMOTION_MEDIC1</PromotionPrereq>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <iSameTileHealChange>4</iSameTileHealChange>
-            <iAdjacentTileHealChange>4</iAdjacentTileHealChange>
+            <iAdjacentTileHealChange>5</iAdjacentTileHealChange>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_DISCIPLE</UnitCombatType>
@@ -5329,7 +5329,7 @@
             <PromotionPrereq>PROMOTION_MEDIC2</PromotionPrereq>
             <TechPrereq>NONE</TechPrereq>
             <iSameTileHealChange>4</iSameTileHealChange>
-            <iAdjacentTileHealChange>8</iAdjacentTileHealChange>
+            <iAdjacentTileHealChange>10</iAdjacentTileHealChange>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_DISCIPLE</UnitCombatType>
