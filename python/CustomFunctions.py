@@ -80,7 +80,7 @@ class CustomFunctions:
 			bUnit = True
 			if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MAGIC_MISSILE') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_FIREBALL') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_METEOR') ):
 				bUnit = False
-			if ( pUnit.getDuration() > 0 and pUnit.baseCombatStr() <= caster.baseCombatStr() * 2 and bUnit ):
+			if ( pUnit.getDuration() > 0 and pUnit.baseCombatStr() <= caster.baseCombatStr() * 2 and bUnit and pUnit.getUnitType() != gc.getInfoTypeForString('UNIT_PUPPET')  ):
 				return True
 
 		return False
@@ -98,7 +98,7 @@ class CustomFunctions:
 			bUnit = True
 			if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MAGIC_MISSILE') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_FIREBALL') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_METEOR') ):
 				bUnit = False
-			if ( pUnit.getDuration() > 0 and pUnit.baseCombatStr() <= caster.baseCombatStr() * 2 and bUnit ):
+			if ( pUnit.getDuration() > 0 and pUnit.baseCombatStr() <= caster.baseCombatStr() * 2 and bUnit and pUnit.getUnitType() != gc.getInfoTypeForString('UNIT_PUPPET') ):
 				if ( pUnit.getDuration() < iDuration ):
 					pBestUnit = pUnit
 					iDuration = pUnit.getDuration()
