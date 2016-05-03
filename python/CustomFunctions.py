@@ -2143,12 +2143,12 @@ class CustomFunctions:
 					iMaxDam = 25
 					if pPlayer.isHuman():
 						iMaxDam = 100
-					pUnit.doDamageNoCaster((plotPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_ENTROPY')) * 5 + 3), iMaxDam, gc.getInfoTypeForString('DAMAGE_UNHOLY'), False)
+					pUnit.doDamageNoCaster((plotPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_ENTROPY')) * 3 + 3), iMaxDam, gc.getInfoTypeForString('DAMAGE_UNHOLY'), False)
 					point = pPlot.getPoint()
 					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SACRIFICE'),point)
 					if iEntropyMessage == 0:
 						iEntropyMessage = 1
-						CyInterface().addMessage(pUnit.getOwner(),false,25,'Your army is suffering from poisonous fumes caused by enemy entropy mana!','',1,'Art/Interface/Buttons/Improvements/Maelstrom.dds',ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
+						CyInterface().addMessage(pUnit.getOwner(),False,25,'Your army is suffering from poisonous fumes caused by enemy entropy mana!','',1,'Art/Interface/Buttons/Improvements/Maelstrom.dds',ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pUnit.getOwner(),'Your army is suffering from poisonous fumes caused by enemy entropy mana!')
 
 				## Computer Players gain creeps within their borders

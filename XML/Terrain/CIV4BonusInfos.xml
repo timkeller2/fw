@@ -2634,7 +2634,7 @@
             <iBadAttitude>0</iBadAttitude>
             <iDiscoverRandModifier>0</iDiscoverRandModifier>
             <iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
-            <iHealChange>5</iHealChange>
+            <iHealChange>3</iHealChange>
             <iHealChangeEnemy>0</iHealChangeEnemy>
             <iMaintenanceModifier>0</iMaintenanceModifier>
             <iMutateChance>0</iMutateChance>
@@ -2867,7 +2867,7 @@
             <iDiscoverRandModifier>0</iDiscoverRandModifier>
             <iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
             <iHealChange>0</iHealChange>
-            <iHealChangeEnemy>-5</iHealChangeEnemy>
+            <iHealChangeEnemy>-3</iHealChangeEnemy>
             <iMaintenanceModifier>0</iMaintenanceModifier>
             <iMutateChance>0</iMutateChance>
             <iResearchModifier>0</iResearchModifier>
@@ -2984,7 +2984,7 @@
             <iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
             <iHealChange>0</iHealChange>
             <iHealChangeEnemy>0</iHealChangeEnemy>
-            <iMaintenanceModifier>-5</iMaintenanceModifier>
+            <iMaintenanceModifier>-10</iMaintenanceModifier>
             <iMutateChance>0</iMutateChance>
             <iResearchModifier>0</iResearchModifier>
             <DamageType>NONE</DamageType>
@@ -3160,7 +3160,7 @@
             <iHealChangeEnemy>0</iHealChangeEnemy>
             <iMaintenanceModifier>0</iMaintenanceModifier>
             <iMutateChance>0</iMutateChance>
-            <iResearchModifier>3</iResearchModifier>
+            <iResearchModifier>5</iResearchModifier>
             <DamageType>NONE</DamageType>
             <FreePromotion>NONE</FreePromotion>
         </BonusInfo>
@@ -3271,7 +3271,7 @@
             <bModifierPerBonus>1</bModifierPerBonus>
             <iBadAttitude>0</iBadAttitude>
             <iDiscoverRandModifier>0</iDiscoverRandModifier>
-            <iGreatPeopleRateModifier>5</iGreatPeopleRateModifier>
+            <iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
             <iHealChange>0</iHealChange>
             <iHealChangeEnemy>0</iHealChangeEnemy>
             <iMaintenanceModifier>0</iMaintenanceModifier>
