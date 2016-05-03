@@ -54529,7 +54529,7 @@
             <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-18</iGold>
+            <iGold>-15</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -54832,7 +54832,7 @@
             <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-18</iGold>
+            <iGold>-10</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -54933,7 +54933,7 @@
             <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-15</iGold>
+            <iGold>-5</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
