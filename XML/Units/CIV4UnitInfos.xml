@@ -65643,7 +65643,7 @@
             <bAnimal>0</bAnimal>
             <bFood>1</bFood>
             <bNoBadGoodies>0</bNoBadGoodies>
-            <bOnlyDefensive>1</bOnlyDefensive>
+            <bOnlyDefensive>0</bOnlyDefensive>
             <bNoCapture>0</bNoCapture>
             <bQuickCombat>0</bQuickCombat>
             <bRivalTerritory>0</bRivalTerritory>
@@ -65755,7 +65755,7 @@
             </TerrainPassableTechs>
             <FeaturePassableTechs>
             </FeaturePassableTechs>
-            <iCombat>0</iCombat>
+            <iCombat>1</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>0</iAirCombat>
             <iAirCombatLimit>0</iAirCombatLimit>
@@ -65838,6 +65838,7 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
+            <iCombatDefense>1</iCombatDefense>
             <iTier>1</iTier>
         </UnitInfo>
         <UnitInfo>
@@ -67624,7 +67625,7 @@
             </TerrainPassableTechs>
             <FeaturePassableTechs>
             </FeaturePassableTechs>
-            <iCombat>0</iCombat>
+            <iCombat>1</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>0</iAirCombat>
             <iAirCombatLimit>0</iAirCombatLimit>
@@ -67699,6 +67700,7 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
+            <iCombatDefense>1</iCombatDefense>
             <iTier>1</iTier>
         </UnitInfo>
         <UnitInfo>
@@ -74011,7 +74013,7 @@
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
             <bDisableUpgradeTo>1</bDisableUpgradeTo>
-            <iCombatDefense>2</iCombatDefense>
+            <iCombatDefense>3</iCombatDefense>
             <iTier>1</iTier>
         </UnitInfo>
         <UnitInfo>
@@ -74033,7 +74035,7 @@
             <bAnimal>0</bAnimal>
             <bFood>1</bFood>
             <bNoBadGoodies>0</bNoBadGoodies>
-            <bOnlyDefensive>1</bOnlyDefensive>
+            <bOnlyDefensive>0</bOnlyDefensive>
             <bNoCapture>0</bNoCapture>
             <bQuickCombat>0</bQuickCombat>
             <bRivalTerritory>0</bRivalTerritory>
@@ -74209,7 +74211,7 @@
             </TerrainPassableTechs>
             <FeaturePassableTechs>
             </FeaturePassableTechs>
-            <iCombat>0</iCombat>
+            <iCombat>2</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>0</iAirCombat>
             <iAirCombatLimit>0</iAirCombatLimit>
@@ -74284,6 +74286,7 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
+            <iCombatDefense>2</iCombatDefense>
             <iTier>1</iTier>
         </UnitInfo>
         <UnitInfo>

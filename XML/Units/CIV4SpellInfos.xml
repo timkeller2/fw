@@ -8505,7 +8505,7 @@
         <SpellInfo>
             <Type>SPELL_UPGRADE_WORKER</Type>
             <Description>Recruit this worker into the war</Description>
-            <Civilopedia>When a worker reaches 10xp, he may be recruited into the war.</Civilopedia>
+            <Civilopedia>When a settler or worker reaches 10xp, he may be recruited into the war.</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>When a worker reaches 10xp, he may be recruited into the war.</Help>
             <PromotionPrereq1>NONE</PromotionPrereq1>
