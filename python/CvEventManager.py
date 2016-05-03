@@ -388,7 +388,7 @@ class CvEventManager:
 			introMovie = CvIntroMovieScreen.CvIntroMovieScreen()
 			introMovie.interfaceScreen()
 
-		strSetData = { 'DragonWarrior': 5, 'Merc': -1, 'FinalWar': -1, 'val1': -1, 'val2': -1, 'val3': -1 }
+		strSetData = { 'DragonWarrior': 5, 'Merc': -1, 'FinalWar': -1, 'val1': -1, 'val2': -1, 'val3': -1, 'orthus': CyGame().getSorenRandNum(20, "Orthus Turn") + 70 }
 		CyGameInstance.setScriptData(cPickle.dumps(strSetData))
 
 		if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_THAW):
@@ -406,11 +406,11 @@ class CvEventManager:
 							if iTerrain == iTundra:
 								pPlot.setTempTerrainType(iSnow, CyGame().getSorenRandNum(90, "Bob") + 10)
 							if iTerrain == iGrass:
-								pPlot.setTempTerrainType(iTundra, CyGame().getSorenRandNum(90, "Bob") + 10)
+								pPlot.setTempTerrainType(iTundra, CyGame().getSorenRandNum(90, "Bob1") + 10)
 							if iTerrain == iPlains:
-								pPlot.setTempTerrainType(iTundra, CyGame().getSorenRandNum(90, "Bob") + 10)
+								pPlot.setTempTerrainType(iTundra, CyGame().getSorenRandNum(90, "Bob2") + 10)
 							if iTerrain == iDesert:
-								pPlot.setTempTerrainType(iPlains, CyGame().getSorenRandNum(90, "Bob") + 10)
+								pPlot.setTempTerrainType(iPlains, CyGame().getSorenRandNum(90, "Bob3") + 10)
 
 		for iPlayer in range(gc.getMAX_PLAYERS()):
 			player = gc.getPlayer(iPlayer)
@@ -464,7 +464,9 @@ class CvEventManager:
 		'Called at the beginning of the end of each turn'
 		iGameTurn = argsList[0]
 
-		iOrthusTurn = 100 
+		iOrthusTurn = cf.getObjectInt( CyGameInstance, 'orthus' )
+		if iOrthusTurn < 1:
+			iOrthusTurn = 76
 		if not CyGame().isUnitClassMaxedOut(gc.getInfoTypeForString('UNITCLASS_ORTHUS'), 0):
 			if not CyGame().isOption(gc.getInfoTypeForString('GAMEOPTION_NO_ORTHUS')):
 				bOrthus = False

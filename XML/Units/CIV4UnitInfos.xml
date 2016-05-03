@@ -55056,7 +55056,7 @@
             </TerrainPassableTechs>
             <FeaturePassableTechs>
             </FeaturePassableTechs>
-            <iCombat>7</iCombat>
+            <iCombat>5</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>0</iAirCombat>
             <iAirCombatLimit>0</iAirCombatLimit>
@@ -55144,10 +55144,14 @@
                     <PromotionType>PROMOTION_LOYALTY</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_COMBAT1</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
-            <iCombatDefense>7</iCombatDefense>
+            <iCombatDefense>5</iCombatDefense>
             <iTier>3</iTier>
             <iWeaponTier>3</iWeaponTier>
             <Image>Art/Interface/Popups/Orthus.dds</Image>
