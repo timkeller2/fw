@@ -17,6 +17,19 @@ CyGameInstance = gc.getGame()
 
 class CustomFunctions:
 
+	def retDir(x,y,tx,ty):
+		sDirection = ''
+		if ty > y:
+			sDirection = 'north'
+		if ty < y:
+			sDirection = 'south'
+		if tx < x:
+			sDirection = sDirection + 'west'
+		if tx > x:
+			sDirection = sDirection + 'east'
+
+		return sDirection
+
 	def reqInteractCache(self,caster,mode):
 		iX = caster.getX()
 		iY = caster.getY()

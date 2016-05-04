@@ -4407,19 +4407,6 @@ def retRange(unit1,unit2):
 
 	return iRange	
 
-def retDir(x,y,tx,ty):
-	sDirection = ''
-	if ty > y:
-		sDirection = 'north'
-	if ty < y:
-		sDirection = 'south'
-	if tx < x:
-		sDirection = sDirection + 'west'
-	if tx > x:
-		sDirection = sDirection + 'east'
-
-	return sDirection
-
 def reqInteractCache(caster,mode):
 	return cf.reqInteractCache(caster,mode)
 
