@@ -17,7 +17,31 @@ CyGameInstance = gc.getGame()
 
 class CustomFunctions:
 
-	def retDir(x,y,tx,ty):
+	def retCombat(self,unit):
+		i = 0
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT3')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT4')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT5')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
+			i += 1
+		else:
+			i = 0
+
+		return i
+
+	def retRange(self,unit1,unit2):
+		iRange = int( math.fabs(unit1.getX()-unit2.getX()) )
+		if iRange < int( math.fabs(unit1.getY()-unit2.getY()) ):
+			iRange = int( math.fabs(unit1.getY()-unit2.getY()) )
+
+		return iRange	
+
+	def retDir(self,x,y,tx,ty):
 		sDirection = ''
 		if ty > y:
 			sDirection = 'north'
@@ -54,7 +78,7 @@ class CustomFunctions:
 			py = PyPlayer( gc.getBARBARIAN_PLAYER() )
 			for pUnit in py.getUnitList():
 				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'):
-					iRange = retRange(caster,pUnit)
+					iRange = self.retRange(caster,pUnit)
 					if pUnit.getLevel() <= iSearch + iSearch / 2 and iRange <= iSearch + iMult and mode == 9:
 						if iRange > -1 and iRange < 99:
 							return True
@@ -116,7 +140,7 @@ class CustomFunctions:
 			for pUnit in py.getUnitList():
 				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'):
 					iCaches += 1
-					iRange = retRange(caster,pUnit)
+					iRange = self.retRange(caster,pUnit)
 					if iRange > -1 and iRange < iFarRange and iRange > iSearch + iMult:
 						iFarRange = iRange
 						fx = pUnit.getX()
@@ -135,7 +159,7 @@ class CustomFunctions:
 				sPref = ', though it is above your experience level'
 
 			if iBestRange < 999:
-				sDirection = ' to the ' + retDir(iX,iY,tx,ty)
+				sDirection = ' to the ' + self.retDir(iX,iY,tx,ty)
 				if sDirection == ' to the ':
 					sDirection = ''
 
@@ -146,7 +170,7 @@ class CustomFunctions:
 				else:
 					sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is around ' + str(iBestRange-2+CyGame().getSorenRandNum(5, "Roll It")) + ' tiles away from ' + sName + sPref + '...'
 			else:
-				sDirection = ' to the ' + retDir(caster.getX(),caster.getY(),fx,fy)
+				sDirection = ' to the ' + self.retDir(caster.getX(),caster.getY(),fx,fy)
 				if sDirection == ' to the ':
 					sDirection = ''
 
@@ -216,7 +240,7 @@ class CustomFunctions:
 				sSpec += ', plague'
 			if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL4')):
-					iPower = retCombat(pUnit)
+					iPower = self.retCombat(pUnit)
 					sGuard = ' dragon'
 					if iPower < 4:
 						sSpec += ', a wyrmling'
@@ -225,15 +249,10 @@ class CustomFunctions:
 					else:
 						sSpec += ', a dragon!'
 				else:
-					sSpec += ', ' + str( retCombat(pUnit) ) + sGuard + ' guards'
+					sSpec += ', ' + str( self.retCombat(pUnit) ) + sGuard + ' guards'
 
 			# Examine Cache
 			if mode == 1:
-				sDir = retDir(iX,iY,iiX,iiY)
-				sDip = 'Examing a hidden cache... Distance: '+str(iRange)+' '+sDir+' Skill: '+str(iSearch)+' Dif: ' + str(pUnit.baseCombatStrDefense()+iRange*3) + ' Chance: ' + str( iChance ) + ' Danger: ' + str(pUnit.baseCombatStr()) + sSpec
-				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
-				CyInterface().addCombatMessage(caster.getOwner(),sDip)
-
 				if caster.getFortifyTurns() == 5 and iRange < 2 and CyGame().getSorenRandNum(100, "Search Cache") < ( iChance / 2 ):
 					sDip = 'Coming up with a plan to loot the cache!  Difficulty reduced by 1!'
 					CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
@@ -247,6 +266,11 @@ class CustomFunctions:
 						pUnit.setBaseCombatStrDefense(pUnit.baseCombatStrDefense() - 1)
 					else:
 						pUnit.setBaseCombatStrDefense(1)
+
+				sDir = self.retDir(iX,iY,iiX,iiY)
+				sDip = 'Examing a hidden cache... Distance: '+str(iRange)+' '+sDir+' Skill: '+str(iSearch)+' Dif: ' + str(pUnit.baseCombatStrDefense()+iRange*3) + ' Chance: ' + str( iChance ) + ' Danger: ' + str(pUnit.baseCombatStr()) + sSpec
+				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
 				return
 
@@ -298,7 +322,7 @@ class CustomFunctions:
 
 			# Draw Guards Away
 			if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
-				iPow = retCombat( pUnit )
+				iPow = self.retCombat( pUnit )
 				iNum = iPow
 				bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
 				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1'),False)

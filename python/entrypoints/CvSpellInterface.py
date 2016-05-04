@@ -3871,21 +3871,7 @@ def spellCommandMorale(caster):
 							return
 
 def retCombat(unit):
-	i = 0
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2')):
-		i += 1
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT3')):
-		i += 1
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT4')):
-		i += 1
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT5')):
-		i += 1
-	if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
-		i += 1
-	else:
-		i = 0
-
-	return i
+	return cf.retCombat(unit)
 
 def reqDonateItem(caster):
 	if caster.baseCombatStr() < 1 and caster.maxMoves() < 1 and caster.hillsAttackModifier() > 0:
@@ -4401,11 +4387,7 @@ def spellImmoblize(caster,turns):
 
 
 def retRange(unit1,unit2):
-	iRange = int( math.fabs(unit1.getX()-unit2.getX()) )
-	if iRange < int( math.fabs(unit1.getY()-unit2.getY()) ):
-		iRange = int( math.fabs(unit1.getY()-unit2.getY()) )
-
-	return iRange	
+	return cf.retRange(unit1,unit2)
 
 def reqInteractCache(caster,mode):
 	return cf.reqInteractCache(caster,mode)
