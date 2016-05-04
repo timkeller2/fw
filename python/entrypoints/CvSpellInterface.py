@@ -4024,8 +4024,6 @@ def reqTakeEquipment(caster,unit):
 		return False
 	if caster.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BEAST'):
 		return False
-	if caster.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_AIR'):
-		return False
 	if caster.getSpecialUnitType() == gc.getInfoTypeForString('SPECIALUNIT_SPELL'):
 		return False
 
@@ -4066,6 +4064,8 @@ def reqTakeEquipment(caster,unit):
 			if iProm == gc.getInfoTypeForString('PROMOTION_PIECES_OF_BARNAXUS'):
 				return False
 		if pHolder.isHasCasted():
+			return False
+		if pHolder.isMadeAttack():
 			return False
 	if pPlayer.isHuman() == False:
 		if pHolder == -1:
