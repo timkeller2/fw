@@ -4632,6 +4632,10 @@
             <Help></Help>
             <Hero>UNIT_RANTINE</Hero>
             <MaintainFeatures>
+                <MaintainFeature>
+                    <FeatureType>FEATURE_JUNGLE</FeatureType>
+                    <bMaintain>1</bMaintain>
+                </MaintainFeature>
             </MaintainFeatures>
         </CivilizationInfo>
         <CivilizationInfo>

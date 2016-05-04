@@ -13628,5 +13628,24 @@
             <iHotKeyPriority>0</iHotKeyPriority>
             <Button>Art/Interface/Buttons/Promotions/Guardsman.dds</Button>
         </SpellInfo>
+        <SpellInfo>
+            <Type>SPELL_JUNGLE_HAUNT</Type>
+            <Description>Jungle Haunt</Description>
+            <Civilopedia>Create a hunting and foraging place for the orcs in the jungle.</Civilopedia>
+            <PromotionPrereq1>PROMOTION_ORC</PromotionPrereq1>
+            <UnitCombatPrereq>UNITCOMBAT_RECON</UnitCombatPrereq>
+            <FeatureOrPrereq1>FEATURE_JUNGLE</FeatureOrPrereq1>
+            <ReligionPrereq></ReligionPrereq>
+            <bAllowAI>0</bAllowAI>
+            <bAllowAutomateTerrain>0</bAllowAutomateTerrain>
+            <bInBordersOnly>1</bInBordersOnly>
+            <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <CreateImprovementType>IMPROVEMENT_JUNGLE_FARM</CreateImprovementType>
+            <iDelay>6</iDelay>
+            <Effect>EFFECT_BLOOM</Effect>
+            <Sound>AS3D_SPELL_BLOOM</Sound>
+            <Button>Art/Interface/Buttons/TerrainFeatures/Jungle.dds</Button>
+        </SpellInfo>
     </SpellInfos>
 </Civ4SpellInfos>

@@ -79702,7 +79702,7 @@
             <Invisible>NONE</Invisible>
             <SeeInvisible>INVISIBLE_ANIMAL</SeeInvisible>
             <Description>Priest</Description>
-            <Civilopedia>Priests are multi-purpose religious units.  Later, they can be upgraded to the more powerful cleric.  May be recruited in cities with a pagan temple and a population of 5 or greater.  Only one may be recruited per pagan temple.</Civilopedia>
+            <Civilopedia>Priests are multi-purpose religious units.  Later, they can be upgraded to the more powerful cleric.  May be recruited in cities with a pagan temple and a culture of 100 or greater.  Only one may be recruited per pagan temple.</Civilopedia>
             <Strategy></Strategy>
             <Advisor>ADVISOR_RELIGION</Advisor>
             <bAnimal>0</bAnimal>
@@ -81565,7 +81565,7 @@
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
             <Description>Magician</Description>
-            <Civilopedia>May be recruited in cities with a monument and a population of 5 or greater.  Only one may be recruited per monument.</Civilopedia>
+            <Civilopedia>May be recruited in cities with a monument and a culture of 250 or greater.  Only one may be recruited per monument.</Civilopedia>
             <Strategy>TXT_KEY_UNIT_ADEPT_STRATEGY</Strategy>
             <Advisor>ADVISOR_MILITARY</Advisor>
             <bAnimal>0</bAnimal>
