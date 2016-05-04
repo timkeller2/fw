@@ -6655,9 +6655,9 @@
         <SpellInfo>
             <Type>SPELL_EXAMINE_CACHE</Type>
             <Description>Examine Hidden Cache</Description>
-            <Civilopedia>Examine the hidden cache to determine its secrets!  If you have been fortified for 5 turns, there is a 33% that you will be able to reduce the difficulty of the cache by 1 each time you examine it.</Civilopedia>
+            <Civilopedia>Examine the hidden cache to determine its secrets!  If you have been fortified for 5 turns, there is a chance that you will be able to reduce the difficulty of the cache by 1 each time you examine it.</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>Examine the hidden cache.</Help>
+            <Help>Examine the hidden cache.  After 5 turns fortified, this could help reduce the difficulty of the cache.</Help>
             <PromotionPrereq1>PROMOTION_BURGLAR1</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
