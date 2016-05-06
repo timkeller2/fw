@@ -772,19 +772,19 @@ class CvEventManager:
 
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_TREASURE1'):
 			if 'TR1' not in sCityInfo:
-				sCityInfo['TR1'] = 0
+				sCityInfo['TR1'] = CyGame().getGameTurn() + 12
 			sCityInfo['TR1'] = CyGame().getGameTurn() + 12
 			pCity.setScriptData(cPickle.dumps(sCityInfo))
 
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_TREASURE2'):
 			if 'TR2' not in sCityInfo:
-				sCityInfo['TR2'] = 0
+				sCityInfo['TR2'] = CyGame().getGameTurn() + 12
 			sCityInfo['TR2'] = CyGame().getGameTurn() + 12
 			pCity.setScriptData(cPickle.dumps(sCityInfo))
 
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_TREASURE3'):
 			if 'TR3' not in sCityInfo:
-				sCityInfo['TR3'] = 0
+				sCityInfo['TR3'] = CyGame().getGameTurn() + 12
 			sCityInfo['TR3'] = CyGame().getGameTurn() + 12
 			pCity.setScriptData(cPickle.dumps(sCityInfo))
 
@@ -1722,7 +1722,7 @@ class CvEventManager:
 							iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
 							if aPlayer.isBarbarian():
 								iBirthChance = iBirthChance - 25
-							if iBirthChance < 15:
+							if iBirthChance < pUnit.getLevel() * 3:
 								bPlayer = gc.getPlayer(pUnit.getOwner())
 								newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_BABY_SPIDER'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 								newUnit.finishMoves()
@@ -1795,7 +1795,7 @@ class CvEventManager:
 							iBirthChance = CyGame().getSorenRandNum(100 + iCount, "serpentbirthchance")
 							if aPlayer.isBarbarian():
 								iBirthChance = iBirthChance - 25
-							if iBirthChance < 50 and iCount < 60:
+							if iBirthChance < pUnit.getLevel() * 5 + 25 and iCount < 60:
 								bPlayer = gc.getPlayer(pUnit.getOwner())
 								newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_SEA_SERPENT'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 								newUnit.finishMoves()
