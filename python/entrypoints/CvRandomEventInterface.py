@@ -6899,7 +6899,10 @@ def canBuyMinorImmortality(argsList):
 		iMinorBoost = 2
 	if (pUnit.getLevel() > 5 + iMinorBoost or pUnit.baseCombatStr() > 5 + iMinorBoost):
 		return False
-
+		
+	if pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_SETTLER'):
+		return False
+		
 	return True
 
 def canBuyImmortality(argsList):
