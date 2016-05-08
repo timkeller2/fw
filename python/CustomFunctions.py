@@ -2922,10 +2922,10 @@ class CustomFunctions:
 					pUnit.kill(True,0)
 
 				## Computer Strong Workers Become Champions - (Sometimes computer strong workers cause spinlock)
-				if pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_WORKER') and not pPlayer.isHuman() and pUnit.baseCombatStr() > 0:
-					oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_CHAMPION'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
-					oNewUnit.convert(pUnit)
+				# if pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_WORKER') and not pPlayer.isHuman() and pUnit.baseCombatStr() > 0:
+					# oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_CHAMPION'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+					# pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+					# oNewUnit.convert(pUnit)
 
 				## Angels become evil if owned by an evil player...
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')) and pPlayer.getAlignment() == iEvil:
