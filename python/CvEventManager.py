@@ -1384,6 +1384,9 @@ class CvEventManager:
 		if CyGame().getWBMapScript():
 			sf.onUnitCreated(unit)
 
+		strSetData = { 'LastConsume': 0, 'Command': 0, 'Value3': -1 }
+		unit.setScriptData(cPickle.dumps(strSetData))
+		
 		if (not self.__LOG_UNITBUILD):
 			return
 
