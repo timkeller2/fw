@@ -56654,7 +56654,7 @@
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
-            <iEspionagePoints>-100</iEspionagePoints>
+            <iEspionagePoints>0</iEspionagePoints>
             <bGoldenAge>0</bGoldenAge>
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
@@ -56694,7 +56694,7 @@
             <iRevoltTurns>0</iRevoltTurns>
             <iMinPillage>0</iMinPillage>
             <iMaxPillage>0</iMaxPillage>
-            <iFood>-60</iFood>
+            <iFood>0</iFood>
             <iFoodPercent>0</iFoodPercent>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
