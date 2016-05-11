@@ -463,7 +463,7 @@
     </Define>
     <Define>
 		<DefineName>LAND_UNITS_CAN_ATTACK_WATER_CITIES</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
     </Define>
 	<Define>
 		<DefineName>EVENT_PROBABILITY_ROLL_SIDES</DefineName>
