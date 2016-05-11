@@ -13173,7 +13173,7 @@
             <bHillsDoubleMove>0</bHillsDoubleMove>
             <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
             <iVisibilityChange>0</iVisibilityChange>
-            <iMovesChange>0</iMovesChange>
+            <iMovesChange>-1</iMovesChange>
             <iMoveDiscountChange>0</iMoveDiscountChange>
             <iAirRangeChange>0</iAirRangeChange>
             <iInterceptChange>0</iInterceptChange>
@@ -15821,7 +15821,7 @@
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_UNDEAD_SLAYING2</PromotionPrereqOr1>
-            <PromotionPrereqOr2>PROMOTION_MEDIC1</PromotionPrereqOr2>
+            <PromotionPrereqOr2>PROMOTION_COMBAT2</PromotionPrereqOr2>
             <TechPrereq>NONE</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
@@ -15888,7 +15888,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Promotions/ColdResistance.dds</Button>
+            <Button>Art/Interface/Buttons/Spells/Destroy Undead.dds</Button>
             <bBoarding>0</bBoarding>
             <bOnlyDefensive>0</bOnlyDefensive>
             <bDispellable>0</bDispellable>
@@ -15965,7 +15965,7 @@
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_UNDEAD_SLAYING2</PromotionPrereqOr1>
-            <PromotionPrereqOr2>PROMOTION_MEDIC1</PromotionPrereqOr2>
+            <PromotionPrereqOr2>PROMOTION_COMBAT1</PromotionPrereqOr2>
             <TechPrereq>NONE</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>

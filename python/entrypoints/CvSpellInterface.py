@@ -2774,7 +2774,11 @@ def reqSpreadTheCouncilOfEsus(caster):
 	return True
 
 def reqSpringTerraform(caster):
-	sData = cPickle.loads(caster.getScriptData())
+	sData = {}
+	try:
+		sData = cPickle.loads(caster.getScriptData())
+	except EOFError:
+		sData = {}
 
 	if 'Last_Water' not in sData:
 		sData['Last_Water'] = CyGame().getGameTurn()
@@ -4229,9 +4233,9 @@ def spellTurnUndead(caster):
 			pPlot = CyMap().plot(iiX,iiY)
 			for i in range(pPlot.getNumUnits()):
 				pUnit = pPlot.getUnit(i)
-				if pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_UNDEAD') and pUnit.maxCombatStr(pPlot,caster) / 100 < iL + 4 and (pUnit.getDamage() < 50 or not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLINDED'))):
+				if pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_UNDEAD') and pUnit.maxCombatStr(pPlot,caster) / 100 + pUnit.getLevel() < iL + 4 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLINDED')):
 					iNumTurned = iNumTurned + 1
-					iMod = iL + 4 - pUnit.maxCombatStr(pPlot,caster) / 100
+					iMod = iL + 4 - pUnit.maxCombatStr(pPlot,caster) / 100 - pUnit.getLevel()
 					if iMod > 0:
 						iMod = iMod * 5
 					if iMod < 0:

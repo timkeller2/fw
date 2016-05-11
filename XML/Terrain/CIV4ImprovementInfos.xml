@@ -854,7 +854,7 @@
             <iTilesPerGoody>0</iTilesPerGoody>
             <iGoodyRange>0</iGoodyRange>
             <iFeatureGrowth>0</iFeatureGrowth>
-            <iUpgradeTime>10</iUpgradeTime>
+            <iUpgradeTime>20</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
             <iDefenseModifier>0</iDefenseModifier>
             <iHappiness>0</iHappiness>
@@ -1925,7 +1925,7 @@
             <iTilesPerGoody>0</iTilesPerGoody>
             <iGoodyRange>0</iGoodyRange>
             <iFeatureGrowth>0</iFeatureGrowth>
-            <iUpgradeTime>20</iUpgradeTime>
+            <iUpgradeTime>40</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
             <iDefenseModifier>0</iDefenseModifier>
             <iHappiness>0</iHappiness>
@@ -4485,7 +4485,7 @@
             <iTilesPerGoody>0</iTilesPerGoody>
             <iGoodyRange>0</iGoodyRange>
             <iFeatureGrowth>0</iFeatureGrowth>
-            <iUpgradeTime>10</iUpgradeTime>
+            <iUpgradeTime>20</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
             <iDefenseModifier>10</iDefenseModifier>
             <iHappiness>0</iHappiness>
@@ -4550,7 +4550,7 @@
             <iTilesPerGoody>0</iTilesPerGoody>
             <iGoodyRange>0</iGoodyRange>
             <iFeatureGrowth>0</iFeatureGrowth>
-            <iUpgradeTime>20</iUpgradeTime>
+            <iUpgradeTime>40</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
             <iDefenseModifier>20</iDefenseModifier>
             <iHappiness>0</iHappiness>
@@ -5885,7 +5885,7 @@
             <iTilesPerGoody>0</iTilesPerGoody>
             <iGoodyRange>0</iGoodyRange>
             <iFeatureGrowth>0</iFeatureGrowth>
-            <iUpgradeTime>60</iUpgradeTime>
+            <iUpgradeTime>80</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
             <iDefenseModifier>0</iDefenseModifier>
             <iHappiness>0</iHappiness>
@@ -5954,7 +5954,7 @@
             <iTilesPerGoody>0</iTilesPerGoody>
             <iGoodyRange>0</iGoodyRange>
             <iFeatureGrowth>0</iFeatureGrowth>
-            <iUpgradeTime>40</iUpgradeTime>
+            <iUpgradeTime>60</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
             <iDefenseModifier>0</iDefenseModifier>
             <iHappiness>0</iHappiness>
