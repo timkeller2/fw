@@ -68799,7 +68799,7 @@
             <StateReligion>RELIGION_OCTOPUS_OVERLORDS</StateReligion>
             <PrereqReligion>RELIGION_OCTOPUS_OVERLORDS</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
-            <PrereqBuilding>BUILDING_TEMPLE_OF_THE_OVERLORDS</PrereqBuilding>
+            <PrereqBuilding>BUILDING_TEMPLE_OF_THE_DEEP</PrereqBuilding>
             <PrereqTech>TECH_FANATICISM</PrereqTech>
             <TechTypes>
             </TechTypes>

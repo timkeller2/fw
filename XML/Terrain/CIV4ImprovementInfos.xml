@@ -1313,6 +1313,14 @@
                         <iYield>0</iYield>
                     </TechYields>
                 </TechYieldChange>
+                <TechYieldChange>
+                    <PrereqTech>TECH_SEAFARING</PrereqTech>
+                    <TechYields>
+                        <iYield>-1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>0</iYield>
+                    </TechYields>
+                </TechYieldChange>
             </TechYieldChanges>
             <RouteYieldChanges>
             </RouteYieldChanges>
