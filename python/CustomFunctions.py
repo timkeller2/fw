@@ -2853,7 +2853,7 @@ class CustomFunctions:
 											iRange = int( math.fabs( xUnit.getY() - pUnit.getY() ) )
 											sBlock = ' limited by ' + xUnit.getName() + ' actions...'
 					iRange += pUnit.getLevel() / 2
-					iMerchantIncome = CyGame().getSorenRandNum(10*iRange, "Merchant Mission")
+					iMerchantIncome = CyGame().getSorenRandNum(10*iRange, "Merchant Mission") + iRange * 2
 					if iMerchantIncome > 0:
 						CyInterface().addMessage(pUnit.getOwner(),false,25,'Your '+pUnit.getName()+' completes a merchant mission and gains '+str(iMerchantIncome)+'gp!  Merchanteering range '+str(iRange)+'/7'+sBlock,'',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pUnit.getOwner(),'Your '+pUnit.getName()+' completes a merchant mission and gains '+str(iMerchantIncome)+'gp!  Merchanteering range '+str(iRange)+'/7'+sBlock)
