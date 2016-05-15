@@ -665,8 +665,8 @@
         <SpellInfo>
             <Type>SPELL_CREW_BUCCANEERS</Type>
             <Description>TXT_KEY_SPELL_CREW_BUCCANEERS</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <Help>TXT_KEY_SPELL_CREW_BUCCANEERS_HELP</Help>
+            <Civilopedia>Hire a buccaneer crew capable of better fighting (+25%) and potentially splitting off to form a boarding unit (1+1/4str of the ship).  It takes 3 turns to find and train the crew.</Civilopedia>
+            <Help>+25% combat</Help>
             <UnitCombatPrereq>UNITCOMBAT_NAVAL</UnitCombatPrereq>
             <bInCityOnly>1</bInCityOnly>
             <bHasCasted>1</bHasCasted>
@@ -687,8 +687,8 @@
         <SpellInfo>
             <Type>SPELL_CREW_LONGSHOREMEN</Type>
             <Description>TXT_KEY_SPELL_CREW_LONGSHOREMEN</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <Help>TXT_KEY_SPELL_CREW_LONGSHOREMEN_HELP</Help>
+            <Civilopedia>+1 movement</Civilopedia>
+            <Help>+1 movement</Help>
             <UnitCombatPrereq>UNITCOMBAT_NAVAL</UnitCombatPrereq>
             <bInCityOnly>1</bInCityOnly>
             <bHasCasted>1</bHasCasted>
@@ -728,8 +728,8 @@
         <SpellInfo>
             <Type>SPELL_CREW_SKELETON_CREW</Type>
             <Description>Expanded Hull</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <Help>TXT_KEY_SPELL_CREW_SKELETON_CREW_HELP</Help>
+            <Civilopedia>+1 cargo space</Civilopedia>
+            <Help>+1 cargo space</Help>
             <UnitCombatPrereq>UNITCOMBAT_NAVAL</UnitCombatPrereq>
             <bInCityOnly>1</bInCityOnly>
             <bHasCasted>1</bHasCasted>
