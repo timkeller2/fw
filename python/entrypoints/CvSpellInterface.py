@@ -2348,6 +2348,7 @@ def reqReveal(caster):
 	pPlot = caster.plot()
 	if pPlot.getOwner() != caster.getOwner():
 		return False
+	return False #MTK	
 	return True
 
 def spellReveal(caster):

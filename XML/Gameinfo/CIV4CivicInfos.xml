@@ -1708,8 +1708,8 @@
                     <ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
                     <ImprovementYields>
                         <iYield>0</iYield>
-                        <iYield>1</iYield>
-                        <iYield>0</iYield>
+                        <iYield>4</iYield>
+                        <iYield>4</iYield>
                     </ImprovementYields>
                 </ImprovementYieldChange>
             </ImprovementYieldChanges>

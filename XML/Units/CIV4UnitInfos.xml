@@ -7484,7 +7484,7 @@
             <iMinLevel>4</iMinLevel>
             <iTier>4</iTier>
             <iWeaponTier>3</iWeaponTier>
-            <PrereqCiv>CIVILIZATION_MERCURIANS</PrereqCiv>
+            <PrereqCiv>NONE</PrereqCiv>
             <PythonPostCombatWon>postCombatReducePopulation(pCaster,pOpponent)</PythonPostCombatWon>
             <DamageTypeCombats>
                 <DamageTypeCombat>
@@ -36769,7 +36769,7 @@
             <iMinLevel>4</iMinLevel>
             <iTier>4</iTier>
             <iWeaponTier>3</iWeaponTier>
-            <PrereqCiv>CIVILIZATION_MERCURIANS</PrereqCiv>
+            <PrereqCiv>NONE</PrereqCiv>
         </UnitInfo>
         <UnitInfo>
             <Class>UNITCLASS_HERNE</Class>
@@ -54917,7 +54917,7 @@
             <iMinLevel>4</iMinLevel>
             <iTier>4</iTier>
             <iWeaponTier>3</iWeaponTier>
-            <PrereqCiv>CIVILIZATION_MERCURIANS</PrereqCiv>
+            <PrereqCiv>NONE</PrereqCiv>
             <DamageTypeCombats>
                 <DamageTypeCombat>
                     <DamageType>DAMAGE_HOLY</DamageType>
@@ -62196,7 +62196,7 @@
             <iMinLevel>3</iMinLevel>
             <iTier>4</iTier>
             <iWeaponTier>3</iWeaponTier>
-            <PrereqCiv>CIVILIZATION_MERCURIANS</PrereqCiv>
+            <PrereqCiv>NONE</PrereqCiv>
             <PythonPostCombatWon>postCombatReduceCombat1(pCaster,pOpponent)</PythonPostCombatWon>
             <DamageTypeCombats>
                 <DamageTypeCombat>
@@ -65620,7 +65620,7 @@
             <iMinLevel>4</iMinLevel>
             <iTier>4</iTier>
             <iWeaponTier>3</iWeaponTier>
-            <PrereqCiv>CIVILIZATION_MERCURIANS</PrereqCiv>
+            <PrereqCiv>NONE</PrereqCiv>
             <DamageTypeCombats>
                 <DamageTypeCombat>
                     <DamageType>DAMAGE_HOLY</DamageType>
@@ -71243,7 +71243,7 @@
             <iMinLevel>6</iMinLevel>
             <iTier>4</iTier>
             <iWeaponTier>3</iWeaponTier>
-            <PrereqCiv>CIVILIZATION_MERCURIANS</PrereqCiv>
+            <PrereqCiv>NONE</PrereqCiv>
             <DamageTypeCombats>
                 <DamageTypeCombat>
                     <DamageType>DAMAGE_HOLY</DamageType>

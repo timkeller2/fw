@@ -61,30 +61,6 @@
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
                     <UnitClassType>UNITCLASS_LIGHTBRINGER</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
@@ -334,30 +310,6 @@
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
                     <UnitClassType>UNITCLASS_LIGHTBRINGER</UnitClassType>
                     <UnitType>UNIT_LIGHTBRINGER</UnitType>
                 </Unit>
@@ -600,30 +552,6 @@
                 </Unit>
                 <Unit>
                     <UnitClassType>UNITCLASS_FREAK</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
@@ -1197,30 +1125,6 @@
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
                     <UnitClassType>UNITCLASS_LIGHTBRINGER</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
@@ -1486,30 +1390,6 @@
                 </Unit>
                 <Unit>
                     <UnitClassType>UNITCLASS_FREAK</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
@@ -1782,30 +1662,6 @@
                 </Unit>
                 <Unit>
                     <UnitClassType>UNITCLASS_FREAK</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
@@ -2117,30 +1973,6 @@
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
                     <UnitClassType>UNITCLASS_LIGHTBRINGER</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
@@ -2375,30 +2207,6 @@
                 </Unit>
                 <Unit>
                     <UnitClassType>UNITCLASS_FREAK</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
@@ -2644,30 +2452,6 @@
                 </Unit>
                 <Unit>
                     <UnitClassType>UNITCLASS_FREAK</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
@@ -2946,30 +2730,6 @@
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
                     <UnitClassType>UNITCLASS_LIGHTBRINGER</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
@@ -3222,30 +2982,6 @@
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
                     <UnitClassType>UNITCLASS_LIGHTBRINGER</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
@@ -3494,30 +3230,6 @@
                 </Unit>
                 <Unit>
                     <UnitClassType>UNITCLASS_FREAK</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
@@ -3819,30 +3531,6 @@
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
                     <UnitClassType>UNITCLASS_LIGHTBRINGER</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
@@ -4097,30 +3785,6 @@
                 </Unit>
                 <Unit>
                     <UnitClassType>UNITCLASS_ADVENTURER</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
@@ -4443,30 +4107,6 @@
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
                     <UnitClassType>UNITCLASS_LIGHTBRINGER</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
@@ -4742,30 +4382,6 @@
                 </Unit>
                 <Unit>
                     <UnitClassType>UNITCLASS_FREAK</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
@@ -5050,30 +4666,6 @@
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
                     <UnitClassType>UNITCLASS_LIGHTBRINGER</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
@@ -5340,30 +4932,6 @@
                 </Unit>
                 <Unit>
                     <UnitClassType>UNITCLASS_FREAK</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
@@ -5908,30 +5476,6 @@
                 </Unit>
                 <Unit>
                     <UnitClassType>UNITCLASS_FREAK</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
@@ -6494,30 +6038,6 @@
                 </Unit>
                 <Unit>
                     <UnitClassType>UNITCLASS_FREAK</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_HERALD</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_VALKYRIE</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_SERAPH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_REPENTANT_ANGEL</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_ANGEL_OF_DEATH</UnitClassType>
-                    <UnitType>NONE</UnitType>
-                </Unit>
-                <Unit>
-                    <UnitClassType>UNITCLASS_OPHANIM</UnitClassType>
                     <UnitType>NONE</UnitType>
                 </Unit>
                 <Unit>
