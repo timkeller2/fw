@@ -1093,6 +1093,8 @@ class CustomFunctions:
 				return True
 			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_RECON'):
 				return True
+			if pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_WORKER'):
+				return True
 
 		if iProm == gc.getInfoTypeForString('PROMOTION_IMPROVED_ARMOR'):
 			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
@@ -1100,6 +1102,8 @@ class CustomFunctions:
 			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_DISCIPLE'):
 				return True
 			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_RECON'):
+				return True
+			if pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_WORKER'):
 				return True
 
 		if iProm == gc.getInfoTypeForString('PROMOTION_HEAVY_ARMOR'):
@@ -2824,8 +2828,8 @@ class CustomFunctions:
 							iDam = ( iDam * 100 ) / pUnit.baseCombatStr()
 							pUnit.doDamageNoCaster(iDam, 100, gc.getInfoTypeForString('DAMAGE_LIGHTNING'), False)
 							
-				## Merchant Ships give income every 10 turns or so
-				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MERCHANT_SHIP') and pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_OCEAN') and CyGame().getSorenRandNum(100, "Merchant") < ( pUnit.getLevel() + pUnit.baseMoves() ) * 2:
+				## Merchant Ships give income every 25 turns or so, more with speed and experience
+				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MERCHANT_SHIP') and pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_OCEAN') and CyGame().getSorenRandNum(100, "Merchant") < pUnit.getLevel() + pUnit.baseMoves():
 					iRange = 7
 					iX = pUnit.getX()
 					iY = pUnit.getY()

@@ -6729,6 +6729,10 @@
             <iHotKeyPriority>0</iHotKeyPriority>
             <FreePromotions>
                 <FreePromotion>
+                    <PromotionType>PROMOTION_BLITZ</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
                     <PromotionType>PROMOTION_SENTRY</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
@@ -33000,7 +33004,7 @@
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>DOMAIN_LAND</DomainCargo>
-            <iCargo>3</iCargo>
+            <iCargo>2</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
             <iExtraCost>0</iExtraCost>
@@ -60115,7 +60119,7 @@
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>DOMAIN_LAND</DomainCargo>
-            <iCargo>8</iCargo>
+            <iCargo>6</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
             <iExtraCost>0</iExtraCost>
@@ -79212,7 +79216,7 @@
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
             <Description>Merchant Ship</Description>
-            <Civilopedia>Merchant ships bring in wealth from the high seas.  Assign a merchant ship to an ocean tile to bring in income (2% chance per level and movement).  Merchant ships bring in more income the further away they are from enemy ships, other merchant ships and the northern and southern edges of the world up to 7+(lev * 2) tiles away (competition).  They have a random income of (2-12 * range).  It is possible they will also acquire items in their merchanteering pursuits.</Civilopedia>
+            <Civilopedia>Merchant ships bring in wealth from the high seas.  Assign a merchant ship to an ocean tile to bring in income ((level+move)% chance per turn).  Merchant ships bring in more income the further away they are from enemy ships, other merchant ships and the northern and southern edges of the world up to 7+(lev * 2) tiles away (competition).  They have a random income of (2-12 * range).  It is possible they will also acquire items in their merchanteering pursuits.</Civilopedia>
             <Strategy></Strategy>
             <Advisor>ADVISOR_GROWTH</Advisor>
             <bAnimal>0</bAnimal>
