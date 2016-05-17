@@ -3761,7 +3761,7 @@ def reqBecomeChief(caster):
 			iClassUnits += 1
 			if pUnit.isHasPromotion(iChief):
 				iChiefUnits += 1
-	if iChiefUnits < iClassUnits / 10 :
+	if iChiefUnits < iClassUnits / 8 :
 		return True
 
 	return False

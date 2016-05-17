@@ -33028,15 +33028,12 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
+            <bNeverObsolete>1</bNeverObsolete>
             <iCombatDefense>7</iCombatDefense>
             <iTier>3</iTier>
             <BonusAffinities>
                 <BonusAffinity>
                     <BonusType>BONUS_MITHRIL</BonusType>
-                    <iAffinity>1</iAffinity>
-                </BonusAffinity>
-                <BonusAffinity>
-                    <BonusType>BONUS_IRON</BonusType>
                     <iAffinity>1</iAffinity>
                 </BonusAffinity>
             </BonusAffinities>
@@ -56843,7 +56840,7 @@
             </ForceBuildings>
             <HolyCity>NONE</HolyCity>
             <ReligionType>RELIGION_RUNES_OF_KILMORPH</ReligionType>
-            <StateReligion>RELIGION_RUNES_OF_KILMORPH</StateReligion>
+            <StateReligion>NONE</StateReligion>
             <PrereqReligion>RELIGION_RUNES_OF_KILMORPH</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>BUILDING_TEMPLE_OF_KILMORPH</PrereqBuilding>
@@ -57094,7 +57091,7 @@
             </ForceBuildings>
             <HolyCity>NONE</HolyCity>
             <ReligionType>RELIGION_FELLOWSHIP_OF_LEAVES</ReligionType>
-            <StateReligion>RELIGION_FELLOWSHIP_OF_LEAVES</StateReligion>
+            <StateReligion>NONE</StateReligion>
             <PrereqReligion>RELIGION_FELLOWSHIP_OF_LEAVES</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>BUILDING_TEMPLE_OF_LEAVES</PrereqBuilding>
@@ -57345,7 +57342,7 @@
             </ForceBuildings>
             <HolyCity>NONE</HolyCity>
             <ReligionType>RELIGION_THE_EMPYREAN</ReligionType>
-            <StateReligion>RELIGION_THE_EMPYREAN</StateReligion>
+            <StateReligion>NONE</StateReligion>
             <PrereqReligion>RELIGION_THE_EMPYREAN</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>BUILDING_TEMPLE_OF_THE_EMPYREAN</PrereqBuilding>
@@ -57602,7 +57599,7 @@
             </ForceBuildings>
             <HolyCity>NONE</HolyCity>
             <ReligionType>RELIGION_THE_ORDER</ReligionType>
-            <StateReligion>RELIGION_THE_ORDER</StateReligion>
+            <StateReligion>NONE</StateReligion>
             <PrereqReligion>RELIGION_THE_ORDER</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>BUILDING_TEMPLE_OF_THE_ORDER</PrereqBuilding>
@@ -57863,7 +57860,7 @@
             </ForceBuildings>
             <HolyCity>NONE</HolyCity>
             <ReligionType>RELIGION_OCTOPUS_OVERLORDS</ReligionType>
-            <StateReligion>RELIGION_OCTOPUS_OVERLORDS</StateReligion>
+            <StateReligion>NONE</StateReligion>
             <PrereqReligion>RELIGION_OCTOPUS_OVERLORDS</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>BUILDING_TEMPLE_OF_THE_OVERLORDS</PrereqBuilding>
@@ -58118,7 +58115,7 @@
             </ForceBuildings>
             <HolyCity>NONE</HolyCity>
             <ReligionType>RELIGION_THE_ASHEN_VEIL</ReligionType>
-            <StateReligion>RELIGION_THE_ASHEN_VEIL</StateReligion>
+            <StateReligion>NONE</StateReligion>
             <PrereqReligion>RELIGION_THE_ASHEN_VEIL</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>BUILDING_TEMPLE_OF_THE_VEIL</PrereqBuilding>
@@ -60112,7 +60109,7 @@
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>DOMAIN_LAND</DomainCargo>
-            <iCargo>6</iCargo>
+            <iCargo>8</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
             <iExtraCost>0</iExtraCost>
@@ -60139,6 +60136,10 @@
             <FreePromotions>
                 <FreePromotion>
                     <PromotionType>PROMOTION_MEDIC1</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_MEDIC2</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
             </FreePromotions>
@@ -61980,7 +61981,7 @@
             <UnitConvertFromCombat>UNIT_WEREWOLF</UnitConvertFromCombat>
             <iUnitConvertFromCombatChance>100</iUnitConvertFromCombatChance>
             <UnitCreateFromCombat>UNIT_RAVENOUS_WEREWOLF</UnitCreateFromCombat>
-            <iUnitCreateFromCombatChance>15</iUnitCreateFromCombatChance>
+            <iUnitCreateFromCombatChance>25</iUnitCreateFromCombatChance>
         </UnitInfo>
         <UnitInfo>
             <Class>UNITCLASS_REPENTANT_ANGEL</Class>

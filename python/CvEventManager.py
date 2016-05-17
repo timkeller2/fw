@@ -1771,57 +1771,57 @@ class CvEventManager:
 								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
 								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
 
-						if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_DUIN') and iEat == 0 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
-							iEat = 1
-							iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
-							if iBirthChance < 50:
-								bPlayer = gc.getPlayer(pUnit.getOwner())
-								newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-								newUnit.finishMoves()
-								newUnit.setHasCasted(True)
-								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
-								sMsg = str( pUnit.getName() ) + ' creates a new werewolf...'
-								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
-								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
+						# if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_DUIN') and iEat == 0 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
+							# iEat = 1
+							# iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
+							# if iBirthChance < 50:
+								# bPlayer = gc.getPlayer(pUnit.getOwner())
+								# newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+								# newUnit.finishMoves()
+								# newUnit.setHasCasted(True)
+								# pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+								# sMsg = str( pUnit.getName() ) + ' creates a new werewolf...'
+								# CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
+								# CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
 
-						if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GREATER_WEREWOLF') and iEat == 0 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
-							iEat = 1
-							iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
-							if iBirthChance < 35:
-								bPlayer = gc.getPlayer(pUnit.getOwner())
-								newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-								newUnit.finishMoves()
-								newUnit.setHasCasted(True)
-								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
-								sMsg = 'A ' + str( pUnit.getName() ) + ' creates a new werewolf...'
-								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
-								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
+						# if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GREATER_WEREWOLF') and iEat == 0 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
+							# iEat = 1
+							# iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
+							# if iBirthChance < 35:
+								# bPlayer = gc.getPlayer(pUnit.getOwner())
+								# newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+								# newUnit.finishMoves()
+								# newUnit.setHasCasted(True)
+								# pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+								# sMsg = 'A ' + str( pUnit.getName() ) + ' creates a new werewolf...'
+								# CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
+								# CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
 
-						if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_WEREWOLF') and iEat == 0 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
-							iEat = 1
-							iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
-							if iBirthChance < 25:
-								bPlayer = gc.getPlayer(pUnit.getOwner())
-								newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-								newUnit.finishMoves()
-								newUnit.setHasCasted(True)
-								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
-								sMsg = 'A ' + str( pUnit.getName() ) + ' creates a new werewolf...'
-								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
-								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
+						# if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_WEREWOLF') and iEat == 0 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
+							# iEat = 1
+							# iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
+							# if iBirthChance < 25:
+								# bPlayer = gc.getPlayer(pUnit.getOwner())
+								# newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+								# newUnit.finishMoves()
+								# newUnit.setHasCasted(True)
+								# pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+								# sMsg = 'A ' + str( pUnit.getName() ) + ' creates a new werewolf...'
+								# CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
+								# CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
 
-						if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF') and iEat == 0 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
-							iEat = 1
-							iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
-							if iBirthChance < 15:
-								bPlayer = gc.getPlayer(pUnit.getOwner())
-								newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-								newUnit.finishMoves()
-								newUnit.setHasCasted(True)
-								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
-								sMsg = 'A ' + str( pUnit.getName() ) + ' creates a new werewolf...'
-								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
-								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
+						# if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF') and iEat == 0 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
+							# iEat = 1
+							# iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
+							# if iBirthChance < 15:
+								# bPlayer = gc.getPlayer(pUnit.getOwner())
+								# newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_RAVENOUS_WEREWOLF'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+								# newUnit.finishMoves()
+								# newUnit.setHasCasted(True)
+								# pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+								# sMsg = 'A ' + str( pUnit.getName() ) + ' creates a new werewolf...'
+								# CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
+								# CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
 
 						if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT') and iEat == 0 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
 							iEat = 1

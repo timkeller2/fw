@@ -4584,7 +4584,7 @@
         <SpellInfo>
             <Type>SPELL_BECOME_CHIEF</Type>
             <Description>Appoint a Chief</Description>
-            <Civilopedia>For every 10 units of a type, one can become chief gaining 1 strength and the ability to command similiar units!  A unit must be at least level 5 to become a chief.  This promotion will vanish when the unit is upgraded.  A chief may grant command morale to a number of units of his same type equal to his level.</Civilopedia>
+            <Civilopedia>For every 8 units of a type, one can become chief gaining 1 strength and the ability to command similar units!  A unit must be at least level 5 to become a chief.  This promotion will vanish when the unit is upgraded.  A chief may grant command morale to a number of units of his same type equal to his level.</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>Have the elder council appoint this unit a chief unit with +1str and the ability to grant morale to a number of like troops equal to his level.</Help>
             <PromotionPrereq1>NONE</PromotionPrereq1>
