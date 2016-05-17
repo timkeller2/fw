@@ -432,6 +432,54 @@ class CvGameUtils:
 				if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_THE_VEIL')) / 3 <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_PRIEST_OF_THE_VEIL')):
 					return True
 					
+		if eUnit == gc.getInfoTypeForString('UNIT_HIGH_PRIEST_OF_KILMORPH'):
+			if pPlayer.getStateReligion() == gc.getInfoTypeForString('RELIGION_RUNES_OF_KILMORPH'):
+				if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_KILMORPH')) <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_HIGH_PRIEST_OF_KILMORPH')):
+					return True
+			else:
+				if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_KILMORPH')) / 7 <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_HIGH_PRIEST_OF_KILMORPH')):
+					return True
+				
+		if eUnit == gc.getInfoTypeForString('UNIT_HIGH_PRIEST_OF_THE_ORDER'):
+			if pPlayer.getStateReligion() == gc.getInfoTypeForString('RELIGION_THE_ORDER'):
+				if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_THE_ORDER')) <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_HIGH_PRIEST_OF_THE_ORDER')):
+					return True
+			else:
+				if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_THE_ORDER')) / 7 <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_HIGH_PRIEST_OF_THE_ORDER')):
+					return True
+		
+		if eUnit == gc.getInfoTypeForString('UNIT_HIGH_PRIEST_OF_LEAVES'):
+			if pPlayer.getStateReligion() == gc.getInfoTypeForString('RELIGION_FELLOWSHIP_OF_LEAVES'):
+				if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_LEAVES')) <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_HIGH_PRIEST_OF_LEAVES')):
+					return True
+			else:
+				if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_LEAVES')) / 7 <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_HIGH_PRIEST_OF_LEAVES')):
+					return True
+				
+		if eUnit == gc.getInfoTypeForString('UNIT_HIGH_PRIEST_OF_THE_EMPYREAN'):
+			if pPlayer.getStateReligion() == gc.getInfoTypeForString('RELIGION_THE_EMPYREAN'):
+				if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_THE_EMPYREAN')) <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_HIGH_PRIEST_OF_THE_EMPYREAN')):
+					return True
+			else:
+				if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_THE_EMPYREAN')) / 7 <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_HIGH_PRIEST_OF_THE_EMPYREAN')):
+					return True
+				
+		if eUnit == gc.getInfoTypeForString('UNIT_HIGH_PRIEST_OF_THE_OVERLORDS'):
+			if pPlayer.getStateReligion() == gc.getInfoTypeForString('RELIGION_OCTOPUS_OVERLORDS'):
+				if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_THE_OVERLORDS')) <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_HIGH_PRIEST_OF_THE_OVERLORDS')):
+					return True
+			else:
+				if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_THE_OVERLORDS')) / 7 <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_HIGH_PRIEST_OF_THE_OVERLORDS')):
+					return True
+					
+		if eUnit == gc.getInfoTypeForString('UNIT_HIGH_PRIEST_OF_THE_VEIL'):
+			if pPlayer.getStateReligion() == gc.getInfoTypeForString('RELIGION_THE_ASHEN_VEIL'):
+				if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_THE_VEIL')) <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_HIGH_PRIEST_OF_THE_VEIL')):
+					return True
+			else:
+				if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_THE_VEIL')) / 7 <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_HIGH_PRIEST_OF_THE_VEIL')):
+					return True
+					
 		if eUnit == gc.getInfoTypeForString('UNIT_BEAST_OF_AGARES'):
 			if pCity.getPopulation() <= 5:
 				return True

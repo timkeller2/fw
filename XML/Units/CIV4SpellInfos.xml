@@ -4183,8 +4183,8 @@
         <SpellInfo>
             <Type>SPELL_TSUNAMI</Type>
             <Description>TXT_KEY_SPELL_TSUNAMI</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <Help>TXT_KEY_SPELL_TSUNAMI_HELP</Help>
+            <Civilopedia>Inflict ~2% damage per caster level range 1 on water and adjacent tiles, ~4% range 2 if the caster has channeling 3.</Civilopedia>
+            <Help>Inflict ~2% damage per caster level range 1 on water and adjacent tiles, ~4% range 2 if the caster has channeling 3.</Help>
             <PromotionPrereq1>PROMOTION_CHANNELING2</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_DIVINE</PromotionPrereq2>
             <ReligionPrereq>RELIGION_OCTOPUS_OVERLORDS</ReligionPrereq>

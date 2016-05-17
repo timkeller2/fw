@@ -17873,7 +17873,7 @@
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
             <iCombatDefense>10</iCombatDefense>
-            <iGoldFromCombat>3</iGoldFromCombat>
+            <iGoldFromCombat>10</iGoldFromCombat>
             <iTier>3</iTier>
             <Image>Art/Interface/Popups/The Black Wind.dds</Image>
         </UnitInfo>
@@ -37083,7 +37083,7 @@
             </ForceBuildings>
             <HolyCity>NONE</HolyCity>
             <ReligionType>RELIGION_RUNES_OF_KILMORPH</ReligionType>
-            <StateReligion>RELIGION_RUNES_OF_KILMORPH</StateReligion>
+            <StateReligion>NONE</StateReligion>
             <PrereqReligion>RELIGION_RUNES_OF_KILMORPH</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>NONE</PrereqBuilding>
@@ -37334,7 +37334,7 @@
             </ForceBuildings>
             <HolyCity>NONE</HolyCity>
             <ReligionType>RELIGION_FELLOWSHIP_OF_LEAVES</ReligionType>
-            <StateReligion>RELIGION_FELLOWSHIP_OF_LEAVES</StateReligion>
+            <StateReligion>NONE</StateReligion>
             <PrereqReligion>RELIGION_FELLOWSHIP_OF_LEAVES</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>NONE</PrereqBuilding>
@@ -37579,7 +37579,7 @@
             </ForceBuildings>
             <HolyCity>NONE</HolyCity>
             <ReligionType>RELIGION_THE_EMPYREAN</ReligionType>
-            <StateReligion>RELIGION_THE_EMPYREAN</StateReligion>
+            <StateReligion>NONE</StateReligion>
             <PrereqReligion>RELIGION_THE_EMPYREAN</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>NONE</PrereqBuilding>
@@ -37834,7 +37834,7 @@
             </ForceBuildings>
             <HolyCity>NONE</HolyCity>
             <ReligionType>RELIGION_THE_ORDER</ReligionType>
-            <StateReligion>RELIGION_THE_ORDER</StateReligion>
+            <StateReligion>NONE</StateReligion>
             <PrereqReligion>RELIGION_THE_ORDER</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>NONE</PrereqBuilding>
@@ -38085,7 +38085,7 @@
             </ForceBuildings>
             <HolyCity>NONE</HolyCity>
             <ReligionType>RELIGION_OCTOPUS_OVERLORDS</ReligionType>
-            <StateReligion>RELIGION_OCTOPUS_OVERLORDS</StateReligion>
+            <StateReligion>NONE</StateReligion>
             <PrereqReligion>RELIGION_OCTOPUS_OVERLORDS</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>NONE</PrereqBuilding>
@@ -38336,7 +38336,7 @@
             </ForceBuildings>
             <HolyCity>NONE</HolyCity>
             <ReligionType>RELIGION_THE_ASHEN_VEIL</ReligionType>
-            <StateReligion>RELIGION_THE_ASHEN_VEIL</StateReligion>
+            <StateReligion>NONE</StateReligion>
             <PrereqReligion>RELIGION_THE_ASHEN_VEIL</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>NONE</PrereqBuilding>
@@ -56981,6 +56981,7 @@
             <bFreeXP>1</bFreeXP>
             <bNeverObsolete>1</bNeverObsolete>
             <iCombatDefense>5</iCombatDefense>
+            <iMinLevel>3</iMinLevel>
             <iTier>3</iTier>
         </UnitInfo>
         <UnitInfo>
@@ -57232,6 +57233,7 @@
             <bFreeXP>1</bFreeXP>
             <bNeverObsolete>1</bNeverObsolete>
             <iCombatDefense>5</iCombatDefense>
+            <iMinLevel>3</iMinLevel>
             <iTier>3</iTier>
         </UnitInfo>
         <UnitInfo>
@@ -57483,6 +57485,7 @@
             <bFreeXP>1</bFreeXP>
             <bNeverObsolete>1</bNeverObsolete>
             <iCombatDefense>4</iCombatDefense>
+            <iMinLevel>3</iMinLevel>
             <iTier>3</iTier>
             <DamageTypeCombats>
                 <DamageTypeCombat>
@@ -57744,6 +57747,7 @@
             <bFreeXP>1</bFreeXP>
             <bNeverObsolete>1</bNeverObsolete>
             <iCombatDefense>4</iCombatDefense>
+            <iMinLevel>3</iMinLevel>
             <iTier>3</iTier>
             <DamageTypeCombats>
                 <DamageTypeCombat>
@@ -58005,6 +58009,7 @@
             <bFreeXP>1</bFreeXP>
             <bNeverObsolete>1</bNeverObsolete>
             <iCombatDefense>5</iCombatDefense>
+            <iMinLevel>3</iMinLevel>
             <iTier>3</iTier>
         </UnitInfo>
         <UnitInfo>
@@ -58260,6 +58265,7 @@
             <bFreeXP>1</bFreeXP>
             <bNeverObsolete>1</bNeverObsolete>
             <iCombatDefense>4</iCombatDefense>
+            <iMinLevel>3</iMinLevel>
             <iTier>3</iTier>
             <DamageTypeCombats>
                 <DamageTypeCombat>
@@ -58741,7 +58747,7 @@
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
             <iCombatDefense>8</iCombatDefense>
-            <iGoldFromCombat>3</iGoldFromCombat>
+            <iGoldFromCombat>10</iGoldFromCombat>
             <iTier>3</iTier>
             <BonusAffinities>
                 <BonusAffinity>
@@ -72801,7 +72807,7 @@
             <iCombatDefense>8</iCombatDefense>
             <iTier>3</iTier>
             <UnitConvertFromCombat>UNIT_GREATER_WEREWOLF</UnitConvertFromCombat>
-            <iUnitConvertFromCombatChance>5</iUnitConvertFromCombatChance>
+            <iUnitConvertFromCombatChance>10</iUnitConvertFromCombatChance>
             <UnitCreateFromCombat>UNIT_RAVENOUS_WEREWOLF</UnitCreateFromCombat>
             <iUnitCreateFromCombatChance>30</iUnitCreateFromCombatChance>
         </UnitInfo>

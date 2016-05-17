@@ -352,7 +352,7 @@ class CustomFunctions:
 					newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sEnemy), iPX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
 					self.equip(newUnit)
 					if sEnemy == 'UNIT_WYRMLING' or sEnemy == 'UNIT_YOUNG_DRAGON' or sEnemy == 'UNIT_DRAGON':
-						newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LOYALTY'),True)
+						# newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LOYALTY'),True)
 						newUnit.setDuration( 30 + CyGame().getSorenRandNum(70, "Dragon Duration") )
 					if bCreep:
 						newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'),True)
@@ -1036,7 +1036,7 @@ class CustomFunctions:
 			elif( ii < 3 ):
 				return 'UNIT_SUCCUBUS'
 			elif( ii < 5 ):
-				return 'UNIT_SECT_OF_FLIES'
+				return 'UNIT_STYGIAN_GUARD'
 			elif( ii == 5 ):
 				return 'UNIT_TAR_DEMON_MED'
 		elif(i<200):
