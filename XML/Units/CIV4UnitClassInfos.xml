@@ -84,7 +84,7 @@
 			<Description>TXT_KEY_UNIT_HIGH_PRIEST_OF_WINTER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HIGH_PRIEST_OF_WINTER</DefaultUnit>
 		</UnitClassInfo>
@@ -228,7 +228,7 @@
 			<Description>TXT_KEY_UNIT_IRA</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_IRA</DefaultUnit>
 		</UnitClassInfo>
@@ -372,7 +372,7 @@
 			<Description>TXT_KEY_UNIT_SHADE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SHADE</DefaultUnit>
 		</UnitClassInfo>
@@ -408,7 +408,7 @@
 			<Description>TXT_KEY_UNIT_SHADOWRIDER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SHADOWRIDER</DefaultUnit>
 		</UnitClassInfo>
@@ -570,7 +570,7 @@
 			<Description>TXT_KEY_UNIT_HIGH_PRIEST_OF_THE_EMPYREAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HIGH_PRIEST_OF_THE_EMPYREAN</DefaultUnit>
 		</UnitClassInfo>
@@ -651,7 +651,7 @@
 			<Description>TXT_KEY_UNIT_OPHANIM</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_OPHANIM</DefaultUnit>
 		</UnitClassInfo>
@@ -660,7 +660,7 @@
 			<Description>TXT_KEY_UNIT_ANGEL_OF_DEATH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ANGEL_OF_DEATH</DefaultUnit>
 		</UnitClassInfo>
@@ -669,7 +669,7 @@
 			<Description>TXT_KEY_UNIT_REPENTANT_ANGEL</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_REPENTANT_ANGEL</DefaultUnit>
 		</UnitClassInfo>
@@ -678,7 +678,7 @@
 			<Description>TXT_KEY_UNIT_SERAPH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SERAPH</DefaultUnit>
 		</UnitClassInfo>
@@ -687,7 +687,7 @@
 			<Description>TXT_KEY_UNIT_VALKYRIE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_VALKYRIE</DefaultUnit>
 		</UnitClassInfo>
@@ -696,7 +696,7 @@
 			<Description>TXT_KEY_UNIT_HERALD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HERALD</DefaultUnit>
 		</UnitClassInfo>
@@ -1299,7 +1299,7 @@
 			<Description>TXT_KEY_UNIT_SHADOW</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_SHADOW</DefaultUnit>
 		</UnitClassInfo>
@@ -1317,7 +1317,7 @@
 			<Description>TXT_KEY_UNIT_MARKSMAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_MARKSMAN</DefaultUnit>
 		</UnitClassInfo>
@@ -1326,7 +1326,7 @@
 			<Description>TXT_KEY_UNIT_DRUID</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_DRUID</DefaultUnit>
 		</UnitClassInfo>
@@ -1353,7 +1353,7 @@
 			<Description>TXT_KEY_UNIT_EIDOLON</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_EIDOLON</DefaultUnit>
 		</UnitClassInfo>
@@ -1434,7 +1434,7 @@
 			<Description>TXT_KEY_UNIT_ARCHMAGE</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ARCHMAGE</DefaultUnit>
 		</UnitClassInfo>
@@ -1452,7 +1452,7 @@
 			<Description>TXT_KEY_UNIT_PALADIN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PALADIN</DefaultUnit>
 		</UnitClassInfo>
@@ -1497,7 +1497,7 @@
 			<Description>TXT_KEY_UNIT_BERSERKER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BERSERKER</DefaultUnit>
 		</UnitClassInfo>
@@ -1524,7 +1524,7 @@
 			<Description>TXT_KEY_UNIT_BEASTMASTER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BEASTMASTER</DefaultUnit>
 		</UnitClassInfo>
@@ -1533,7 +1533,7 @@
 			<Description>TXT_KEY_UNIT_IMMORTAL</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_IMMORTAL</DefaultUnit>
 		</UnitClassInfo>
@@ -1542,7 +1542,7 @@
 			<Description>TXT_KEY_UNIT_HIGH_PRIEST_OF_KILMORPH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HIGH_PRIEST_OF_KILMORPH</DefaultUnit>
 		</UnitClassInfo>
@@ -1551,7 +1551,7 @@
 			<Description>TXT_KEY_UNIT_HIGH_PRIEST_OF_LEAVES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HIGH_PRIEST_OF_LEAVES</DefaultUnit>
 		</UnitClassInfo>
@@ -1560,7 +1560,7 @@
 			<Description>TXT_KEY_UNIT_HIGH_PRIEST_OF_THE_ORDER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HIGH_PRIEST_OF_THE_ORDER</DefaultUnit>
 		</UnitClassInfo>
@@ -1569,7 +1569,7 @@
 			<Description>TXT_KEY_UNIT_HIGH_PRIEST_OF_THE_OVERLORDS</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HIGH_PRIEST_OF_THE_OVERLORDS</DefaultUnit>
 		</UnitClassInfo>
@@ -1578,7 +1578,7 @@
 			<Description>TXT_KEY_UNIT_HIGH_PRIEST_OF_THE_VEIL</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_HIGH_PRIEST_OF_THE_VEIL</DefaultUnit>
 		</UnitClassInfo>
@@ -1713,7 +1713,7 @@
 			<Description>TXT_KEY_UNIT_PHALANX</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_PHALANX</DefaultUnit>
 		</UnitClassInfo>
@@ -1866,7 +1866,7 @@
 			<Description>TXT_KEY_UNIT_CROSSBOWMAN</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_CROSSBOWMAN</DefaultUnit>
 		</UnitClassInfo>
@@ -1893,7 +1893,7 @@
 			<Description>TXT_KEY_UNIT_KNIGHT</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_KNIGHT</DefaultUnit>
 		</UnitClassInfo>
@@ -2145,7 +2145,7 @@
 			<Description>TXT_KEY_UNIT_ROYAL_GUARD</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_ROYAL_GUARD</DefaultUnit>
 		</UnitClassInfo>
@@ -2154,7 +2154,7 @@
 			<Description>TXT_KEY_UNIT_BEAST_OF_AGARES</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_BEAST_OF_AGARES</DefaultUnit>
 		</UnitClassInfo>
@@ -2199,7 +2199,7 @@
 			<Description>TXT_KEY_UNIT_LICH</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_LICH</DefaultUnit>
 		</UnitClassInfo>
@@ -2343,7 +2343,7 @@
 			<Description>Dreadnaught</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
-			<iMaxPlayerInstances>4</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<iInstanceCostModifier>0</iInstanceCostModifier>
 			<DefaultUnit>UNIT_DREADNAUGHT</DefaultUnit>
 		</UnitClassInfo>

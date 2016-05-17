@@ -839,13 +839,38 @@ class CvEventManager:
 
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_MERCURIAN_GATE'):
 			iMercurianPlayer = cf.getOpenPlayer()
-			iTeam = pPlayer.getTeam()
+			# iTeam = pPlayer.getTeam()
 			pPlot2 = cf.findClearPlot(-1, pCity.plot())
 			if (iMercurianPlayer != -1 and pPlot2 != -1):
 				for i in range(pPlot.getNumUnits(), -1, -1):
 					pUnit = pPlot.getUnit(i)
 					pUnit.setXY(pPlot2.getX(), pPlot2.getY(), true, true, true)
-				CyGame().addPlayerAdvanced(iMercurianPlayer, iTeam, gc.getInfoTypeForString('LEADER_BASIUM'), gc.getInfoTypeForString('CIVILIZATION_MERCURIANS'))
+				# CyGame().addPlayerAdvanced(iMercurianPlayer, iTeam, gc.getInfoTypeForString('LEADER_BASIUM'), gc.getInfoTypeForString('CIVILIZATION_MERCURIANS'))
+				
+#				New Mercurian Rules: Basium becomes a vassal state
+				CyGame().addPlayerAdvanced(iMercurianPlayer, -1, gc.getInfoTypeForString('LEADER_BASIUM'), gc.getInfoTypeForString('CIVILIZATION_MERCURIANS'))
+				mPlayer = gc.getPlayer(iMercurianPlayer)
+				iFounderTeam = pPlayer.getTeam()
+				eFounderTeam = gc.getTeam(iFounderTeam)
+				iMercurianTeam = gc.getPlayer(iMercurianPlayer).getTeam()
+				eMercurianTeam = gc.getTeam(iMercurianTeam)
+				for iTech in range(gc.getNumTechInfos()):
+					if eFounderTeam.isHasTech(iTech):
+						eMercurianTeam.setHasTech(iTech, true, iMercurianPlayer, true, false)
+				# mPlayer.acquireCity(pCity,false,false)
+				eFounderTeam.signOpenBorders(iMercurianTeam)
+				eMercurianTeam.signOpenBorders(iFounderTeam)
+				eMercurianTeam.setVassal(iFounderTeam,true,true)
+				basium = gc.getPlayer(iMercurianPlayer).initUnit(gc.getInfoTypeForString('UNIT_BASIUM'), pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
+				basium.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SLEEPING'), true)
+				basium.setHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMORTAL'), true)
+
+				iPlayer2 = cf.getCivilization(gc.getInfoTypeForString('CIVILIZATION_INFERNAL'))
+				if iPlayer2 != -1:
+					pPlayer2 = gc.getPlayer(iPlayer2)
+					pPlayer2.AI_changeAttitudeExtra(player,-50)
+#				End New Rules
+				
 				gc.getPlayer(iMercurianPlayer).initUnit(gc.getInfoTypeForString('UNIT_BASIUM'), pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
 				gc.getPlayer(iMercurianPlayer).initUnit(gc.getInfoTypeForString('UNIT_SETTLER'), pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
 				gc.getPlayer(iMercurianPlayer).initUnit(gc.getInfoTypeForString('UNIT_ANGEL'), pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
@@ -857,6 +882,11 @@ class CvEventManager:
 				gc.getPlayer(iMercurianPlayer).initUnit(gc.getInfoTypeForString('UNIT_WORKER'), pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
 				gc.getPlayer(iMercurianPlayer).initUnit(gc.getInfoTypeForString('UNIT_WORKER'), pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
 
+				# Summoning Player will get some angels if Human
+				strSetData = cPickle.loads(CyGameInstance.getScriptData())
+				strSetData['Merc'] = pPlayer.getCivilizationType()
+				CyGameInstance.setScriptData(cPickle.dumps(strSetData))
+				
 				if pPlayer.isHuman():
 					popupInfo = CyPopupInfo()
 					popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON)
@@ -1638,7 +1668,13 @@ class CvEventManager:
 				cf.giftUnit(gc.getInfoTypeForString('UNIT_MANES'), gc.getInfoTypeForString('CIVILIZATION_INFERNAL'), 0, unit.plot(), unit.getOwner())
 
 			if (unit.getReligion() == gc.getInfoTypeForString('RELIGION_THE_EMPYREAN') or unit.getReligion() == gc.getInfoTypeForString('RELIGION_THE_ORDER') or unit.getReligion() == gc.getInfoTypeForString('RELIGION_RUNES_OF_KILMORPH') or (unit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') and pPlayer.getCivilizationType() == gc.getInfoTypeForString('CIVILIZATION_MERCURIANS'))):
-				cf.giftUnit(gc.getInfoTypeForString('UNIT_ANGEL'), gc.getInfoTypeForString('CIVILIZATION_MERCURIANS'), unit.getExperience(), unit.plot(), unit.getOwner())
+				# cf.giftUnit(gc.getInfoTypeForString('UNIT_ANGEL'), gc.getInfoTypeForString('CIVILIZATION_MERCURIANS'), unit.getExperience(), unit.plot(), unit.getOwner())
+				iRnd = CyGame().getSorenRandNum(100, "Angel")
+				if iRnd > 33 or sGameData['Merc'] == -1:
+					cf.giftUnit(gc.getInfoTypeForString('UNIT_ANGEL'), gc.getInfoTypeForString('CIVILIZATION_MERCURIANS'), unit.getExperience(), unit.plot(), unit.getOwner())
+				else:
+					# Basium Summoning Player will get some angels if Human
+					cf.giftUnit(gc.getInfoTypeForString('UNIT_ANGEL'), sGameData['Merc'], unit.getExperience(), unit.plot(), unit.getOwner())
 
 			if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT_GUIDE')):
 				if unit.getExperience() > 0:
