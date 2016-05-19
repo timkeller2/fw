@@ -1533,7 +1533,6 @@
             <Description>TXT_KEY_PROMOTION_COMMAND2</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_COMMAND1</PromotionPrereq>
-            <PromotionPrereqOr1>PROMOTION_CHANNELING2</PromotionPrereqOr1>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_DISCIPLE</UnitCombatType>
@@ -1549,7 +1548,7 @@
             <Description>TXT_KEY_PROMOTION_COMMAND3</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_COMMAND2</PromotionPrereq>
-            <PromotionPrereqOr1>PROMOTION_CHANNELING3</PromotionPrereqOr1>
+            <PromotionPrereqOr1>PROMOTION_CHANNELING2</PromotionPrereqOr1>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_DISCIPLE</UnitCombatType>

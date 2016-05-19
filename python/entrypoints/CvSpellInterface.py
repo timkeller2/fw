@@ -5040,11 +5040,6 @@ def spellGrantLife(caster):
 					return
 				return
 
-def reqBloom(caster):
-	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHARMED')):
-		return False
-	return True	
-
 def reqDragonWarrior(caster):
 	strCheckData = cPickle.loads(CyGameInstance.getScriptData())
 	if strCheckData['DragonWarrior'] >= caster.getLevel():
