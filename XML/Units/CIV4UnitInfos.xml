@@ -7633,7 +7633,7 @@
             <iCombat>8</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>2</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -17796,7 +17796,7 @@
             <iCombat>10</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>3</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -18691,7 +18691,7 @@
             <iCombat>8</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>2</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -18903,7 +18903,7 @@
             <iCombat>10</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>3</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -19132,7 +19132,7 @@
             <iCombat>6</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>2</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -31773,7 +31773,7 @@
             <iCombat>9</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>3</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -32718,7 +32718,7 @@
             <iCombat>6</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>3</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -32960,7 +32960,7 @@
             <iCombat>7</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>2</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -33185,7 +33185,7 @@
             <iCombat>5</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>1</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -33858,7 +33858,7 @@
             <iCombat>5</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>3</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>32</iXPValueAttack>
             <iXPValueDefense>16</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -34617,7 +34617,7 @@
             <iCombat>5</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>3</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>32</iXPValueAttack>
             <iXPValueDefense>16</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -36466,7 +36466,7 @@
             <iCombat>7</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>3</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>32</iXPValueAttack>
             <iXPValueDefense>16</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -49981,7 +49981,7 @@
             <iCombat>11</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>4</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -53899,7 +53899,7 @@
             <iCombat>6</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>3</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>32</iXPValueAttack>
             <iXPValueDefense>16</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -58678,7 +58678,7 @@
             <iCombat>8</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>2</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -58911,7 +58911,7 @@
             <iCombat>8</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>2</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -59850,7 +59850,7 @@
             <iCombat>3</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>1</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -60079,7 +60079,7 @@
             <iCombat>5</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>1</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -63256,7 +63256,7 @@
             <iCombat>8</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>2</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>32</iXPValueAttack>
             <iXPValueDefense>16</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -70512,7 +70512,7 @@
             <iCombat>7</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>2</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -78821,7 +78821,7 @@
             <iCombat>13</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>4</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
@@ -79338,7 +79338,7 @@
             <iCombat>2</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>1</iAirCombat>
-            <iAirCombatLimit>100</iAirCombatLimit>
+            <iAirCombatLimit>50</iAirCombatLimit>
             <iXPValueAttack>8</iXPValueAttack>
             <iXPValueDefense>4</iXPValueDefense>
             <iFirstStrikes>0</iFirstStrikes>
