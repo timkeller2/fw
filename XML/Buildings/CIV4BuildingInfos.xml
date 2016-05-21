@@ -41461,10 +41461,6 @@
                     <BonusType>BONUS_WHALE</BonusType>
                     <iHappinessChange>1</iHappinessChange>
                 </BonusHappinessChange>
-                <BonusHappinessChange>
-                    <BonusType>BONUS_PEARL</BonusType>
-                    <iHappinessChange>1</iHappinessChange>
-                </BonusHappinessChange>
             </BonusHappinessChanges>
             <BonusProductionModifiers>
             </BonusProductionModifiers>
@@ -41479,7 +41475,7 @@
             <PrereqBuildingClasses>
                 <PrereqBuildingClass>
                     <BuildingClassType>BUILDINGCLASS_TEMPLE_OF_THE_OVERLORDS</BuildingClassType>
-                    <iNumBuildingNeeded>3</iNumBuildingNeeded>
+                    <iNumBuildingNeeded>6</iNumBuildingNeeded>
                 </PrereqBuildingClass>
             </PrereqBuildingClasses>
             <BuildingClassNeededs>
@@ -42542,7 +42538,7 @@
             <iHealth>0</iHealth>
             <iAreaHealth>0</iAreaHealth>
             <iGlobalHealth>0</iGlobalHealth>
-            <iHappiness>2</iHappiness>
+            <iHappiness>0</iHappiness>
             <iAreaHappiness>0</iAreaHappiness>
             <iGlobalHappiness>0</iGlobalHappiness>
             <iStateReligionHappiness>0</iStateReligionHappiness>
@@ -42614,6 +42610,18 @@
             <BonusHealthChanges>
             </BonusHealthChanges>
             <BonusHappinessChanges>
+                <BonusHappinessChange>
+                    <BonusType>BONUS_DYE</BonusType>
+                    <iHappinessChange>1</iHappinessChange>
+                </BonusHappinessChange>
+                <BonusHappinessChange>
+                    <BonusType>BONUS_SILK</BonusType>
+                    <iHappinessChange>1</iHappinessChange>
+                </BonusHappinessChange>
+                <BonusHappinessChange>
+                    <BonusType>BONUS_GEMS</BonusType>
+                    <iHappinessChange>1</iHappinessChange>
+                </BonusHappinessChange>
             </BonusHappinessChanges>
             <BonusProductionModifiers>
             </BonusProductionModifiers>

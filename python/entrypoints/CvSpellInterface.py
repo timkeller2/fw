@@ -2710,6 +2710,12 @@ def spellSironasTouch(caster):
 	pPlayer.setFeatAccomplished(FeatTypes.FEAT_HEAL_UNIT_PER_TURN, false)
 	caster.changeDamage(-15,0)
 
+def reqSlaveTradeBuy(caster):
+	pPlayer = gc.getPlayer(caster.getOwner())
+	if cf.getObjectInt(caster.plot().getPlotCity(),'BuySlave') >= CyGame().getGameTurn():
+		return False
+	return pPlayer.isHuman()
+
 def spellSlaveTradeBuy(caster):
 	pCity = caster.plot().getPlotCity()
 	pPlayer = gc.getPlayer(caster.getOwner())
@@ -2725,6 +2731,8 @@ def spellSlaveTradeBuy(caster):
 		iPromotion = gc.getInfoTypeForString('PROMOTION_ORC')
 	if iPromotion != -1:
 		newUnit.setHasPromotion(iPromotion, True)
+	# One per turn	
+	cf.setObjectInt(caster.plot().getPlotCity(),'BuySlave',CyGame().getGameTurn())
 
 def spellSnowfall(caster):
 	iX = caster.getX()
