@@ -6578,6 +6578,7 @@
             <Description>TXT_KEY_PROMOTION_SENTRY</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_COMBAT3</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_PATH_FINDING2</PromotionPrereqOr1>
             <iVisibilityChange>1</iVisibilityChange>
             <UnitCombats>
                 <UnitCombat>
@@ -11276,6 +11277,14 @@
                     <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
             </UnitCombats>
             <HotKey></HotKey>
             <bAltDown>0</bAltDown>
@@ -12875,7 +12884,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_PATH_FINDING1</PromotionPrereq>
-            <PromotionPrereqOr1>PROMOTION_FLANKING1</PromotionPrereqOr1>
+            <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
             <TechPrereq>TECH_HUNTING</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
@@ -13032,7 +13041,7 @@
             <bHillsDoubleMove>0</bHillsDoubleMove>
             <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
             <iVisibilityChange>0</iVisibilityChange>
-            <iMovesChange>0</iMovesChange>
+            <iMovesChange>1</iMovesChange>
             <iMoveDiscountChange>0</iMoveDiscountChange>
             <iAirRangeChange>0</iAirRangeChange>
             <iInterceptChange>0</iInterceptChange>
