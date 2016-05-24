@@ -5251,7 +5251,7 @@
             <Type>PROMOTION_FIELD_MEDIC1</Type>
             <Description>Field Medic</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <PromotionPrereq>NONE</PromotionPrereq>
+            <PromotionPrereq>PROMOTION_DRILL1</PromotionPrereq>
             <iSameTileHealChange>3</iSameTileHealChange>
             <UnitCombats>
                 <UnitCombat>
@@ -5299,7 +5299,7 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>,Art/Interface/Buttons/Promotions/Medic1.dds,Art/Interface/Buttons/Promotions_Atlas.dds,3,4</Button>
-            <PromotionPrereqAnd>PROMOTION_DRILL1</PromotionPrereqAnd>
+            <PromotionPrereqAnd>PROMOTION_DRILL2</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_MEDIC2</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
