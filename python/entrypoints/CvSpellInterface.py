@@ -347,6 +347,9 @@ def postCombatWolfRider(pCaster, pOpponent):
 		newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_WOLF_RIDER'), pCaster.getX(), pCaster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 		newUnit.convert(pCaster)
 
+def retCombat(unit):
+	return cf.retCombat(unit)
+
 def reqAddToFleshGolem(caster):
 	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMORTAL')):
 		return false
@@ -3882,9 +3885,6 @@ def spellCommandMorale(caster):
 						iNumBlessed = iNumBlessed - 1
 						if (iNumBlessed < 1):
 							return
-
-def retCombat(unit):
-	return cf.retCombat(unit)
 
 def reqDonateItem(caster):
 	if caster.baseCombatStr() < 1 and caster.maxMoves() < 1 and caster.hillsAttackModifier() > 0:
