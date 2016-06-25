@@ -763,19 +763,23 @@ class CustomFunctions:
 
 		iGameTurn = CyGame().getGameTurn()
 		iHaveScrolls = 0
+		iBigCache = 0
 		# Initiate Hidden Caches
 		if iUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE') and not iUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FEAR')):
-			iSkl = CyGame().getSorenRandNum(12, "Cache") - 2
+			if iGameTurn < 4:
+				iBigCache = iGameTurn 
+		
+			iSkl = CyGame().getSorenRandNum(12, "Cache") - 2 + iBigCache * 2
 			if iSkl < 1:
 				iSkl = 1
 			iUnit.setLevel( iSkl )
 
-			iStr = CyGame().getSorenRandNum(10, "CacheStr") + iGameTurn / 50 - 2
+			iStr = CyGame().getSorenRandNum(10, "CacheStr") + iGameTurn / 50 - 2 + iBigCache * 2
 			if iStr < 1:
 				iStr = 1
 			iUnit.setBaseCombatStr(iStr)
 
-			iDef = CyGame().getSorenRandNum(12, "CacheDef") + iGameTurn / 50
+			iDef = CyGame().getSorenRandNum(12, "CacheDef") + iGameTurn / 50 + iBigCache * 10
 			if iDef < 1:
 				iDef = 1
 			iUnit.setBaseCombatStrDefense(iDef)
@@ -2081,7 +2085,7 @@ class CustomFunctions:
 			self.addUnit(gc.getInfoTypeForString(self.sAnimalUnit()))
 		if CyGame().getSorenRandNum(4+iAdj, "BarbarianStuff") == 1:
 			self.addBarbUnit(gc.getInfoTypeForString(self.sBarbUnit()))
-		if CyGame().getSorenRandNum(10+iAdj, "HiddenCache") == 1 or iGameTurn < 6:
+		if CyGame().getSorenRandNum(10+iAdj, "HiddenCache") == 1 or iGameTurn < 9:
 			self.addBarbUnitA(gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'))
 		if self.bTechExist('TECH_NECROMANCY') and CyGame().getSorenRandNum(4+iAdj, "UndeadStuff") == 1:
 			self.addBarbUnit(gc.getInfoTypeForString(self.sUndeadUnit()))
