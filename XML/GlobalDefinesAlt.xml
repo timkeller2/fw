@@ -469,4 +469,8 @@
 		<DefineName>EVENT_PROBABILITY_ROLL_SIDES</DefineName>
 		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
+	<Define>
+		<DefineName>CIRCUMNAVIGATE_FREE_MOVES</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
 </Civ4Defines>
