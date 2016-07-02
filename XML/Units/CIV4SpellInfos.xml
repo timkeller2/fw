@@ -11320,7 +11320,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_SCROLL_MS</Type>
-            <Description>Use Scroll of Maelstrom</Description>
+            <Description>Use Scroll of Lightning Burst</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>Create an explosion of lightning doing (level x 3) damage to all units within 3 tiles except the tile of the caster.</Help>

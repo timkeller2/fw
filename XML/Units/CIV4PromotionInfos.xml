@@ -17879,7 +17879,7 @@
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_SCROLL_MS</Type>
-            <Description>Scroll of Maelstrom</Description>
+            <Description>Scroll of Lightning Burst</Description>
             <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>

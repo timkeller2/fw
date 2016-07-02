@@ -2030,7 +2030,7 @@ def spellRagingSeas(caster):
 			for i in range(pPlot.getNumUnits()):
 				pUnit = pPlot.getUnit(i)
 				if pUnit.getCivilizationType() != iLanun:
-					pUnit.doDamageNoCaster(60, 100, iCold, false)
+					pUnit.doDamageNoCaster(50, 75, iCold, false)
 			if pPlot.getImprovementType() != -1:
 				if pPlot.getFeatureType() == iFlames:
 					pPlot.setFeatureType(-1, 0)
@@ -5377,4 +5377,7 @@ def spellRecruitGiant(caster):
 						if pUnit.isResisted(caster, gc.getInfoTypeForString('SPELL_RECRUIT_GIANT')) == False:
 							newUnit = pPlayer.initUnit(pUnit.getUnitType(), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 							newUnit.convert(pUnit)
+
+def postCombatDamage(pCaster, pOpponent, iDamage, iMax, sDamage):
+	pOpponent.doDamage(iDamage, iMax, pCaster, gc.getInfoTypeForString(sDamage), false)
 

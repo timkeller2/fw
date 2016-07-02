@@ -2673,7 +2673,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>EQUIPMENTCLASS_SCROLL_MS</Type>
-			<Description>Scroll of Maelstrom</Description>
+			<Description>Scroll of Lightning Burst</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>

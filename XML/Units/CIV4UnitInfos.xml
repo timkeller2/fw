@@ -75405,7 +75405,7 @@
             <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>25</iAdvancedStartCostIncrease>
             <iMinAreaSize>-1</iMinAreaSize>
-            <iMoves>1</iMoves>
+            <iMoves>3</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
             <iAirUnitCap>0</iAirUnitCap>
@@ -75542,10 +75542,7 @@
             <PrereqCivic>NONE</PrereqCivic>
             <PromotionFromCombat>NONE</PromotionFromCombat>
             <Image>NONE</Image>
-            <UnitConvertFromCombat>NONE</UnitConvertFromCombat>
-            <iUnitConvertFromCombatChance>0</iUnitConvertFromCombatChance>
-            <UnitCreateFromCombat>NONE</UnitCreateFromCombat>
-            <iUnitCreateFromCombatChance>0</iUnitCreateFromCombatChance>
+            <PythonPostCombatLost>postCombatDamage(pCaster,pOpponent,5,100,'DAMAGE_LIGHTNING')</PythonPostCombatLost>
             <DamageTypeCombats>
                 <DamageTypeCombat>
                     <DamageType>DAMAGE_LIGHTNING</DamageType>
@@ -87779,7 +87776,7 @@
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
-            <Description>Scroll of Maelstrom</Description>
+            <Description>Scroll of Lightning Burst</Description>
             <Civilopedia>TXT_KEY_UNIT_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy></Strategy>
             <Advisor>ADVISOR_MILITARY</Advisor>
