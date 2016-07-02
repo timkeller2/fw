@@ -2028,7 +2028,7 @@ def spellRagingSeas(caster):
 			for i in range(pPlot.getNumUnits()):
 				pUnit = pPlot.getUnit(i)
 				if pUnit.getCivilizationType() != iLanun:
-					pUnit.doDamageNoCaster(75, 100, iCold, false)
+					pUnit.doDamageNoCaster(60, 100, iCold, false)
 			if pPlot.getImprovementType() != -1:
 				if pPlot.getFeatureType() == iFlames:
 					pPlot.setFeatureType(-1, 0)
