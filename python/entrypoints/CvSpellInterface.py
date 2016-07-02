@@ -1218,8 +1218,10 @@ def reqFeast(caster):
 def spellFeast(caster):
 	pPlot = caster.plot()
 	pCity = pPlot.getPlotCity()
+	pPlayer = gc.getPlayer(caster.getOwner())
 	caster.changeExperience(pCity.getPopulation()/2, -1, false, false, false)
-	pCity.changePopulation(-1)
+	if pPlayer.getCivilizationType() != gc.getInfoTypeForString('CIVILIZATION_CALABIM'):
+		pCity.changePopulation(-1)
 	pCity.changeHurryAngerTimer(3)
 
 def reqFeed(caster):
