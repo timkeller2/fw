@@ -7469,14 +7469,14 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_FIELD_MEDIC</Type>
-            <Description>Field Medic</Description>
+            <Description>Tend Weakest</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>Heals the most damaged unit.  The amount healed is 3-6% plus 1-2% per caster level for targets below 6str.  It heals proportionally less for units of higher strength.</Help>
-            <PromotionPrereq1>PROMOTION_FIELD_MEDIC1</PromotionPrereq1>
+            <PromotionPrereq1>PROMOTION_CAST_HEALING_TOUCH</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
-            <UnitClassPrereq>UNITCLASS_WORKER</UnitClassPrereq>
+            <UnitClassPrereq>NONE</UnitClassPrereq>
             <UnitCombatPrereq>NONE</UnitCombatPrereq>
             <UnitInStackPrereq>NONE</UnitInStackPrereq>
             <CivilizationPrereq>NONE</CivilizationPrereq>
