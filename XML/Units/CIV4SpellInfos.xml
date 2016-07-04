@@ -7395,10 +7395,10 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_HEALING_TOUCH</Type>
-            <Description>Healing Touch</Description>
+            <Description>Heal Strongest</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>Heals a unit.  The amount healed is 3-6% plus 1-2% per caster level for targets below 6str.  The number of units healed increases by one at level six and every three levels after that.</Help>
+            <Help>Heal the strongest unit 3-6% plus 1-2% per caster level.  Targets above 5 str are healed proportionally less. The number of units healed increases by one at level six and every three levels after that.</Help>
             <PromotionPrereq1>PROMOTION_CAST_HEALING_TOUCH</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -7469,10 +7469,10 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_FIELD_MEDIC</Type>
-            <Description>Tend Weakest</Description>
+            <Description>Heal Weakest</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>Heals the most damaged unit.  The amount healed is 3-6% plus 1-2% per caster level for targets below 6str.  It heals proportionally less for units of higher strength.</Help>
+            <Help>Heals the most damaged unit 3-6% plus 1-2% per caster level.  It heals proportionally less for units of strength 6 and higher.</Help>
             <PromotionPrereq1>PROMOTION_CAST_HEALING_TOUCH</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>

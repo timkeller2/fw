@@ -379,6 +379,8 @@ class CustomFunctions:
 	def iCrowdingDamage(self, pUnit):
 		roomFor = 10
 		pPlot = pUnit.plot()
+		if pPlot.isCity():
+			roomFor = roomFor + pPlot.getPlotCity().getPopulation()
 		if pPlot.getNumUnits() <= roomFor:
 			return 0
 			
@@ -2574,10 +2576,10 @@ class CustomFunctions:
 					self.spellExamineCache(pUnit,1)
 					pUnit.setHasCasted(True)
 					
-				## Units with field medic auto-use it if they can.
-				# if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FIELD_MEDIC1')) and not pUnit.isHasCasted() and self.reqHeal(pUnit):
-					# self.spellFieldMedic(pUnit)
-					# pUnit.setHasCasted(True)
+				## Units with healing touch auto-use it if they can.
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CAST_HEALING_TOUCH')) and not pUnit.isHasCasted() and self.reqHeal(pUnit):
+					self.spellFieldMedic(pUnit)
+					pUnit.setHasCasted(True)
 
 				## Fortified Priests Auto-Buff if they can
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIVINE')) and pUnit.getFortifyTurns() > 1 and not pUnit.isHasCasted():

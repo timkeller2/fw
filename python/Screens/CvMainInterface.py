@@ -3109,6 +3109,7 @@ class CvMainInterface:
 							elif iHealth < 0:
 								szRightBuffer = szRightBuffer + u"%c" %(CyGame().getSymbolID(FontSymbols.UNHEALTHY_CHAR)) + str(math.fabs(iHealth)) 
 						else:
+							#mtk
 							if cf.iNoble(pHeadSelectedUnit) > 0:
 								szRightBuffer = szRightBuffer + u"%c" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)) + str(cf.iNoble(pHeadSelectedUnit)) 
 								
