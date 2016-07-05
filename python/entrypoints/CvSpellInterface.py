@@ -4436,11 +4436,11 @@ def spellJudge(caster):
 
 	sInfo = cPickle.loads(pCity.getScriptData())
 	
-	iDiv = ( cf.iNoble(caster) + 1 + sInfo['JUDGE'] )
+	iDiv = ( cf.iNoble(caster,1) + 1 + sInfo['JUDGE'] )
 	if iDiv < 1:
 		iDiv = 1
-	iChance = ( ( cf.iNoble(caster) + 1 ) * 100 ) / iDiv
-	if CyGame().getSorenRandNum(cf.iNoble(caster)+1, "Judge") >= CyGame().getSorenRandNum(sInfo['JUDGE']+1, "Problem"):
+	iChance = ( ( cf.iNoble(caster,1) + 1 ) * 100 ) / iDiv
+	if CyGame().getSorenRandNum(cf.iNoble(caster,1)+1, "Judge") >= CyGame().getSorenRandNum(sInfo['JUDGE']+1, "Problem"):
 		## Success!
 		iGain = sInfo['JUDGE'] * 10 + 15
 		if caster.getOwner() == pCity.getOwner():
@@ -4500,7 +4500,7 @@ def spellDiplomacy(caster):
 	eTeam = gc.getTeam(iTeam)
 
 	# Determine Diplomacy Strength
-	iL = cf.iNoble(caster) 
+	iL = cf.iNoble(caster,1) 
 
 	# Calculate Enemy Support
 	iSupport = {}

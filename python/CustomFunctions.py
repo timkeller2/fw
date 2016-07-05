@@ -388,8 +388,8 @@ class CustomFunctions:
 		for ii in range(pPlot.getNumUnits()):
 			oUnit = pPlot.getUnit(ii)
 			# The strongest noble adds room for units
-			if self.iNoble(oUnit) > nobLevel:
-				nobLevel = self.iNoble(oUnit)
+			if self.iNoble(oUnit,1) > nobLevel:
+				nobLevel = self.iNoble(oUnit,1)
 			# Computer units add room for themselves		
 			if not gc.getPlayer(oUnit.getOwner()).isHuman() or oUnit.getDomainType() == gc.getInfoTypeForString('DOMAIN_IMMOBILE'):
 				roomFor += 1
@@ -1282,7 +1282,7 @@ class CustomFunctions:
 					if iTeam != pPlayer.getTeam() and eTeam.isAlive() and not eTeam.isHuman() and eTeam.isAVassal() == False:
 						eTeam.declareWar(pTeam, false, WarPlanTypes.WARPLAN_TOTAL)
 
-	def iNoble(self, unit):
+	def iNoble(self, unit, includeArmy):
 		iNob = 0
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NOBILITY')):
 			iNob += 1
@@ -1311,20 +1311,21 @@ class CustomFunctions:
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GRAND_MASTER')):
 			iNob += 1
 
-		iArmy = 0
-		pPlot = CyMap().plot(unit.getX(),unit.getY())
-		for i in range(pPlot.getNumUnits()):
-			pUnit = pPlot.getUnit(i)
-			if pUnit.getOwner() == unit.getOwner():
-				iArmy += pUnit.baseCombatStr()
+		if includeArmy > 0:
+			iArmy = 0
+			pPlot = CyMap().plot(unit.getX(),unit.getY())
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				if pUnit.getOwner() == unit.getOwner():
+					iArmy += pUnit.baseCombatStr()
 
-		iBonus = 0
-		iBonus = ( iArmy / 7 )		
-		iBonus += ( unit.baseCombatStr() / 2 )
-		if iBonus > iNob:
-			iBonus = iNob
-		
-		iNob += iBonus
+			iBonus = 0
+			iBonus = ( iArmy / 7 )		
+			iBonus += ( unit.baseCombatStr() / 2 )
+			if iBonus > iNob:
+				iBonus = iNob
+			
+			iNob += iBonus
 
 		return iNob
 
@@ -2115,8 +2116,8 @@ class CustomFunctions:
 							for ii in range(pPlot.getNumUnits()):
 								oUnit = pPlot.getUnit(ii)
 								# The strongest noble adds room for units
-								if self.iNoble(oUnit) > nobLevel:
-									nobLevel = self.iNoble(oUnit)
+								if self.iNoble(oUnit,1) > nobLevel:
+									nobLevel = self.iNoble(oUnit,1)
 								# Computer units add room for themselves		
 								if not gc.getPlayer(oUnit.getOwner()).isHuman() or oUnit.getDomainType() == gc.getInfoTypeForString('DOMAIN_IMMOBILE'):
 									roomFor += 1

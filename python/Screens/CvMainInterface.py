@@ -3110,8 +3110,8 @@ class CvMainInterface:
 								szRightBuffer = szRightBuffer + u"%c" %(CyGame().getSymbolID(FontSymbols.UNHEALTHY_CHAR)) + str(math.fabs(iHealth)) 
 						else:
 							#mtk
-							if cf.iNoble(pHeadSelectedUnit) > 0:
-								szRightBuffer = szRightBuffer + u"%c" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)) + str(cf.iNoble(pHeadSelectedUnit)) 
+							if cf.iNoble(pHeadSelectedUnit,0) > 0:
+								szRightBuffer = szRightBuffer + u"%c" %(CyGame().getSymbolID(FontSymbols.STAR_CHAR)) + str(cf.iNoble(pHeadSelectedUnit,0)) 
 								
 							if pHeadSelectedUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR1')) and cf.retSearch(pHeadSelectedUnit) > 0:
 								szRightBuffer = szRightBuffer + u"%c" %(gc.getCommerceInfo(CommerceTypes.COMMERCE_ESPIONAGE).getChar()) + str(cf.retSearch(pHeadSelectedUnit))
