@@ -496,14 +496,25 @@ class CustomFunctions:
 
 	def retSearch(self, unit):
 		i = 0
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR1')):
+			i += 1
+		if i == 0:
+			return 0
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR2')):
+			i += 2
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR3')):
+			i += 3
+			
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1')):
 			i += 1
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2')):
 			i += 1
+			
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY')):
 			i += 1
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY2')):
 			i += 1
+			
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL1')):
 			i += 1
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL2')):
@@ -512,12 +523,6 @@ class CustomFunctions:
 			i += 1
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL4')):
 			i += 1
-		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR1')):
-			i += 1
-		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR2')):
-			i += 2
-		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR3')):
-			i += 3
 
 		iExtendedSearch = unit.getFortifyTurns()
 		if iExtendedSearch > int( i / 2 ):
