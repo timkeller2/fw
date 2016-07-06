@@ -34,6 +34,21 @@ class CustomFunctions:
 
 		return i
 
+	def iDrill(self,unit):
+		i = 0
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL2')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL3')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL4')):
+			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL1')):
+			i += 1
+		else:
+			i = 0
+
+		return i
+
 	def retRange(self,unit1,unit2):
 		iRange = int( math.fabs(unit1.getX()-unit2.getX()) )
 		if iRange < int( math.fabs(unit1.getY()-unit2.getY()) ):
@@ -53,6 +68,87 @@ class CustomFunctions:
 			sDirection = sDirection + 'east'
 
 		return sDirection
+		
+	def iMorale(self,unit):	
+		morale = 0
+		iX = unit.getX()
+		iY = unit.getY()
+		pPlayer = gc.getPlayer(unit.getOwner())
+		iImprovement = unit.plot().getImprovementType()
+		iR = 1
+		pX = 0
+		pY = 0
+		iFear = 0
+		iNobility = 0
+		iDamage = unit.getDamage() / 25
+		iFort = 0
+		iEnemyStr = 0
+		iAlliedStr = 0
+		
+		if unit.plot().isCity():
+			iFort = unit.plot().getPlotCity().getDefenseModifier(False) / 10
+		if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_TOWER'):
+			iFort = 2
+		if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_FORT'):
+			iFort = 3
+		if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CASTLE'):
+			iFort = 5
+		if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CITADEL'):
+			iFort = 7
+		
+		for iiX in range(iX-iR, iX+iR+1, 1):
+			for iiY in range(iY-iR, iY+iR+1, 1):
+				pPlot = CyMap().plot(iiX,iiY)
+				for i in range(pPlot.getNumUnits()):
+					pUnit = pPlot.getUnit(i)
+					if gc.getTeam(pUnit.getTeam()).isAtWar(pPlayer.getTeam()) and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'):
+						if (iiX != pX or iiY != pY): 
+							morale -= 1
+							pX = iiX
+							pY = iiY
+							
+						# Fear	
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FEAR')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TIMOR_MASK')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRAGON')) and not unit.isImmuneToFear():
+							iFear = 3
+							
+						iEnemyStr += ( pUnit.baseCombatStr() * ( 100 - pUnit.getDamage() ) ) / 100
+							
+					if pUnit.getTeam() == pPlayer.getTeam():
+						if iiX != pX or iiY != pY:
+							morale += 1
+							pX = iiX
+							pY = iiY
+						
+						iAlliedStr += ( pUnit.baseCombatStr() * ( 100 - pUnit.getDamage() ) ) / 100
+						
+						# Leadership
+						thisNobility = self.iNoble(pUnit,0)
+						if thisNobility > iNobility:
+							iNobility = thisNobility
+		
+		if iEnemyStr > 0:
+			if iAlliedStr > iEnemyStr * 8:
+				morale += 3
+			elif iAlliedStr > iEnemyStr * 4:
+				morale += 2
+			elif iAlliedStr > iEnemyStr * 2:
+				morale += 1
+			elif iAlliedStr < iEnemyStr / 8:	
+				morale -= 3
+			elif iAlliedStr < iEnemyStr / 4:	
+				morale -= 2
+			elif iAlliedStr < iEnemyStr / 2:	
+				morale -= 1
+		
+		morale += iFort
+		morale -= iFear
+		morale += iNobility
+		morale += self.iDrill(unit)
+		if unit.isImmuneToFear():
+			morale += 1
+		morale -= iDamage	
+		
+		return morale
 
 	def reqInteractCache(self,caster,mode):
 		iX = caster.getX()
@@ -1501,6 +1597,8 @@ class CustomFunctions:
 						pPlot.setImprovementType(iVillage)
 
 	def doFear(self, pVictim, pPlot, pCaster, bResistable):
+		#mtk
+		return False
 		if pVictim.isImmuneToFear():
 			return False
 		if bResistable:
@@ -2500,6 +2598,31 @@ class CustomFunctions:
 				iUnitTeam = pPlayer.getTeam()
 				unitTeam = gc.getTeam(iUnitTeam)
 
+				# Unit Morale
+				if pPlayer.isHuman():
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_1'), False)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_2'), False)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_3'), False)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_4'), False)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_5'), False)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_6'), False)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_7'), False)
+					iMorale = self.iMorale(pUnit)
+					if iMorale > 4:
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_1'), True)
+					elif iMorale > 2:	
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_2'), True)
+					elif iMorale == -1:	
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_3'), True)
+					elif iMorale == -2:	
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_4'), True)
+					elif iMorale == -3:	
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_5'), True)
+					elif iMorale == -4:	
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_6'), True)
+					elif iMorale < -4:	
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_7'), True)
+				
 				# Units with aptitude!
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NO_RANGE')):
 					self.unitAptitude(pUnit)

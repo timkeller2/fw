@@ -5141,6 +5141,10 @@
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
                 <FreePromotion>
+                    <PromotionType>PROMOTION_FEAR</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
                     <PromotionType>PROMOTION_SENTRY</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
@@ -5360,6 +5364,10 @@
                 </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_DRAGON</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_FEAR</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
                 <FreePromotion>
@@ -27014,6 +27022,10 @@
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
                 <FreePromotion>
+                    <PromotionType>PROMOTION_FEAR</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
                     <PromotionType>PROMOTION_SENTRY</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
@@ -30038,6 +30050,10 @@
                 </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_DRAGON</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_FEAR</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
                 <FreePromotion>
@@ -76809,6 +76825,10 @@
                 </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_DRAGON</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_FEAR</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
                 <FreePromotion>

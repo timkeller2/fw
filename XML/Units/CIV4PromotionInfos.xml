@@ -1657,8 +1657,8 @@
             <bImmuneToFear>1</bImmuneToFear>
             <iAIWeight>50</iAIWeight>
             <iMinLevel>-1</iMinLevel>
-            <PromotionCombatType>PROMOTION_UNDEAD</PromotionCombatType>
-            <iPromotionCombatMod>10</iPromotionCombatMod>
+            <PromotionCombatType>PROMOTION_FEAR</PromotionCombatType>
+            <iPromotionCombatMod>50</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_COVER</Type>
@@ -2211,7 +2211,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <Button>Art/Interface/Buttons/Promotions/Dragon.dds</Button>
-            <bFear>1</bFear>
+            <bFear>0</bFear>
             <bImmuneToFear>1</bImmuneToFear>
             <bRace>1</bRace>
         </PromotionInfo>
@@ -3165,9 +3165,14 @@
             <PromotionPrereq>PROMOTION_COMBAT5</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_DEMON</PromotionPrereqOr1>
             <PromotionPrereqOr2>PROMOTION_UNDEAD</PromotionPrereqOr2>
+            <iCombatPercent>50</iCombatPercent>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
                 <UnitCombat>
@@ -3196,9 +3201,11 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Fear.dds</Button>
-            <bFear>1</bFear>
+            <bFear>0</bFear>
             <iAIWeight>100</iAIWeight>
+            <iCombatPercentDefense>50</iCombatPercentDefense>
             <PromotionPrereqOr3>PROMOTION_NIGHTMARE</PromotionPrereqOr3>
+            <PromotionPrereqOr4>PROMOTION_DIRE</PromotionPrereqOr4>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_FIRE_RESISTANCE</Type>
@@ -7732,7 +7739,7 @@
             <TechPrereq>TECH_NEVER</TechPrereq>
             <Button>Art/Interface/Buttons/Equipment/TimorMask.dds</Button>
             <bEquipment>1</bEquipment>
-            <bFear>1</bFear>
+            <bFear>0</bFear>
             <bImmuneToFear>1</bImmuneToFear>
         </PromotionInfo>
         <PromotionInfo>
@@ -20316,6 +20323,83 @@
             </BonusAffinities>
             <DamageTypeResists>
             </DamageTypeResists>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_MORALE_1</Type>
+            <Description>Eager</Description>
+            <Help>Highest combat morale!</Help>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <TechPrereq>TECH_NEVER</TechPrereq>
+            <iCombatPercent>0</iCombatPercent>
+            <Button>Art/Interface/Buttons/Promotions/Valor.dds</Button>
+            <iAIWeight>-100</iAIWeight>
+            <iCombatPercentDefense>0</iCombatPercentDefense>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_MORALE_2</Type>
+            <Description>Confident</Description>
+            <Help>High combat morale!</Help>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <TechPrereq>TECH_NEVER</TechPrereq>
+            <iCombatPercent>0</iCombatPercent>
+            <Button>Art/Interface/Buttons/Promotions/Valor.dds</Button>
+            <iAIWeight>100</iAIWeight>
+            <iCombatPercentDefense>0</iCombatPercentDefense>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_MORALE_3</Type>
+            <Description>Anxious</Description>
+            <Help></Help>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <TechPrereq>TECH_NEVER</TechPrereq>
+            <iCombatPercent>-10</iCombatPercent>
+            <Button>Art/Interface/Buttons/Promotions/Weak.dds</Button>
+            <iAIWeight>-100</iAIWeight>
+            <iCombatPercentDefense>-10</iCombatPercentDefense>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_MORALE_4</Type>
+            <Description>Worried</Description>
+            <Help></Help>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <TechPrereq>TECH_NEVER</TechPrereq>
+            <iCombatPercent>-20</iCombatPercent>
+            <Button>Art/Interface/Buttons/Promotions/Weak.dds</Button>
+            <iAIWeight>100</iAIWeight>
+            <iCombatPercentDefense>-20</iCombatPercentDefense>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_MORALE_5</Type>
+            <Description>Unsteady</Description>
+            <Help></Help>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <TechPrereq>TECH_NEVER</TechPrereq>
+            <iCombatPercent>-30</iCombatPercent>
+            <Button>Art/Interface/Buttons/Promotions/Weak.dds</Button>
+            <iAIWeight>100</iAIWeight>
+            <iCombatPercentDefense>-30</iCombatPercentDefense>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_MORALE_6</Type>
+            <Description>Shaken</Description>
+            <Help></Help>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <TechPrereq>TECH_NEVER</TechPrereq>
+            <iCombatPercent>-40</iCombatPercent>
+            <Button>Art/Interface/Buttons/Promotions/Weak.dds</Button>
+            <iAIWeight>100</iAIWeight>
+            <iCombatPercentDefense>-40</iCombatPercentDefense>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_MORALE_7</Type>
+            <Description>Routing</Description>
+            <Help></Help>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <TechPrereq>TECH_NEVER</TechPrereq>
+            <iCombatPercent>-50</iCombatPercent>
+            <Button>Art/Interface/Buttons/Promotions/Weak.dds</Button>
+            <iAIWeight>-100</iAIWeight>
+            <iCombatPercentDefense>-50</iCombatPercentDefense>
         </PromotionInfo>
     </PromotionInfos>
 </Civ4PromotionInfos>
