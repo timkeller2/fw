@@ -3225,6 +3225,8 @@ def spellTsunami(caster):
 	iR = 1
 	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3')):
 		iR = 2
+	iL = caster.getLevel() * iR * 2
+	iNum = 0
 	iX = caster.getX()
 	iY = caster.getY()
 	for iiX in range(iX-iR, iX+iR+1, 1):
@@ -3236,7 +3238,11 @@ def spellTsunami(caster):
 						pUnit = pPlot.getUnit(i)
 						iDam = iR * ( caster.getLevel() + retCombat(caster) * 2 )
 						iMax = iR * 35
-						pUnit.doDamage(iDam, iMax, caster, gc.getInfoTypeForString('DAMAGE_COLD'), true)
+						if pUnit.getDamage() < iMax:
+							pUnit.doDamage(iDam, iMax, caster, gc.getInfoTypeForString('DAMAGE_COLD'), true)
+							iNum += 1
+							if iNum > iL:
+								return
 					if pPlot.getImprovementType() != -1 and iR > 1:
 						if gc.getImprovementInfo(pPlot.getImprovementType()).isPermanent() == False:
 							if CyGame().getSorenRandNum(100, "Tsunami") <= 25:
@@ -3246,6 +3252,8 @@ def spellTsunami(caster):
 def spellMaelstrom(caster,iR):
 	if iR < 2 and caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3')):
 		iR = 2
+	iL = caster.getLevel() * iR * 2
+	iNum = 0
 	iX = caster.getX()
 	iY = caster.getY()
 	for iiX in range(iX-iR, iX+iR+1, 1):
@@ -3256,7 +3264,11 @@ def spellMaelstrom(caster,iR):
 					pUnit = pPlot.getUnit(i)
 					iDam = iR * ( caster.getLevel() )
 					iMax = iR * 20
-					pUnit.doDamage(iDam, iMax, caster, gc.getInfoTypeForString('DAMAGE_LIGHTNING'), true)
+					if pUnit.getDamage() < iMax:
+						pUnit.doDamage(iDam, iMax, caster, gc.getInfoTypeForString('DAMAGE_LIGHTNING'), true)
+						iNum += 1
+						if iNum > iL:
+							return
 
 def spellUnyieldingOrder(caster):
 	pPlot = caster.plot()
@@ -5165,6 +5177,28 @@ def spellHaste(caster):
 		if pUnit.isAlive():
 			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HASTED')):
 				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HASTED'),True)
+				iNumBlessed = iNumBlessed + 1
+				if (iNumBlessed >= iL):
+					return
+
+def reqAddProm(caster,sProm):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if pUnit.isPromotionValid(gc.getInfoTypeForString(sProm)):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString(sProm)):
+				return True
+	return False
+
+def spellAddProm(caster,sProm,iPer):
+	iNumBlessed = 0
+	iL = ( caster.getLevel() * iPer ) / 100
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if pUnit.isPromotionValid(gc.getInfoTypeForString(sProm)):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString(sProm)):
+				pUnit.setHasPromotion(gc.getInfoTypeForString(sProm),True)
 				iNumBlessed = iNumBlessed + 1
 				if (iNumBlessed >= iL):
 					return

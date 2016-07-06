@@ -1027,7 +1027,7 @@
             <Help>TXT_KEY_PROMOTION_CHARMED_PEDIA</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
-            <iCombatPercent>-40</iCombatPercent>
+            <iCombatPercent>-30</iCombatPercent>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
@@ -1773,7 +1773,7 @@
             <Description>TXT_KEY_PROMOTION_DANCE_OF_BLADES</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
-            <iFirstStrikesChange>1</iFirstStrikesChange>
+            <iFirstStrikesChange>2</iFirstStrikesChange>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
@@ -8308,6 +8308,12 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Nomad.dds</Button>
+            <DamageTypeResists>
+                <DamageTypeResist>
+                    <DamageType>DAMAGE_FIRE</DamageType>
+                    <iResist>25</iResist>
+                </DamageTypeResist>
+            </DamageTypeResists>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_WOODSMAN1</Type>

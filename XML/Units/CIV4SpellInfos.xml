@@ -263,7 +263,7 @@
             <bHasCasted>1</bHasCasted>
             <bResistable>1</bResistable>
             <iRange>1</iRange>
-            <iResistModify>25</iResistModify>
+            <iResistModify>40</iResistModify>
             <AddPromotionType1>PROMOTION_BLINDED</AddPromotionType1>
             <bImmuneTeam>1</bImmuneTeam>
             <bImmuneNeutral>1</bImmuneNeutral>
@@ -424,7 +424,7 @@
             <bHasCasted>1</bHasCasted>
             <bResistable>1</bResistable>
             <iRange>1</iRange>
-            <iResistModify>20</iResistModify>
+            <iResistModify>40</iResistModify>
             <AddPromotionType1>PROMOTION_CHARMED</AddPromotionType1>
             <bImmuneTeam>1</bImmuneTeam>
             <bImmuneNeutral>1</bImmuneNeutral>
@@ -811,7 +811,9 @@
             <iAIWeightWar>50</iAIWeightWar>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <AddPromotionType1>PROMOTION_DANCE_OF_BLADES</AddPromotionType1>
+            <AddPromotionType1></AddPromotionType1>
+            <PyResult>spellAddProm(pCaster,'PROMOTION_DANCE_OF_BLADES')</PyResult>
+            <PyRequirement>reqAddProm(pCaster,'PROMOTION_DANCE_OF_BLADES')</PyRequirement>
             <Effect>EFFECT_WIND_SWIRL</Effect>
             <Sound>AS3D_SPELL_HASTE</Sound>
             <Button>Art/Interface/Buttons/Promotions/Danceofblades.dds</Button>
@@ -1054,6 +1056,7 @@
             <bHasCasted>1</bHasCasted>
             <bResistable>1</bResistable>
             <iRange>1</iRange>
+            <iResistModify>40</iResistModify>
             <bImmuneTeam>1</bImmuneTeam>
             <bImmuneNeutral>1</bImmuneNeutral>
             <bImmuneFlying>1</bImmuneFlying>
@@ -1921,7 +1924,7 @@
         <SpellInfo>
             <Type>SPELL_MAELSTROM</Type>
             <Description>TXT_KEY_SPELL_MAELSTROM</Description>
-            <Civilopedia>Does ( level x 1 ) damage to all units within range 1 except the caster's tile, unless the caster has channeling3 in which case the damage is ( level x 2 ) and range 2.</Civilopedia>
+            <Civilopedia>Does 1%/lev damage to all units within range 1 except the caster's tile, unless the caster has channeling3 in which case the damage is 2%/lev and range 2.</Civilopedia>
             <PromotionPrereq1>PROMOTION_AIR2</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
@@ -2559,7 +2562,7 @@
             <bHasCasted>1</bHasCasted>
             <bResistable>1</bResistable>
             <iRange>1</iRange>
-            <iResistModify>20</iResistModify>
+            <iResistModify>50</iResistModify>
             <AddPromotionType1>PROMOTION_RUSTED</AddPromotionType1>
             <RemovePromotionType1>PROMOTION_BRONZE_WEAPONS</RemovePromotionType1>
             <RemovePromotionType2>PROMOTION_IRON_WEAPONS</RemovePromotionType2>
@@ -2769,6 +2772,7 @@
             <bHasCasted>1</bHasCasted>
             <bResistable>1</bResistable>
             <iRange>1</iRange>
+            <iResistModify>50</iResistModify>
             <AddPromotionType1>PROMOTION_SLOW</AddPromotionType1>
             <RemovePromotionType1>PROMOTION_HASTED</RemovePromotionType1>
             <bImmuneTeam>1</bImmuneTeam>
@@ -4184,8 +4188,8 @@
         <SpellInfo>
             <Type>SPELL_TSUNAMI</Type>
             <Description>TXT_KEY_SPELL_TSUNAMI</Description>
-            <Civilopedia>Inflict ~2% damage per caster level range 1 on water and adjacent tiles, ~4% range 2 if the caster has channeling 3.</Civilopedia>
-            <Help>Inflict ~2% damage per caster level range 1 on water and adjacent tiles, ~4% range 2 if the caster has channeling 3.</Help>
+            <Civilopedia>Inflict ~2%/lev range 1 on water and adjacent tiles, ~4%/lev range 2 if the caster has channeling 3.</Civilopedia>
+            <Help>Inflict ~2%/lev range 1 on water and adjacent tiles, ~4%/lev range 2 if the caster has channeling 3.</Help>
             <PromotionPrereq1>PROMOTION_CHANNELING2</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_DIVINE</PromotionPrereq2>
             <ReligionPrereq>RELIGION_OCTOPUS_OVERLORDS</ReligionPrereq>
@@ -8650,80 +8654,6 @@
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
             <Button>Art/Interface/Buttons/Units/Skeleton.dds</Button>
-        </SpellInfo>
-        <SpellInfo>
-            <Type>SPELL_PLAGUE</Type>
-            <Description>Spread Plague</Description>
-            <Civilopedia>Mary Morbus can spread the plague to her enemies.</Civilopedia>
-            <Strategy>NONE</Strategy>
-            <Help>Spread the plague!  Plagued units are weakened and suffer damage every turn.</Help>
-            <PromotionPrereq1>NONE</PromotionPrereq1>
-            <PromotionPrereq2>NONE</PromotionPrereq2>
-            <UnitPrereq>UNIT_MARY</UnitPrereq>
-            <UnitClassPrereq>NONE</UnitClassPrereq>
-            <UnitCombatPrereq>NONE</UnitCombatPrereq>
-            <UnitInStackPrereq>NONE</UnitInStackPrereq>
-            <CivilizationPrereq>NONE</CivilizationPrereq>
-            <ReligionPrereq>NONE</ReligionPrereq>
-            <StateReligionPrereq>NONE</StateReligionPrereq>
-            <TechPrereq>NONE</TechPrereq>
-            <bAllowAI>1</bAllowAI>
-            <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
-            <bCausesWar>1</bCausesWar>
-            <bGlobal>0</bGlobal>
-            <bInBordersOnly>0</bInBordersOnly>
-            <bInCityOnly>0</bInCityOnly>
-            <iAIWeight>0</iAIWeight>
-            <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
-            <bHasCasted>1</bHasCasted>
-            <bIgnoreHasCasted>0</bIgnoreHasCasted>
-            <bResistable>1</bResistable>
-            <iRange>1</iRange>
-            <iResistModify>20</iResistModify>
-            <iDamage>0</iDamage>
-            <iDamageLimit>0</iDamageLimit>
-            <DamageType>NONE</DamageType>
-            <AddPromotionType1>PROMOTION_PLAGUED</AddPromotionType1>
-            <AddPromotionType2>NONE</AddPromotionType2>
-            <AddPromotionType3>NONE</AddPromotionType3>
-            <RemovePromotionType1>NONE</RemovePromotionType1>
-            <RemovePromotionType2>NONE</RemovePromotionType2>
-            <RemovePromotionType3>NONE</RemovePromotionType3>
-            <bBuffCasterOnly>0</bBuffCasterOnly>
-            <ConvertUnitType>NONE</ConvertUnitType>
-            <CreateBuildingType>NONE</CreateBuildingType>
-            <CreateFeatureType>NONE</CreateFeatureType>
-            <CreateImprovementType>NONE</CreateImprovementType>
-            <SpreadReligion>NONE</SpreadReligion>
-            <CreateUnitType>NONE</CreateUnitType>
-            <iCreateUnitNum>0</iCreateUnitNum>
-            <bPermanentUnitCreate>0</bPermanentUnitCreate>
-            <CreateUnitPromotion>NONE</CreateUnitPromotion>
-            <bImmuneTeam>0</bImmuneTeam>
-            <bImmuneNeutral>0</bImmuneNeutral>
-            <bImmuneEnemy>0</bImmuneEnemy>
-            <bImmuneFlying>0</bImmuneFlying>
-            <bImmuneNotAlive>1</bImmuneNotAlive>
-            <bDispel>0</bDispel>
-            <bPush>0</bPush>
-            <bRemoveHasCasted>0</bRemoveHasCasted>
-            <bSacrificeCaster>0</bSacrificeCaster>
-            <iChangePopulation>0</iChangePopulation>
-            <iCost>0</iCost>
-            <iImmobileTurns>0</iImmobileTurns>
-            <iMiscastChance>0</iMiscastChance>
-            <PyMiscast></PyMiscast>
-            <PyResult></PyResult>
-            <PyRequirement></PyRequirement>
-            <Effect>EFFECT_SPELL1</Effect>
-            <Sound>AS3D_SPELL_CONTAGION</Sound>
-            <HotKey></HotKey>
-            <bAltDown>0</bAltDown>
-            <bShiftDown>0</bShiftDown>
-            <bCtrlDown>0</bCtrlDown>
-            <bGraphicalOnly>0</bGraphicalOnly>
-            <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Spells/Contagion.dds</Button>
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_BOARDING_PARTY</Type>
