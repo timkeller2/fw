@@ -20342,7 +20342,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <iCombatPercent>0</iCombatPercent>
-            <Button>Art/Interface/Buttons/Promotions/Valor.dds</Button>
+            <Button>,Art/Interface/Buttons/Promotions/Combat5.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,7,16</Button>
             <iAIWeight>100</iAIWeight>
             <iCombatPercentDefense>0</iCombatPercentDefense>
         </PromotionInfo>
@@ -20396,6 +20396,7 @@
             <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
+            <iMovesChange>1</iMovesChange>
             <iCombatPercent>-50</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/Weak.dds</Button>
             <iAIWeight>-100</iAIWeight>

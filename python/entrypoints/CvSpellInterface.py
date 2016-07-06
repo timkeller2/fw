@@ -5079,7 +5079,7 @@ def reqBlessMinor(caster):
 	pPlot = caster.plot()
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
-		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False):
+		if pUnit.isAlive():
 			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED_MINOR')):
 				return True
 	return False
@@ -5092,7 +5092,7 @@ def spellBlessMinor(caster):
 		pUnit = pPlot.getUnit(i)
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')):
 			pUnit.changeDamage(-10,0)
-		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False):
+		if pUnit.isAlive():
 			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED_MINOR')):
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')):
 					pUnit.changeDamage(-15,0)
@@ -5127,7 +5127,7 @@ def reqCourage(caster):
 	pPlot = caster.plot()
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
-		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False):
+		if pUnit.isAlive():
 			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COURAGE')):
 				return True
 	return False
@@ -5138,7 +5138,7 @@ def spellCourage(caster):
 	pPlot = caster.plot()
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
-		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False):
+		if pUnit.isAlive():
 			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COURAGE')):
 				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COURAGE'),True)
 				iNumBlessed = iNumBlessed + 1
@@ -5151,7 +5151,7 @@ def reqHaste(caster):
 		pUnit = pPlot.getUnit(i)
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SLOW')):
 			return True
-		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False and pUnit.isAlive() == True):
+		if pUnit.isAlive():
 			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HASTED')):
 				return True
 	return False
@@ -5162,7 +5162,7 @@ def spellHaste(caster):
 	pPlot = caster.plot()
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
-		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False and pUnit.isAlive() == True):
+		if pUnit.isAlive():
 			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HASTED')):
 				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HASTED'),True)
 				iNumBlessed = iNumBlessed + 1
@@ -5196,7 +5196,7 @@ def reqLoyalty(caster,sProm):
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
 		if not pUnit.isHasPromotion(gc.getInfoTypeForString(sProm)):
-			if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False):
+			if pUnit.isAlive():
 				return True
 	return False
 
@@ -5207,7 +5207,7 @@ def spellLoyalty(caster,sProm,iExtra):
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
 		if not pUnit.isHasPromotion(gc.getInfoTypeForString(sProm)):
-			if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) == False and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False):
+			if pUnit.isAlive():
 				pUnit.setHasPromotion(gc.getInfoTypeForString(sProm),True)
 				iNumBlessed = iNumBlessed + 1
 				if (iNumBlessed >= int( iL / 2 )):
