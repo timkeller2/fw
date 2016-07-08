@@ -812,7 +812,7 @@
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
             <AddPromotionType1></AddPromotionType1>
-            <PyResult>spellAddProm(pCaster,'PROMOTION_DANCE_OF_BLADES')</PyResult>
+            <PyResult>spellAddProm(pCaster,'PROMOTION_DANCE_OF_BLADES',100)</PyResult>
             <PyRequirement>reqAddProm(pCaster,'PROMOTION_DANCE_OF_BLADES')</PyRequirement>
             <Effect>EFFECT_WIND_SWIRL</Effect>
             <Sound>AS3D_SPELL_HASTE</Sound>
