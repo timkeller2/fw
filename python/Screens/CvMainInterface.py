@@ -2062,10 +2062,15 @@ class CvMainInterface:
 					sPD = { 'CUSTOM_INCOME': 0, 'ECON': 0, 'PLUNDER': 0 }
 					gc.getPlayer(ePlayer).setScriptData(cPickle.dumps(sPD))
 				
-				if sPD['CUSTOM_INCOME'] > -1:
+				try:
+					if sPD['CUSTOM_INCOME'] > -1:
+						szText = CyGameTextMgr().getGoldStr(ePlayer) + '+' + str(sPD['CUSTOM_INCOME'])
+					else:
+						szText = CyGameTextMgr().getGoldStr(ePlayer) + str(sPD['CUSTOM_INCOME'])
+				except:
+					sPD['CUSTOM_INCOME'] = 0
+					gc.getPlayer(ePlayer).setScriptData(cPickle.dumps(sPD))
 					szText = CyGameTextMgr().getGoldStr(ePlayer) + '+' + str(sPD['CUSTOM_INCOME'])
-				else:
-					szText = CyGameTextMgr().getGoldStr(ePlayer) + str(sPD['CUSTOM_INCOME'])
 
 #FfH: Added by Kael 12/08/2007
 				if (gc.getPlayer(ePlayer).getCivilizationType() == gc.getInfoTypeForString('CIVILIZATION_KHAZAD') and gc.getPlayer(ePlayer).getNumCities() > 0):
