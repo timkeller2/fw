@@ -1871,7 +1871,7 @@ class CvEventManager:
 					try:
 						sPD = cPickle.loads(aPlayer.getScriptData())
 					except EOFError:
-						sPD = { 'PLUNDER': 0 }
+						sPD = { 'CUSTOM_INCOME': 0, 'ECON': 0, 'PLUNDER': 0  }
 					sPD['PLUNDER'] += iGold
 					aPlayer.setScriptData(cPickle.dumps(sPD))
 				else:		

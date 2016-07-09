@@ -2059,7 +2059,8 @@ class CvMainInterface:
 				try:
 					sPD = cPickle.loads(gc.getPlayer(ePlayer).getScriptData())
 				except EOFError:
-					sPD = { 'CUSTOM_INCOME': 0, 'ECON': 0 }
+					sPD = { 'CUSTOM_INCOME': 0, 'ECON': 0, 'PLUNDER': 0 }
+					gc.getPlayer(ePlayer).setScriptData(cPickle.dumps(sPD))
 				
 				if sPD['CUSTOM_INCOME'] > -1:
 					szText = CyGameTextMgr().getGoldStr(ePlayer) + '+' + str(sPD['CUSTOM_INCOME'])
