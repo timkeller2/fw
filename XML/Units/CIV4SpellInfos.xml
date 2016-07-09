@@ -4736,10 +4736,10 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_COMMAND_MORALE</Type>
-            <Description>Command Morale</Description>
+            <Description>Leadership</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>Give command morale to allied troops.  The range for this is equal to the maximum number of units that can be affected / 8.</Help>
+            <Help>Give LEADERSHIP to allied troops.  The range for this is equal to the maximum number of units that can be affected / 8.</Help>
             <PromotionPrereq1>NONE</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>

@@ -1868,7 +1868,10 @@ class CvEventManager:
 				iGold = 0
 			if iGold > 0:
 				if aPlayer.isHuman():
-					sPD = cPickle.loads(aPlayer.getScriptData())
+					try:
+						sPD = cPickle.loads(aPlayer.getScriptData())
+					except EOFError:
+						sPD = { 'PLUNDER': 0 }
 					sPD['PLUNDER'] += iGold
 					aPlayer.setScriptData(cPickle.dumps(sPD))
 				else:		

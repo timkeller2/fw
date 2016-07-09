@@ -8892,7 +8892,7 @@
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_COMMAND_MORALE</Type>
-            <Description>Command Morale</Description>
+            <Description>Leadership</Description>
             <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
