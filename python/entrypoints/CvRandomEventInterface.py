@@ -6991,7 +6991,7 @@ def canCulture1(argsList):
 	if pCity.getCulture(iPlayer) < 1000:
 		return False
 
-	if CyGame().getGameTurn() < 25:
+	if CyGame().getGameTurn() < 75:
 		return False
 
 	return True
@@ -7008,7 +7008,7 @@ def canCulture2(argsList):
 	if pCity.getCulture(iPlayer) < 4000:
 		return False
 
-	if CyGame().getGameTurn() < 50:
+	if CyGame().getGameTurn() < 100:
 		return False
 
 	return True
@@ -7025,7 +7025,7 @@ def canCulture3(argsList):
 	if pCity.getCulture(iPlayer) < 9000:
 		return False
 
-	if CyGame().getGameTurn() < 75:
+	if CyGame().getGameTurn() < 125:
 		return False
 
 	return True
@@ -7042,7 +7042,7 @@ def canCulture4(argsList):
 	if pCity.getCulture(iPlayer) < 16000:
 		return False
 
-	if CyGame().getGameTurn() < 100:
+	if CyGame().getGameTurn() < 150:
 		return False
 
 	return True
@@ -7059,7 +7059,7 @@ def canCulture5(argsList):
 	if pCity.getCulture(iPlayer) < 25000:
 		return False
 
-	if CyGame().getGameTurn() < 125:
+	if CyGame().getGameTurn() < 175:
 		return False
 
 	return True
@@ -7076,7 +7076,7 @@ def canCulture6(argsList):
 	if pCity.getCulture(iPlayer) < 36000:
 		return False
 
-	if CyGame().getGameTurn() < 150:
+	if CyGame().getGameTurn() < 200:
 		return False
 
 	return True
@@ -7093,7 +7093,7 @@ def canCulture7(argsList):
 	if pCity.getCulture(iPlayer) < 49000:
 		return False
 
-	if CyGame().getGameTurn() < 175:
+	if CyGame().getGameTurn() < 225:
 		return False
 
 	return True
