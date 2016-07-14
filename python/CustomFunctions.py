@@ -966,7 +966,7 @@ class CustomFunctions:
 				iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONOUS'), True)
 
 		if (iUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') and iUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_NAVAL') and iUnit.getUnitType() != gc.getInfoTypeForString('UNIT_SEA_SERPENT') and iUnit.getUnitType() != gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT')):
-			if iUnit.getUnitType() == gc.getInfoTypeForString('UNIT_CONJURER') or iUnit.getUnitType() == gc.getInfoTypeForString('UNIT_LICH'):
+			if iUnit.getUnitType() == gc.getInfoTypeForString('UNIT_LICH'):
 				iSphere = CyGame().getSorenRandNum(9, "SphereSelect")				
 				if iSphere == 0:
 					iUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FIRE1'), True)

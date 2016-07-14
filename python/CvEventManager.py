@@ -788,7 +788,7 @@ class CvEventManager:
 			sCityInfo['TR3'] = CyGame().getGameTurn() + 12
 			pCity.setScriptData(cPickle.dumps(sCityInfo))
 
-		if iBuildingType == gc.getInfoTypeForString('COUNCIL'):
+		if iBuildingType == gc.getInfoTypeForString('BUILDING_ELDER_COUNCIL'):
 			sCityInfo['COUNCIL'] = 0
 			pCity.setScriptData(cPickle.dumps(sCityInfo))
 			
@@ -1757,7 +1757,7 @@ class CvEventManager:
 								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
 								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
 
-						if ( (pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_DIRE_SPIDER')) and iEat == 0 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
+						if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER') and iEat == 0 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
 							iEat = 1
 							iBirthChance = CyGame().getSorenRandNum(100, "spiderbirthchance")
 							if aPlayer.isBarbarian():
