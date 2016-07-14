@@ -1662,7 +1662,7 @@ def reqLichdom(caster):
 	if isWorldUnitClass(caster.getUnitClassType()):
 		return False
 	pPlayer = gc.getPlayer(caster.getOwner())
-	if pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_LICH')) >= 4:
+	if pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_LICH')) >= 3:
 		return False
 	return True
 
