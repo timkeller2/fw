@@ -296,7 +296,6 @@
             <PromotionPrereq1>PROMOTION_NATURE1</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_ORC</PromotionPrereq2>
             <UnitCombatPrereq>UNITCOMBAT_ADEPT</UnitCombatPrereq>
-            <ReligionPrereq></ReligionPrereq>
             <bAllowAI>0</bAllowAI>
             <bAllowAutomateTerrain>0</bAllowAutomateTerrain>
             <bInBordersOnly>1</bInBordersOnly>
@@ -811,7 +810,6 @@
             <iAIWeightWar>50</iAIWeightWar>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <AddPromotionType1></AddPromotionType1>
             <PyResult>spellAddProm(pCaster,'PROMOTION_DANCE_OF_BLADES',100)</PyResult>
             <PyRequirement>reqAddProm(pCaster,'PROMOTION_DANCE_OF_BLADES')</PyRequirement>
             <Effect>EFFECT_WIND_SWIRL</Effect>
@@ -1113,6 +1111,7 @@
             <Type>SPELL_EXPLORE_LAIR_AIFON_ISLE</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
             <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
+            <Help>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Help>
             <ImprovementPrereq>IMPROVEMENT_AIFON_ISLE</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1128,6 +1127,7 @@
             <Type>SPELL_EXPLORE_LAIR_BARROW</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
             <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
+            <Help>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Help>
             <ImprovementPrereq>IMPROVEMENT_BARROW</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1143,6 +1143,7 @@
             <Type>SPELL_EXPLORE_LAIR_BRADELINES_WELL</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
             <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
+            <Help>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Help>
             <ImprovementPrereq>IMPROVEMENT_BRADELINES_WELL</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1158,6 +1159,7 @@
             <Type>SPELL_EXPLORE_LAIR_BROKEN_SEPULCHER</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
             <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
+            <Help>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Help>
             <ImprovementPrereq>IMPROVEMENT_BROKEN_SEPULCHER</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1173,6 +1175,7 @@
             <Type>SPELL_EXPLORE_LAIR_DUNGEON</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
             <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
+            <Help>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Help>
             <ImprovementPrereq>IMPROVEMENT_DUNGEON</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1188,6 +1191,7 @@
             <Type>SPELL_EXPLORE_LAIR_GOBLIN_FORT</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
             <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
+            <Help>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Help>
             <ImprovementPrereq>IMPROVEMENT_GOBLIN_FORT</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1203,6 +1207,7 @@
             <Type>SPELL_EXPLORE_LAIR_PYRE_OF_THE_SERAPHIC</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
             <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
+            <Help>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Help>
             <ImprovementPrereq>IMPROVEMENT_PYRE_OF_THE_SERAPHIC</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1218,6 +1223,7 @@
             <Type>SPELL_EXPLORE_LAIR_RUINS</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
             <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
+            <Help>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Help>
             <ImprovementPrereq>IMPROVEMENT_RUINS</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1233,6 +1239,7 @@
             <Type>SPELL_EXPLORE_LAIR_SHIP_WRECK</Type>
             <Description>TXT_KEY_SPELL_EXPLORE_LAIR</Description>
             <Civilopedia>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Civilopedia>
+            <Help>Levels, strength, drill, mobility, sentry and burglar promotions help the outcome of exploring a lair be better...</Help>
             <ImprovementPrereq>IMPROVEMENT_SHIP_WRECK</ImprovementPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1550,7 +1557,6 @@
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <AddPromotionType1></AddPromotionType1>
             <RemovePromotionType1>PROMOTION_SLOW</RemovePromotionType1>
             <bImmuneNeutral>1</bImmuneNeutral>
             <bImmuneEnemy>1</bImmuneEnemy>
@@ -4590,7 +4596,6 @@
             <Type>SPELL_BECOME_CHIEF</Type>
             <Description>Appoint a Chief</Description>
             <Civilopedia>For every 8 units of a type, one can become chief gaining 1 strength and the ability to command similar units!  A unit must be at least level 5 to become a chief.  This promotion will vanish when the unit is upgraded.  A chief may grant command morale to a number of units of his same type equal to his level.</Civilopedia>
-            <Strategy></Strategy>
             <Help>Have the elder council appoint this unit a chief unit with +1str and the ability to grant morale to a number of like troops equal to his level.</Help>
             <bAllowAI>1</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
@@ -4624,12 +4629,9 @@
             <iCost>75</iCost>
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
-            <PyMiscast></PyMiscast>
-            <PyResult></PyResult>
             <PyRequirement>reqBecomeChief(pCaster)</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_HEAL</Sound>
-            <HotKey></HotKey>
             <bAltDown>0</bAltDown>
             <bShiftDown>0</bShiftDown>
             <bCtrlDown>0</bCtrlDown>
@@ -4674,12 +4676,10 @@
             <iCost>0</iCost>
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
-            <PyMiscast></PyMiscast>
             <PyResult>spellBecomeGrandMaster(pCaster)</PyResult>
             <PyRequirement>reqBecomeGrandMaster(pCaster)</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_HEAL</Sound>
-            <HotKey></HotKey>
             <bAltDown>0</bAltDown>
             <bShiftDown>0</bShiftDown>
             <bCtrlDown>0</bCtrlDown>
@@ -4723,12 +4723,10 @@
             <iCost>0</iCost>
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
-            <PyMiscast></PyMiscast>
             <PyResult>spellCommandMorale(pCaster)</PyResult>
             <PyRequirement>reqCommandMorale(pCaster)</PyRequirement>
             <Effect>EFFECT_ENCHANTED_BLADE</Effect>
             <Sound>AS3D_SPELL_ENCHANTMENT</Sound>
-            <HotKey></HotKey>
             <bAltDown>0</bAltDown>
             <bShiftDown>0</bShiftDown>
             <bCtrlDown>0</bCtrlDown>
@@ -4740,7 +4738,6 @@
             <Type>SPELL_SELL_ON_MARKET</Type>
             <Description>Sell on the Market</Description>
             <Civilopedia>Sell a number of equipment items equal to your burglar promotions on this tile to the global market.  (The longer time you take looking for buyers, the better price you will get.  Fortify on the tile while looking for up to half your burglar skill.)</Civilopedia>
-            <Strategy>NONE</Strategy>
             <Help>Sell a number of equipment items equal to your burglar promotions on this tile to the global market.  (The longer time you take looking for buyers, the better price you will get.  Fortify on the tile while looking for up to half your burglar skill.)</Help>
             <PromotionPrereq1>PROMOTION_BURGLAR1</PromotionPrereq1>
             <bAllowAI>0</bAllowAI>
@@ -4774,12 +4771,10 @@
             <iCost>0</iCost>
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
-            <PyMiscast></PyMiscast>
             <PyResult>sellToMarket(pCaster)</PyResult>
             <PyRequirement>reqSellToMarket(pCaster)</PyRequirement>
             <Effect>EFFECT_SPELL1</Effect>
             <Sound>AS2D_GOODY_GOLD</Sound>
-            <HotKey></HotKey>
             <bAltDown>0</bAltDown>
             <bShiftDown>0</bShiftDown>
             <bCtrlDown>0</bCtrlDown>
@@ -4791,18 +4786,8 @@
             <Type>SPELL_WORKER_ADD_TO_CITY</Type>
             <Description>TXT_KEY_SPELL_ADD_TO_CITY</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <Strategy>NONE</Strategy>
             <Help>TXT_KEY_SPELL_ADD_TO_CITY_HELP</Help>
-            <PromotionPrereq1>NONE</PromotionPrereq1>
-            <PromotionPrereq2>NONE</PromotionPrereq2>
-            <UnitPrereq>NONE</UnitPrereq>
             <UnitClassPrereq>UNITCLASS_WORKER</UnitClassPrereq>
-            <UnitCombatPrereq>NONE</UnitCombatPrereq>
-            <UnitInStackPrereq>NONE</UnitInStackPrereq>
-            <CivilizationPrereq>NONE</CivilizationPrereq>
-            <ReligionPrereq>NONE</ReligionPrereq>
-            <StateReligionPrereq>NONE</StateReligionPrereq>
-            <TechPrereq>NONE</TechPrereq>
             <bAllowAI>1</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
             <bCausesWar>0</bCausesWar>
@@ -4831,12 +4816,9 @@
             <iCost>20</iCost>
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
-            <PyMiscast></PyMiscast>
-            <PyResult></PyResult>
             <PyRequirement>reqWorkerAddToCity(pCaster)</PyRequirement>
             <Effect>EFFECT_SPELL1</Effect>
             <Sound>AS3D_SPELL_COMMANDER_JOIN</Sound>
-            <HotKey></HotKey>
             <bAltDown>0</bAltDown>
             <bShiftDown>0</bShiftDown>
             <bCtrlDown>0</bCtrlDown>
@@ -4848,7 +4830,6 @@
             <Type>SPELL_BREATH_FIRE</Type>
             <Description>TXT_KEY_SPELL_BREATH_FIRE</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <Help></Help>
             <PromotionPrereq1>PROMOTION_DRAGON</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
@@ -4883,12 +4864,9 @@
             <iCost>0</iCost>
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
-            <PyMiscast></PyMiscast>
             <PyResult>spellCompFireball(pCaster,3)</PyResult>
-            <PyRequirement></PyRequirement>
             <Effect>EFFECT_SPELL1</Effect>
             <Sound>AS3D_SPELL_BREATH_FIRE</Sound>
-            <HotKey></HotKey>
             <bAltDown>0</bAltDown>
             <bShiftDown>0</bShiftDown>
             <bCtrlDown>0</bCtrlDown>
@@ -5002,18 +4980,8 @@
             <Type>SPELL_PATH_FINDING</Type>
             <Description>Path Finding</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <Strategy>NONE</Strategy>
             <Help>Find a path for yourself, a number of units equal to 1/2 your level or your level depending on your path finding skill.</Help>
             <PromotionPrereq1>PROMOTION_PATH_FINDING2</PromotionPrereq1>
-            <PromotionPrereq2>NONE</PromotionPrereq2>
-            <UnitPrereq>NONE</UnitPrereq>
-            <UnitClassPrereq>NONE</UnitClassPrereq>
-            <UnitCombatPrereq>NONE</UnitCombatPrereq>
-            <UnitInStackPrereq>NONE</UnitInStackPrereq>
-            <CivilizationPrereq>NONE</CivilizationPrereq>
-            <ReligionPrereq>NONE</ReligionPrereq>
-            <StateReligionPrereq>NONE</StateReligionPrereq>
-            <TechPrereq>NONE</TechPrereq>
             <bAllowAI>0</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
             <bCausesWar>0</bCausesWar>
@@ -5029,23 +4997,9 @@
             <iResistModify>0</iResistModify>
             <iDamage>0</iDamage>
             <iDamageLimit>0</iDamageLimit>
-            <DamageType>NONE</DamageType>
-            <AddPromotionType1>NONE</AddPromotionType1>
-            <AddPromotionType2>NONE</AddPromotionType2>
-            <AddPromotionType3>NONE</AddPromotionType3>
-            <RemovePromotionType1>NONE</RemovePromotionType1>
-            <RemovePromotionType2>NONE</RemovePromotionType2>
-            <RemovePromotionType3>NONE</RemovePromotionType3>
             <bBuffCasterOnly>0</bBuffCasterOnly>
-            <ConvertUnitType>NONE</ConvertUnitType>
-            <CreateBuildingType>NONE</CreateBuildingType>
-            <CreateFeatureType>NONE</CreateFeatureType>
-            <CreateImprovementType>NONE</CreateImprovementType>
-            <SpreadReligion>NONE</SpreadReligion>
-            <CreateUnitType>NONE</CreateUnitType>
             <iCreateUnitNum>0</iCreateUnitNum>
             <bPermanentUnitCreate>0</bPermanentUnitCreate>
-            <CreateUnitPromotion>NONE</CreateUnitPromotion>
             <bImmuneTeam>0</bImmuneTeam>
             <bImmuneNeutral>0</bImmuneNeutral>
             <bImmuneEnemy>0</bImmuneEnemy>
@@ -5076,18 +5030,8 @@
             <Type>SPELL_ESTATE1</Type>
             <Description>Reside in Estate</Description>
             <Civilopedia></Civilopedia>
-            <Strategy>NONE</Strategy>
             <Help></Help>
             <PromotionPrereq1>PROMOTION_ESTATES1</PromotionPrereq1>
-            <PromotionPrereq2>NONE</PromotionPrereq2>
-            <UnitPrereq>NONE</UnitPrereq>
-            <UnitClassPrereq>NONE</UnitClassPrereq>
-            <UnitCombatPrereq>NONE</UnitCombatPrereq>
-            <UnitInStackPrereq>NONE</UnitInStackPrereq>
-            <CivilizationPrereq>NONE</CivilizationPrereq>
-            <ReligionPrereq>NONE</ReligionPrereq>
-            <StateReligionPrereq>NONE</StateReligionPrereq>
-            <TechPrereq>NONE</TechPrereq>
             <bAllowAI>1</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
             <bCausesWar>0</bCausesWar>
@@ -5103,23 +5047,10 @@
             <iResistModify>0</iResistModify>
             <iDamage>0</iDamage>
             <iDamageLimit>0</iDamageLimit>
-            <DamageType>NONE</DamageType>
-            <AddPromotionType1>NONE</AddPromotionType1>
-            <AddPromotionType2>NONE</AddPromotionType2>
-            <AddPromotionType3>NONE</AddPromotionType3>
-            <RemovePromotionType1>NONE</RemovePromotionType1>
-            <RemovePromotionType2>NONE</RemovePromotionType2>
-            <RemovePromotionType3>NONE</RemovePromotionType3>
             <bBuffCasterOnly>1</bBuffCasterOnly>
-            <ConvertUnitType>NONE</ConvertUnitType>
             <CreateBuildingType>BUILDING_ESTATE1</CreateBuildingType>
-            <CreateFeatureType>NONE</CreateFeatureType>
-            <CreateImprovementType>NONE</CreateImprovementType>
-            <SpreadReligion>NONE</SpreadReligion>
-            <CreateUnitType>NONE</CreateUnitType>
             <iCreateUnitNum>0</iCreateUnitNum>
             <bPermanentUnitCreate>0</bPermanentUnitCreate>
-            <CreateUnitPromotion>NONE</CreateUnitPromotion>
             <bImmuneTeam>0</bImmuneTeam>
             <bImmuneNeutral>0</bImmuneNeutral>
             <bImmuneEnemy>0</bImmuneEnemy>
