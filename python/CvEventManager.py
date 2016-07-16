@@ -1413,35 +1413,25 @@ class CvEventManager:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG'), True)
 				
 		iTough = CyGame().getSorenRandNum(100, "Tough")
-		if iTough < 1:
-			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH2'), True)
+		if iTough < 3:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH5'), True)
+		if iTough < 7:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH4'), True)
+		if iTough < 15:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH3'), True)
-		elif iTough < 3:
-			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1'), True)
-			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH3'), True)
-		elif iTough < 7:
-			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH3'), True)
-		elif iTough < 15:
-			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1'), True)
+		if iTough < 25:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH2'), True)
-		elif iTough < 25:
-			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH2'), True)
-		elif iTough < 40:
+		if iTough < 40:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1'), True)
-		elif iTough > 98:
-			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY2'), True)
+		if iTough > 96:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY5'), True)
+		if iTough > 92:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY4'), True)
+		if iTough > 85:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY3'), True)
-		elif iTough > 96:
-			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1'), True)
-			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY3'), True)
-		elif iTough > 92:
-			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY3'), True)
-		elif iTough > 85:
-			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1'), True)
+		if iTough > 75:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY2'), True)
-		elif iTough > 75:
-			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY2'), True)
-		elif iTough > 60:
+		if iTough > 60:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1'), True)
 
 		if CyGame().getWBMapScript():
