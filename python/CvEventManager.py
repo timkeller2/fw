@@ -1412,24 +1412,24 @@ class CvEventManager:
 			if pPlayer.getNumBuilding(gc.getInfoTypeForString('BUILDING_TOWER_OF_NECROMANCY')) > 0:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG'), True)
 				
-		iTough = CyGame().getSorenRandNum(100, "Tough")
-		if iTough < 3:
+		iTough = CyGame().getSorenRandNum(100, "Toughness")
+		if iTough < 2:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH5'), True)
-		if iTough < 7:
+		if iTough < 6:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH4'), True)
-		if iTough < 15:
+		if iTough < 13:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH3'), True)
-		if iTough < 25:
+		if iTough < 22:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH2'), True)
 		if iTough < 40:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1'), True)
-		if iTough > 96:
+		if iTough > 98:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY5'), True)
-		if iTough > 92:
+		if iTough > 94:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY4'), True)
-		if iTough > 85:
+		if iTough > 87:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY3'), True)
-		if iTough > 75:
+		if iTough > 78:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY2'), True)
 		if iTough > 60:
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1'), True)
