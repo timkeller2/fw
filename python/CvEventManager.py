@@ -1411,6 +1411,38 @@ class CvEventManager:
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')):
 			if pPlayer.getNumBuilding(gc.getInfoTypeForString('BUILDING_TOWER_OF_NECROMANCY')) > 0:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG'), True)
+				
+		iTough = CyGame().getSorenRandNum(100, "Tough")
+		if iTough < 1:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH2'), True)
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH3'), True)
+		elif iTough < 3:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1'), True)
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH3'), True)
+		elif iTough < 7:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH3'), True)
+		elif iTough < 15:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1'), True)
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH2'), True)
+		elif iTough < 25:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH2'), True)
+		elif iTough < 40:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1'), True)
+		elif iTough > 98:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY2'), True)
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY3'), True)
+		elif iTough > 96:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1'), True)
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY3'), True)
+		elif iTough > 92:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY3'), True)
+		elif iTough > 85:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1'), True)
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY2'), True)
+		elif iTough > 75:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY2'), True)
+		elif iTough > 60:
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1'), True)
 
 		if CyGame().getWBMapScript():
 			sf.onUnitCreated(unit)

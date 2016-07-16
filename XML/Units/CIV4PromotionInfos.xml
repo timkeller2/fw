@@ -20408,5 +20408,65 @@
             <iAIWeight>-100</iAIWeight>
             <iCombatPercentDefense>-50</iCombatPercentDefense>
         </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_TOUGH1</Type>
+            <Description>Tough I</Description>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <iCombatPercent>5</iCombatPercent>
+            <Button>Art/Interface/Buttons/Promotions/Empower1.dds</Button>
+            <bMutation>1</bMutation>
+            <iCombatPercentDefense>5</iCombatPercentDefense>
+            <iMinLevel>-1</iMinLevel>
+            <PromotionNextLevel>PROMOTION_TOUGH2</PromotionNextLevel>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_TOUGH2</Type>
+            <Description>Tough II</Description>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <iCombatPercent>10</iCombatPercent>
+            <Button>Art/Interface/Buttons/Promotions/Empower2.dds</Button>
+            <iCombatPercentDefense>10</iCombatPercentDefense>
+            <iMinLevel>-1</iMinLevel>
+            <PromotionNextLevel>PROMOTION_TOUGH3</PromotionNextLevel>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_TOUGH3</Type>
+            <Description>Tough III</Description>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <iCombatPercent>20</iCombatPercent>
+            <Button>Art/Interface/Buttons/Promotions/Empower3.dds</Button>
+            <iCombatPercentDefense>20</iCombatPercentDefense>
+            <iMinLevel>-1</iMinLevel>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_WIMPY1</Type>
+            <Description>Wimpy I</Description>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <iCombatPercent>-5</iCombatPercent>
+            <Button>Art/Interface/Buttons/Promotions/Empower1.dds</Button>
+            <bMutation>1</bMutation>
+            <iCombatPercentDefense>-5</iCombatPercentDefense>
+            <iMinLevel>-1</iMinLevel>
+            <PromotionNextLevel>PROMOTION_WIMPY2</PromotionNextLevel>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_WIMPY2</Type>
+            <Description>Wimpy II</Description>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <iCombatPercent>-10</iCombatPercent>
+            <Button>Art/Interface/Buttons/Promotions/Empower2.dds</Button>
+            <iCombatPercentDefense>-10</iCombatPercentDefense>
+            <iMinLevel>-1</iMinLevel>
+            <PromotionNextLevel>PROMOTION_WIMPY3</PromotionNextLevel>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_WIMPY3</Type>
+            <Description>Wimpy III</Description>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <iCombatPercent>-20</iCombatPercent>
+            <Button>Art/Interface/Buttons/Promotions/Empower3.dds</Button>
+            <iCombatPercentDefense>-20</iCombatPercentDefense>
+            <iMinLevel>-1</iMinLevel>
+        </PromotionInfo>
     </PromotionInfos>
 </Civ4PromotionInfos>
