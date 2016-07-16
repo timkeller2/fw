@@ -260,9 +260,9 @@ class CustomFunctions:
 					sDirection = ''
 
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR3')):
-					sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is around ' + str(iBestRange-1+CyGame().getSorenRandNum(3, "Roll It")) + ' tiles away from ' + sName + sDirection + sPref + '...'
+					sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is around ' + str(iBestRange) + ' tiles away from ' + sName + sDirection + sPref + '...'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR2')) or iBestRange <= caster.getFortifyTurns():
-					sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is around ' + str(iBestRange-2+CyGame().getSorenRandNum(5, "Roll It")) + ' tiles away from ' + sName + sDirection + sPref + '...'
+					sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is around ' + str(iBestRange-1+CyGame().getSorenRandNum(3, "Roll It")) + ' tiles away from ' + sName + sDirection + sPref + '...'
 				else:
 					sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is around ' + str(iBestRange-2+CyGame().getSorenRandNum(5, "Roll It")) + ' tiles away from ' + sName + sPref + '...'
 			else:

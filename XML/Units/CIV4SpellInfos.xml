@@ -6562,7 +6562,7 @@
             <Description>Ask Locals About Hidden Treasure</Description>
             <Civilopedia>Information you learn about caches is kept in your combat notes.  You can learn more information about caches from cities.  Basically, you can sense caches within your level up to 2 * your burglary skill away (drill, mobility and sentry promotions give +1 each).  Fortifying (camping in the area to search more thoroughly) increases your skill one per turn up to half your base skill level.  You can also get better information when you fortify longer.  When using this skill in a city, you gain an additional range bonus equal to the population.  A tavern in the city doubles your skill.  HINT: If you are getting vague information after being fortified 5 turns, move around and try looking from different places fortified for a while.  If you get close to a cache, the compass direction to the cache will begin to appear giving you a lot more ability to find it.</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>You feel that their may be a hidden cache nearby.  Use streetwise to ask the locals...</Help>
+            <Help>You feel that their may be a hidden cache nearby.  Use streetwise to ask the locals.  Burglar1 will be accurate to within 2 tiles.  Burglar2 one tile.  Burglar3 reported distances will be accurate.  If the cache is closer than your fortify turns, you will get directional information.</Help>
             <PromotionPrereq1>PROMOTION_BURGLAR1</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
