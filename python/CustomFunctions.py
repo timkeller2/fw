@@ -3074,7 +3074,7 @@ class CustomFunctions:
 					elif iRoll == 2:
 						oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SUCCUBUS'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 					elif iRoll == 3:
-						oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_SECT_OF_FLIES'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+						oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_PIT_BEAST'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 					else:
 						oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_CHAOS_MARAUDER'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL'), False)
