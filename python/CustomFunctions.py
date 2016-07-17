@@ -2649,6 +2649,12 @@ class CustomFunctions:
 						CyInterface().addMessage(pUnit.getOwner(),False,25,'Your army is suffering from poisonous fumes caused by enemy entropy mana!','',1,'Art/Interface/Buttons/Improvements/Maelstrom.dds',ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pUnit.getOwner(),'Your army is suffering from poisonous fumes caused by enemy entropy mana!')
 
+				## Grant barbarian units to the player that owns a city they reside in.
+				if (pPlot.isCity() and pPlayer.isBarbarian() and not plotPlayer.isBarbarian() and plotPlayer.isHuman() and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE')):
+					pCity = pPlot.getPlotCity()
+					newUnit = plotPlayer.initUnit(pUnit.getUnitType(), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+					newUnit.convert(pUnit)
+					
 				## Computer Players gain creeps within their borders
 				if (pPlot.isOwned() and pPlayer.isBarbarian() and not plotPlayer.isBarbarian() and not plotPlayer.isHuman() and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE')):
 					pCity = plotPlayer.getCity(self.iValidCity(plotPlayer))
