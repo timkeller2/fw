@@ -65204,7 +65204,7 @@
             <Capture>NONE</Capture>
             <Combat>UNITCOMBAT_BEAST</Combat>
             <Domain>DOMAIN_SEA</Domain>
-            <DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
+            <DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
             <Description>TXT_KEY_UNIT_SEA_SERPENT</Description>
@@ -80020,7 +80020,7 @@
             <Capture>NONE</Capture>
             <Combat>UNITCOMBAT_BEAST</Combat>
             <Domain>DOMAIN_SEA</Domain>
-            <DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
+            <DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
             <Description>Giant Sea Serpent</Description>

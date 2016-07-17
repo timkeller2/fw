@@ -203,7 +203,7 @@
             <iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
             <iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
             <iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-            <iDistanceMaintenanceModifier>25</iDistanceMaintenanceModifier>
+            <iDistanceMaintenanceModifier>50</iDistanceMaintenanceModifier>
             <iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
             <iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
             <iExtraHealth>0</iExtraHealth>
@@ -1710,6 +1710,14 @@
                         <iYield>0</iYield>
                         <iYield>4</iYield>
                         <iYield>4</iYield>
+                    </ImprovementYields>
+                </ImprovementYieldChange>
+                <ImprovementYieldChange>
+                    <ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
+                    <ImprovementYields>
+                        <iYield>1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>2</iYield>
                     </ImprovementYields>
                 </ImprovementYieldChange>
             </ImprovementYieldChanges>

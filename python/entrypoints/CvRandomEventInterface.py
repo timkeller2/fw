@@ -8103,7 +8103,7 @@ def monument3(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 				   
-	cf.pay(pCity,'BUILDING_MONUMENT',3,iPlayer,'monument')
+	cf.pay(pCity,'BUILDING_LIBRARY',3,iPlayer,'library')
 	
 def monument5(argsList):
 	iEvent = argsList[0]
@@ -8113,7 +8113,7 @@ def monument5(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	cf.pay(pCity,'BUILDING_MONUMENT',5,iPlayer,'monument')
+	cf.pay(pCity,'BUILDING_LIBRARY',5,iPlayer,'library')
 	
 def herbalist4(argsList):
 	iEvent = argsList[0]

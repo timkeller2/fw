@@ -797,10 +797,6 @@ class CvEventManager:
 			sCityInfo['BUILDING_LIBRARY'] = CyGame().getGameTurn()
 			pCity.setScriptData(cPickle.dumps(sCityInfo))
 			
-		if iBuildingType == gc.getInfoTypeForString('BUILDING_MONUMENT'):
-			sCityInfo['BUILDING_MONUMENT'] = CyGame().getGameTurn()
-			pCity.setScriptData(cPickle.dumps(sCityInfo))
-			
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_TRAINING_YARD'):
 			sCityInfo['BUILDING_TRAINING_YARD'] = CyGame().getGameTurn()
 			pCity.setScriptData(cPickle.dumps(sCityInfo))
@@ -1412,7 +1408,7 @@ class CvEventManager:
 			if pPlayer.getNumBuilding(gc.getInfoTypeForString('BUILDING_TOWER_OF_NECROMANCY')) > 0:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG'), True)
 		
-		if !unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1')) and !unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1')):
+		if not unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1')) and not unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1')):
 			iTough = CyGame().getSorenRandNum(100, "Toughness")
 			if iTough < 2:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH5'), True)
@@ -1521,7 +1517,7 @@ class CvEventManager:
 		if unit.getUnitType() == gc.getInfoTypeForString('UNIT_MAGICIAN'):
 			sCityInfo[ 'OBELISK' ] = 1
 			city.setScriptData(cPickle.dumps(sCityInfo))
-			if city.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_MONUMENT')) > 0:
+			if city.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_LIBRARY')) > 0:
 				unit.setName("Magician of " + city.getName())
 				unit.changeExperience(2, -1, False, False, False)
 

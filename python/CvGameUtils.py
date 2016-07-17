@@ -506,7 +506,7 @@ class CvGameUtils:
 				return True
 
 		if eUnit == gc.getInfoTypeForString('UNIT_MAGICIAN'):
-			if 'OBELISK' not in sCityInfo:
+			if 'LIBRARY' not in sCityInfo:
 				sCityInfo['OBELISK'] = 1
 			if sCityInfo['OBELISK'] > 0 or pCity.getCulture(pCity.getOwner()) < 250:
 				return True

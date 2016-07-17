@@ -5024,9 +5024,9 @@ def spellHealingPotionMinor(caster,iL):
 		iDefStr = pUnit.baseCombatStr()
 		if iDefStr < 1:
 			iDefStr = 1
-		iSafe = pUnit.healRate() / 3
-		if iSafe > 5:
-			iSafe = 5
+		iSafe = pUnit.healRate() / 2
+		if iSafe > 10:
+			iSafe = 10
 		iMod = ( iL * 5 ) / iDefStr + iSafe
 		iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod / 2
 		pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
