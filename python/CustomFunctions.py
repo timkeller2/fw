@@ -2650,7 +2650,7 @@ class CustomFunctions:
 						CyInterface().addCombatMessage(pUnit.getOwner(),'Your army is suffering from poisonous fumes caused by enemy entropy mana!')
 
 				## Grant barbarian units to the player that owns a city they reside in.
-				if (pPlot.isCity() and pPlayer.isBarbarian() and not plotPlayer.isBarbarian() and plotPlayer.isHuman() and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE')):
+				if (pPlot.isCity() and pPlayer.isBarbarian() and not plotPlayer.isBarbarian() and plotPlayer.isHuman() and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE')):
 					pCity = pPlot.getPlotCity()
 					newUnit = plotPlayer.initUnit(pUnit.getUnitType(), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 					newUnit.convert(pUnit)
