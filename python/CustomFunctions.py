@@ -111,7 +111,7 @@ class CustomFunctions:
 						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FEAR')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TIMOR_MASK')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRAGON')) and not unit.isImmuneToFear():
 							iFear = 3
 							
-						iEnemyStr += ( pUnit.baseCombatStr() * ( 100 - pUnit.getDamage() ) ) / 100
+						iEnemyStr += ( ( pUnit.baseCombatStr() + pUnit.baseCombatStrDefense() ) * ( 100 - pUnit.getDamage() ) ) / 100
 							
 					if pUnit.getTeam() == pPlayer.getTeam():
 						if iiX != pX or iiY != pY:
@@ -119,7 +119,7 @@ class CustomFunctions:
 							pX = iiX
 							pY = iiY
 						
-						iAlliedStr += ( pUnit.baseCombatStr() * ( 100 - pUnit.getDamage() ) ) / 100
+						iAlliedStr += ( ( pUnit.baseCombatStr() + pUnit.baseCombatStrDefense() ) * ( 100 - pUnit.getDamage() ) ) / 100
 						
 						# Leadership
 						thisNobility = self.iNoble(pUnit,0)
@@ -3067,7 +3067,7 @@ class CustomFunctions:
 					# oNewUnit.convert(pUnit)
 
 				## Angels become evil if owned by an evil player...
-				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')) and pPlayer.getAlignment() == iEvil:
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')) and pPlayer.getAlignment() == iEvil and !pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_BRIGIT_HELD'):
 					iRoll = CyGame().getSorenRandNum(4, "MiracleRecovery")
 					if iRoll == 1:
 						oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_TAR_DEMON'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
