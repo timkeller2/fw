@@ -20468,6 +20468,8 @@
             <bMutation>1</bMutation>
             <iCombatPercentDefense>-5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
+            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY2</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
@@ -20478,6 +20480,8 @@
             <Button>Art/Interface/Buttons/Promotions/wimpy2.dds</Button>
             <iCombatPercentDefense>-5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
+            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY3</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
@@ -20489,6 +20493,8 @@
             <bMutation>1</bMutation>
             <iCombatPercentDefense>-5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
+            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY4</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
@@ -20499,6 +20505,8 @@
             <Button>Art/Interface/Buttons/Promotions/wimpy4.dds</Button>
             <iCombatPercentDefense>-5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
+            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY5</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
@@ -20509,6 +20517,8 @@
             <Button>Art/Interface/Buttons/Promotions/wimpy5.dds</Button>
             <iCombatPercentDefense>-5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
+            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellDamageModify>1</iSpellDamageModify>
         </PromotionInfo>
     </PromotionInfos>
 </Civ4PromotionInfos>

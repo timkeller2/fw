@@ -1159,7 +1159,7 @@ class CustomFunctions:
 		return 'UNIT_IMP'
 
 	def sAnimalUnit(self):
-		i = CyGame().getSorenRandNum(8, "AnimalUnitSelect") + 1
+		i = CyGame().getSorenRandNum(9, "AnimalUnitSelect") + 1
 		if(i==1):
 			return 'UNIT_BABY_SPIDER'
 		elif(i==2):
@@ -1176,6 +1176,8 @@ class CustomFunctions:
 			return 'UNIT_TIGER'
 		elif(i==8):
 			return 'UNIT_WOLF'
+		elif(i==9):
+			return 'UNIT_GRIFFON'
 
 		return 'UNIT_GIANT_SPIDER'
 

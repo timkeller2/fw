@@ -4194,7 +4194,7 @@
         <SpellInfo>
             <Type>SPELL_TSUNAMI</Type>
             <Description>TXT_KEY_SPELL_TSUNAMI</Description>
-            <Civilopedia>Inflict ~2%/lev range 1 on water and adjacent tiles, ~4%/lev range 2 if the caster has channeling 3.</Civilopedia>
+            <Civilopedia></Civilopedia>
             <Help>Inflict ~2%/lev range 1 on water and adjacent tiles, ~4%/lev range 2 if the caster has channeling 3.</Help>
             <PromotionPrereq1>PROMOTION_CHANNELING2</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_DIVINE</PromotionPrereq2>
