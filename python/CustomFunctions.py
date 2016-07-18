@@ -17,6 +17,29 @@ CyGameInstance = gc.getGame()
 
 class CustomFunctions:
 
+	def young(self,pUnit,newUnit):
+		newUnit.finishMoves()
+		newUnit.setHasCasted(True)
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1'),True)
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER2'),True)
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT3')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER3'),True)
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT4')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER4'),True)
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT5')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER5'),True)
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
+		
+		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+		sMsg = 'A ' + str( pUnit.getName() ) + ' has young...'
+		CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
+		CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
+	
 	def retCombat(self,unit):
 		i = 0
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2')):
@@ -3036,19 +3059,7 @@ class CustomFunctions:
 					if ( CyGame().getSorenRandNum(30+iCountS, "NewSerpents") == 1 and iCountS < 60 ):
 						oNewUnit = gc.getInfoTypeForString('UNIT_SEA_SERPENT')
 						newUnit = pPlayer.initUnit(oNewUnit, pUnit.getX(), pUnit.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
-						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
-							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1'),True)
-						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2')):
-							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER2'),True)
-						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT3')):
-							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER3'),True)
-						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT4')):
-							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER4'),True)
-							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
-						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT5')):
-							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER5'),True)
-							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
-
+						self.young(pUnit,newUnit)
 						## Serpent variation in the world
 						if CyGame().getSorenRandNum(10, "NewSerpentWeak") < 4:
 							newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WEAK'),True)
@@ -3061,18 +3072,10 @@ class CustomFunctions:
 							if CyGame().getSorenRandNum(10, "NewSerpentHeavy") > 7:
 								newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HEAVY'),True)
 
-						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
-
 				## Giant Sea Serpents can die of old age (if over populated - shouldn't happen now, but fixes a current bug after-effect)
 				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT') and pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_GIANT_SEA_SERPENT')) > 60 and pUnit.getLevel() < 5:
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TREASURE1'), False)
 					pUnit.kill(True,0)
-
-				## Computer Strong Workers Become Champions - (Sometimes computer strong workers cause spinlock)
-				# if pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_WORKER') and not pPlayer.isHuman() and pUnit.baseCombatStr() > 0:
-					# oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_CHAMPION'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					# pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
-					# oNewUnit.convert(pUnit)
 
 				## Angels become evil if owned by an evil player...
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')) and pPlayer.getAlignment() == iEvil and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_BRIGIT_HELD'):
@@ -3095,10 +3098,11 @@ class CustomFunctions:
 					oNewUnit.convert(pUnit)
 
 				## Giant Spiders can have young
-				if (bCanCreateUnit and CyGame().getSorenRandNum(100, "NewSpider") == 1 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER'))):
+				if (bCanCreateUnit and CyGame().getSorenRandNum(300, "NewSpider") < pUnit.getLevel() and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER'))):
 					oNewUnit = gc.getInfoTypeForString('UNIT_BABY_SPIDER')
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 					newUnit = pPlayer.initUnit(oNewUnit, pUnit.getX(), pUnit.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+					self.young(pUnit,newUnit)
 
 				## Baby Spiders can grow up
 				if (CyGame().getSorenRandNum(50, "NewSpiders") == 1 and pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_BABY_SPIDER')):

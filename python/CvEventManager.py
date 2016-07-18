@@ -1785,12 +1785,7 @@ class CvEventManager:
 							if iBirthChance < pUnit.getLevel() * 3:
 								bPlayer = gc.getPlayer(pUnit.getOwner())
 								newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_BABY_SPIDER'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-								newUnit.finishMoves()
-								newUnit.setHasCasted(True)
-								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
-								sMsg = 'A ' + str( pUnit.getName() ) + ' has young...'
-								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
-								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
+								cf.young(pUnit,newUnit)
 
 						# if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_DUIN') and iEat == 0 and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
 							# iEat = 1
@@ -1855,27 +1850,10 @@ class CvEventManager:
 							iBirthChance = CyGame().getSorenRandNum(100 + iCount, "serpentbirthchance")
 							if aPlayer.isBarbarian():
 								iBirthChance = iBirthChance - 25
-							if iBirthChance < pUnit.getLevel() * 5 + 25 and iCount < 60:
+							if iBirthChance < pUnit.getLevel() * 5 + 25 - iCount and iCount < 60:
 								bPlayer = gc.getPlayer(pUnit.getOwner())
 								newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_SEA_SERPENT'), ilX, ilY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-								newUnit.finishMoves()
-								newUnit.setHasCasted(True)
-								if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
-									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1'),True)
-								if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2')):
-									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER2'),True)
-								if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT3')):
-									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER3'),True)
-								if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT4')):
-									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER4'),True)
-									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
-								if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT5')):
-									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER5'),True)
-									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
-								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
-								sMsg = 'A ' + str( pUnit.getName() ) + ' has young!'
-								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
-								CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
+								cf.young(pUnit,newUnit)
 				
 		if ((unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIZARDMAN')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ORC')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL') or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BEAST')) and pPlayer.isBarbarian()):
 			iGold = unit.baseCombatStr() * unit.baseCombatStr()

@@ -33513,8 +33513,6 @@
             <iCombatDefense>4</iCombatDefense>
             <iMinLevel>6</iMinLevel>
             <iTier>2</iTier>
-            <UnitCreateFromCombat>UNIT_BABY_SPIDER</UnitCreateFromCombat>
-            <iUnitCreateFromCombatChance>5</iUnitCreateFromCombatChance>
             <DamageTypeCombats>
                 <DamageTypeCombat>
                     <DamageType>DAMAGE_POISON</DamageType>
