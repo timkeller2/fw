@@ -2484,6 +2484,9 @@ class CustomFunctions:
 								bRemoveIt = False
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 1") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE1'), 0)
+							sMsg = 'An estate falls to ruin in ' + pCity.getName() + '...'
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE2')) > 0:
@@ -2494,6 +2497,9 @@ class CustomFunctions:
 								bRemoveIt = False
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 2") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE2'), 0)
+							sMsg = 'Extensive grounds grow up with thorns and thistles in ' + pCity.getName() + '...'
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE3')) > 0:
@@ -2504,6 +2510,9 @@ class CustomFunctions:
 								bRemoveIt = False
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 3") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE3'), 0)
+							sMsg = 'A banquet hall falls quiet in ' + pCity.getName() + '...'
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV1')) > 0:
@@ -2514,6 +2523,9 @@ class CustomFunctions:
 								bRemoveIt = False
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 4") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV1'), 0)
+							sMsg = 'A manor falls to ruin in ' + pCity.getName() + '...'
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV2')) > 0:
@@ -2524,6 +2536,9 @@ class CustomFunctions:
 								bRemoveIt = False
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 5") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV2'), 0)
+							sMsg = 'An abby ceases to run in ' + pCity.getName() + '...'
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV3')) > 0:
@@ -2534,6 +2549,9 @@ class CustomFunctions:
 								bRemoveIt = False
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 6") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV3'), 0)
+							sMsg = 'A governor workshop ceases operation in ' + pCity.getName() + '...'
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addCombatMessage(iPlayer,sMsg)
 
 					## Process disputes for nobles to solve
 					if 'JUDGE' not in sCityInfo:
@@ -2740,6 +2758,11 @@ class CustomFunctions:
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CAST_HEALING_TOUCH')) and not pUnit.isHasCasted() and self.reqHeal(pUnit):
 					self.spellFieldMedic(pUnit)
 					pUnit.setHasCasted(True)
+					sMsg = pUnit.getName() + ' tends wounds...'
+					CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_BLESS',1,pUnit.getButton(),ColorTypes(12),pUnit.getX(),pUnit.getY(),True,True)
+					point = pUnit.plot().getPoint()
+					CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
+					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CREATION'),point)
 
 				## Fortified Priests Auto-Buff if they can
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIVINE')) and pUnit.getFortifyTurns() > 1 and not pUnit.isHasCasted():
@@ -3088,6 +3111,8 @@ class CustomFunctions:
 						oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_PIT_BEAST'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 					else:
 						oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_CHAOS_MARAUDER'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+					sMsg = 'An ' + pUnit.getName() + ' turns evil!'
+					CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_BLESS',1,pUnit.getButton(),ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL'), False)
 					oNewUnit.convert(pUnit)
 
@@ -3098,7 +3123,7 @@ class CustomFunctions:
 					oNewUnit.convert(pUnit)
 
 				## Animals can have young
-				if (bCanCreateUnit and not pPlot.isCity() and CyGame().getSorenRandNum(300, "NewAnimal") < pUnit.getLevel() - 5 + pUnit.getFortifyTurns() and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'))):
+				if (bCanCreateUnit and not pPlot.isCity() and pUnit.getFortifyTurns() > 0 and CyGame().getSorenRandNum(300, "NewAnimal") < pUnit.getLevel() - 5 + pUnit.getFortifyTurns() and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'))):
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 					if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER'):
 						oNewUnit = gc.getInfoTypeForString('UNIT_BABY_SPIDER')
