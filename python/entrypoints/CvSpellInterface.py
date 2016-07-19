@@ -5091,7 +5091,7 @@ def reqBlessMinor(caster):
 	pPlot = caster.plot()
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
-		if pUnit.isAlive():
+		if pUnit.isAlive() or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')):
 			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED_MINOR')):
 				return True
 	return False
@@ -5102,12 +5102,10 @@ def spellBlessMinor(caster):
 	pPlot = caster.plot()
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
-		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')):
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')) and not caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')):
 			pUnit.changeDamage(-10,0)
-		if pUnit.isAlive():
+		if pUnit.isAlive() or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')):
 			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED_MINOR')):
-				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL')):
-					pUnit.changeDamage(-15,0)
 				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED_MINOR'),True)
 				iNumBlessed = iNumBlessed + 1
 				if (iNumBlessed > 3 + int( iL / 2 ) ):

@@ -7230,10 +7230,10 @@
             <iAsset>6</iAsset>
             <iPower>12</iPower>
             <UnitMeshGroups>
-            <iGroupSize>5</iGroupSize>
+            <iGroupSize>1</iGroupSize>
             <fMaxSpeed>2.25</fMaxSpeed>
             <fPadTime>1</fPadTime>
-            <iMeleeWaveSize>5</iMeleeWaveSize>
+            <iMeleeWaveSize>1</iMeleeWaveSize>
             <iRangedWaveSize>0</iRangedWaveSize>
                 <UnitMeshGroup>
                     <iRequired>1</iRequired>
@@ -7250,6 +7250,18 @@
             <FreePromotions>
                 <FreePromotion>
                     <PromotionType>PROMOTION_ANGEL</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CHANNELING1</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAST_HEALING_TOUCH</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAST_BLESS_MINOR</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
             </FreePromotions>
