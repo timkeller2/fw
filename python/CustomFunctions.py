@@ -3096,11 +3096,6 @@ class CustomFunctions:
 					oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 					oNewUnit.convert(pUnit)
-					
-				## Mounted Griffons have extra combat strength
-PROMOTION_BUCCANEERS
-				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GRIFFON'):
-					
 
 				## Animals can have young
 				if (bCanCreateUnit and CyGame().getSorenRandNum(300, "NewAnimal") < pUnit.getLevel() - 1 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'))):
