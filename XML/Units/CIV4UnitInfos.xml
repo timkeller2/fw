@@ -7267,7 +7267,8 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
-            <iCombatDefense>4</iCombatDefense>
+            <bFreeXP>1</bFreeXP>
+			<iCombatDefense>4</iCombatDefense>
             <iTier>3</iTier>
             <iWeaponTier>3</iWeaponTier>
             <PrereqCiv>CIVILIZATION_MERCURIANS</PrereqCiv>
@@ -74335,6 +74336,7 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
+            <bFreeXP>1</bFreeXP>
             <iCombatDefense>2</iCombatDefense>
             <iTier>1</iTier>
         </UnitInfo>
