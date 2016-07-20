@@ -8879,7 +8879,7 @@
             <PromotionPrereqAnd>NONE</PromotionPrereqAnd>
             <PromotionNextLevel>NONE</PromotionNextLevel>
             <PyPerTurn></PyPerTurn>
-            <iGroupSize>1</iGroupSize>
+            <iGroupSize>0</iGroupSize>
             <UnitArtStyleType>NONE</UnitArtStyleType>
             <PromotionCombatType>NONE</PromotionCombatType>
             <iPromotionCombatMod>0</iPromotionCombatMod>
