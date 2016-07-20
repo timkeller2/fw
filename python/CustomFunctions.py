@@ -2433,7 +2433,7 @@ class CustomFunctions:
 						if CyGame().getGameTurn() > sCityInfo['TR1']:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE1'), 0)
 							sMsg = 'A treasure runs out in ' + pCity.getName() + '... '
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							sCityInfo['TR1'] = 0
 							pCity.setScriptData(cPickle.dumps(sCityInfo))
@@ -2450,7 +2450,7 @@ class CustomFunctions:
 						if CyGame().getGameTurn() > sCityInfo['TR2']:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE2'), 0)
 							sMsg = 'A large treasure runs out in ' + pCity.getName() + '... '
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							sCityInfo['TR2'] = 0
 							pCity.setScriptData(cPickle.dumps(sCityInfo))
@@ -2467,7 +2467,7 @@ class CustomFunctions:
 						if CyGame().getGameTurn() > sCityInfo['TR3']:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE3'), 0)
 							sMsg = 'A grand treasure runs out in ' + pCity.getName() + '... '
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							sCityInfo['TR3'] = 0
 							pCity.setScriptData(cPickle.dumps(sCityInfo))

@@ -2202,6 +2202,13 @@
             <Description>TXT_KEY_PROMOTION_DIVINE</Description>
             <Help>TXT_KEY_PROMOTION_DIVINE_PEDIA</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
+            <PromotionPrereq>PROMOTION_MEDIC2</PromotionPrereq>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_DISCIPLE</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Divine.dds</Button>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
