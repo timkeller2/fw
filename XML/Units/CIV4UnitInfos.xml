@@ -7028,7 +7028,7 @@
             </UniqueNames>
             <Special>NONE</Special>
             <Capture>NONE</Capture>
-            <Combat>UNITCOMBAT_MELEE</Combat>
+            <Combat>UNITCOMBAT_DISCIPLE</Combat>
             <Domain>DOMAIN_LAND</Domain>
             <DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
             <Invisible>NONE</Invisible>
@@ -7250,18 +7250,6 @@
             <FreePromotions>
                 <FreePromotion>
                     <PromotionType>PROMOTION_ANGEL</PromotionType>
-                    <bFreePromotion>1</bFreePromotion>
-                </FreePromotion>
-                <FreePromotion>
-                    <PromotionType>PROMOTION_CHANNELING1</PromotionType>
-                    <bFreePromotion>1</bFreePromotion>
-                </FreePromotion>
-                <FreePromotion>
-                    <PromotionType>PROMOTION_CAST_HEALING_TOUCH</PromotionType>
-                    <bFreePromotion>1</bFreePromotion>
-                </FreePromotion>
-                <FreePromotion>
-                    <PromotionType>PROMOTION_CAST_BLESS_MINOR</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
             </FreePromotions>
