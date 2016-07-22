@@ -37,7 +37,7 @@ class CustomFunctions:
 		
 		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 		sMsg = 'A ' + str( pUnit.getName() ) + ' has young...'
-		CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
+		CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,pUnit.getButton(),ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
 		CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
 	
 	def retCombat(self,unit):
@@ -2417,11 +2417,11 @@ class CustomFunctions:
 						if tUnit != -1:
 							tUnit.changeExperience(1, -1, False, False, False)
 							sMsg = tUnit.getName() + ' studies at the ' + pCity.getName() + ' Academy... '
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Buildings/Library.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 						else:
 							sMsg = 'The ' + pCity.getName() + ' Academy has an opening for a new student... '
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Buildings/Library.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 
 					## Treasure and Noble Building Expiration
@@ -2433,7 +2433,7 @@ class CustomFunctions:
 						if CyGame().getGameTurn() > sCityInfo['TR1']:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE1'), 0)
 							sMsg = 'A treasure runs out in ' + pCity.getName() + '... '
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							sCityInfo['TR1'] = 0
 							pCity.setScriptData(cPickle.dumps(sCityInfo))
@@ -2450,7 +2450,7 @@ class CustomFunctions:
 						if CyGame().getGameTurn() > sCityInfo['TR2']:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE2'), 0)
 							sMsg = 'A large treasure runs out in ' + pCity.getName() + '... '
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							sCityInfo['TR2'] = 0
 							pCity.setScriptData(cPickle.dumps(sCityInfo))
@@ -2467,7 +2467,7 @@ class CustomFunctions:
 						if CyGame().getGameTurn() > sCityInfo['TR3']:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE3'), 0)
 							sMsg = 'A grand treasure runs out in ' + pCity.getName() + '... '
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							sCityInfo['TR3'] = 0
 							pCity.setScriptData(cPickle.dumps(sCityInfo))
@@ -2485,7 +2485,7 @@ class CustomFunctions:
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 1") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE1'), 0)
 							sMsg = 'An estate falls to ruin in ' + pCity.getName() + '...'
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
@@ -2498,7 +2498,7 @@ class CustomFunctions:
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 2") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE2'), 0)
 							sMsg = 'Extensive grounds grow up with thorns and thistles in ' + pCity.getName() + '...'
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
@@ -2511,7 +2511,7 @@ class CustomFunctions:
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 3") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE3'), 0)
 							sMsg = 'A banquet hall falls quiet in ' + pCity.getName() + '...'
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
@@ -2524,7 +2524,7 @@ class CustomFunctions:
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 4") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV1'), 0)
 							sMsg = 'A manor falls to ruin in ' + pCity.getName() + '...'
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
@@ -2537,7 +2537,7 @@ class CustomFunctions:
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 5") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV2'), 0)
 							sMsg = 'An abby ceases to run in ' + pCity.getName() + '...'
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
@@ -2550,7 +2550,7 @@ class CustomFunctions:
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 6") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV3'), 0)
 							sMsg = 'A governor workshop ceases operation in ' + pCity.getName() + '...'
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 
 					## Process disputes for nobles to solve
@@ -2589,7 +2589,7 @@ class CustomFunctions:
 								mPlayer = gc.getPlayer(imPlayer)
 								sMsg = pPlayer.getName() + ' sends ' + pUnit.getName() + 's from ' + pCity.getName() + ' to serve the great ' + mPlayer.getName() + '...'
 								CyInterface().addCombatMessage(imPlayer,sMsg)
-								CyInterface().addMessage(imPlayer,false,25,sMsg,'AS2D_GOODY_GOLD',1,str(gc.getUnitInfo(pUnit.getUnitType()).getImage()),ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
+								CyInterface().addMessage(imPlayer,false,25,sMsg,'AS2D_GOODY_GOLD',1,pUnit.getButton(),ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
 								newUnit = mPlayer.initUnit(pUnit.getUnitType(), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 								newUnit.convert(pUnit)
 								break
@@ -2699,7 +2699,7 @@ class CustomFunctions:
 					newUnit.convert(pUnit)
 					
 				## Computer Players gain creeps within their borders
-				if (pPlot.isOwned() and pPlayer.isBarbarian() and not plotPlayer.isBarbarian() and not plotPlayer.isHuman() and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE')):
+				if (pPlot.isOwned() and pPlayer.isBarbarian() and not plotPlayer.isBarbarian() and not plotPlayer.isHuman() and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE') and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_ORTHUS')):
 					pCity = plotPlayer.getCity(self.iValidCity(plotPlayer))
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), False)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SLEEPING'), True)

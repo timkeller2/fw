@@ -410,11 +410,16 @@
             <Description>TXT_KEY_PROMOTION_BLITZ</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_DRILL4</PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_DIRE</PromotionPrereqOr1>
             <TechPrereq>TECH_MILITARY_STRATEGY</TechPrereq>
             <bBlitz>1</bBlitz>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
                 <UnitCombat>
@@ -2210,7 +2215,6 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Divine.dds</Button>
-            <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_DRAGON</Type>
@@ -5228,6 +5232,10 @@
             <iFriendlyHealChange>3</iFriendlyHealChange>
             <UnitCombats>
                 <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_BEAST</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
@@ -6595,8 +6603,8 @@
             <Type>PROMOTION_SENTRY</Type>
             <Description>TXT_KEY_PROMOTION_SENTRY</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <PromotionPrereq>PROMOTION_COMBAT3</PromotionPrereq>
-            <PromotionPrereqOr1>PROMOTION_PATH_FINDING2</PromotionPrereqOr1>
+            <PromotionPrereqOr1>PROMOTION_COMBAT3</PromotionPrereqOr1>
+            <PromotionPrereqOr2>PROMOTION_PATH_FINDING2</PromotionPrereqOr2>
             <iVisibilityChange>1</iVisibilityChange>
             <UnitCombats>
                 <UnitCombat>
@@ -8625,11 +8633,11 @@
             <TechPrereq>TECH_FERAL_BOND</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
-            <bBlitz>1</bBlitz>
+            <bBlitz>0</bBlitz>
             <bAmphib>0</bAmphib>
             <bRiver>0</bRiver>
             <bEnemyRoute>0</bEnemyRoute>
-            <bAlwaysHeal>1</bAlwaysHeal>
+            <bAlwaysHeal>0</bAlwaysHeal>
             <bHillsDoubleMove>0</bHillsDoubleMove>
             <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
             <iVisibilityChange>0</iVisibilityChange>
@@ -20340,12 +20348,12 @@
         <PromotionInfo>
             <Type>PROMOTION_MORALE_1</Type>
             <Description>Eager</Description>
-            <Help>Highest combat morale!</Help>
+            <Help>High combat morale!</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <iCombatPercent>0</iCombatPercent>
-            <Button>Art/Interface/Buttons/Promotions/Valor.dds</Button>
-            <iAIWeight>-100</iAIWeight>
+            <Button>,Art/Interface/Buttons/Promotions/Combat5.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,7,16</Button>
+            <iAIWeight>100</iAIWeight>
             <iCombatPercentDefense>0</iCombatPercentDefense>
         </PromotionInfo>
         <PromotionInfo>
