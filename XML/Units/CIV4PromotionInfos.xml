@@ -7831,7 +7831,7 @@
             <iExtraCombatDefense>-1</iExtraCombatDefense>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>10</iSpellCasterXP>
-            <iSpellDamageModify>10</iSpellDamageModify>
+            <iSpellDamageModify>5</iSpellDamageModify>
             <DamageTypeCombats>
                 <DamageTypeCombat>
                     <DamageType>DAMAGE_UNHOLY</DamageType>

@@ -2422,12 +2422,24 @@ def spellRevelation(caster):
 						pUnit.kill(True, caster.getOwner())
 
 def spellRingofFlames(caster):
+	iR = 1
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3')):
+		iR = 2
+	iL = caster.getLevel() * iR * 2
+	iNum = 0
 	iX = caster.getX()
 	iY = caster.getY()
 	for iiX in range(iX-1, iX+2, 1):
 		for iiY in range(iY-1, iY+2, 1):
 			if not (iiX == iX and iiY == iY):
 				pPlot = CyMap().plot(iiX,iiY)
+				for i in range(pPlot.getNumUnits()):
+					pUnit = pPlot.getUnit(i)
+					iDam = iR * caster.getLevel() + 5
+					iMax = 40
+					if pUnit.getDamage() < iMax and iNum <= iL:
+						pUnit.doDamage(iDam, iMax, caster, gc.getInfoTypeForString('DAMAGE_FIRE'), true)
+						iNum += 1
 				bValid = True
 				if pPlot.getImprovementType() != -1:
 					if gc.getImprovementInfo(pPlot.getImprovementType()).isPermanent():
@@ -2436,7 +2448,7 @@ def spellRingofFlames(caster):
 					if (pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FOREST') or pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_JUNGLE') or pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FOREST_NEW')):
 						if CyGame().getSorenRandNum(100, "Flames Spread") <= gc.getDefineINT('FLAMES_SPREAD_CHANCE'):
 							pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SMOKE'))
-
+							
 def reqRiverOfBlood(caster):
 	pPlayer = gc.getPlayer(caster.getOwner())
 	if pPlayer.getNumCities() == 0:

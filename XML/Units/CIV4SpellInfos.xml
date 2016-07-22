@@ -1930,7 +1930,7 @@
         <SpellInfo>
             <Type>SPELL_MAELSTROM</Type>
             <Description>TXT_KEY_SPELL_MAELSTROM</Description>
-            <Civilopedia>Does 1%/lev damage to all units within range 1 except the caster's tile, unless the caster has channeling3 in which case the damage is 2%/lev and range 2.</Civilopedia>
+            <Civilopedia>Does 1/lev% damage to all units within range 1 except the caster's tile, unless the caster has channeling3 in which case the damage is 2/lev% and range 2.  Affects lev x 2 units, double if chan 3.</Civilopedia>
             <PromotionPrereq1>PROMOTION_AIR2</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
@@ -2488,6 +2488,7 @@
             <Type>SPELL_RING_OF_FLAMES</Type>
             <Description>TXT_KEY_SPELL_RING_OF_FLAMES</Description>
             <Civilopedia>TXT_KEY_SPELL_RING_OF_FLAMES_PEDIA</Civilopedia>
+            <Help>Inflict 5+Lev% damage to lev x 2 units within 1 range.  +Lev% damage if channeling 3.</Help>
             <PromotionPrereq1>PROMOTION_CHANNELING2</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_DIVINE</PromotionPrereq2>
             <ReligionPrereq>RELIGION_THE_ASHEN_VEIL</ReligionPrereq>
@@ -2496,8 +2497,8 @@
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
             <iRange>1</iRange>
-            <iDamage>7</iDamage>
-            <iDamageLimit>40</iDamageLimit>
+            <iDamage>0</iDamage>
+            <iDamageLimit>0</iDamageLimit>
             <DamageType>DAMAGE_FIRE</DamageType>
             <PyResult>spellRingofFlames(pCaster)</PyResult>
             <Effect>EFFECT_RING_OF_FLAMES</Effect>
@@ -4195,7 +4196,7 @@
             <Type>SPELL_TSUNAMI</Type>
             <Description>TXT_KEY_SPELL_TSUNAMI</Description>
             <Civilopedia></Civilopedia>
-            <Help>Inflict ~2%/lev range 1 on water and adjacent tiles, ~4%/lev range 2 if the caster has channeling 3.</Help>
+            <Help>Inflict 5+1/lev% range 1 on water and adjacent tiles, 5+2/lev% range 2 if the caster has channeling 3. Affects up to lev x 2 units, double if chan 3.</Help>
             <PromotionPrereq1>PROMOTION_CHANNELING2</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_DIVINE</PromotionPrereq2>
             <ReligionPrereq>RELIGION_OCTOPUS_OVERLORDS</ReligionPrereq>
