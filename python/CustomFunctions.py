@@ -3123,7 +3123,7 @@ class CustomFunctions:
 					oNewUnit.convert(pUnit)
 
 				## Animals can have young
-				if (bCanCreateUnit and not pPlot.isCity() and pUnit.getFortifyTurns() > 0 and CyGame().getSorenRandNum(300, "NewAnimal") < pUnit.getLevel() - 5 + pUnit.getFortifyTurns() and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'))):
+				if (bCanCreateUnit and not pPlot.isCity() and pUnit.getFortifyTurns() > 2 and CyGame().getSorenRandNum(300, "NewAnimal") < pUnit.getLevel() - 5 + pUnit.getFortifyTurns() - pPlot.getNumUnits() and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'))):
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 					if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER'):
 						oNewUnit = gc.getInfoTypeForString('UNIT_BABY_SPIDER')
