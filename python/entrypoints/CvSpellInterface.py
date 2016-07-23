@@ -2262,11 +2262,12 @@ def spellReligiousFervor(caster):
 def reqRepair(caster):
 	pPlot = caster.plot()
 	iGolem = gc.getInfoTypeForString('PROMOTION_GOLEM')
+	iDwarf = gc.getInfoTypeForString('PROMOTION_DWARF')
 	iNaval = gc.getInfoTypeForString('UNITCOMBAT_NAVAL')
 	iSiege = gc.getInfoTypeForString('UNITCOMBAT_SIEGE')
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
-		if (pUnit.getUnitCombatType() == iSiege or pUnit.getUnitCombatType() == iNaval or pUnit.isHasPromotion(iGolem)):
+		if (pUnit.getUnitCombatType() == iSiege or pUnit.getUnitCombatType() == iNaval or (pUnit.isHasPromotion(iGolem) and caster.isHasPromotion(iDwarf))):
 			if pUnit.getDamage() > 0:
 				return True
 	return False
@@ -2276,11 +2277,12 @@ def spellRepair(caster,amount):
 	iL = caster.getLevel()
 	iNumHealed = 0
 	iGolem = gc.getInfoTypeForString('PROMOTION_GOLEM')
+	iDwarf = gc.getInfoTypeForString('PROMOTION_DWARF')
 	iNaval = gc.getInfoTypeForString('UNITCOMBAT_NAVAL')
 	iSiege = gc.getInfoTypeForString('UNITCOMBAT_SIEGE')
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
-		if (pUnit.getUnitCombatType() == iSiege or pUnit.getUnitCombatType() == iNaval or pUnit.isHasPromotion(iGolem)) and pUnit.getDamage() > 0:
+		if (pUnit.getUnitCombatType() == iSiege or pUnit.getUnitCombatType() == iNaval or (pUnit.isHasPromotion(iGolem) and caster.isHasPromotion(iDwarf))) and pUnit.getDamage() > 0:
 			iDefStr = pUnit.baseCombatStr()
 			if iDefStr < 1:
 				iDefStr = 1

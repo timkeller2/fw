@@ -13260,8 +13260,8 @@
         <SpellInfo>
             <Type>SPELL_WORKER_REPAIR</Type>
             <Description>Repair</Description>
-            <Civilopedia>Repair Naval, Siege or Golem units</Civilopedia>
-            <Help>Repair Naval, Siege or Golem units</Help>
+            <Civilopedia>Repair Naval, Siege or (if dwarven) Golem units</Civilopedia>
+            <Help>Repair Naval, Siege or (if dwarven) Golem units</Help>
             <UnitClassPrereq>UNITCLASS_WORKER</UnitClassPrereq>
             <bAllowAI>1</bAllowAI>
             <iAIWeightWar>50</iAIWeightWar>
