@@ -409,8 +409,8 @@
             <Type>PROMOTION_BLITZ</Type>
             <Description>TXT_KEY_PROMOTION_BLITZ</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <PromotionPrereq>PROMOTION_DRILL4</PromotionPrereq>
-            <PromotionPrereqOr1>PROMOTION_DIRE</PromotionPrereqOr1>
+            <PromotionPrereqOr1>PROMOTION_DRILL4</PromotionPrereqOr1>
+            <PromotionPrereqOr2>PROMOTION_DIRE</PromotionPrereqOr2>
             <TechPrereq>TECH_MILITARY_STRATEGY</TechPrereq>
             <bBlitz>1</bBlitz>
             <UnitCombats>
@@ -5038,13 +5038,13 @@
             <FeatureAttacks>
                 <FeatureAttack>
                     <FeatureType>FEATURE_JUNGLE</FeatureType>
-                    <iFeatureAttack>20</iFeatureAttack>
+                    <iFeatureAttack>40</iFeatureAttack>
                 </FeatureAttack>
             </FeatureAttacks>
             <FeatureDefenses>
                 <FeatureDefense>
                     <FeatureType>FEATURE_JUNGLE</FeatureType>
-                    <iFeatureDefense>20</iFeatureDefense>
+                    <iFeatureDefense>40</iFeatureDefense>
                 </FeatureDefense>
             </FeatureDefenses>
             <TerrainDoubleMoves>
@@ -8624,10 +8624,10 @@
         <PromotionInfo>
 			<Type>PROMOTION_DIRE</Type>
             <Description>Dire</Description>
-            <Help></Help>
+            <Help>Requires level 8.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
-            <PromotionPrereq>PROMOTION_COMBAT5</PromotionPrereq>
+            <PromotionPrereq>NONE</PromotionPrereq>
             <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
             <TechPrereq>TECH_FERAL_BOND</TechPrereq>
@@ -8751,11 +8751,12 @@
             <BonusPrereq>NONE</BonusPrereq>
             <PromotionPrereqOr3>NONE</PromotionPrereqOr3>
             <PromotionPrereqOr4>NONE</PromotionPrereqOr4>
-            <PromotionPrereqAnd>PROMOTION_MOBILITY2</PromotionPrereqAnd>
+            <PromotionPrereqAnd>NONE</PromotionPrereqAnd>
             <PromotionNextLevel>NONE</PromotionNextLevel>
             <PyPerTurn></PyPerTurn>
             <iGroupSize>0</iGroupSize>
             <UnitArtStyleType>NONE</UnitArtStyleType>
+            <iMinLevel>8</iMinLevel>
             <PromotionCombatType>NONE</PromotionCombatType>
             <iPromotionCombatMod>0</iPromotionCombatMod>
             <DamageTypeCombats>
