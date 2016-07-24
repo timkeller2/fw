@@ -1447,7 +1447,7 @@ class CvEventManager:
 		if i > 0:
 			unit.changeExperience(i, -1, False, False, False)
 			sMsg = city.getName() + ' trains a specialized ' + unit.getName() + ' ('+str(i)+'xp)'
-			CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),city.getX(),city.getY(),True,True)
+			CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,unit.getButton(),ColorTypes(8),city.getX(),city.getY(),True,True)
 			CyInterface().addCombatMessage(iPlayer,sMsg)
 
 		## Announce the training of powerful units

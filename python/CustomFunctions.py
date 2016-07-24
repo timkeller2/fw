@@ -30,13 +30,15 @@ class CustomFunctions:
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER4'),True)
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT5')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER5'),True)
-		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2')):
-			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLITZ')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
 		
+		pUnit.changeExperience(1, -1, False, False, False)
 		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 		sMsg = 'A ' + str( pUnit.getName() ) + ' has young...'
+		if pUnit.getName().find('Offspring') == -1:
 		CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,pUnit.getButton(),ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
 		CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
 	
