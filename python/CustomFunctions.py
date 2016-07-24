@@ -184,7 +184,7 @@ class CustomFunctions:
 		if caster.plot().isCity():
 			pCity = caster.plot().getPlotCity()
 			iMult = pCity.getPopulation()
-			if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TAVERN')) != 0:
+			if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_TAVERN')) != 0:
 				iMult += iSearch
 		else:
 			if mode == 9:
@@ -239,7 +239,7 @@ class CustomFunctions:
 			pCity = caster.plot().getPlotCity()
 			sName = pCity.getName()
 			iMult = pCity.getPopulation()
-			if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TAVERN')) != 0:
+			if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_TAVERN')) != 0:
 				iMult += iSearch
 
 		bCreep = True
@@ -3147,10 +3147,10 @@ class CustomFunctions:
 					if pPlot.isCity() == True:
 						iRecover += 2
 						pCity = pUnit.plot().getPlotCity()
-						if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_HERBALIST')) > 0:
+						if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_HERBALIST')) > 0:
 							iRecover += 2
 							iDisMult -= 1
-						if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_INFIRMARY')) > 0:
+						if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_INFIRMARY')) > 0:
 							iRecover += 4
 							iDisMult = 1
 					if iRecover < 1:

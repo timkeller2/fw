@@ -3767,7 +3767,7 @@ def voteFundDissidents():
 def reqBuilding(caster,sBuilding,sPromotion):
 	pCity = caster.plot().getPlotCity()
 
-	if pCity.getNumRealBuilding(gc.getInfoTypeForString(sBuilding)) == 0:
+	if pCity.getNumBuilding(gc.getInfoTypeForString(sBuilding)) == 0:
 		return False
 
 	if caster.isHasPromotion(gc.getInfoTypeForString(sPromotion)):
@@ -4377,7 +4377,7 @@ def reqLearnMagic(caster):
 	if pPlayer.getGold() < iCost:
 		return False	
 
-	if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_MAGE_GUILD')) == 0:
+	if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_MAGE_GUILD')) == 0:
 		return False
 
 	strCheckData = cPickle.loads(pCity.getScriptData())
