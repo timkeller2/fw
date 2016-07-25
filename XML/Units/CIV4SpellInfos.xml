@@ -4437,7 +4437,7 @@
             <iAIWeight>10</iAIWeight>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <iDelay>3</iDelay>
+            <iDelay>2</iDelay>
             <PyResult>spellVitalize(pCaster)</PyResult>
             <PyRequirement>reqVitalize(pCaster)</PyRequirement>
             <Effect>EFFECT_VITALIZE</Effect>
