@@ -2670,6 +2670,9 @@ class CustomFunctions:
 						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_6'), True)
 					elif iMorale < -4:	
 						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_7'), True)
+				else:
+					# Computer Units get Ravager Bonus
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_RAVAGER'), False)
 				
 				# Units with aptitude!
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NO_RANGE')):
