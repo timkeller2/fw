@@ -15970,7 +15970,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Spells/Destroy Undead.dds</Button>
+            <Button>Art/Interface/Buttons/Spells/Curedisease.dds</Button>
             <bBoarding>0</bBoarding>
             <bOnlyDefensive>0</bOnlyDefensive>
             <bDispellable>0</bDispellable>
