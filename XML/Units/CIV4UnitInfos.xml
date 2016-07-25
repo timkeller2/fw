@@ -5148,6 +5148,10 @@
                     <PromotionType>PROMOTION_SENTRY</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
@@ -5380,6 +5384,10 @@
                 </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_SENTRY2</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
             </FreePromotions>
@@ -6746,6 +6754,10 @@
                 </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_SENTRY2</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
                 <FreePromotion>
@@ -9645,6 +9657,10 @@
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
                 <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
                     <PromotionType>PROMOTION_FLYING</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
@@ -12223,6 +12239,10 @@
             <iHotKeyPriority>0</iHotKeyPriority>
             <FreePromotions>
                 <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
                     <PromotionType>PROMOTION_FLYING</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
@@ -13845,6 +13865,10 @@
             <bGraphicalOnly>1</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
             <FreePromotions>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_FLYING</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
@@ -18545,6 +18569,10 @@
                 </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_FLYING</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
                 <FreePromotion>
@@ -27038,6 +27066,10 @@
                     <PromotionType>PROMOTION_IMMUNE_COLD</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
@@ -30059,6 +30091,10 @@
                 </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_SENTRY</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
             </FreePromotions>
@@ -35043,7 +35079,7 @@
             <StateReligion>NONE</StateReligion>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
-            <PrereqBuilding>NONE</PrereqBuilding>
+            <PrereqBuilding>BUILDING_TOWER_OF_DIVINATION</PrereqBuilding>
             <PrereqTech>NONE</PrereqTech>
             <TechTypes>
             </TechTypes>
@@ -35055,7 +35091,7 @@
             <Flavors>
             </Flavors>
             <iAIWeight>0</iAIWeight>
-            <iCost>-1</iCost>
+            <iCost>90</iCost>
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -35167,6 +35203,10 @@
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
             <FreePromotions>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_FLYING</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
@@ -50547,6 +50587,10 @@
                     <PromotionType>PROMOTION_FLYING</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
@@ -54928,6 +54972,10 @@
                 </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_FLYING</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
             </FreePromotions>
@@ -68683,6 +68731,10 @@
                     <PromotionType>PROMOTION_CROWN_OF_COMMAND</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
@@ -74980,6 +75032,10 @@
                     <PromotionType>PROMOTION_ATHAME</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
@@ -76841,6 +76897,10 @@
                 </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_FIRE3</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CAN_FLY</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
             </FreePromotions>

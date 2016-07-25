@@ -34,6 +34,8 @@ class CustomFunctions:
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLITZ')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANCIENT')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1'),True)
 		
 		pUnit.changeExperience(1, -1, False, False, False)
 		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
@@ -2990,7 +2992,7 @@ class CustomFunctions:
 							pBestUnit = -1
 							iBestRange = iABR
 							for tUnit in py.getUnitList():
-								if tUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL') and not tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FAIR_WINDS')):
+								if (tUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL') or tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FLYING'))) and not tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FAIR_WINDS')):
 									iRange = int( math.fabs(pUnit.getX()-tUnit.getX()) )
 									if iRange < int( math.fabs(pUnit.getY()-tUnit.getY()) ):
 										iRange = int( math.fabs(pUnit.getY()-tUnit.getY()) )
@@ -3011,6 +3013,12 @@ class CustomFunctions:
 						if iNoTargets == iBuffs:
 							break
 
+				## Living units that fly take endurance damage
+				if pPlayer.isHuman() and pUnit.isAlive() and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FLYING')):
+					CyInterface().addMessage(pUnit.getOwner(),false,25,'Your '+pUnit.getName()+' is flying and taking endurance damage...','',1,'Art/Interface/Buttons/Promotions/flying.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
+					CyInterface().addCombatMessage(pUnit.getOwner(),'Your '+pUnit.getName()+' is flying and taking endurance damage...')
+					pUnit.changeDamage( 10, pUnit.getOwner() ) 
+							
 				## Low level vessels can take storm damage
 				if pPlayer.isHuman() and iTerrain == iOcean and ( not pPlot.isOwned() or pPlot.getOwner() != pUnit.getOwner()):
 					if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GALLEY') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_TRIREME'):
@@ -3126,7 +3134,11 @@ class CustomFunctions:
 					oNewUnit.convert(pUnit)
 
 				## Animals can have young
-				if (bCanCreateUnit and not pPlot.isCity() and pUnit.getFortifyTurns() > 2 and CyGame().getSorenRandNum(300, "NewAnimal") < pUnit.getLevel() - 5 + pUnit.getFortifyTurns() - pPlot.getNumUnits() and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'))):
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PROLIFIC')):
+					iBirth = 3
+				else:
+					iBirth = 0
+				if (bCanCreateUnit and not pPlot.isCity() and pUnit.getFortifyTurns() > 2 and CyGame().getSorenRandNum(300, "NewAnimal") < pUnit.getLevel() + iBirth - 5 + pUnit.getFortifyTurns() - pPlot.getNumUnits() and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'))):
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 					if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER'):
 						oNewUnit = gc.getInfoTypeForString('UNIT_BABY_SPIDER')

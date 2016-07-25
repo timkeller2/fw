@@ -7814,7 +7814,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Promotions/Tavern.dds</Button>
+            <Button>Art/Interface/Buttons/Buildings/Taverngrigori.dds</Button>
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_LEARN_MAGIC</Type>
@@ -13273,6 +13273,72 @@
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
             <Button>Art/Interface/Buttons/Spells/Repair.dds</Button>
+        </SpellInfo>
+        <SpellInfo>
+            <Type>SPELL_LAND</Type>
+            <Description>Land</Description>
+            <Civilopedia></Civilopedia>
+            <Help>Stop flying</Help>
+            <PromotionPrereq1>PROMOTION_FLYING</PromotionPrereq1>
+            <PromotionPrereq2>PROMOTION_CAN_FLY</PromotionPrereq2>
+            <bAllowAI>0</bAllowAI>
+            <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
+            <bCausesWar>0</bCausesWar>
+            <bGlobal>0</bGlobal>
+            <bInBordersOnly>0</bInBordersOnly>
+            <bInCityOnly>0</bInCityOnly>
+            <iAIWeight>0</iAIWeight>
+            <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
+            <bResistable>0</bResistable>
+            <iRange>0</iRange>
+            <iResistModify>0</iResistModify>
+            <iDamage>0</iDamage>
+            <iDamageLimit>0</iDamageLimit>
+            <RemovePromotionType1>PROMOTION_FLYING</RemovePromotionType1>
+            <RemovePromotionType2>PROMOTION_FAIR_WINDS</RemovePromotionType2>
+            <bBuffCasterOnly>1</bBuffCasterOnly>
+            <iCreateUnitNum>0</iCreateUnitNum>
+            <bPermanentUnitCreate>0</bPermanentUnitCreate>
+            <bImmuneTeam>0</bImmuneTeam>
+            <bImmuneNeutral>0</bImmuneNeutral>
+            <bImmuneEnemy>0</bImmuneEnemy>
+            <bImmuneFlying>0</bImmuneFlying>
+            <bImmuneNotAlive>0</bImmuneNotAlive>
+            <bDispel>0</bDispel>
+            <bPush>0</bPush>
+            <bRemoveHasCasted>0</bRemoveHasCasted>
+            <bSacrificeCaster>0</bSacrificeCaster>
+            <iChangePopulation>0</iChangePopulation>
+            <iCost>0</iCost>
+            <iImmobileTurns>0</iImmobileTurns>
+            <iMiscastChance>0</iMiscastChance>
+            <PyMiscast></PyMiscast>
+            <PyResult></PyResult>
+            <PyRequirement></PyRequirement>
+            <Effect>EFFECT_SPELL1</Effect>
+            <Sound>AS3D_SPELL_HASTE</Sound>
+            <HotKey></HotKey>
+            <bAltDown>0</bAltDown>
+            <bShiftDown>0</bShiftDown>
+            <bCtrlDown>0</bCtrlDown>
+            <bGraphicalOnly>0</bGraphicalOnly>
+            <iHotKeyPriority>0</iHotKeyPriority>
+            <Button>Art/Interface/Buttons/Promotions/flying.dds</Button>
+        </SpellInfo>
+        <SpellInfo>
+            <Type>SPELL_FLY</Type>
+            <Description>Fly!</Description>
+            <Help>Allows the unit to fly, increases defense, but costs living units 10% damage per turn in endurance damage.</Help>
+            <PromotionPrereq1>PROMOTION_CAN_FLY</PromotionPrereq1>
+            <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <AddPromotionType1>PROMOTION_FLYING</AddPromotionType1>
+            <bBuffCasterOnly>1</bBuffCasterOnly>
+            <Effect>EFFECT_SPELL1</Effect>
+            <Sound>AS3D_SPELL_HASTE</Sound>
+            <Button>Art/Interface/Buttons/Promotions/flying.dds</Button>
         </SpellInfo>
     </SpellInfos>
 </Civ4SpellInfos>

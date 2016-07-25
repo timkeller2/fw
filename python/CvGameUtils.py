@@ -505,6 +505,10 @@ class CvGameUtils:
 			if bBlock:
 				return True
 
+		if eUnit == gc.getInfoTypeForString('UNIT_GRIFFON'):
+			if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_TOWER_OF_DIVINATION')) == 0:
+				return True
+					
 		if eUnit == gc.getInfoTypeForString('UNIT_MAGICIAN'):
 			if 'LIBRARY' not in sCityInfo:
 				sCityInfo['OBELISK'] = 1
