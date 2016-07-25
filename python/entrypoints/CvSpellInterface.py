@@ -4829,7 +4829,7 @@ def spellVolley(caster,volleytype):
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT1')):
 					CyAudioGame().Play3DSound('AS3D_SPELL_HASTE',point.x,point.y,point.z)
 					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CHARM_PERSON'),point)
-					sDamType = 'DAMAGE_UNHOLY'
+					sDamType = 'DAMAGE_HOLY'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY1')):
 					CyAudioGame().Play3DSound('AS3D_SPELL_HASTE',point.x,point.y,point.z)
 					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_WIND_SWIRL'),point)
