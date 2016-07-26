@@ -56638,7 +56638,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_2</Type>
-            <Description>Master Crafted Weapons</Description>
+            <Description>Master Crafted Weapons (req pop 30)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56650,7 +56650,7 @@
             <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-175</iGold>
+            <iGold>-150</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -56739,7 +56739,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_3</Type>
-            <Description>Master Crafted Armor</Description>
+            <Description>Master Crafted Armor (req pop 30)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56751,7 +56751,7 @@
             <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-270</iGold>
+            <iGold>-150</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -56840,7 +56840,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_4</Type>
-            <Description>City Attack Gear</Description>
+            <Description>Axes for All</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56852,7 +56852,7 @@
             <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-60</iGold>
+            <iGold>0</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -56873,7 +56873,7 @@
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
-            <UnitPromotion>PROMOTION_CITY_RAIDER1</UnitPromotion>
+            <UnitPromotion></UnitPromotion>
             <UnitName></UnitName>
             <UnitCombatPromotions>
             </UnitCombatPromotions>
@@ -56925,7 +56925,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback>trainingyard10</PythonCallback>
+            <PythonCallback>axesforall</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo></PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -56953,7 +56953,7 @@
             <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-75</iGold>
+            <iGold>-50</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -57042,7 +57042,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_6</Type>
-            <Description>Heavy Weapons</Description>
+            <Description>Heavy Weapons (req pop 20)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -57054,7 +57054,7 @@
             <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-125</iGold>
+            <iGold>-100</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -57155,7 +57155,7 @@
             <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-90</iGold>
+            <iGold>-50</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -57243,7 +57243,7 @@
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
         <EventInfo>
-            <Type>EVENT_CRAFTSMEN_GUILD_8</Type>
+            <Type>EVENT_CRAFTSMEN_GUILD_8 (req pop 20)</Type>
             <Description>Heavy Armor</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
@@ -57256,7 +57256,7 @@
             <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-180</iGold>
+            <iGold>-100</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>

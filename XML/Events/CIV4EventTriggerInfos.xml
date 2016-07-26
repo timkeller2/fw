@@ -29973,6 +29973,7 @@
             <bHeadquarters>0</bHeadquarters>
             <Events>
                 <Event>EVENT_CRAFTSMEN_GUILD_1</Event>
+                <Event>EVENT_CRAFTSMEN_GUILD_4</Event>
                 <Event>EVENT_CRAFTSMEN_GUILD_5</Event>
                 <Event>EVENT_CRAFTSMEN_GUILD_7</Event>
                 <Event>EVENT_CRAFTSMEN_GUILD_6</Event>

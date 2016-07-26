@@ -3524,6 +3524,7 @@
         <PromotionInfo>
             <Type>PROMOTION_FLYING</Type>
             <Description>TXT_KEY_PROMOTION_FLYING</Description>
+            <Help>+40% combat defense while flying.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <bAmphib>1</bAmphib>

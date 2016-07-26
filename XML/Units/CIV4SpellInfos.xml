@@ -13329,9 +13329,22 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_FLY</Type>
-            <Description>Fly!</Description>
+            <Description>Fly</Description>
             <Help>Allows the unit to fly, increases defense, but costs living units 10% damage per turn in endurance damage.</Help>
             <PromotionPrereq1>PROMOTION_CAN_FLY</PromotionPrereq1>
+            <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <AddPromotionType1>PROMOTION_FLYING</AddPromotionType1>
+            <bBuffCasterOnly>1</bBuffCasterOnly>
+            <Effect>EFFECT_SPELL1</Effect>
+            <Sound>AS3D_SPELL_HASTE</Sound>
+            <Button>Art/Interface/Buttons/Promotions/flying.dds</Button>
+        </SpellInfo>
+        <SpellInfo>
+            <Type>SPELL_FLY_AIR3</Type>
+            <Description>Fly</Description>
+            <Help>Allows the unit to fly, increases defense, but costs living units 10% damage per turn in endurance damage.</Help>
+            <PromotionPrereq1>PROMOTION_AIR3</PromotionPrereq1>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
             <AddPromotionType1>PROMOTION_FLYING</AddPromotionType1>

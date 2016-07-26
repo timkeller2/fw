@@ -6939,7 +6939,7 @@ def canheavyweapons(argsList):
 	pCity = pUnit.plot().getPlotCity()
 	if cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_HEAVY_WEAPONS')):
 		strSetData = cPickle.loads(pCity.getScriptData())
-		if CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] > 29:
+		if pCity.getPopulation() > 19:
 			return True
 
 	return False
@@ -6961,7 +6961,7 @@ def canheavyarmor(argsList):
 	pCity = pUnit.plot().getPlotCity()
 	if cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_HEAVY_ARMOR')):
 		strSetData = cPickle.loads(pCity.getScriptData())
-		if CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] > 29:
+		if pCity.getPopulation() > 19:
 			return True
 
 	return False
@@ -6974,7 +6974,7 @@ def canmaster(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] > 44:
+	if pCity.getPopulation() > 29:
 		return True
 
 	return False
@@ -6991,7 +6991,7 @@ def canCulture1(argsList):
 	if pCity.getCulture(iPlayer) < 1000:
 		return False
 
-	if CyGame().getGameTurn() < 75:
+	if CyGame().getGameTurn() < 100:
 		return False
 
 	return True
@@ -7008,7 +7008,7 @@ def canCulture2(argsList):
 	if pCity.getCulture(iPlayer) < 4000:
 		return False
 
-	if CyGame().getGameTurn() < 100:
+	if CyGame().getGameTurn() < 125:
 		return False
 
 	return True
@@ -7025,7 +7025,7 @@ def canCulture3(argsList):
 	if pCity.getCulture(iPlayer) < 9000:
 		return False
 
-	if CyGame().getGameTurn() < 125:
+	if CyGame().getGameTurn() < 150:
 		return False
 
 	return True
@@ -7042,7 +7042,7 @@ def canCulture4(argsList):
 	if pCity.getCulture(iPlayer) < 16000:
 		return False
 
-	if CyGame().getGameTurn() < 150:
+	if CyGame().getGameTurn() < 175:
 		return False
 
 	return True
@@ -7059,7 +7059,7 @@ def canCulture5(argsList):
 	if pCity.getCulture(iPlayer) < 25000:
 		return False
 
-	if CyGame().getGameTurn() < 175:
+	if CyGame().getGameTurn() < 200:
 		return False
 
 	return True
@@ -7076,7 +7076,7 @@ def canCulture6(argsList):
 	if pCity.getCulture(iPlayer) < 36000:
 		return False
 
-	if CyGame().getGameTurn() < 200:
+	if CyGame().getGameTurn() < 225:
 		return False
 
 	return True
@@ -7093,7 +7093,7 @@ def canCulture7(argsList):
 	if pCity.getCulture(iPlayer) < 49000:
 		return False
 
-	if CyGame().getGameTurn() < 225:
+	if CyGame().getGameTurn() < 250:
 		return False
 
 	return True
@@ -8195,6 +8195,26 @@ def mageguild100(argsList):
 
 	cf.pay(pCity,'BUILDING_MAGE_GUILD',100,iPlayer,'mage guild')
 	
+def axesforall(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	caster = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = caster.plot().getPlotCity()
+
+	iRange = 2
+	for iiX in range(caster.getX()-iRange, caster.getX()+iRange+1, 1):
+		for iiY in range(caster.getY()-iRange, caster.getY()+iRange+1, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_THROWING_AXES')) and caster.getTeam() == pUnit.getTeam() and pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_MELEE'):
+					if bPlayer.getGold() > 10:
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_THROWING_AXES'),True)
+						bPlayer.changeGold(-10)
+						cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',2,iPlayer,'craftsmen guild')
+	
 def trainingyard2(argsList):
 	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
@@ -8213,7 +8233,7 @@ def trainingyard6(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',6,iPlayer,'craftsmen guild')
+	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',10,iPlayer,'craftsmen guild')
 	
 def trainingyard10(argsList):
 	iEvent = argsList[0]
@@ -8223,7 +8243,7 @@ def trainingyard10(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',10,iPlayer,'craftsmen guild')
+	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',20,iPlayer,'craftsmen guild')
 	
 def trainingyard25(argsList):
 	iEvent = argsList[0]
@@ -8233,7 +8253,7 @@ def trainingyard25(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',25,iPlayer,'craftsmen guild')
+	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',30,iPlayer,'craftsmen guild')
 	
 def alchemylab5(argsList):
 	iEvent = argsList[0]
