@@ -2648,6 +2648,7 @@ class CustomFunctions:
 
 				# Unit Morale
 				if pPlayer.isHuman():
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_RAVAGER'), False)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_1'), False)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_2'), False)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_3'), False)
@@ -2672,7 +2673,7 @@ class CustomFunctions:
 						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_7'), True)
 				else:
 					# Computer Units get Ravager Bonus
-					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_RAVAGER'), False)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_RAVAGER'), True)
 				
 				# Units with aptitude!
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NO_RANGE')):
