@@ -57243,8 +57243,8 @@
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
         <EventInfo>
-            <Type>EVENT_CRAFTSMEN_GUILD_8 (req pop 20)</Type>
-            <Description>Heavy Armor</Description>
+            <Type>EVENT_CRAFTSMEN_GUILD_8</Type>
+            <Description>Heavy Armor (req pop 20)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
