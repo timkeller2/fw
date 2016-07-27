@@ -4443,46 +4443,10 @@ def spellFireballFeedback(caster):
 		caster.changeDamage(iDam,0)
 		
 def reqJudge(caster):
-	pCity = caster.plot().getPlotCity()
-
-	sInfo = cPickle.loads(pCity.getScriptData())
-
-	if 'JUDGE' not in sInfo:
-		sInfo['JUDGE'] = 0
-
-	if sInfo['JUDGE'] > 0:
-		return True
-
-	return False
+	return cf.reqJudge(caster)
 
 def spellJudge(caster):
-	pCity = caster.plot().getPlotCity()
-	pPlayer = gc.getPlayer(caster.getOwner())
-	cPlayer = gc.getPlayer(pCity.getOwner())
-
-	sInfo = cPickle.loads(pCity.getScriptData())
-	
-	iDiv = ( cf.iNoble(caster,1) + 1 + sInfo['JUDGE'] )
-	if iDiv < 1:
-		iDiv = 1
-	iChance = ( ( cf.iNoble(caster,1) + 1 ) * 100 ) / iDiv
-	if CyGame().getSorenRandNum(cf.iNoble(caster,1)+1, "Judge") >= CyGame().getSorenRandNum(sInfo['JUDGE']+1, "Problem"):
-		## Success!
-		iGain = sInfo['JUDGE'] * 10 + 15
-		if caster.getOwner() == pCity.getOwner():
-			iGain = iGain * 2
-		iXP = sInfo['JUDGE'] / 2 + 1
-		caster.changeExperience( iXP , -1, False, False, False )
-		CyInterface().addMessage(caster.getOwner(),true,25,'Success! ('+str(iChance)+'% chance) '+caster.getName() + ' resolved a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!  You gain '+str(iGain)+' gold pieces and '+str(iXP)+'xp!','AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
-		CyInterface().addCombatMessage(caster.getOwner(),caster.getName() + ' resolved a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!  You gain '+str(iGain)+' gold pieces and '+str(iXP)+'xp!' )
-		pPlayer.setGold( pPlayer.getGold() + sInfo['JUDGE'] * 10 + 15 )
-		cPlayer.setGold( cPlayer.getGold() + sInfo['JUDGE'] * 10 + 15 )
-		sInfo['JUDGE'] = 0
-		pCity.setScriptData(cPickle.dumps(sInfo))
-	else:
-		## Failure, this turn...
-		CyInterface().addMessage(caster.getOwner(),true,25,'Failure. ('+str(iChance)+'% chance) '+caster.getName() + ' failed to resolve a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!','AS2D_PILLAGE',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
-		CyInterface().addCombatMessage(caster.getOwner(),caster.getName() + ' failed to resolve a ' + cf.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!' )
+	cf.spellJudge(caster)
 	
 def spellNeedJudge(caster):
 	for iPlayer in range(gc.getMAX_PLAYERS()):
