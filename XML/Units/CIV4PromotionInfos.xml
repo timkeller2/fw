@@ -6154,7 +6154,6 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Nomad.dds</Button>
-            <PromotionNextLevel>PROMOTION_NOMAD</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_ORC</Type>

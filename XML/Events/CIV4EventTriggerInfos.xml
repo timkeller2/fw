@@ -29664,6 +29664,7 @@
             <bHeadquarters>0</bHeadquarters>
             <Events>
                 <Event>EVENT_HERBALIST_3</Event>
+                <Event>EVENT_HERBALIST_10</Event>
                 <Event>EVENT_HERBALIST_1</Event>
                 <Event>EVENT_HERBALIST_2</Event>
                 <Event>EVENT_HERBALIST_9</Event>

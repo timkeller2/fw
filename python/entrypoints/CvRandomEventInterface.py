@@ -8215,6 +8215,26 @@ def axesforall(argsList):
 						bPlayer.changeGold(-10)
 						cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',2,iPlayer,'craftsmen guild')
 	
+def bandagesforall(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	caster = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = caster.plot().getPlotCity()
+
+	iRange = 2
+	for iiX in range(caster.getX()-iRange, caster.getX()+iRange+1, 1):
+		for iiY in range(caster.getY()-iRange, caster.getY()+iRange+1, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_POTION_HEALING_MINOR')) and caster.getTeam() == pUnit.getTeam():
+					if bPlayer.getGold() > 5:
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POTION_HEALING_MINOR'),True)
+						bPlayer.changeGold(-5)
+						cf.pay(pCity,'BUILDING_HERBALIST',4,iPlayer,'herbalist')
+	
 def trainingyard2(argsList):
 	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
