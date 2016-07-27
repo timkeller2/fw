@@ -3108,7 +3108,7 @@ class CvMainInterface:
 						szLeftBuffer = localText.getText("INTERFACE_PANE_LEVEL", ())
 						szRightBuffer = u"%d" %(pHeadSelectedUnit.getLevel())
 						
-						if pHeadSelectedUnit.getDamage() > 0:
+						if pHeadSelectedUnit.getDamage() > 0 or pHeadSelectedUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
 							iHealth = pHeadSelectedUnit.healRate()
 							if  iHealth > 0:
 								szRightBuffer = szRightBuffer + u"%c" %(CyGame().getSymbolID(FontSymbols.HEALTHY_CHAR)) + str(iHealth) 
