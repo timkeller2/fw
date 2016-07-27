@@ -4624,6 +4624,7 @@ def spellSummonScroll(caster,sUnit):
 		if (sUnit == 'UNIT_MAGIC_MISSILE' or sUnit == 'UNIT_FIREBALL'):
 			newUnit.setDuration(1)
 		else:
+			newUnit.changeExperience(caster.getLevel(),-1,False,False,False)
 			if bPlayer.hasTrait(gc.getInfoTypeForString('TRAIT_SUMMONER')):
 				newUnit.setDuration(5)
 			else:

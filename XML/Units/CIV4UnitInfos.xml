@@ -86646,7 +86646,7 @@
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
-            <Description>Scroll of Summon Beastman</Description>
+            <Description>Scroll of Summon Skeleton</Description>
             <Civilopedia>TXT_KEY_UNIT_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy></Strategy>
             <Advisor>ADVISOR_MILITARY</Advisor>
@@ -87122,7 +87122,7 @@
             <DefaultUnitAI>UNITAI_UNKNOWN</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
-            <Description>Scroll of Summon Scorpion</Description>
+            <Description>Scroll of Flight</Description>
             <Civilopedia>TXT_KEY_UNIT_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy></Strategy>
             <Advisor>ADVISOR_MILITARY</Advisor>

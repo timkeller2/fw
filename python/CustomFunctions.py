@@ -36,6 +36,8 @@ class CustomFunctions:
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANCIENT')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1'),True)
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PERFECT_SIGHT')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY'),True)
 		
 		pUnit.changeExperience(1, -1, False, False, False)
 		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
@@ -2770,8 +2772,8 @@ class CustomFunctions:
 					sMsg = pUnit.getName() + ' tends wounds...'
 					CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_BLESS',1,pUnit.getButton(),ColorTypes(12),pUnit.getX(),pUnit.getY(),True,True)
 					point = pUnit.plot().getPoint()
-					CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CREATION'),point)
+					# CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
+					# CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CREATION'),point)
 
 				## Fortified Priests Auto-Buff if they can
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIVINE')) and pUnit.getFortifyTurns() > 1 and not pUnit.isHasCasted():
@@ -3142,7 +3144,7 @@ class CustomFunctions:
 					iBirth = 3
 				else:
 					iBirth = 0
-				if (bCanCreateUnit and not pPlot.isCity() and pUnit.getFortifyTurns() > 2 and CyGame().getSorenRandNum(300, "NewAnimal") < pUnit.getLevel() + iBirth - 5 + pUnit.getFortifyTurns() - pPlot.getNumUnits() and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'))):
+				if (bCanCreateUnit and not pPlot.isCity() and pUnit.getFortifyTurns() > 2 and CyGame().getSorenRandNum(300, "NewAnimal") < pUnit.getLevel() + iBirth - 5 + pUnit.getFortifyTurns() - pPlot.getNumUnits() + pUnit.healRate() / 5 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'))):
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 					if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER'):
 						oNewUnit = gc.getInfoTypeForString('UNIT_BABY_SPIDER')

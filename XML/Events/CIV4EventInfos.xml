@@ -55729,7 +55729,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_LIBRARY_3</Type>
-            <Description>A Scroll of Summon Beastman</Description>
+            <Description>A Scroll of Summon Skeleton</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56032,7 +56032,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_LIBRARY_6</Type>
-            <Description>A Scroll of Summon Scorpion</Description>
+            <Description>A Scroll of Flight</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56044,7 +56044,7 @@
             <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-35</iGold>
+            <iGold>-60</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -56071,7 +56071,7 @@
             </UnitCombatPromotions>
             <UnitClassPromotions>
             </UnitClassPromotions>
-            <BuildingClass>BUILDINGCLASS_CARNIVAL</BuildingClass>
+            <BuildingClass></BuildingClass>
             <iBuildingChange>0</iBuildingChange>
             <BuildingExtraYields>
             </BuildingExtraYields>
@@ -56117,7 +56117,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback>mageguild5</PythonCallback>
+            <PythonCallback>mageguild10</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>

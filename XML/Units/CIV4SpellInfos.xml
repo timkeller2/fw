@@ -10189,10 +10189,10 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_SCROLL_SB</Type>
-            <Description>Use Scroll of Summon Beastman</Description>
-            <Civilopedia>Summons a beastman to aid the caster.</Civilopedia>
+            <Description>Use Scroll of Summon Skeleton</Description>
+            <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help></Help>
+            <Help>Summons a skeleton to aid the caster.</Help>
             <PromotionPrereq1>PROMOTION_SCROLL_SB</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -10249,7 +10249,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_BEASTMAN')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_SKELETON')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_FIRE_SUMMON</Effect>
             <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>
@@ -10263,10 +10263,10 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_SCROLL_SB_BURGLAR</Type>
-            <Description>Use Magic Item Scroll of Summon Beastman</Description>
-            <Civilopedia>Summons a beastman to aid the caster.</Civilopedia>
+            <Description>Use Magic Item Scroll of Summon Skeleton</Description>
+            <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help></Help>
+            <Help>Summons a skeleton to aid the caster.</Help>
             <PromotionPrereq1>PROMOTION_SCROLL_SB</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_BURGLAR1</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -10337,8 +10337,8 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_SCROLL_SK</Type>
-            <Description>Use Scroll of Summon Scorpion</Description>
-            <Civilopedia>Summons a scorpion to aid the caster.</Civilopedia>
+            <Description>Use Scroll of Flight</Description>
+            <Civilopedia>Allows the caster to fly.</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help></Help>
             <PromotionPrereq1>PROMOTION_SCROLL_SK</PromotionPrereq1>
@@ -10367,7 +10367,7 @@
             <iDamage>0</iDamage>
             <iDamageLimit>0</iDamageLimit>
             <DamageType>NONE</DamageType>
-            <AddPromotionType1>NONE</AddPromotionType1>
+            <AddPromotionType1>PROMOTION_FLYING</AddPromotionType1>
             <AddPromotionType2>NONE</AddPromotionType2>
             <AddPromotionType3>NONE</AddPromotionType3>
             <RemovePromotionType1>PROMOTION_SCROLL_SK</RemovePromotionType1>
@@ -10397,10 +10397,10 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_SCORPION')</PyResult>
+            <PyResult></PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_FIRE_SUMMON</Effect>
-            <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>
+            <Sound>AS3D_SPELL_HASTE</Sound>
             <HotKey></HotKey>
             <bAltDown>0</bAltDown>
             <bShiftDown>0</bShiftDown>
@@ -10411,8 +10411,8 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_SCROLL_SK_BURGLAR</Type>
-            <Description>Use Magic Item Scroll of Summon Scorpion</Description>
-            <Civilopedia>Summons a giant scorpion to aid the caster.</Civilopedia>
+            <Description>Use Magic Item Scroll of Flight</Description>
+            <Civilopedia>Allows the caster to fly.</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help></Help>
             <PromotionPrereq1>PROMOTION_SCROLL_SK</PromotionPrereq1>
@@ -10441,7 +10441,7 @@
             <iDamage>0</iDamage>
             <iDamageLimit>0</iDamageLimit>
             <DamageType>NONE</DamageType>
-            <AddPromotionType1>NONE</AddPromotionType1>
+            <AddPromotionType1>PROMOTION_FLYING</AddPromotionType1>
             <AddPromotionType2>NONE</AddPromotionType2>
             <AddPromotionType3>NONE</AddPromotionType3>
             <RemovePromotionType1>PROMOTION_SCROLL_SK</RemovePromotionType1>
@@ -10471,10 +10471,10 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_SCORPION')</PyResult>
+            <PyResult></PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_FIRE_SUMMON</Effect>
-            <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>
+            <Sound>AS3D_SPELL_HASTE</Sound>
             <HotKey></HotKey>
             <bAltDown>0</bAltDown>
             <bShiftDown>0</bShiftDown>
@@ -12708,7 +12708,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_TAKE_SCROLL_SB</Type>
-            <Description>Take the Scroll of Summon Beastman...</Description>
+            <Description>Take the Scroll of Summon Skeleton...</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>TXT_KEY_SPELL_TAKE_EQUIPMENT_HELP</Help>
@@ -12856,7 +12856,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_TAKE_SCROLL_SK</Type>
-            <Description>Take the Scroll of Summon Kikijub...</Description>
+            <Description>Take the Scroll of Flight...</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>TXT_KEY_SPELL_TAKE_EQUIPMENT_HELP</Help>
@@ -13332,7 +13332,7 @@
             <Description>Fly</Description>
             <Help>Allows the unit to fly, increases defense, but costs living units 10% damage per turn in endurance damage.</Help>
             <PromotionPrereq1>PROMOTION_CAN_FLY</PromotionPrereq1>
-            <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
+            <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
             <AddPromotionType1>PROMOTION_FLYING</AddPromotionType1>
             <bBuffCasterOnly>1</bBuffCasterOnly>
@@ -13345,7 +13345,7 @@
             <Description>Fly</Description>
             <Help>Allows the unit to fly, increases defense, but costs living units 10% damage per turn in endurance damage.</Help>
             <PromotionPrereq1>PROMOTION_AIR3</PromotionPrereq1>
-            <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
+            <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
             <AddPromotionType1>PROMOTION_FLYING</AddPromotionType1>
             <bBuffCasterOnly>1</bBuffCasterOnly>
