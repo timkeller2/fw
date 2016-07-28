@@ -19407,7 +19407,7 @@
             <iHurryAngerModifier>0</iHurryAngerModifier>
             <bBorderObstacle>0</bBorderObstacle>
             <bTeamShare>0</bTeamShare>
-            <bWater>1</bWater>
+            <bWater>0</bWater>
             <bRiver>0</bRiver>
             <bPower>0</bPower>
             <bDirtyPower>0</bDirtyPower>
