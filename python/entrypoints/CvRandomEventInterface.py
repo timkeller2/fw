@@ -6689,7 +6689,7 @@ def doIndustriousBuilder1(argsList):
 
 	sBuildingType = listBuildings[ CyGame().getSorenRandNum(len(listBuildings), "BuildingType") ]
 	pCity.setNumRealBuilding(gc.getInfoTypeForString(sBuildingType), 1)
-	CyInterface().addMessage(iPlayer,True,25,'The industrious builder builds a(n) '+CyTranslator().getText("TXT_KEY_" + sBuildingType, ()),'',1,'Art/Interface/Buttons/Actions/Pillage.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+	CyInterface().addMessage(iPlayer,True,25,'The industrious builder builds a(n) '+CyTranslator().getText("TXT_KEY_" + sBuildingType, ()),'',1,'Art/Interface/Buttons/Actions/Pillage.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
 
 def doIndustriousBuilder2(argsList):
 	iEvent = argsList[0]

@@ -18,15 +18,16 @@ CyGameInstance = gc.getGame()
 class CustomFunctions:
 
 	def reqJudge(self,caster):
-		pCity = caster.plot().getPlotCity()
+		if caster.plot().isCity():
+			pCity = caster.plot().getPlotCity()
 
-		sInfo = cPickle.loads(pCity.getScriptData())
+			sInfo = cPickle.loads(pCity.getScriptData())
 
-		if 'JUDGE' not in sInfo:
-			sInfo['JUDGE'] = 0
+			if 'JUDGE' not in sInfo:
+				sInfo['JUDGE'] = 0
 
-		if sInfo['JUDGE'] > 0:
-			return True
+			if sInfo['JUDGE'] > 0:
+				return True
 
 		return False
 
@@ -2448,7 +2449,7 @@ class CustomFunctions:
 							if pUnit.getFortifyTurns() > 4 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED')) and pUnit.isAlive() and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_BEAST') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
 								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED'), True)
 								sMsg = pUnit.getName() + ' visits the ' + pCity.getName() + ' Island Resort for a little rest and relaxation!'
-								CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+								CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_BLESS',1,pUnit.getButton(),ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
 								CyInterface().addCombatMessage(iPlayer,sMsg)
 								break
 
@@ -2466,11 +2467,11 @@ class CustomFunctions:
 						if tUnit != -1:
 							tUnit.changeExperience(1, -1, False, False, False)
 							sMsg = tUnit.getName() + ' studies at the ' + pCity.getName() + ' Academy... '
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Buildings/Library.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_TRAIN',1,tUnit.getButton(),ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 						else:
 							sMsg = 'The ' + pCity.getName() + ' Academy has an opening for a new student... '
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Buildings/Library.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Buildings/Academy.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 
 					## Treasure and Noble Building Expiration
@@ -2534,7 +2535,7 @@ class CustomFunctions:
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 1") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE1'), 0)
 							sMsg = 'An estate falls to ruin in ' + pCity.getName() + '...'
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
@@ -2547,7 +2548,7 @@ class CustomFunctions:
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 2") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE2'), 0)
 							sMsg = 'Extensive grounds grow up with thorns and thistles in ' + pCity.getName() + '...'
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
@@ -2560,7 +2561,7 @@ class CustomFunctions:
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 3") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE3'), 0)
 							sMsg = 'A banquet hall falls quiet in ' + pCity.getName() + '...'
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
@@ -2573,7 +2574,7 @@ class CustomFunctions:
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 4") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV1'), 0)
 							sMsg = 'A manor falls to ruin in ' + pCity.getName() + '...'
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
@@ -2586,7 +2587,7 @@ class CustomFunctions:
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 5") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV2'), 0)
 							sMsg = 'An abby ceases to run in ' + pCity.getName() + '...'
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
 					bRemoveIt = True
@@ -2599,7 +2600,7 @@ class CustomFunctions:
 						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 6") < 20:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV3'), 0)
 							sMsg = 'A governor workshop ceases operation in ' + pCity.getName() + '...'
-							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 
 					## Process disputes for nobles to solve
@@ -2738,9 +2739,9 @@ class CustomFunctions:
 					if pPlayer.isHuman():
 						iMaxDam = 100
 					pUnit.doDamageNoCaster((plotPlayer.getNumAvailableBonuses(gc.getInfoTypeForString('BONUS_MANA_ENTROPY')) * 3 + 3), iMaxDam, gc.getInfoTypeForString('DAMAGE_UNHOLY'), False)
-					point = pPlot.getPoint()
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SACRIFICE'),point)
 					if iEntropyMessage == 0:
+						point = pPlot.getPoint()
+						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SACRIFICE'),point)
 						iEntropyMessage = 1
 						CyInterface().addMessage(pUnit.getOwner(),False,25,'Your army is suffering from poisonous fumes caused by enemy entropy mana!','',1,'Art/Interface/Buttons/Improvements/Maelstrom.dds',ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pUnit.getOwner(),'Your army is suffering from poisonous fumes caused by enemy entropy mana!')
