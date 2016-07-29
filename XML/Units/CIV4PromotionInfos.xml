@@ -20588,8 +20588,27 @@
             <Type>PROMOTION_CAN_FLY</Type>
             <Description>Can Fly</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
+            <PromotionPrereq>PROMOTION_ANGEL</PromotionPrereq>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_DISCIPLE</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Flying.dds</Button>
-            <iMinLevel>-1</iMinLevel>
+            <iMinLevel>6</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
 			<Type>PROMOTION_ANCIENT</Type>

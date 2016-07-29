@@ -2376,7 +2376,7 @@ class CustomFunctions:
 					if 'RESOURCE_INCOME' not in sPD:
 						sPD['RESOURCE_INCOME'] = 0
 					if iExtraResources != sPD['RESOURCE_INCOME']:
-						CyInterface().addMessage(iPlayer,false,25,sExtraResources,'',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+						CyInterface().addMessage(iPlayer,false,25,sExtraResources,'',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
 						CyInterface().addCombatMessage(iPlayer,sExtraResources)
 						sPD['RESOURCE_INCOME'] = iExtraResources
 					pPlayer.setScriptData(cPickle.dumps(sPD))
@@ -2387,7 +2387,7 @@ class CustomFunctions:
 					sPD['PLUNDER'] = 0
 				if sPD['PLUNDER'] > 0 and sPD['PLUNDER'] < 2500:
 					sMsg = 'You gain ' + str(sPD['PLUNDER']) + ' gold pieces from looting barbarians...'
-					CyInterface().addMessage(iPlayer,false,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+					CyInterface().addMessage(iPlayer,false,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
 					CyInterface().addCombatMessage(iPlayer,sMsg)
 					pPlayer.setGold( pPlayer.getGold() + sPD['PLUNDER'] )
 				sPD['PLUNDER'] = 0
@@ -2426,7 +2426,7 @@ class CustomFunctions:
 					## Give message when commerce priority income changes
 					if iIncome != sPD['COMMERCE_INCOME']:
 						sMsg = 'You are gaining ' + str(iIncome) + ' gold pieces per turn from stable commerce priorities... '
-						CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+						CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
 						CyInterface().addCombatMessage(iPlayer,sMsg)
 						sPD['COMMERCE_INCOME'] = iIncome
 
@@ -3068,7 +3068,7 @@ class CustomFunctions:
 							break
 
 				## Living units that fly take endurance damage
-				if pPlayer.isHuman() and pUnit.isAlive() and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FLYING')):
+				if pPlayer.isHuman() and (pUnit.isAlive() or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL'))) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FLYING')):
 					CyInterface().addMessage(pUnit.getOwner(),false,25,'Your '+pUnit.getName()+' is flying and taking endurance damage...','',1,'Art/Interface/Buttons/Promotions/flying.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
 					CyInterface().addCombatMessage(pUnit.getOwner(),'Your '+pUnit.getName()+' is flying and taking endurance damage...')
 					pUnit.changeDamage( 10, pUnit.getOwner() ) 
