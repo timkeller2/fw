@@ -49,7 +49,7 @@ class CustomFunctions:
 				iGain = iGain * 2
 			iXP = sInfo['JUDGE'] / 2 + 1
 			caster.changeExperience( iXP , -1, False, False, False )
-			CyInterface().addMessage(caster.getOwner(),true,25,'Success! ('+str(iChance)+'% chance) '+caster.getName() + ' resolved a ' + self.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!  You gain '+str(iGain)+' gold pieces and '+str(iXP)+'xp!','AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addMessage(caster.getOwner(),False,25,'Success! ('+str(iChance)+'% chance) '+caster.getName() + ' resolved a ' + self.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!  You gain '+str(iGain)+' gold pieces and '+str(iXP)+'xp!','AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 			CyInterface().addCombatMessage(caster.getOwner(),caster.getName() + ' resolved a ' + self.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!  You gain '+str(iGain)+' gold pieces and '+str(iXP)+'xp!' )
 			pPlayer.setGold( pPlayer.getGold() + sInfo['JUDGE'] * 5 + 25 )
 			cPlayer.setGold( cPlayer.getGold() + sInfo['JUDGE'] * 5 + 25 )
@@ -57,7 +57,7 @@ class CustomFunctions:
 			pCity.setScriptData(cPickle.dumps(sInfo))
 		else:
 			## Failure, this turn...
-			CyInterface().addMessage(caster.getOwner(),true,25,'Failure. ('+str(iChance)+'% chance) '+caster.getName() + ' failed to resolve a ' + self.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!','AS2D_PILLAGE',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addMessage(caster.getOwner(),False,25,'Failure. ('+str(iChance)+'% chance) '+caster.getName() + ' failed to resolve a ' + self.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!','AS2D_PILLAGE',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 			CyInterface().addCombatMessage(caster.getOwner(),caster.getName() + ' failed to resolve a ' + self.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!' )
 	
 	def young(self,pUnit,newUnit):
