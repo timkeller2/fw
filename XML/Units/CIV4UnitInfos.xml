@@ -14041,7 +14041,7 @@
             <iCollateralDamageLimit>0</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
             <iCityAttack>-25</iCityAttack>
-            <iCityDefense>0</iCityDefense>
+            <iCityDefense>-25</iCityDefense>
             <iAnimalCombat>0</iAnimalCombat>
             <iHillsAttack>0</iHillsAttack>
             <iHillsDefense>0</iHillsDefense>
@@ -15167,7 +15167,7 @@
             <iCollateralDamageLimit>0</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
             <iCityAttack>-25</iCityAttack>
-            <iCityDefense>0</iCityDefense>
+            <iCityDefense>-25</iCityDefense>
             <iAnimalCombat>0</iAnimalCombat>
             <iHillsAttack>0</iHillsAttack>
             <iHillsDefense>0</iHillsDefense>
@@ -15399,7 +15399,7 @@
             <iCollateralDamageLimit>0</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
             <iCityAttack>-25</iCityAttack>
-            <iCityDefense>0</iCityDefense>
+            <iCityDefense>-25</iCityDefense>
             <iAnimalCombat>0</iAnimalCombat>
             <iHillsAttack>0</iHillsAttack>
             <iHillsDefense>0</iHillsDefense>
@@ -29561,7 +29561,7 @@
             <iCollateralDamageLimit>0</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
             <iCityAttack>-25</iCityAttack>
-            <iCityDefense>0</iCityDefense>
+            <iCityDefense>-25</iCityDefense>
             <iAnimalCombat>0</iAnimalCombat>
             <iHillsAttack>0</iHillsAttack>
             <iHillsDefense>0</iHillsDefense>
@@ -33463,7 +33463,7 @@
             <iCollateralDamageLimit>0</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
             <iCityAttack>-25</iCityAttack>
-            <iCityDefense>0</iCityDefense>
+            <iCityDefense>-25</iCityDefense>
             <iAnimalCombat>0</iAnimalCombat>
             <iHillsAttack>0</iHillsAttack>
             <iHillsDefense>0</iHillsDefense>
@@ -34377,7 +34377,7 @@
             <iCollateralDamageLimit>0</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
             <iCityAttack>-25</iCityAttack>
-            <iCityDefense>0</iCityDefense>
+            <iCityDefense>-25</iCityDefense>
             <iAnimalCombat>0</iAnimalCombat>
             <iHillsAttack>0</iHillsAttack>
             <iHillsDefense>0</iHillsDefense>
@@ -46864,7 +46864,7 @@
             <iCollateralDamageLimit>100</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>2</iCollateralDamageMaxUnits>
             <iCityAttack>-25</iCityAttack>
-            <iCityDefense>0</iCityDefense>
+            <iCityDefense>-25</iCityDefense>
             <iAnimalCombat>0</iAnimalCombat>
             <iHillsAttack>0</iHillsAttack>
             <iHillsDefense>0</iHillsDefense>
@@ -47095,7 +47095,7 @@
             <iCollateralDamageLimit>75</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>3</iCollateralDamageMaxUnits>
             <iCityAttack>-25</iCityAttack>
-            <iCityDefense>0</iCityDefense>
+            <iCityDefense>-25</iCityDefense>
             <iAnimalCombat>0</iAnimalCombat>
             <iHillsAttack>0</iHillsAttack>
             <iHillsDefense>0</iHillsDefense>
@@ -64454,7 +64454,7 @@
             <iCollateralDamageLimit>0</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
             <iCityAttack>-25</iCityAttack>
-            <iCityDefense>0</iCityDefense>
+            <iCityDefense>-25</iCityDefense>
             <iAnimalCombat>0</iAnimalCombat>
             <iHillsAttack>0</iHillsAttack>
             <iHillsDefense>0</iHillsDefense>
@@ -73259,7 +73259,7 @@
             <iCollateralDamageLimit>0</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
             <iCityAttack>-25</iCityAttack>
-            <iCityDefense>0</iCityDefense>
+            <iCityDefense>25</iCityDefense>
             <iAnimalCombat>0</iAnimalCombat>
             <iHillsAttack>0</iHillsAttack>
             <iHillsDefense>0</iHillsDefense>
@@ -73502,7 +73502,7 @@
             <iCollateralDamageLimit>0</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>0</iCollateralDamageMaxUnits>
             <iCityAttack>-25</iCityAttack>
-            <iCityDefense>0</iCityDefense>
+            <iCityDefense>25</iCityDefense>
             <iAnimalCombat>0</iAnimalCombat>
             <iHillsAttack>0</iHillsAttack>
             <iHillsDefense>0</iHillsDefense>

@@ -585,7 +585,7 @@ class CustomFunctions:
 		iBestDamage = 0
 		pPlot = caster.plot()
 
-		for ii in range(iNumHealed)
+		for ii in range(iNumHealed):
 			for i in range(pPlot.getNumUnits()):
 				pUnit = pPlot.getUnit(i)
 				if (pUnit.isAlive() and pUnit.getDamage() > 0):
