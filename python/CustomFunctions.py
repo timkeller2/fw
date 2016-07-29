@@ -581,25 +581,26 @@ class CustomFunctions:
 		
 	def spellFieldMedic(self,caster):
 		iL = caster.getLevel()
-		iNumHealed = 0
+		iNumHealed = iL / 3 + 1
 		iBestDamage = 0
 		pPlot = caster.plot()
-		
-		for i in range(pPlot.getNumUnits()):
-			pUnit = pPlot.getUnit(i)
-			if (pUnit.isAlive() and pUnit.getDamage() > 0):
-				if pUnit.getDamage() > iBestDamage:
-					iBestDamage = pUnit.getDamage()
-					iBestUnit = pUnit
-					
-		if iBestDamage > 0:
-			pUnit = iBestUnit
-			iDefStr = pUnit.baseCombatStr()
-			if iDefStr < 1:
-				iDefStr = 1
-			iMod = ( iL * 5 ) / iDefStr + 3
-			iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
-			pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
+
+		for ii in range(iNumHealed)
+			for i in range(pPlot.getNumUnits()):
+				pUnit = pPlot.getUnit(i)
+				if (pUnit.isAlive() and pUnit.getDamage() > 0):
+					if pUnit.getDamage() > iBestDamage:
+						iBestDamage = pUnit.getDamage()
+						iBestUnit = pUnit
+						
+			if iBestDamage > 0:
+				pUnit = iBestUnit
+				iDefStr = pUnit.baseCombatStr()
+				if iDefStr < 1:
+					iDefStr = 1
+				iMod = ( iL * 5 ) / iDefStr + 3
+				iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
+				pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
 
 	def reqSustain(self, caster):
 		pPlot = caster.plot()
