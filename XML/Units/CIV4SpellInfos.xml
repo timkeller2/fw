@@ -4692,7 +4692,7 @@
             <Type>SPELL_COMMAND_MORALE</Type>
             <Description>Leadership</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <Help>Give LEADERSHIP to allied troops.  The range for this is equal to the maximum number of units that can be affected / 8.</Help>
+            <Help>Give leadership promotion to allied troops.  The range for this is equal to the maximum number of units that can be affected / 8.</Help>
             <bAllowAI>1</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
             <bCausesWar>0</bCausesWar>
@@ -7599,7 +7599,7 @@
             <Description>Turn Undead</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>Damages a number of undead units equal to 1 + 1/2 the caster's level.  At level 1, you can damage up to str 4 undead units.  This increases as you level up.</Help>
+            <Help>Does 5-10% + 5x(lev+4-undead str+lev)% damage to 1 + 1/2 caster level undead units and gives them the blindness if it damages them.</Help>
             <PromotionPrereq1>PROMOTION_CAST_TURN_UNDEAD</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>

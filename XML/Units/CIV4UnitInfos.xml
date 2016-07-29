@@ -13932,7 +13932,7 @@
             <bGoldenAge>0</bGoldenAge>
             <bInvisible>0</bInvisible>
             <bFirstStrikeImmune>0</bFirstStrikeImmune>
-            <bNoDefensiveBonus>1</bNoDefensiveBonus>
+            <bNoDefensiveBonus>0</bNoDefensiveBonus>
             <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
             <bCanMoveImpassable>0</bCanMoveImpassable>
             <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
@@ -15058,7 +15058,7 @@
             <bGoldenAge>0</bGoldenAge>
             <bInvisible>0</bInvisible>
             <bFirstStrikeImmune>0</bFirstStrikeImmune>
-            <bNoDefensiveBonus>1</bNoDefensiveBonus>
+            <bNoDefensiveBonus>0</bNoDefensiveBonus>
             <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
             <bCanMoveImpassable>0</bCanMoveImpassable>
             <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
@@ -15290,7 +15290,7 @@
             <bGoldenAge>0</bGoldenAge>
             <bInvisible>0</bInvisible>
             <bFirstStrikeImmune>0</bFirstStrikeImmune>
-            <bNoDefensiveBonus>1</bNoDefensiveBonus>
+            <bNoDefensiveBonus>0</bNoDefensiveBonus>
             <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
             <bCanMoveImpassable>0</bCanMoveImpassable>
             <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
@@ -34268,7 +34268,7 @@
             <bGoldenAge>0</bGoldenAge>
             <bInvisible>0</bInvisible>
             <bFirstStrikeImmune>0</bFirstStrikeImmune>
-            <bNoDefensiveBonus>1</bNoDefensiveBonus>
+            <bNoDefensiveBonus>0</bNoDefensiveBonus>
             <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
             <bCanMoveImpassable>0</bCanMoveImpassable>
             <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
@@ -46751,7 +46751,7 @@
             <bGoldenAge>0</bGoldenAge>
             <bInvisible>0</bInvisible>
             <bFirstStrikeImmune>0</bFirstStrikeImmune>
-            <bNoDefensiveBonus>1</bNoDefensiveBonus>
+            <bNoDefensiveBonus>0</bNoDefensiveBonus>
             <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
             <bCanMoveImpassable>0</bCanMoveImpassable>
             <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
@@ -46986,7 +46986,7 @@
             <bGoldenAge>0</bGoldenAge>
             <bInvisible>0</bInvisible>
             <bFirstStrikeImmune>0</bFirstStrikeImmune>
-            <bNoDefensiveBonus>1</bNoDefensiveBonus>
+            <bNoDefensiveBonus>0</bNoDefensiveBonus>
             <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
             <bCanMoveImpassable>0</bCanMoveImpassable>
             <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
@@ -64349,7 +64349,7 @@
             <bGoldenAge>0</bGoldenAge>
             <bInvisible>0</bInvisible>
             <bFirstStrikeImmune>0</bFirstStrikeImmune>
-            <bNoDefensiveBonus>1</bNoDefensiveBonus>
+            <bNoDefensiveBonus>0</bNoDefensiveBonus>
             <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
             <bCanMoveImpassable>0</bCanMoveImpassable>
             <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
@@ -65255,7 +65255,7 @@
             <bGoldenAge>0</bGoldenAge>
             <bInvisible>0</bInvisible>
             <bFirstStrikeImmune>0</bFirstStrikeImmune>
-            <bNoDefensiveBonus>1</bNoDefensiveBonus>
+            <bNoDefensiveBonus>0</bNoDefensiveBonus>
             <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
             <bCanMoveImpassable>0</bCanMoveImpassable>
             <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
@@ -69985,7 +69985,7 @@
             <bGoldenAge>0</bGoldenAge>
             <bInvisible>0</bInvisible>
             <bFirstStrikeImmune>0</bFirstStrikeImmune>
-            <bNoDefensiveBonus>1</bNoDefensiveBonus>
+            <bNoDefensiveBonus>0</bNoDefensiveBonus>
             <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
             <bCanMoveImpassable>0</bCanMoveImpassable>
             <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
@@ -73150,7 +73150,7 @@
             <bGoldenAge>0</bGoldenAge>
             <bInvisible>0</bInvisible>
             <bFirstStrikeImmune>0</bFirstStrikeImmune>
-            <bNoDefensiveBonus>1</bNoDefensiveBonus>
+            <bNoDefensiveBonus>0</bNoDefensiveBonus>
             <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
             <bCanMoveImpassable>0</bCanMoveImpassable>
             <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
@@ -73393,7 +73393,7 @@
             <bGoldenAge>0</bGoldenAge>
             <bInvisible>0</bInvisible>
             <bFirstStrikeImmune>0</bFirstStrikeImmune>
-            <bNoDefensiveBonus>1</bNoDefensiveBonus>
+            <bNoDefensiveBonus>0</bNoDefensiveBonus>
             <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
             <bCanMoveImpassable>0</bCanMoveImpassable>
             <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
@@ -80084,7 +80084,7 @@
             <bGoldenAge>0</bGoldenAge>
             <bInvisible>0</bInvisible>
             <bFirstStrikeImmune>0</bFirstStrikeImmune>
-            <bNoDefensiveBonus>1</bNoDefensiveBonus>
+            <bNoDefensiveBonus>0</bNoDefensiveBonus>
             <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
             <bCanMoveImpassable>0</bCanMoveImpassable>
             <bCanMoveAllTerrain>0</bCanMoveAllTerrain>

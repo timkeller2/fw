@@ -4270,7 +4270,7 @@ def spellTurnUndead(caster):
 			pPlot = CyMap().plot(iiX,iiY)
 			for i in range(pPlot.getNumUnits()):
 				pUnit = pPlot.getUnit(i)
-				if pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_UNDEAD') and pUnit.maxCombatStr(pPlot,caster) / 100 + pUnit.getLevel() < iL + 4 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLINDED')):
+				if pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_UNDEAD') and pUnit.maxCombatStr(pPlot,caster) / 100 + pUnit.getLevel() < iL + 4:
 					iNumTurned = iNumTurned + 1
 					iMod = iL + 4 - pUnit.maxCombatStr(pPlot,caster) / 100 - pUnit.getLevel()
 					if iMod > 0:
