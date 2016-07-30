@@ -582,16 +582,20 @@ class CustomFunctions:
 	def spellFieldMedic(self,caster):
 		iL = caster.getLevel()
 		iNumHealed = iL / 3 + 1
-		iBestDamage = 0
 		pPlot = caster.plot()
+		lUnit = -1
+		
+		sMsg = caster.getName() + ' tends wounds for '
 
 		for ii in range(iNumHealed):
+			iBestDamage = 0
 			for i in range(pPlot.getNumUnits()):
 				pUnit = pPlot.getUnit(i)
-				if (pUnit.isAlive() and pUnit.getDamage() > 0):
+				if (pUnit.isAlive() and pUnit.getDamage() > 0 and not i == lUnit):
 					if pUnit.getDamage() > iBestDamage:
 						iBestDamage = pUnit.getDamage()
 						iBestUnit = pUnit
+						lUnit = i
 						
 			if iBestDamage > 0:
 				pUnit = iBestUnit
@@ -601,6 +605,10 @@ class CustomFunctions:
 				iMod = ( iL * 5 ) / iDefStr + 3
 				iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
 				pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
+				sMsg = sMsg + pUnit.getName() + ' (' + str(iHealAmount) + '), '
+		
+		CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'AS3D_SPELL_BLESS',1,caster.getButton(),ColorTypes(12),caster.getX(),caster.getY(),True,True)
+		
 
 	def reqSustain(self, caster):
 		pPlot = caster.plot()
@@ -2818,9 +2826,7 @@ class CustomFunctions:
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CAST_HEALING_TOUCH')) and not pUnit.isHasCasted() and self.reqHeal(pUnit):
 					self.spellFieldMedic(pUnit)
 					pUnit.setHasCasted(True)
-					sMsg = pUnit.getName() + ' tends wounds...'
-					CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_BLESS',1,pUnit.getButton(),ColorTypes(12),pUnit.getX(),pUnit.getY(),True,True)
-					point = pUnit.plot().getPoint()
+					# point = pUnit.plot().getPoint()
 					# CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
 					# CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CREATION'),point)
 
@@ -3070,8 +3076,8 @@ class CustomFunctions:
 
 				## Living units that fly take endurance damage
 				if pPlayer.isHuman() and (pUnit.isAlive() or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL'))) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FLYING')):
-					CyInterface().addMessage(pUnit.getOwner(),false,25,'Your '+pUnit.getName()+' is flying and taking endurance damage...','',1,'Art/Interface/Buttons/Promotions/flying.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
-					CyInterface().addCombatMessage(pUnit.getOwner(),'Your '+pUnit.getName()+' is flying and taking endurance damage...')
+					CyInterface().addMessage(pUnit.getOwner(),false,25,'Your '+pUnit.getName()+' is flying and taking 10 endurance damage...','',1,'Art/Interface/Buttons/Promotions/flying.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
+					CyInterface().addCombatMessage(pUnit.getOwner(),'Your '+pUnit.getName()+' is flying and taking 10 endurance damage...')
 					pUnit.changeDamage( 10, pUnit.getOwner() ) 
 							
 				## Low level vessels can take storm damage
