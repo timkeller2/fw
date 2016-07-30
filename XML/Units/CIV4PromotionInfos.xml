@@ -842,7 +842,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING1</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING1</Description>
-            <Help>TXT_KEY_PROMOTION_CHANNELING1_PEDIA</Help>
+            <Help>Auto buffs are: enchanted blade, flaming arrows, courage, loyalty, fair winds, poisoned blade, blessing, valor and shield of faith. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling1.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
@@ -3120,7 +3120,7 @@
         <PromotionInfo>
             <Type>PROMOTION_EXTENSION1</Type>
             <Description>TXT_KEY_PROMOTION_EXTENSION1</Description>
-            <Help>Doubles auto-buff range (normally level + fortified turns).  Auto buffs are: enchanted blade, flaming arrows, courage, loyalty, fair winds, poisoned blade, blessing and shield of faith.</Help>
+            <Help>Doubles auto-buff range (normally level + fortified turns).  Auto buffs are: enchanted blade, flaming arrows, courage, loyalty, fair winds, poisoned blade, blessing, valor and shield of faith.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_CHANNELING1</PromotionPrereq>
             <UnitCombats>
@@ -3137,7 +3137,7 @@
         <PromotionInfo>
             <Type>PROMOTION_EXTENSION2</Type>
             <Description>TXT_KEY_PROMOTION_EXTENSION2</Description>
-            <Help>Quadruples auto-buff range (normally level + fortified turns).  Auto buffs are: enchanted blade, flaming arrows, courage, loyalty, fair winds, poisoned blade, blessing and shield of faith.</Help>
+            <Help>Quadruples auto-buff range (normally level + fortified turns).  Auto buffs are: enchanted blade, flaming arrows, courage, loyalty, fair winds, poisoned blade, blessing, valor and shield of faith.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_EXTENSION1</PromotionPrereq>
             <TechPrereq>TECH_ARCANE_LORE</TechPrereq>

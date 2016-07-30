@@ -355,7 +355,7 @@ class CustomFunctions:
 			if CyGame().getSorenRandNum(100, "Serpent Report") < iSerpentCount + iGreatSerpentCount and iMult > 0:
 				sDip = sDip + '  Sailors tell tales of giant beasts in the sea.  The population of greater serpents is estimated at ' + str(iGreatSerpentCount) + '.  The population of smaller serpents is estimated at ' + str(iSerpentCount) + '.'
 
-			CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addMessage(caster.getOwner(),False,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 			CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
 			return
@@ -424,7 +424,7 @@ class CustomFunctions:
 			if mode == 1:
 				if caster.getFortifyTurns() == 5 and iRange < 2 and CyGame().getSorenRandNum(100, "Search Cache") < ( iChance / 2 ):
 					sDip = 'Coming up with a plan to loot the cache!  Difficulty reduced by 1!'
-					CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+					CyInterface().addMessage(caster.getOwner(),False,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 					CyInterface().addCombatMessage(caster.getOwner(),sDip)
 					if pUnit.baseCombatStr() > 1:
 						pUnit.setBaseCombatStr(pUnit.baseCombatStr() - 1)
@@ -438,7 +438,7 @@ class CustomFunctions:
 
 				sDir = self.retDir(iX,iY,iiX,iiY)
 				sDip = 'Examing a hidden cache... Distance: '+str(iRange)+' '+sDir+' Skill: '+str(iSearch)+' Dif: ' + str(pUnit.baseCombatStrDefense()+iRange*3) + ' Chance: ' + str( iChance ) + ' Danger: ' + str(pUnit.baseCombatStr()) + sSpec
-				CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				CyInterface().addMessage(caster.getOwner(),False,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 				CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
 				return
@@ -458,7 +458,7 @@ class CustomFunctions:
 					iGold = CyGame().getSorenRandNum( pUnit.baseCombatStr() * 25, "Find Gold") + pUnit.baseCombatStr() * 10
 					sDip = 'Success!  You find '+str(iGold)+' gold pieces and gain '+str(iXP)+'xp!'
 					pPlayer.setGold( pPlayer.getGold() + iGold )
-					CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+					CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(11),caster.getX(),caster.getY(),True,True)
 					CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
 				elif iRoll > iChance and iRoll < iChance + 25 and iRoll < 95:
@@ -466,14 +466,14 @@ class CustomFunctions:
 					sDip = 'Failure'
 					if CyGame().getSorenRandNum(100, "Roll It2") < 35:
 						bCreep = False
-					CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+					CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(7),caster.getX(),caster.getY(),True,True)
 					CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
 				else:
 					# Detonation
 					sDip = 'Critical Failure'
 					bCreep = False
-					CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+					CyInterface().addMessage(caster.getOwner(),true,25,sDip,'',1,'Art/Interface/Buttons/Promotions/Hidden.dds',ColorTypes(7),caster.getX(),caster.getY(),True,True)
 					CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1')):
@@ -3025,6 +3025,28 @@ class CustomFunctions:
 										CyInterface().addCombatMessage(pBestUnit.getOwner(),'Your '+pBestUnit.getName()+' gains stoneskin from your '+pUnit.getName()+'!')
 										point = pBestUnit.plot().getPoint()
 										CyAudioGame().Play3DSound('AS3D_SPELL_STONESKIN',point.x,point.y,point.z)
+										CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_STONESKIN'),point)
+
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LAW3')) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3')) and iBuffs > 0:
+							pBestUnit = -1
+							iBestRange = iABR
+							for tUnit in py.getUnitList():
+								if tUnit.isPromotionValid(gc.getInfoTypeForString('PROMOTION_VALOR')) and not tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_VALOR')):
+									iRange = int( math.fabs(pUnit.getX()-tUnit.getX()) )
+									if iRange < int( math.fabs(pUnit.getY()-tUnit.getY()) ):
+										iRange = int( math.fabs(pUnit.getY()-tUnit.getY()) )
+									if iRange < iBestRange:
+										iBestRange = iRange
+										pBestUnit = tUnit
+							if pBestUnit != -1:
+								iBuffs -= 1
+								if iABR > iBestRange:
+									pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_VALOR'), True)
+									if pPlayer.isHuman():
+										CyInterface().addMessage(pBestUnit.getOwner(),False,25,'Your '+pBestUnit.getName()+' gains valor from your '+pUnit.getName()+'!','',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pBestUnit.getX(),pBestUnit.getY(),True,True)
+										CyInterface().addCombatMessage(pBestUnit.getOwner(),'Your '+pBestUnit.getName()+' gains valor from your '+pUnit.getName()+'!')
+										point = pBestUnit.plot().getPoint()
+										CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
 										CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_STONESKIN'),point)
 
 						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NATURE2')) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING2')) and iBuffs > 0:

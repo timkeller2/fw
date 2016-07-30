@@ -1985,7 +1985,7 @@
             <bHasCasted>1</bHasCasted>
             <bResistable>1</bResistable>
             <iRange>1</iRange>
-            <iResistModify>40</iResistModify>
+            <iResistModify>30</iResistModify>
             <PyResult>spellMezmerizeAnimal(pCaster)</PyResult>
             <PyRequirement>reqMezmerizeAnimal(pCaster)</PyRequirement>
             <Effect>EFFECT_SPELL1</Effect>
