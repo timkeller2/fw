@@ -8733,7 +8733,7 @@
             <Button>Art/Interface/Buttons/Promotions/Strong.dds</Button>
             <bBoarding>0</bBoarding>
             <bOnlyDefensive>0</bOnlyDefensive>
-            <bDispellable>1</bDispellable>
+            <bDispellable>0</bDispellable>
             <bDoubleFortifyBonus>0</bDoubleFortifyBonus>
             <bEquipment>0</bEquipment>
             <bFear>0</bFear>
@@ -8788,8 +8788,8 @@
             <PromotionPrereqAnd>NONE</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_ANCIENT</PromotionNextLevel>
             <PyPerTurn></PyPerTurn>
-            <iGroupSize>0</iGroupSize>
-            <UnitArtStyleType>NONE</UnitArtStyleType>
+            <iGroupSize>1</iGroupSize>
+            <UnitArtStyleType>UNIT_ARTSTYLE_DIRE</UnitArtStyleType>
             <iMinLevel>7</iMinLevel>
             <PromotionCombatType>NONE</PromotionCombatType>
             <iPromotionCombatMod>0</iPromotionCombatMod>
@@ -20688,7 +20688,7 @@
             <Button>Art/Interface/Buttons/Promotions/Strong.dds</Button>
             <bBoarding>0</bBoarding>
             <bOnlyDefensive>0</bOnlyDefensive>
-            <bDispellable>1</bDispellable>
+            <bDispellable>0</bDispellable>
             <bDoubleFortifyBonus>0</bDoubleFortifyBonus>
             <bEquipment>0</bEquipment>
             <bFear>0</bFear>
@@ -20743,8 +20743,8 @@
             <PromotionPrereqAnd>NONE</PromotionPrereqAnd>
             <PromotionNextLevel>NONE</PromotionNextLevel>
             <PyPerTurn></PyPerTurn>
-            <iGroupSize>0</iGroupSize>
-            <UnitArtStyleType>NONE</UnitArtStyleType>
+            <iGroupSize>1</iGroupSize>
+            <UnitArtStyleType>UNIT_ARTSTYLE_DIRE</UnitArtStyleType>
             <iMinLevel>10</iMinLevel>
             <PromotionCombatType>NONE</PromotionCombatType>
             <iPromotionCombatMod>0</iPromotionCombatMod>
