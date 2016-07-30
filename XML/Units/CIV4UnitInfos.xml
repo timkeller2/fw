@@ -63828,7 +63828,7 @@
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
             <iCombatDefense>4</iCombatDefense>
-            <iMinLevel>4</iMinLevel>
+            <iMinLevel>6</iMinLevel>
             <iTier>3</iTier>
         </UnitInfo>
         <UnitInfo>
@@ -77049,7 +77049,7 @@
             <StateReligion>NONE</StateReligion>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
-            <PrereqBuilding>BUILDING_PAGAN_TEMPLE</PrereqBuilding>
+            <PrereqBuilding>NONE</PrereqBuilding>
             <PrereqTech>NONE</PrereqTech>
             <TechTypes>
             </TechTypes>
@@ -77211,7 +77211,7 @@
             <DiploVoteType>NONE</DiploVoteType>
             <EquipmentPromotion>NONE</EquipmentPromotion>
             <PrereqAlignment>NONE</PrereqAlignment>
-            <PrereqBuildingClass>NONE</PrereqBuildingClass>
+            <PrereqBuildingClass>BUILDINGCLASS_PAGAN_TEMPLE</PrereqBuildingClass>
             <PrereqCivic>NONE</PrereqCivic>
             <PromotionFromCombat>NONE</PromotionFromCombat>
             <Image>NONE</Image>
