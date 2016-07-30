@@ -73348,6 +73348,10 @@
                     <PromotionType>PROMOTION_HIDDEN_NATIONALITY</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_GUARDSMAN</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
@@ -73577,6 +73581,10 @@
             <FreePromotions>
                 <FreePromotion>
                     <PromotionType>PROMOTION_HIDDEN_NATIONALITY</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_GUARDSMAN</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
             </FreePromotions>
