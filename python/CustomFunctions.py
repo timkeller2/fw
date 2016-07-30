@@ -2826,9 +2826,6 @@ class CustomFunctions:
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CAST_HEALING_TOUCH')) and not pUnit.isHasCasted() and self.reqHeal(pUnit):
 					self.spellFieldMedic(pUnit)
 					pUnit.setHasCasted(True)
-					# point = pUnit.plot().getPoint()
-					# CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
-					# CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CREATION'),point)
 
 				## Fortified Priests Auto-Buff if they can
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIVINE')) and pUnit.getFortifyTurns() > 1 and not pUnit.isHasCasted():
