@@ -8024,9 +8024,9 @@ def canEP11(argsList):
 
 def canInitial(argsList):
 	iGameTurn = CyGame().getGameTurn()
-	iCycle = 50
-	for i in range(8):
-		if (i * iCycle) + 50 == iGameTurn:
+	iCycle = 12
+	for i in range(3):
+		if (i * iCycle) + 12 == iGameTurn:
 			return true
 	return false
 

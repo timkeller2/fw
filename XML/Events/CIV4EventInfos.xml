@@ -58872,7 +58872,7 @@
             <bPickCity>0</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-35</iGold>
+            <iGold>0</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -58961,7 +58961,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_INITIAL_2</Type>
-            <Description>Coronate a King</Description>
+            <Description>Improved Weapons</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -58973,7 +58973,7 @@
             <bPickCity>0</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-75</iGold>
+            <iGold>0</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -58989,12 +58989,12 @@
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
-            <UnitClass>UNITCLASS_WARRIOR</UnitClass>
-            <iNumFreeUnits>1</iNumFreeUnits>
+            <UnitClass>EQUIPMENTCLASS_IMPROVED_WEAPONS</UnitClass>
+            <iNumFreeUnits>2</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
-            <UnitPromotion>PROMOTION_NOBILITY</UnitPromotion>
+            <UnitPromotion></UnitPromotion>
             <UnitName></UnitName>
             <UnitCombatPromotions>
             </UnitCombatPromotions>
@@ -59074,7 +59074,7 @@
             <bPickCity>0</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-125</iGold>
+            <iGold>-90</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -59175,7 +59175,7 @@
             <bPickCity>0</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-70</iGold>
+            <iGold>-85</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -59276,7 +59276,7 @@
             <bPickCity>0</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-35</iGold>
+            <iGold>0</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -59377,7 +59377,7 @@
             <bPickCity>0</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-35</iGold>
+            <iGold>0</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -59478,7 +59478,7 @@
             <bPickCity>0</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-45</iGold>
+            <iGold>-10</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -59579,7 +59579,7 @@
             <bPickCity>0</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-225</iGold>
+            <iGold>-180</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -59680,7 +59680,7 @@
             <bPickCity>0</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-120</iGold>
+            <iGold>-75</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -59769,7 +59769,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_INITIAL_10</Type>
-            <Description>Potions of Experience</Description>
+            <Description>Improved Armor</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -59797,8 +59797,8 @@
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
-            <UnitClass>EQUIPMENTCLASS_POTION_XP_MINOR</UnitClass>
-            <iNumFreeUnits>3</iNumFreeUnits>
+            <UnitClass>EQUIPMENTCLASS_IMPROVED_ARMOR</UnitClass>
+            <iNumFreeUnits>2</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
@@ -59882,7 +59882,7 @@
             <bPickCity>0</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>0</iGold>
+            <iGold>-25</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -59971,7 +59971,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_INITIAL_12</Type>
-            <Description>Old Mage</Description>
+            <Description>A Master Crafted Weapon</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -59983,7 +59983,7 @@
             <bPickCity>0</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-250</iGold>
+            <iGold>-120</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
@@ -59999,12 +59999,12 @@
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
-            <UnitClass>UNITCLASS_MAGE</UnitClass>
+            <UnitClass>EQUIPMENTCLASS_WEAPONS</UnitClass>
             <iNumFreeUnits>1</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
-            <UnitPromotion>PROMOTION_WEAK</UnitPromotion>
+            <UnitPromotion></UnitPromotion>
             <UnitName></UnitName>
             <UnitCombatPromotions>
             </UnitCombatPromotions>
@@ -60084,7 +60084,7 @@
             <bPickCity>0</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bDeclareWar>0</bDeclareWar>
-            <iGold>-35</iGold>
+            <iGold>0</iGold>
             <bGoldToPlayer>0</bGoldToPlayer>
             <iRandomGold>0</iRandomGold>
             <iCulture>0</iCulture>
