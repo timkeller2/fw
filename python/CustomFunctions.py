@@ -579,6 +579,27 @@ class CustomFunctions:
 				return True
 		return False
 		
+	def spellHealingTouch(self,caster):
+		iL = caster.getLevel()
+		iNumHealed = 0
+		pPlot = caster.plot()
+		sMsg = caster.getName() + ' tends wounds for '
+		for i in range(pPlot.getNumUnits()):
+			pUnit = pPlot.getUnit(i)
+			if (pUnit.isAlive() and pUnit.getDamage() > 0):
+				iDefStr = pUnit.baseCombatStr()
+				if iDefStr < 1:
+					iDefStr = 1
+				iMod = ( iL * 5 ) / iDefStr + 3
+				iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
+				pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
+				sMsg = sMsg + pUnit.getName() + ' (' + str(iHealAmount) + '), '
+				iNumHealed = iNumHealed + 1
+				if ( iNumHealed + 1 > iL / 3 ):
+					return
+
+		CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'AS3D_SPELL_BLESS',1,caster.getButton(),ColorTypes(12),caster.getX(),caster.getY(),True,True)
+
 	def spellFieldMedic(self,caster):
 		iL = caster.getLevel()
 		iNumHealed = iL / 3
