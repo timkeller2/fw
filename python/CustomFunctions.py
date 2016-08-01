@@ -2763,13 +2763,13 @@ class CustomFunctions:
 					newUnit = plotPlayer.initUnit(pUnit.getUnitType(), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 					newUnit.convert(pUnit)
 					
-				## Computer Players gain creeps within their borders
-				if (pPlot.isOwned() and pPlayer.isBarbarian() and not plotPlayer.isBarbarian() and not plotPlayer.isHuman() and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE') and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_ORTHUS')):
-					pCity = plotPlayer.getCity(self.iValidCity(plotPlayer))
-					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), False)
-					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SLEEPING'), True)
-					newUnit = plotPlayer.initUnit(pUnit.getUnitType(), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-					newUnit.convert(pUnit)
+				# Computer Players gain creeps within their borders
+				# if (pPlot.isOwned() and pPlayer.isBarbarian() and not plotPlayer.isBarbarian() and not plotPlayer.isHuman() and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE') and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_ORTHUS')):
+					# pCity = plotPlayer.getCity(self.iValidCity(plotPlayer))
+					# pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), False)
+					# pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SLEEPING'), True)
+					# newUnit = plotPlayer.initUnit(pUnit.getUnitType(), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+					# newUnit.convert(pUnit)
 
 				## Damaged Creeps Can wake up
 				if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) and pUnit.getDamage() > 5 and CyGame().getSorenRandNum(6, "Wake Creep") == 1):
