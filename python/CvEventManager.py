@@ -1517,7 +1517,7 @@ class CvEventManager:
 		if unit.getUnitType() == gc.getInfoTypeForString('UNIT_MAGICIAN'):
 			sCityInfo[ 'OBELISK' ] = 1
 			city.setScriptData(cPickle.dumps(sCityInfo))
-			if city.getNumBuilding(gc.getInfoTypeForString('BUILDING_LIBRARY')) > 0:
+			if city.getNumBuilding(gc.getInfoTypeForString('BUILDING_MONUMENT')) > 0:
 				unit.setName("Magician of " + city.getName())
 				unit.changeExperience(2, -1, False, False, False)
 
