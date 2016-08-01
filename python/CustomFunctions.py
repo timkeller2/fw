@@ -581,7 +581,9 @@ class CustomFunctions:
 		
 	def spellFieldMedic(self,caster):
 		iL = caster.getLevel()
-		iNumHealed = iL / 3 + 1
+		iNumHealed = iL / 3
+		if iNumHealed < 1:
+			iNumHealed = 1
 		pPlot = caster.plot()
 		lUnit = -1
 		

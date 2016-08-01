@@ -59668,7 +59668,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_INITIAL_9</Type>
-            <Description>Shining Squire</Description>
+            <Description>Hopeful Squire</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -59696,7 +59696,7 @@
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
-            <UnitClass>UNITCLASS_HORSEMAN</UnitClass>
+            <UnitClass>UNITCLASS_WARRIOR</UnitClass>
             <iNumFreeUnits>1</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
