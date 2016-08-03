@@ -617,6 +617,8 @@ class CvGameUtils:
 				return True
 			if pCity.isCapital():
 				return True
+			if not cf.bTechExist('TECH_INFERNAL_PACT'):
+				return True
 			if pPlayer.isHuman() == False:
 				if pPlayer.getAlignment() == gc.getInfoTypeForString('ALIGNMENT_EVIL'):
 					return True

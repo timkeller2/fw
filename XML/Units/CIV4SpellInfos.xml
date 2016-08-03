@@ -804,6 +804,7 @@
             <Type>SPELL_DANCE_OF_BLADES</Type>
             <Description>TXT_KEY_SPELL_DANCE_OF_BLADES</Description>
             <Civilopedia>TXT_KEY_SPELL_DANCE_OF_BLADES_PEDIA</Civilopedia>
+            <Help>Add Dance of Blades to a number of units equal to the caster's level.  +2 first strikes.</Help>
             <PromotionPrereq1>PROMOTION_CHAOS1</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_CHANNELING1</PromotionPrereq2>
             <bAllowAI>1</bAllowAI>
