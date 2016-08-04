@@ -414,6 +414,7 @@
         <PromotionInfo>
             <Type>PROMOTION_BLITZ</Type>
             <Description>TXT_KEY_PROMOTION_BLITZ</Description>
+            <Help>[ICON_BULLET] Adds Mobility II to new animal young.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereqOr1>PROMOTION_DRILL4</PromotionPrereqOr1>
             <PromotionPrereqOr2>PROMOTION_DIRE</PromotionPrereqOr2>
@@ -842,7 +843,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING1</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING1</Description>
-            <Help>Auto buffs are: enchanted blade, flaming arrows, courage, loyalty, fair winds, poisoned blade, blessing, valor and shield of faith. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)</Help>
+            <Help>[ICON_BULLET] Auto buff if fortified: Enchanted Blade, Courage, Loyalty, Fair Winds. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] Increase auto XP gain by 20.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling1.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
@@ -854,7 +855,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING2</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING2</Description>
-            <Help>TXT_KEY_PROMOTION_CHANNELING2_PEDIA</Help>
+            <Help>[ICON_BULLET] Auto buff if fortified: Flaming Arrows, Poisoned Blade, Blessing and Shield of Faith. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] Increase auto XP gain by 30.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling2.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
@@ -867,7 +868,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING3</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING3</Description>
-            <Help>TXT_KEY_PROMOTION_CHANNELING3_PEDIA</Help>
+            <Help>[ICON_BULLET] Auto buff if fortified: Valor. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] Increase auto XP gain by 40.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling3.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
@@ -6198,6 +6199,7 @@
         <PromotionInfo>
             <Type>PROMOTION_PERFECT_SIGHT</Type>
             <Description>TXT_KEY_PROMOTION_PERFECT_SIGHT</Description>
+            <Help>[ICON_BULLET] Adds Sentry to new animal young.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_SENTRY2</PromotionPrereq>
             <UnitCombats>
@@ -8659,7 +8661,7 @@
         <PromotionInfo>
 			<Type>PROMOTION_DIRE</Type>
             <Description>Dire</Description>
-            <Help>Requires level 7</Help>
+            <Help>[ICON_BULLET] Adds Mobility I to new young. [NEWLINE][ICON_BULLET] Requires level 7</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -20476,6 +20478,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough2.dds</Button>
+            <bMutation>1</bMutation>
             <iCombatPercentDefense>5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <PromotionNextLevel>PROMOTION_TOUGH3</PromotionNextLevel>
@@ -20497,6 +20500,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough4.dds</Button>
+            <bMutation>1</bMutation>
             <iCombatPercentDefense>5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <PromotionNextLevel>PROMOTION_TOUGH5</PromotionNextLevel>
@@ -20507,6 +20511,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough5.dds</Button>
+            <bMutation>1</bMutation>
             <iCombatPercentDefense>5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
@@ -20529,6 +20534,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>-5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy2.dds</Button>
+            <bMutation>1</bMutation>
             <iCombatPercentDefense>-5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>5</iSpellCasterXP>
@@ -20554,6 +20560,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>-5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy4.dds</Button>
+            <bMutation>1</bMutation>
             <iCombatPercentDefense>-5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>5</iSpellCasterXP>
@@ -20566,6 +20573,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>-5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy5.dds</Button>
+            <bMutation>1</bMutation>
             <iCombatPercentDefense>-5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>5</iSpellCasterXP>
@@ -20574,7 +20582,7 @@
         <PromotionInfo>
             <Type>PROMOTION_PROLIFIC</Type>
             <Description>Prolific</Description>
-            <Help>Increases the chance of having young by 1% per turn (normally 1/3% per (level + 5 heal rate) if fully fortified and not in a city).  Requires level 4.</Help>
+            <Help>[ICON_BULLET] Increases the chance of having young by 1% per turn (normally 1/3% per (level + 1/5 heal rate) if fully fortified and not in a city).  [NEWLINE][ICON_BULLET] Adds Combat I to new young. [NEWLINE][ICON_BULLET] Requires level 4.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <UnitCombats>
                 <UnitCombat>
@@ -20614,7 +20622,7 @@
         <PromotionInfo>
 			<Type>PROMOTION_ANCIENT</Type>
             <Description>Ancient</Description>
-            <Help>Requires level 10</Help>
+            <Help>[ICON_BULLET] Adds Combat II to new young.[NEWLINE][ICON_BULLET] Requires level 10</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_DIRE</PromotionPrereq>

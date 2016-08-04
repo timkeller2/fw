@@ -73,19 +73,22 @@ class CustomFunctions:
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER4'),True)
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT5')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER5'),True)
+			
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLITZ')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
-		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANCIENT')):
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PROLIFIC')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1'),True)
+		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANCIENT')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2'),True)
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PERFECT_SIGHT')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY'),True)
 		
 		pUnit.changeExperience(1, -1, False, False, False)
 		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 		sMsg = 'A ' + str( pUnit.getName() ) + ' has young...'
-		if pUnit.getName().find('Offspring') == -1:
+		if pUnit.getName().find('Offspring') == -1 and not pUnit.getName() == pUnit.getNameNoDesc():
 			newUnit.setName(pUnit.getNameNoDesc()+' Offspring')
 		CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,pUnit.getButton(),ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
 		CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
@@ -3240,7 +3243,10 @@ class CustomFunctions:
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PROLIFIC')):
 					iBirth = 3
 				else:
-					iBirth = 0
+					if pPlayer.isHuman():
+						iBirth = 0
+					else:
+						iBirth = -3
 				if (bCanCreateUnit and not pPlot.isCity() and pUnit.getFortifyTurns() > 2 and CyGame().getSorenRandNum(300, "NewAnimal") < pUnit.getLevel() + iBirth - 5 + pUnit.getFortifyTurns() - pPlot.getNumUnits() + pUnit.healRate() / 5 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'))):
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 					if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER'):
