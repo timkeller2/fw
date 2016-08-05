@@ -843,7 +843,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING1</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING1</Description>
-            <Help>[ICON_BULLET] Auto buff if fortified: Enchanted Blade, Courage, Loyalty, Fair Winds. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] Increase auto XP gain by 20.</Help>
+            <Help>[ICON_BULLET] Auto buff if fortified: Enchanted Blade, Courage, Loyalty, Fair Winds. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] +20 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling1.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
@@ -855,7 +855,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING2</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING2</Description>
-            <Help>[ICON_BULLET] Auto buff if fortified: Flaming Arrows, Poisoned Blade, Blessing and Shield of Faith. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] Increase auto XP gain by 30.</Help>
+            <Help>[ICON_BULLET] Auto buff if fortified: Flaming Arrows, Poisoned Blade, Blessing and Shield of Faith. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] +30 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling2.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
@@ -868,7 +868,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING3</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING3</Description>
-            <Help>[ICON_BULLET] Auto buff if fortified: Valor. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] Increase auto XP gain by 40.</Help>
+            <Help>[ICON_BULLET] Auto buff if fortified: Valor. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] +40 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling3.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
@@ -6386,6 +6386,7 @@
         <PromotionInfo>
             <Type>PROMOTION_POTENCY</Type>
             <Description>TXT_KEY_PROMOTION_POTENCY</Description>
+            <Help>[ICON_BULLET] +20 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <UnitCombats>
@@ -7866,7 +7867,7 @@
         <PromotionInfo>
             <Type>PROMOTION_UNHOLY_TAINT</Type>
             <Description>TXT_KEY_PROMOTION_UNHOLY_TAINT</Description>
-            <Help>TXT_KEY_PROMOTION_UNHOLY_TAINT_PEDIA</Help>
+            <Help>+10 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <iCombatPercent>-25</iCombatPercent>
@@ -20365,7 +20366,7 @@
             <PromotionImmune2>NONE</PromotionImmune2>
             <PromotionImmune3>NONE</PromotionImmune3>
             <PromotionRandomApply>NONE</PromotionRandomApply>
-            <PromotionSummonPerk>NONE</PromotionSummonPerk>
+            <PromotionSummonPerk>PROMOTION_COMBAT2</PromotionSummonPerk>
             <BonusPrereq>NONE</BonusPrereq>
             <PromotionPrereqOr3>NONE</PromotionPrereqOr3>
             <PromotionPrereqOr4>NONE</PromotionPrereqOr4>

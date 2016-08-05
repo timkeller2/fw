@@ -59600,7 +59600,7 @@
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
-            <UnitPromotion>PROMOTION_STRONG</UnitPromotion>
+            <UnitPromotion>PROMOTION_COMBAT1</UnitPromotion>
             <UnitName></UnitName>
             <UnitCombatPromotions>
             </UnitCombatPromotions>
