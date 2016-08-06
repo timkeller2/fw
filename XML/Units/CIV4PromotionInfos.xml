@@ -5043,6 +5043,9 @@
             <TechPrereq>TECH_NEVER</TechPrereq>
             <bAmphib>1</bAmphib>
             <bRiver>1</bRiver>
+            <iEnemyHealChange>5</iEnemyHealChange>
+            <iNeutralHealChange>5</iNeutralHealChange>
+            <iFriendlyHealChange>5</iFriendlyHealChange>
             <TerrainAttacks>
                 <TerrainAttack>
                     <TerrainType>TERRAIN_MARSH</TerrainType>

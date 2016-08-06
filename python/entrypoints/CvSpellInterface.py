@@ -4582,6 +4582,10 @@ def spellSummonScroll(caster,sUnit):
 
 		newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1'),True)
 
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUMMONER')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUMMONING')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT3'),True)
 		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1'),True)
 		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2')):
