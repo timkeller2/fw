@@ -1470,29 +1470,8 @@ class CvEventManager:
 				CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Units/Acheron.dds',ColorTypes(8),unit.getX(),unit.getY(),True,True)
 				CyInterface().addCombatMessage(iPlayer,sMsg)
 
-		if not unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1')) and not unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1')):
-			iTough = CyGame().getSorenRandNum(100, "Toughness")
-			if iTough < 2:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH5'), True)
-			if iTough < 6:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH4'), True)
-			if iTough < 13:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH3'), True)
-			if iTough < 22:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH2'), True)
-			if iTough < 40:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1'), True)
-			if iTough > 98:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY5'), True)
-			if iTough > 94:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY4'), True)
-			if iTough > 87:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY3'), True)
-			if iTough > 78:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY2'), True)
-			if iTough > 60:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1'), True)
-
+		cf.tough(unit)
+		
 		if CyGame().getSorenRandNum(20, "RandomHero") == 1:
 			if pPlayer.isHuman() or unit.baseCombatStr() > 0:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_NO_RANGE'), True)

@@ -17,6 +17,34 @@ CyGameInstance = gc.getGame()
 
 class CustomFunctions:
 
+	def tough(self,unit):
+		
+		if self.getObjectInt(unit,'tough') == 0:
+			self.setObjectInt(unit,'tough',1)
+			
+			iTough = CyGame().getSorenRandNum(100, "Toughness")
+			if iTough < 2:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH5'), True)
+			if iTough < 6:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH4'), True)
+			if iTough < 13:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH3'), True)
+			if iTough < 22:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH2'), True)
+			if iTough < 40:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1'), True)
+			if iTough > 98:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY5'), True)
+			if iTough > 94:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY4'), True)
+			if iTough > 87:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY3'), True)
+			if iTough > 78:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY2'), True)
+			if iTough > 60:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1'), True)
+
+
 	def reqJudge(self,caster):
 		if caster.plot().isCity():
 			pCity = caster.plot().getPlotCity()
@@ -2728,6 +2756,8 @@ class CustomFunctions:
 
 				# Unit Morale
 				if pPlayer.isHuman():
+					if pUnit.getGameTurnCreated() > iGameTurn - 1:
+						self.tough(pUnit)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_RAVAGER'), False)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_1'), False)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_2'), False)
@@ -3165,7 +3195,7 @@ class CustomFunctions:
 					iRange += pUnit.getLevel() / 2
 					iMerchantIncome = CyGame().getSorenRandNum(10*iRange, "Merchant Mission") + iRange * 2
 					if iMerchantIncome > 0:
-						CyInterface().addMessage(pUnit.getOwner(),false,25,'Your '+pUnit.getName()+' completes a merchant mission and gains '+str(iMerchantIncome)+'gp!  Merchanteering range '+str(iRange)+'/7'+sBlock,'',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
+						CyInterface().addMessage(pUnit.getOwner(),false,25,'Your '+pUnit.getName()+' completes a merchant mission and gains '+str(iMerchantIncome)+'gp!  Merchanteering range '+str(iRange)+'/7'+sBlock,'',1,pUnit.getButton(),ColorTypes(11),pUnit.getX(),pUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pUnit.getOwner(),'Your '+pUnit.getName()+' completes a merchant mission and gains '+str(iMerchantIncome)+'gp!  Merchanteering range '+str(iRange)+'/7'+sBlock)
 						pPlayer.setGold( pPlayer.getGold() + iMerchantIncome )
 						pUnit.changeExperience(iRange/3, -1, False, False, False)
@@ -3181,7 +3211,7 @@ class CustomFunctions:
 				iGiveXP = 15
 				if pPlayer.isHuman():
 					iGiveXP = 25
-				if iThisPlotTrainAnimal > 0 and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') or pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_ORC')):
+				if iThisPlotTrainAnimal > 0 and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') or pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_ORC') or pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_LIZARDMAN')):
 					iThisPlotTrainAnimal -= 1
 					iGiveXP = 10
 				if iThisPlotTrain > 0:
@@ -3318,7 +3348,7 @@ class CustomFunctions:
 					iJunglePlot = 0
 				if pPlot.getFeatureType() == iJungle or iDiseaseInPlot > 0 or iPlagueInPlot > 0:
 					if pUnit.isAlive():
-						if not pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_ORC'):
+						if not pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_ORC') and not pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_LIZARDMAN'):
 							if (pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_BEAST')):
 								if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')):
 									if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED')) and CyGame().getSorenRandNum(100, "JungleFever") < iJunglePlot + iDiseaseInPlot * iDisMult + pUnit.getDamage() / 20:

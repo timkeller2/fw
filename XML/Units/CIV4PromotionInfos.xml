@@ -20471,7 +20471,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough1.dds</Button>
-            <bMutation>1</bMutation>
+            <bMutation>0</bMutation>
             <iCombatPercentDefense>5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <PromotionNextLevel>PROMOTION_TOUGH2</PromotionNextLevel>
@@ -20482,7 +20482,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough2.dds</Button>
-            <bMutation>1</bMutation>
+            <bMutation>0</bMutation>
             <iCombatPercentDefense>5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <PromotionNextLevel>PROMOTION_TOUGH3</PromotionNextLevel>
@@ -20493,7 +20493,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough3.dds</Button>
-            <bMutation>1</bMutation>
+            <bMutation>0</bMutation>
             <iCombatPercentDefense>5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <PromotionNextLevel>PROMOTION_TOUGH4</PromotionNextLevel>
@@ -20504,7 +20504,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough4.dds</Button>
-            <bMutation>1</bMutation>
+            <bMutation>0</bMutation>
             <iCombatPercentDefense>5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <PromotionNextLevel>PROMOTION_TOUGH5</PromotionNextLevel>
@@ -20515,7 +20515,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough5.dds</Button>
-            <bMutation>1</bMutation>
+            <bMutation>0</bMutation>
             <iCombatPercentDefense>5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
@@ -20525,7 +20525,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>-5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy1.dds</Button>
-            <bMutation>1</bMutation>
+            <bMutation>0</bMutation>
             <iCombatPercentDefense>-5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>5</iSpellCasterXP>
@@ -20538,7 +20538,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>-5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy2.dds</Button>
-            <bMutation>1</bMutation>
+            <bMutation>0</bMutation>
             <iCombatPercentDefense>-5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>5</iSpellCasterXP>
@@ -20551,7 +20551,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>-5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy3.dds</Button>
-            <bMutation>1</bMutation>
+            <bMutation>0</bMutation>
             <iCombatPercentDefense>-5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>5</iSpellCasterXP>
@@ -20564,7 +20564,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>-5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy4.dds</Button>
-            <bMutation>1</bMutation>
+            <bMutation>0</bMutation>
             <iCombatPercentDefense>-5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>5</iSpellCasterXP>
@@ -20577,7 +20577,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>-5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy5.dds</Button>
-            <bMutation>1</bMutation>
+            <bMutation>0</bMutation>
             <iCombatPercentDefense>-5</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>5</iSpellCasterXP>
@@ -20804,10 +20804,10 @@
             <iFriendlyHealChange>0</iFriendlyHealChange>
             <iSameTileHealChange>0</iSameTileHealChange>
             <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>10</iCombatPercent>
+            <iCombatPercent>0</iCombatPercent>
             <iCityAttack>50</iCityAttack>
             <iCityDefense>0</iCityDefense>
-            <iHillsAttack>0</iHillsAttack>
+            <iHillsAttack>20</iHillsAttack>
             <iHillsDefense>0</iHillsDefense>
             <iKamikazePercent>0</iKamikazePercent>
             <iRevoltProtection>0</iRevoltProtection>

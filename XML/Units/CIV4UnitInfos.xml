@@ -81817,7 +81817,7 @@
             <iAsset>2</iAsset>
             <iPower>2</iPower>
             <UnitMeshGroups>
-            <iGroupSize>5</iGroupSize>
+            <iGroupSize>1</iGroupSize>
             <fMaxSpeed>1.75</fMaxSpeed>
             <fPadTime>1</fPadTime>
             <iMeleeWaveSize>1</iMeleeWaveSize>

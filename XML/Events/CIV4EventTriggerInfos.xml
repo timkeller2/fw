@@ -30890,7 +30890,7 @@
             </WorldNewsTexts>
             <TriggerTexts>
                 <TriggerText>
-                    <Text>Your friends offer to aid you in starting your kingdom.</Text>
+                    <Text>Your friends offer to aid you in starting your kingdom (Turns 12, 24 and 36).</Text>
                     <Era>NONE</Era>
                 </TriggerText>
             </TriggerTexts>
