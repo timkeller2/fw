@@ -36,7 +36,7 @@
                 </DamageTypeCombat>
             </DamageTypeCombats>
             <PromotionCombatType>PROMOTION_FEAR</PromotionCombatType>
-            <iPromotionCombatMod>50</iPromotionCombatMod>
+            <iPromotionCombatMod>35</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_AIR1</Type>
@@ -260,7 +260,7 @@
                 </DamageTypeResist>
             </DamageTypeResists>
             <PromotionCombatType>PROMOTION_FEAR</PromotionCombatType>
-            <iPromotionCombatMod>50</iPromotionCombatMod>
+            <iPromotionCombatMod>35</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_ATHAME</Type>
@@ -291,7 +291,7 @@
             <iBetterDefenderThanPercent>1000</iBetterDefenderThanPercent>
             <iCasterResistModify>-50</iCasterResistModify>
             <PromotionCombatType>PROMOTION_FEAR</PromotionCombatType>
-            <iPromotionCombatMod>50</iPromotionCombatMod>
+            <iPromotionCombatMod>35</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_BARRAGE1</Type>
@@ -786,7 +786,7 @@
             <iExpireChance>10</iExpireChance>
             <iMinLevel>-1</iMinLevel>
             <PromotionCombatType>PROMOTION_FEAR</PromotionCombatType>
-            <iPromotionCombatMod>50</iPromotionCombatMod>
+            <iPromotionCombatMod>35</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_CANNIBALIZE</Type>
@@ -1672,7 +1672,7 @@
             <iAIWeight>50</iAIWeight>
             <iMinLevel>-1</iMinLevel>
             <PromotionCombatType>PROMOTION_FEAR</PromotionCombatType>
-            <iPromotionCombatMod>50</iPromotionCombatMod>
+            <iPromotionCombatMod>35</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_COVER</Type>
@@ -2112,7 +2112,7 @@
                 </DamageTypeResist>
             </DamageTypeResists>
             <PromotionCombatType>PROMOTION_FEAR</PromotionCombatType>
-            <iPromotionCombatMod>50</iPromotionCombatMod>
+            <iPromotionCombatMod>35</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_DEMON_SLAYING</Type>
@@ -2237,7 +2237,7 @@
             <bImmuneToFear>1</bImmuneToFear>
             <bRace>1</bRace>
             <PromotionCombatType>PROMOTION_FEAR</PromotionCombatType>
-            <iPromotionCombatMod>50</iPromotionCombatMod>
+            <iPromotionCombatMod>35</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_DRAGON_SLAYING</Type>
@@ -2647,7 +2647,7 @@
                 </DamageTypeResist>
             </DamageTypeResists>
             <PromotionCombatType>PROMOTION_FEAR</PromotionCombatType>
-            <iPromotionCombatMod>50</iPromotionCombatMod>
+            <iPromotionCombatMod>35</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_ELF</Type>
@@ -3191,7 +3191,7 @@
             <PromotionPrereq>PROMOTION_COMBAT5</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_DEMON</PromotionPrereqOr1>
             <PromotionPrereqOr2>PROMOTION_UNDEAD</PromotionPrereqOr2>
-            <iCombatPercent>50</iCombatPercent>
+            <iCombatPercent>35</iCombatPercent>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
@@ -3229,7 +3229,7 @@
             <Button>Art/Interface/Buttons/Promotions/Fear.dds</Button>
             <bFear>0</bFear>
             <iAIWeight>100</iAIWeight>
-            <iCombatPercentDefense>50</iCombatPercentDefense>
+            <iCombatPercentDefense>35</iCombatPercentDefense>
             <PromotionPrereqOr3>PROMOTION_NIGHTMARE</PromotionPrereqOr3>
             <PromotionPrereqOr4>PROMOTION_DIRE</PromotionPrereqOr4>
         </PromotionInfo>
@@ -3532,6 +3532,12 @@
             <bRiver>1</bRiver>
             <iVisibilityChange>1</iVisibilityChange>
             <iMovesChange>1</iMovesChange>
+            <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                    <iUnitCombatMod>-30</iUnitCombatMod>
+                </UnitCombatMod>
+            </UnitCombatMods>
             <Button>Art/Interface/Buttons/Promotions/Flying.dds</Button>
             <iCombatPercentDefense>40</iCombatPercentDefense>
             <bFlying>1</bFlying>
@@ -3799,7 +3805,7 @@
                 </DamageTypeResist>
             </DamageTypeResists>
             <PromotionCombatType>PROMOTION_FEAR</PromotionCombatType>
-            <iPromotionCombatMod>50</iPromotionCombatMod>
+            <iPromotionCombatMod>35</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_GREAT_COMMANDER</Type>

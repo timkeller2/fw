@@ -117,7 +117,7 @@ class CustomFunctions:
 		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 		sMsg = 'A ' + str( pUnit.getName() ) + ' has young...'
 		if pUnit.getName().find('Offspring') == -1 and not pUnit.getName() == pUnit.getNameNoDesc():
-			newUnit.setName(pUnit.getNameNoDesc()+' Offspring')
+			newUnit.setName('Offspring of ' + pUnit.getNameNoDesc())
 		CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,pUnit.getButton(),ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
 		CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
 	
