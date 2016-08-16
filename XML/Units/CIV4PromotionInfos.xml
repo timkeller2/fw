@@ -2230,6 +2230,7 @@
         <PromotionInfo>
             <Type>PROMOTION_DRAGON</Type>
             <Description>TXT_KEY_PROMOTION_DRAGON</Description>
+            <Help>[ICON_BULLET]Reduces morale of nearby enemy units by 3.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <Button>Art/Interface/Buttons/Promotions/Dragon.dds</Button>
@@ -3187,6 +3188,7 @@
         <PromotionInfo>
             <Type>PROMOTION_FEAR</Type>
             <Description>TXT_KEY_PROMOTION_FEAR</Description>
+            <Help>[ICON_BULLET]Reduces morale of nearby enemy units by 3.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_COMBAT5</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_DEMON</PromotionPrereqOr1>
@@ -3525,7 +3527,7 @@
         <PromotionInfo>
             <Type>PROMOTION_FLYING</Type>
             <Description>TXT_KEY_PROMOTION_FLYING</Description>
-            <Help>+40% combat defense while flying.</Help>
+            <Help>[ICON_BULLET]+40% combat defense while flying.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <bAmphib>1</bAmphib>
@@ -5045,6 +5047,7 @@
         <PromotionInfo>
             <Type>PROMOTION_LIZARDMAN</Type>
             <Description>TXT_KEY_PROMOTION_LIZARDMAN</Description>
+            <Help>[ICON_BULLET]Gains XP 10% of the time when in jungle.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <bAmphib>1</bAmphib>
@@ -7793,6 +7796,7 @@
         <PromotionInfo>
             <Type>PROMOTION_TIMOR_MASK</Type>
             <Description>TXT_KEY_EQUIPMENT_TIMOR_MASK</Description>
+            <Help>[ICON_BULLET]Reduces morale of nearby enemy units by 3.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <Button>Art/Interface/Buttons/Equipment/TimorMask.dds</Button>
@@ -7800,7 +7804,7 @@
             <bFear>0</bFear>
             <bImmuneToFear>1</bImmuneToFear>
             <PromotionCombatType>PROMOTION_FEAR</PromotionCombatType>
-            <iPromotionCombatMod>50</iPromotionCombatMod>
+            <iPromotionCombatMod>35</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_TWINCAST</Type>
@@ -7846,7 +7850,7 @@
                 </DamageTypeResist>
             </DamageTypeResists>
             <PromotionCombatType>PROMOTION_FEAR</PromotionCombatType>
-            <iPromotionCombatMod>50</iPromotionCombatMod>
+            <iPromotionCombatMod>35</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_UNDEAD_SLAYING</Type>

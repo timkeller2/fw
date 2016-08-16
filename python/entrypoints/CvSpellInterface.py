@@ -2259,6 +2259,23 @@ def spellReligiousFervor(caster):
 		newUnit.changeExperience(iCount, -1, False, False, False)
 		newUnit.setReligion(iReligion)
 
+def reqCoronate(caster):
+	pPlot = caster.plot()
+	pCity = pPlot.getPlotCity()
+	iPlayer = caster.getOwner()
+	if pCity.getCulture(iPlayer) < 4000:
+		return False
+	iNobles = cf.getObjectInt(pCity,'Nobles') + 1
+	if pCity.getCulture(iPlayer) >= iNobles * iNobles * 1000:
+		return True
+		
+	return False
+
+def spellCoronate(caster):
+	pPlot = caster.plot()
+	pCity = pPlot.getPlotCity()
+	cf.changeObjectInt(pCity,'Nobles',1)
+
 def reqRepair(caster):
 	pPlot = caster.plot()
 	iGolem = gc.getInfoTypeForString('PROMOTION_GOLEM')

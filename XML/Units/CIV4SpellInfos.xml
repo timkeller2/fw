@@ -13355,5 +13355,23 @@
             <Sound>AS3D_SPELL_HASTE</Sound>
             <Button>Art/Interface/Buttons/Promotions/flying.dds</Button>
         </SpellInfo>
+        <SpellInfo>
+            <Type>SPELL_CORONATE</Type>
+            <Description>Add this unit to the Nobility</Description>
+            <Help>Cities with 4000 culture may add a unit to the nobility.  This also occurs at 9000, 16000 and 25000 culture.</Help>
+            <bAllowAI>1</bAllowAI>
+            <iAIWeightWar>50</iAIWeightWar>
+            <bInBordersOnly>1</bInBordersOnly>
+            <bInCityOnly>1</bInCityOnly>
+            <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <AddPromotionType1>PROMOTION_NOBILITY</AddPromotionType1>
+            <bBuffCasterOnly>1</bBuffCasterOnly>
+            <PyResult></PyResult>
+            <PyRequirement>reqCoronate(pCaster)</PyRequirement>
+            <Effect>EFFECT_SWORDS_SPARKS</Effect>
+            <Sound>AS3D_SPELL_BLESS</Sound>
+            <Button>Art/Interface/Buttons/Civics/Socialorder.dds</Button>
+        </SpellInfo>
     </SpellInfos>
 </Civ4SpellInfos>
