@@ -2263,6 +2263,8 @@ def reqCoronate(caster):
 	pPlot = caster.plot()
 	pCity = pPlot.getPlotCity()
 	iPlayer = caster.getOwner()
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NOBILITY')):
+		return False
 	if pCity.getCulture(iPlayer) < 4000:
 		return False
 	iNobles = cf.getObjectInt(pCity,'Nobles') + 1
@@ -4465,7 +4467,7 @@ def spellNeedJudge(caster):
 					sCityInfo['JUDGE'] = 0
 				if sCityInfo['JUDGE'] > 0 and (pPlayer.canContact(caster.getOwner()) or iPlayer == caster.getOwner()):
 					sMsg = 'The people of ' + pCity.getName() + ' owned by ' + pPlayer.getName() + ' still await a noble to help them resolve a ' + cf.sDisputeLevel(sCityInfo['JUDGE']) + ' dispute...'
-					CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+					CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 					CyInterface().addCombatMessage(caster.getOwner(),sMsg )
 
 def reqDiplomacy(caster):
