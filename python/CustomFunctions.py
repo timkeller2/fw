@@ -1593,13 +1593,11 @@ class CustomFunctions:
 			sSet = {}
 			sSet[svar] = 0
 		
-		if svar not in iGet:
-			sSet[svar] = ival
+		if svar not in sSet:
+			sSet[svar] = 0
 			
-		sSet[svar] =  sSet[svar] + ival
+		sSet[svar] = int(sSet[svar]) + ival
 		city.setScriptData(cPickle.dumps(sSet))
-		
-		return sSet[svar]
 
 	def getObjectInt(self,city,svar):
 		try:
@@ -1618,10 +1616,7 @@ class CustomFunctions:
 		except:
 			sSet = {}
 		
-		if svar not in sSet:
-			sSet[svar] = sval
-			
-		sSet[svar] =  sval
+		sSet[svar] = sval
 		city.setScriptData(cPickle.dumps(sSet))
 
 	def getObjectStr(self,city,svar):

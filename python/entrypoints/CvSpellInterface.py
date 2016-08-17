@@ -715,6 +715,12 @@ def spellConvertCityRantine(caster):
 	pPlayer = gc.getPlayer(caster.getOwner())
 	pPlayer.acquireCity(pCity,false,false)
 
+def reqCreateBatteringRam(caster):	
+	pPlot = caster.plot()
+	if pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_FOREST') or pPlot.getFeatureType() == gc.getInfoTypeForString('FEATURE_ANCIENT_FOREST'):
+		return True
+	return False
+	
 def spellCreateBatteringRam(caster):
 	pPlot = caster.plot()
 	pPlot.setFeatureType(-1, -1)
@@ -2267,7 +2273,7 @@ def reqCoronate(caster):
 		return False
 	if pCity.getCulture(iPlayer) < 4000:
 		return False
-	iNobles = cf.getObjectInt(pCity,'Nobles') + 1
+	iNobles = cf.getObjectInt(pCity,'Nobles') + 2
 	if pCity.getCulture(iPlayer) >= iNobles * iNobles * 1000:
 		return True
 		
@@ -4454,6 +4460,7 @@ def spellJudge(caster):
 	cf.spellJudge(caster)
 	
 def spellNeedJudge(caster):
+	noDisputes = True
 	for iPlayer in range(gc.getMAX_PLAYERS()):
 		pPlayer = gc.getPlayer(iPlayer)
 		if pPlayer.isAlive() and pPlayer.getNumCities() > 0:  
@@ -4466,9 +4473,15 @@ def spellNeedJudge(caster):
 				if 'JUDGE' not in sCityInfo:
 					sCityInfo['JUDGE'] = 0
 				if sCityInfo['JUDGE'] > 0 and (pPlayer.canContact(caster.getOwner()) or iPlayer == caster.getOwner()):
+					noDisputes = False
 					sMsg = 'The people of ' + pCity.getName() + ' owned by ' + pPlayer.getName() + ' still await a noble to help them resolve a ' + cf.sDisputeLevel(sCityInfo['JUDGE']) + ' dispute...'
 					CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 					CyInterface().addCombatMessage(caster.getOwner(),sMsg )
+	
+	if noDisputes:
+		sMsg = 'There are no known major disputes in the world!'
+		CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+		CyInterface().addCombatMessage(caster.getOwner(),sMsg )
 
 def reqDiplomacy(caster):
 	iX = caster.getX()

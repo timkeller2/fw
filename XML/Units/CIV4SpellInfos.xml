@@ -581,6 +581,7 @@
             <UnitCombatPrereq>UNITCOMBAT_MELEE</UnitCombatPrereq>
             <CivilizationPrereq>CIVILIZATION_KHAZAD</CivilizationPrereq>
             <FeatureOrPrereq1>FEATURE_FOREST</FeatureOrPrereq1>
+            <FeatureOrPrereq2>FEATURE_FOREST_ANCIENT</FeatureOrPrereq2>
             <TechPrereq>TECH_ENGINEERING</TechPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -590,6 +591,7 @@
             <bAbility>1</bAbility>
             <iDelay>3</iDelay>
             <PyResult>spellCreateBatteringRam(pCaster)</PyResult>
+            <PyRequirement>reqCreateBatteringRam(pCaster)</PyRequirement>
             <Effect>EFFECT_SPELL1</Effect>
             <Sound>AS3D_SPELL_TRAIN</Sound>
             <Button>Art/Interface/Buttons/Units/Battering Ram.dds</Button>
@@ -6783,6 +6785,80 @@
             <Button>Art/Interface/Buttons/Promotions/Blessed.dds</Button>
         </SpellInfo>
         <SpellInfo>
+            <Type>SPELL_NEED_JUDGE</Type>
+            <Description>List Disputes</Description>
+            <Civilopedia></Civilopedia>
+            <Strategy>NONE</Strategy>
+            <Help>List the cities that you know of that need help with resolving disputes.</Help>
+            <PromotionPrereq1>PROMOTION_NOBILITY</PromotionPrereq1>
+            <PromotionPrereq2>NONE</PromotionPrereq2>
+            <UnitPrereq>NONE</UnitPrereq>
+            <UnitClassPrereq>NONE</UnitClassPrereq>
+            <UnitCombatPrereq>NONE</UnitCombatPrereq>
+            <UnitInStackPrereq>NONE</UnitInStackPrereq>
+            <CivilizationPrereq>NONE</CivilizationPrereq>
+            <ReligionPrereq>NONE</ReligionPrereq>
+            <StateReligionPrereq>NONE</StateReligionPrereq>
+            <TechPrereq>NONE</TechPrereq>
+            <bAllowAI>0</bAllowAI>
+            <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
+            <bCausesWar>0</bCausesWar>
+            <bGlobal>0</bGlobal>
+            <bInBordersOnly>0</bInBordersOnly>
+            <bInCityOnly>1</bInCityOnly>
+            <iAIWeight>0</iAIWeight>
+            <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
+            <bResistable>0</bResistable>
+            <iRange>0</iRange>
+            <iResistModify>0</iResistModify>
+            <iDamage>0</iDamage>
+            <iDamageLimit>0</iDamageLimit>
+            <DamageType>NONE</DamageType>
+            <AddPromotionType1>NONE</AddPromotionType1>
+            <AddPromotionType2>NONE</AddPromotionType2>
+            <AddPromotionType3>NONE</AddPromotionType3>
+            <RemovePromotionType1>NONE</RemovePromotionType1>
+            <RemovePromotionType2>NONE</RemovePromotionType2>
+            <RemovePromotionType3>NONE</RemovePromotionType3>
+            <bBuffCasterOnly>0</bBuffCasterOnly>
+            <ConvertUnitType>NONE</ConvertUnitType>
+            <CreateBuildingType>NONE</CreateBuildingType>
+            <CreateFeatureType>NONE</CreateFeatureType>
+            <CreateImprovementType>NONE</CreateImprovementType>
+            <SpreadReligion>NONE</SpreadReligion>
+            <CreateUnitType>NONE</CreateUnitType>
+            <iCreateUnitNum>0</iCreateUnitNum>
+            <bPermanentUnitCreate>0</bPermanentUnitCreate>
+            <CreateUnitPromotion>NONE</CreateUnitPromotion>
+            <bImmuneTeam>0</bImmuneTeam>
+            <bImmuneNeutral>0</bImmuneNeutral>
+            <bImmuneEnemy>0</bImmuneEnemy>
+            <bImmuneFlying>0</bImmuneFlying>
+            <bImmuneNotAlive>0</bImmuneNotAlive>
+            <bDispel>0</bDispel>
+            <bPush>0</bPush>
+            <bRemoveHasCasted>0</bRemoveHasCasted>
+            <bSacrificeCaster>0</bSacrificeCaster>
+            <iChangePopulation>0</iChangePopulation>
+            <iCost>0</iCost>
+            <iImmobileTurns>0</iImmobileTurns>
+            <iMiscastChance>0</iMiscastChance>
+            <PyMiscast></PyMiscast>
+            <PyResult>spellNeedJudge(pCaster)</PyResult>
+            <PyRequirement></PyRequirement>
+            <Effect>EFFECT_ENCHANTED_BLADE</Effect>
+            <Sound>AS3D_SPELL_ENCHANTMENT</Sound>
+            <HotKey></HotKey>
+            <bAltDown>0</bAltDown>
+            <bShiftDown>0</bShiftDown>
+            <bCtrlDown>0</bCtrlDown>
+            <bGraphicalOnly>0</bGraphicalOnly>
+            <iHotKeyPriority>0</iHotKeyPriority>
+            <Button>Art/Interface/Buttons/TechTree/Code of Laws.dds</Button>
+        </SpellInfo>
+        <SpellInfo>
             <Type>SPELL_DIPLOMACY</Type>
             <Description>Diplomacy</Description>
             <Civilopedia>When using diplomacy, non-living units cost double, recon units cost double and loyal units cost double.  The more nobility promotions you have and the stronger your stack, the more chance diplomacy will work.  The enemy unit is less likely to join if he has allied units within five spaces.  Your noble may only hire units that have (level+str) equal to or less than his.</Civilopedia>
@@ -6928,81 +7004,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Promotions/Spiritguide.dds</Button>
-        </SpellInfo>
-        <SpellInfo>
-            <Type>SPELL_NEED_JUDGE</Type>
-            <Description>List Disputes</Description>
-            <Civilopedia></Civilopedia>
-            <Strategy>NONE</Strategy>
-            <Help>List the cities that you know of that need help with resolving disputes.</Help>
-            <PromotionPrereq1>PROMOTION_NOBILITY</PromotionPrereq1>
-            <PromotionPrereq2>NONE</PromotionPrereq2>
-            <UnitPrereq>NONE</UnitPrereq>
-            <UnitClassPrereq>NONE</UnitClassPrereq>
-            <UnitCombatPrereq>NONE</UnitCombatPrereq>
-            <UnitInStackPrereq>NONE</UnitInStackPrereq>
-            <CivilizationPrereq>NONE</CivilizationPrereq>
-            <ReligionPrereq>NONE</ReligionPrereq>
-            <StateReligionPrereq>NONE</StateReligionPrereq>
-            <TechPrereq>NONE</TechPrereq>
-            <bAllowAI>0</bAllowAI>
-            <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
-            <bCausesWar>0</bCausesWar>
-            <bGlobal>0</bGlobal>
-            <bInBordersOnly>0</bInBordersOnly>
-            <bInCityOnly>1</bInCityOnly>
-            <iAIWeight>0</iAIWeight>
-            <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>1</bHasCasted>
-            <bIgnoreHasCasted>0</bIgnoreHasCasted>
-            <bResistable>0</bResistable>
-            <iRange>0</iRange>
-            <iResistModify>0</iResistModify>
-            <iDamage>0</iDamage>
-            <iDamageLimit>0</iDamageLimit>
-            <DamageType>NONE</DamageType>
-            <AddPromotionType1>NONE</AddPromotionType1>
-            <AddPromotionType2>NONE</AddPromotionType2>
-            <AddPromotionType3>NONE</AddPromotionType3>
-            <RemovePromotionType1>NONE</RemovePromotionType1>
-            <RemovePromotionType2>NONE</RemovePromotionType2>
-            <RemovePromotionType3>NONE</RemovePromotionType3>
-            <bBuffCasterOnly>0</bBuffCasterOnly>
-            <ConvertUnitType>NONE</ConvertUnitType>
-            <CreateBuildingType>NONE</CreateBuildingType>
-            <CreateFeatureType>NONE</CreateFeatureType>
-            <CreateImprovementType>NONE</CreateImprovementType>
-            <SpreadReligion>NONE</SpreadReligion>
-            <CreateUnitType>NONE</CreateUnitType>
-            <iCreateUnitNum>0</iCreateUnitNum>
-            <bPermanentUnitCreate>0</bPermanentUnitCreate>
-            <CreateUnitPromotion>NONE</CreateUnitPromotion>
-            <bImmuneTeam>0</bImmuneTeam>
-            <bImmuneNeutral>0</bImmuneNeutral>
-            <bImmuneEnemy>0</bImmuneEnemy>
-            <bImmuneFlying>0</bImmuneFlying>
-            <bImmuneNotAlive>0</bImmuneNotAlive>
-            <bDispel>0</bDispel>
-            <bPush>0</bPush>
-            <bRemoveHasCasted>0</bRemoveHasCasted>
-            <bSacrificeCaster>0</bSacrificeCaster>
-            <iChangePopulation>0</iChangePopulation>
-            <iCost>0</iCost>
-            <iImmobileTurns>0</iImmobileTurns>
-            <iMiscastChance>0</iMiscastChance>
-            <PyMiscast></PyMiscast>
-            <PyResult>spellNeedJudge(pCaster)</PyResult>
-            <PyRequirement></PyRequirement>
-            <Effect>EFFECT_ENCHANTED_BLADE</Effect>
-            <Sound>AS3D_SPELL_ENCHANTMENT</Sound>
-            <HotKey></HotKey>
-            <bAltDown>0</bAltDown>
-            <bShiftDown>0</bShiftDown>
-            <bCtrlDown>0</bCtrlDown>
-            <bGraphicalOnly>0</bGraphicalOnly>
-            <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Promotions/Spiritguide.dds</Button>
+            <Button>Art/Interface/Buttons/Buildings/Courthouse.dds</Button>
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_LIST_MAINT</Type>
@@ -7076,7 +7078,7 @@
             <bCtrlDown>0</bCtrlDown>
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
-            <Button>Art/Interface/Buttons/Promotions/Spiritguide.dds</Button>
+            <Button>Art/Interface/Buttons/TechTree/Code of Laws.dds</Button>
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_HEALING_TOUCH</Type>
@@ -13367,7 +13369,8 @@
             <bHasCasted>1</bHasCasted>
             <AddPromotionType1>PROMOTION_NOBILITY</AddPromotionType1>
             <bBuffCasterOnly>1</bBuffCasterOnly>
-            <PyResult></PyResult>
+            <iCost>250</iCost>
+            <PyResult>spellCoronate(pCaster)</PyResult>
             <PyRequirement>reqCoronate(pCaster)</PyRequirement>
             <Effect>EFFECT_SWORDS_SPARKS</Effect>
             <Sound>AS3D_SPELL_BLESS</Sound>
