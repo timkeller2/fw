@@ -115,10 +115,10 @@ class CustomFunctions:
 		
 		pUnit.changeExperience(1, -1, False, False, False)
 		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
-		sMsg = 'A ' + str( pUnit.getName() ) + ' has young...'
+		sMsg = str( pUnit.getNameNoDesc() ) + ' has young...'
 		if pUnit.getName().find('Offspring') == -1 and not pUnit.getName() == pUnit.getNameNoDesc():
 			newUnit.setName('Offspring of ' + pUnit.getNameNoDesc())
-		CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,pUnit.getButton(),ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
+		CyInterface().addMessage(pUnit.getOwner(),False,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,pUnit.getButton(),ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
 		CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
 	
 	def retCombat(self,unit):
@@ -162,13 +162,24 @@ class CustomFunctions:
 
 	def retDir(self,x,y,tx,ty):
 		sDirection = ''
+		ry = int( math.fabs(ty - y) )
+		rx = int( math.fabs(tx - x) )
+		
 		if ty > y:
-			sDirection = 'north'
+			if ry > rx * 2:
+				sDirection = 'north-'
+			sDirection = sDirection + 'north'
 		if ty < y:
-			sDirection = 'south'
+			if ry > rx * 2:
+				sDirection = 'south-'
+			sDirection = sDirection + 'south'
 		if tx < x:
+			if rx > ry * 2:
+				sDirection = 'west-'
 			sDirection = sDirection + 'west'
 		if tx > x:
+			if rx > ry * 2:
+				sDirection = 'east-'
 			sDirection = sDirection + 'east'
 
 		return sDirection
@@ -336,6 +347,7 @@ class CustomFunctions:
 			iCachesLev = 0
 			iBestRange = 999
 			iNextBestRange = 999
+			iNextBestPower = 999
 			iFarRange = 999
 			for pUnit in py.getUnitList():
 				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'):
@@ -345,7 +357,7 @@ class CustomFunctions:
 						iFarRange = iRange
 						fx = pUnit.getX()
 						fy = pUnit.getY()
-					if iRange > -1 and iRange < iNextBestRange and iRange <= iSearch + iMult:
+					if iRange > -1 and iRange < iNextBestRange and iRange <= iSearch + iMult and pUnit.getLevel() <= iSearch * 3:
 						iNextBestRange = iRange
 						tx = pUnit.getX()
 						ty = pUnit.getY()
@@ -356,7 +368,7 @@ class CustomFunctions:
 
 			if iBestRange == 999:
 				iBestRange = iNextBestRange
-				sPref = ', though it is above your experience level'
+				sPref = ', though it is above your experience level (there are no caches within your level within range)'
 
 			if iBestRange < 999:
 				sDirection = ' to the ' + self.retDir(iX,iY,tx,ty)
