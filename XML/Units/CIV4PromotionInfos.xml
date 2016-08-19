@@ -3527,7 +3527,7 @@
         <PromotionInfo>
             <Type>PROMOTION_FLYING</Type>
             <Description>TXT_KEY_PROMOTION_FLYING</Description>
-            <Help>[ICON_BULLET]+40% combat defense while flying.</Help>
+            <Help>[ICON_BULLET]+40% combat defense</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <bAmphib>1</bAmphib>
@@ -8516,8 +8516,10 @@
         <PromotionInfo>
             <Type>PROMOTION_GUARDING</Type>
             <Description>Guarding</Description>
+            <Help>[ICON_BULLET]+20% Combat Defense</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
+            <iCombatPercent>-20</iCombatPercent>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
@@ -8529,6 +8531,7 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Guardsman.dds</Button>
+            <iCombatPercentDefense>20</iCombatPercentDefense>
             <bTargetWeakestUnitCounter>1</bTargetWeakestUnitCounter>
             <iBetterDefenderThanPercent>100</iBetterDefenderThanPercent>
         </PromotionInfo>
