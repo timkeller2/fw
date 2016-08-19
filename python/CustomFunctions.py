@@ -166,19 +166,19 @@ class CustomFunctions:
 		rx = int( math.fabs(tx - x) )
 		
 		if ty > y:
-			if ry > rx * 2:
+			if ry > rx * 2 and rx > 0:
 				sDirection = 'north-'
 			sDirection = sDirection + 'north'
 		if ty < y:
-			if ry > rx * 2:
+			if ry > rx * 2 and rx > 0:
 				sDirection = 'south-'
 			sDirection = sDirection + 'south'
 		if tx < x:
-			if rx > ry * 2:
+			if rx > ry * 2 and ry > 0:
 				sDirection = 'west-'
 			sDirection = sDirection + 'west'
 		if tx > x:
-			if rx > ry * 2:
+			if rx > ry * 2 and ry > 0:
 				sDirection = 'east-'
 			sDirection = sDirection + 'east'
 

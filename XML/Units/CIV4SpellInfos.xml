@@ -11007,7 +11007,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_SCROLL_MS_BURGLAR</Type>
-            <Description>Use Magic Item Scroll of Maelstrom</Description>
+            <Description>Use Magic Item Scroll of Lightning Burst</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>Create an explosion of lightning doing ( level x 3 ) damage to all units within 3 tiles.</Help>
@@ -13008,7 +13008,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_TAKE_SCROLL_MS</Type>
-            <Description>Take the Scroll of Maelstrom...</Description>
+            <Description>Take the Scroll of Lightning Burst...</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>TXT_KEY_SPELL_TAKE_EQUIPMENT_HELP</Help>
