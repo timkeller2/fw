@@ -116,8 +116,11 @@ class CustomFunctions:
 		pUnit.changeExperience(1, -1, False, False, False)
 		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 		sMsg = str( pUnit.getNameNoDesc() ) + ' has young...'
-		if pUnit.getName().find('Offspring') == -1 and not pUnit.getName() == pUnit.getNameNoDesc():
-			newUnit.setName('Offspring of ' + pUnit.getNameNoDesc())
+		if not pUnit.getName() == pUnit.getNameNoDesc():
+			if pUnit.getName().find('Offspring') == -1:
+				newUnit.setName('Offspring of ' + pUnit.getNameNoDesc())
+			else:	
+				newUnit.setName('Grand-' + pUnit.getNameNoDesc())
 		CyInterface().addMessage(pUnit.getOwner(),False,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,pUnit.getButton(),ColorTypes(8),newUnit.getX(),newUnit.getY(),True,True)
 		CyInterface().addCombatMessage(pUnit.getOwner(),sMsg)
 	
@@ -168,18 +171,23 @@ class CustomFunctions:
 		if ty > y:
 			if ry > rx * 2 and rx > 0:
 				sDirection = 'north-'
-			sDirection = sDirection + 'north'
 		if ty < y:
 			if ry > rx * 2 and rx > 0:
 				sDirection = 'south-'
-			sDirection = sDirection + 'south'
 		if tx < x:
 			if rx > ry * 2 and ry > 0:
 				sDirection = 'west-'
-			sDirection = sDirection + 'west'
 		if tx > x:
 			if rx > ry * 2 and ry > 0:
 				sDirection = 'east-'
+
+		if ty > y:
+			sDirection = sDirection + 'north'
+		if ty < y:
+			sDirection = sDirection + 'south'
+		if tx < x:
+			sDirection = sDirection + 'west'
+		if tx > x:
 			sDirection = sDirection + 'east'
 
 		return sDirection
