@@ -8538,7 +8538,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHIEF</Type>
             <Description>Chief</Description>
-            <Help>A 5th level unit may be promoted to chief for every 10 units you have of the same type.  A chief may give command morale to units of his same type up to his level within level/8 range.  This promotion will vanish when this unit is upgraded.</Help>
+            <Help>[ICON_BULLET]Requires 5th level and 8 units of the same type.[NEWLINE][ICON_BULLET]Upgrade in a city with an Elder Council.[NEWLINE][ICON_BULLET]A chief may give command morale to units of his same type up to his level within level/8 range.[NEWLINE][ICON_BULLET]Vanishes when this unit is upgraded.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -8678,7 +8678,7 @@
         <PromotionInfo>
 			<Type>PROMOTION_DIRE</Type>
             <Description>Dire</Description>
-            <Help>[ICON_BULLET] Adds Mobility I to new young. [NEWLINE][ICON_BULLET] Requires level 7</Help>
+            <Help>[ICON_BULLET]Adds Mobility I to new young. [NEWLINE][ICON_BULLET]Requires level 7</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -8823,7 +8823,7 @@
         <PromotionInfo>
             <Type>PROMOTION_GRAND_MASTER</Type>
             <Description>Grand Master</Description>
-            <Help>The most experienced unit of each class type may be promoted to grand master upon attaining level 6.  There must be at least 12 units of like type in the world before a grand master can exist for the class.</Help>
+            <Help>[ICON_BULLET]The most experienced unit of each class type may be promoted to grand master upon attaining level 6.[NEWLINE][ICON_BULLET]There must be at least 12 units of like type in the world before a grand master can exist for the class.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -9143,7 +9143,7 @@
         <PromotionInfo>
             <Type>PROMOTION_COMMANDER1</Type>
             <Description>Leadership I</Description>
-            <Help>Give command morale to up to his level units within units / 8 range.</Help>
+            <Help>[ICON_BULLET]Give command morale to up to his level units within units / 8 range.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_DRILL4</PromotionPrereq>
@@ -9315,7 +9315,7 @@
         <PromotionInfo>
             <Type>PROMOTION_COMMANDER2</Type>
             <Description>Leadership II</Description>
-            <Help>Give command morale to up to his level x 2 units within units / 8 range.</Help>
+            <Help>[ICON_BULLET]Give command morale to up to his level x 2 units within units / 8 range.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_COMMANDER1</PromotionPrereq>
@@ -9487,7 +9487,7 @@
         <PromotionInfo>
             <Type>PROMOTION_COMMANDER3</Type>
             <Description>Leadership III</Description>
-            <Help>Give command morale to up to his level x 3 units within units / 8 range.</Help>
+            <Help>[ICON_BULLET]Give command morale to up to his level x 3 units within units / 8 range.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_COMMANDER2</PromotionPrereq>
