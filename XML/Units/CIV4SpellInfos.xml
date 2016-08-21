@@ -1605,25 +1605,6 @@
             <Button>Art/Interface/Buttons/Spells/Heal.dds</Button>
         </SpellInfo>
         <SpellInfo>
-            <Type>SPELL_HEALING_SALVE</Type>
-            <Description>TXT_KEY_SPELL_HEALING_SALVE</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <Help>TXT_KEY_SPELL_HEALING_SALVE_HELP</Help>
-            <PromotionPrereq1>PROMOTION_HEALING_SALVE</PromotionPrereq1>
-            <bAllowAI>1</bAllowAI>
-            <iAIWeight>100</iAIWeight>
-            <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
-            <bHasCasted>1</bHasCasted>
-            <RemovePromotionType1>PROMOTION_HEALING_SALVE</RemovePromotionType1>
-            <bBuffCasterOnly>1</bBuffCasterOnly>
-            <bAbility>1</bAbility>
-            <PyResult>spellHealingSalve(pCaster)</PyResult>
-            <PyRequirement>reqHealingSalve(pCaster)</PyRequirement>
-            <Effect>EFFECT_SPELL1</Effect>
-            <Sound>AS3D_SPELL_ENCHANTMENT</Sound>
-            <Button>Art/Interface/Buttons/Equipment/HealingSalve.dds</Button>
-        </SpellInfo>
-        <SpellInfo>
             <Type>SPELL_HELLFIRE</Type>
             <Description>TXT_KEY_SPELL_HELLFIRE</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
@@ -3551,42 +3532,6 @@
             <Sound>AS3D_SPELL_TRAIN</Sound>
             <bGraphicalOnly>1</bGraphicalOnly>
             <Button>Art/Interface/Buttons/Equipment/GoldenHammer.dds</Button>
-        </SpellInfo>
-        <SpellInfo>
-            <Type>SPELL_TAKE_HEALING_SALVE_PROMOTION</Type>
-            <Description>TXT_KEY_SPELL_TAKE_HEALING_SALVE</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <Help>TXT_KEY_SPELL_TAKE_EQUIPMENT_HELP</Help>
-            <PromotionInStackPrereq>PROMOTION_HEALING_SALVE</PromotionInStackPrereq>
-            <bAllowAI>1</bAllowAI>
-            <iAIWeight>50</iAIWeight>
-            <bHasCasted>1</bHasCasted>
-            <bAbility>1</bAbility>
-            <PyResult>spellTakeEquipmentPromotion(pCaster,'EQUIPMENT_HEALING_SALVE')</PyResult>
-            <PyRequirement>reqTakeEquipmentPromotion(pCaster,'EQUIPMENT_HEALING_SALVE')</PyRequirement>
-            <Effect>EFFECT_SPELL1</Effect>
-            <Sound>AS3D_SPELL_TRAIN</Sound>
-            <bGraphicalOnly>1</bGraphicalOnly>
-            <Button>Art/Interface/Buttons/Equipment/HealingSalve.dds</Button>
-        </SpellInfo>
-        <SpellInfo>
-            <Type>SPELL_TAKE_HEALING_SALVE_UNIT</Type>
-            <Description>TXT_KEY_SPELL_TAKE_HEALING_SALVE</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <Help>TXT_KEY_SPELL_TAKE_EQUIPMENT_HELP</Help>
-            <UnitInStackPrereq>EQUIPMENT_HEALING_SALVE</UnitInStackPrereq>
-            <bAllowAI>1</bAllowAI>
-            <iAIWeight>50</iAIWeight>
-            <bHasCasted>1</bHasCasted>
-            <AddPromotionType1>PROMOTION_HEALING_SALVE</AddPromotionType1>
-            <bBuffCasterOnly>1</bBuffCasterOnly>
-            <bAbility>1</bAbility>
-            <PyResult>spellTakeEquipmentUnit(pCaster,'EQUIPMENT_HEALING_SALVE')</PyResult>
-            <PyRequirement>reqTakeEquipmentUnit(pCaster,'EQUIPMENT_HEALING_SALVE')</PyRequirement>
-            <Effect>EFFECT_SPELL1</Effect>
-            <Sound>AS3D_SPELL_TRAIN</Sound>
-            <bGraphicalOnly>1</bGraphicalOnly>
-            <Button>Art/Interface/Buttons/Equipment/HealingSalve.dds</Button>
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_TAKE_INFERNAL_GRIMOIRE_BUILDING</Type>
