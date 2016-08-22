@@ -575,10 +575,10 @@
         <ImprovementInfo>
             <Type>IMPROVEMENT_CASTLE</Type>
             <Description>TXT_KEY_IMPROVEMENT_CASTLE</Description>
-            <Civilopedia>Four units may train in the castle increasing their residual xp gain from 4% to 10%!</Civilopedia>
+            <Civilopedia>[ICON_BULLET]Four units may train in the castle increasing their residual xp gain from 4% to 10%!</Civilopedia>
             <Help></Help>
             <ArtDefineTag>ART_DEF_IMPROVEMENT_CASTLE</ArtDefineTag>
-            <bActsAsCity>1</bActsAsCity>
+            <bActsAsCity>0</bActsAsCity>
             <bHillsMakesValid>0</bHillsMakesValid>
             <bFreshWaterMakesValid>0</bFreshWaterMakesValid>
             <bRiverSideMakesValid>0</bRiverSideMakesValid>
@@ -671,10 +671,10 @@
         <ImprovementInfo>
             <Type>IMPROVEMENT_CITADEL</Type>
             <Description>TXT_KEY_IMPROVEMENT_CITADEL</Description>
-            <Civilopedia>Eight units may train in the citadel increasing their residual xp gain from 4% to 10%!</Civilopedia>
+            <Civilopedia>[ICON_BULLET]Eight units may train in the citadel increasing their residual xp gain from 4% to 10%!</Civilopedia>
             <Help></Help>
             <ArtDefineTag>ART_DEF_IMPROVEMENT_CITADEL</ArtDefineTag>
-            <bActsAsCity>1</bActsAsCity>
+            <bActsAsCity>0</bActsAsCity>
             <bHillsMakesValid>0</bHillsMakesValid>
             <bFreshWaterMakesValid>0</bFreshWaterMakesValid>
             <bRiverSideMakesValid>0</bRiverSideMakesValid>
@@ -1444,10 +1444,10 @@
         <ImprovementInfo>
             <Type>IMPROVEMENT_FORT</Type>
             <Description>TXT_KEY_IMPROVEMENT_FORT</Description>
-            <Civilopedia>Two units may train in the fort increasing their residual xp gain from 4% to 10%!</Civilopedia>
+            <Civilopedia>[ICON_BULLET]Two units may train in the fort increasing their residual xp gain from 4% to 10%!</Civilopedia>
             <Help></Help>
             <ArtDefineTag>ART_DEF_IMPROVEMENT_FORT</ArtDefineTag>
-            <bActsAsCity>1</bActsAsCity>
+            <bActsAsCity>0</bActsAsCity>
             <bHillsMakesValid>0</bHillsMakesValid>
             <bFreshWaterMakesValid>0</bFreshWaterMakesValid>
             <bRiverSideMakesValid>0</bRiverSideMakesValid>
@@ -4474,7 +4474,7 @@
                 <iYieldChange>0</iYieldChange>
                 <iYieldChange>2</iYieldChange>
             </YieldChanges>
-            <bActsAsCity>1</bActsAsCity>
+            <bActsAsCity>0</bActsAsCity>
             <bHillsMakesValid>0</bHillsMakesValid>
             <bFreshWaterMakesValid>0</bFreshWaterMakesValid>
             <bRiverSideMakesValid>0</bRiverSideMakesValid>
@@ -4539,7 +4539,7 @@
                 <iYieldChange>1</iYieldChange>
                 <iYieldChange>3</iYieldChange>
             </YieldChanges>
-            <bActsAsCity>1</bActsAsCity>
+            <bActsAsCity>0</bActsAsCity>
             <bHillsMakesValid>0</bHillsMakesValid>
             <bFreshWaterMakesValid>0</bFreshWaterMakesValid>
             <bRiverSideMakesValid>0</bRiverSideMakesValid>
@@ -4604,7 +4604,7 @@
                 <iYieldChange>2</iYieldChange>
                 <iYieldChange>4</iYieldChange>
             </YieldChanges>
-            <bActsAsCity>1</bActsAsCity>
+            <bActsAsCity>0</bActsAsCity>
             <bHillsMakesValid>0</bHillsMakesValid>
             <bFreshWaterMakesValid>0</bFreshWaterMakesValid>
             <bRiverSideMakesValid>0</bRiverSideMakesValid>

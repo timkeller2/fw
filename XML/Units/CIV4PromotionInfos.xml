@@ -11,10 +11,14 @@
             <Description>TXT_KEY_PROMOTION_ACCURACY</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_BARRAGE1</PromotionPrereq>
-            <iBombardRateChange>20</iBombardRateChange>
+            <iBombardRateChange>10</iBombardRateChange>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_NAVAL</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
             </UnitCombats>
@@ -414,7 +418,7 @@
         <PromotionInfo>
             <Type>PROMOTION_BLITZ</Type>
             <Description>TXT_KEY_PROMOTION_BLITZ</Description>
-            <Help>[ICON_BULLET] Adds Mobility II to new animal young.</Help>
+            <Help>[ICON_BULLET]Adds Mobility II to new animal young.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereqOr1>PROMOTION_DRILL4</PromotionPrereqOr1>
             <PromotionPrereqOr2>PROMOTION_DIRE</PromotionPrereqOr2>
@@ -843,7 +847,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING1</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING1</Description>
-            <Help>[ICON_BULLET] Auto buff if fortified: Enchanted Blade, Courage, Loyalty, Fair Winds. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] +20 Max Spellcaster XP</Help>
+            <Help>[ICON_BULLET]Auto buff if fortified: Enchanted Blade, Courage, Loyalty, Fair Winds. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] +20 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling1.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
@@ -855,7 +859,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING2</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING2</Description>
-            <Help>[ICON_BULLET] Auto buff if fortified: Flaming Arrows, Poisoned Blade, Blessing and Shield of Faith. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] +30 Max Spellcaster XP</Help>
+            <Help>[ICON_BULLET]Auto buff if fortified: Flaming Arrows, Poisoned Blade, Blessing and Shield of Faith. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] +30 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling2.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
@@ -868,7 +872,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING3</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING3</Description>
-            <Help>[ICON_BULLET] Auto buff if fortified: Valor. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] +40 Max Spellcaster XP</Help>
+            <Help>[ICON_BULLET]Auto buff if fortified: Valor. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] +40 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling3.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
@@ -3122,7 +3126,7 @@
         <PromotionInfo>
             <Type>PROMOTION_EXTENSION1</Type>
             <Description>TXT_KEY_PROMOTION_EXTENSION1</Description>
-            <Help>Doubles auto-buff range (normally level + fortified turns).  Auto buffs are: enchanted blade, flaming arrows, courage, loyalty, fair winds, poisoned blade, blessing, valor and shield of faith.</Help>
+            <Help>[ICON_BULLET]Doubles auto-buff range (normally level + fortified turns).  Auto buffs are: enchanted blade, flaming arrows, courage, loyalty, fair winds, poisoned blade, blessing, valor and shield of faith.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_CHANNELING1</PromotionPrereq>
             <UnitCombats>
@@ -3139,7 +3143,7 @@
         <PromotionInfo>
             <Type>PROMOTION_EXTENSION2</Type>
             <Description>TXT_KEY_PROMOTION_EXTENSION2</Description>
-            <Help>Quadruples auto-buff range (normally level + fortified turns).  Auto buffs are: enchanted blade, flaming arrows, courage, loyalty, fair winds, poisoned blade, blessing, valor and shield of faith.</Help>
+            <Help>[ICON_BULLET]Quadruples auto-buff range (normally level + fortified turns).  Auto buffs are: enchanted blade, flaming arrows, courage, loyalty, fair winds, poisoned blade, blessing, valor and shield of faith.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_EXTENSION1</PromotionPrereq>
             <TechPrereq>TECH_ARCANE_LORE</TechPrereq>
@@ -6211,7 +6215,7 @@
         <PromotionInfo>
             <Type>PROMOTION_PERFECT_SIGHT</Type>
             <Description>TXT_KEY_PROMOTION_PERFECT_SIGHT</Description>
-            <Help>[ICON_BULLET] Adds Sentry to new animal young.</Help>
+            <Help>[ICON_BULLET]Adds Sentry to new animal young.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_SENTRY2</PromotionPrereq>
             <UnitCombats>
@@ -6398,7 +6402,7 @@
         <PromotionInfo>
             <Type>PROMOTION_POTENCY</Type>
             <Description>TXT_KEY_PROMOTION_POTENCY</Description>
-            <Help>[ICON_BULLET] +20 Max Spellcaster XP</Help>
+            <Help>[ICON_BULLET]+20 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <UnitCombats>
@@ -9659,7 +9663,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CULT_OF_THE_DRAGON</Type>
             <Description>Cult of the Dragon</Description>
-            <Help>Units with this promotion are slightly fanatical and gain 15% strength, plus the ability to potentially become the Dragon Warrior!  Owning dire animals and dragons increase the chance that newly trained living units will start with this promotion.</Help>
+            <Help>[ICON_BULLET]Units with this promotion are slightly fanatical and gain 15% strength, plus the ability to potentially become the Dragon Warrior![NEWLINE][ICON_BULLET]Owning dire animals and dragons increase the chance that newly trained living units will start with this promotion.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -10375,7 +10379,7 @@
         <PromotionInfo>
             <Type>PROMOTION_TREASURE1</Type>
             <Description>Treasure</Description>
-            <Help>Treasures give significant financial and resource rewards to the city they are returned to, but will only last 12 turns.  Take them to cities that boost gold output to utilize them better.</Help>
+            <Help>[ICON_BULLET]Treasures give significant financial and resource rewards to the city they are returned to, but will only last 12 turns.  Take them to cities that boost gold output to utilize them better.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -10515,7 +10519,7 @@
         <PromotionInfo>
             <Type>PROMOTION_TREASURE2</Type>
             <Description>Large Treasure</Description>
-            <Help>Treasures give significant financial and resource rewards to the city they are returned to, but will only last 12 turns.  Take them to cities that boost gold output to utilize them better.</Help>
+            <Help>[ICON_BULLET]Treasures give significant financial and resource rewards to the city they are returned to, but will only last 12 turns.  Take them to cities that boost gold output to utilize them better.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -10655,7 +10659,7 @@
         <PromotionInfo>
             <Type>PROMOTION_TREASURE3</Type>
             <Description>Grand Treasure</Description>
-            <Help>Treasures give significant financial and resource rewards to the city they are returned to, but will only last 12 turns.  Take them to cities that boost gold output to utilize them better.</Help>
+            <Help>[ICON_BULLET]Treasures give significant financial and resource rewards to the city they are returned to, but will only last 12 turns.  Take them to cities that boost gold output to utilize them better.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -10795,7 +10799,7 @@
         <PromotionInfo>
             <Type>PROMOTION_BURGLAR1</Type>
             <Description>Burglar I</Description>
-            <Help>Burglar promotions help units find the many secret caches throughout Erebus.  A potentially very rewarding occupation, if also difficult.  Mobility, sentry, drill and burglar promotions will increase the chances of finding good loot in dungeons and looting hidden caches.  Burglar promotions are the most potent in this regard.</Help>
+            <Help>[ICON_BULLET]Burglar promotions help units find the many secret caches throughout Erebus.  A potentially very rewarding occupation, if also difficult.[NEWLINE][ICON_BULLET]Mobility, sentry, drill and burglar promotions will increase the chances of finding good loot in dungeons and looting hidden caches.  Burglar promotions are the most potent in this regard.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -11299,7 +11303,7 @@
         <PromotionInfo>
             <Type>PROMOTION_NOBILITY</Type>
             <Description>Nobility</Description>
-            <Help>Nobles can judge disputes, sometimes hire enemy units that are lower level than them if they are isolated enough and they can build buildings that increase the economic value of cities.</Help>
+            <Help>[ICON_BULLET]Nobles can judge disputes, sometimes hire enemy units that are lower level than them if they are isolated enough and they can build buildings that increase the economic value of cities.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_DRILL1</PromotionPrereq>
@@ -12888,6 +12892,10 @@
                     <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
             </UnitCombats>
             <HotKey></HotKey>
             <bAltDown>0</bAltDown>
@@ -13032,6 +13040,10 @@
                     <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
             </UnitCombats>
             <HotKey></HotKey>
             <bAltDown>0</bAltDown>
@@ -13174,6 +13186,10 @@
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
             </UnitCombats>
@@ -13603,7 +13619,7 @@
         <PromotionInfo>
             <Type>PROMOTION_POISONOUS</Type>
             <Description>Poisonous</Description>
-            <Help>This animal or beast can poison those it fights with.</Help>
+            <Help>[ICON_BULLET]This animal or beast can poison those it fights with.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -16703,7 +16719,7 @@
         <PromotionInfo>
             <Type>PROMOTION_DRAGON_WARRIOR</Type>
             <Description>Dragon Warrior</Description>
-            <Help>The Dragon Warrior is the highest level Cult of the Dragon unit in Erebus.  To become the Dragon Warrior, you must be at least level 6.  When a unit becomes the Dragon Warrior, the existing Dragon Warrior will lose the title!</Help>
+            <Help>[ICON_BULLET]The Dragon Warrior is the highest level Cult of the Dragon unit in Erebus.  To become the Dragon Warrior, you must be at least level 6.  When a unit becomes the Dragon Warrior, the existing Dragon Warrior will lose the title!</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -17543,7 +17559,7 @@
         <PromotionInfo>
             <Type>PROMOTION_SCROLL_SK</Type>
             <Description>Scroll of Flight</Description>
-            <Help>Allows the caster to fly.</Help>
+            <Help>[ICON_BULLET]Allows the caster to fly.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -20639,7 +20655,7 @@
         <PromotionInfo>
 			<Type>PROMOTION_ANCIENT</Type>
             <Description>Ancient</Description>
-            <Help>[ICON_BULLET] Adds Combat II to new young.[NEWLINE][ICON_BULLET] Requires level 10</Help>
+            <Help>[ICON_BULLET]Adds Combat II to new young.[NEWLINE][ICON_BULLET]Requires level 10</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_DIRE</PromotionPrereq>
@@ -20784,7 +20800,7 @@
         <PromotionInfo>
             <Type>PROMOTION_RAVAGER</Type>
             <Description>Ravager</Description>
-            <Help>This promotion helps even the odds for the terrible city sieging AI the computer currently has.</Help>
+            <Help>[ICON_BULLET]This promotion helps even the odds for the terrible city sieging AI the computer currently has.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
