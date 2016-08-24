@@ -5180,6 +5180,28 @@ def spellHaste(caster):
 				if (iNumBlessed >= iL):
 					return
 
+def reqRegeneration(caster):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if pUnit.isAlive():
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_REGENERATION')):
+				return True
+	return False
+
+def spellRegeneration(caster):
+	iNumBlessed = 0
+	iL = caster.getLevel()
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if pUnit.isAlive():
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_REGENERATION')):
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_REGENERATION'),True)
+				iNumBlessed = iNumBlessed + 1
+				if (iNumBlessed >= iL):
+					return
+
 def reqAddProm(caster,sProm):
 	pPlot = caster.plot()
 	for i in range(pPlot.getNumUnits()):

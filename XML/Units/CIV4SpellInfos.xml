@@ -1033,6 +1033,7 @@
             <Type>SPELL_ENCHANTED_BLADE</Type>
             <Description>TXT_KEY_SPELL_ENCHANTED_BLADE</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Help>[ICON_BULLET]Add Enchanted Blade to a number of melee units equal to one third the caster's level.</Help>
             <PromotionPrereq1>PROMOTION_ENCHANTMENT1</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_CHANNELING1</PromotionPrereq2>
             <bAllowAI>1</bAllowAI>
@@ -1555,6 +1556,7 @@
             <Type>SPELL_HASTE</Type>
             <Description>TXT_KEY_SPELL_HASTE</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Help>[ICON_BULLET]Add Hasted to a number of living units equal to the caster's level.</Help>
             <PromotionPrereq1>PROMOTION_BODY1</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_CHANNELING1</PromotionPrereq2>
             <bAllowAI>1</bAllowAI>
@@ -1897,6 +1899,7 @@
             <Type>SPELL_LOYALTY</Type>
             <Description>TXT_KEY_SPELL_LOYALTY</Description>
             <Civilopedia>TXT_KEY_SPELL_LOYALTY_PEDIA</Civilopedia>
+            <Help>[ICON_BULLET]Add Loyalty to a number of living units equal to half the caster's level.</Help>
             <PromotionPrereq1>PROMOTION_LAW1</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_CHANNELING1</PromotionPrereq2>
             <bAllowAI>1</bAllowAI>
@@ -2322,12 +2325,14 @@
             <Type>SPELL_REGENERATION</Type>
             <Description>TXT_KEY_SPELL_REGENERATION</Description>
             <Civilopedia>TXT_KEY_SPELL_REGENERATION_PEDIA</Civilopedia>
+            <Help>[ICON_BULLET]Add Regeneration to a number of living units equal to the caster's level.</Help>
             <PromotionPrereq1>PROMOTION_BODY2</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <AddPromotionType1>PROMOTION_REGENERATION</AddPromotionType1>
             <bImmuneNotAlive>1</bImmuneNotAlive>
+            <PyResult>spellRegeneration(pCaster)</PyResult>
+            <PyRequirement>reqRegeneration(pCaster)</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_BLESS</Sound>
             <Button>Art/Interface/Buttons/Promotions/Regeneration.dds</Button>
