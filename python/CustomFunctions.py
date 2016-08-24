@@ -116,7 +116,7 @@ class CustomFunctions:
 		pUnit.changeExperience(1, -1, False, False, False)
 		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 		sMsg = str( pUnit.getNameNoDesc() ) + ' has young...'
-		if not pUnit.getName() == pUnit.getNameNoDesc():
+		if len(pUnit.getNameNoDesc()) > 2:
 			if pUnit.getName().find('Offspring') == -1:
 				newUnit.setName('Offspring of ' + pUnit.getNameNoDesc())
 			else:	
