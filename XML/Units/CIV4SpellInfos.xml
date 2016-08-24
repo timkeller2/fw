@@ -4450,7 +4450,7 @@
             <Civilopedia>TXT_KEY_SPELL_WATER_WALKING_PEDIA</Civilopedia>
             <PromotionPrereq1>PROMOTION_WATER2</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
-            <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
+            <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
             <AddPromotionType1>PROMOTION_WATER_WALKING</AddPromotionType1>
             <bBuffCasterOnly>1</bBuffCasterOnly>
