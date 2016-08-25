@@ -67605,6 +67605,10 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_CANAL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_FORT</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -73925,6 +73929,10 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_CANAL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_FORT</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -74200,6 +74208,10 @@
                 </Build>
                 <Build>
                     <BuildType>BUILD_COTTAGE</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_CANAL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>

@@ -2554,9 +2554,10 @@ class CustomFunctions:
 
 					## Treasure and Noble Building Expiration
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE1')) > 0:
+						sCityInfo = cPickle.loads(pCity.getScriptData())
 						if 'TR1' not in sCityInfo:
-							sCityInfo['TR1'] = 0
-						if sCityInfo['TR1'] == 0:
+							sCityInfo['TR1'] = CyGame().getGameTurn() + 12
+						if sCityInfo['TR1'] < CyGame().getGameTurn() - 5:	
 							sCityInfo['TR1'] = CyGame().getGameTurn() + 12
 						if CyGame().getGameTurn() > sCityInfo['TR1']:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE1'), 0)
@@ -2572,8 +2573,8 @@ class CustomFunctions:
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE2')) > 0:
 						sCityInfo = cPickle.loads(pCity.getScriptData())
 						if 'TR2' not in sCityInfo:
-							sCityInfo['TR2'] = 0
-						if sCityInfo['TR2'] == 0:
+							sCityInfo['TR2'] = CyGame().getGameTurn() + 12
+						if sCityInfo['TR2'] < CyGame().getGameTurn() - 5:	
 							sCityInfo['TR2'] = CyGame().getGameTurn() + 12
 						if CyGame().getGameTurn() > sCityInfo['TR2']:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE2'), 0)
@@ -2589,8 +2590,8 @@ class CustomFunctions:
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE3')) > 0:
 						sCityInfo = cPickle.loads(pCity.getScriptData())
 						if 'TR3' not in sCityInfo:
-							sCityInfo['TR3'] = 0
-						if sCityInfo['TR3'] == 0:
+							sCityInfo['TR3'] = CyGame().getGameTurn() + 12
+						if sCityInfo['TR3'] < CyGame().getGameTurn() - 5:	
 							sCityInfo['TR3'] = CyGame().getGameTurn() + 12
 						if CyGame().getGameTurn() > sCityInfo['TR3']:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE3'), 0)

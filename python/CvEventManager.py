@@ -771,24 +771,6 @@ class CvEventManager:
 					if pCity.getOwner() == CyGame().getActivePlayer():
 						cf.addPopup(CyTranslator().getText("TXT_KEY_POPUP_INFERNAL_GRIMOIRE_BALOR",()), 'art/interface/popups/Balor.dds')
 
-		if iBuildingType == gc.getInfoTypeForString('BUILDING_TREASURE1'):
-			if 'TR1' not in sCityInfo:
-				sCityInfo['TR1'] = CyGame().getGameTurn() + 12
-			sCityInfo['TR1'] = CyGame().getGameTurn() + 12
-			pCity.setScriptData(cPickle.dumps(sCityInfo))
-
-		if iBuildingType == gc.getInfoTypeForString('BUILDING_TREASURE2'):
-			if 'TR2' not in sCityInfo:
-				sCityInfo['TR2'] = CyGame().getGameTurn() + 12
-			sCityInfo['TR2'] = CyGame().getGameTurn() + 12
-			pCity.setScriptData(cPickle.dumps(sCityInfo))
-
-		if iBuildingType == gc.getInfoTypeForString('BUILDING_TREASURE3'):
-			if 'TR3' not in sCityInfo:
-				sCityInfo['TR3'] = CyGame().getGameTurn() + 12
-			sCityInfo['TR3'] = CyGame().getGameTurn() + 12
-			pCity.setScriptData(cPickle.dumps(sCityInfo))
-
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_ELDER_COUNCIL'):
 			sCityInfo['COUNCIL'] = 0
 			pCity.setScriptData(cPickle.dumps(sCityInfo))
