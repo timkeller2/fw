@@ -598,7 +598,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_CANAL</Type>
-			<Description>TXT_KEY_BUILD_FORT</Description>
+			<Description>Build Canal</Description>
 			<Help/>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iTime>800</iTime>
