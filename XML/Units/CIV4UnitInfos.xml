@@ -73121,7 +73121,7 @@
             <Domain>DOMAIN_LAND</Domain>
             <DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
             <Invisible>NONE</Invisible>
-            <SeeInvisible>INVISIBLE_ANIMAL</SeeInvisible>
+            <SeeInvisible>INVISIBLE_LAND</SeeInvisible>
             <Description>TXT_KEY_UNIT_WOLF</Description>
             <Civilopedia>TXT_KEY_UNIT_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>TXT_KEY_UNIT_WOLF_STRATEGY</Strategy>
@@ -73368,7 +73368,7 @@
             <Domain>DOMAIN_LAND</Domain>
             <DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
             <Invisible>NONE</Invisible>
-            <SeeInvisible>INVISIBLE_ANIMAL</SeeInvisible>
+            <SeeInvisible>INVISIBLE_LAND</SeeInvisible>
             <Description>TXT_KEY_UNIT_WOLF_PACK</Description>
             <Civilopedia>TXT_KEY_UNIT_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>TXT_KEY_UNIT_WOLF_STRATEGY</Strategy>
@@ -76970,7 +76970,7 @@
             <Domain>DOMAIN_LAND</Domain>
             <DefaultUnitAI>UNITAI_RESERVE</DefaultUnitAI>
             <Invisible>NONE</Invisible>
-            <SeeInvisible>INVISIBLE_ANIMAL</SeeInvisible>
+            <SeeInvisible>INVISIBLE_LAND</SeeInvisible>
             <Description>Cleric</Description>
             <Civilopedia>Clerics are powerful disciple units capable of healing friendly units, turning undead units and blessing your armies.  With life mana, clerics can even grant additional lives to your units expending a life 1 promotion!</Civilopedia>
             <Strategy></Strategy>
@@ -79785,7 +79785,7 @@
             <Domain>DOMAIN_LAND</Domain>
             <DefaultUnitAI>UNITAI_RESERVE</DefaultUnitAI>
             <Invisible>NONE</Invisible>
-            <SeeInvisible>INVISIBLE_ANIMAL</SeeInvisible>
+            <SeeInvisible>INVISIBLE_LAND</SeeInvisible>
             <Description>Priest</Description>
             <Civilopedia>Priests are multi-purpose religious units.  Later, they can be upgraded to the more powerful cleric.  May be recruited in cities with a pagan temple and a culture of 500 or greater.  Only one may be recruited per pagan temple.</Civilopedia>
             <Strategy></Strategy>
