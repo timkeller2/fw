@@ -195,7 +195,7 @@
             <Strategy>TXT_KEY_CIVIC_GOD_KING_STRATEGY</Strategy>
             <Help></Help>
             <Button>Art/Interface/Buttons/Civics/Godking.dds</Button>
-            <TechPrereq>TECH_MYSTICISM</TechPrereq>
+            <TechPrereq>TECH_PHILOSOPHY</TechPrereq>
             <iAnarchyLength>1</iAnarchyLength>
             <Upkeep>UPKEEP_HIGH</Upkeep>
             <iAIWeight>-300</iAIWeight>
