@@ -1309,6 +1309,7 @@
             <Type>SPELL_FIREBALL</Type>
             <Description>TXT_KEY_SPELL_FIREBALL</Description>
             <Civilopedia>TXT_KEY_UNIT_FIREBALL_PEDIA</Civilopedia>
+            <Help>Units that are not arcane or recon suffer feedback damage approximately (100 / (strength+level))%.</Help>
             <PromotionPrereq1>PROMOTION_FIRE2</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
@@ -2376,7 +2377,7 @@
             <Type>SPELL_REPAIR</Type>
             <Description>TXT_KEY_SPELL_REPAIR</Description>
             <Civilopedia>TXT_KEY_SPELL_REPAIR_PEDIA</Civilopedia>
-            <Help>TXT_KEY_SPELL_REPAIR_HELP</Help>
+            <Help>Repair a number of Golem, Siege and Naval Units equal to the caster level 5% + 2% per caster level, slightly less the stronger the target.</Help>
             <PromotionPrereq1>PROMOTION_ENCHANTMENT1</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_DWARF</PromotionPrereq2>
             <bAllowAI>1</bAllowAI>
@@ -13215,7 +13216,7 @@
             <Type>SPELL_WORKER_REPAIR</Type>
             <Description>Repair</Description>
             <Civilopedia>Repair Naval, Siege or (if dwarven) Golem units</Civilopedia>
-            <Help>Repair Naval, Siege or (if dwarven) Golem units</Help>
+            <Help>Repair a number of (Golem if Dwarven), Siege and Naval Units equal to the caster level 5% + 2% per caster level, slightly less the stronger the target.</Help>
             <UnitClassPrereq>UNITCLASS_WORKER</UnitClassPrereq>
             <bAllowAI>1</bAllowAI>
             <iAIWeightWar>50</iAIWeightWar>
