@@ -2554,7 +2554,6 @@ class CustomFunctions:
 
 					## Treasure and Noble Building Expiration
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE1')) > 0:
-						sCityInfo = cPickle.loads(pCity.getScriptData())
 						if 'TR1' not in sCityInfo:
 							sCityInfo['TR1'] = CyGame().getGameTurn() + 12
 						if sCityInfo['TR1'] < CyGame().getGameTurn() - 5:	
@@ -2565,13 +2564,10 @@ class CustomFunctions:
 							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							sCityInfo['TR1'] = 0
-							pCity.setScriptData(cPickle.dumps(sCityInfo))
 					else:
 						sCityInfo['TR1'] = 0
-						pCity.setScriptData(cPickle.dumps(sCityInfo))
 
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE2')) > 0:
-						sCityInfo = cPickle.loads(pCity.getScriptData())
 						if 'TR2' not in sCityInfo:
 							sCityInfo['TR2'] = CyGame().getGameTurn() + 12
 						if sCityInfo['TR2'] < CyGame().getGameTurn() - 5:	
@@ -2582,13 +2578,10 @@ class CustomFunctions:
 							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							sCityInfo['TR2'] = 0
-							pCity.setScriptData(cPickle.dumps(sCityInfo))
 					else:
 						sCityInfo['TR2'] = 0
-						pCity.setScriptData(cPickle.dumps(sCityInfo))
 
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_TREASURE3')) > 0:
-						sCityInfo = cPickle.loads(pCity.getScriptData())
 						if 'TR3' not in sCityInfo:
 							sCityInfo['TR3'] = CyGame().getGameTurn() + 12
 						if sCityInfo['TR3'] < CyGame().getGameTurn() - 5:	
@@ -2599,11 +2592,9 @@ class CustomFunctions:
 							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							sCityInfo['TR3'] = 0
-							pCity.setScriptData(cPickle.dumps(sCityInfo))
 					else:
 						sCityInfo['TR3'] = 0
-						pCity.setScriptData(cPickle.dumps(sCityInfo))
-					
+						
 					bRemoveIt = True
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE1')) > 0:
 						xPlot = CyMap().plot(pCity.getX(),pCity.getY())

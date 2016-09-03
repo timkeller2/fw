@@ -56739,7 +56739,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_2</Type>
-            <Description>Master Crafted Weapons (req pop 30)</Description>
+            <Description>Master Crafted Weapons</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56833,14 +56833,14 @@
             <iCrime>0</iCrime>
             <iGlobalCounter>0</iGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
-            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqBonus>BONUS_GEMS</PrereqBonus>
             <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_3</Type>
-            <Description>Master Crafted Armor (req pop 30)</Description>
+            <Description>Master Crafted Armor</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56934,7 +56934,7 @@
             <iCrime>0</iCrime>
             <iGlobalCounter>0</iGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
-            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqBonus>BONUS_GEMS</PrereqBonus>
             <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
@@ -57136,14 +57136,14 @@
             <iCrime>0</iCrime>
             <iGlobalCounter>0</iGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
-            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqBonus>BONUS_GOLD</PrereqBonus>
             <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_6</Type>
-            <Description>Heavy Weapons (req pop 20)</Description>
+            <Description>Heavy Weapons</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -57182,7 +57182,7 @@
             </UnitCombatPromotions>
             <UnitClassPromotions>
             </UnitClassPromotions>
-            <BuildingClass>NONE</BuildingClass>
+            <BuildingClass>BUILDINGCLASS_FORGE</BuildingClass>
             <iBuildingChange>0</iBuildingChange>
             <BuildingExtraYields>
             </BuildingExtraYields>
@@ -57338,14 +57338,14 @@
             <iCrime>0</iCrime>
             <iGlobalCounter>0</iGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
-            <PrereqBonus>NONE</PrereqBonus>
+            <PrereqBonus>BONUS_GOLD</PrereqBonus>
             <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_8</Type>
-            <Description>Heavy Armor (req pop 20)</Description>
+            <Description>Heavy Armor</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -57384,7 +57384,7 @@
             </UnitCombatPromotions>
             <UnitClassPromotions>
             </UnitClassPromotions>
-            <BuildingClass>NONE</BuildingClass>
+            <BuildingClass>BUILDINGCLASS_FORGE</BuildingClass>
             <iBuildingChange>0</iBuildingChange>
             <BuildingExtraYields>
             </BuildingExtraYields>

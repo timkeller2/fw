@@ -6939,8 +6939,8 @@ def canheavyweapons(argsList):
 	pCity = pUnit.plot().getPlotCity()
 	if cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_HEAVY_WEAPONS')):
 		strSetData = cPickle.loads(pCity.getScriptData())
-		if pCity.getPopulation() > 19:
-			return True
+		# if pCity.getPopulation() > 19:
+			# return True
 
 	return False
 
@@ -6961,8 +6961,8 @@ def canheavyarmor(argsList):
 	pCity = pUnit.plot().getPlotCity()
 	if cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_HEAVY_ARMOR')):
 		strSetData = cPickle.loads(pCity.getScriptData())
-		if pCity.getPopulation() > 19:
-			return True
+		# if pCity.getPopulation() > 19:
+			# return True
 
 	return False
 
@@ -6974,10 +6974,12 @@ def canmaster(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if pCity.getPopulation() > 29:
-		return True
+	# if pCity.getPopulation() > 29:
+		# return True
+	# return False
+	
+	return True
 
-	return False
 
 def canCulture1(argsList):
 	kTriggeredData = argsList[0]
