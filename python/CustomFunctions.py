@@ -19,8 +19,8 @@ class CustomFunctions:
 
 	def tough(self,unit):
 		
-		if self.getObjectInt(unit,'tough') == 0:
-			self.setObjectInt(unit,'tough',1)
+		self.setObjectInt(unit,'tough',1)
+		if self.getObjectInt(unit,'tough') == 0 and unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1')) == False and unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1')) == False:
 			
 			iTough = CyGame().getSorenRandNum(100, "Toughness")
 			if iTough < 2:
