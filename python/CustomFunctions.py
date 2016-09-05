@@ -19,30 +19,31 @@ class CustomFunctions:
 
 	def tough(self,unit):
 		
-		self.setObjectInt(unit,'tough',1)
-		if self.getObjectInt(unit,'tough') == 0 and unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1')) == False and unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1')) == False:
-			
-			iTough = CyGame().getSorenRandNum(100, "Toughness")
-			if iTough < 2:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH5'), True)
-			if iTough < 6:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH4'), True)
-			if iTough < 13:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH3'), True)
-			if iTough < 22:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH2'), True)
-			if iTough < 40:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1'), True)
-			if iTough > 98:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY5'), True)
-			if iTough > 94:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY4'), True)
-			if iTough > 87:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY3'), True)
-			if iTough > 78:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY2'), True)
-			if iTough > 60:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1'), True)
+		if self.getObjectInt(unit,'tough') == 0:
+			self.setObjectInt(unit,'tough',1)
+
+			if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1')) == False and unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1')) == False:
+				iTough = CyGame().getSorenRandNum(100, "Toughness")
+				if iTough < 2:
+					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH5'), True)
+				if iTough < 6:
+					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH4'), True)
+				if iTough < 13:
+					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH3'), True)
+				if iTough < 22:
+					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH2'), True)
+				if iTough < 40:
+					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1'), True)
+				if iTough > 98:
+					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY5'), True)
+				if iTough > 94:
+					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY4'), True)
+				if iTough > 87:
+					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY3'), True)
+				if iTough > 78:
+					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY2'), True)
+				if iTough > 60:
+					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1'), True)
 
 
 	def reqJudge(self,caster):
