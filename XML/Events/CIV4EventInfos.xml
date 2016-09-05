@@ -59595,7 +59595,7 @@
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
-            <UnitClass>EQUIPMENT_BOOTS_OF_HASTE</UnitClass>
+            <UnitClass>EQUIPMENTCLASS_BOOTS_OF_HASTE</UnitClass>
             <iNumFreeUnits>1</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
