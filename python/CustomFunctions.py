@@ -385,20 +385,20 @@ class CustomFunctions:
 					sDirection = ''
 
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR3')):
-					sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is around ' + str(iBestRange) + ' tiles away from ' + sName + sDirection + sPref + '...'
-				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR2')) or iBestRange <= caster.getFortifyTurns():
-					sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is around ' + str(iBestRange-1+CyGame().getSorenRandNum(3, "Roll It")) + ' tiles away from ' + sName + sDirection + sPref + '...'
+					sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is ' + str(iBestRange) + ' tiles ' + sDirection + ' of ' + sName + sPref + '...'
+				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR2')) and iBestRange <= caster.getFortifyTurns():
+					sDip = 'Your sources say there is a hidden cache ' + str(iBestRange) + ' tiles ' + sDirection + ' of ' + sName + sPref + '...'
 				else:
-					sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is around ' + str(iBestRange-2+CyGame().getSorenRandNum(5, "Roll It")) + ' tiles away from ' + sName + sPref + '...'
+					sDip = 'Your sources say there is a hidden cache ' + sDirection + ' of ' + sName + sPref + '...'
 			else:
 				sDirection = ' to the ' + self.retDir(caster.getX(),caster.getY(),fx,fy)
 				if sDirection == ' to the ':
 					sDirection = ''
 
 				if iFarRange < 999:
-					sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is far from ' + sName + sDirection + sPref + '...'
+					sDip = 'Your sources say that there is a hidden cache far ' + sDirection + ' of ' + sName + sPref + '...'
 				else:
-					sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, but there are no known caches within range of ' + sName + '...'
+					sDip = 'Your sources do not know of any hidden caches within range of ' + sName + '...'
 
 			## Additional Information
 			## Serpent Report
