@@ -960,15 +960,15 @@ def reqDispelMagic(caster):
 	return False
 
 def spellDispelMagic(caster):
-	pPlot = caster.plot()
-	if pPlot.getBonusType(-1) != -1:
-		if gc.getBonusInfo(pPlot.getBonusType(-1)).getBonusClassType() == gc.getInfoTypeForString('BONUSCLASS_MANA'):
-			if pPlot.getImprovementType() == -1:
-				pPlot.setBonusType(gc.getInfoTypeForString('BONUS_MANA'))
-			else:
-				if gc.getImprovementInfo(pPlot.getImprovementType()).isPermanent() == False:
-					pPlot.setBonusType(gc.getInfoTypeForString('BONUS_MANA'))
-					pPlot.setImprovementType(-1)
+	# pPlot = caster.plot()
+	# if pPlot.getBonusType(-1) != -1:
+		# if gc.getBonusInfo(pPlot.getBonusType(-1)).getBonusClassType() == gc.getInfoTypeForString('BONUSCLASS_MANA'):
+			# if pPlot.getImprovementType() == -1:
+				# pPlot.setBonusType(gc.getInfoTypeForString('BONUS_MANA'))
+			# else:
+				# if gc.getImprovementInfo(pPlot.getImprovementType()).isPermanent() == False:
+					# pPlot.setBonusType(gc.getInfoTypeForString('BONUS_MANA'))
+					# pPlot.setImprovementType(-1)
 
 def reqDisrupt(caster):
 	pPlot = caster.plot()
@@ -2315,7 +2315,7 @@ def spellRepair(caster,amount):
 			iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
 			pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
 			iNumHealed = iNumHealed + 1
-			if ( iNumHealed > iL ):
+			if ( iNumHealed + 1 > iL / 3 ):
 				return
 			
 def reqRessurection(caster):
