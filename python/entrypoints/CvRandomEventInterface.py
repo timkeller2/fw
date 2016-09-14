@@ -6912,7 +6912,13 @@ def doMedicineWoman3(argsList):
 		sPatronType = sPatrons[ CyGame().getSorenRandNum(len(sPatrons), "PatronType") ]
 		newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sPatronType), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
-
+def isHumanTrigger(argsList):
+	kTriggeredData = argsList[0]
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	if pPlayer.isHuman():
+		return True
+	return False
+		
 def isHuman(argsList):
 	iEvent = argsList[0]
 	kTriggeredData = argsList[1]

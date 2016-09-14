@@ -32697,7 +32697,7 @@
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bShowPlot>1</bShowPlot>
             <iCityFoodWeight>0</iCityFoodWeight>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>isHumanTrigger</PythonCanDo>
             <PythonCanDoCity></PythonCanDoCity>
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback></PythonCallback>
@@ -32800,7 +32800,7 @@
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bShowPlot>1</bShowPlot>
             <iCityFoodWeight>0</iCityFoodWeight>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>isHumanTrigger</PythonCanDo>
             <PythonCanDoCity></PythonCanDoCity>
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback></PythonCallback>
