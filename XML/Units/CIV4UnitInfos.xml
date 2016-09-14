@@ -75611,7 +75611,7 @@
             <DamageTypeCombats>
                 <DamageTypeCombat>
                     <DamageType>DAMAGE_LIGHTNING</DamageType>
-                    <iCombat>1</iCombat>
+                    <iCombat>2</iCombat>
                 </DamageTypeCombat>
             </DamageTypeCombats>
             <BonusAffinities>

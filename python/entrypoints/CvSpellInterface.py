@@ -960,7 +960,7 @@ def reqDispelMagic(caster):
 	return False
 
 def spellDispelMagic(caster):
-	# pPlot = caster.plot()
+	pPlot = caster.plot()
 	# if pPlot.getBonusType(-1) != -1:
 		# if gc.getBonusInfo(pPlot.getBonusType(-1)).getBonusClassType() == gc.getInfoTypeForString('BONUSCLASS_MANA'):
 			# if pPlot.getImprovementType() == -1:

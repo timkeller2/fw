@@ -6874,6 +6874,45 @@ def doAdventurers(argsList):
 	for i in range(iGroupSize / 2):
 		newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_WORKER'), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
+def doMedicineWoman1(argsList):
+	kTriggeredData = argsList[0]
+	bPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pCity = bPlayer.getCity(kTriggeredData.iCityId)
+
+	iGroupSize = CyGame().getSorenRandNum(3, "GroupSize") + 3
+	sPatrons = [ 'EQUIPMENT_POTION_XP_MINOR', 'EQUIPMENT_POTION_HEALING_MINOR', 'EQUIPMENT_POTION_HASTE', 'EQUIPMENT_POTION_STRENGTH', 'EQUIPMENT_POTION_HEALING_MODERATE', 'EQUIPMENT_POTION_REGENERATION' ]
+
+	for i in range(iGroupSize):
+		sPatronType = sPatrons[ CyGame().getSorenRandNum(len(sPatrons), "PatronType") ]
+		newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sPatronType), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+
+
+def doMedicineWoman2(argsList):
+	kTriggeredData = argsList[0]
+	bPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pCity = bPlayer.getCity(kTriggeredData.iCityId)
+
+	iGroupSize = CyGame().getSorenRandNum(4, "GroupSize") + 4
+	sPatrons = [ 'EQUIPMENT_POTION_XP_MINOR', 'EQUIPMENT_POTION_HASTE', 'EQUIPMENT_POTION_STRENGTH', 'EQUIPMENT_POTION_HEALING_MODERATE', 'EQUIPMENT_POTION_REGENERATION', 'EQUIPMENT_POTION_XP', 'EQUIPMENT_POTION_HEALING_GREATER', 'EQUIPMENT_POTION_STRENGTH_ENDURING', 'EQUIPMENT_POTION_VAMPIRISM', 'EQUIPMENT_POTION_OF_INVISIBILITY' ]
+
+	for i in range(iGroupSize):
+		sPatronType = sPatrons[ CyGame().getSorenRandNum(len(sPatrons), "PatronType") ]
+		newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sPatronType), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+
+
+def doMedicineWoman3(argsList):
+	kTriggeredData = argsList[0]
+	bPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pCity = bPlayer.getCity(kTriggeredData.iCityId)
+
+	iGroupSize = CyGame().getSorenRandNum(5, "GroupSize") + 6
+	sPatrons = [ 'EQUIPMENT_POTION_HEALING_MODERATE', 'EQUIPMENT_POTION_REGENERATION', 'EQUIPMENT_POTION_XP', 'EQUIPMENT_POTION_HEALING_GREATER', 'EQUIPMENT_POTION_STRENGTH_ENDURING', 'EQUIPMENT_POTION_VAMPIRISM', 'EQUIPMENT_POTION_OF_INVISIBILITY' ]
+
+	for i in range(iGroupSize):
+		sPatronType = sPatrons[ CyGame().getSorenRandNum(len(sPatrons), "PatronType") ]
+		newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sPatronType), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+
+
 def isHuman(argsList):
 	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
