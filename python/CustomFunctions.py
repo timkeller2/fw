@@ -3174,7 +3174,7 @@ class CustomFunctions:
 							
 				## Merchant Ships give income every 25 turns or so, more with speed and experience
 				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MERCHANT_SHIP') and pPlot.getTerrainType() == gc.getInfoTypeForString('TERRAIN_OCEAN') and CyGame().getSorenRandNum(100, "Merchant") < pUnit.getLevel() + pUnit.baseMoves():
-					iRange = 7
+					iRange = 15
 					iX = pUnit.getX()
 					iY = pUnit.getY()
 					sBlock = ''
@@ -3183,7 +3183,7 @@ class CustomFunctions:
 					if iY < iRange:
 						iRange = iY
 						sBlock = ' limited by frozen waters...'
-					if iY > CyMap().getGridHeight() - 7:
+					if iY > CyMap().getGridHeight() - iRange:
 						iRange = ( CyMap().getGridHeight() - iY )
 						sBlock = ' limited by frozen waters...'
 						
@@ -3200,14 +3200,16 @@ class CustomFunctions:
 										if iRange > int( math.fabs( xUnit.getY() - pUnit.getY() ) ):
 											iRange = int( math.fabs( xUnit.getY() - pUnit.getY() ) )
 											sBlock = ' limited by ' + xUnit.getName() + ' actions...'
-					iRange += pUnit.getLevel() / 2
-					iMerchantIncome = CyGame().getSorenRandNum(10*iRange, "Merchant Mission") + iRange * 2
+					
+					iModRange = iRange + pUnit.getLevel()
+					
+					iMerchantIncome = CyGame().getSorenRandNum(6*iModRange, "Merchant Mission") + iModRange * 1
 					if iMerchantIncome > 0:
-						CyInterface().addMessage(pUnit.getOwner(),false,25,'Your '+pUnit.getName()+' completes a merchant mission and gains '+str(iMerchantIncome)+'gp!  Merchanteering range '+str(iRange)+'/7'+sBlock,'',1,pUnit.getButton(),ColorTypes(11),pUnit.getX(),pUnit.getY(),True,True)
-						CyInterface().addCombatMessage(pUnit.getOwner(),'Your '+pUnit.getName()+' completes a merchant mission and gains '+str(iMerchantIncome)+'gp!  Merchanteering range '+str(iRange)+'/7'+sBlock)
+						CyInterface().addMessage(pUnit.getOwner(),false,25,'Your '+pUnit.getName()+' completes a merchant mission and gains '+str(iMerchantIncome)+'gp!  Merchanteering range '+str(iModRange)+'/'+str(15+pUnit.getLevel())+sBlock,'',1,pUnit.getButton(),ColorTypes(11),pUnit.getX(),pUnit.getY(),True,True)
+						CyInterface().addCombatMessage(pUnit.getOwner(),'Your '+pUnit.getName()+' completes a merchant mission and gains '+str(iMerchantIncome)+'gp!  Merchanteering range '+str(iModRange)+'/'+str(15+pUnit.getLevel())+sBlock)
 						pPlayer.setGold( pPlayer.getGold() + iMerchantIncome )
-						pUnit.changeExperience(iRange/3, -1, False, False, False)
-						self.generateLoot( pUnit, iRange )
+						pUnit.changeExperience( iModRange / 4, -1, False, False, False)
+						self.generateLoot( pUnit, iModRange / 2 )
 
 				## Dragons change to the dragon race when fully promoted (from the orcish race...)
 				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_DRAGON'):

@@ -14927,7 +14927,7 @@
         <PromotionInfo>
             <Type>PROMOTION_BATTLE_ROBE</Type>
             <Description>Mage's Battle Robe</Description>
-            <Help></Help>
+            <Help>[ICON_BULLET]+25 XP Gain</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_CHANNELING3</PromotionPrereq>
@@ -15070,7 +15070,7 @@
             <iFreeXPFromCombat>0</iFreeXPFromCombat>
             <iModifyGlobalCounter>0</iModifyGlobalCounter>
             <iResistMagic>0</iResistMagic>
-            <iSpellCasterXP>0</iSpellCasterXP>
+            <iSpellCasterXP>25</iSpellCasterXP>
             <iSpellDamageModify>5</iSpellDamageModify>
             <CaptureUnitCombat>NONE</CaptureUnitCombat>
             <PromotionCombatApply>NONE</PromotionCombatApply>
@@ -18593,17 +18593,17 @@
 <!-- Potion Effects -->
         <PromotionInfo>
             <Type>PROMOTION_VAMPIRIC_TEMP</Type>
-            <Description>Temporary Vampirism</Description>
-            <Help></Help>
+            <Description>Vampiric Blood Fury</Description>
+            <Help>[ICON_BULLET]Provides a temporary burst of vampiric fury[NEWLINE][ICON_BULLET]Vampiric units may promote in this for a burst of energy, but the promotion will expire after a few turns</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
-            <PromotionPrereq>NONE</PromotionPrereq>
+            <PromotionPrereq>PROMOTION_VAMPIRE</PromotionPrereq>
             <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
-            <TechPrereq>TECH_NEVER</TechPrereq>
+            <TechPrereq></TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
-            <bBlitz>0</bBlitz>
+            <bBlitz>1</bBlitz>
             <bAmphib>0</bAmphib>
             <bRiver>0</bRiver>
             <bEnemyRoute>0</bEnemyRoute>
@@ -18665,7 +18665,7 @@
             <Button>Art/Interface/Buttons/Promotions/Vampire.dds</Button>
             <bBoarding>0</bBoarding>
             <bOnlyDefensive>0</bOnlyDefensive>
-            <bDispellable>1</bDispellable>
+            <bDispellable>0</bDispellable>
             <bDoubleFortifyBonus>0</bDoubleFortifyBonus>
             <bEquipment>0</bEquipment>
             <bFear>0</bFear>
@@ -18694,7 +18694,7 @@
             <iBetterDefenderThanPercent>0</iBetterDefenderThanPercent>
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
-            <iCombatHealPercent>10</iCombatHealPercent>
+            <iCombatHealPercent>20</iCombatHealPercent>
             <iCombatPercentDefense>20</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
@@ -20134,7 +20134,7 @@
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_POTION_VAMPIRISM</Type>
-            <Description>Potion of Vampirism</Description>
+            <Description>Potion of Vampiric Blood Fury</Description>
             <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>

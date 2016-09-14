@@ -480,6 +480,10 @@ class CvGameUtils:
 				if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_THE_VEIL')) / 7 <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_HIGH_PRIEST_OF_THE_VEIL')):
 					return True
 					
+		if eUnit == gc.getInfoTypeForString('UNIT_MERCHANT_SHIP'):
+			if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_HARBOR')) + pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_HARBOR_LANUN')) <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_MERCHANT_SHIP')):
+				return True
+					
 		if eUnit == gc.getInfoTypeForString('UNIT_BEAST_OF_AGARES'):
 			if pCity.getPopulation() <= 5:
 				return True
