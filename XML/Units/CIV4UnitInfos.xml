@@ -79290,8 +79290,8 @@
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
             <Description>Merchant Ship</Description>
-            <Civilopedia>Merchant ships bring in wealth from the high seas.  Assign a merchant ship to an ocean tile to bring in income ((level+move)% chance per turn).  Merchant ships bring in more income the further away they are from enemy ships, other merchant ships and the northern and southern edges of the world up to 7+(lev * 2) tiles away (competition).  They have a random income of (2-12 * range).  It is possible they will also acquire items in their merchanteering pursuits.</Civilopedia>
-            <Strategy>[ICON_BULLET]You may have one merchant ship per harbor you own.</Strategy>
+            <Civilopedia>Merchant ships bring in wealth from the high seas.  Assign a merchant ship to an ocean tile to bring in income ((level+move)% chance per turn).  Merchant ships bring in more income the further away they are from enemy ships, other merchant ships and the northern and southern edges of the world up to 15+lev tiles away (competition).  They have a random income of (1-6 * range).  It is possible they will also acquire items in their merchanteering pursuits.</Civilopedia>
+            <Strategy>You may have one merchant ship per harbor you own.</Strategy>
             <Advisor>ADVISOR_GROWTH</Advisor>
             <bAnimal>0</bAnimal>
             <bFood>0</bFood>
