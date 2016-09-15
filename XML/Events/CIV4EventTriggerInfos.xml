@@ -293,7 +293,7 @@
             <bOtherPlayerAI>0</bOtherPlayerAI>
             <iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
             <OtherPlayerHasTech>NONE</OtherPlayerHasTech>
-            <bPickCity>0</bPickCity>
+            <bPickCity>1</bPickCity>
             <bPickOtherPlayerCity>0</bPickOtherPlayerCity>
             <bShowPlot>1</bShowPlot>
             <iCityFoodWeight>0</iCityFoodWeight>
