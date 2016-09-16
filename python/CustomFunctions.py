@@ -2834,7 +2834,7 @@ class CustomFunctions:
 					# newUnit.convert(pUnit)
 
 				## Damaged Creeps Can wake up
-				if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) and pUnit.getDamage() > 5 and CyGame().getSorenRandNum(6, "Wake Creep") == 1):
+				if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) and pUnit.getDamage() > 5 and CyGame().getSorenRandNum(3, "Wake Creep") == 1):
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), False)
 					pUnit.finishMoves()
 
@@ -3277,6 +3277,7 @@ class CustomFunctions:
 				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_SEA_SERPENT') and pUnit.getLevel() > 3 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and pPlayer.isBarbarian():
 					oNewUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT'), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), True)
 					oNewUnit.convert(pUnit)
 
 				## Animals can have young
