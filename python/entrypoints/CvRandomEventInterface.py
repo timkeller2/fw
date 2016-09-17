@@ -6875,7 +6875,8 @@ def doAdventurers(argsList):
 		newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_WORKER'), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
 def doMedicineWoman1(argsList):
-	kTriggeredData = argsList[0]
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
 	bPlayer = gc.getPlayer(kTriggeredData.ePlayer)
 	pCity = bPlayer.getCity(kTriggeredData.iCityId)
 
@@ -6888,7 +6889,8 @@ def doMedicineWoman1(argsList):
 
 
 def doMedicineWoman2(argsList):
-	kTriggeredData = argsList[0]
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
 	bPlayer = gc.getPlayer(kTriggeredData.ePlayer)
 	pCity = bPlayer.getCity(kTriggeredData.iCityId)
 
@@ -6901,7 +6903,8 @@ def doMedicineWoman2(argsList):
 
 
 def doMedicineWoman3(argsList):
-	kTriggeredData = argsList[0]
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
 	bPlayer = gc.getPlayer(kTriggeredData.ePlayer)
 	pCity = bPlayer.getCity(kTriggeredData.iCityId)
 
