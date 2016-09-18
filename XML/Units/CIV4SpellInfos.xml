@@ -9625,7 +9625,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_POTION_VAMPIRISM</Type>
-            <Description>Use the Potion of Vampirism</Description>
+            <Description>Use the Potion of Vampiric Blood Fury</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>[ICON_BULLET]This will give you vampiric qualities for one turn.</Help>
@@ -12366,7 +12366,6 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_TAKE_POTION_VAMPIRIC</Type>
-            <Description>Take the potion of vampirism...</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>Take the vampiric potion...</Help>

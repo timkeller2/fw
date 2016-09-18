@@ -4903,9 +4903,9 @@ def spellVolley(caster,volleytype):
 					if CyGame().getSorenRandNum(5, "Poison") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'), True)
 						sMsg = pBestUnit.getName() + ' has been poisoned...'
-						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Poisoned.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Poisoned.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
-						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Poisoned.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Poisoned.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
 				
 				## Body Mana can apply withered
@@ -4918,9 +4918,9 @@ def spellVolley(caster,volleytype):
 					if CyGame().getSorenRandNum(12, "Withered") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WITHERED'), True)
 						sMsg = pBestUnit.getName() + ' has been withered...'
-						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Withered.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Withered.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
-						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Withered.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Withered.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
 				
 				## Earth Mana can apply rusted
@@ -4933,9 +4933,9 @@ def spellVolley(caster,volleytype):
 					if CyGame().getSorenRandNum(6, "Rusted") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_RUSTED'), True)
 						sMsg = pBestUnit.getName() + ' has been rusted...'
-						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Rusted.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Rusted.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
-						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Rusted.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Rusted.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
 				
 				## Entropy Mana can apply enervated
@@ -4948,9 +4948,9 @@ def spellVolley(caster,volleytype):
 					if CyGame().getSorenRandNum(12, "Enervated") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WITHERED'), True)
 						sMsg = pBestUnit.getName() + ' has been withered...'
-						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Withered.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Withered.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
-						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Withered.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Withered.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
 				
 				## Death Mana can apply diseased or plagued
@@ -4963,16 +4963,16 @@ def spellVolley(caster,volleytype):
 					if CyGame().getSorenRandNum(6, "Diseased") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'), True)
 						sMsg = pBestUnit.getName() + ' has been diseased...'
-						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Diseased.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Diseased.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
-						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Diseased.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Diseased.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
 					elif CyGame().getSorenRandNum(20, "Plagued") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), True)
 						sMsg = pBestUnit.getName() + ' has been plagued...'
-						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Plagued.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Plagued.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
-						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Plagued.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Plagued.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
 				
 				## Sun, Spirit and Life Mana can apply blinded
@@ -4999,9 +4999,9 @@ def spellVolley(caster,volleytype):
 					if CyGame().getSorenRandNum(6, "Blinded") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLINDED'), True)
 						sMsg = pBestUnit.getName() + ' has been blinded...'
-						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Sun1.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Sun1.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
-						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Sun1.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Sun1.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
 				
 				## Enchantment, Mind Mana can apply charmed
@@ -5022,9 +5022,9 @@ def spellVolley(caster,volleytype):
 					if CyGame().getSorenRandNum(6, "Charmed") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CHARMED'), True)
 						sMsg = pBestUnit.getName() + ' has been charmed...'
-						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Charmed.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Charmed.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
-						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Charmed.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Charmed.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
 				
 			if volleytype == 'archer':
