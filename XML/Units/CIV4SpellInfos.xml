@@ -12366,6 +12366,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_TAKE_POTION_VAMPIRIC</Type>
+            <Description>Take the Potion of Vampiric Blood Fury...</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>Take the vampiric potion...</Help>
