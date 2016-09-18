@@ -382,7 +382,7 @@ class CustomFunctions:
 			if iBestRange < 999:
 				sDirection = ' to the ' + self.retDir(iX,iY,tx,ty)
 				if sDirection == ' to the ':
-					sDirection = ''
+					sDirection = ' in a part'
 
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR3')):
 					sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is ' + str(iBestRange) + ' tiles' + sDirection + ' of ' + sName + sPref + '...'
