@@ -79046,7 +79046,7 @@
             <bCounterSpy>0</bCounterSpy>
             <bFound>0</bFound>
             <bGoldenAge>0</bGoldenAge>
-            <bInvisible>0</bInvisible>
+            <bInvisible>1</bInvisible>
             <bFirstStrikeImmune>0</bFirstStrikeImmune>
             <bNoDefensiveBonus>0</bNoDefensiveBonus>
             <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
