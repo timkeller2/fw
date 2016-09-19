@@ -2816,7 +2816,7 @@ class CustomFunctions:
 						point = pPlot.getPoint()
 						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SACRIFICE'),point)
 						iEntropyMessage = 1
-						CyInterface().addMessage(pUnit.getOwner(),False,25,'Your army is suffering from poisonous fumes caused by enemy entropy mana!','',1,'Art/Interface/Buttons/Improvements/Maelstrom.dds',ColorTypes(8),pUnit.getX(),pUnit.getY(),True,True)
+						CyInterface().addMessage(pUnit.getOwner(),False,25,'Your army is suffering from poisonous fumes caused by enemy entropy mana!','',1,'Art/Interface/Buttons/Improvements/Maelstrom.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pUnit.getOwner(),'Your army is suffering from poisonous fumes caused by enemy entropy mana!')
 
 				## Grant barbarian units to the player that owns a city they reside in.

@@ -18594,7 +18594,7 @@
         <PromotionInfo>
             <Type>PROMOTION_VAMPIRIC_TEMP</Type>
             <Description>Vampiric Blood Fury</Description>
-            <Help>[ICON_BULLET]Provides a temporary burst of vampiric fury[NEWLINE][ICON_BULLET]Vampiric units may promote in this for a burst of energy, but the promotion will expire after a few turns</Help>
+            <Help>[ICON_BULLET]Provides a temporary burst of vampiric fury[NEWLINE][ICON_BULLET]Vampiric units may promote in this for a burst of energy, but the promotion will expire in a turn</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_VAMPIRE</PromotionPrereq>
@@ -18726,11 +18726,11 @@
             <iBetterDefenderThanPercent>0</iBetterDefenderThanPercent>
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
-            <iCombatHealPercent>15</iCombatHealPercent>
-            <iCombatPercentDefense>20</iCombatPercentDefense>
+            <iCombatHealPercent>10</iCombatHealPercent>
+            <iCombatPercentDefense>0</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
-            <iExpireChance>25</iExpireChance>
+            <iExpireChance>100</iExpireChance>
             <iExtraCombatStr>0</iExtraCombatStr>
             <iExtraCombatDefense>0</iExtraCombatDefense>
             <iFreeXPPerTurn>0</iFreeXPPerTurn>
