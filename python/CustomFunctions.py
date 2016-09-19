@@ -2833,6 +2833,10 @@ class CustomFunctions:
 					# newUnit = plotPlayer.initUnit(pUnit.getUnitType(), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 					# newUnit.convert(pUnit)
 
+				## Hidden Caches Stay Invisible
+				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'):
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_INVISIBLE'), True)
+					
 				## Damaged Creeps Can wake up
 				if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) and pUnit.getDamage() > 5 and CyGame().getSorenRandNum(3, "Wake Creep") == 1):
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), False)

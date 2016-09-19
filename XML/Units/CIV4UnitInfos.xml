@@ -35091,7 +35091,7 @@
             <Flavors>
             </Flavors>
             <iAIWeight>0</iAIWeight>
-            <iCost>90</iCost>
+            <iCost>150</iCost>
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -79222,6 +79222,10 @@
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
             <FreePromotions>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_INVISIBLE</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_THROWING_AXES</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
