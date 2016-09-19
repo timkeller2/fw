@@ -31780,7 +31780,7 @@
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>NONE</PrereqBuilding>
-            <PrereqTech>TECH_OPTICS</PrereqTech>
+            <PrereqTech>TECH_ASTRONOMY</PrereqTech>
             <TechTypes>
             </TechTypes>
             <BonusType>NONE</BonusType>
