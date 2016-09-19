@@ -13235,7 +13235,7 @@
             <Civilopedia></Civilopedia>
             <Help>Stop flying</Help>
             <PromotionPrereq1>PROMOTION_FLYING</PromotionPrereq1>
-            <PromotionPrereq2>PROMOTION_CAN_FLY</PromotionPrereq2>
+            <PromotionPrereq2></PromotionPrereq2>
             <bAllowAI>0</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
             <bCausesWar>0</bCausesWar>
