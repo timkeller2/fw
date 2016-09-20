@@ -76359,7 +76359,7 @@
             <bAutoRaze>0</bAutoRaze>
             <bDisableUpgradeTo>0</bDisableUpgradeTo>
             <bExplodeInCombat>0</bExplodeInCombat>
-            <bFreeXP>0</bFreeXP>
+            <bFreeXP>1</bFreeXP>
             <bImmortal>0</bImmortal>
             <bNeverObsolete>0</bNeverObsolete>
             <bNoWarWeariness>0</bNoWarWeariness>
@@ -76633,7 +76633,7 @@
             <bAutoRaze>0</bAutoRaze>
             <bDisableUpgradeTo>0</bDisableUpgradeTo>
             <bExplodeInCombat>0</bExplodeInCombat>
-            <bFreeXP>0</bFreeXP>
+            <bFreeXP>1</bFreeXP>
             <bImmortal>0</bImmortal>
             <bNeverObsolete>0</bNeverObsolete>
             <bNoWarWeariness>0</bNoWarWeariness>
@@ -76927,7 +76927,7 @@
             <bAutoRaze>0</bAutoRaze>
             <bDisableUpgradeTo>0</bDisableUpgradeTo>
             <bExplodeInCombat>0</bExplodeInCombat>
-            <bFreeXP>0</bFreeXP>
+            <bFreeXP>1</bFreeXP>
             <bImmortal>0</bImmortal>
             <bNeverObsolete>0</bNeverObsolete>
             <bNoWarWeariness>0</bNoWarWeariness>
