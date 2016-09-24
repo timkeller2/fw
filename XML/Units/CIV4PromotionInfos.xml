@@ -5378,8 +5378,8 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_MEDIC1</PromotionPrereq>
             <TechPrereq>TECH_NEVER</TechPrereq>
-            <iSameTileHealChange>6</iSameTileHealChange>
-            <iAdjacentTileHealChange>5</iAdjacentTileHealChange>
+            <iSameTileHealChange>4</iSameTileHealChange>
+            <iAdjacentTileHealChange>4</iAdjacentTileHealChange>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_DISCIPLE</UnitCombatType>
@@ -5396,8 +5396,8 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_MEDIC2</PromotionPrereq>
             <TechPrereq>NONE</TechPrereq>
-            <iSameTileHealChange>10</iSameTileHealChange>
-            <iAdjacentTileHealChange>10</iAdjacentTileHealChange>
+            <iSameTileHealChange>8</iSameTileHealChange>
+            <iAdjacentTileHealChange>8</iAdjacentTileHealChange>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_DISCIPLE</UnitCombatType>
@@ -7187,7 +7187,7 @@
         <PromotionInfo>
             <Type>PROMOTION_SPIRIT_GUIDE</Type>
             <Description>TXT_KEY_PROMOTION_SPIRIT_GUIDE</Description>
-            <Help>TXT_KEY_PROMOTION_SPIRIT_GUIDE_PEDIA</Help>
+            <Help>When this unit dies, 40% of its xp will be gifted to another unit, 50%, 60% and 80% for priest units.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <UnitCombats>
