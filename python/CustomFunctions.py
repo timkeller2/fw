@@ -2767,6 +2767,7 @@ class CustomFunctions:
 					if pUnit.getGameTurnCreated() > iGameTurn - 1:
 						self.tough(pUnit)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_RAVAGER'), False)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WORKER_SHIELD'), False)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_1'), False)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_2'), False)
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MORALE_3'), False)
@@ -2792,6 +2793,7 @@ class CustomFunctions:
 				else:
 					# Computer Units get Ravager Bonus
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_RAVAGER'), True)
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WORKER_SHIELD'), True)
 				
 				# Units with aptitude!
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NO_RANGE')):

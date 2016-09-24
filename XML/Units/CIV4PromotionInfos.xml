@@ -20988,12 +20988,13 @@
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
-            <Type>PROMOTION_FUTURE_LEARNING3</Type>
-            <Description>Future Learning</Description>
+            <Type>PROMOTION_WORKER_SHIELD</Type>
+            <Description>Worker Shield</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>0</iCombatPercent>
-            <Button>Art/Interface/Buttons/Promotions/air1.dds</Button>
+            <Button>Art/Interface/Buttons/Promotions/Defensive.dds</Button>
             <iCombatPercentDefense>0</iCombatPercentDefense>
+            <iExtraCombatDefense>2</iExtraCombatDefense>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
