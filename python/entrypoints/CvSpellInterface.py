@@ -4883,12 +4883,12 @@ def spellVolley(caster,volleytype):
 						iChance += 1
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY3')):
 						iChance += 1
-					if CyGame().getSorenRandNum(12, "Withered") < iChance:
-						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WITHERED'), True)
-						sMsg = pBestUnit.getName() + ' has been withered...'
-						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Withered.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
+					if CyGame().getSorenRandNum(6, "Slow") < iChance:
+						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SLOW'), True)
+						sMsg = pBestUnit.getName() + ' has been slowed...'
+						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Slow.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
-						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Withered.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
+						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Slow.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
 				
 				## Earth Mana can apply rusted
@@ -4913,7 +4913,7 @@ def spellVolley(caster,volleytype):
 						iChance += 1
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY3')):
 						iChance += 1
-					if CyGame().getSorenRandNum(12, "Enervated") < iChance:
+					if CyGame().getSorenRandNum(20, "Enervated") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WITHERED'), True)
 						sMsg = pBestUnit.getName() + ' has been withered...'
 						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Withered.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)

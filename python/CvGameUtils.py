@@ -484,6 +484,18 @@ class CvGameUtils:
 			if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_HARBOR')) + pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_HARBOR_LANUN')) <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_MERCHANT_SHIP')):
 				return True
 					
+		if eUnit == gc.getInfoTypeForString('UNIT_MAGE'):
+			if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_MAGE_GUILD')) * 3 <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_MAGE')):
+				return True
+					
+		if eUnit == gc.getInfoTypeForString('UNIT_ILLUSIONIST'):
+			if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_MAGE_GUILD')) * 3 <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_ILLUSIONIST')):
+				return True
+					
+		if eUnit == gc.getInfoTypeForString('UNIT_WIZARD'):
+			if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_MAGE_GUILD')) * 3 <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_WIZARD')):
+				return True
+					
 		if eUnit == gc.getInfoTypeForString('UNIT_BEAST_OF_AGARES'):
 			if pCity.getPopulation() <= 5:
 				return True

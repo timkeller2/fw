@@ -6220,7 +6220,7 @@
         <SpellInfo>
             <Type>SPELL_ARCANE_RANGED</Type>
             <Description>Arcane Ranged Attack</Description>
-            <Civilopedia>In addition to direct damage spell spheres can cause special effect damage if the target is not magically shielded or resistant.  For instance, each nature promotion increases the chance of poisoning a target by 20%.  Each earth promotion increases the chance of rusting the target by roughly 20%.  Each body, 8% wither.  Entropy, 8% enervation.  Death, 15% disease and 5% plague.  Sun, spirit and life, 15% blinded.  Enchantment and mind, 15% charmed. </Civilopedia>
+            <Civilopedia>In addition to direct damage spell spheres can cause special effect damage if the target is not magically shielded or resistant.  For instance, each nature promotion increases the chance of poisoning a target by 17%.  Each earth promotion increases the chance of rusting the target by roughly 17%.  Each body, 17% slow.  Entropy, 5% withered.  Death, 17% disease and 5% plague.  Sun, spirit and life, 17% blinded.  Enchantment and mind, 17% charmed. </Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>[ICON_BULLET]Fire an arcane attack at the most powerful enemy units within range (1+extensions) targeting 1 unit + 1 for every 6 caster levels.[NEWLINE][ICON_BULLET]Units within cities suffer half damage.[NEWLINE][ICON_BULLET]The attack does 10% base damage modified by the relative strengths of the attacker and defender up to 20% + 5% per caster level max (35% for non-arcane casters).[NEWLINE][ICON_BULLET]See the help for more information on damage types and special effects.</Help>
             <PromotionPrereq1>PROMOTION_CHANNELING1</PromotionPrereq1>
