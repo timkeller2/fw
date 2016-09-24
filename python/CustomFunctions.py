@@ -2793,7 +2793,10 @@ class CustomFunctions:
 				else:
 					# Computer Units get Ravager Bonus
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_RAVAGER'), True)
-					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WORKER_SHIELD'), True)
+					if pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_WORKER') or pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_SETTLER'):
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WORKER_SHIELD'), True)
+					else:
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WORKER_SHIELD'), False)
 				
 				# Units with aptitude!
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NO_RANGE')):
