@@ -847,7 +847,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING1</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING1</Description>
-            <Help>[ICON_BULLET]Auto buff if fortified: Enchanted Blade, Courage, Loyalty, Fair Winds. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] +20 Max Spellcaster XP</Help>
+            <Help>[ICON_BULLET]Auto buff if fortified: Enchanted Blade, Courage, Loyalty, Fair Winds. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET]+20 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling1.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
@@ -859,7 +859,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING2</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING2</Description>
-            <Help>[ICON_BULLET]Auto buff if fortified: Flaming Arrows, Poisoned Blade, Blessing and Shield of Faith. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] +30 Max Spellcaster XP</Help>
+            <Help>[ICON_BULLET]Auto buff if fortified: Flaming Arrows, Poisoned Blade, Blessing and Shield of Faith. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET]+30 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling2.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
@@ -872,7 +872,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING3</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING3</Description>
-            <Help>[ICON_BULLET]Auto buff if fortified: Valor. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET] +40 Max Spellcaster XP</Help>
+            <Help>[ICON_BULLET]Auto buff if fortified: Valor. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET]+40 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling3.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
@@ -8550,7 +8550,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHIEF</Type>
             <Description>Chief</Description>
-            <Help>[ICON_BULLET]Requires 5th level and 8 units of the same type.[NEWLINE][ICON_BULLET]Upgrade in a city with an Elder Council.[NEWLINE][ICON_BULLET]A chief may give command morale to units of his same type up to his level within level/8 range.[NEWLINE][ICON_BULLET]Vanishes when this unit is upgraded.</Help>
+            <Help>[ICON_BULLET]Requires 5th level and 8 units of the same type.[NEWLINE][ICON_BULLET]Vanishes when this unit is upgraded.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -9155,12 +9155,12 @@
         <PromotionInfo>
             <Type>PROMOTION_COMMANDER1</Type>
             <Description>Leadership I</Description>
-            <Help>[ICON_BULLET]Give command morale to up to his level units within units / 8 range.</Help>
+            <Help>[ICON_BULLET]Allows Leadership.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
-            <PromotionPrereq>PROMOTION_DRILL4</PromotionPrereq>
-            <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
-            <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
+            <PromotionPrereq></PromotionPrereq>
+            <PromotionPrereqOr1>PROMOTION_DRILL4</PromotionPrereqOr1>
+            <PromotionPrereqOr2>PROMOTION_GOVERNOR3</PromotionPrereqOr2>
             <TechPrereq>NONE</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
@@ -9327,7 +9327,7 @@
         <PromotionInfo>
             <Type>PROMOTION_COMMANDER2</Type>
             <Description>Leadership II</Description>
-            <Help>[ICON_BULLET]Give command morale to up to his level x 2 units within units / 8 range.</Help>
+            <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_COMMANDER1</PromotionPrereq>
@@ -9499,7 +9499,7 @@
         <PromotionInfo>
             <Type>PROMOTION_COMMANDER3</Type>
             <Description>Leadership III</Description>
-            <Help>[ICON_BULLET]Give command morale to up to his level x 3 units within units / 8 range.</Help>
+            <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_COMMANDER2</PromotionPrereq>
@@ -16415,7 +16415,7 @@
         <PromotionInfo>
             <Type>PROMOTION_PATRIARCH</Type>
             <Description>Patriarch</Description>
-            <Help></Help>
+            <Help>[ICON_BULLET]+50 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -16526,8 +16526,8 @@
             <iFreeXPFromCombat>0</iFreeXPFromCombat>
             <iModifyGlobalCounter>0</iModifyGlobalCounter>
             <iResistMagic>0</iResistMagic>
-            <iSpellCasterXP>0</iSpellCasterXP>
-            <iSpellDamageModify>0</iSpellDamageModify>
+            <iSpellCasterXP>50</iSpellCasterXP>
+            <iSpellDamageModify>5</iSpellDamageModify>
             <CaptureUnitCombat>NONE</CaptureUnitCombat>
             <PromotionCombatApply>NONE</PromotionCombatApply>
             <PromotionImmune1>NONE</PromotionImmune1>
@@ -20978,11 +20978,12 @@
             </DamageTypeResists>
         </PromotionInfo>
         <PromotionInfo>
-            <Type>PROMOTION_FUTURE_LEARNING2</Type>
-            <Description>Future Learning</Description>
+            <Type>PROMOTION_HERALDS_CALL</Type>
+            <Description>Herald's Call</Description>
+            <Help>[ICON_BULLET]This unit will proceed to the next life at the end of the turn.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>0</iCombatPercent>
-            <Button>Art/Interface/Buttons/Promotions/air1.dds</Button>
+            <Button>Art/Interface/Buttons/Units/Herald.dds</Button>
             <iCombatPercentDefense>0</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>

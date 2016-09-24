@@ -1465,6 +1465,7 @@ def spellHeraldsCall(caster):
 	iCourage = gc.getInfoTypeForString('PROMOTION_COURAGE')
 	iLoyalty = gc.getInfoTypeForString('PROMOTION_LOYALTY')
 	iSpiritGuide = gc.getInfoTypeForString('PROMOTION_SPIRIT_GUIDE')
+	iHeraldsCall = gc.getInfoTypeForString('PROMOTION_HERALDS_CALL')
 	pPlot = caster.plot()
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
@@ -1474,7 +1475,8 @@ def spellHeraldsCall(caster):
 			pUnit.setHasPromotion(iCourage, True)
 			pUnit.setHasPromotion(iLoyalty, True)
 			pUnit.setHasPromotion(iSpiritGuide, True)
-			pUnit.setDuration(1)
+			pUnit.setHasPromotion(iHeraldsCall, True)
+			# pUnit.setDuration(1)
 
 def reqHide(caster):
 	if caster.isMadeAttack():
@@ -3811,8 +3813,6 @@ def reqBuilding(caster,sBuilding,sPromotion):
 def reqBecomeChief(caster):
 	iChief = gc.getInfoTypeForString('PROMOTION_CHIEF')
 	
-	if not reqBuilding(caster,'BUILDING_ELDER_COUNCIL','PROMOTION_CHIEF'):
-		return False
 	if caster.getLevel() < 5:
 		return False
 	if caster.isHasPromotion(iChief):
@@ -3885,11 +3885,14 @@ def reqCommandMorale(caster):
 	if caster.getUnitType() == gc.getInfoTypeForString('UNIT_MARDERO'):
 		UnitType = gc.getInfoTypeForString('UNIT_SUCCUBUS')
 
-	iNumBlessed = caster.getLevel()
+	iLeadership = caster.getLevel() / 2 + cf.iNoble(caster,0)
+	iNumBlessed = iLeadership
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER1')):
+		iNumBlessed = iNumBlessed + iLeadership
 	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER2')):
-		iNumBlessed = iNumBlessed + caster.getLevel()
+		iNumBlessed = iNumBlessed + iLeadership
 	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER3')):
-		iNumBlessed = iNumBlessed + caster.getLevel()
+		iNumBlessed = iNumBlessed + iLeadership
 	iRange = iNumBlessed / 8
 
 	for iiX in range(caster.getX()-iRange, caster.getX()+iRange+1, 1):
@@ -3905,13 +3908,17 @@ def reqCommandMorale(caster):
 def spellCommandMorale(caster):
 	cf.setObjectInt(caster,'Command',CyGame().getGameTurn())
 
-	iNumBlessed=caster.getLevel()
+	iLeadership = caster.getLevel() / 2 + cf.iNoble(caster,0)
+	iNumBlessed = iLeadership
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER1')):
+		iNumBlessed = iNumBlessed + iLeadership
 	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER2')):
-		iNumBlessed = iNumBlessed + caster.getLevel()
+		iNumBlessed = iNumBlessed + iLeadership
 	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER3')):
-		iNumBlessed = iNumBlessed + caster.getLevel()
+		iNumBlessed = iNumBlessed + iLeadership
 	iRange = iNumBlessed / 8
 
+	iBlessed = 0
 	iBlessAll = 1
 	if not caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER1')):
 		iBlessAll = 0
@@ -3926,6 +3933,7 @@ def spellCommandMorale(caster):
 			if (iBlessAll == 1 or UnitType == pUnit.getUnitType()):
 				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMAND_MORALE'),True)
 				iNumBlessed = iNumBlessed - 1
+				iBlessed = iBlessed + 1
 				if (iNumBlessed < 1):
 					return
 
@@ -3938,9 +3946,14 @@ def spellCommandMorale(caster):
 					if (iBlessAll == 1 or UnitType == pUnit.getUnitType()):
 						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMAND_MORALE'),True)
 						iNumBlessed = iNumBlessed - 1
+						iBlessed = iBlessed + 1
 						if (iNumBlessed < 1):
 							return
 
+	sMsg = caster.getName() + ' leads ' + str(iBlessed) + ' units...'
+	CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(11),caster.getX(),caster.getY(),True,True)
+	CyInterface().addCombatMessage(caster.getOwner(),sMsg )
+							
 def reqDonateItem(caster):
 	if caster.baseCombatStr() < 1 and caster.maxMoves() < 1 and caster.hillsAttackModifier() > 0:
 		return True

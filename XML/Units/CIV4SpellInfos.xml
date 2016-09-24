@@ -1628,7 +1628,7 @@
             <Type>SPELL_HERALDS_CALL</Type>
             <Description>TXT_KEY_SPELL_HERALDS_CALL</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <Help>TXT_KEY_SPELL_HERALDS_CALL_HELP</Help>
+            <Help>Grant Valor, Courage, Blessed, Loyalty and Spirit Guide to all living units in the stack.  At the end of the turn, they will travel on to the next life.</Help>
             <UnitPrereq>UNIT_HERALD</UnitPrereq>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -4553,8 +4553,8 @@
         <SpellInfo>
             <Type>SPELL_BECOME_CHIEF</Type>
             <Description>Appoint a Chief</Description>
-            <Civilopedia>For every 8 units of a type, one can become chief gaining 1 strength and the ability to command similar units!  A unit must be at least level 5 to become a chief.  This promotion will vanish when the unit is upgraded.  A chief may grant command morale to a number of units of his same type equal to his level.</Civilopedia>
-            <Help>[ICON_BULLET]Have the elder council appoint this unit a chief unit with +1str and the ability to grant morale to a number of like troops equal to his level.</Help>
+            <Civilopedia></Civilopedia>
+            <Help>[ICON_BULLET]For every 8 units of a type, one can become chief gaining 1 strength and the ability to lead units!  A unit must be at least level 5 to become a chief.  This promotion will vanish when the unit is upgraded.</Help>
             <bAllowAI>1</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
             <bCausesWar>0</bCausesWar>
@@ -4631,7 +4631,7 @@
             <bRemoveHasCasted>0</bRemoveHasCasted>
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
-            <iCost>0</iCost>
+            <iCost>125</iCost>
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyResult>spellBecomeGrandMaster(pCaster)</PyResult>
@@ -4649,7 +4649,7 @@
             <Type>SPELL_COMMAND_MORALE</Type>
             <Description>Leadership</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <Help>[ICON_BULLET]Give leadership promotion to allied troops.[NEWLINE][ICON_BULLET]The range for this is equal to the maximum number of units that can be affected / 8.</Help>
+            <Help>[ICON_BULLET]Give the leadership promotion (+30% str) to a number of allied troops equal to 1/2 the caster level + his nobility level.[NEWLINE][ICON_BULLET]Leadership I doubles the number of units.  Leadership II triples, III quadruples.[NEWLINE][ICON_BULLET]The range for this is equal to the maximum number of units that can be affected / 8.</Help>
             <bAllowAI>1</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
             <bCausesWar>0</bCausesWar>
@@ -8519,7 +8519,7 @@
             <Description>Copy scrolls from the library.</Description>
             <Civilopedia>Visit the library to copy scrolls.</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Visit the library to copy scrolls.  (Magic Missile, Mage Armor and Summon Beastman)</Help>
+            <Help>[ICON_BULLET]Visit the library to copy scrolls.  (Magic Missile, Mage Armor, Summon Skeleton and others)</Help>
             <PromotionPrereq1>NONE</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -10280,7 +10280,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_BEASTMAN')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_SKELETON')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_FIRE_SUMMON</Effect>
             <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>

@@ -2870,6 +2870,10 @@ class CustomFunctions:
 							pUnit.kill(True,0)
 							pPlayer.changeGold(35 * SellIt)
 							
+				## Send Heralded Units On
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HERALDS_CALL')):
+					pUnit.kill(True,0)
+
 				## Equip barbarian units
 				if (pPlayer.isBarbarian() and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_THROWING_AXES'))):
 					self.equip(pUnit)

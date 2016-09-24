@@ -1432,10 +1432,10 @@ class CvEventManager:
 			CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,unit.getButton(),ColorTypes(8),city.getX(),city.getY(),True,True)
 			CyInterface().addCombatMessage(iPlayer,sMsg)
 
-		## Announce the training of powerful units
-		if unit.baseCombatStr() > 5 and pPlayer.getUnitClassCount(unit.getUnitClassType()) == 1 and CyGame().isUnitClassMaxedOut(unit.getUnitClassType(), 0) == False:
-			sMsg = 'It is reported that ' + pPlayer.getName() + ' now has ' + unit.getName() + 's...'
-			cf.msgAll(sMsg,unit.getX(),unit.getY(),unit.getOwner())
+		# Announce the training of powerful units
+		# if unit.baseCombatStr() > 5 and pPlayer.getUnitClassCount(unit.getUnitClassType()) == 1 and CyGame().isUnitClassMaxedOut(unit.getUnitClassType(), 0) == False:
+			# sMsg = 'It is reported that ' + pPlayer.getName() + ' now has ' + unit.getName() + 's...'
+			# cf.msgAll(sMsg,unit.getX(),unit.getY(),unit.getOwner())
 
 		## Dire beasts and dragons add a chance that new living units will start with the Cult of the Dragon promotion...
 		if unit.isAlive():
@@ -1678,9 +1678,13 @@ class CvEventManager:
 							iXP = iXP * .5
 						else:
 							iXP = iXP * .4
+						iXP = int(iXP)	
 						pUnit.changeExperience(iXP, -1, false, false, false)
 						unit.changeExperience(iXP * -1, -1, false, false, false)
-						CyInterface().addMessage(unit.getOwner(),True,25,CyTranslator().getText("TXT_KEY_MESSAGE_SPIRIT_GUIDE",()),'AS2D_DISCOVERBONUS',1,'Art/Interface/Buttons/Promotions/SpiritGuide.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED'), True)
+						sMsg = pUnit.getName() + ' gains spirit guidance from ' + unit.getName() + ' gaining ' + str(iXP) + 'xp...'
+						CyInterface().addMessage(unit.getOwner(),False,25,sMsg,'AS3D_SPELL_BLESS',1,'Art/Interface/Buttons/Promotions/SpiritGuide.dds',ColorTypes(12),pUnit.getX(),pUnit.getY(),True,True)
+						CyInterface().addCombatMessage(unit.getOwner(),sMsg)
 
 		#if bKillEquipment:
 		if unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL'):
