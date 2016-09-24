@@ -8165,6 +8165,16 @@ def monument5(argsList):
 
 	cf.pay(pCity,'BUILDING_LIBRARY',5,iPlayer,'library')
 	
+def monument12(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	cf.pay(pCity,'BUILDING_LIBRARY',12,iPlayer,'library')
+	
 def herbalist4(argsList):
 	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
@@ -8184,6 +8194,16 @@ def herbalist6(argsList):
 	pCity = pUnit.plot().getPlotCity()
 
 	cf.pay(pCity,'BUILDING_HERBALIST',6,iPlayer,'herbalist')
+
+def herbalist9(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	cf.pay(pCity,'BUILDING_HERBALIST',9,iPlayer,'herbalist')
 
 def herbalist20(argsList):
 	iEvent = argsList[0]

@@ -55043,7 +55043,7 @@
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
             <iSpaceProductionMod>0</iSpaceProductionMod>
-            <Tech>NONE</Tech>
+            <Tech>TECH_KNOWLEDGE_OF_THE_ETHER</Tech>
             <TechFlavors>
             </TechFlavors>
             <iTechPercent>0</iTechPercent>
@@ -55107,7 +55107,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback>alchemylab5</PythonCallback>
+            <PythonCallback>herbalist9</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -55144,7 +55144,7 @@
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
             <iSpaceProductionMod>0</iSpaceProductionMod>
-            <Tech>NONE</Tech>
+            <Tech>TECH_MEDICINE</Tech>
             <TechFlavors>
             </TechFlavors>
             <iTechPercent>0</iTechPercent>
@@ -55245,7 +55245,7 @@
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
             <iSpaceProductionMod>0</iSpaceProductionMod>
-            <Tech>NONE</Tech>
+            <Tech>TECH_SANITATION</Tech>
             <TechFlavors>
             </TechFlavors>
             <iTechPercent>0</iTechPercent>
@@ -55309,7 +55309,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback>alchemylab5</PythonCallback>
+            <PythonCallback>herbalist9</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -55851,7 +55851,7 @@
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
             <iSpaceProductionMod>0</iSpaceProductionMod>
-            <Tech>NONE</Tech>
+            <Tech>TECH_KNOWLEDGE_OF_THE_ETHER</Tech>
             <TechFlavors>
             </TechFlavors>
             <iTechPercent>0</iTechPercent>
@@ -55915,7 +55915,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback>mageguild5</PythonCallback>
+            <PythonCallback>monument5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -55952,7 +55952,7 @@
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
             <iSpaceProductionMod>0</iSpaceProductionMod>
-            <Tech>NONE</Tech>
+            <Tech>TECH_KNOWLEDGE_OF_THE_ETHER</Tech>
             <TechFlavors>
             </TechFlavors>
             <iTechPercent>0</iTechPercent>
@@ -56016,7 +56016,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback>mageguild5</PythonCallback>
+            <PythonCallback>monument5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
@@ -56053,7 +56053,7 @@
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
             <iSpaceProductionMod>0</iSpaceProductionMod>
-            <Tech>NONE</Tech>
+            <Tech>TECH_KNOWLEDGE_OF_THE_ETHER</Tech>
             <TechFlavors>
             </TechFlavors>
             <iTechPercent>0</iTechPercent>
@@ -56117,7 +56117,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback>mageguild10</PythonCallback>
+            <PythonCallback>monument12</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>

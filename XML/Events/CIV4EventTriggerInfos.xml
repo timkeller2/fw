@@ -29667,6 +29667,8 @@
                 <Event>EVENT_HERBALIST_10</Event>
                 <Event>EVENT_HERBALIST_1</Event>
                 <Event>EVENT_HERBALIST_2</Event>
+                <Event>EVENT_HERBALIST_5</Event>
+                <Event>EVENT_HERBALIST_6</Event>
                 <Event>EVENT_HERBALIST_9</Event>
                 <Event>EVENT_HUNTER_6</Event>
             </Events>
@@ -29769,6 +29771,9 @@
                 <Event>EVENT_LIBRARY_1</Event>
                 <Event>EVENT_LIBRARY_2</Event>
                 <Event>EVENT_LIBRARY_3</Event>
+                <Event>EVENT_LIBRARY_4</Event>
+                <Event>EVENT_LIBRARY_5</Event>
+                <Event>EVENT_LIBRARY_6</Event>
                 <Event>EVENT_HUNTER_6</Event>
             </Events>
             <PrereqEvents>
@@ -29867,9 +29872,6 @@
             <bPickCorporation>0</bPickCorporation>
             <bHeadquarters>0</bHeadquarters>
             <Events>
-                <Event>EVENT_LIBRARY_4</Event>
-                <Event>EVENT_LIBRARY_5</Event>
-                <Event>EVENT_LIBRARY_6</Event>
                 <Event>EVENT_MAGE_GUILD_1</Event>
                 <Event>EVENT_MAGE_GUILD_2</Event>
                 <Event>EVENT_MAGE_GUILD_3</Event>
@@ -30080,11 +30082,11 @@
             <bHeadquarters>0</bHeadquarters>
             <Events>
                 <Event>EVENT_HERBALIST_4</Event>
-                <Event>EVENT_HERBALIST_5</Event>
-                <Event>EVENT_HERBALIST_6</Event>
+                <Event>EVENT_HERBALIST_7</Event>
                 <Event>EVENT_HERBALIST_8</Event>
                 <Event>EVENT_ALCHEMY_LAB_1</Event>
                 <Event>EVENT_ALCHEMY_LAB_2</Event>
+                <Event>EVENT_ALCHEMY_LAB_3</Event>
                 <Event>EVENT_HUNTER_6</Event>
             </Events>
             <PrereqEvents>
