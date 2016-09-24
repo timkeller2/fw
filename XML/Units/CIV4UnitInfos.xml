@@ -60185,10 +60185,6 @@
             <iHotKeyPriority>0</iHotKeyPriority>
             <FreePromotions>
                 <FreePromotion>
-                    <PromotionType>PROMOTION_MEDIC1</PromotionType>
-                    <bFreePromotion>1</bFreePromotion>
-                </FreePromotion>
-                <FreePromotion>
                     <PromotionType>PROMOTION_MEDIC2</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>

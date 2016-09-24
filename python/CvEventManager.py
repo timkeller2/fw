@@ -1669,7 +1669,15 @@ class CvEventManager:
 									lUnits.append(pLoopUnit)
 					if len(lUnits) > 0:
 						pUnit = lUnits[CyGame().getSorenRandNum(len(lUnits), "Spirit Guide")-1]
-						iXP = unit.getExperience() / 2
+						iXP = unit.getExperience()
+						if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MEDIC3')):
+							iXP = iXP * .75
+						elif unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MEDIC2')):
+							iXP = iXP / 2
+						elif unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MEDIC1')):
+							iXP = iXP / 3
+						else:
+							iXP = iXP / 4
 						pUnit.changeExperience(iXP, -1, false, false, false)
 						unit.changeExperience(iXP * -1, -1, false, false, false)
 						CyInterface().addMessage(unit.getOwner(),True,25,CyTranslator().getText("TXT_KEY_MESSAGE_SPIRIT_GUIDE",()),'AS2D_DISCOVERBONUS',1,'Art/Interface/Buttons/Promotions/SpiritGuide.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)

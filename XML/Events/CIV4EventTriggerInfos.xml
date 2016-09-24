@@ -32713,7 +32713,7 @@
         <EventTriggerInfo>
             <Type>EVENTTRIGGER_MEDICINE_WOMAN</Type>
             <WorldNewsTexts>
-                <Text>An anicent medicine woman visits the marketplace at %s2_city.</Text>
+                <Text>An ancient medicine woman visits the marketplace at %s2_city.</Text>
             </WorldNewsTexts>
             <TriggerTexts>
                 <TriggerText>

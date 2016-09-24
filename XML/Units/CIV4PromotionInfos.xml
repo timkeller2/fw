@@ -5324,6 +5324,10 @@
                     <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_NAVAL</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
             </UnitCombats>
             <Button>,Art/Interface/Buttons/Promotions/Medic1.dds,Art/Interface/Buttons/Promotions_Atlas.dds,3,4</Button>
             <PromotionNextLevel>PROMOTION_MEDIC1</PromotionNextLevel>
@@ -5359,6 +5363,10 @@
                     <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
                     <bUnitCombat>1</bUnitCombat>
                 </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_NAVAL</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
             </UnitCombats>
             <Button>,Art/Interface/Buttons/Promotions/Medic1.dds,Art/Interface/Buttons/Promotions_Atlas.dds,3,4</Button>
             <PromotionPrereqAnd>PROMOTION_DRILL2</PromotionPrereqAnd>
@@ -5370,7 +5378,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_MEDIC1</PromotionPrereq>
             <TechPrereq>TECH_NEVER</TechPrereq>
-            <iSameTileHealChange>4</iSameTileHealChange>
+            <iSameTileHealChange>6</iSameTileHealChange>
             <iAdjacentTileHealChange>5</iAdjacentTileHealChange>
             <UnitCombats>
                 <UnitCombat>
@@ -5388,7 +5396,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_MEDIC2</PromotionPrereq>
             <TechPrereq>NONE</TechPrereq>
-            <iSameTileHealChange>4</iSameTileHealChange>
+            <iSameTileHealChange>10</iSameTileHealChange>
             <iAdjacentTileHealChange>10</iAdjacentTileHealChange>
             <UnitCombats>
                 <UnitCombat>

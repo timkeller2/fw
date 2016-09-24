@@ -562,6 +562,7 @@
             <Type>SPELL_COURAGE</Type>
             <Description>TXT_KEY_SPELL_COURAGE</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Help>[ICON_BULLET]Add Courage to a number of living units equal to 1/3 the caster's level.</Help>
             <PromotionPrereq1>PROMOTION_SPIRIT1</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_CHANNELING1</PromotionPrereq2>
             <bAllowAI>1</bAllowAI>
@@ -1918,7 +1919,8 @@
         <SpellInfo>
             <Type>SPELL_MAELSTROM</Type>
             <Description>TXT_KEY_SPELL_MAELSTROM</Description>
-            <Civilopedia>Does 1/lev% damage to all units within range 1 except the caster's tile, unless the caster has channeling3 in which case the damage is 2/lev% and range 2.  Affects lev x 2 units, double if chan 3.</Civilopedia>
+            <Civilopedia></Civilopedia>
+            <Help>Does 1/lev% damage to all units within range 1 except the caster's tile, unless the caster has channeling3 in which case the damage is 2/lev% and range 2.  Affects lev x 2 units, double if chan 3.</Help>
             <PromotionPrereq1>PROMOTION_AIR2</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
@@ -7699,7 +7701,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_HIRE_ADVENTURER</Type>
-            <Description>Hire and adventurer</Description>
+            <Description>Hire an adventurer</Description>
             <Civilopedia>Hire an adventurer from the tavern!</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>[ICON_BULLET]Hire an adventurer from the tavern!</Help>
