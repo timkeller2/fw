@@ -54416,7 +54416,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_PRIEST_1</Type>
-            <Description>He would join your cause for the right price.</Description>
+            <Description>Hire him!</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -54804,7 +54804,7 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback>alchemylab10</PythonCallback>
+            <PythonCallback>alchemylab20</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
             <PythonCanDo>isHuman</PythonCanDo>
             <PythonHelp></PythonHelp>
