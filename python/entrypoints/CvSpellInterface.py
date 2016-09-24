@@ -1464,6 +1464,7 @@ def spellHeraldsCall(caster):
 	iBlessed = gc.getInfoTypeForString('PROMOTION_BLESSED')
 	iCourage = gc.getInfoTypeForString('PROMOTION_COURAGE')
 	iLoyalty = gc.getInfoTypeForString('PROMOTION_LOYALTY')
+	iSpiritGuide = gc.getInfoTypeForString('PROMOTION_SPIRIT_GUIDE')
 	pPlot = caster.plot()
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
@@ -1472,6 +1473,7 @@ def spellHeraldsCall(caster):
 			pUnit.setHasPromotion(iBlessed, True)
 			pUnit.setHasPromotion(iCourage, True)
 			pUnit.setHasPromotion(iLoyalty, True)
+			pUnit.setHasPromotion(iSpiritGuide, True)
 			pUnit.setDuration(1)
 
 def reqHide(caster):
