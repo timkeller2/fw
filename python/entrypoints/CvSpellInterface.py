@@ -3935,20 +3935,21 @@ def spellCommandMorale(caster):
 				iNumBlessed = iNumBlessed - 1
 				iBlessed = iBlessed + 1
 				if (iNumBlessed < 1):
-					return
+					break
 
-	for iiX in range(caster.getX()-iRange, caster.getX()+iRange+1, 1):
-		for iiY in range(caster.getY()-iRange, caster.getY()+iRange+1, 1):
-			pPlot = CyMap().plot(iiX,iiY)
-			for i in range(pPlot.getNumUnits()):
-				pUnit = pPlot.getUnit(i)
-				if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMAND_MORALE')) and caster.getTeam() == pUnit.getTeam():
-					if (iBlessAll == 1 or UnitType == pUnit.getUnitType()):
-						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMAND_MORALE'),True)
-						iNumBlessed = iNumBlessed - 1
-						iBlessed = iBlessed + 1
-						if (iNumBlessed < 1):
-							return
+	if iNumBlessed > 0:
+		for iiX in range(caster.getX()-iRange, caster.getX()+iRange+1, 1):
+			for iiY in range(caster.getY()-iRange, caster.getY()+iRange+1, 1):
+				pPlot = CyMap().plot(iiX,iiY)
+				for i in range(pPlot.getNumUnits()):
+					pUnit = pPlot.getUnit(i)
+					if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMAND_MORALE')) and caster.getTeam() == pUnit.getTeam():
+						if (iBlessAll == 1 or UnitType == pUnit.getUnitType()):
+							pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMAND_MORALE'),True)
+							iNumBlessed = iNumBlessed - 1
+							iBlessed = iBlessed + 1
+							if (iNumBlessed < 1):
+								break
 
 	sMsg = caster.getName() + ' leads ' + str(iBlessed) + ' units...'
 	CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(11),caster.getX(),caster.getY(),True,True)

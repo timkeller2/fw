@@ -8210,6 +8210,8 @@
             <TechPrereq>TECH_NEVER</TechPrereq>
             <Button>Art/Interface/Buttons/Promotions/Werewolf.dds</Button>
             <iMinLevel>-1</iMinLevel>
+            <PromotionCombatType>PROMOTION_VAMPIRE</PromotionCombatType>
+            <iPromotionCombatMod>35</iPromotionCombatMod>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_WINTERBORN</Type>

@@ -55061,7 +55061,7 @@
             </UnitCombatPromotions>
             <UnitClassPromotions>
             </UnitClassPromotions>
-            <BuildingClass>BUILDINGCLASS_HERBALIST</BuildingClass>
+            <BuildingClass></BuildingClass>
             <iBuildingChange>0</iBuildingChange>
             <BuildingExtraYields>
             </BuildingExtraYields>
@@ -55144,7 +55144,7 @@
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
             <iSpaceProductionMod>0</iSpaceProductionMod>
-            <Tech>TECH_MEDICINE</Tech>
+            <Tech></Tech>
             <TechFlavors>
             </TechFlavors>
             <iTechPercent>0</iTechPercent>
@@ -55224,7 +55224,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_HERBALIST_6</Type>
-            <Description>A Potion of Regeneration</Description>
+            <Description>A Potion of Regeneration (with Sanitation)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -55263,7 +55263,7 @@
             </UnitCombatPromotions>
             <UnitClassPromotions>
             </UnitClassPromotions>
-            <BuildingClass>BUILDINGCLASS_ELDER_COUNCIL</BuildingClass>
+            <BuildingClass></BuildingClass>
             <iBuildingChange>0</iBuildingChange>
             <BuildingExtraYields>
             </BuildingExtraYields>
