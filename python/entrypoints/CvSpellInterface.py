@@ -3951,7 +3951,12 @@ def spellCommandMorale(caster):
 							if (iNumBlessed < 1):
 								break
 
-	sMsg = caster.getName() + ' leads ' + str(iBlessed) + ' units...'
+	sMsg = caster.getName() + ' leads ' + str(iBlessed) + ' units'
+	if iRange > 0:
+		sMsg = sMsg + ' within ' + str(iRange) + ' range...'
+	else:	
+		sMsg = sMsg + '...'
+		
 	CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(11),caster.getX(),caster.getY(),True,True)
 	CyInterface().addCombatMessage(caster.getOwner(),sMsg )
 							

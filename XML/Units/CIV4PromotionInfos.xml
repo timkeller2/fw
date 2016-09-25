@@ -5378,7 +5378,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_MEDIC1</PromotionPrereq>
             <TechPrereq>TECH_NEVER</TechPrereq>
-            <iSameTileHealChange>4</iSameTileHealChange>
+            <iSameTileHealChange>5</iSameTileHealChange>
             <iAdjacentTileHealChange>4</iAdjacentTileHealChange>
             <UnitCombats>
                 <UnitCombat>
@@ -5396,7 +5396,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_MEDIC2</PromotionPrereq>
             <TechPrereq>NONE</TechPrereq>
-            <iSameTileHealChange>8</iSameTileHealChange>
+            <iSameTileHealChange>6</iSameTileHealChange>
             <iAdjacentTileHealChange>8</iAdjacentTileHealChange>
             <UnitCombats>
                 <UnitCombat>
@@ -15962,7 +15962,7 @@
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_UNDEAD_SLAYING2</PromotionPrereqOr1>
-            <PromotionPrereqOr2>PROMOTION_COMBAT2</PromotionPrereqOr2>
+            <PromotionPrereqOr2>PROMOTION_COMBAT1</PromotionPrereqOr2>
             <TechPrereq>NONE</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
@@ -16106,7 +16106,7 @@
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_UNDEAD_SLAYING2</PromotionPrereqOr1>
-            <PromotionPrereqOr2>PROMOTION_COMBAT1</PromotionPrereqOr2>
+            <PromotionPrereqOr2>PROMOTION_DRILL1</PromotionPrereqOr2>
             <TechPrereq>NONE</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
