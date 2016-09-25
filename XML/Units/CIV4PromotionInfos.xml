@@ -16106,7 +16106,7 @@
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
             <PromotionPrereqOr1>PROMOTION_UNDEAD_SLAYING2</PromotionPrereqOr1>
-            <PromotionPrereqOr2>PROMOTION_DRILL1</PromotionPrereqOr2>
+            <PromotionPrereqOr2>PROMOTION_COMBAT1</PromotionPrereqOr2>
             <TechPrereq>NONE</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
