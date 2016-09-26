@@ -2389,7 +2389,7 @@ class CustomFunctions:
 					# Injury damage
 					if pUnit.getDamage() > 0 and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_SIEGE') and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOLEM')) and not pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_LOKI'):
 						iDam = CyGame().getSorenRandNum( pUnit.getDamage(), "Injury Damage") / 5 - pUnit.getLevel()
-						if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ORC')):
+						if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ORC')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIZARDMAN')):
 							iDam = iDam / 2
 						if iDam > 12:
 							iDam = 12
