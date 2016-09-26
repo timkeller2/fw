@@ -4684,7 +4684,7 @@
             <PyResult>spellCommandMorale(pCaster)</PyResult>
             <PyRequirement>reqCommandMorale(pCaster)</PyRequirement>
             <Effect>EFFECT_ENCHANTED_BLADE</Effect>
-            <Sound>AS3D_SPELL_ENCHANTMENT</Sound>
+            <Sound>AS3D_SPELL_CHEER</Sound>
             <bAltDown>0</bAltDown>
             <bShiftDown>0</bShiftDown>
             <bCtrlDown>0</bCtrlDown>

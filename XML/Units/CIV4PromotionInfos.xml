@@ -5051,7 +5051,7 @@
         <PromotionInfo>
             <Type>PROMOTION_LIZARDMAN</Type>
             <Description>TXT_KEY_PROMOTION_LIZARDMAN</Description>
-            <Help>[ICON_BULLET]10% chance of xp gain in jungle (up to 3 units per tile)[ICON_BULLET]Injury damage halved (resistant to wounds)</Help>
+            <Help>[ICON_BULLET]10% chance of xp gain in jungle (up to 3 units per tile)[NEWLINE][ICON_BULLET]Injury damage halved (resistant to wounds)</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <bAmphib>1</bAmphib>
@@ -6184,7 +6184,7 @@
         <PromotionInfo>
             <Type>PROMOTION_ORC</Type>
             <Description>TXT_KEY_PROMOTION_ORC</Description>
-            <Help>[ICON_BULLET]10% chance of xp gain in jungle (up to 3 units per tile)[ICON_BULLET]Injury damage halved (resistant to wounds)</Help>
+            <Help>[ICON_BULLET]10% chance of xp gain in jungle (up to 3 units per tile)[NEWLINE][ICON_BULLET]Injury damage halved (resistant to wounds)</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <FeatureAttacks>
