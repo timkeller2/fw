@@ -4386,6 +4386,19 @@ def reqLearnMagic(caster):
 
 	return True
 
+def reqHireAdventurer(caster):
+	pCity = caster.plot().getPlotCity()
+	pPlayer = gc.getPlayer(caster.getOwner())
+
+	if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_TAVERN')) == 0:
+		return False
+
+	strCheckData = cPickle.loads(pCity.getScriptData())
+	if strCheckData['BUILDING_TAVERN'] > CyGame().getGameTurn() - 30:
+		return False
+
+	return True
+
 def spellHireAdventurer(caster):
 	bPlayer = gc.getPlayer(caster.getOwner())
 	pCity = caster.plot().getPlotCity()

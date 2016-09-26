@@ -7762,7 +7762,7 @@
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
             <PyResult>spellHireAdventurer(pCaster)</PyResult>
-            <PyRequirement>reqBuilding(pCaster,'BUILDING_TAVERN','PROMOTION_DIRE')</PyRequirement>
+            <PyRequirement>reqHireAdventurer(pCaster)</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_HOPE</Sound>
             <HotKey></HotKey>
