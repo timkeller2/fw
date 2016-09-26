@@ -55043,13 +55043,13 @@
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
             <iSpaceProductionMod>0</iSpaceProductionMod>
-            <Tech>TECH_KNOWLEDGE_OF_THE_ETHER</Tech>
+            <Tech></Tech>
             <TechFlavors>
             </TechFlavors>
             <iTechPercent>0</iTechPercent>
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-            <PrereqTech>NONE</PrereqTech>
+            <PrereqTech>TECH_KNOWLEDGE_OF_THE_ETHER</PrereqTech>
             <UnitClass>NONE</UnitClass>
             <iNumFreeUnits>0</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
@@ -55150,7 +55150,7 @@
             <iTechPercent>0</iTechPercent>
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-            <PrereqTech>NONE</PrereqTech>
+            <PrereqTech>TECH_MEDICINE</PrereqTech>
             <UnitClass>NONE</UnitClass>
             <iNumFreeUnits>0</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
@@ -55162,7 +55162,7 @@
             </UnitCombatPromotions>
             <UnitClassPromotions>
             </UnitClassPromotions>
-            <BuildingClass>BUILDINGCLASS_INFIRMARY</BuildingClass>
+            <BuildingClass></BuildingClass>
             <iBuildingChange>0</iBuildingChange>
             <BuildingExtraYields>
             </BuildingExtraYields>
@@ -55224,7 +55224,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_HERBALIST_6</Type>
-            <Description>A Potion of Regeneration (with Sanitation)</Description>
+            <Description>A Potion of Regeneration</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -55245,13 +55245,13 @@
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
             <iSpaceProductionMod>0</iSpaceProductionMod>
-            <Tech>TECH_SANITATION</Tech>
+            <Tech></Tech>
             <TechFlavors>
             </TechFlavors>
             <iTechPercent>0</iTechPercent>
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-            <PrereqTech>NONE</PrereqTech>
+            <PrereqTech>TECH_SANITATION</PrereqTech>
             <UnitClass>NONE</UnitClass>
             <iNumFreeUnits>0</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
@@ -55851,13 +55851,13 @@
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
             <iSpaceProductionMod>0</iSpaceProductionMod>
-            <Tech>TECH_KNOWLEDGE_OF_THE_ETHER</Tech>
+            <Tech></Tech>
             <TechFlavors>
             </TechFlavors>
             <iTechPercent>0</iTechPercent>
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-            <PrereqTech>NONE</PrereqTech>
+            <PrereqTech>TECH_KNOWLEDGE_OF_THE_ETHER</PrereqTech>
             <UnitClass>NONE</UnitClass>
             <iNumFreeUnits>0</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
@@ -55869,7 +55869,7 @@
             </UnitCombatPromotions>
             <UnitClassPromotions>
             </UnitClassPromotions>
-            <BuildingClass>NONE</BuildingClass>
+            <BuildingClass></BuildingClass>
             <iBuildingChange>0</iBuildingChange>
             <BuildingExtraYields>
             </BuildingExtraYields>
@@ -55952,13 +55952,13 @@
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
             <iSpaceProductionMod>0</iSpaceProductionMod>
-            <Tech>TECH_KNOWLEDGE_OF_THE_ETHER</Tech>
+            <Tech></Tech>
             <TechFlavors>
             </TechFlavors>
             <iTechPercent>0</iTechPercent>
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-            <PrereqTech>NONE</PrereqTech>
+            <PrereqTech>TECH_KNOWLEDGE_OF_THE_ETHER</PrereqTech>
             <UnitClass>NONE</UnitClass>
             <iNumFreeUnits>0</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
@@ -55970,7 +55970,7 @@
             </UnitCombatPromotions>
             <UnitClassPromotions>
             </UnitClassPromotions>
-            <BuildingClass>NONE</BuildingClass>
+            <BuildingClass></BuildingClass>
             <iBuildingChange>0</iBuildingChange>
             <BuildingExtraYields>
             </BuildingExtraYields>
@@ -56053,13 +56053,13 @@
             <iFreeUnitSupport>0</iFreeUnitSupport>
             <iInflationMod>0</iInflationMod>
             <iSpaceProductionMod>0</iSpaceProductionMod>
-            <Tech>TECH_KNOWLEDGE_OF_THE_ETHER</Tech>
+            <Tech></Tech>
             <TechFlavors>
             </TechFlavors>
             <iTechPercent>0</iTechPercent>
             <iTechCostPercent>0</iTechCostPercent>
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
-            <PrereqTech>NONE</PrereqTech>
+            <PrereqTech>TECH_KNOWLEDGE_OF_THE_ETHER</PrereqTech>
             <UnitClass>NONE</UnitClass>
             <iNumFreeUnits>0</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
