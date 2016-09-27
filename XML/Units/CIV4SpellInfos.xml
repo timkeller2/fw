@@ -4589,7 +4589,7 @@
             <iMiscastChance>0</iMiscastChance>
             <PyRequirement>reqBecomeChief(pCaster)</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
-            <Sound>AS3D_SPELL_HEAL</Sound>
+            <Sound>AS3D_SPELL_CHEER</Sound>
             <bAltDown>0</bAltDown>
             <bShiftDown>0</bShiftDown>
             <bCtrlDown>0</bCtrlDown>
@@ -4600,8 +4600,8 @@
         <SpellInfo>
             <Type>SPELL_BECOME_GRAND_MASTER</Type>
             <Description>Become Grand Master</Description>
-            <Civilopedia>The most experienced unit of each class type may become a grand master if there are at least 12 units of like type existing in the world and the unit has attained level 6.</Civilopedia>
-            <Help>[ICON_BULLET]Make this unit a grand master of his class.</Help>
+            <Civilopedia></Civilopedia>
+            <Help>[ICON_BULLET]The most experienced unit of each class type may become a grand master if there are at least 12 units of like type existing in the world and the unit has attained level 6.</Help>
             <bAllowAI>1</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
             <bCausesWar>0</bCausesWar>
@@ -4636,8 +4636,8 @@
             <iMiscastChance>0</iMiscastChance>
             <PyResult>spellBecomeGrandMaster(pCaster)</PyResult>
             <PyRequirement>reqBecomeGrandMaster(pCaster)</PyRequirement>
-            <Effect>EFFECT_CREATION</Effect>
-            <Sound>AS3D_SPELL_HEAL</Sound>
+            <Effect>EFFECT_SWORDS_SPARKS</Effect>
+            <Sound>AS3D_SPELL_CHEER</Sound>
             <bAltDown>0</bAltDown>
             <bShiftDown>0</bShiftDown>
             <bCtrlDown>0</bCtrlDown>
