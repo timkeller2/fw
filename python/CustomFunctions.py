@@ -1533,6 +1533,7 @@ class CustomFunctions:
 			if strSetData['FinalWar'] > CyGame().getGameTurn() - 15:
 				return
 
+			# Computer players will declare war if a player gets too far ahead
 			if (CyGame().getPlayerScore(iPlayer) >= 1000 and CyGame().getSorenRandNum(iLead, "Go To War") > 750):
 				strSetData['FinalWar'] = CyGame().getGameTurn()
 				CyGameInstance.setScriptData(cPickle.dumps(strSetData))
@@ -1541,6 +1542,17 @@ class CustomFunctions:
 					eTeam = gc.getTeam(iTeam)
 					if iTeam != pPlayer.getTeam() and eTeam.isAlive() and not eTeam.isHuman() and eTeam.isAVassal() == False:
 						eTeam.declareWar(pTeam, false, WarPlanTypes.WARPLAN_TOTAL)
+
+			# Kill all enemies if a player scores over 2,000 and is twice the score of the nearest competitor
+			if CyGame().getPlayerScore(iPlayer) >= 2000 and iLead > CyGame().getPlayerScore(CyGame().getRankPlayer(1)) * 2:
+				pTeam = pPlayer.getTeam()
+				for iTeam in range(gc.getMAX_CIV_TEAMS()):
+					eTeam = gc.getTeam(iTeam)
+					if iTeam != pPlayer.getTeam() and eTeam.isAlive() and not eTeam.isHuman() and eTeam.isAVassal() == False:
+						for kPlayer in range(gc.getMAX_PLAYERS()):
+							dPlayer = gc.getPlayer(kPlayer)
+							dPlayer.killCities()
+							dPlayer.killUnits()
 
 	def iNoble(self, unit, includeArmy):
 		iNob = 0
@@ -3242,7 +3254,7 @@ class CustomFunctions:
 					iGiveXP = 10
 					if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iImprovement == gc.getInfoTypeForString('IMPROVEMENT_TOWER'):
 						iGiveXP = 7
-				if CyGame().getSorenRandNum(iGiveXP, "UnitExperience"+str(pUnit.getID())) == 1:
+				if pUnit.getUnitType() != gc.getInfoTypeForString('UNIT_HIDDEN_CACHE') and CyGame().getSorenRandNum(iGiveXP, "UnitExperience"+str(pUnit.getID())) == 1:
 					pUnit.changeExperience(1, -1, False, False, False)
 
 				## Giant Sea Serpents can have young
@@ -3523,6 +3535,9 @@ class CustomFunctions:
 						CyInterface().addCombatMessage(iPlayer,sMsg)
 
 					mPlayer.setScriptData(cPickle.dumps(sPD))
+					
+		## Score Victory?
+		self.finalWar()
 				
 
 	def doTurnKhazad(self, iPlayer):
