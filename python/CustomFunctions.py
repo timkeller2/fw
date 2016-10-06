@@ -2544,8 +2544,8 @@ class CustomFunctions:
 								CyInterface().addCombatMessage(iPlayer,sMsg)
 								break
 
-					## Automatic Academy Training
-					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ACADEMY')) > 0:
+					## Automatic Military Academy Training
+					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_MILITARY_ACADEMY')) > 0:
 						tUnit = -1
 						tXP = -1
 						pPlot = pCity.plot()

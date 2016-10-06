@@ -22908,7 +22908,7 @@
             </Buildings>
             <ForceBuildings>
                 <ForceBuilding>
-                    <BuildingType>BUILDING_COMMAND_POST</BuildingType>
+                    <BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
                     <bForceBuilding>1</bForceBuilding>
                 </ForceBuilding>
             </ForceBuildings>
