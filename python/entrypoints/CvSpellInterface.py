@@ -4892,7 +4892,7 @@ def spellVolley(caster,volleytype):
 				pBestUnit.doDamage(iDamage, iMax, caster, gc.getInfoTypeForString(sDamType), true)
 
 				## Magic Resistance and Immunity Cancels the Affects Below
-				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_IMMUNE')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE_TEMP')):
+				if pBestUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_IMMUNE')) or pBestUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE')) or pBestUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE_TEMP')):
 					continue
 
 				## Nature Mana can apply poison
