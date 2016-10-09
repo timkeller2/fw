@@ -299,10 +299,10 @@ class CustomFunctions:
 			for pUnit in py.getUnitList():
 				if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'):
 					iRange = self.retRange(caster,pUnit)
-					if pUnit.getLevel() <= iSearch + iSearch / 2 and iRange <= iSearch + iMult and mode == 9:
+					if pUnit.getLevel() <= iSearch and iRange <= iSearch + iMult and mode == 9:
 						if iRange > -1 and iRange < 99:
 							return True
-					if pUnit.getLevel() <= iSearch + iSearch / 2 and iRange > iSearch + iMult and mode == 8:
+					if pUnit.getLevel() <= iSearch and iRange > iSearch + iMult and mode == 8:
 						if iRange > -1 and iRange < 99:
 							return True
 			return False
