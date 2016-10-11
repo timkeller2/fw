@@ -4812,84 +4812,51 @@ def spellVolley(caster,volleytype):
 				point = pBestPlot.getPoint()
 				## Alteration Manas: Nature, Dimensional, Body, Enchantment
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NATURE1')):
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_NATURE_SUMMON'),point)
-					CyAudioGame().Play3DSound('AS3D_SPELL_BLOOM',point.x,point.y,point.z)
 					sDamType = 'DAMAGE_POISON'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT1')):
-					CyAudioGame().Play3DSound('AS3D_SPELL_HASTE',point.x,point.y,point.z)
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CHARM_PERSON'),point)
 					sDamType = 'DAMAGE_HOLY'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY1')):
-					CyAudioGame().Play3DSound('AS3D_SPELL_HASTE',point.x,point.y,point.z)
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_WIND_SWIRL'),point)
 					sDamType = 'DAMAGE_PHYSICAL'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIMENSIONAL1')):
-					CyAudioGame().Play3DSound('AS3D_SPELL_HASTE',point.x,point.y,point.z)
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_DISPEL_MAGIC'),point)
 					sDamType = 'DAMAGE_LIGHTNING'
 
 				## Elemental Manas: Air, Water, Earth, Fire
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH1')):
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_STONESKIN'),point)
-					CyAudioGame().Play3DSound('AS3D_SPELL_EARTHQUAKE',point.x,point.y,point.z)
 					sDamType = 'DAMAGE_PHYSICAL'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WATER1')):
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPRING'),point)
-					CyAudioGame().Play3DSound('AS3D_SPELL_SPRING',point.x,point.y,point.z)
 					sDamType = 'DAMAGE_COLD'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FIRE1')):
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_FIRE_SUMMON'),point)
-					CyAudioGame().Play3DSound('AS3D_SPELL_FIRE_ELEMENTAL',point.x,point.y,point.z)
 					sDamType = 'DAMAGE_FIRE'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_AIR1')):
 					sDamType = 'DAMAGE_LIGHTNING'
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_AIR_SUMMON'),point)
-					CyAudioGame().Play3DSound('AS3D_SPELL_LIGHTNING_ELEMENTAL',point.x,point.y,point.z)
 
 				## Divination Manas: Law, Life, Sun, Spirit, Mind
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LAW1')):
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPIRITUAL_HAMMER'),point)
-					CyAudioGame().Play3DSound('AS3D_SPELL_ENCHANTMENT',point.x,point.y,point.z)
 					sDamType = 'DAMAGE_HOLY'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE1')):
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_BLESS'),point)
-					CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
 					sDamType = 'DAMAGE_HOLY'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN1')):
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SCORCH'),point)
-					CyAudioGame().Play3DSound('AS3D_SPELL_DEFILE',point.x,point.y,point.z)
 					sDamType = 'DAMAGE_FIRE'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT1')):
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CREATION'),point)
-					CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
 					sDamType = 'DAMAGE_HOLY'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND1')):
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL1'),point)
-					CyAudioGame().Play3DSound('AS3D_SPELL_CHARM_PERSON',point.x,point.y,point.z)
 					sDamType = 'DAMAGE_UNHOLY'
 
 				## Necromancy Manas: Death, Entropy, Chaos, Shadow
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH1')):
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_PORTAL_DEATH'),point)
-					CyAudioGame().Play3DSound('AS3D_SPELL_DEFILE',point.x,point.y,point.z)
 					sDamType = 'DAMAGE_DEATH'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHAOS1')):
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_ENCHANTED_BLADE'),point)
-					CyAudioGame().Play3DSound('AS3D_SPELL_HASTE',point.x,point.y,point.z)
 					sDamType = 'DAMAGE_PHYSICAL'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY1')):
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SACRIFICE'),point)
-					CyAudioGame().Play3DSound('AS3D_SPELL_SACRIFICE',point.x,point.y,point.z)
 					sDamType = 'DAMAGE_UNHOLY'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SHADOW1')):
-					CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SMOKECLOUD'),point)
-					CyAudioGame().Play3DSound('AS3D_SPELL_KRAKEN',point.x,point.y,point.z)
 					sDamType = 'DAMAGE_COLD'
 				else: 
 					sDamType = 'DAMAGE_LIGHTNING'
-					CyAudioGame().Play2DSound('AS2D_UNIT_RISES')
 
 				pBestUnit.doDamage(iDamage, iMax, caster, gc.getInfoTypeForString(sDamType), true)
+				CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPIRITUAL_HAMMER'),point)
+				CyAudioGame().Play3DSound('AS3D_SPELL_FIREBALL',point.x,point.y,point.z)
 
 				## Magic Resistance and Immunity Cancels the Affects Below
 				if pBestUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_IMMUNE')) or pBestUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE')) or pBestUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE_TEMP')):
@@ -4909,8 +4876,10 @@ def spellVolley(caster,volleytype):
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
 						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Poisoned.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
+						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_NATURE_SUMMON'),point)
+						CyAudioGame().Play3DSound('AS3D_SPELL_BLOOM',point.x,point.y,point.z)
 				
-				## Body Mana can apply withered
+				## Body Mana can apply slowed
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY1')) and pBestUnit.isAlive():
 					iChance = 1
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY2')):
@@ -4924,6 +4893,8 @@ def spellVolley(caster,volleytype):
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
 						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Slow.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
+						CyAudioGame().Play3DSound('AS3D_SPELL_HASTE',point.x,point.y,point.z)
+						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_WIND_SWIRL'),point)
 				
 				## Earth Mana can apply rusted
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH1')):
@@ -4939,6 +4910,8 @@ def spellVolley(caster,volleytype):
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
 						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Rusted.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
+						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_STONESKIN'),point)
+						CyAudioGame().Play3DSound('AS3D_SPELL_CONTAGION',point.x,point.y,point.z)
 				
 				## Entropy Mana can apply enervated
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY1')):
@@ -4954,6 +4927,8 @@ def spellVolley(caster,volleytype):
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
 						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Withered.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
+						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SACRIFICE'),point)
+						CyAudioGame().Play3DSound('AS3D_SPELL_SACRIFICE',point.x,point.y,point.z)
 				
 				## Death Mana can apply diseased or plagued
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH1')) and pBestUnit.isAlive():
@@ -4969,6 +4944,8 @@ def spellVolley(caster,volleytype):
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
 						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Diseased.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
+						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_PORTAL_DEATH'),point)
+						CyAudioGame().Play3DSound('AS3D_SPELL_DEFILE',point.x,point.y,point.z)
 					elif CyGame().getSorenRandNum(20, "Plagued") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), True)
 						sMsg = pBestUnit.getName() + ' has been plagued...'
@@ -4976,6 +4953,8 @@ def spellVolley(caster,volleytype):
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
 						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Plagued.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
+						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_PORTAL_DEATH'),point)
+						CyAudioGame().Play3DSound('AS3D_SPELL_DEFILE',point.x,point.y,point.z)
 				
 				## Sun, Spirit and Life Mana can apply blinded
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN1')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE1')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT1')):
@@ -5005,6 +4984,8 @@ def spellVolley(caster,volleytype):
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
 						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Sun1.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
+						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SCORCH'),point)
+						CyAudioGame().Play3DSound('AS3D_SPELL_DEFILE',point.x,point.y,point.z)
 				
 				## Enchantment, Mind Mana can apply charmed
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT1')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND1')):
@@ -5028,6 +5009,8 @@ def spellVolley(caster,volleytype):
 						CyInterface().addCombatMessage(caster.getOwner(),sMsg )
 						CyInterface().addMessage(pBestUnit.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Charmed.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
+						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPELL1'),point)
+						CyAudioGame().Play3DSound('AS3D_SPELL_CHARM_PERSON',point.x,point.y,point.z)
 				
 			if volleytype == 'archer':
 				pBestUnit.doDamage(iDamage, iMax, caster, gc.getInfoTypeForString('DAMAGE_PHYSICAL'), true)
