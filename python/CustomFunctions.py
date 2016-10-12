@@ -1525,8 +1525,8 @@ class CustomFunctions:
 		pPlayer = gc.getPlayer(iPlayer)
 		iLead = CyGame().getPlayerScore(iPlayer) - CyGame().getPlayerScore(CyGame().getRankPlayer(1))
 		if (CyGame().getPlayerScore(iPlayer) >= 650 + CyGame().getPlayerScore(CyGame().getRankPlayer(1)) and (CyGame().getSorenRandNum(6, "Warn Leading Player") == 1 or CyGame().getPlayerScore(iPlayer) >= 2 * CyGame().getPlayerScore(CyGame().getRankPlayer(1)) )):
-			iEvent = CvUtil.findInfoTypeNum(gc.getEventTriggerInfo, gc.getNumEventTriggerInfos(),'EVENTTRIGGER_WARN_ABOUT_TO_WIN')
-			triggerData = pPlayer.initTriggeredData(iEvent, true, -1, -1, -1, iPlayer, -1, -1, -1, -1, -1)
+			sMsg = pPlayer.getName() + ' is pulling ahead.  There is talk of war in the taverns of the world...'
+			self.msgAll(sMsg,pPlayer.getCapitalCity().getX(), pPlayer.getCapitalCity().getY(),iPlayer)
 
 			# Final War started no more often than every 15 turns
 			strSetData = cPickle.loads(CyGameInstance.getScriptData())
