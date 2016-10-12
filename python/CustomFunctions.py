@@ -2973,7 +2973,7 @@ class CustomFunctions:
 							break
 							
 				## Fortified Mages Auto-Buff if they can
-				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING1')) and pUnit.getFortifyTurns() > 1 and not pUnit.isHasCasted():
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING1')) and pUnit.getFortifyTurns() > 0 and not pUnit.isHasCasted():
 					py = PyPlayer(pUnit.getOwner())
 					iABR = self.iAutoBuffRange(pUnit)
 					iBuffs = pUnit.getLevel()
@@ -3037,7 +3037,7 @@ class CustomFunctions:
 										iBestRange = iRange
 										pBestUnit = tUnit
 							if pBestUnit != -1:
-								iBuffs -= 1
+								iBuffs -= 2
 								if iABR > iBestRange:
 									pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LOYALTY'), True)
 									if pPlayer.isHuman():
@@ -3068,6 +3068,28 @@ class CustomFunctions:
 										point = pBestUnit.plot().getPoint()
 										CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
 										CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_CREATION'),point)
+
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT3')) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING3')) and iBuffs > 0:
+							pBestUnit = -1
+							iBestRange = iABR
+							for tUnit in py.getUnitList():
+								if tUnit.isAlive() and tUnit.isPromotionValid(gc.getInfoTypeForString('PROMOTION_SPIRIT_GUIDE')) and not tUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT_GUIDE')):
+									iRange = int( math.fabs(pUnit.getX()-tUnit.getX()) )
+									if iRange < int( math.fabs(pUnit.getY()-tUnit.getY()) ):
+										iRange = int( math.fabs(pUnit.getY()-tUnit.getY()) )
+									if iRange < iBestRange:
+										iBestRange = iRange
+										pBestUnit = tUnit
+							if pBestUnit != -1:
+								iBuffs -= 4
+								if iABR > iBestRange:
+									pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT_GUIDE'), True)
+									if pPlayer.isHuman():
+										CyInterface().addMessage(pBestUnit.getOwner(),false,25,'Your '+pBestUnit.getName()+' gains spiritual help from your '+pUnit.getName()+'!','',1,'Art/Interface/Buttons/Units/mage.dds',ColorTypes(8),pBestUnit.getX(),pBestUnit.getY(),True,True)
+										CyInterface().addCombatMessage(pBestUnit.getOwner(),'Your '+pBestUnit.getName()+' gains spiritual help from your '+pUnit.getName()+'!')
+										point = pBestUnit.plot().getPoint()
+										CyAudioGame().Play3DSound('AS3D_SPELL_BLESS',point.x,point.y,point.z)
+										CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_SPIRITUAL_HAMMER'),point)
 
 						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT2')) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING2')) and iBuffs > 0:
 							pBestUnit = -1

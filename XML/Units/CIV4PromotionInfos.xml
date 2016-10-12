@@ -872,7 +872,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING3</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING3</Description>
-            <Help>[ICON_BULLET]Auto buff if fortified: Valor. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET]+40 Max Spellcaster XP</Help>
+            <Help>[ICON_BULLET]Auto buff if fortified: Valor and Spirit Guide. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET]+40 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling3.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
