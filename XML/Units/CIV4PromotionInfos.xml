@@ -20544,7 +20544,7 @@
             <iCombatPercent>5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough1.dds</Button>
             <bMutation>0</bMutation>
-            <iCombatPercentDefense>5</iCombatPercentDefense>
+            <iCombatPercentDefense>7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <PromotionNextLevel>PROMOTION_TOUGH2</PromotionNextLevel>
         </PromotionInfo>
@@ -20555,7 +20555,7 @@
             <iCombatPercent>5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough2.dds</Button>
             <bMutation>0</bMutation>
-            <iCombatPercentDefense>5</iCombatPercentDefense>
+            <iCombatPercentDefense>7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <PromotionNextLevel>PROMOTION_TOUGH3</PromotionNextLevel>
         </PromotionInfo>
@@ -20566,7 +20566,7 @@
             <iCombatPercent>5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough3.dds</Button>
             <bMutation>0</bMutation>
-            <iCombatPercentDefense>5</iCombatPercentDefense>
+            <iCombatPercentDefense>7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <PromotionNextLevel>PROMOTION_TOUGH4</PromotionNextLevel>
         </PromotionInfo>
@@ -20577,7 +20577,7 @@
             <iCombatPercent>5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough4.dds</Button>
             <bMutation>0</bMutation>
-            <iCombatPercentDefense>5</iCombatPercentDefense>
+            <iCombatPercentDefense>7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <PromotionNextLevel>PROMOTION_TOUGH5</PromotionNextLevel>
         </PromotionInfo>
@@ -20588,7 +20588,7 @@
             <iCombatPercent>5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough5.dds</Button>
             <bMutation>0</bMutation>
-            <iCombatPercentDefense>5</iCombatPercentDefense>
+            <iCombatPercentDefense>7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
@@ -20598,7 +20598,7 @@
             <iCombatPercent>-5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy1.dds</Button>
             <bMutation>0</bMutation>
-            <iCombatPercentDefense>-5</iCombatPercentDefense>
+            <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>5</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
@@ -20611,7 +20611,7 @@
             <iCombatPercent>-5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy2.dds</Button>
             <bMutation>0</bMutation>
-            <iCombatPercentDefense>-5</iCombatPercentDefense>
+            <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>5</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
@@ -20624,7 +20624,7 @@
             <iCombatPercent>-5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy3.dds</Button>
             <bMutation>0</bMutation>
-            <iCombatPercentDefense>-5</iCombatPercentDefense>
+            <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>5</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
@@ -20637,7 +20637,7 @@
             <iCombatPercent>-5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy4.dds</Button>
             <bMutation>0</bMutation>
-            <iCombatPercentDefense>-5</iCombatPercentDefense>
+            <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>5</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
@@ -20650,7 +20650,7 @@
             <iCombatPercent>-5</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy5.dds</Button>
             <bMutation>0</bMutation>
-            <iCombatPercentDefense>-5</iCombatPercentDefense>
+            <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>5</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
