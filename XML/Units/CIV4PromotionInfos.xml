@@ -20541,7 +20541,7 @@
             <Type>PROMOTION_TOUGH1</Type>
             <Description>Tough I</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>5</iCombatPercent>
+            <iCombatPercent>7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough1.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>7</iCombatPercentDefense>
@@ -20552,7 +20552,7 @@
             <Type>PROMOTION_TOUGH2</Type>
             <Description>Tough II</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>5</iCombatPercent>
+            <iCombatPercent>7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough2.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>7</iCombatPercentDefense>
@@ -20563,7 +20563,7 @@
             <Type>PROMOTION_TOUGH3</Type>
             <Description>Tough III</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>5</iCombatPercent>
+            <iCombatPercent>7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough3.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>7</iCombatPercentDefense>
@@ -20574,7 +20574,7 @@
             <Type>PROMOTION_TOUGH4</Type>
             <Description>Tough IV</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>5</iCombatPercent>
+            <iCombatPercent>7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough4.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>7</iCombatPercentDefense>
@@ -20585,7 +20585,7 @@
             <Type>PROMOTION_TOUGH5</Type>
             <Description>Tough V</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>5</iCombatPercent>
+            <iCombatPercent>7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/tough5.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>7</iCombatPercentDefense>
@@ -20595,7 +20595,7 @@
             <Type>PROMOTION_WIMPY1</Type>
             <Description>Wimpy I</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>-5</iCombatPercent>
+            <iCombatPercent>-7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy1.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
@@ -20608,7 +20608,7 @@
             <Type>PROMOTION_WIMPY2</Type>
             <Description>Wimpy II</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>-5</iCombatPercent>
+            <iCombatPercent>-7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy2.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
@@ -20621,7 +20621,7 @@
             <Type>PROMOTION_WIMPY3</Type>
             <Description>Wimpy III</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>-5</iCombatPercent>
+            <iCombatPercent>-7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy3.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
@@ -20634,7 +20634,7 @@
             <Type>PROMOTION_WIMPY4</Type>
             <Description>Wimpy IV</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>-5</iCombatPercent>
+            <iCombatPercent>-7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy4.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
@@ -20647,7 +20647,7 @@
             <Type>PROMOTION_WIMPY5</Type>
             <Description>Wimpy V</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>-5</iCombatPercent>
+            <iCombatPercent>-7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy5.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
