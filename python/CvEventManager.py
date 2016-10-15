@@ -1677,7 +1677,11 @@ class CvEventManager:
 						elif unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MEDIC1')):
 							iXP = iXP * .5
 						else:
-							iXP = iXP * .4
+							iCombatDisciple = gc.getInfoTypeForString('UNITCOMBAT_DISCIPLE')
+							if unit.getUnitCombatType() == iCombatDisciple:
+								iXP = iXP * .5
+							else:
+								iXP = iXP * .4
 						iXP = int(iXP)	
 						pUnit.changeExperience(iXP, -1, false, false, false)
 						unit.changeExperience(iXP * -1, -1, false, false, false)

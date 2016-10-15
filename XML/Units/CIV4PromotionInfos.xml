@@ -4331,8 +4331,7 @@
             <Description>TXT_KEY_PROMOTION_HORSELORD</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
-            <iMovesChange>1</iMovesChange>
-            <iWithdrawalChange>10</iWithdrawalChange>
+            <iCombatPercent>20</iCombatPercent>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
@@ -4340,6 +4339,7 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Horselord.dds</Button>
+            <iCombatPercentDefense>20</iCombatPercentDefense>
             <bValidate>1</bValidate>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
