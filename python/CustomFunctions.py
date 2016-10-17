@@ -2561,7 +2561,7 @@ class CustomFunctions:
 							CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_TRAIN',1,tUnit.getButton(),ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 						else:
-							sMsg = 'The ' + pCity.getName() + ' Academy has an opening for a new student... '
+							sMsg = 'The ' + pCity.getName() + ' Military Academy has an opening for a new student... '
 							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Buildings/Academy.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 

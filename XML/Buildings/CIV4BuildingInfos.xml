@@ -43053,10 +43053,6 @@
             <UnitCombatFreeExperiences>
             </UnitCombatFreeExperiences>
             <DomainFreeExperiences>
-                <DomainFreeExperience>
-                    <DomainType>DOMAIN_LAND</DomainType>
-                    <iExperience>2</iExperience>
-                </DomainFreeExperience>
             </DomainFreeExperiences>
             <DomainProductionModifiers>
             </DomainProductionModifiers>
