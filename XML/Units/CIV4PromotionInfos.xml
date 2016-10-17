@@ -4321,9 +4321,8 @@
             <Type>PROMOTION_HOMELAND</Type>
             <Description>TXT_KEY_PROMOTION_HOMELAND</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iWithdrawalChange>10</iWithdrawalChange>
             <Button>Art/Interface/Buttons/Promotions/Homeland.dds</Button>
-            <iCombatPercentInBorders>10</iCombatPercentInBorders>
+            <iCombatPercentInBorders>20</iCombatPercentInBorders>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
