@@ -15777,7 +15777,7 @@
             <iCombatPercentDefense>10</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
-            <iExpireChance>25</iExpireChance>
+            <iExpireChance>100</iExpireChance>
             <iExtraCombatStr>0</iExtraCombatStr>
             <iExtraCombatDefense>0</iExtraCombatDefense>
             <iFreeXPPerTurn>0</iFreeXPPerTurn>
@@ -15801,8 +15801,8 @@
             <PyPerTurn></PyPerTurn>
             <iGroupSize>0</iGroupSize>
             <UnitArtStyleType>NONE</UnitArtStyleType>
-            <PromotionCombatType>PROMOTION_DEMON</PromotionCombatType>
-            <iPromotionCombatMod>20</iPromotionCombatMod>
+            <PromotionCombatType>PROMOTION_UNDEAD</PromotionCombatType>
+            <iPromotionCombatMod>10</iPromotionCombatMod>
             <DamageTypeCombats>
             </DamageTypeCombats>
             <BonusAffinities>
