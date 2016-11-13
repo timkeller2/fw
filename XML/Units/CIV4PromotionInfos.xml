@@ -3553,7 +3553,7 @@
             <Type>PROMOTION_FORMATION</Type>
             <Description>TXT_KEY_PROMOTION_FORMATION</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <PromotionPrereq>PROMOTION_COMBAT2</PromotionPrereq>
+            <PromotionPrereq>PROMOTION_COMBAT1</PromotionPrereq>
             <UnitCombatMods>
                 <UnitCombatMod>
                     <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
