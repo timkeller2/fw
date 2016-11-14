@@ -8240,9 +8240,9 @@
         <SpellInfo>
             <Type>SPELL_FAST_START_XP</Type>
             <Description>Fast Start Experience</Description>
-            <Civilopedia>On the first turn, if the city size is greater than the xp of the unit you may purchase xp for units.  The cost is 10gp per xp for the first 10, 20gp for each of the next 10 and so on.</Civilopedia>
+            <Civilopedia>On the first turn, if the city size is greater than the xp of the unit you may purchase xp for units.  The cost is 5gp per xp for the first 5, 10gp for each of the next 5 and so on.</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Purchase XP for fast start units! 10gp per xp below 10, 20gp below 20, 30gp  below 30, etc...</Help>
+            <Help>[ICON_BULLET]Purchase XP for fast start units! 5gp per xp below 5, 10gp below 10, 15gp  below 15, etc...</Help>
             <PromotionPrereq1>NONE</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>

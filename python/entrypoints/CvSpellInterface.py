@@ -5305,10 +5305,10 @@ def reqStartingXP(caster):
 	if CyGame().getGameTurn() != 1:
 		return False
 
-	if pCity.getPopulation() < caster.getExperience():
-		return False
+	# if pCity.getPopulation() < caster.getExperience():
+		# return False
 
-	if pPlayer.getGold() < 10 * ( 1 + ( caster.getExperience() / 10 ) ):
+	if pPlayer.getGold() < 5 * ( 1 + ( caster.getExperience() / 5 ) ):
 		return False
 
 	return True
@@ -5317,7 +5317,7 @@ def spellStartingXP(caster):
 	pCity = caster.plot().getPlotCity()
 	pPlayer = gc.getPlayer(caster.getOwner())
 
-	iXPCost = 10 * ( 1 + ( caster.getExperience() / 10 ) )
+	iXPCost = 5 * ( 1 + ( caster.getExperience() / 5 ) )
 
 	caster.changeExperience( 1, -1, False, False, False)
 	pPlayer.changeGold( iXPCost * -1 )
