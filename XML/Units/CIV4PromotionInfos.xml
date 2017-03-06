@@ -5741,7 +5741,7 @@
             <Type>PROMOTION_MOBILITY1</Type>
             <Description>TXT_KEY_PROMOTION_MOBILITY1</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <TechPrereq>TECH_HORSEBACK_RIDING</TechPrereq>
+            <TechPrereq>TECH_EXPLORATION</TechPrereq>
             <iMovesChange>1</iMovesChange>
             <UnitCombats>
                 <UnitCombat>
@@ -6215,9 +6215,15 @@
             <Description>TXT_KEY_EQUIPMENT_ORTHUSS_AXE</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
+            <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+                    <iUnitCombatMod>40</iUnitCombatMod>
+                </UnitCombatMod>
+            </UnitCombatMods>
             <Button>Art/Interface/Buttons/Equipment/Orthussaxe.dds</Button>
             <bEquipment>1</bEquipment>
-            <iExtraCombatStr>2</iExtraCombatStr>
+            <iExtraCombatStr>1</iExtraCombatStr>
             <iExtraCombatDefense>0</iExtraCombatDefense>
         </PromotionInfo>
         <PromotionInfo>
