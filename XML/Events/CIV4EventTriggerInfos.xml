@@ -18118,7 +18118,7 @@
             <bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
             <Civic>NONE</Civic>
             <iMinTreasury>0</iMinTreasury>
-            <iMinPopulation>0</iMinPopulation>
+            <iMinPopulation>30</iMinPopulation>
             <iMaxPopulation>0</iMaxPopulation>
             <iMinMapLandmass>0</iMinMapLandmass>
             <iMinOurLandmass>0</iMinOurLandmass>
@@ -18176,7 +18176,7 @@
             </AndPreReqs>
             <ObsoleteTechs>
             </ObsoleteTechs>
-            <bRecurring>1</bRecurring>
+            <bRecurring>0</bRecurring>
             <bTeam>0</bTeam>
             <bGlobal>0</bGlobal>
             <bPickPlayer>0</bPickPlayer>
@@ -18516,7 +18516,7 @@
             <bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
             <Civic>NONE</Civic>
             <iMinTreasury>0</iMinTreasury>
-            <iMinPopulation>0</iMinPopulation>
+            <iMinPopulation>30</iMinPopulation>
             <iMaxPopulation>0</iMaxPopulation>
             <iMinMapLandmass>0</iMinMapLandmass>
             <iMinOurLandmass>0</iMinOurLandmass>
@@ -18574,7 +18574,7 @@
             </AndPreReqs>
             <ObsoleteTechs>
             </ObsoleteTechs>
-            <bRecurring>1</bRecurring>
+            <bRecurring>0</bRecurring>
             <bTeam>0</bTeam>
             <bGlobal>0</bGlobal>
             <bPickPlayer>0</bPickPlayer>
@@ -27905,7 +27905,7 @@
             <bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
             <Civic>NONE</Civic>
             <iMinTreasury>0</iMinTreasury>
-            <iMinPopulation>0</iMinPopulation>
+            <iMinPopulation>30</iMinPopulation>
             <iMaxPopulation>0</iMaxPopulation>
             <iMinMapLandmass>0</iMinMapLandmass>
             <iMinOurLandmass>0</iMinOurLandmass>
