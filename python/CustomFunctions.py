@@ -2364,6 +2364,14 @@ class CustomFunctions:
 		if self.bTechExist('TECH_CORRUPTION_OF_SPIRIT') and CyGame().getSorenRandNum(4+iAdj, "EvilStuff") == 1:
 			self.addBarbUnit(gc.getInfoTypeForString(self.sEvilUnit()))
 
+		# Nobility Building Support
+		iEst1 = {}
+		iEst2 = {}
+		iEst3 = {}
+		iGov1 = {}
+		iGov2 = {}
+		iGov3 = {}
+			
 		# Crowded squares are crowded - FW
 		for i in range (CyMap().numPlots()):
 			crowdMessage = True
@@ -2376,6 +2384,32 @@ class CustomFunctions:
 				pUnit = pPlot.getUnit(i)
 				pPlayer = gc.getPlayer(pUnit.getOwner())
 				if pPlayer.isHuman():
+					# Count Nobility Building Promotions
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES1')):
+						if pUnit.getOwner() not in iEst1:
+							iEst1[pUnit.getOwner()] = 0
+						iEst1[pUnit.getOwner()] += 1
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES2')):
+						if pUnit.getOwner() not in iEst2:
+							iEst2[pUnit.getOwner()] = 0
+						iEst2[pUnit.getOwner()] += 1
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES3')):
+						if pUnit.getOwner() not in iEst3:
+							iEst3[pUnit.getOwner()] = 0
+						iEst3[pUnit.getOwner()] += 1
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR1')):
+						if pUnit.getOwner() not in iGov1:
+							iGov1[pUnit.getOwner()] = 0
+						iGov1[pUnit.getOwner()] += 1
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR2')):
+						if pUnit.getOwner() not in iGov2:
+							iGov2[pUnit.getOwner()] = 0
+						iGov2[pUnit.getOwner()] += 1
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR3')):
+						if pUnit.getOwner() not in iGov3:
+							iGov3[pUnit.getOwner()] = 0
+						iGov3[pUnit.getOwner()] += 1
+					
 					# Crowding damage
 					if pPlot.getNumUnits() > roomFor:
 						# Check for nobility and computer units
@@ -2608,53 +2642,45 @@ class CustomFunctions:
 					else:
 						sCityInfo['TR3'] = 0
 						
-					bRemoveIt = True
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE1')) > 0:
-						xPlot = CyMap().plot(pCity.getX(),pCity.getY())
-						for ii in range (xPlot.getNumUnits()):
-							xUnit = xPlot.getUnit(ii)
-							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES1')):
-								bRemoveIt = False
-						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 1") < 20:
+						if pCity.getOwner() not in iEst1:
+							iEst1[pCity.getOwner()] = 0
+						if iEst1[pCity.getOwner()] > 0:
+							iEst1[pCity.getOwner()] -= 1
+						else:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE1'), 0)
 							sMsg = 'An estate falls to ruin in ' + pCity.getName() + '...'
 							CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
-					bRemoveIt = True
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE2')) > 0:
-						xPlot = CyMap().plot(pCity.getX(),pCity.getY())
-						for ii in range (xPlot.getNumUnits()):
-							xUnit = xPlot.getUnit(ii)
-							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES2')):
-								bRemoveIt = False
-						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 2") < 20:
+						if pCity.getOwner() not in iEst2:
+							iEst2[pCity.getOwner()] = 0
+						if iEst2[pCity.getOwner()] > 0:
+							iEst2[pCity.getOwner()] -= 1
+						else:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE2'), 0)
 							sMsg = 'Extensive grounds grow up with thorns and thistles in ' + pCity.getName() + '...'
 							CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
-					bRemoveIt = True
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE3')) > 0:
-						xPlot = CyMap().plot(pCity.getX(),pCity.getY())
-						for ii in range (xPlot.getNumUnits()):
-							xUnit = xPlot.getUnit(ii)
-							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES3')):
-								bRemoveIt = False
-						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 3") < 20:
+						if pCity.getOwner() not in iEst3:
+							iEst3[pCity.getOwner()] = 0
+						if iEst3[pCity.getOwner()] > 0:
+							iEst3[pCity.getOwner()] -= 1
+						else:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE3'), 0)
 							sMsg = 'A banquet hall falls quiet in ' + pCity.getName() + '...'
 							CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 							CyInterface().addCombatMessage(iPlayer,sMsg)
 							
-					bRemoveIt = True
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV1')) > 0:
-						xPlot = CyMap().plot(pCity.getX(),pCity.getY())
-						for ii in range (xPlot.getNumUnits()):
-							xUnit = xPlot.getUnit(ii)
-							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR1')):
-								bRemoveIt = False
-						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 4") < 20:
+						if pCity.getOwner() not in iGov1:
+							iGov1[pCity.getOwner()] = 0
+						if iGov1[pCity.getOwner()] > 0:
+							iGov1[pCity.getOwner()] -= 1
+						else:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV1'), 0)
 							sMsg = 'A manor falls to ruin in ' + pCity.getName() + '...'
 							CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
@@ -2662,12 +2688,11 @@ class CustomFunctions:
 							
 					bRemoveIt = True
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV2')) > 0:
-						xPlot = CyMap().plot(pCity.getX(),pCity.getY())
-						for ii in range (xPlot.getNumUnits()):
-							xUnit = xPlot.getUnit(ii)
-							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR2')):
-								bRemoveIt = False
-						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 5") < 20:
+						if pCity.getOwner() not in iGov2:
+							iGov2[pCity.getOwner()] = 0
+						if iGov2[pCity.getOwner()] > 0:
+							iGov2[pCity.getOwner()] -= 1
+						else:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV2'), 0)
 							sMsg = 'An abby ceases to run in ' + pCity.getName() + '...'
 							CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
@@ -2675,12 +2700,11 @@ class CustomFunctions:
 							
 					bRemoveIt = True
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV3')) > 0:
-						xPlot = CyMap().plot(pCity.getX(),pCity.getY())
-						for ii in range (xPlot.getNumUnits()):
-							xUnit = xPlot.getUnit(ii)
-							if xUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOVERNOR3')):
-								bRemoveIt = False
-						if bRemoveIt and CyGame().getSorenRandNum(100, "Lose Building 6") < 20:
+						if pCity.getOwner() not in iGov3:
+							iGov3[pCity.getOwner()] = 0
+						if iGov3[pCity.getOwner()] > 0:
+							iGov3[pCity.getOwner()] -= 1
+						else:
 							pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV3'), 0)
 							sMsg = 'A governor workshop ceases operation in ' + pCity.getName() + '...'
 							CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
