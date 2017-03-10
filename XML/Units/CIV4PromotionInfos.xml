@@ -20663,7 +20663,7 @@
         <PromotionInfo>
             <Type>PROMOTION_PROLIFIC</Type>
             <Description>Prolific</Description>
-            <Help>[ICON_BULLET]Increases the chance of having young by 1% per turn (normally 1/3% per (level + 1/5 heal rate - units in tile) if fully fortified and not in a city).  [NEWLINE][ICON_BULLET]Adds Combat I to new young. [NEWLINE][ICON_BULLET]Requires level 4.</Help>
+            <Help>[ICON_BULLET]Increases the chance of having young by 1% per turn (normally 1/3% per (level above 3 + 1/5 heal rate - units in tile) if not in a city).  [NEWLINE][ICON_BULLET]Adds Combat I to new young. [NEWLINE][ICON_BULLET]Requires level 4.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <UnitCombats>
                 <UnitCombat>
