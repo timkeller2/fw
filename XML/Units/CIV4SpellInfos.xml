@@ -5044,7 +5044,7 @@
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
             <PyResult>spellImmoblize(pCaster,3)</PyResult>
-            <PyRequirement></PyRequirement>
+            <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_ESTATE1','Est1')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
             <HotKey></HotKey>
@@ -5118,7 +5118,7 @@
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
             <PyResult>spellImmoblize(pCaster,3)</PyResult>
-            <PyRequirement></PyRequirement>
+            <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_ESTATE2','Est2')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
             <HotKey></HotKey>
@@ -5192,7 +5192,7 @@
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
             <PyResult>spellImmoblize(pCaster,3)</PyResult>
-            <PyRequirement></PyRequirement>
+            <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_ESTATE3','Est3')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
             <HotKey></HotKey>
@@ -5266,7 +5266,7 @@
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
             <PyResult>spellImmoblize(pCaster,3)</PyResult>
-            <PyRequirement></PyRequirement>
+            <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_GOV1','Gov1')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
             <HotKey></HotKey>
@@ -5340,7 +5340,7 @@
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
             <PyResult>spellImmoblize(pCaster,3)</PyResult>
-            <PyRequirement></PyRequirement>
+            <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_GOV2','Gov2')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
             <HotKey></HotKey>
@@ -5414,7 +5414,7 @@
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
             <PyResult>spellImmoblize(pCaster,3)</PyResult>
-            <PyRequirement></PyRequirement>
+            <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_GOV3','Gov3')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
             <HotKey></HotKey>

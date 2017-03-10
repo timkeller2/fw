@@ -350,6 +350,14 @@ def postCombatWolfRider(pCaster, pOpponent):
 def retCombat(unit):
 	return cf.retCombat(unit)
 
+def reqNobleBuilding(caster,building,mem):
+	pPlot = caster.plot()
+	pCity = pPlot.getPlotCity()
+	pPlayer = gc.getPlayer(caster.getOwner())
+	if pPlayer.countNumBuildings(gc.getInfoTypeForString(building)) >= cf.getObjectInt(pPlayer,mem):
+		return False
+	return True
+	
 def reqAddToFleshGolem(caster):
 	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMORTAL')):
 		return false
