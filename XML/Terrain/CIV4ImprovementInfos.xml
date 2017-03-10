@@ -1527,7 +1527,7 @@
             <bUnique>0</bUnique>
             <iAppearanceProbability>0</iAppearanceProbability>
             <iHealRateChange>5</iHealRateChange>
-            <iRange>1</iRange>
+            <iRange>2</iRange>
             <iRangeDefenseModifier>20</iRangeDefenseModifier>
             <iVisibilityChange>1</iVisibilityChange>
             <BonusConvert>NONE</BonusConvert>
@@ -5853,8 +5853,8 @@
             <bUnique>0</bUnique>
             <iAppearanceProbability>60</iAppearanceProbability>
             <iHealRateChange>0</iHealRateChange>
-            <iRange>0</iRange>
-            <iRangeDefenseModifier>0</iRangeDefenseModifier>
+            <iRange>2</iRange>
+            <iRangeDefenseModifier>15</iRangeDefenseModifier>
             <iVisibilityChange>2</iVisibilityChange>
             <BonusConvert>NONE</BonusConvert>
             <FeatureUpgrade>NONE</FeatureUpgrade>
