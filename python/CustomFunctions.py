@@ -73,15 +73,15 @@ class CustomFunctions:
 		iChance = ( ( self.iNoble(caster,1) + 1 ) * 100 ) / iDiv
 		if CyGame().getSorenRandNum(self.iNoble(caster,1)+1, "Judge") >= CyGame().getSorenRandNum(sInfo['JUDGE']+1, "Problem"):
 			## Success!
-			iGain = sInfo['JUDGE'] * 5 + 25
+			iGain = sInfo['JUDGE'] * 3 + 5
 			if caster.getOwner() == pCity.getOwner():
 				iGain = iGain * 2
 			iXP = sInfo['JUDGE'] / 2 + 1
 			caster.changeExperience( iXP , -1, False, False, False )
 			CyInterface().addMessage(caster.getOwner(),False,25,'Success! ('+str(iChance)+'% chance) '+caster.getName() + ' resolved a ' + self.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!  You gain '+str(iGain)+' gold pieces and '+str(iXP)+'xp!','AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 			CyInterface().addCombatMessage(caster.getOwner(),caster.getName() + ' resolved a ' + self.sDisputeLevel(sInfo['JUDGE']) + ' dispute in ' + pCity.getName() + '!  You gain '+str(iGain)+' gold pieces and '+str(iXP)+'xp!' )
-			pPlayer.setGold( pPlayer.getGold() + sInfo['JUDGE'] * 5 + 25 )
-			cPlayer.setGold( cPlayer.getGold() + sInfo['JUDGE'] * 5 + 25 )
+			pPlayer.setGold( pPlayer.getGold() + sInfo['JUDGE'] * 3 + 5 )
+			cPlayer.setGold( cPlayer.getGold() + sInfo['JUDGE'] * 3 + 5 )
 			sInfo['JUDGE'] = 0
 			pCity.setScriptData(cPickle.dumps(sInfo))
 		else:
