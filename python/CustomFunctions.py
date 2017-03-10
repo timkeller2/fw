@@ -2467,17 +2467,17 @@ class CustomFunctions:
 
 			if pPlayer.isHuman():
 				if iPlayer in iEst1:
-					self.setObjectInt(pPlayer,'Est1',iEst1[iPlayer])
+					sPD['Est1'] = iEst1[iPlayer]
 				if iPlayer in iEst2:
-					self.setObjectInt(pPlayer,'Est2',iEst1[iPlayer])
+					sPD['Est2'] = iEst2[iPlayer]
 				if iPlayer in iEst3:
-					self.setObjectInt(pPlayer,'Est3',iEst1[iPlayer])
+					sPD['Est3'] = iEst3[iPlayer]
 				if iPlayer in iGov1:
-					self.setObjectInt(pPlayer,'Gov1',iGov1[iPlayer])
+					sPD['Gov1'] = iGov1[iPlayer]
 				if iPlayer in iGov2:
-					self.setObjectInt(pPlayer,'Gov2',iGov2[iPlayer])
+					sPD['Gov2'] = iGov2[iPlayer]
 				if iPlayer in iGov3:
-					self.setObjectInt(pPlayer,'Gov3',iGov3[iPlayer])
+					sPD['Gov3'] = iGov3[iPlayer]
 
 #			Sell Extra Resources
 			if pPlayer.isAlive() and pPlayer.getNumCities() > 0:
