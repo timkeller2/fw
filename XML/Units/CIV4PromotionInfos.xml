@@ -20599,65 +20599,70 @@
         <PromotionInfo>
             <Type>PROMOTION_WIMPY1</Type>
             <Description>Wimpy I</Description>
+            <Help>[ICON_BULLET]+7 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>-7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy1.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellCasterXP>7</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY2</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_WIMPY2</Type>
             <Description>Wimpy II</Description>
+            <Help>[ICON_BULLET]+7 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>-7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy2.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellCasterXP>7</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY3</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_WIMPY3</Type>
             <Description>Wimpy III</Description>
+            <Help>[ICON_BULLET]+7 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>-7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy3.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellCasterXP>7</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY4</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_WIMPY4</Type>
             <Description>Wimpy IV</Description>
+            <Help>[ICON_BULLET]+7 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>-7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy4.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellCasterXP>7</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY5</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_WIMPY5</Type>
             <Description>Wimpy V</Description>
+            <Help>[ICON_BULLET]+7 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <iCombatPercent>-7</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/wimpy5.dds</Button>
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellCasterXP>7</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
         </PromotionInfo>
         <PromotionInfo>

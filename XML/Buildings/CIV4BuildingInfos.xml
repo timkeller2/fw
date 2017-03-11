@@ -20604,7 +20604,7 @@
             </GlobalSeaPlotYieldChanges>
             <YieldChanges>
                 <iYield>0</iYield>
-                <iYield>10</iYield>
+                <iYield>0</iYield>
                 <iYield>0</iYield>
             </YieldChanges>
             <YieldModifiers>
@@ -42902,7 +42902,7 @@
             <FreeStartEra>NONE</FreeStartEra>
             <MaxStartEra>NONE</MaxStartEra>
             <ObsoleteTech>NONE</ObsoleteTech>
-            <PrereqTech>TECH_NEVER</PrereqTech>
+            <PrereqTech>NONE</PrereqTech>
             <TechTypes>
             </TechTypes>
             <Bonus>NONE</Bonus>

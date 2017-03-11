@@ -2657,74 +2657,6 @@ class CustomFunctions:
 					else:
 						sCityInfo['TR3'] = 0
 						
-					# if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE1')) > 0:
-						# if pCity.getOwner() not in iEst1:
-							# iEst1[pCity.getOwner()] = 0
-						# if iEst1[pCity.getOwner()] > 0:
-							# iEst1[pCity.getOwner()] -= 1
-						# else:
-							# pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE1'), 0)
-							# sMsg = 'An estate falls to ruin in ' + pCity.getName() + '...'
-							# CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
-							# CyInterface().addCombatMessage(iPlayer,sMsg)
-							
-					# if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE2')) > 0:
-						# if pCity.getOwner() not in iEst2:
-							# iEst2[pCity.getOwner()] = 0
-						# if iEst2[pCity.getOwner()] > 0:
-							# iEst2[pCity.getOwner()] -= 1
-						# else:
-							# pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE2'), 0)
-							# sMsg = 'Extensive grounds grow up with thorns and thistles in ' + pCity.getName() + '...'
-							# CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
-							# CyInterface().addCombatMessage(iPlayer,sMsg)
-							
-					# if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE3')) > 0:
-						# if pCity.getOwner() not in iEst3:
-							# iEst3[pCity.getOwner()] = 0
-						# if iEst3[pCity.getOwner()] > 0:
-							# iEst3[pCity.getOwner()] -= 1
-						# else:
-							# pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_ESTATE3'), 0)
-							# sMsg = 'A banquet hall falls quiet in ' + pCity.getName() + '...'
-							# CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
-							# CyInterface().addCombatMessage(iPlayer,sMsg)
-							
-					# if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV1')) > 0:
-						# if pCity.getOwner() not in iGov1:
-							# iGov1[pCity.getOwner()] = 0
-						# if iGov1[pCity.getOwner()] > 0:
-							# iGov1[pCity.getOwner()] -= 1
-						# else:
-							# pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV1'), 0)
-							# sMsg = 'A manor falls to ruin in ' + pCity.getName() + '...'
-							# CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
-							# CyInterface().addCombatMessage(iPlayer,sMsg)
-							
-					# bRemoveIt = True
-					# if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV2')) > 0:
-						# if pCity.getOwner() not in iGov2:
-							# iGov2[pCity.getOwner()] = 0
-						# if iGov2[pCity.getOwner()] > 0:
-							# iGov2[pCity.getOwner()] -= 1
-						# else:
-							# pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV2'), 0)
-							# sMsg = 'An abby ceases to run in ' + pCity.getName() + '...'
-							# CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
-							# CyInterface().addCombatMessage(iPlayer,sMsg)
-							
-					# bRemoveIt = True
-					# if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV3')) > 0:
-						# if pCity.getOwner() not in iGov3:
-							# iGov3[pCity.getOwner()] = 0
-						# if iGov3[pCity.getOwner()] > 0:
-							# iGov3[pCity.getOwner()] -= 1
-						# else:
-							# pCity.setNumRealBuilding(gc.getInfoTypeForString('BUILDING_GOV3'), 0)
-							# sMsg = 'A governor workshop ceases operation in ' + pCity.getName() + '...'
-							# CyInterface().addMessage(iPlayer,false,25,sMsg,'AS3D_SPELL_FIREBALL',1,'Art/Interface/Buttons/Fire.dds',ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
-							# CyInterface().addCombatMessage(iPlayer,sMsg)
-
 					## Process disputes for nobles to solve
 					if 'JUDGE' not in sCityInfo:
 						sCityInfo['JUDGE'] = 0
@@ -2778,6 +2710,14 @@ class CustomFunctions:
 			iBonus = pPlot.getBonusType(-1)
 			iImprovement = pPlot.getImprovementType()
 			bUntouched = True
+			
+			# Add computer defenders for dungeons
+			if iGameTurn == 1:
+				if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_DUNGEON') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_BARROW') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_RUINS'):
+					bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
+					newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_WARRIOR'), pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
+					self.equip(newUnit)
+					newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), True)
 			
 			iThisPlotTrain = 0
 			iThisPlotTrainAnimal = 0

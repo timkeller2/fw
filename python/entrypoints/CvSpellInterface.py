@@ -1873,8 +1873,8 @@ def reqPirateCove(caster):
 	iPiratePort = gc.getInfoTypeForString('IMPROVEMENT_PIRATE_PORT')
 	iX = caster.getX()
 	iY = caster.getY()
-	for iiX in range(iX-2, iX+3, 1):
-		for iiY in range(iY-2, iY+3, 1):
+	for iiX in range(iX-3, iX+4, 1):
+		for iiY in range(iY-3, iY+4, 1):
 			pPlot = CyMap().plot(iiX,iiY)
 			if not pPlot.isNone():
 				iImprovement = pPlot.getImprovementType()
