@@ -2712,7 +2712,7 @@ class CustomFunctions:
 			bUntouched = True
 			
 			# Add computer defenders for dungeons
-			if iGameTurn == 1:
+			if iGameTurn == 0:
 				if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_DUNGEON') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_BARROW') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_RUINS'):
 					bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
 					newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_WARRIOR'), pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)

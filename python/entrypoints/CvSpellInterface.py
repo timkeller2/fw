@@ -1275,11 +1275,12 @@ def reqForTheHorde(caster):
 
 def spellForTheHorde(caster):
 	pPlayer = gc.getPlayer(caster.getOwner())
+	iCreep = gc.getInfoTypeForString('PROMOTION_CREEP')
 	iHero = gc.getInfoTypeForString('PROMOTION_HERO')
 	iOrc = gc.getInfoTypeForString('PROMOTION_ORC')
 	py = PyPlayer(gc.getBARBARIAN_PLAYER())
 	for pUnit in py.getUnitList():
-		if (pUnit.getRace() == iOrc and pUnit.isHasPromotion(iHero) == False and pUnit.baseCombatStr() < 8):
+		if (pUnit.getRace() == iOrc and pUnit.isHasPromotion(iHero) == False and pUnit.isHasPromotion(iCreep) == False and pUnit.baseCombatStr() < 8):
 			if CyGame().getSorenRandNum(100, "Bob") < 50:
 				pPlot = pUnit.plot()
 				for i in range(pPlot.getNumUnits(), -1, -1):
