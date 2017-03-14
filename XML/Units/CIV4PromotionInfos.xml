@@ -20606,7 +20606,7 @@
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>7</iSpellCasterXP>
+            <iSpellCasterXP>5</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY2</PromotionNextLevel>
         </PromotionInfo>
@@ -20620,7 +20620,7 @@
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>7</iSpellCasterXP>
+            <iSpellCasterXP>5</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY3</PromotionNextLevel>
         </PromotionInfo>
@@ -20634,7 +20634,7 @@
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>7</iSpellCasterXP>
+            <iSpellCasterXP>5</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY4</PromotionNextLevel>
         </PromotionInfo>
@@ -20648,7 +20648,7 @@
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>7</iSpellCasterXP>
+            <iSpellCasterXP>5</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY5</PromotionNextLevel>
         </PromotionInfo>
@@ -20662,7 +20662,7 @@
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>7</iSpellCasterXP>
+            <iSpellCasterXP>5</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
         </PromotionInfo>
         <PromotionInfo>
