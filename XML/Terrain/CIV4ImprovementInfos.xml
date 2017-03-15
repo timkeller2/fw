@@ -4275,7 +4275,7 @@
             <bUnique>1</bUnique>
             <iAppearanceProbability>0</iAppearanceProbability>
             <iHealRateChange>0</iHealRateChange>
-            <iRange>3</iRange>
+            <iRange>5</iRange>
             <iRangeDefenseModifier>25</iRangeDefenseModifier>
             <iVisibilityChange>0</iVisibilityChange>
             <BonusConvert>NONE</BonusConvert>
