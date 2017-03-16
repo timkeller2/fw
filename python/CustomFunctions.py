@@ -2719,6 +2719,12 @@ class CustomFunctions:
 					self.equip(newUnit)
 					newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), True)
 			
+				if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_SHIP_WRECK'):
+					bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
+					newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_SEA_SERPENT'), pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
+					self.equip(newUnit)
+					newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), True)
+			
 			iThisPlotTrain = 0
 			iThisPlotTrainAnimal = 0
 			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_TOWER'):
