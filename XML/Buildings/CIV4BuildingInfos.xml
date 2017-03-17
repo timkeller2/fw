@@ -42885,9 +42885,9 @@
             <Description>Military Academy</Description>
             <Civilopedia></Civilopedia>
             <Strategy></Strategy>
-            <Help>Military Academies may be built by Great Commanders.  They increase the xp of trained units, plus they give additional instruction to the most qualified candidate in the city (xp gain up to the population of the city).</Help>
+            <Help>Military Academies may be built by Great Commanders.  They give additional instruction to the most qualified candidate in the city (xp gain up to the population of the city).</Help>
             <Advisor>ADVISOR_MILITARY</Advisor>
-            <ArtDefineTag>ART_DEF_BUILDING_COMMAND_POST</ArtDefineTag>
+            <ArtDefineTag>ART_DEF_BUILDING_ACADEMY</ArtDefineTag>
             <MovieDefineTag>NONE</MovieDefineTag>
             <HolyCity>NONE</HolyCity>
             <ReligionType>NONE</ReligionType>
