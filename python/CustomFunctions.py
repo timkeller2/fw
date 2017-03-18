@@ -2476,124 +2476,125 @@ class CustomFunctions:
 		# Player Processing
 		for iPlayer in range(gc.getMAX_PLAYERS()):
 			pPlayer = gc.getPlayer(iPlayer)
-			pTeam = gc.getTeam(pPlayer.getTeam())
-			pCity = pPlayer.getCity(self.iValidCity(pPlayer))
-			try:
-				sPD = cPickle.loads(pPlayer.getScriptData())
-			except EOFError:
-				sPD = {}
-				
-			sPD['CUSTOM_INCOME'] = 0
-
-			iExtraResources = 0
-			sExtraResources = 'Income from excess resources: '
-
 			if pPlayer.isHuman():
-				if iPlayer in iEst1:
-					sPD['Est1'] = iEst1[iPlayer]
-				if iPlayer in iEst2:
-					sPD['Est2'] = iEst2[iPlayer]
-				if iPlayer in iEst3:
-					sPD['Est3'] = iEst3[iPlayer]
-				if iPlayer in iGov1:
-					sPD['Gov1'] = iGov1[iPlayer]
-				if iPlayer in iGov2:
-					sPD['Gov2'] = iGov2[iPlayer]
-				if iPlayer in iGov3:
-					sPD['Gov3'] = iGov3[iPlayer]
+				pTeam = gc.getTeam(pPlayer.getTeam())
+				pCity = pPlayer.getCity(self.iValidCity(pPlayer))
+				try:
+					sPD = cPickle.loads(pPlayer.getScriptData())
+				except EOFError:
+					sPD = {}
+					
+				sPD['CUSTOM_INCOME'] = 0
 
-#			Sell Extra Resources
-			if pPlayer.isAlive() and pPlayer.getNumCities() > 0:
-				for i in range(gc.getNumBonusInfos()):
-					bonus = gc.getBonusInfo(i)
-					iNum = pPlayer.getNumAvailableBonuses(i) - 1
-					if iNum > 0 :
-						iDiv = 5
-						if bonus.getHappiness() > 0:
-							iNum += 1
-							iDiv = 3
-						if bonus.getDescription() == 'Horse':
-							iNum += 1
-							iDiv = 3
-						if bonus.getDescription() == 'Copper':
-							iNum += 1
-							iDiv = 3
-						if bonus.getDescription() == 'Iron':
-							iNum += 2
-							iDiv = 2
-						if bonus.getDescription() == 'Mithril':
-							iNum += 4
-							iDiv = 2
-						iPrice = ( iNum * 100 ) / iDiv
-						iTotal = ( iNum * iPrice ) / 100
-						if iTotal < iNum:
-							iTotal = iNum
-						pPlayer.setGold( pPlayer.getGold() + iTotal )
-						iExtraResources += iTotal
-						sExtraResources += bonus.getDescription() + ' ' + str( iTotal ) + ', '
-				
-				if iExtraResources > 0 and pPlayer.isHuman() == True:
-					sExtraResources = sExtraResources[:-2]
-					sPD['CUSTOM_INCOME'] += iExtraResources
-					## Give message when resource income changes
-					if 'RESOURCE_INCOME' not in sPD:
-						sPD['RESOURCE_INCOME'] = 0
-					if iExtraResources != sPD['RESOURCE_INCOME']:
-						CyInterface().addMessage(iPlayer,false,25,sExtraResources,'',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
-						CyInterface().addCombatMessage(iPlayer,sExtraResources)
-						sPD['RESOURCE_INCOME'] = iExtraResources
-					pPlayer.setScriptData(cPickle.dumps(sPD))
+				iExtraResources = 0
+				sExtraResources = 'Income from excess resources: '
 
-#			Plunder from Barbarians
-			if pPlayer.isHuman() and pPlayer.isAlive() and pPlayer.getNumCities() > 0:
-				if 'PLUNDER' not in sPD:
+				if pPlayer.isHuman():
+					if iPlayer in iEst1:
+						sPD['Est1'] = iEst1[iPlayer]
+					if iPlayer in iEst2:
+						sPD['Est2'] = iEst2[iPlayer]
+					if iPlayer in iEst3:
+						sPD['Est3'] = iEst3[iPlayer]
+					if iPlayer in iGov1:
+						sPD['Gov1'] = iGov1[iPlayer]
+					if iPlayer in iGov2:
+						sPD['Gov2'] = iGov2[iPlayer]
+					if iPlayer in iGov3:
+						sPD['Gov3'] = iGov3[iPlayer]
+
+	#			Sell Extra Resources
+				if pPlayer.isAlive() and pPlayer.getNumCities() > 0:
+					for i in range(gc.getNumBonusInfos()):
+						bonus = gc.getBonusInfo(i)
+						iNum = pPlayer.getNumAvailableBonuses(i) - 1
+						if iNum > 0 :
+							iDiv = 5
+							if bonus.getHappiness() > 0:
+								iNum += 1
+								iDiv = 3
+							if bonus.getDescription() == 'Horse':
+								iNum += 1
+								iDiv = 3
+							if bonus.getDescription() == 'Copper':
+								iNum += 1
+								iDiv = 3
+							if bonus.getDescription() == 'Iron':
+								iNum += 2
+								iDiv = 2
+							if bonus.getDescription() == 'Mithril':
+								iNum += 4
+								iDiv = 2
+							iPrice = ( iNum * 100 ) / iDiv
+							iTotal = ( iNum * iPrice ) / 100
+							if iTotal < iNum:
+								iTotal = iNum
+							pPlayer.setGold( pPlayer.getGold() + iTotal )
+							iExtraResources += iTotal
+							sExtraResources += bonus.getDescription() + ' ' + str( iTotal ) + ', '
+					
+					if iExtraResources > 0 and pPlayer.isHuman() == True:
+						sExtraResources = sExtraResources[:-2]
+						sPD['CUSTOM_INCOME'] += iExtraResources
+						## Give message when resource income changes
+						if 'RESOURCE_INCOME' not in sPD:
+							sPD['RESOURCE_INCOME'] = 0
+						if iExtraResources != sPD['RESOURCE_INCOME']:
+							CyInterface().addMessage(iPlayer,false,25,sExtraResources,'',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addCombatMessage(iPlayer,sExtraResources)
+							sPD['RESOURCE_INCOME'] = iExtraResources
+						pPlayer.setScriptData(cPickle.dumps(sPD))
+
+	#			Plunder from Barbarians
+				if pPlayer.isHuman() and pPlayer.isAlive() and pPlayer.getNumCities() > 0:
+					if 'PLUNDER' not in sPD:
+						sPD['PLUNDER'] = 0
+					if sPD['PLUNDER'] > 0 and sPD['PLUNDER'] < 2500:
+						sMsg = 'You gain ' + str(sPD['PLUNDER']) + ' gold pieces from looting barbarians...'
+						CyInterface().addMessage(iPlayer,false,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
+						CyInterface().addCombatMessage(iPlayer,sMsg)
+						pPlayer.setGold( pPlayer.getGold() + sPD['PLUNDER'] )
 					sPD['PLUNDER'] = 0
-				if sPD['PLUNDER'] > 0 and sPD['PLUNDER'] < 2500:
-					sMsg = 'You gain ' + str(sPD['PLUNDER']) + ' gold pieces from looting barbarians...'
-					CyInterface().addMessage(iPlayer,false,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
-					CyInterface().addCombatMessage(iPlayer,sMsg)
-					pPlayer.setGold( pPlayer.getGold() + sPD['PLUNDER'] )
-				sPD['PLUNDER'] = 0
 
-				## Commerce Sliders - Changing reduces bonus income
-				if 'ECON' in sPD:
-					sPD['ECON'] += 1
-				else:
-					sPD['ECON'] = 0
-
-				if 'COMMERCE' not in sPD:
-					sPD['COMMERCE'] = pPlayer.getCommercePercent(0)
-
-				if 'RESEARCH' not in sPD:
-					sPD['RESEARCH'] = pPlayer.getCommercePercent(1)
-
-				if 'COMMERCE_INCOME' not in sPD:
-					sPD['COMMERCE_INCOME'] = 0
-
-				iChange = int( math.fabs( sPD['COMMERCE'] - pPlayer.getCommercePercent(0) ) / 2 ) - 1
-				if int( math.fabs( sPD['RESEARCH'] - pPlayer.getCommercePercent(1) ) / 2 ) - 1 > iChange:
-					iChange = int( math.fabs( sPD['RESEARCH'] - pPlayer.getCommercePercent(1) ) / 2 ) - 1
-				if iChange > 0:
-					iChange = iChange * ( ( iChange / 2 ) + 1 )
-					sPD['ECON'] = sPD['ECON'] - iChange
-					sPD['COMMERCE'] = pPlayer.getCommercePercent(0)
-					sPD['RESEARCH'] = pPlayer.getCommercePercent(1)
-					if sPD['ECON'] < 0:
+					## Commerce Sliders - Changing reduces bonus income
+					if 'ECON' in sPD:
+						sPD['ECON'] += 1
+					else:
 						sPD['ECON'] = 0
 
-				if sPD['ECON'] > 0:
-					iIncome = int(math.sqrt(sPD['ECON']) * pPlayer.getTotalPopulation() / 50)
-					if iIncome > 0:
-						pPlayer.setGold( pPlayer.getGold() + iIncome )
-						sPD['CUSTOM_INCOME'] += iIncome
-					## Give message when commerce priority income changes
-					if iIncome != sPD['COMMERCE_INCOME']:
-						sMsg = 'You are gaining ' + str(iIncome) + ' gold pieces per turn from stable commerce priorities... '
-						CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
-						CyInterface().addCombatMessage(iPlayer,sMsg)
-						sPD['COMMERCE_INCOME'] = iIncome
+					if 'COMMERCE' not in sPD:
+						sPD['COMMERCE'] = pPlayer.getCommercePercent(0)
 
-				pPlayer.setScriptData(cPickle.dumps(sPD))
+					if 'RESEARCH' not in sPD:
+						sPD['RESEARCH'] = pPlayer.getCommercePercent(1)
+
+					if 'COMMERCE_INCOME' not in sPD:
+						sPD['COMMERCE_INCOME'] = 0
+
+					iChange = int( math.fabs( sPD['COMMERCE'] - pPlayer.getCommercePercent(0) ) / 2 ) - 1
+					if int( math.fabs( sPD['RESEARCH'] - pPlayer.getCommercePercent(1) ) / 2 ) - 1 > iChange:
+						iChange = int( math.fabs( sPD['RESEARCH'] - pPlayer.getCommercePercent(1) ) / 2 ) - 1
+					if iChange > 0:
+						iChange = iChange * ( ( iChange / 2 ) + 1 )
+						sPD['ECON'] = sPD['ECON'] - iChange
+						sPD['COMMERCE'] = pPlayer.getCommercePercent(0)
+						sPD['RESEARCH'] = pPlayer.getCommercePercent(1)
+						if sPD['ECON'] < 0:
+							sPD['ECON'] = 0
+
+					if sPD['ECON'] > 0:
+						iIncome = int(math.sqrt(sPD['ECON']) * pPlayer.getTotalPopulation() / 50)
+						if iIncome > 0:
+							pPlayer.setGold( pPlayer.getGold() + iIncome )
+							sPD['CUSTOM_INCOME'] += iIncome
+						## Give message when commerce priority income changes
+						if iIncome != sPD['COMMERCE_INCOME']:
+							sMsg = 'You are gaining ' + str(iIncome) + ' gold pieces per turn from stable commerce priorities... '
+							CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(11),pCity.getX(),pCity.getY(),True,True)
+							CyInterface().addCombatMessage(iPlayer,sMsg)
+							sPD['COMMERCE_INCOME'] = iIncome
+
+					pPlayer.setScriptData(cPickle.dumps(sPD))
 
 #			City Processing
 			iDisputes = 1
