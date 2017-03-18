@@ -2383,6 +2383,8 @@ class CustomFunctions:
 			for i in range(pPlot.getNumUnits()):
 				pUnit = pPlot.getUnit(i)
 				pPlayer = gc.getPlayer(pUnit.getOwner())
+				if pUnit.getGameTurnCreated() == iGameTurn:
+					self.tough(pUnit)
 				if pPlayer.isHuman():
 					# Count Nobility Building Promotions
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES1')):
@@ -3265,7 +3267,7 @@ class CustomFunctions:
 					pUnit.changeExperience(1, -1, False, False, False)
 
 				## Giant Sea Serpents can have young
-				if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT') and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) ):
+				if ( pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT') and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) ):
 					iCountS = pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_GIANT_SEA_SERPENT'))
 					iCountS += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_SEA_SERPENT'))
 					if ( CyGame().getSorenRandNum(30+iCountS, "NewSerpents") == 1 and iCountS < 60 ):

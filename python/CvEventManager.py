@@ -1452,7 +1452,7 @@ class CvEventManager:
 				CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Units/Acheron.dds',ColorTypes(8),unit.getX(),unit.getY(),True,True)
 				CyInterface().addCombatMessage(iPlayer,sMsg)
 
-		cf.tough(unit)
+		# cf.tough(unit)
 		
 		if CyGame().getSorenRandNum(20, "RandomHero") == 1:
 			if pPlayer.isHuman() or unit.baseCombatStr() > 0:
