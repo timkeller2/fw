@@ -1437,30 +1437,6 @@ class CvEventManager:
 			# sMsg = 'It is reported that ' + pPlayer.getName() + ' now has ' + unit.getName() + 's...'
 			# cf.msgAll(sMsg,unit.getX(),unit.getY(),unit.getOwner())
 
-		## Dire beasts and dragons add a chance that new living units will start with the Cult of the Dragon promotion...
-		if unit.isAlive():
-			iDireChance = 0
-			iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_WYRMLING')) * 3
-			iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_YOUNG_DRAGON')) * 6
-			iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_DRAGON')) * 9
-			iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_ACHERON')) * 10
-			iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_ABASHI')) * 10
-			iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_EURABATRES')) * 10
-			if CyGame().getSorenRandNum(100, "RandomDragonCult") < iDireChance:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CULT_OF_THE_DRAGON'), True)
-				sMsg = unit.getName() + ' is born fearing dragons and beasts...'
-				CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Units/Acheron.dds',ColorTypes(8),unit.getX(),unit.getY(),True,True)
-				CyInterface().addCombatMessage(iPlayer,sMsg)
-
-		# cf.tough(unit)
-		
-		if CyGame().getSorenRandNum(20, "RandomHero") == 1:
-			if pPlayer.isHuman() or unit.baseCombatStr() > 0:
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_NO_RANGE'), True)
-				#cf.unitAptitude(unit)
-			sMsg = 'A ' + str( unit.getName() ) + ' of unusual skill has been identified among the new recruits in ' + str( city.getName() ) + '!'
-			CyInterface().addMessage(unit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),unit.getX(),unit.getY(),True,True)
-		
 		if sCityInfo[ 'COUNCIL' ] == 0 and city.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ELDER_COUNCIL')) > 0 and unit.baseCombatStr() > 2 and ( unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_MELEE') or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ARCHER')):
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CITY_GARRISON3'), True)
 			sCityInfo[ 'COUNCIL' ] = 1

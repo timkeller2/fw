@@ -21,6 +21,8 @@ class CustomFunctions:
 		
 		if self.getObjectInt(unit,'tough') == 0:
 			self.setObjectInt(unit,'tough',1)
+			pPlayer = gc.getPlayer(unit.getOwner())
+			iPlayer = unit.getOwner()
 
 			if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1')) == False and unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1')) == False:
 				iTough = CyGame().getSorenRandNum(100, "Toughness")
@@ -45,6 +47,27 @@ class CustomFunctions:
 				if iTough > 60:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1'), True)
 
+			if CyGame().getSorenRandNum(20, "RandomHero") == 1:
+				if unit.baseCombatStr() > 0:
+					self.unitAptitude(unit)
+				sMsg = 'A ' + str( unit.getName() ) + ' of unusual skill has been identified among the new recruits!'
+				CyInterface().addMessage(unit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),unit.getX(),unit.getY(),True,True)
+
+			## Dire beasts and dragons add a chance that new living units will start with the Cult of the Dragon promotion...
+			if unit.isAlive():
+				iDireChance = 0
+				iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_WYRMLING')) * 3
+				iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_YOUNG_DRAGON')) * 6
+				iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_DRAGON')) * 9
+				iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_ACHERON')) * 10
+				iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_ABASHI')) * 10
+				iDireChance += pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_EURABATRES')) * 10
+				if CyGame().getSorenRandNum(100, "RandomDragonCult") < iDireChance:
+					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CULT_OF_THE_DRAGON'), True)
+					sMsg = unit.getName() + ' is born fearing dragons and beasts...'
+					CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Units/Acheron.dds',ColorTypes(8),unit.getX(),unit.getY(),True,True)
+					CyInterface().addCombatMessage(iPlayer,sMsg)
+				
 
 	def reqJudge(self,caster):
 		if caster.plot().isCity():
@@ -2383,8 +2406,6 @@ class CustomFunctions:
 			for i in range(pPlot.getNumUnits()):
 				pUnit = pPlot.getUnit(i)
 				pPlayer = gc.getPlayer(pUnit.getOwner())
-				if pUnit.getGameTurnCreated() == iGameTurn:
-					self.tough(pUnit)
 				if pPlayer.isHuman():
 					# Count Nobility Building Promotions
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES1')):
@@ -2796,11 +2817,6 @@ class CustomFunctions:
 						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WORKER_SHIELD'), True)
 					else:
 						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WORKER_SHIELD'), False)
-				
-				# Units with aptitude!
-				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NO_RANGE')):
-					self.unitAptitude(pUnit)
-					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_NO_RANGE'), False)
 				
 				## Fix an AI spinlock problem...
 				if pUnit.getUnitAIType() == UnitAITypes.UNITAI_WORKER and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_WORKER') and not pPlayer.isHuman():
@@ -3410,6 +3426,8 @@ class CustomFunctions:
 					if (pUnit.isAlive() or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD'))) and pPlayer.isHuman():
 						pUnit.doDamageNoCaster(35, 100, gc.getInfoTypeForString('DAMAGE_FIRE'), False)
 			
+				if pUnit.getGameTurnCreated() == iGameTurn:
+					self.tough(pUnit)
 			
 			if pPlot.isOwned():
 				pPlayer = gc.getPlayer(pPlot.getOwner())
