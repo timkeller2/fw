@@ -39217,7 +39217,7 @@
             <FreeStartEra>NONE</FreeStartEra>
             <MaxStartEra>NONE</MaxStartEra>
             <ObsoleteTech>NONE</ObsoleteTech>
-            <PrereqTech>TECH_NEVER</PrereqTech>
+            <PrereqTech>NONE</PrereqTech>
             <TechTypes>
             </TechTypes>
             <Bonus>NONE</Bonus>
@@ -39259,9 +39259,9 @@
             <bPrereqReligion>0</bPrereqReligion>
             <bCenterInCity>1</bCenterInCity>
             <iAIWeight>0</iAIWeight>
-            <iCost>60</iCost>
+            <iCost>-1</iCost>
             <iHurryCostModifier>0</iHurryCostModifier>
-            <iAdvancedStartCost>100</iAdvancedStartCost>
+            <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <iMinAreaSize>-1</iMinAreaSize>
             <iConquestProb>0</iConquestProb>
@@ -39443,7 +39443,7 @@
             <FreeStartEra>NONE</FreeStartEra>
             <MaxStartEra>NONE</MaxStartEra>
             <ObsoleteTech>NONE</ObsoleteTech>
-            <PrereqTech>TECH_NEVER</PrereqTech>
+            <PrereqTech>NONE</PrereqTech>
             <TechTypes>
             </TechTypes>
             <Bonus>NONE</Bonus>
@@ -39485,9 +39485,9 @@
             <bPrereqReligion>0</bPrereqReligion>
             <bCenterInCity>1</bCenterInCity>
             <iAIWeight>0</iAIWeight>
-            <iCost>60</iCost>
+            <iCost>-1</iCost>
             <iHurryCostModifier>0</iHurryCostModifier>
-            <iAdvancedStartCost>100</iAdvancedStartCost>
+            <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <iMinAreaSize>-1</iMinAreaSize>
             <iConquestProb>0</iConquestProb>
@@ -39668,7 +39668,7 @@
             <FreeStartEra>NONE</FreeStartEra>
             <MaxStartEra>NONE</MaxStartEra>
             <ObsoleteTech>NONE</ObsoleteTech>
-            <PrereqTech>TECH_NEVER</PrereqTech>
+            <PrereqTech>NONE</PrereqTech>
             <TechTypes>
             </TechTypes>
             <Bonus>NONE</Bonus>
@@ -39710,9 +39710,9 @@
             <bPrereqReligion>0</bPrereqReligion>
             <bCenterInCity>1</bCenterInCity>
             <iAIWeight>0</iAIWeight>
-            <iCost>60</iCost>
+            <iCost>-1</iCost>
             <iHurryCostModifier>0</iHurryCostModifier>
-            <iAdvancedStartCost>100</iAdvancedStartCost>
+            <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <iMinAreaSize>-1</iMinAreaSize>
             <iConquestProb>0</iConquestProb>
@@ -39894,7 +39894,7 @@
             <FreeStartEra>NONE</FreeStartEra>
             <MaxStartEra>NONE</MaxStartEra>
             <ObsoleteTech>NONE</ObsoleteTech>
-            <PrereqTech>TECH_NEVER</PrereqTech>
+            <PrereqTech>NONE</PrereqTech>
             <TechTypes>
             </TechTypes>
             <Bonus>NONE</Bonus>
@@ -39936,9 +39936,9 @@
             <bPrereqReligion>0</bPrereqReligion>
             <bCenterInCity>1</bCenterInCity>
             <iAIWeight>0</iAIWeight>
-            <iCost>60</iCost>
+            <iCost>-1</iCost>
             <iHurryCostModifier>0</iHurryCostModifier>
-            <iAdvancedStartCost>100</iAdvancedStartCost>
+            <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <iMinAreaSize>-1</iMinAreaSize>
             <iConquestProb>0</iConquestProb>
@@ -40116,7 +40116,7 @@
             <FreeStartEra>NONE</FreeStartEra>
             <MaxStartEra>NONE</MaxStartEra>
             <ObsoleteTech>NONE</ObsoleteTech>
-            <PrereqTech>TECH_NEVER</PrereqTech>
+            <PrereqTech>NONE</PrereqTech>
             <TechTypes>
             </TechTypes>
             <Bonus>NONE</Bonus>
@@ -40158,9 +40158,9 @@
             <bPrereqReligion>0</bPrereqReligion>
             <bCenterInCity>1</bCenterInCity>
             <iAIWeight>0</iAIWeight>
-            <iCost>60</iCost>
+            <iCost>-1</iCost>
             <iHurryCostModifier>0</iHurryCostModifier>
-            <iAdvancedStartCost>100</iAdvancedStartCost>
+            <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <iMinAreaSize>-1</iMinAreaSize>
             <iConquestProb>0</iConquestProb>
@@ -40345,7 +40345,7 @@
             <FreeStartEra>NONE</FreeStartEra>
             <MaxStartEra>NONE</MaxStartEra>
             <ObsoleteTech>NONE</ObsoleteTech>
-            <PrereqTech>TECH_NEVER</PrereqTech>
+            <PrereqTech>NONE</PrereqTech>
             <TechTypes>
             </TechTypes>
             <Bonus>NONE</Bonus>
@@ -40387,9 +40387,9 @@
             <bPrereqReligion>0</bPrereqReligion>
             <bCenterInCity>1</bCenterInCity>
             <iAIWeight>0</iAIWeight>
-            <iCost>60</iCost>
+            <iCost>-1</iCost>
             <iHurryCostModifier>0</iHurryCostModifier>
-            <iAdvancedStartCost>100</iAdvancedStartCost>
+            <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <iMinAreaSize>-1</iMinAreaSize>
             <iConquestProb>0</iConquestProb>
@@ -40813,7 +40813,7 @@
             <FreeStartEra>NONE</FreeStartEra>
             <MaxStartEra>NONE</MaxStartEra>
             <ObsoleteTech>NONE</ObsoleteTech>
-            <PrereqTech>TECH_NEVER</PrereqTech>
+            <PrereqTech>NONE</PrereqTech>
             <TechTypes>
             </TechTypes>
             <Bonus>NONE</Bonus>
@@ -40861,7 +40861,7 @@
             <iAIWeight>0</iAIWeight>
             <iCost>-1</iCost>
             <iHurryCostModifier>0</iHurryCostModifier>
-            <iAdvancedStartCost>100</iAdvancedStartCost>
+            <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <iMinAreaSize>-1</iMinAreaSize>
             <iConquestProb>0</iConquestProb>
@@ -42902,7 +42902,7 @@
             <FreeStartEra>NONE</FreeStartEra>
             <MaxStartEra>NONE</MaxStartEra>
             <ObsoleteTech>NONE</ObsoleteTech>
-            <PrereqTech>TECH_NEVER</PrereqTech>
+            <PrereqTech>NONE</PrereqTech>
             <TechTypes>
             </TechTypes>
             <Bonus>NONE</Bonus>
@@ -42919,8 +42919,8 @@
             <FreeBuilding>NONE</FreeBuilding>
             <FreePromotion>NONE</FreePromotion>
             <CivicOption>NONE</CivicOption>
-            <GreatPeopleUnitClass>UNITCLASS_COMMANDER</GreatPeopleUnitClass>
-            <iGreatPeopleRateChange>3</iGreatPeopleRateChange>
+            <GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+            <iGreatPeopleRateChange>0</iGreatPeopleRateChange>
             <iHurryAngerModifier>0</iHurryAngerModifier>
             <bBorderObstacle>0</bBorderObstacle>
             <bTeamShare>0</bTeamShare>
@@ -42944,7 +42944,7 @@
             <bPrereqReligion>0</bPrereqReligion>
             <bCenterInCity>0</bCenterInCity>
             <iAIWeight>0</iAIWeight>
-            <iCost>180</iCost>
+            <iCost>-1</iCost>
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
