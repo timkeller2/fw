@@ -8562,8 +8562,8 @@
             <bResistable>0</bResistable>
             <iRange>2</iRange>
             <iResistModify>0</iResistModify>
-            <iDamage>20</iDamage>
-            <iDamageLimit>75</iDamageLimit>
+            <iDamage>10</iDamage>
+            <iDamageLimit>40</iDamageLimit>
             <DamageType>DAMAGE_LIGHTNING</DamageType>
             <AddPromotionType1>PROMOTION_BLINDED</AddPromotionType1>
             <AddPromotionType2>NONE</AddPromotionType2>
