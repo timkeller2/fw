@@ -2406,7 +2406,7 @@ class CustomFunctions:
 			for i in range(pPlot.getNumUnits()):
 				pUnit = pPlot.getUnit(i)
 				pPlayer = gc.getPlayer(pUnit.getOwner())
-				if pPlayer.isHuman():
+				if i < pPlot.getNumUnits() and pPlayer.isHuman():
 					# Count Nobility Building Promotions
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ESTATES1')):
 						if pUnit.getOwner() not in iEst1:
