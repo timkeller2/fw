@@ -56833,7 +56833,7 @@
             <iCrime>0</iCrime>
             <iGlobalCounter>0</iGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
-            <PrereqBonus>BONUS_GEMS</PrereqBonus>
+            <PrereqBonus>NONE</PrereqBonus>
             <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
@@ -56934,7 +56934,7 @@
             <iCrime>0</iCrime>
             <iGlobalCounter>0</iGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
-            <PrereqBonus>BONUS_GEMS</PrereqBonus>
+            <PrereqBonus>NONE</PrereqBonus>
             <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
@@ -57136,7 +57136,7 @@
             <iCrime>0</iCrime>
             <iGlobalCounter>0</iGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
-            <PrereqBonus>BONUS_GOLD</PrereqBonus>
+            <PrereqBonus>NONE</PrereqBonus>
             <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
@@ -57338,7 +57338,7 @@
             <iCrime>0</iCrime>
             <iGlobalCounter>0</iGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
-            <PrereqBonus>BONUS_GOLD</PrereqBonus>
+            <PrereqBonus>NONE</PrereqBonus>
             <PrereqCivilization>NONE</PrereqCivilization>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqStateReligion>NONE</PrereqStateReligion>
