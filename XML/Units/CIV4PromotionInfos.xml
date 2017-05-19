@@ -11352,7 +11352,7 @@
             <iFriendlyHealChange>0</iFriendlyHealChange>
             <iSameTileHealChange>0</iSameTileHealChange>
             <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>0</iCombatPercent>
+            <iCombatPercent>10</iCombatPercent>
             <iCityAttack>0</iCityAttack>
             <iCityDefense>0</iCityDefense>
             <iHillsAttack>0</iHillsAttack>
@@ -11432,7 +11432,7 @@
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
             <iCombatHealPercent>0</iCombatHealPercent>
-            <iCombatPercentDefense>0</iCombatPercentDefense>
+            <iCombatPercentDefense>10</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
@@ -11504,7 +11504,7 @@
             <iFriendlyHealChange>0</iFriendlyHealChange>
             <iSameTileHealChange>0</iSameTileHealChange>
             <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>0</iCombatPercent>
+            <iCombatPercent>5</iCombatPercent>
             <iCityAttack>0</iCityAttack>
             <iCityDefense>0</iCityDefense>
             <iHillsAttack>0</iHillsAttack>
@@ -11608,7 +11608,7 @@
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
             <iCombatHealPercent>0</iCombatHealPercent>
-            <iCombatPercentDefense>0</iCombatPercentDefense>
+            <iCombatPercentDefense>5</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
@@ -11680,7 +11680,7 @@
             <iFriendlyHealChange>0</iFriendlyHealChange>
             <iSameTileHealChange>0</iSameTileHealChange>
             <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>0</iCombatPercent>
+            <iCombatPercent>5</iCombatPercent>
             <iCityAttack>0</iCityAttack>
             <iCityDefense>0</iCityDefense>
             <iHillsAttack>0</iHillsAttack>
@@ -11784,7 +11784,7 @@
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
             <iCombatHealPercent>0</iCombatHealPercent>
-            <iCombatPercentDefense>0</iCombatPercentDefense>
+            <iCombatPercentDefense>5</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
@@ -11856,7 +11856,7 @@
             <iFriendlyHealChange>0</iFriendlyHealChange>
             <iSameTileHealChange>0</iSameTileHealChange>
             <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>0</iCombatPercent>
+            <iCombatPercent>5</iCombatPercent>
             <iCityAttack>0</iCityAttack>
             <iCityDefense>0</iCityDefense>
             <iHillsAttack>0</iHillsAttack>
@@ -11960,7 +11960,7 @@
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
             <iCombatHealPercent>0</iCombatHealPercent>
-            <iCombatPercentDefense>0</iCombatPercentDefense>
+            <iCombatPercentDefense>5</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
@@ -12032,7 +12032,7 @@
             <iFriendlyHealChange>0</iFriendlyHealChange>
             <iSameTileHealChange>0</iSameTileHealChange>
             <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>0</iCombatPercent>
+            <iCombatPercent>15</iCombatPercent>
             <iCityAttack>0</iCityAttack>
             <iCityDefense>0</iCityDefense>
             <iHillsAttack>0</iHillsAttack>
@@ -12136,7 +12136,7 @@
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
             <iCombatHealPercent>0</iCombatHealPercent>
-            <iCombatPercentDefense>0</iCombatPercentDefense>
+            <iCombatPercentDefense>15</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
@@ -12208,7 +12208,7 @@
             <iFriendlyHealChange>0</iFriendlyHealChange>
             <iSameTileHealChange>0</iSameTileHealChange>
             <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>0</iCombatPercent>
+            <iCombatPercent>15</iCombatPercent>
             <iCityAttack>0</iCityAttack>
             <iCityDefense>0</iCityDefense>
             <iHillsAttack>0</iHillsAttack>
@@ -12312,7 +12312,7 @@
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
             <iCombatHealPercent>0</iCombatHealPercent>
-            <iCombatPercentDefense>0</iCombatPercentDefense>
+            <iCombatPercentDefense>15</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
@@ -12384,7 +12384,7 @@
             <iFriendlyHealChange>0</iFriendlyHealChange>
             <iSameTileHealChange>0</iSameTileHealChange>
             <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>0</iCombatPercent>
+            <iCombatPercent>15</iCombatPercent>
             <iCityAttack>0</iCityAttack>
             <iCityDefense>0</iCityDefense>
             <iHillsAttack>0</iHillsAttack>
@@ -12488,7 +12488,7 @@
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
             <iCombatHealPercent>0</iCombatHealPercent>
-            <iCombatPercentDefense>0</iCombatPercentDefense>
+            <iCombatPercentDefense>15</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
