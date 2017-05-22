@@ -4586,22 +4586,32 @@ def spellDiplomacy(caster):
 
 	# Found a unit that meets our criteria!
 	if pBestUnit != -1:
-		sMsg = 'Attempting to hire a ' + pBestUnit.getName() + ' for ' + str( iBestValue * 15 ) + ' gold with a ' + str(iChance) + '% chance...'
-		CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
-		CyInterface().addCombatMessage(caster.getOwner(),sMsg)
-		iRoll = CyGame().getSorenRandNum(100, "Roll It")
-		if iRoll < iChance:
-			CyInterface().addMessage(caster.getOwner(),true,25,'Success! '+sBestDip,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
-			CyInterface().addCombatMessage(caster.getOwner(),'Success! '+sBestDip)
-			pPlayer.setGold( pPlayer.getGold() - iBestValue * 15 )
-			oPlayer = gc.getPlayer(pBestUnit.getOwner())
-			oPlayer.setGold( oPlayer.getGold() + iBestValue * 15 )
-			caster.changeExperience( iBestValue / 3, -1, False, False, False )
-			newUnit = pPlayer.initUnit(pBestUnit.getUnitType(), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-			newUnit.convert(pBestUnit)
+		iCheck = cf.getObjectInt(caster,'CheckDiplo')
+		if CyGame().getGameTurn() == iCheck:
+			sMsg = 'Attempting to hire a ' + pBestUnit.getName() + ' for ' + str( iBestValue * 15 ) + ' gold with a ' + str(iChance) + '% chance...'
+			CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addCombatMessage(caster.getOwner(),sMsg)
+			
+			iRoll = CyGame().getSorenRandNum(100, "Roll It")
+			if iRoll < iChance:
+				CyInterface().addMessage(caster.getOwner(),true,25,'Success! '+sBestDip,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				CyInterface().addCombatMessage(caster.getOwner(),'Success! '+sBestDip)
+				pPlayer.setGold( pPlayer.getGold() - iBestValue * 15 )
+				oPlayer = gc.getPlayer(pBestUnit.getOwner())
+				oPlayer.setGold( oPlayer.getGold() + iBestValue * 15 )
+				caster.changeExperience( iBestValue / 3, -1, False, False, False )
+				newUnit = pPlayer.initUnit(pBestUnit.getUnitType(), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+				newUnit.convert(pBestUnit)
+			else:
+				CyInterface().addMessage(caster.getOwner(),true,25,'Failure... '+sBestDip,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				CyInterface().addCombatMessage(caster.getOwner(),'Failure... '+sBestDip)
 		else:
-			CyInterface().addMessage(caster.getOwner(),true,25,'Failure... '+sBestDip,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
-			CyInterface().addCombatMessage(caster.getOwner(),'Failure... '+sBestDip)
+			sMsg = 'Attempt to hire a ' + pBestUnit.getName() + ' for ' + str( iBestValue * 15 ) + ' gold with a ' + str(iChance) + '% chance?'
+			CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+			CyInterface().addCombatMessage(caster.getOwner(),sMsg)
+			cf.setObjectInt(caster,'CheckDiplo',CyGame().getGameTurn())
+			caster.setHasCasted(False)
+		
 			
 
 def spellSummonScroll(caster,sUnit):
