@@ -784,6 +784,13 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>SND_SPELL_DIPLOMACY</SoundID>
+			<Filename>fw/sounds/diplomacy</Filename>
+			<LoadType>DYNAMIC_RES</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
 			<SoundID>SND_SPELL_FEAST</SoundID>
 			<Filename>Sounds/Spells/Feast</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>

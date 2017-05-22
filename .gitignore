@@ -3,5 +3,5 @@ Pak0.FPK
 XML/Scenarios/
 *.bat
 res/
-sounds/
+sounds/*
 ssmc4.bat

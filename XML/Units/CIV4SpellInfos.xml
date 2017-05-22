@@ -7043,8 +7043,8 @@
             <PyMiscast></PyMiscast>
             <PyResult>spellDiplomacy(pCaster)</PyResult>
             <PyRequirement>reqDiplomacy(pCaster)</PyRequirement>
-            <Effect>EFFECT_ENCHANTED_BLADE</Effect>
-            <Sound>AS3D_SPELL_ENCHANTMENT</Sound>
+            <Effect></Effect>
+            <Sound>AS3D_SPELL_DIPLOMACY</Sound>
             <HotKey></HotKey>
             <bAltDown>0</bAltDown>
             <bShiftDown>0</bShiftDown>
