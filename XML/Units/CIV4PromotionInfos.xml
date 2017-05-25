@@ -8553,7 +8553,7 @@
             <Button>Art/Interface/Buttons/Promotions/Guardsman.dds</Button>
             <iCombatPercentDefense>20</iCombatPercentDefense>
             <bTargetWeakestUnitCounter>1</bTargetWeakestUnitCounter>
-            <iBetterDefenderThanPercent>100</iBetterDefenderThanPercent>
+            <iBetterDefenderThanPercent>200</iBetterDefenderThanPercent>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_CHIEF</Type>
