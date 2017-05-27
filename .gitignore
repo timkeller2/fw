@@ -4,4 +4,5 @@ XML/Scenarios/
 *.bat
 res/
 sounds/*
+!sounds/fw
 ssmc4.bat

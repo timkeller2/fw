@@ -785,7 +785,7 @@
 		</SoundData>
 		<SoundData>
 			<SoundID>SND_SPELL_DIPLOMACY</SoundID>
-			<Filename>fw/sounds/diplomacy</Filename>
+			<Filename>sounds/fw/diplomacy</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
