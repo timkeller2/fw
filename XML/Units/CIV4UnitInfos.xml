@@ -14984,7 +14984,7 @@
             <BonusProductionModifiers>
             </BonusProductionModifiers>
             <iBombRate>0</iBombRate>
-            <iBombardRate>20</iBombardRate>
+            <iBombardRate>15</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>NONE</DomainCargo>
             <iCargo>0</iCargo>
@@ -18769,7 +18769,7 @@
             <BonusProductionModifiers>
             </BonusProductionModifiers>
             <iBombRate>0</iBombRate>
-            <iBombardRate>20</iBombardRate>
+            <iBombardRate>15</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>NONE</DomainCargo>
             <iCargo>0</iCargo>
@@ -18981,7 +18981,7 @@
             <BonusProductionModifiers>
             </BonusProductionModifiers>
             <iBombRate>0</iBombRate>
-            <iBombardRate>25</iBombardRate>
+            <iBombardRate>20</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>NONE</DomainCargo>
             <iCargo>0</iCargo>
@@ -19434,7 +19434,7 @@
             <BonusProductionModifiers>
             </BonusProductionModifiers>
             <iBombRate>0</iBombRate>
-            <iBombardRate>15</iBombardRate>
+            <iBombardRate>10</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>NONE</DomainCargo>
             <iCargo>0</iCargo>
@@ -19650,7 +19650,7 @@
             <BonusProductionModifiers>
             </BonusProductionModifiers>
             <iBombRate>0</iBombRate>
-            <iBombardRate>20</iBombardRate>
+            <iBombardRate>15</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>NONE</DomainCargo>
             <iCargo>0</iCargo>
@@ -31867,7 +31867,7 @@
             <BonusProductionModifiers>
             </BonusProductionModifiers>
             <iBombRate>0</iBombRate>
-            <iBombardRate>15</iBombardRate>
+            <iBombardRate>10</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
@@ -50078,7 +50078,7 @@
             <BonusProductionModifiers>
             </BonusProductionModifiers>
             <iBombRate>0</iBombRate>
-            <iBombardRate>20</iBombardRate>
+            <iBombardRate>15</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
@@ -55126,7 +55126,7 @@
             </TerrainPassableTechs>
             <FeaturePassableTechs>
             </FeaturePassableTechs>
-            <iCombat>5</iCombat>
+            <iCombat>7</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>0</iAirCombat>
             <iAirCombatLimit>0</iAirCombatLimit>
@@ -55229,7 +55229,7 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
-            <iCombatDefense>5</iCombatDefense>
+            <iCombatDefense>7</iCombatDefense>
             <iTier>3</iTier>
             <iWeaponTier>3</iWeaponTier>
             <Image>Art/Interface/Popups/Orthus.dds</Image>
@@ -78937,7 +78937,7 @@
             <BonusProductionModifiers>
             </BonusProductionModifiers>
             <iBombRate>0</iBombRate>
-            <iBombardRate>30</iBombardRate>
+            <iBombardRate>25</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
             <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
