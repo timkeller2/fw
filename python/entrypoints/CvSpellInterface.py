@@ -4067,6 +4067,8 @@ def reqBurglar(caster):
 def spellBurglar(caster):
 	iX = caster.getX()
 	iY = caster.getY()
+	iPlayer = caster.getOwner()
+	pPlayer = gc.getPlayer(iPlayer)
 
 	iL = 0
 	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR1')):
@@ -4090,7 +4092,9 @@ def spellBurglar(caster):
 						iL = iL - 1
 
 	for pUnit in target:
-		pUnit.setXY(iX, iY, true, true, false)
+		# pUnit.setXY(iX, iY, true, true, false)
+		newUnit = pPlayer.initUnit(pUnit.getUnitType(), pCasterPlot.getX(), pCasterPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		newUnit.convert(pUnit)
 
 
 def reqSustain(caster):
