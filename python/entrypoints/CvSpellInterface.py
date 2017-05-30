@@ -4598,8 +4598,8 @@ def spellDiplomacy(caster):
 			
 			iRoll = CyGame().getSorenRandNum(100, "Roll It")
 			if iRoll < iChance:
-				CyInterface().addMessage(caster.getOwner(),true,25,'Success! '+sBestDip,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
-				CyInterface().addCombatMessage(caster.getOwner(),'Success! '+sBestDip)
+				CyInterface().addMessage(caster.getOwner(),true,25,'Success! ','AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				CyInterface().addCombatMessage(caster.getOwner(),'Success! ')
 				pPlayer.setGold( pPlayer.getGold() - iBestValue * 15 )
 				oPlayer = gc.getPlayer(pBestUnit.getOwner())
 				oPlayer.setGold( oPlayer.getGold() + iBestValue * 15 )
@@ -4607,8 +4607,8 @@ def spellDiplomacy(caster):
 				newUnit = pPlayer.initUnit(pBestUnit.getUnitType(), caster.getX(), caster.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 				newUnit.convert(pBestUnit)
 			else:
-				CyInterface().addMessage(caster.getOwner(),true,25,'Failure... '+sBestDip,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
-				CyInterface().addCombatMessage(caster.getOwner(),'Failure... '+sBestDip)
+				CyInterface().addMessage(caster.getOwner(),true,25,'Diplomacy Failure... ','',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+				CyInterface().addCombatMessage(caster.getOwner(),'Diplomacy Failure... ')
 		else:
 			sMsg = 'Attempt to hire a ' + pBestUnit.getName() + ' for ' + str( iBestValue * 15 ) + ' gold with a ' + str(iChance) + '% chance?'
 			CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
