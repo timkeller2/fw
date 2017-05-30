@@ -3280,6 +3280,8 @@ class CustomFunctions:
 					iGiveXP = 10
 					if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iImprovement == gc.getInfoTypeForString('IMPROVEMENT_TOWER'):
 						iGiveXP = 7
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HERO')):
+					iGiveXP = 2
 				if pUnit.getUnitType() != gc.getInfoTypeForString('UNIT_HIDDEN_CACHE') and CyGame().getSorenRandNum(iGiveXP, "UnitExperience"+str(pUnit.getID())) == 1:
 					pUnit.changeExperience(1, -1, False, False, False)
 

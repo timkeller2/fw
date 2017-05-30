@@ -3989,10 +3989,11 @@
         <PromotionInfo>
             <Type>PROMOTION_HERO</Type>
             <Description>TXT_KEY_PROMOTION_HERO</Description>
+            <Help>[ICON_BULLET]This unit tend to gain xp every couple of turns.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <Button>Art/Interface/Buttons/Promotions/Hero.dds</Button>
-            <iFreeXPFromCombat>2</iFreeXPFromCombat>
+            <iFreeXPFromCombat>1</iFreeXPFromCombat>
             <iMinLevel>-1</iMinLevel>
             <iResistMagic>20</iResistMagic>
             <iGroupSize>1</iGroupSize>
