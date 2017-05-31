@@ -4869,7 +4869,7 @@ def spellVolley(caster,volleytype):
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH1')):
 					sDamType = 'DAMAGE_DEATH'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHAOS1')):
-					sDamType = 'DAMAGE_PHYSICAL'
+					sDamType = 'DAMAGE_UNHOLY'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY1')):
 					sDamType = 'DAMAGE_UNHOLY'
 				elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SHADOW1')):
