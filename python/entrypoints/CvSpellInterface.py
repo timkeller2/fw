@@ -4741,8 +4741,8 @@ def reqVolley(caster,volleytype):
 					iMax = 50
 					if volleytype == 'adept':
 						iMax = 20 + 5 * caster.getLevel()
-						if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 35:
-							iMax = 35
+						if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 10 + 3 * caster.getLevel():
+							iMax = 10 + 3 * caster.getLevel()
 						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE')):
 							iMax = iMax / 2
 						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE_TEMP')):
@@ -4783,8 +4783,8 @@ def spellVolley(caster,volleytype):
 					iMax = 50
 					if volleytype == 'adept':
 						iMax = 20 + 5 * caster.getLevel()
-						if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 35:
-							iMax = 35
+						if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 10 + 3 * caster.getLevel():
+							iMax = 10 + 3 * caster.getLevel()
 						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE')):
 							iMax = iMax / 2
 						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE_TEMP')):
@@ -4810,8 +4810,8 @@ def spellVolley(caster,volleytype):
 			iMax = 50
 			if volleytype == 'adept':
 				iMax = 20 + 5 * caster.getLevel()
-				if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 35:
-					iMax = 35
+				if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 10 + 3 * caster.getLevel():
+					iMax = 10 + 3 * caster.getLevel()
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE')):
 						iMax = iMax / 2
 						iMod = iMod / 2
