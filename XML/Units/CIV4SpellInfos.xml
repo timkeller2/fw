@@ -793,6 +793,7 @@
             <Description>TXT_KEY_SPELL_CURE_DISEASE</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <PromotionPrereq1>PROMOTION_MEDIC3</PromotionPrereq1>
+            <PromotionPrereq1>PROMOTION_CHANNELING3</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -1598,9 +1599,10 @@
         <SpellInfo>
             <Type>SPELL_HEAL</Type>
             <Description>TXT_KEY_SPELL_HEAL</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Civilopedia>[ICON_BULLET]Heals all living units on the tile 20% and removes poison.</Civilopedia>
             <Help>TXT_KEY_SPELL_HEAL_HELP</Help>
             <PromotionPrereq1>PROMOTION_MEDIC3</PromotionPrereq1>
+            <PromotionPrereq2>PROMOTION_CHANNELING3</PromotionPrereq2>
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
