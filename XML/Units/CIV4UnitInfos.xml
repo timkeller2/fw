@@ -18736,7 +18736,7 @@
             <iInterceptionProbability>0</iInterceptionProbability>
             <iEvasionProbability>0</iEvasionProbability>
             <iWithdrawalProb>25</iWithdrawalProb>
-            <iCollateralDamage>100</iCollateralDamage>
+            <iCollateralDamage>50</iCollateralDamage>
             <iCollateralDamageLimit>60</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>7</iCollateralDamageMaxUnits>
             <iCityAttack>0</iCityAttack>
@@ -18948,7 +18948,7 @@
             <iInterceptionProbability>0</iInterceptionProbability>
             <iEvasionProbability>0</iEvasionProbability>
             <iWithdrawalProb>25</iWithdrawalProb>
-            <iCollateralDamage>100</iCollateralDamage>
+            <iCollateralDamage>50</iCollateralDamage>
             <iCollateralDamageLimit>60</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>7</iCollateralDamageMaxUnits>
             <iCityAttack>0</iCityAttack>
@@ -19401,7 +19401,7 @@
             <iInterceptionProbability>0</iInterceptionProbability>
             <iEvasionProbability>0</iEvasionProbability>
             <iWithdrawalProb>80</iWithdrawalProb>
-            <iCollateralDamage>100</iCollateralDamage>
+            <iCollateralDamage>50</iCollateralDamage>
             <iCollateralDamageLimit>50</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
             <iCityAttack>0</iCityAttack>
@@ -19617,7 +19617,7 @@
             <iInterceptionProbability>0</iInterceptionProbability>
             <iEvasionProbability>0</iEvasionProbability>
             <iWithdrawalProb>80</iWithdrawalProb>
-            <iCollateralDamage>100</iCollateralDamage>
+            <iCollateralDamage>50</iCollateralDamage>
             <iCollateralDamageLimit>70</iCollateralDamageLimit>
             <iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
             <iCityAttack>0</iCityAttack>
