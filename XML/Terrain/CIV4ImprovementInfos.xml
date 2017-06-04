@@ -1471,7 +1471,7 @@
             <iDefenseModifier>25</iDefenseModifier>
             <iHappiness>0</iHappiness>
             <iPillageGold>5</iPillageGold>
-            <bOutsideBorders>1</bOutsideBorders>
+            <bOutsideBorders>0</bOutsideBorders>
             <TerrainMakesValids>
                 <TerrainMakesValid>
                     <TerrainType>TERRAIN_BROKEN_LANDS</TerrainType>
@@ -6722,7 +6722,7 @@
             <iDefenseModifier>25</iDefenseModifier>
             <iHappiness>0</iHappiness>
             <iPillageGold>5</iPillageGold>
-            <bOutsideBorders>1</bOutsideBorders>
+            <bOutsideBorders>0</bOutsideBorders>
             <TerrainMakesValids>
                 <TerrainMakesValid>
                     <TerrainType>TERRAIN_BROKEN_LANDS</TerrainType>

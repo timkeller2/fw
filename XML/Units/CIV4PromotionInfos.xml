@@ -20669,7 +20669,7 @@
         <PromotionInfo>
             <Type>PROMOTION_PROLIFIC</Type>
             <Description>Prolific</Description>
-            <Help>[ICON_BULLET]Increases the chance of having young by 1% per turn (normally 1/3% per (level above 3 + 1/5 heal rate - units in tile) if not in a city).  [NEWLINE][ICON_BULLET]Adds Combat I to new young. [NEWLINE][ICON_BULLET]Requires level 4.</Help>
+            <Help>[ICON_BULLET]Gives a 1% chance of having young per turn.[NEWLINE][ICON_BULLET]Requires level 4.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <UnitCombats>
                 <UnitCombat>
@@ -20679,6 +20679,7 @@
             </UnitCombats>
             <Button>Art/Interface/Buttons/Spells/Bloom.dds</Button>
             <iMinLevel>4</iMinLevel>
+            <PromotionNextLevel>PROMOTION_PROLIFIC2</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_CAN_FLY</Type>
@@ -20709,7 +20710,7 @@
         <PromotionInfo>
 			<Type>PROMOTION_ANCIENT</Type>
             <Description>Ancient</Description>
-            <Help>[ICON_BULLET]Adds Combat II to new young.[NEWLINE][ICON_BULLET]Requires level 10</Help>
+            <Help>[ICON_BULLET]Adds Combat I to new young.[NEWLINE][ICON_BULLET]Requires level 10</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_DIRE</PromotionPrereq>
@@ -21012,22 +21013,35 @@
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
-            <Type>PROMOTION_FUTURE_LEARNING4</Type>
-            <Description>Future Learning</Description>
+            <Type>PROMOTION_PROLIFIC2</Type>
+            <Description>Prolific II</Description>
+            <Help>[ICON_BULLET]Increases the chance of having young by 1% per turn (2%).</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>0</iCombatPercent>
-            <Button>Art/Interface/Buttons/Promotions/air1.dds</Button>
-            <iCombatPercentDefense>0</iCombatPercentDefense>
-            <iMinLevel>-1</iMinLevel>
+            <PromotionPrereq>PROMOTION_PROLIFIC</PromotionPrereq>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Spells/Bloom.dds</Button>
+            <iMinLevel>4</iMinLevel>
+            <PromotionNextLevel>PROMOTION_PROLIFIC3</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
-            <Type>PROMOTION_FUTURE_LEARNING5</Type>
-            <Description>Future Learning</Description>
+            <Type>PROMOTION_PROLIFIC3</Type>
+            <Description>Prolific III</Description>
+            <Help>[ICON_BULLET]Increases the chance of having young by 2% per turn (4%).</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>0</iCombatPercent>
-            <Button>Art/Interface/Buttons/Promotions/air1.dds</Button>
-            <iCombatPercentDefense>0</iCombatPercentDefense>
-            <iMinLevel>-1</iMinLevel>
+            <PromotionPrereq>PROMOTION_PROLIFIC2</PromotionPrereq>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Spells/Bloom.dds</Button>
+            <iMinLevel>4</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_FUTURE_LEARNING6</Type>

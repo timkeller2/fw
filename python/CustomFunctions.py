@@ -130,10 +130,8 @@ class CustomFunctions:
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLITZ')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
-		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PROLIFIC')):
-			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1'),True)
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANCIENT')):
-			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2'),True)
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1'),True)
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PERFECT_SIGHT')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY'),True)
 		
@@ -3334,15 +3332,19 @@ class CustomFunctions:
 					oNewUnit.convert(pUnit)
 
 				## Animals can have young
-				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PROLIFIC')):
-					iBirth = 3
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PROLIFIC3')):
+					iBirth = 4
+				elif pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PROLIFIC2')):	
+					iBirth = 2
+				elif pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PROLIFIC')):	
+					iBirth = 1
 				else:
 					if pPlayer.isHuman():
 						iBirth = 0
 					else:
-						iBirth = -3
+						iBirth = 1
 						
-				if (bCanCreateUnit and not pPlot.isCity() and CyGame().getSorenRandNum(300, "NewAnimal") < pUnit.getLevel() + iBirth - 3 - pPlot.getNumUnits() + pUnit.healRate() / 5 and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'))):
+				if (bCanCreateUnit and CyGame().getSorenRandNum(100, "NewAnimal") < iBirth and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'))):
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 					if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SPIDER'):
 						oNewUnit = gc.getInfoTypeForString('UNIT_BABY_SPIDER')
