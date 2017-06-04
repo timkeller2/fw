@@ -2659,7 +2659,7 @@ class CvEventManager:
 			if CyGame().getGlobalCounter() >= 75:
 				iMax = 3
 				iMult = 2
-			if CyGame().getGlobalCounter() == 100:
+			if CyGame().getGlobalCounter() >= 100:
 				iMax = 4
 				iMult = 2.5
 			if CyGame().getSorenRandNum(10000, "Planar Gate") <= gc.getDefineINT('PLANAR_GATE_CHANCE') * iMult:

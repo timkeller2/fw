@@ -1199,6 +1199,10 @@
 					<PromotionType>PROMOTION_SUNDERED</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_DIMENSIONAL1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
 			</FreePromotions>
 			<FreePromotionUnitCombats>
 				<FreePromotionUnitCombat>
