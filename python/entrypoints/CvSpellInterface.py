@@ -1162,6 +1162,8 @@ def reqEscape(caster):
 	if pPlayer.isHuman() == False:
 		if caster.getDamage() >= 50:
 			return False
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHARMED')):
+		return False
 	return True
 
 def reqExploreLair(caster):
@@ -3138,12 +3140,6 @@ def spellTaunt(caster):
 								if not pUnit.isResisted(caster, iSpell):
 									pUnit.attack(pPlot, False)
 
-def spellTeleport(caster,loc):
-	player = caster.getOwner()
-	pPlayer = gc.getPlayer(player)
-	pCity = pPlayer.getCapitalCity()
-	caster.setXY(pCity.getX(), pCity.getY(), false, true, true)
-
 def reqTeachSpellcasting(caster):
 	iAnimal = gc.getInfoTypeForString('UNITCOMBAT_ANIMAL')
 	iBird = gc.getInfoTypeForString('SPECIALUNIT_BIRD')
@@ -4201,26 +4197,26 @@ def spellTeleport(caster,loc):
 	itx = pCity.getX()
 	ity = pCity.getY()
 
-	if loc == 'Mana Node':
+	if loc == 'Teleportal':
 		py = PyPlayer(player)
 		for pUnit in py.getUnitList():
 			if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_MAGIC_MISSILE') and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIMENSIONAL1')):
 				itx = pUnit.getX()
 				ity = pUnit.getY()
 				iMana = -2
-				pUnit.kill(True,0)
+				# pUnit.kill(True,0)
 				break
 
-		if iMana > -2:
-			for i in range (CyMap().numPlots()):
-				pPlot = CyMap().plotByIndex(i)
-				iRoll = CyGame().getSorenRandNum(100, "findManaPlot")
-				if (pPlot.getBonusType(-1) == gc.getInfoTypeForString('BONUS_MANA')):
-					iRoll += 100;
-				if (not pPlot.isOwned() and not pPlot.isWater() and not pPlot.isImpassable() and iRoll > iMana and pPlot.getNumUnits() == 0):
-					iMana = iRoll		
-					itx = pPlot.getX()
-					ity = pPlot.getY()
+		# if iMana > -2:
+			# for i in range (CyMap().numPlots()):
+				# pPlot = CyMap().plotByIndex(i)
+				# iRoll = CyGame().getSorenRandNum(100, "findManaPlot")
+				# if (pPlot.getBonusType(-1) == gc.getInfoTypeForString('BONUS_MANA')):
+					# iRoll += 100;
+				# if (not pPlot.isOwned() and not pPlot.isWater() and not pPlot.isImpassable() and iRoll > iMana and pPlot.getNumUnits() == 0):
+					# iMana = iRoll		
+					# itx = pPlot.getX()
+					# ity = pPlot.getY()
 
 	iPassengers = caster.getLevel() / 4
 	if (caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIMENSIONAL2')) and caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING2'))):

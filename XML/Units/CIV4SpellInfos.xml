@@ -1105,7 +1105,7 @@
             <Description>TXT_KEY_SPELL_ESCAPE</Description>
             <Civilopedia>TXT_KEY_SPELL_ESCAPE_PEDIA</Civilopedia>
             <Help>TXT_KEY_SPELL_ESCAPE_HELP</Help>
-            <UnitPrereq>UNIT_CHANTER</UnitPrereq>
+            <PromotionPrereq1>PROMOTION_DIMENSIONAL1</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -4908,8 +4908,8 @@
         <SpellInfo>
             <Type>SPELL_PORTAL</Type>
             <Description>Create Portal</Description>
-            <Civilopedia>Creates a portal that teleport will use rather than mana nodes or unowned land.  This can allow some very nice mobility for teleport units.</Civilopedia>
-            <Help></Help>
+            <Civilopedia></Civilopedia>
+            <Help>[ICON_BULLET]Create a portal to which other teleporters can jump.</Help>
             <PromotionPrereq1>PROMOTION_DIMENSIONAL2</PromotionPrereq1>
             <bAllowAI>0</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
@@ -8612,9 +8612,9 @@
         <SpellInfo>
             <Type>SPELL_TELEPORT_MANA</Type>
             <Description>Teleport</Description>
-            <Civilopedia>Teleport the caster to a teleport gate or a random, unoccupied, unowned mana node.  If none are found, the caster will be teleported to a random, unoccupied land tile.  The caster can teleport passengers equal to 1/4, 1/2 or equal to his level based on what level of dimensional training he has.</Civilopedia>
+            <Civilopedia>The caster can teleport passengers equal to 1/4, 1/2 or equal to his level based on what level of dimensional training he has.</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Teleport the caster (and potentially passengers, see civilopedia) to a random, unoccupied, unowned mana node.</Help>
+            <Help>[ICON_BULLET]Teleport the caster (and potentially passengers, see civilopedia) to a teleportal created by another mage or, if none exists, the capital city.[ICON_BULLET]You may not teleport if charmed.</Help>
             <PromotionPrereq1>PROMOTION_DIMENSIONAL1</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_CHANNELING1</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -8671,7 +8671,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellTeleport(pCaster,'Mana Node')</PyResult>
+            <PyResult>spellTeleport(pCaster,'Teleportal')</PyResult>
             <PyRequirement>reqEscape(pCaster)</PyRequirement>
             <Effect>EFFECT_DISPEL_MAGIC</Effect>
             <Sound>AS3D_SPELL_ESCAPE</Sound>
