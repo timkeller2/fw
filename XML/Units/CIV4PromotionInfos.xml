@@ -3989,7 +3989,7 @@
         <PromotionInfo>
             <Type>PROMOTION_HERO</Type>
             <Description>TXT_KEY_PROMOTION_HERO</Description>
-            <Help>[ICON_BULLET]This unit tend to gain xp every couple of turns.</Help>
+            <Help>[ICON_BULLET]This unit tends to gain xp every couple of turns.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <Button>Art/Interface/Buttons/Promotions/Hero.dds</Button>
