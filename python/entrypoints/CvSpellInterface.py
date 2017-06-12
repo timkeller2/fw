@@ -4883,12 +4883,12 @@ def spellVolley(caster,volleytype):
 
 				## Nature Mana can apply poison
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NATURE1')) and pBestUnit.isAlive():
-					iChance = 1
+					iChance = 5
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NATURE2')):
-						iChance += 1
+						iChance = 20
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NATURE3')):
-						iChance += 1
-					if CyGame().getSorenRandNum(5, "Poison") < iChance:
+						iChance = 60
+					if CyGame().getSorenRandNum(100, "Poison") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'), True)
 						sMsg = pBestUnit.getName() + ' has been poisoned...'
 						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Poisoned.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
@@ -4900,12 +4900,12 @@ def spellVolley(caster,volleytype):
 				
 				## Body Mana can apply slowed
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY1')) and pBestUnit.isAlive():
-					iChance = 1
+					iChance = 5
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY2')):
-						iChance += 1
+						iChance = 15
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BODY3')):
-						iChance += 1
-					if CyGame().getSorenRandNum(6, "Slow") < iChance:
+						iChance = 45
+					if CyGame().getSorenRandNum(100, "Slow") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SLOW'), True)
 						sMsg = pBestUnit.getName() + ' has been slowed...'
 						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Slow.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
@@ -4917,12 +4917,12 @@ def spellVolley(caster,volleytype):
 				
 				## Earth Mana can apply rusted
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH1')):
-					iChance = 1
+					iChance = 5
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH2')):
-						iChance += 1
+						iChance = 15
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH3')):
-						iChance += 1
-					if CyGame().getSorenRandNum(6, "Rusted") < iChance:
+						iChance = 45
+					if CyGame().getSorenRandNum(100, "Rusted") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_RUSTED'), True)
 						sMsg = pBestUnit.getName() + ' has been rusted...'
 						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Rusted.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
@@ -4934,12 +4934,12 @@ def spellVolley(caster,volleytype):
 				
 				## Entropy Mana can apply enervated
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY1')):
-					iChance = 1
+					iChance = 2
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY2')):
-						iChance += 1
+						iChance = 6
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENTROPY3')):
-						iChance += 1
-					if CyGame().getSorenRandNum(20, "Enervated") < iChance:
+						iChance = 18
+					if CyGame().getSorenRandNum(100, "Enervated") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WITHERED'), True)
 						sMsg = pBestUnit.getName() + ' has been withered...'
 						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Withered.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
@@ -4951,12 +4951,12 @@ def spellVolley(caster,volleytype):
 				
 				## Death Mana can apply diseased or plagued
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH1')) and pBestUnit.isAlive():
-					iChance = 1
+					iChance = 5
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH2')):
-						iChance += 1
+						iChance = 15
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEATH3')):
-						iChance += 1
-					if CyGame().getSorenRandNum(6, "Diseased") < iChance:
+						iChance = 45
+					if CyGame().getSorenRandNum(100, "Diseased") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'), True)
 						sMsg = pBestUnit.getName() + ' has been diseased...'
 						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Diseased.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
@@ -4965,7 +4965,7 @@ def spellVolley(caster,volleytype):
 						CyInterface().addCombatMessage(pBestUnit.getOwner(),sMsg )
 						CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_PORTAL_DEATH'),point)
 						CyAudioGame().Play3DSound('AS3D_SPELL_DEFILE',point.x,point.y,point.z)
-					elif CyGame().getSorenRandNum(20, "Plagued") < iChance:
+					elif CyGame().getSorenRandNum(100, "Plagued") < iChance / 3:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), True)
 						sMsg = pBestUnit.getName() + ' has been plagued...'
 						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Plagued.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
@@ -4979,24 +4979,24 @@ def spellVolley(caster,volleytype):
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN1')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE1')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT1')):
 					iChance = 0
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN1')):
-						iChance += 1
+						iChance += 5
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN2')):
-						iChance += 1
+						iChance += 10
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUN3')):
-						iChance += 1
+						iChance += 20
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE1')):
-						iChance += 1
+						iChance += 5
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE2')):
-						iChance += 1
+						iChance += 10
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE3')):
-						iChance += 1
+						iChance += 20
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT1')):
-						iChance += 1
+						iChance += 5
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT2')):
-						iChance += 1
+						iChance += 10
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SPIRIT3')):
-						iChance += 1
-					if CyGame().getSorenRandNum(6, "Blinded") < iChance:
+						iChance += 20
+					if CyGame().getSorenRandNum(100, "Blinded") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLINDED'), True)
 						sMsg = pBestUnit.getName() + ' has been blinded...'
 						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Sun1.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
@@ -5010,18 +5010,18 @@ def spellVolley(caster,volleytype):
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT1')) or caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND1')):
 					iChance = 0
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT1')):
-						iChance += 1
+						iChance += 5
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT2')):
-						iChance += 1
+						iChance += 10
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT3')):
-						iChance += 1
+						iChance += 20
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND1')):
-						iChance += 1
+						iChance += 5
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND2')):
-						iChance += 1
+						iChance += 10
 					if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MIND3')):
-						iChance += 1
-					if CyGame().getSorenRandNum(6, "Charmed") < iChance:
+						iChance += 20
+					if CyGame().getSorenRandNum(100, "Charmed") < iChance:
 						pBestUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CHARMED'), True)
 						sMsg = pBestUnit.getName() + ' has been charmed...'
 						CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'',1,'Art/Interface/Buttons/Promotions/Charmed.dds',ColorTypes(7),pBestUnit.getX(),pBestUnit.getY(),True,True)
