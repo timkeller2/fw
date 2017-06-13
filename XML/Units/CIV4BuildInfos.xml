@@ -1792,6 +1792,61 @@
 			<Button>Art/Interface/Buttons/Worldbuilder/Shadow.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
+			<Type>BUILD_MANA_DIMENSIONAL</Type>
+			<Description>Build Dimensional Node</Description>
+			<Help/>
+			<PrereqTech>TECH_ALTERATION</PrereqTech>
+			<iTime>1200</iTime>
+			<iCost>0</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_MANA_DIMENSIONAL</ImprovementType>
+			<RouteType>NONE</RouteType>
+			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>400</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<PrereqTech>TECH_MINING</PrereqTech>
+					<iTime>250</iTime>
+					<iProduction>20</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<PrereqTech>TECH_MINING</PrereqTech>
+					<iTime>500</iTime>
+					<iProduction>30</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<PrereqTech>TECH_MINING</PrereqTech>
+					<iTime>0</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
+					<PrereqTech>TECH_MINING</PrereqTech>
+					<iTime>125</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<HotKey></HotKey>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Worldbuilder/Shadow.dds</Button>
+		</BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_MANA_SUN</Type>
 			<Description>TXT_KEY_BUILD_MANA_SUN</Description>
 			<Help/>

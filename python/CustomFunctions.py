@@ -4349,7 +4349,7 @@ class CustomFunctions:
 			if gc.getGame().getUnitClassCreatedCount(gc.getInfoTypeForString('UNITCLASS_TUMTUM'))==0:				
 				iValue[sProd.index('UNITCLASS_TUMTUM')]=100000	
 
-		if not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_ACHERON):		
+		if not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_NO_ACHERON) and CyGame().getGameTurn() > 100:		
 			if gc.getGame().getUnitClassCreatedCount(gc.getInfoTypeForString('UNITCLASS_ACHERON'))==0:		
 				if pPlayer.getUnitClassCountPlusMaking(gc.getInfoTypeForString('UNITCLASS_ACHERON'))==0:					
 					iValue[sProd.index('UNITCLASS_ACHERON')]=150000			

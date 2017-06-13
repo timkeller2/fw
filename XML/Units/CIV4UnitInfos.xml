@@ -5542,6 +5542,10 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_MANA_DIMENSIONAL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_MANA_SUN</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -5831,6 +5835,10 @@
                 </Build>
                 <Build>
                     <BuildType>BUILD_MANA_SHADOW</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_MANA_DIMENSIONAL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -6137,6 +6145,10 @@
                 </Build>
                 <Build>
                     <BuildType>BUILD_MANA_SHADOW</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_MANA_DIMENSIONAL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -8770,6 +8782,10 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_MANA_DIMENSIONAL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_MANA_SUN</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -9063,6 +9079,10 @@
                 </Build>
                 <Build>
                     <BuildType>BUILD_MANA_SHADOW</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_MANA_DIMENSIONAL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -26590,6 +26610,10 @@
                     <iAffinity>1</iAffinity>
                 </BonusAffinity>
                 <BonusAffinity>
+                    <BonusType>BONUS_MANA_DIMENSIONAL</BonusType>
+                    <iAffinity>1</iAffinity>
+                </BonusAffinity>
+                <BonusAffinity>
                     <BonusType>BONUS_MANA_ICE</BonusType>
                     <iAffinity>1</iAffinity>
                 </BonusAffinity>
@@ -32709,6 +32733,10 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_MANA_DIMENSIONAL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_MANA_SUN</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -34606,6 +34634,10 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_MANA_DIMENSIONAL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_MANA_SUN</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -36457,6 +36489,10 @@
                 </Build>
                 <Build>
                     <BuildType>BUILD_MANA_SHADOW</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_MANA_DIMENSIONAL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -46106,6 +46142,10 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_MANA_DIMENSIONAL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_MANA_SUN</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -48915,6 +48955,10 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_MANA_DIMENSIONAL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_MANA_SUN</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -49216,6 +49260,10 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_MANA_DIMENSIONAL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_MANA_SUN</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -49510,6 +49558,10 @@
                 </Build>
                 <Build>
                     <BuildType>BUILD_MANA_SHADOW</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_MANA_DIMENSIONAL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -53684,6 +53736,10 @@
                 </Build>
                 <Build>
                     <BuildType>BUILD_MANA_SHADOW</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_MANA_DIMENSIONAL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
