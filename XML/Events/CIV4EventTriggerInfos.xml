@@ -1216,7 +1216,7 @@
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback>doArmageddonArs</PythonCallback>
             <iPrereqCrime>0</iPrereqCrime>
-            <iPrereqGlobalCounter>70</iPrereqGlobalCounter>
+            <iPrereqGlobalCounter>85</iPrereqGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
             <PrereqCivilizationPleased>NONE</PrereqCivilizationPleased>
             <PrereqLeader>NONE</PrereqLeader>
@@ -1315,7 +1315,7 @@
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback>doArmageddonBlight</PythonCallback>
             <iPrereqCrime>0</iPrereqCrime>
-            <iPrereqGlobalCounter>30</iPrereqGlobalCounter>
+            <iPrereqGlobalCounter>60</iPrereqGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
             <PrereqCivilizationPleased>NONE</PrereqCivilizationPleased>
             <PrereqLeader>NONE</PrereqLeader>
@@ -1414,7 +1414,7 @@
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback>doArmageddonBuboes</PythonCallback>
             <iPrereqCrime>0</iPrereqCrime>
-            <iPrereqGlobalCounter>50</iPrereqGlobalCounter>
+            <iPrereqGlobalCounter>75</iPrereqGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
             <PrereqCivilizationPleased>NONE</PrereqCivilizationPleased>
             <PrereqLeader>NONE</PrereqLeader>
@@ -1513,7 +1513,7 @@
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback>doArmageddonHellfire</PythonCallback>
             <iPrereqCrime>0</iPrereqCrime>
-            <iPrereqGlobalCounter>80</iPrereqGlobalCounter>
+            <iPrereqGlobalCounter>90</iPrereqGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
             <PrereqCivilizationPleased>NONE</PrereqCivilizationPleased>
             <PrereqLeader>NONE</PrereqLeader>
@@ -1612,7 +1612,7 @@
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback>doArmageddonPestilence</PythonCallback>
             <iPrereqCrime>0</iPrereqCrime>
-            <iPrereqGlobalCounter>35</iPrereqGlobalCounter>
+            <iPrereqGlobalCounter>50</iPrereqGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
             <PrereqCivilizationPleased>NONE</PrereqCivilizationPleased>
             <PrereqLeader>NONE</PrereqLeader>
@@ -1711,7 +1711,7 @@
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback>doArmageddonStephanos</PythonCallback>
             <iPrereqCrime>0</iPrereqCrime>
-            <iPrereqGlobalCounter>40</iPrereqGlobalCounter>
+            <iPrereqGlobalCounter>70</iPrereqGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
             <PrereqCivilizationPleased>NONE</PrereqCivilizationPleased>
             <PrereqLeader>NONE</PrereqLeader>
@@ -1810,7 +1810,7 @@
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback>doArmageddonWrath</PythonCallback>
             <iPrereqCrime>0</iPrereqCrime>
-            <iPrereqGlobalCounter>90</iPrereqGlobalCounter>
+            <iPrereqGlobalCounter>95</iPrereqGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
             <PrereqCivilizationPleased>NONE</PrereqCivilizationPleased>
             <PrereqLeader>NONE</PrereqLeader>
@@ -1909,7 +1909,7 @@
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback>doArmageddonYersinia</PythonCallback>
             <iPrereqCrime>0</iPrereqCrime>
-            <iPrereqGlobalCounter>60</iPrereqGlobalCounter>
+            <iPrereqGlobalCounter>80</iPrereqGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
             <PrereqCivilizationPleased>NONE</PrereqCivilizationPleased>
             <PrereqLeader>NONE</PrereqLeader>
@@ -4749,7 +4749,7 @@
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback></PythonCallback>
             <iPrereqCrime>0</iPrereqCrime>
-            <iPrereqGlobalCounter>40</iPrereqGlobalCounter>
+            <iPrereqGlobalCounter>70</iPrereqGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
             <PrereqCivilizationPleased>NONE</PrereqCivilizationPleased>
             <PrereqLeader>NONE</PrereqLeader>
@@ -5985,7 +5985,7 @@
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback></PythonCallback>
             <iPrereqCrime>0</iPrereqCrime>
-            <iPrereqGlobalCounter>40</iPrereqGlobalCounter>
+            <iPrereqGlobalCounter>70</iPrereqGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
             <PrereqCivilizationPleased>NONE</PrereqCivilizationPleased>
             <PrereqLeader>NONE</PrereqLeader>
@@ -10195,7 +10195,7 @@
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback></PythonCallback>
             <iPrereqCrime>0</iPrereqCrime>
-            <iPrereqGlobalCounter>50</iPrereqGlobalCounter>
+            <iPrereqGlobalCounter>75</iPrereqGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
             <PrereqCivilizationPleased>NONE</PrereqCivilizationPleased>
             <PrereqLeader>NONE</PrereqLeader>
@@ -13135,7 +13135,7 @@
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback></PythonCallback>
             <iPrereqCrime>0</iPrereqCrime>
-            <iPrereqGlobalCounter>30</iPrereqGlobalCounter>
+            <iPrereqGlobalCounter>50</iPrereqGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
             <PrereqCivilizationPleased>NONE</PrereqCivilizationPleased>
             <PrereqLeader>NONE</PrereqLeader>
@@ -21503,7 +21503,7 @@
             <PythonCanDoUnit></PythonCanDoUnit>
             <PythonCallback></PythonCallback>
             <iPrereqCrime>0</iPrereqCrime>
-            <iPrereqGlobalCounter>50</iPrereqGlobalCounter>
+            <iPrereqGlobalCounter>75</iPrereqGlobalCounter>
             <PrereqAlignment>NONE</PrereqAlignment>
             <PrereqCivilizationPleased>NONE</PrereqCivilizationPleased>
             <PrereqLeader>NONE</PrereqLeader>

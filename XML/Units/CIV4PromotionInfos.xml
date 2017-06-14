@@ -20450,7 +20450,7 @@
             <BonusPrereq>NONE</BonusPrereq>
             <PromotionPrereqOr3>NONE</PromotionPrereqOr3>
             <PromotionPrereqOr4>NONE</PromotionPrereqOr4>
-            <PromotionPrereqAnd>NONE</PromotionPrereqAnd>
+            <PromotionPrereqAnd>PROMOTION_COMBAT2</PromotionPrereqAnd>
             <PromotionNextLevel>NONE</PromotionNextLevel>
             <PyPerTurn></PyPerTurn>
             <iGroupSize>0</iGroupSize>
