@@ -4001,31 +4001,6 @@ def sellToMarket(caster):
 			iPrice = ( pUnit.hillsAttackModifier() * ( 80 + cf.retSearch(caster) * 5 ) ) / 100
 			pPlayer.setGold( pPlayer.getGold() + iPrice )
 
-			# sGameData = cPickle.loads(CyGameInstance.getScriptData())
-			# Potions
-			# if 'BUILDING_HERBALIST' not in sGameData:
-				# sGameData['BUILDING_HERBALIST'] = 0
-			# if 'BUILDING_CRAFTSMEN_GUILD' not in sGameData:
-				# sGameData['BUILDING_CRAFTSMEN_GUILD'] = 0
-			# if 'BUILDING_LIBRARY' not in sGameData:
-				# sGameData['BUILDING_LIBRARY'] = 0
-			# if 'BUILDING_MAGE_GUILD' not in sGameData:
-				# sGameData['BUILDING_MAGE_GUILD'] = 0
-			# if 'BUILDING_ALCHEMY_LAB' not in sGameData:
-				# sGameData['BUILDING_ALCHEMY_LAB'] = 0
-
-			# if pUnit.getName().find('Potion') > -1:
-				# sGameData['BUILDING_HERBALIST'] += ( iPrice / 3 )
-			# elif pUnit.getName().find('Weap') > -1:
-				# sGameData['BUILDING_CRAFTSMEN_GUILD'] += ( iPrice / 3 )
-			# elif pUnit.getName().find('Armo') > -1:
-				# sGameData['BUILDING_CRAFTSMEN_GUILD'] += ( iPrice / 3 )
-			# elif pUnit.getName().find('Scro') > -1:
-				# sGameData['BUILDING_MAGE_GUILD'] += ( iPrice / 3 )
-			# else:
-				# sGameData['BUILDING_ALCHEMY_LAB'] += ( iPrice / 3 )
-
-			# CyGameInstance.setScriptData(cPickle.dumps(sGameData))
 			caster.changeExperience(1, -1, False, False, False)
 
 			sMsg = 'Your ' + caster.getName() + ' sells a ' + pUnit.getName() + ' for ' + str( iPrice ) + 'gp...  (Burglar Skill: '+str(cf.retSearch(caster))+')'
@@ -4204,19 +4179,7 @@ def spellTeleport(caster,loc):
 				itx = pUnit.getX()
 				ity = pUnit.getY()
 				iMana = -2
-				# pUnit.kill(True,0)
 				break
-
-		# if iMana > -2:
-			# for i in range (CyMap().numPlots()):
-				# pPlot = CyMap().plotByIndex(i)
-				# iRoll = CyGame().getSorenRandNum(100, "findManaPlot")
-				# if (pPlot.getBonusType(-1) == gc.getInfoTypeForString('BONUS_MANA')):
-					# iRoll += 100;
-				# if (not pPlot.isOwned() and not pPlot.isWater() and not pPlot.isImpassable() and iRoll > iMana and pPlot.getNumUnits() == 0):
-					# iMana = iRoll		
-					# itx = pPlot.getX()
-					# ity = pPlot.getY()
 
 	iPassengers = caster.getLevel() / 4
 	if (caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIMENSIONAL2')) and caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING2'))):
@@ -4226,6 +4189,7 @@ def spellTeleport(caster,loc):
 
 	pPlot = caster.plot()
 	caster.setXY(itx, ity, true, true, false)
+	caster.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CHARMED'), True)
 
 	if iPassengers > 0:
 		for i in range(pPlot.getNumUnits()):
