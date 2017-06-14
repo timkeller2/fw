@@ -817,7 +817,7 @@
             <PrereqCivilization>NONE</PrereqCivilization>
             <PythonAtRange></PythonAtRange>
             <PythonOnMove></PythonOnMove>
-            <SpawnUnitType>NONE</SpawnUnitType>
+            <SpawnUnitType>UNIT_ZOMBIE</SpawnUnitType>
         </ImprovementInfo>
         <ImprovementInfo>
             <Type>IMPROVEMENT_COTTAGE</Type>

@@ -51,7 +51,7 @@ class CustomFunctions:
 				if unit.baseCombatStr() > 0:
 					self.unitAptitude(unit)
 				sMsg = 'A ' + str( unit.getName() ) + ' of unusual skill has been identified among the new recruits!'
-				CyInterface().addMessage(unit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,'Art/Interface/Buttons/Units/Balor.dds',ColorTypes(8),unit.getX(),unit.getY(),True,True)
+				CyInterface().addMessage(unit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,unit.getButton(),ColorTypes(8),unit.getX(),unit.getY(),True,True)
 
 			## Dire beasts and dragons add a chance that new living units will start with the Cult of the Dragon promotion...
 			if unit.isAlive():
