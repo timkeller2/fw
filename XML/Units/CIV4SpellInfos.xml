@@ -3146,6 +3146,36 @@
             <Button>Art/Interface/Buttons/Units/Pit Beast.dds</Button>
         </SpellInfo>
         <SpellInfo>
+            <Type>SPELL_SUMMON_CHAOS_MARAUDER</Type>
+            <Description>Summon Chaos Marauder</Description>
+            <Civilopedia></Civilopedia>
+            <PromotionPrereq1>PROMOTION_CHAOS2</PromotionPrereq1>
+            <PromotionPrereq2>PROMOTION_SUMMONER</PromotionPrereq2>
+            <bAllowAI>1</bAllowAI>
+            <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <CreateUnitType>UNIT_CHAOS_MARAUDER</CreateUnitType>
+            <iCreateUnitNum>1</iCreateUnitNum>
+            <Effect>EFFECT_PIT_BEAST_SUMMON</Effect>
+            <Sound>AS3D_SPELL_PIT_BEAST</Sound>
+            <Button>Art/Interface/Buttons/Units/Chaos Marauder.dds</Button>
+        </SpellInfo>
+        <SpellInfo>
+            <Type>SPELL_SUMMON_AZER</Type>
+            <Description>Summon Azer</Description>
+            <Civilopedia></Civilopedia>
+            <PromotionPrereq1>PROMOTION_FIRE2</PromotionPrereq1>
+            <PromotionPrereq2>PROMOTION_SUMMONER</PromotionPrereq2>
+            <bAllowAI>1</bAllowAI>
+            <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <CreateUnitType>UNIT_AZER</CreateUnitType>
+            <iCreateUnitNum>1</iCreateUnitNum>
+            <Effect>EFFECT_FIRE_SUMMON</Effect>
+            <Sound>AS3D_SPELL_FIREBALL</Sound>
+            <Button>Art/Interface/Buttons/Units/Azer.dds</Button>
+        </SpellInfo>
+        <SpellInfo>
             <Type>SPELL_SUMMON_SAND_LION</Type>
             <Description>TXT_KEY_SPELL_SUMMON_SAND_LION</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>

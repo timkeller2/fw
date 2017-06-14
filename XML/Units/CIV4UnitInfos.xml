@@ -13817,7 +13817,7 @@
             </TerrainPassableTechs>
             <FeaturePassableTechs>
             </FeaturePassableTechs>
-            <iCombat>3</iCombat>
+            <iCombat>1</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>0</iAirCombat>
             <iAirCombatLimit>0</iAirCombatLimit>
@@ -13909,9 +13909,9 @@
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
             <bExplodeInCombat>1</bExplodeInCombat>
-            <iCombatDefense>3</iCombatDefense>
+            <iCombatDefense>1</iCombatDefense>
             <iTier>3</iTier>
-            <PythonPostCombatLost>postCombatExplode(pCaster,pOpponent)</PythonPostCombatLost>
+            <PythonPostCombatLost></PythonPostCombatLost>
             <DamageTypeCombats>
                 <DamageTypeCombat>
                     <DamageType>DAMAGE_FIRE</DamageType>

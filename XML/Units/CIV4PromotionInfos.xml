@@ -7609,7 +7609,7 @@
             <Type>PROMOTION_SUMMONER</Type>
             <Description>TXT_KEY_PROMOTION_SUMMONER</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <PromotionPrereq>PROMOTION_HERO</PromotionPrereq>
+            <PromotionPrereq>PROMOTION_COMBAT2</PromotionPrereq>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
@@ -7619,7 +7619,6 @@
             <Button>Art/Interface/Buttons/Promotions/Summoner.dds</Button>
             <iAIWeight>100</iAIWeight>
             <PromotionSummonPerk>PROMOTION_COMBAT1</PromotionSummonPerk>
-            <PromotionPrereqAnd>PROMOTION_COMBAT5</PromotionPrereqAnd>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_SUN1</Type>
@@ -20323,11 +20322,11 @@
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_SUMMONING</Type>
-            <Description>Summoning</Description>
+            <Description>Advanced Summoning</Description>
             <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
-            <PromotionPrereq>PROMOTION_COMBAT2</PromotionPrereq>
+            <PromotionPrereq>PROMOTION_SUMMONER</PromotionPrereq>
             <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
             <TechPrereq>NONE</TechPrereq>
