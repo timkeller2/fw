@@ -1499,7 +1499,7 @@ class CustomFunctions:
 		if iStrong == 1:
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG'), True)
 
-		if iImmortal > 0 and newUnit.getPlayer() != gc.getBARBARIAN_PLAYER():
+		if iImmortal > 0 and newUnit.getOwner() != gc.getBARBARIAN_PLAYER():
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMORTAL'), True)
 
 		if CyGame().getSorenRandNum(3, "Mobile") == 1:
