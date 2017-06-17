@@ -5463,7 +5463,7 @@
             <Civilopedia>NONE</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help></Help>
-            <PromotionPrereq1>PROMOTION_GOVERNOR3</PromotionPrereq1>
+            <PromotionPrereq1>PROMOTION_COMMANDER2</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
             <UnitClassPrereq>NONE</UnitClassPrereq>
@@ -5513,14 +5513,14 @@
             <bDispel>0</bDispel>
             <bPush>0</bPush>
             <bRemoveHasCasted>0</bRemoveHasCasted>
-            <bSacrificeCaster>1</bSacrificeCaster>
+            <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
-            <iCost>0</iCost>
+            <iCost>250</iCost>
             <iImmobileTurns>3</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult></PyResult>
-            <PyRequirement></PyRequirement>
+            <PyResult>spellImmoblize(pCaster,3)</PyResult>
+            <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_COMMAND_POST','COMMAND_POST')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
             <HotKey></HotKey>
@@ -5587,14 +5587,14 @@
             <bDispel>0</bDispel>
             <bPush>0</bPush>
             <bRemoveHasCasted>0</bRemoveHasCasted>
-            <bSacrificeCaster>1</bSacrificeCaster>
+            <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
-            <iCost>0</iCost>
-            <iImmobileTurns>0</iImmobileTurns>
+            <iCost>500</iCost>
+            <iImmobileTurns>7</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult></PyResult>
-            <PyRequirement></PyRequirement>
+            <PyResult>spellImmoblize(pCaster,7)</PyResult>
+            <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_MILITARY_ACADEMY','MILITARY_ACADEMY')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
             <HotKey></HotKey>

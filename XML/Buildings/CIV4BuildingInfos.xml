@@ -43349,7 +43349,7 @@
             <Description>Military Academy</Description>
             <Civilopedia></Civilopedia>
             <Strategy></Strategy>
-            <Help>Military Academies may be built by Great Commanders.  They give additional instruction to the most qualified candidate in the city (xp gain up to the population of the city).</Help>
+            <Help>Military Academies may be built by Great Commanders and units with Leadership III.  They give additional instruction to the most qualified candidate in the city (xp gain up to the population of the city).</Help>
             <Advisor>ADVISOR_MILITARY</Advisor>
             <ArtDefineTag>ART_DEF_BUILDING_ACADEMY</ArtDefineTag>
             <MovieDefineTag>NONE</MovieDefineTag>
