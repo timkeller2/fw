@@ -5052,7 +5052,7 @@ def reqGrantLife(caster):
 	pPlot = caster.plot()
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
-		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False and pUnit.baseCombatStr() < 15 and pUnit.baseCombatStr() > 2):
+		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False and pUnit.baseCombatStr() < 15 and pUnit.baseCombatStr() > 1):
 			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMORTAL')):
 				return True
 	return False
@@ -5063,7 +5063,7 @@ def spellGrantLife(caster):
 	pPlot = caster.plot()
 	for i in range(pPlot.getNumUnits()):
 		pUnit = pPlot.getUnit(i)
-		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False and pUnit.baseCombatStr() < 15 and pUnit.baseCombatStr() > 2):
+		if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) == False and pUnit.baseCombatStr() < 15 and pUnit.baseCombatStr() > 1):
 			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMORTAL')):
 				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMORTAL'),True)
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIFE1')):
