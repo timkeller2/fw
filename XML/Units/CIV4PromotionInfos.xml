@@ -850,7 +850,7 @@
             <Help>[ICON_BULLET]Auto buff if fortified: Enchanted Blade, Courage, Loyalty, Fair Winds. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET]+20 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling1.dds</Button>
-            <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
+            <iBetterDefenderThanPercent>0</iBetterDefenderThanPercent>
             <iMinLevel>-1</iMinLevel>
             <iSpellCasterXP>20</iSpellCasterXP>
             <iSpellDamageModify>0</iSpellDamageModify>

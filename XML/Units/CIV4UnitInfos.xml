@@ -69764,6 +69764,7 @@
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
             <iCombatDefense>7</iCombatDefense>
+            <iMinLevel>6</iMinLevel>
             <iTier>3</iTier>
             <PythonPostCombatLost>postCombatSplit(pCaster,pOpponent)</PythonPostCombatLost>
             <DamageTypeCombats>

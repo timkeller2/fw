@@ -6945,7 +6945,7 @@ def canBuyMinorImmortality(argsList):
 		iMinorBoost = 1
 	if team.isHasTech(CvUtil.findInfoTypeNum(gc.getTechInfo,gc.getNumTechInfos(),'TECH_ARCANE_LORE')):
 		iMinorBoost = 2
-	if (pUnit.getLevel() > 5 + iMinorBoost or pUnit.baseCombatStr() > 5 + iMinorBoost):
+	if (pUnit.getLevel() > 5 + iMinorBoost or pUnit.baseCombatStr() > 5 + iMinorBoost or pUnit.CombatStr() < 2):
 		return False
 		
 	if pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_SETTLER'):
