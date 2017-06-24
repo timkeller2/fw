@@ -13513,7 +13513,7 @@
         <SpellInfo>
             <Type>SPELL_CORONATE</Type>
             <Description>Add this unit to the Nobility</Description>
-            <Help>Cities with 4000 culture may add a unit to the nobility.  This also occurs at 9000, 16000 and 25000 culture.</Help>
+            <Help>Cities with enough culture may add a unit to the nobility.  This also occurs at 1000, 4000, 9000, 16000, 25000, 36000 and 49000 culture.</Help>
             <bAllowAI>1</bAllowAI>
             <iAIWeightWar>50</iAIWeightWar>
             <bInBordersOnly>1</bInBordersOnly>
@@ -13522,7 +13522,7 @@
             <bHasCasted>1</bHasCasted>
             <AddPromotionType1>PROMOTION_NOBILITY</AddPromotionType1>
             <bBuffCasterOnly>1</bBuffCasterOnly>
-            <iCost>250</iCost>
+            <iCost>100</iCost>
             <PyResult>spellCoronate(pCaster)</PyResult>
             <PyRequirement>reqCoronate(pCaster)</PyRequirement>
             <Effect>EFFECT_SWORDS_SPARKS</Effect>

@@ -11325,7 +11325,7 @@
             <PromotionPrereq>PROMOTION_DRILL1</PromotionPrereq>
             <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
-            <TechPrereq>NONE</TechPrereq>
+            <TechPrereq>TECH_NEVER</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
             <bBlitz>0</bBlitz>

@@ -403,7 +403,7 @@ class CustomFunctions:
 			if iBestRange < 999:
 				sDirection = ' to the ' + self.retDir(iX,iY,tx,ty)
 				if sDirection == ' to the ':
-					sDirection = ' in a part'
+					sDirection = ' in the tile'
 
 				if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR3')):
 					sDip = 'Your sources say that there are around '+str(iCaches)+' hidden caches in the world, '+str(iCachesLev)+' that are within your experience level, and the closest one is ' + str(iBestRange) + ' tiles' + sDirection + ' of ' + sName + sPref + '...'
@@ -2909,7 +2909,7 @@ class CustomFunctions:
 					pUnit.setHasCasted(True)
 
 				## Burglars fortified on a Hidden Cache continue to search for a way to loot it.
-				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR1')) and not pUnit.isHasCasted() and pUnit.getFortifyTurns() > 4 and self.reqInteractCache(pUnit,1):
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR1')) and not pUnit.isHasCasted() and pUnit.getFortifyTurns() > 4: ## and self.reqInteractCache(pUnit,1):
 					self.spellExamineCache(pUnit,1)
 					pUnit.setHasCasted(True)
 					
@@ -3418,11 +3418,11 @@ class CustomFunctions:
 						if not pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_ORC') and not pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_LIZARDMAN'):
 							if (pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_BEAST')):
 								if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')):
-									if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED')) and CyGame().getSorenRandNum(100, "JungleFever") < iJunglePlot + iDiseaseInPlot * iDisMult + pUnit.getDamage() / 20:
+									if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED')) and CyGame().getSorenRandNum(100, "JungleFever") < iJunglePlot + iDiseaseInPlot * iDisMult + pUnit.getDamage() / 10:
 										pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'), True)
 										sMsg = pUnit.getName() + ' contracts a disease!'
 										CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
-									if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')) and CyGame().getSorenRandNum(100, "ThePlague") < iPlagueInPlot * iDisMult * 2 and iPlagueInPlot > 0 + pUnit.getDamage() / 10:
+									if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')) and CyGame().getSorenRandNum(100, "ThePlague") < iPlagueInPlot * iDisMult * 2 + pUnit.getDamage() / 5:
 										pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), True)
 										sMsg = pUnit.getName() + ' contracts the plague!'
 										CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)

@@ -2286,9 +2286,9 @@ def reqCoronate(caster):
 	iPlayer = caster.getOwner()
 	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NOBILITY')):
 		return False
-	if pCity.getCulture(iPlayer) < 4000:
+	if pCity.getCulture(iPlayer) < 1000:
 		return False
-	iNobles = cf.getObjectInt(pCity,'Nobles') + 2
+	iNobles = cf.getObjectInt(pCity,'Nobles') + 1
 	if pCity.getCulture(iPlayer) >= iNobles * iNobles * 1000:
 		return True
 		
