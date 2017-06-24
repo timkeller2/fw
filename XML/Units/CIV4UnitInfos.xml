@@ -81802,7 +81802,7 @@
             <StateReligion>NONE</StateReligion>
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
-            <PrereqBuilding>BUILDING_MONUMENT</PrereqBuilding>
+            <PrereqBuilding>NONE</PrereqBuilding>
             <PrereqTech>TECH_ANCIENT_CHANTS</PrereqTech>
             <TechTypes>
             </TechTypes>

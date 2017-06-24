@@ -2161,6 +2161,7 @@
         <PromotionInfo>
             <Type>PROMOTION_DISEASED</Type>
             <Description>TXT_KEY_PROMOTION_DISEASED</Description>
+            <Help>[ICON_BULLET]Diseased units take a random amount of damage each turn up to 10 + 1/10 damage to a damaged unit.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <iEnemyHealChange>-10</iEnemyHealChange>
