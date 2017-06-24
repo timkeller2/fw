@@ -5463,8 +5463,8 @@
             <Civilopedia>NONE</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help></Help>
-            <PromotionPrereq1>PROMOTION_COMMANDER2</PromotionPrereq1>
-            <PromotionPrereq2>NONE</PromotionPrereq2>
+            <PromotionPrereq1>PROMOTION_NOBILITY</PromotionPrereq1>
+            <PromotionPrereq2>PROMOTION_COMMANDER2</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
             <UnitClassPrereq>NONE</UnitClassPrereq>
             <UnitCombatPrereq>NONE</UnitCombatPrereq>
@@ -5537,8 +5537,8 @@
             <Civilopedia>NONE</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help></Help>
-            <PromotionPrereq1>PROMOTION_COMMANDER3</PromotionPrereq1>
-            <PromotionPrereq2>NONE</PromotionPrereq2>
+            <PromotionPrereq1>PROMOTION_NOBILITY</PromotionPrereq1>
+            <PromotionPrereq2>PROMOTION_COMMANDER3</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
             <UnitClassPrereq>NONE</UnitClassPrereq>
             <UnitCombatPrereq>NONE</UnitCombatPrereq>
