@@ -2396,6 +2396,8 @@ class CustomFunctions:
 		iGov1 = {}
 		iGov2 = {}
 		iGov3 = {}
+		iCom1 = {}
+		iMil1 = {}
 			
 		# Crowded squares are crowded - FW
 		for i in range (CyMap().numPlots()):
@@ -2434,6 +2436,14 @@ class CustomFunctions:
 						if pUnit.getOwner() not in iGov3:
 							iGov3[pUnit.getOwner()] = 0
 						iGov3[pUnit.getOwner()] += 1
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER2')):
+						if pUnit.getOwner() not in iCom1:
+							iCom1[pUnit.getOwner()] = 0
+						iCom1[pUnit.getOwner()] += 1
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMMANDER3')):
+						if pUnit.getOwner() not in iMil1:
+							iMil1[pUnit.getOwner()] = 0
+						iMil1[pUnit.getOwner()] += 1
 					
 					# Crowding damage
 					if pPlot.getNumUnits() > roomFor:
@@ -2504,6 +2514,10 @@ class CustomFunctions:
 						sPD['Gov2'] = iGov2[iPlayer]
 					if iPlayer in iGov3:
 						sPD['Gov3'] = iGov3[iPlayer]
+					if iPlayer in iCom1:
+						sPD['Com1'] = iCom1[iPlayer]
+					if iPlayer in iMil1:
+						sPD['Mil1'] = iMil1[iPlayer]
 
 	#			Sell Extra Resources
 				if pPlayer.isAlive() and pPlayer.getNumCities() > 0:

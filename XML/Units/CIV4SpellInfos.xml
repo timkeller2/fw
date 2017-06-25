@@ -5495,7 +5495,7 @@
             <RemovePromotionType1>NONE</RemovePromotionType1>
             <RemovePromotionType2>NONE</RemovePromotionType2>
             <RemovePromotionType3>NONE</RemovePromotionType3>
-            <bBuffCasterOnly>1</bBuffCasterOnly>
+            <bBuffCasterOnly>0</bBuffCasterOnly>
             <ConvertUnitType>NONE</ConvertUnitType>
             <CreateBuildingType>BUILDING_COMMAND_POST</CreateBuildingType>
             <CreateFeatureType>NONE</CreateFeatureType>
@@ -5520,7 +5520,7 @@
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
             <PyResult>spellImmoblize(pCaster,3)</PyResult>
-            <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_COMMAND_POST','COMMAND_POST')</PyRequirement>
+            <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_COMMAND_POST','Com1')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
             <HotKey></HotKey>
@@ -5594,7 +5594,7 @@
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
             <PyResult>spellImmoblize(pCaster,7)</PyResult>
-            <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_MILITARY_ACADEMY','MILITARY_ACADEMY')</PyRequirement>
+            <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_MILITARY_ACADEMY','Mil1')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
             <HotKey></HotKey>
