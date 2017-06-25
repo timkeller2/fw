@@ -3532,7 +3532,7 @@
         <PromotionInfo>
             <Type>PROMOTION_FLYING</Type>
             <Description>TXT_KEY_PROMOTION_FLYING</Description>
-            <Help>[ICON_BULLET]+40% combat defense</Help>
+            <Help>[ICON_BULLET]+40% Combat Defense</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <bAmphib>1</bAmphib>
@@ -15125,7 +15125,7 @@
         <PromotionInfo>
             <Type>PROMOTION_IMPROVED_ARMOR</Type>
             <Description>Improved Armor</Description>
-            <Help></Help>
+            <Help>[ICON_BULLET]+20% Combat Defense</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -15297,7 +15297,7 @@
         <PromotionInfo>
             <Type>PROMOTION_HEAVY_ARMOR</Type>
             <Description>Heavy Armor</Description>
-            <Help></Help>
+            <Help>[ICON_BULLET]+20% Combat Defense</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
