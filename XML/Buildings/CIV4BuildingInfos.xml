@@ -17098,7 +17098,7 @@
             <Type>BUILDING_HERBALIST</Type>
             <SpecialBuildingType>NONE</SpecialBuildingType>
             <Description>TXT_KEY_BUILDING_HERBALIST</Description>
-            <Civilopedia>TXT_KEY_BUILDING_PLACEHOLDER_PEDIA</Civilopedia>
+            <Civilopedia></Civilopedia>
             <Strategy></Strategy>
             <Help></Help>
             <Advisor>ADVISOR_GROWTH</Advisor>

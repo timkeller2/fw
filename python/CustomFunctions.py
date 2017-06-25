@@ -48,7 +48,7 @@ class CustomFunctions:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1'), True)
 
 			if CyGame().getSorenRandNum(20, "RandomHero") == 1:
-				if unit.baseCombatStr() > 0:
+				if unit.baseCombatStr() > 1:
 					self.unitAptitude(unit)
 				sMsg = 'A ' + str( unit.getName() ) + ' of unusual skill has been identified among the new recruits!'
 				CyInterface().addMessage(unit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,unit.getButton(),ColorTypes(8),unit.getX(),unit.getY(),True,True)
@@ -752,6 +752,10 @@ class CustomFunctions:
 			strSetData[sBuilding] = CyGame().getGameTurn() - pCity.getPopulation() * 3
 
 		iCostMod = ( iCost * 15 ) / pCity.getPopulation()	
+		
+		## Rush charge if not enough stock
+		if strSetData[sBuilding] > CyGame().getGameTurn():
+			iCostMod = iCostMod * 1.5
 			
 		strSetData[sBuilding] = strSetData[sBuilding] + iCostMod
 		pCity.setScriptData(cPickle.dumps(strSetData))
@@ -3400,11 +3404,11 @@ class CustomFunctions:
 						
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')):
 						iPlagueInPlot += 1
-						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')):
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUE_CARRIER')):
 							pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), False)
 						else:
 							pUnit.doDamageNoCaster(iDamage, 100, gc.getInfoTypeForString('DAMAGE_POISON'), False)
-							if (CyGame().getSorenRandNum(100, "RecoverPlague") < iRecover / 2 or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUE_CARRIER')) ):
+							if CyGame().getSorenRandNum(100, "RecoverPlague") < iRecover / 2:
 								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), False)
 								sMsg = pUnit.getName() + ' recovers from the plague!'
 								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,pUnit.getButton(),ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)

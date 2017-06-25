@@ -9238,7 +9238,7 @@
             <Description>Use Bandages</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Restores ~(25/Str + 1/2 tile heal rate up to 10)% health to the user.</Help>
+            <Help>[ICON_BULLET]Restores ~(25/Str + 1/2 tile heal rate up to 10)% health to the user.[NEWLINE][ICON_BULLET]4% chance of healing disease, 8% chance of healing poison.</Help>
             <PromotionPrereq1>PROMOTION_POTION_HEALING_MINOR</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -9312,7 +9312,7 @@
             <Description>Use Moderate Healing Potion</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Restores ~(50/Str + 1/2 tile heal rate up to 10)% health to the user.</Help>
+            <Help>[ICON_BULLET]Restores ~(50/Str + 1/2 tile heal rate up to 10)% health to the user.[NEWLINE][ICON_BULLET]25% chance of healing disease, 50% chance of healing poison.</Help>
             <PromotionPrereq1>PROMOTION_POTION_HEALING_MODERATE</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -9460,7 +9460,7 @@
             <Description>Use Greater Healing Potion</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Restores ~(100/Str + 1/2 tile heal rate up to 10)% health to the user.</Help>
+            <Help>[ICON_BULLET]Restores ~(100/Str + 1/2 tile heal rate up to 10)% health to the user.[NEWLINE][ICON_BULLET]Heals poison, 50% chance of curing a disease.</Help>
             <PromotionPrereq1>PROMOTION_POTION_HEALING_GREATER</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>

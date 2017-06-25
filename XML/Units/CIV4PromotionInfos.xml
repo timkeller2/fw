@@ -2161,7 +2161,7 @@
         <PromotionInfo>
             <Type>PROMOTION_DISEASED</Type>
             <Description>TXT_KEY_PROMOTION_DISEASED</Description>
-            <Help>[ICON_BULLET]Diseased units take a random amount of damage each turn up to 10 + 1/10 damage to a damaged unit.</Help>
+            <Help>[ICON_BULLET]Diseased units take a random amount of damage each turn up to 10 + 1/10 damage to a damaged unit.[NEWLINE][ICON_BULLET]Disease can spread in a stack of units.  2% per diseased unit + 2% if in jungle + 1/10 current damage.[NEWLINE][ICON_BULLET]Herbalists reduce the chance of disease spreading by 2% and infirmaries by 6% making them safe for 1 and 3 diseased units respectively.[NEWLINE][ICON_BULLET]A unit may recover from disease under certain conditions.  The chance of recovering is 3% - 1/10 damage + 2% for herbalist + 4% for infirmary, never being less than 1.5% in all.[NEWLINE][ICON_BULLET]So, for the best chance of recovery move the unit into a city with healing buildings and heal them up.[NEWLINE][ICON_BULLET]Bandages and healing potions also have a chance of curing disease (5%, 25%, 50%, 100% respectively).</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <iEnemyHealChange>-10</iEnemyHealChange>
@@ -6275,6 +6275,7 @@
         <PromotionInfo>
             <Type>PROMOTION_PLAGUED</Type>
             <Description>TXT_KEY_PROMOTION_PLAGUED</Description>
+            <Help>[ICON_BULLET]Plagued units take a random amount of damage each turn up to 10 + 1/10 damage to a damaged unit.[NEWLINE][ICON_BULLET]The plague can spread in a stack of units.  4% per plagued unit + 1/10 current damage.[NEWLINE][ICON_BULLET]Herbalists reduce the chance of disease spreading by 2% and infirmaries by 6% making them safer for plagued units.[NEWLINE][ICON_BULLET]A unit may recover from the plague under certain conditions.  The chance of recovering is 1.5% - 1/10 damage + 1% for herbalist + 2% for infirmary, never being less than 1% in all.[NEWLINE][ICON_BULLET]So, for the best chance of recovery move the unit into a city with healing buildings and heal them up.[NEWLINE][ICON_BULLET]Potions of Heal also remove plague.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <iEnemyHealChange>-20</iEnemyHealChange>
@@ -6380,7 +6381,7 @@
         <PromotionInfo>
             <Type>PROMOTION_POISONED</Type>
             <Description>TXT_KEY_PROMOTION_POISONED</Description>
-            <Help>TXT_KEY_PROMOTION_POISONED_PEDIA</Help>
+            <Help>[ICON_BULLET]Poisoned units take a random amount of damage each turn up to 5 + 1/20 damage to a damaged unit.[NEWLINE][ICON_BULLET]A unit may recover from poison by healing fully.[NEWLINE][ICON_BULLET]Bandages and healing potions also have a chance of curing poison (10%, 50%, 100%, 100% respectively).</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <iEnemyHealChange>-4</iEnemyHealChange>
