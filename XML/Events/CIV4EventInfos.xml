@@ -54604,7 +54604,7 @@
             </ClearEvents>
             <PythonCallback>herbalist6</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo></PythonCanDo>
+            <PythonCanDo>canherbalist6</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -54705,7 +54705,7 @@
             </ClearEvents>
             <PythonCallback>alchemylab5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canalchemylab5</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -54804,9 +54804,9 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback>alchemylab20</PythonCallback>
+            <PythonCallback>alchemylab25</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canalchemylab25</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -54907,7 +54907,7 @@
             </ClearEvents>
             <PythonCallback>herbalist6</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canherbalist6</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -55008,7 +55008,7 @@
             </ClearEvents>
             <PythonCallback>herbalist4</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canherbalist4</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -55109,7 +55109,7 @@
             </ClearEvents>
             <PythonCallback>herbalist9</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canherbalist9</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -55210,7 +55210,7 @@
             </ClearEvents>
             <PythonCallback>alchemylab10</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canalchemylab10</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -55311,7 +55311,7 @@
             </ClearEvents>
             <PythonCallback>herbalist9</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canherbalist9</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>

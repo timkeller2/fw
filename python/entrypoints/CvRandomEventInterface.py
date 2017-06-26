@@ -6951,6 +6951,10 @@ def canBuyMinorImmortality(argsList):
 	if pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_SETTLER'):
 		return False
 		
+	strSetData = cPickle.loads(pCity.getScriptData())
+	if CyGame().getGameTurn() - strSetData['BUILDING_HERBALIST'] < 20:
+		return False
+
 	return True
 
 def canBuyImmortality(argsList):
@@ -8088,7 +8092,33 @@ def cantrainingyard25(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] > 19:
+	if CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] > 24:
+		return True
+
+	return False
+
+def canalchemylab5(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+
+	pCity = pUnit.plot().getPlotCity()
+	strSetData = cPickle.loads(pCity.getScriptData())
+	if CyGame().getGameTurn() - strSetData['BUILDING_ALCHEMY_LAB'] > 4:
+		return True
+
+	return False
+
+def canalchemylab10(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+
+	pCity = pUnit.plot().getPlotCity()
+	strSetData = cPickle.loads(pCity.getScriptData())
+	if CyGame().getGameTurn() - strSetData['BUILDING_ALCHEMY_LAB'] > 9:
 		return True
 
 	return False
@@ -8101,7 +8131,7 @@ def canalchemylab25(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_ALCHEMY_LAB'] > 19:
+	if CyGame().getGameTurn() - strSetData['BUILDING_ALCHEMY_LAB'] > 24:
 		return True
 
 	return False
@@ -8114,7 +8144,7 @@ def canmageguild25(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_MAGE_GUILD'] > 19:
+	if CyGame().getGameTurn() - strSetData['BUILDING_MAGE_GUILD'] > 24:
 		return True
 
 	return False
@@ -8127,7 +8157,46 @@ def canmageguild100(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_MAGE_GUILD'] > 80:
+	if CyGame().getGameTurn() - strSetData['BUILDING_MAGE_GUILD'] > 99:
+		return True
+
+	return False
+
+def canherbalist4(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+
+	pCity = pUnit.plot().getPlotCity()
+	strSetData = cPickle.loads(pCity.getScriptData())
+	if CyGame().getGameTurn() - strSetData['BUILDING_HERBALIST'] > 3:
+		return True
+
+	return False
+
+def canherbalist6(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+
+	pCity = pUnit.plot().getPlotCity()
+	strSetData = cPickle.loads(pCity.getScriptData())
+	if CyGame().getGameTurn() - strSetData['BUILDING_HERBALIST'] > 5:
+		return True
+
+	return False
+
+def canherbalist9(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+
+	pCity = pUnit.plot().getPlotCity()
+	strSetData = cPickle.loads(pCity.getScriptData())
+	if CyGame().getGameTurn() - strSetData['BUILDING_HERBALIST'] > 8:
 		return True
 
 	return False
@@ -8140,7 +8209,7 @@ def canherbalist20(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_HERBALIST'] > 14:
+	if CyGame().getGameTurn() - strSetData['BUILDING_HERBALIST'] > 19:
 		return True
 
 	return False
