@@ -55008,7 +55008,7 @@
             </ClearEvents>
             <PythonCallback>herbalist4</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>canherbalist4</PythonCanDo>
+            <PythonCanDo></PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -55614,7 +55614,7 @@
             </ClearEvents>
             <PythonCallback>monument3</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canmonument3</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -55715,7 +55715,7 @@
             </ClearEvents>
             <PythonCallback>monument5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canmonument5</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -55816,7 +55816,7 @@
             </ClearEvents>
             <PythonCallback>monument5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canmonument5</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -55917,7 +55917,7 @@
             </ClearEvents>
             <PythonCallback>monument5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canmonument5</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -56018,7 +56018,7 @@
             </ClearEvents>
             <PythonCallback>monument5</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canmonument5</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -56119,7 +56119,7 @@
             </ClearEvents>
             <PythonCallback>monument12</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>isHuman</PythonCanDo>
+            <PythonCanDo>canmonument12</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -56824,9 +56824,9 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback>trainingyard25</PythonCallback>
+            <PythonCallback>trainingyard50</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>canmaster</PythonCanDo>
+            <PythonCanDo>cantrainingyard50</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>
@@ -56925,9 +56925,9 @@
             </EventTimes>
             <ClearEvents>
             </ClearEvents>
-            <PythonCallback>trainingyard25</PythonCallback>
+            <PythonCallback>trainingyard50</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>canmaster</PythonCanDo>
+            <PythonCanDo>cantrainingyard50</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>

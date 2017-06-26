@@ -748,8 +748,8 @@ class CustomFunctions:
 			strSetData[sBuilding] = 0
 			
 		## Set Max City Stock	
-		if strSetData[sBuilding] < CyGame().getGameTurn() - pCity.getPopulation() * 3:
-			strSetData[sBuilding] = CyGame().getGameTurn() - pCity.getPopulation() * 3
+		if strSetData[sBuilding] < CyGame().getGameTurn() - pCity.getPopulation() * 6:
+			strSetData[sBuilding] = CyGame().getGameTurn() - pCity.getPopulation() * 6
 
 		iCostMod = ( iCost * 15 ) / pCity.getPopulation()	
 		
@@ -761,7 +761,7 @@ class CustomFunctions:
 		pCity.setScriptData(cPickle.dumps(strSetData))
 
 		iStock = CyGame().getGameTurn() - strSetData[sBuilding]
-		iMaxStock = pCity.getPopulation() * 3
+		iMaxStock = pCity.getPopulation() * 6
 		if iMaxStock < 1:
 			iMaxStock = 1
 		iPercent = ( iStock * 100 ) / iMaxStock
