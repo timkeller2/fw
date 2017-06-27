@@ -7238,7 +7238,7 @@
             <Description>Heal Strongest</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Heal lev/3 of the strongest units 3-6% plus 1-2% per caster level.  Targets above 5 str are healed proportionally less.</Help>
+            <Help>[ICON_BULLET]Heal a unit of roughly the same strength as the caster about 2% per caster level.  Weaker units are healed proportionally more, stronger ones less.</Help>
             <PromotionPrereq1>PROMOTION_CAST_HEALING_TOUCH</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -7312,7 +7312,7 @@
             <Description>Heal Weakest</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Heals lev/3 damaged units 3-6% plus 1-2% per caster level.  It heals proportionally less for units of strength 6 and higher.</Help>
+            <Help>[ICON_BULLET]Heal a unit of roughly the same strength as the caster about 2% per caster level.  Weaker units are healed proportionally more, stronger ones less.</Help>
             <PromotionPrereq1>PROMOTION_CAST_HEALING_TOUCH</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>

@@ -2330,7 +2330,7 @@ def spellRepair(caster,amount):
 			iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
 			pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
 			iNumHealed = iNumHealed + 1
-			if ( iNumHealed + 1 > iL / 3 ):
+			if ( iNumHealed + 1 > 0 ):
 				return
 			
 def reqRessurection(caster):
