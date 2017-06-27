@@ -3441,7 +3441,7 @@ class CustomFunctions:
 										pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'), True)
 										sMsg = pUnit.getName() + ' contracts a disease!'
 										CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
-									if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')) and CyGame().getSorenRandNum(100, "ThePlague") < iPlagueInPlot * iDisMult * 2 + pUnit.getDamage() / 5 - iTreat * iDisMult:
+									if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')) and CyGame().getSorenRandNum(100, "ThePlague") < iPlagueInPlot * iDisMult * 2 + pUnit.getDamage() / 5 - iTreat * iDisMult and iPlagueInPlot > 0:
 										pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), True)
 										sMsg = pUnit.getName() + ' contracts the plague!'
 										CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,'Art/Interface/Buttons/Units/Treant.dds',ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
