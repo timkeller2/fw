@@ -613,6 +613,14 @@ class CvGameUtils:
 			if eBuilding == gc.getInfoTypeForString('BUILDING_BREWERY'):
 				return True
 
+		if eBuilding == gc.getInfoTypeForString('BUILDING_DEEPER_MINES_OF_GALDUR'):
+			if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_MINES_OF_GALDUR')) == 0:
+				return True
+
+		if eBuilding == gc.getInfoTypeForString('BUILDING_MINES_OF_GALDUR_DEPTHS'):
+			if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_DEEPER_MINES_OF_GALDUR')) == 0:
+				return True
+
 		if eBuilding == gc.getInfoTypeForString('BUILDING_ISLAND_RESORT'):
 			if iAreaSize > 7:
 				return True
