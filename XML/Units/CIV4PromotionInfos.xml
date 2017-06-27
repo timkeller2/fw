@@ -11653,7 +11653,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_ESTATES1</PromotionPrereq>
-            <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
+            <PromotionPrereqOr1>PROMOTION_DRILL1</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
             <TechPrereq>TECH_CALENDAR</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
@@ -11829,7 +11829,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_ESTATES2</PromotionPrereq>
-            <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
+            <PromotionPrereqOr1>PROMOTION_DRILL3</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
             <TechPrereq>TECH_FESTIVALS</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
@@ -12181,7 +12181,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_GOVERNOR1</PromotionPrereq>
-            <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
+            <PromotionPrereqOr1>PROMOTION_DRILL1</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
             <TechPrereq>TECH_MASONRY</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
@@ -12357,7 +12357,7 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_GOVERNOR2</PromotionPrereq>
-            <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
+            <PromotionPrereqOr1>PROMOTION_DRILL3</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
             <TechPrereq>TECH_CONSTRUCTION</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
