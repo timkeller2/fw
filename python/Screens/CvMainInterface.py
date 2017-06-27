@@ -2485,14 +2485,9 @@ class CvMainInterface:
 							iStock = cf.getObjectInt(pHeadSelectedCity,gc.getBuildingInfo(i).getType())
 							if iStock > 0:
 								iStock = ( ( CyGame().getGameTurn() - iStock ) * pHeadSelectedCity.getPopulation() ) / 15
-								if iStock > 0:
-									szTempBuffer = u"%d" %( iStock )
-									bFirst = False
-									szRightBuffer = szRightBuffer + szTempBuffer + "s"
-								if iStock < 0:
-									szTempBuffer = u"%d" %( math.fabs( iStock ) )
-									bFirst = False
-									szRightBuffer = szRightBuffer + szTempBuffer + "t"
+								szTempBuffer = u"%d" %( iStock )
+								bFirst = False
+								szRightBuffer = szRightBuffer + szTempBuffer + "s"
 							
 							## End MTK
 							
