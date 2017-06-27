@@ -2382,7 +2382,7 @@ class CustomFunctions:
 			self.addUnit(gc.getInfoTypeForString(self.sAnimalUnit()))
 		if CyGame().getSorenRandNum(4+iAdj, "BarbarianStuff") == 1:
 			self.addBarbUnit(gc.getInfoTypeForString(self.sBarbUnit()))
-		if CyGame().getSorenRandNum(10+iAdj, "HiddenCache") == 1 or iGameTurn < 9:
+		if CyGame().getSorenRandNum(10+iAdj, "HiddenCache") == 1 or iGameTurn < 4:
 			self.addBarbUnitA(gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'))
 		if self.bTechExist('TECH_NECROMANCY') and CyGame().getSorenRandNum(4+iAdj, "UndeadStuff") == 1:
 			self.addBarbUnit(gc.getInfoTypeForString(self.sUndeadUnit()))

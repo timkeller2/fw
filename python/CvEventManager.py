@@ -1811,8 +1811,8 @@ class CvEventManager:
 		if ((unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LIZARDMAN')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ORC')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD')) or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL') or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_BEAST')) and pPlayer.isBarbarian()):
 			iGold = unit.baseCombatStr() * unit.baseCombatStr()
 			iGold = CyGame().getSorenRandNum(iGold, "treasure") + iGold / 3
-			if iGameTurn > 150:
-				iGold = int((iGold * iGameTurn) / 150)
+			# if iGameTurn > 150:
+				# iGold = int((iGold * iGameTurn) / 150)
 			if (unit.getUnitType() == gc.getInfoTypeForString('UNIT_SEA_SERPENT') or unit.getUnitType() == gc.getInfoTypeForString('UNIT_GIANT_SEA_SERPENT') or unit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_NAVAL')):
 				 iGold = iGold * 2
 			if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURNING_BLOOD')):
