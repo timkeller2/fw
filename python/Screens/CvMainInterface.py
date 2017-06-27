@@ -2484,17 +2484,15 @@ class CvMainInterface:
 							szStock = ""
 							iStock = cf.getObjectInt(pHeadSelectedCity,gc.getBuildingInfo(i).getType())
 							if iStock > 0:
-								iStock = CyGame().getGameTurn() - iStock
-								iMaxStock = pHeadSelectedCity.getPopulation() * 3
-								if iMaxStock < 1:
-									iMaxStock = 1
-								iPercent = ( iStock * 100 ) / iMaxStock
-								if iPercent > 100:
-									iPercent = 100
-								if iPercent > 0:
-									szTempBuffer = u"%d" %( iPercent )
+								iStock = ( ( CyGame().getGameTurn() - iStock ) * pHeadSelectedCity.getPopulation() ) / 15
+								if iStock > 0:
+									szTempBuffer = u"%d" %( iStock )
 									bFirst = False
-									szRightBuffer = szRightBuffer + szTempBuffer + "%"
+									szRightBuffer = szRightBuffer + szTempBuffer + "s"
+								if iStock < 0:
+									szTempBuffer = u"%d" %( math.fabs( iStock ) )
+									bFirst = False
+									szRightBuffer = szRightBuffer + szTempBuffer + "t"
 							
 							## End MTK
 							

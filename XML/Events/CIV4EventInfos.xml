@@ -54517,7 +54517,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_HERBALIST_1</Type>
-            <Description>Hearty Rations</Description>
+            <Description>Hearty Rations (6s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -54618,7 +54618,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_HERBALIST_4</Type>
-            <Description>A Potion of Enduring Strength</Description>
+            <Description>A Potion of Enduring Strength (5s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -54719,7 +54719,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_HERBALIST_7</Type>
-            <Description>A Potion of Vampiric Blood Fury</Description>
+            <Description>A Potion of Vampiric Blood Fury (25s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -54820,7 +54820,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_HERBALIST_2</Type>
-            <Description>Extra Rations</Description>
+            <Description>Extra Rations (6s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -54921,7 +54921,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_HERBALIST_3</Type>
-            <Description>Bandages</Description>
+            <Description>Bandages (4s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -55022,7 +55022,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_HERBALIST_5</Type>
-            <Description>A Potion of Moderate Healing</Description>
+            <Description>A Potion of Moderate Healing (9s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -55123,7 +55123,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_HERBALIST_8</Type>
-            <Description>A Potion of Greater Healing</Description>
+            <Description>A Potion of Greater Healing (10s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -55224,7 +55224,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_HERBALIST_6</Type>
-            <Description>A Potion of Regeneration</Description>
+            <Description>A Potion of Regeneration (9s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -55325,7 +55325,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_HERBALIST_9</Type>
-            <Description>A Minor Potion of Immortality</Description>
+            <Description>A Minor Potion of Immortality (20s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -55527,7 +55527,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_LIBRARY_1</Type>
-            <Description>A Scroll of Magic Missile</Description>
+            <Description>A Scroll of Magic Missile (3s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -55628,7 +55628,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_LIBRARY_2</Type>
-            <Description>A Scroll of Mage Armor</Description>
+            <Description>A Scroll of Mage Armor (5s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -55729,7 +55729,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_LIBRARY_3</Type>
-            <Description>A Scroll of Summon Skeleton</Description>
+            <Description>A Scroll of Summon Skeleton (5s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -55830,7 +55830,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_LIBRARY_4</Type>
-            <Description>A Scroll of Magic Resistance</Description>
+            <Description>A Scroll of Magic Resistance (5s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -55931,7 +55931,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_LIBRARY_5</Type>
-            <Description>A Scroll of Fireball</Description>
+            <Description>A Scroll of Fireball (5s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56032,7 +56032,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_LIBRARY_6</Type>
-            <Description>A Scroll of Flight</Description>
+            <Description>A Scroll of Flight (12s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56133,7 +56133,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_MAGE_GUILD_1</Type>
-            <Description>A Spell Staff</Description>
+            <Description>A Spell Staff (25s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56234,7 +56234,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_MAGE_GUILD_2</Type>
-            <Description>A Mage's Battle Robe</Description>
+            <Description>A Mage's Battle Robe (100s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56335,7 +56335,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_MAGE_GUILD_3</Type>
-            <Description>A Scroll of Summon Earth Elemental</Description>
+            <Description>A Scroll of Summon Earth Elemental (25s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56436,7 +56436,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_MAGE_GUILD_4</Type>
-            <Description>A Scroll of Lightning Burst</Description>
+            <Description>A Scroll of Lightning Burst (25s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56537,7 +56537,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_MAGE_GUILD_5</Type>
-            <Description>A Scroll of Crush</Description>
+            <Description>A Scroll of Crush (25s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56638,7 +56638,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_1</Type>
-            <Description>Throwing Axes</Description>
+            <Description>Throwing Axes (2s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56739,7 +56739,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_2</Type>
-            <Description>Master Crafted Weapons</Description>
+            <Description>Master Crafted Weapons (50s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -56840,7 +56840,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_3</Type>
-            <Description>Master Crafted Armor</Description>
+            <Description>Master Crafted Armor (50s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -57042,7 +57042,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_5</Type>
-            <Description>Improved Weapons</Description>
+            <Description>Improved Weapons (6s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -57143,7 +57143,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_6</Type>
-            <Description>Heavy Weapons</Description>
+            <Description>Heavy Weapons (10s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -57244,7 +57244,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_7</Type>
-            <Description>Improved Armor</Description>
+            <Description>Improved Armor (6s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -57345,7 +57345,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_CRAFTSMEN_GUILD_8</Type>
-            <Description>Heavy Armor</Description>
+            <Description>Heavy Armor (10s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -57446,7 +57446,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_ALCHEMY_LAB_1</Type>
-            <Description>A Potion of Heal</Description>
+            <Description>A Potion of Heal (10s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -57547,7 +57547,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_ALCHEMY_LAB_2</Type>
-            <Description>A Potion of Immortality</Description>
+            <Description>A Potion of Immortality (25s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>
@@ -57648,7 +57648,7 @@
         </EventInfo>
         <EventInfo>
             <Type>EVENT_ALCHEMY_LAB_3</Type>
-            <Description>Boots of Haste</Description>
+            <Description>Boots of Haste (25s)</Description>
             <LocalInfoText></LocalInfoText>
             <WorldNewsTexts>
             </WorldNewsTexts>

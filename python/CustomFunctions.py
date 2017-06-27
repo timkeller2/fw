@@ -753,22 +753,17 @@ class CustomFunctions:
 
 		iCostMod = ( iCost * 15 ) / pCity.getPopulation()	
 		
-		## Rush charge if not enough stock
-		if strSetData[sBuilding] > CyGame().getGameTurn():
-			iCostMod = iCostMod * 1.5
-			
 		strSetData[sBuilding] = strSetData[sBuilding] + iCostMod
 		pCity.setScriptData(cPickle.dumps(strSetData))
 
-		iStock = CyGame().getGameTurn() - strSetData[sBuilding]
+		iStock = ( ( CyGame().getGameTurn() - strSetData[sBuilding] ) * pCity.getPopulation() ) / 15
 		iMaxStock = pCity.getPopulation() * 6
 		if iMaxStock < 1:
 			iMaxStock = 1
 		iPercent = ( iStock * 100 ) / iMaxStock
-		if iStock > 0:
-			sMsg = 'The ' + pCity.getName() + ' ' + sDesc + ' has roughly ' + str(iStock) + ' turns production of stock remaining (' + str(iPercent) + '%)...'
-		else:	
-			sMsg = 'The ' + pCity.getName() + ' ' + sDesc + ' is out of stock for ' + str(int(math.fabs(iStock))) + ' turns... (Turn ' + str(CyGame().getGameTurn()) + ')'
+		if iStock < 0:
+			iPercent = 0
+		sMsg = 'The ' + pCity.getName() + ' ' + sDesc + ' has ' + str(iStock) + ' stock remaining (' + str(iPercent) + '%)...'
 		CyInterface().addMessage(iPlayer,True,25,sMsg,'AS2D_GOODY_GOLD',1,'Art/Interface/Buttons/Equipment/DragonsHorde.dds',ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
 		CyInterface().addCombatMessage(iPlayer,sMsg)
 
