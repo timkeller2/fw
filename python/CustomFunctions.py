@@ -387,7 +387,7 @@ class CustomFunctions:
 						iFarRange = iRange
 						fx = pUnit.getX()
 						fy = pUnit.getY()
-					if iRange > -1 and iRange < iNextBestRange and iRange <= iSearch + iMult and pUnit.getLevel() <= iSearch * 3:
+					if iRange > -1 and iRange < iNextBestRange and iRange <= iSearch + iMult and pUnit.getLevel() <= iSearch:
 						iNextBestRange = iRange
 						tx = pUnit.getX()
 						ty = pUnit.getY()
@@ -1044,14 +1044,19 @@ class CustomFunctions:
 		iGameTurn = CyGame().getGameTurn()
 		iHaveScrolls = 0
 		iBigCache = 0
+		iExtraLev = 0
 		# Initiate Hidden Caches
 		if iUnit.getUnitType() == gc.getInfoTypeForString('UNIT_HIDDEN_CACHE') and not iUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FEAR')):
 			if iGameTurn < 4:
 				iBigCache = iGameTurn 
+				iExtraLev = 10
 		
-			iSkl = CyGame().getSorenRandNum(12, "Cache") - 2 + iBigCache * 2
+			iSkl = CyGame().getSorenRandNum(12, "Cache") - 2 + iBigCache * 2 + iExtraLev + iGameTurn / 50
 			if iSkl < 1:
 				iSkl = 1
+			if iSkl > 18:
+				iSkl = 18
+			
 			iUnit.setLevel( iSkl )
 
 			iStr = CyGame().getSorenRandNum(10, "CacheStr") + iGameTurn / 50 - 2 + iBigCache * 2
