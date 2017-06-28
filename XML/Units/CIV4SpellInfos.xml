@@ -5041,7 +5041,7 @@
             <Type>SPELL_ESTATE1</Type>
             <Description>Reside in Estate</Description>
             <Civilopedia></Civilopedia>
-            <Help>+3 Gold</Help>
+            <Help>[ICON_BULLET]+3 Gold</Help>
             <PromotionPrereq1>PROMOTION_ESTATES1</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
@@ -5093,7 +5093,7 @@
             <Description>Establish Estate Grounds</Description>
             <Civilopedia>NONE</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>+2 Food, +20% Gold, Allows 1 Merchant</Help>
+            <Help>[ICON_BULLET]+2 Food, +20% Gold, Allows 1 Merchant</Help>
             <PromotionPrereq1>PROMOTION_ESTATES2</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -5167,7 +5167,7 @@
             <Description>Open the Banquest Hall</Description>
             <Civilopedia>NONE</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>+20% Food, +30% Gold, Allows 1 Artist</Help>
+            <Help>[ICON_BULLET]+20% Food, +30% Gold, Allows 1 Artist</Help>
             <PromotionPrereq1>PROMOTION_ESTATES3</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -5241,7 +5241,7 @@
             <Description>Open the Manor</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>+1 Production, +10% Military</Help>
+            <Help>[ICON_BULLET]+1 Production, +10% Military</Help>
             <PromotionPrereq1>PROMOTION_GOVERNOR1</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -5315,7 +5315,7 @@
             <Description>Build the Abby</Description>
             <Civilopedia>NONE</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>+2 Production, +10% Production, +20% Culture, Allows 1 Priest</Help>
+            <Help>[ICON_BULLET]+2 Production, +10% Production, +20% Culture, Allows 1 Priest</Help>
             <PromotionPrereq1>PROMOTION_GOVERNOR2</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -5389,7 +5389,7 @@
             <Description>Oversee the Governor's Workshop</Description>
             <Civilopedia>NONE</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>3 Production, +15% Production, Allows 1 Engineer</Help>
+            <Help>[ICON_BULLET]3 Production, +15% Production, Allows 1 Engineer</Help>
             <PromotionPrereq1>PROMOTION_GOVERNOR3</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>

@@ -2334,6 +2334,7 @@ class CustomFunctions:
 		iGameTurn = CyGame().getGameTurn()
 		iAshenVeil = gc.getInfoTypeForString('RELIGION_THE_ASHEN_VEIL')
 		iBurningSands = gc.getInfoTypeForString('TERRAIN_BURNING_SANDS')
+		iSnow = gc.getInfoTypeForString('TERRAIN_SNOW')
 		iBanana = gc.getInfoTypeForString('BONUS_BANANA')
 		iCotton = gc.getInfoTypeForString('BONUS_COTTON')
 		iCorn = gc.getInfoTypeForString('BONUS_CORN')
@@ -2788,6 +2789,7 @@ class CustomFunctions:
 				iThisPlotTrain = 8
 			if pPlot.getFeatureType() == iJungle:
 				iThisPlotTrainAnimal = 3
+			iShelter = iThisPlotTrain	
 			iDiseaseInPlot = 0
 			iPlagueInPlot = 0
 
@@ -3460,7 +3462,17 @@ class CustomFunctions:
 				if pPlot.getFeatureType() == iFlames:
 					if (pUnit.isAlive() or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_UNDEAD'))) and pPlayer.isHuman():
 						pUnit.doDamageNoCaster(35, 100, gc.getInfoTypeForString('DAMAGE_FIRE'), False)
-			
+
+				## Snow tiles can damage living units
+				if pPlot.getTerrainType() == iSnow and pUnit.isAlive() and pPlayer.isHuman() and not (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ARCTIC_WARFARE')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WINTERBORN')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COLD_RESISTANCE'))):
+					## Do I have shelter?
+					if not (pPlot.isCity() or iShelter > 0):
+						iDam = CyGame().getSorenRandNum(15, "IceDamage") - 3
+						if iDam > 3:
+							pUnit.doDamageNoCaster(iDam, 100, gc.getInfoTypeForString('DAMAGE_COLD'), False)
+							sMsg = 'Blistering wind, ice and cold inflict ' + str(iDam) + ' damage on ' + pUnit.getName() + '...  (Seek shelter in a city, defensive structure or a warmer climate.)'
+							CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CONTAGION',1,pUnit.getButton(),ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
+						
 				if pUnit.getGameTurnCreated() == iGameTurn:
 					self.tough(pUnit)
 			
