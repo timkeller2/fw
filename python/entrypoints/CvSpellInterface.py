@@ -1266,8 +1266,8 @@ def reqForTheHorde(caster):
 	pPlayer = gc.getPlayer(caster.getOwner())
 	bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
 	eTeam = gc.getTeam(pPlayer.getTeam())
-	if eTeam.isAtWar(bPlayer.getTeam()):
-		return False
+	# if eTeam.isAtWar(bPlayer.getTeam()):
+		# return False
 	if bPlayer.getNumUnits() == 0:
 		return False
 	if pPlayer.isHuman() == False:
@@ -1281,14 +1281,14 @@ def spellForTheHorde(caster):
 	iEnrage = bPlayer.getNumUnits()
 	
 	for pUnit in pPlayer.getUnitList():
-		if !pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG')):
+		if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG')):
 			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG'),True)
 			iEnrage -= 1
 			if iEnrage < 1:
 				return
 
 	for pUnit in pPlayer.getUnitList():
-		if !pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1')):
+		if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1')):
 			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
 			iEnrage -= 1
 			if iEnrage < 1:

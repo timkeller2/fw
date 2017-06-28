@@ -1358,6 +1358,7 @@
             <Description>TXT_KEY_SPELL_FOR_THE_HORDE</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Help>TXT_KEY_SPELL_FOR_THE_HORDE_HELP</Help>
+            <iCasterMinLevel>8</iCasterMinLevel>
             <CivilizationPrereq>CIVILIZATION_CLAN_OF_EMBERS</CivilizationPrereq>
             <bAllowAI>1</bAllowAI>
             <bGlobal>1</bGlobal>

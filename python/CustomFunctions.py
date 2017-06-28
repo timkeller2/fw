@@ -50,9 +50,20 @@ class CustomFunctions:
 			if CyGame().getSorenRandNum(20, "RandomHero") == 1:
 				if unit.baseCombatStr() > 1:
 					self.unitAptitude(unit)
-				sMsg = 'A ' + str( unit.getName() ) + ' of unusual skill has been identified among the new recruits!'
-				CyInterface().addMessage(unit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,unit.getButton(),ColorTypes(8),unit.getX(),unit.getY(),True,True)
+					sMsg = 'A ' + str( unit.getName() ) + ' of unusual skill has become apparent!'
+					CyInterface().addMessage(unit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,unit.getButton(),ColorTypes(8),unit.getX(),unit.getY(),True,True)
 
+			if CyGame().getSorenRandNum(30, "RandomSinister") == 2:
+				if unit.baseCombatStr() > 1:
+					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SINISTER'), True)
+
+			if CyGame().getSorenRandNum(30, "RandomDexterous") == 3:
+				if unit.baseCombatStr() > 1:
+					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DEXTEROUS'), True)
+
+			if unit.getGameTurnCreated() < 1:
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_NOBILITY'), True)
+						
 			## Dire beasts and dragons add a chance that new living units will start with the Cult of the Dragon promotion...
 			if unit.isAlive():
 				iDireChance = 0
