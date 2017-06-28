@@ -65489,10 +65489,6 @@
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
                 <FreePromotion>
-                    <PromotionType>PROMOTION_ORC</PromotionType>
-                    <bFreePromotion>1</bFreePromotion>
-                </FreePromotion>
-                <FreePromotion>
                     <PromotionType>PROMOTION_FIRE_RESISTANCE</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
@@ -80336,10 +80332,6 @@
             <FreePromotions>
                 <FreePromotion>
                     <PromotionType>PROMOTION_HIDDEN_NATIONALITY</PromotionType>
-                    <bFreePromotion>1</bFreePromotion>
-                </FreePromotion>
-                <FreePromotion>
-                    <PromotionType>PROMOTION_ORC</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
                 <FreePromotion>
