@@ -3360,7 +3360,7 @@ class CustomFunctions:
 					if pPlayer.isHuman():
 						iBirth = 0
 					else:
-						iBirth = 1
+						iBirth = pUnit.getLevel() - 5
 						
 				if (bCanCreateUnit and CyGame().getSorenRandNum(100, "NewAnimal") < iBirth and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED')) and (pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'))):
 					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
