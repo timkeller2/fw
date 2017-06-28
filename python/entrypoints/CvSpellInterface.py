@@ -1277,23 +1277,46 @@ def reqForTheHorde(caster):
 
 def spellForTheHorde(caster):
 	pPlayer = gc.getPlayer(caster.getOwner())
-	iCreep = gc.getInfoTypeForString('PROMOTION_CREEP')
-	iHero = gc.getInfoTypeForString('PROMOTION_HERO')
-	iOrc = gc.getInfoTypeForString('PROMOTION_ORC')
-	py = PyPlayer(gc.getBARBARIAN_PLAYER())
-	for pUnit in py.getUnitList():
-		if (pUnit.getRace() == iOrc and pUnit.isHasPromotion(iHero) == False and pUnit.isHasPromotion(iCreep) == False and pUnit.baseCombatStr() < 8):
-			if CyGame().getSorenRandNum(100, "Bob") < 50:
-				pPlot = pUnit.plot()
-				for i in range(pPlot.getNumUnits(), -1, -1):
-					pNewPlot = -1
-					pLoopUnit = pPlot.getUnit(i)
-					if pLoopUnit.isHiddenNationality():
-						pNewPlot = cf.findClearPlot(pLoopUnit, -1)
-						if pNewPlot != -1:
-							pLoopUnit.setXY(pNewPlot.getX(), pNewPlot.getY(), false, true, true)
-				newUnit = pPlayer.initUnit(pUnit.getUnitType(), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-				newUnit.convert(pUnit)
+	bPlayer = PyPlayer(gc.getBARBARIAN_PLAYER())
+	iEnrage = bPlayer.getNumUnits()
+	
+	for pUnit in pPlayer.getUnitList():
+		if !pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG')):
+			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG'),True)
+			iEnrage -= 1
+			if iEnrage < 1:
+				return
+
+	for pUnit in pPlayer.getUnitList():
+		if !pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1')):
+			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
+			iEnrage -= 1
+			if iEnrage < 1:
+				return
+
+	for pUnit in pPlayer.getUnitList():
+		pUnit.changeExperience(5, -1, False, False, False)
+		iEnrage -= 1
+		if iEnrage < 1:
+			return
+
+	# iCreep = gc.getInfoTypeForString('PROMOTION_CREEP')
+	# iHero = gc.getInfoTypeForString('PROMOTION_HERO')
+	# iOrc = gc.getInfoTypeForString('PROMOTION_ORC')
+	# py = PyPlayer(gc.getBARBARIAN_PLAYER())
+	# for pUnit in py.getUnitList():
+		# if (pUnit.getRace() == iOrc and pUnit.isHasPromotion(iHero) == False and pUnit.isHasPromotion(iCreep) == False and pUnit.baseCombatStr() < 8):
+			# if CyGame().getSorenRandNum(100, "Bob") < 50:
+				# pPlot = pUnit.plot()
+				# for i in range(pPlot.getNumUnits(), -1, -1):
+					# pNewPlot = -1
+					# pLoopUnit = pPlot.getUnit(i)
+					# if pLoopUnit.isHiddenNationality():
+						# pNewPlot = cf.findClearPlot(pLoopUnit, -1)
+						# if pNewPlot != -1:
+							# pLoopUnit.setXY(pNewPlot.getX(), pNewPlot.getY(), false, true, true)
+				# newUnit = pPlayer.initUnit(pUnit.getUnitType(), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+				# newUnit.convert(pUnit)
 
 def reqFormWolfPack(caster):
 	pPlot = caster.plot()
