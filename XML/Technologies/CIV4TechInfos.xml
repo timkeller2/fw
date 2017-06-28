@@ -511,7 +511,7 @@
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <Era>ERA_CLASSICAL</Era>
             <FirstFreeUnitClass>NONE</FirstFreeUnitClass>
-            <iFeatureProductionModifier>50</iFeatureProductionModifier>
+            <iFeatureProductionModifier>0</iFeatureProductionModifier>
             <iWorkerSpeedModifier>0</iWorkerSpeedModifier>
             <iTradeRoutes>0</iTradeRoutes>
             <iHealth>0</iHealth>
@@ -878,7 +878,7 @@
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <Era>ERA_CLASSICAL</Era>
             <FirstFreeUnitClass>NONE</FirstFreeUnitClass>
-            <iFeatureProductionModifier>0</iFeatureProductionModifier>
+            <iFeatureProductionModifier>50</iFeatureProductionModifier>
             <iWorkerSpeedModifier>0</iWorkerSpeedModifier>
             <iTradeRoutes>0</iTradeRoutes>
             <iHealth>0</iHealth>
@@ -3025,7 +3025,7 @@
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <Era>ERA_CLASSICAL</Era>
             <FirstFreeUnitClass>NONE</FirstFreeUnitClass>
-            <iFeatureProductionModifier>0</iFeatureProductionModifier>
+            <iFeatureProductionModifier>50</iFeatureProductionModifier>
             <iWorkerSpeedModifier>0</iWorkerSpeedModifier>
             <iTradeRoutes>0</iTradeRoutes>
             <iHealth>0</iHealth>
@@ -3990,7 +3990,7 @@
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <Era>ERA_MEDIEVAL</Era>
             <FirstFreeUnitClass>NONE</FirstFreeUnitClass>
-            <iFeatureProductionModifier>0</iFeatureProductionModifier>
+            <iFeatureProductionModifier>50</iFeatureProductionModifier>
             <iWorkerSpeedModifier>0</iWorkerSpeedModifier>
             <iTradeRoutes>0</iTradeRoutes>
             <iHealth>0</iHealth>
