@@ -39814,10 +39814,6 @@
             <ReligionChanges>
             </ReligionChanges>
             <SpecialistCounts>
-                <SpecialistCount>
-                    <SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-                    <iSpecialistCount>1</iSpecialistCount>
-                </SpecialistCount>
             </SpecialistCounts>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -40015,7 +40011,7 @@
             <GlobalSeaPlotYieldChanges>
             </GlobalSeaPlotYieldChanges>
             <YieldChanges>
-                <iYield>1</iYield>
+                <iYield>2</iYield>
                 <iYield>0</iYield>
                 <iYield>0</iYield>
             </YieldChanges>
@@ -40043,6 +40039,10 @@
             <ReligionChanges>
             </ReligionChanges>
             <SpecialistCounts>
+                <SpecialistCount>
+                    <SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+                    <iSpecialistCount>1</iSpecialistCount>
+                </SpecialistCount>
             </SpecialistCounts>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -40242,6 +40242,9 @@
             <YieldChanges>
             </YieldChanges>
             <YieldModifiers>
+                <iYield>20</iYield>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
             </YieldModifiers>
             <CommerceChanges>
             </CommerceChanges>
@@ -40704,6 +40707,9 @@
             <CommerceChangeDoubleTimes>
             </CommerceChangeDoubleTimes>
             <CommerceModifiers>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>20</iCommerce>
             </CommerceModifiers>
             <GlobalCommerceModifiers>
             </GlobalCommerceModifiers>
@@ -40947,7 +40953,7 @@
             <SpecialistCounts>
                 <SpecialistCount>
                     <SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-                    <iSpecialistCount>2</iSpecialistCount>
+                    <iSpecialistCount>1</iSpecialistCount>
                 </SpecialistCount>
             </SpecialistCounts>
             <FreeSpecialistCounts>

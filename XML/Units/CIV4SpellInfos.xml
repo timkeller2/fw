@@ -5041,7 +5041,7 @@
             <Type>SPELL_ESTATE1</Type>
             <Description>Reside in Estate</Description>
             <Civilopedia></Civilopedia>
-            <Help></Help>
+            <Help>+3 Gold</Help>
             <PromotionPrereq1>PROMOTION_ESTATES1</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
@@ -5072,7 +5072,7 @@
             <bRemoveHasCasted>0</bRemoveHasCasted>
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
-            <iCost>0</iCost>
+            <iCost>30</iCost>
             <iImmobileTurns>3</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
@@ -5093,7 +5093,7 @@
             <Description>Establish Estate Grounds</Description>
             <Civilopedia>NONE</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help></Help>
+            <Help>+2 Food, +20% Gold, Allows 1 Merchant</Help>
             <PromotionPrereq1>PROMOTION_ESTATES2</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -5146,11 +5146,11 @@
             <bRemoveHasCasted>0</bRemoveHasCasted>
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
-            <iCost>0</iCost>
-            <iImmobileTurns>3</iImmobileTurns>
+            <iCost>60</iCost>
+            <iImmobileTurns>5</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellImmoblize(pCaster,3)</PyResult>
+            <PyResult>spellImmoblize(pCaster,5)</PyResult>
             <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_ESTATE2','Est2')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
@@ -5167,7 +5167,7 @@
             <Description>Open the Banquest Hall</Description>
             <Civilopedia>NONE</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help></Help>
+            <Help>+20% Food, +30% Gold, Allows 1 Artist</Help>
             <PromotionPrereq1>PROMOTION_ESTATES3</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -5220,11 +5220,11 @@
             <bRemoveHasCasted>0</bRemoveHasCasted>
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
-            <iCost>0</iCost>
-            <iImmobileTurns>3</iImmobileTurns>
+            <iCost>120</iCost>
+            <iImmobileTurns>7</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellImmoblize(pCaster,3)</PyResult>
+            <PyResult>spellImmoblize(pCaster,7)</PyResult>
             <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_ESTATE3','Est3')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
@@ -5241,7 +5241,7 @@
             <Description>Open the Manor</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help></Help>
+            <Help>+1 Production, +10% Military</Help>
             <PromotionPrereq1>PROMOTION_GOVERNOR1</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -5294,7 +5294,7 @@
             <bRemoveHasCasted>0</bRemoveHasCasted>
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
-            <iCost>0</iCost>
+            <iCost>30</iCost>
             <iImmobileTurns>3</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
@@ -5315,7 +5315,7 @@
             <Description>Build the Abby</Description>
             <Civilopedia>NONE</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help></Help>
+            <Help>+2 Production, +10% Production, +20% Culture, Allows 1 Priest</Help>
             <PromotionPrereq1>PROMOTION_GOVERNOR2</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -5368,11 +5368,11 @@
             <bRemoveHasCasted>0</bRemoveHasCasted>
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
-            <iCost>0</iCost>
-            <iImmobileTurns>3</iImmobileTurns>
+            <iCost>60</iCost>
+            <iImmobileTurns>5</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellImmoblize(pCaster,3)</PyResult>
+            <PyResult>spellImmoblize(pCaster,5)</PyResult>
             <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_GOV2','Gov2')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
@@ -5389,7 +5389,7 @@
             <Description>Oversee the Governor's Workshop</Description>
             <Civilopedia>NONE</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help></Help>
+            <Help>3 Production, +15% Production, Allows 1 Engineer</Help>
             <PromotionPrereq1>PROMOTION_GOVERNOR3</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -5442,11 +5442,11 @@
             <bRemoveHasCasted>0</bRemoveHasCasted>
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
-            <iCost>0</iCost>
-            <iImmobileTurns>3</iImmobileTurns>
+            <iCost>120</iCost>
+            <iImmobileTurns>7</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellImmoblize(pCaster,3)</PyResult>
+            <PyResult>spellImmoblize(pCaster,7)</PyResult>
             <PyRequirement>reqNobleBuilding(pCaster,'BUILDING_GOV3','Gov3')</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_REPAIR</Sound>
