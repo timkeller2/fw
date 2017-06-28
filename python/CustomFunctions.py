@@ -3470,7 +3470,7 @@ class CustomFunctions:
 						iDam = CyGame().getSorenRandNum(15, "IceDamage") - 3
 						if iDam > 3:
 							pUnit.doDamageNoCaster(iDam, 100, gc.getInfoTypeForString('DAMAGE_COLD'), False)
-							sMsg = 'Blistering wind, ice and cold inflict ' + str(iDam) + ' damage on ' + pUnit.getName() + '...  (Seek shelter in a city, defensive structure or a warmer climate.)'
+							sMsg = 'Blistering wind, ice and cold inflict damage on ' + pUnit.getName() + '...  (Seek shelter in a city, defensive structure or a warmer climate.)'
 							CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CONTAGION',1,pUnit.getButton(),ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
 						
 				if pUnit.getGameTurnCreated() == iGameTurn:
