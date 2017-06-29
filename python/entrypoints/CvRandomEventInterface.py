@@ -6971,6 +6971,12 @@ def canthrowaxes(argsList):
 	kTriggeredData = argsList[1]
 	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
 	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+
+	pCity = pUnit.plot().getPlotCity()
+	strSetData = cPickle.loads(pCity.getScriptData())
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] ) * pCity.getPopulation() ) / 15 < 2:
+		return False
+
 	if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_MELEE'):
 		return True
 	return False
@@ -6980,6 +6986,12 @@ def canimprovedweapons(argsList):
 	kTriggeredData = argsList[1]
 	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
 	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+	
+	pCity = pUnit.plot().getPlotCity()
+	strSetData = cPickle.loads(pCity.getScriptData())
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] ) * pCity.getPopulation() ) / 15 < 6:
+		return False
+
 	return cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_IMPROVED_WEAPONS'))
 
 def canheavyweapons(argsList):
@@ -6989,6 +7001,10 @@ def canheavyweapons(argsList):
 	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
 
 	pCity = pUnit.plot().getPlotCity()
+	strSetData = cPickle.loads(pCity.getScriptData())
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] ) * pCity.getPopulation() ) / 15 < 10:
+		return False
+
 	if cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_HEAVY_WEAPONS')):
 		strSetData = cPickle.loads(pCity.getScriptData())
 
@@ -7000,6 +7016,11 @@ def canimprovedarmor(argsList):
 	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
 	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
 
+	pCity = pUnit.plot().getPlotCity()
+	strSetData = cPickle.loads(pCity.getScriptData())
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] ) * pCity.getPopulation() ) / 15 < 6:
+		return False
+
 	return cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_IMPROVED_ARMOR'))
 
 def canheavyarmor(argsList):
@@ -7009,10 +7030,12 @@ def canheavyarmor(argsList):
 	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
 
 	pCity = pUnit.plot().getPlotCity()
+	strSetData = cPickle.loads(pCity.getScriptData())
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] ) * pCity.getPopulation() ) / 15 < 10:
+		return False
+
 	if cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_HEAVY_ARMOR')):
 		strSetData = cPickle.loads(pCity.getScriptData())
-		# if pCity.getPopulation() > 19:
-			# return True
 
 	return False
 
@@ -8079,6 +8102,19 @@ def canInitial(argsList):
 			return true
 	return false
 
+def cantrainingyard2(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+
+	pCity = pUnit.plot().getPlotCity()
+	strSetData = cPickle.loads(pCity.getScriptData())
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] ) * pCity.getPopulation() ) / 15 > 1:
+		return True
+
+	return False
+
 def cantrainingyard6(argsList):
 	iEvent = argsList[0]
 	kTriggeredData = argsList[1]
@@ -8087,7 +8123,7 @@ def cantrainingyard6(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] > 4:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] ) * pCity.getPopulation() ) / 15 > 5:
 		return True
 
 	return False
@@ -8100,7 +8136,7 @@ def cantrainingyard25(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] > 20:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] ) * pCity.getPopulation() ) / 15 > 24:
 		return True
 
 	return False
@@ -8113,7 +8149,7 @@ def cantrainingyard50(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] > 40:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] ) * pCity.getPopulation() ) / 15 > 49:
 		return True
 
 	return False
@@ -8126,7 +8162,7 @@ def canalchemylab5(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_ALCHEMY_LAB'] > 3:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_ALCHEMY_LAB'] ) * pCity.getPopulation() ) / 15 > 4:
 		return True
 
 	return False
@@ -8139,7 +8175,7 @@ def canalchemylab10(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_ALCHEMY_LAB'] > 8:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_ALCHEMY_LAB'] ) * pCity.getPopulation() ) / 15 > 9:
 		return True
 
 	return False
@@ -8152,7 +8188,7 @@ def canalchemylab25(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_ALCHEMY_LAB'] > 20:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_ALCHEMY_LAB'] ) * pCity.getPopulation() ) / 15 > 24:
 		return True
 
 	return False
@@ -8165,7 +8201,7 @@ def canmageguild25(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_MAGE_GUILD'] > 20:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_MAGE_GUILD'] ) * pCity.getPopulation() ) / 15 > 24:
 		return True
 
 	return False
@@ -8178,7 +8214,20 @@ def canmageguild100(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_MAGE_GUILD'] > 80:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_MAGE_GUILD'] ) * pCity.getPopulation() ) / 15 > 99:
+		return True
+
+	return False
+
+def canherbalist4(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
+	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
+
+	pCity = pUnit.plot().getPlotCity()
+	strSetData = cPickle.loads(pCity.getScriptData())
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_HERBALIST'] ) * pCity.getPopulation() ) / 15 > 3:
 		return True
 
 	return False
@@ -8191,7 +8240,7 @@ def canherbalist6(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_HERBALIST'] > 4:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_HERBALIST'] ) * pCity.getPopulation() ) / 15 > 5:
 		return True
 
 	return False
@@ -8204,7 +8253,7 @@ def canherbalist9(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_HERBALIST'] > 6:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_HERBALIST'] ) * pCity.getPopulation() ) / 15 > 8:
 		return True
 
 	return False
@@ -8217,7 +8266,7 @@ def canherbalist20(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_HERBALIST'] > 15:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_HERBALIST'] ) * pCity.getPopulation() ) / 15 > 19:
 		return True
 
 	return False
@@ -8230,7 +8279,7 @@ def canmonument3(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_LIBRARY'] > 0:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_LIBRARY'] ) * pCity.getPopulation() ) / 15 > 2:
 		return True
 
 	return False
@@ -8243,7 +8292,7 @@ def canmonument5(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_LIBRARY'] > 3:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_LIBRARY'] ) * pCity.getPopulation() ) / 15 > 4:
 		return True
 
 	return False
@@ -8256,7 +8305,7 @@ def canmonument12(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if CyGame().getGameTurn() - strSetData['BUILDING_LIBRARY'] > 9:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_LIBRARY'] ) * pCity.getPopulation() ) / 15 > 11:
 		return True
 
 	return False

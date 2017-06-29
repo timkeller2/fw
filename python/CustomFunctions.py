@@ -61,7 +61,7 @@ class CustomFunctions:
 				if unit.baseCombatStr() > 1:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DEXTEROUS'), True)
 
-			if unit.getGameTurnCreated() < 1:
+			if unit.getGameTurnCreated() < 1 and pPlayer.isHuman():
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_NOBILITY'), True)
 						
 			## Dire beasts and dragons add a chance that new living units will start with the Cult of the Dragon promotion...
