@@ -7414,8 +7414,8 @@
             <Description>TXT_KEY_PROMOTION_STARTING_SETTLER</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
-            <iVisibilityChange>3</iVisibilityChange>
-            <iMovesChange>2</iMovesChange>
+            <iVisibilityChange>1</iVisibilityChange>
+            <iMovesChange>1</iMovesChange>
             <Button>Art/Interface/Buttons/Units/Settler.dds</Button>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
