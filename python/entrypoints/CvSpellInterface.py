@@ -1932,10 +1932,15 @@ def spellMarchOfTheTrees(caster):
 		pPlot = CyMap().plotByIndex(i)
 		if pPlot.isOwned():
 			if pPlot.getOwner() == iPlayer:
-				if (pPlot.getFeatureType() == iForest or pPlot.getFeatureType() == iAncientForest):
+				if pPlot.getFeatureType() == iForest:
 					if not pPlot.isVisibleEnemyUnit(iPlayer):
 						newUnit = pPlayer.initUnit(iTreant, pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-						newUnit.setDuration(5)
+						newUnit.setDuration(4)
+						pPlot.setFeatureType(iNewForest,0)
+				if pPlot.getFeatureType() == iAncientForest:
+					if not pPlot.isVisibleEnemyUnit(iPlayer):
+						newUnit = pPlayer.initUnit(iTreant, pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+						newUnit.setDuration(7)
 						pPlot.setFeatureType(iNewForest,0)
 
 def reqMotherLode(caster):

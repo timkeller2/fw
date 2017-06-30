@@ -199,7 +199,7 @@
     </Define>
     <Define>
         <DefineName>FEATURE_UPGRADE_CHANCE</DefineName>
-        <iDefineIntVal>2</iDefineIntVal>
+        <iDefineIntVal>1</iDefineIntVal>
     </Define>
     <Define>
         <DefineName>FLAMES_EXPIRE_CHANCE</DefineName>
