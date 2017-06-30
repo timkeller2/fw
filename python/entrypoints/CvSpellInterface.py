@@ -4607,7 +4607,7 @@ def spellSummonScroll(caster,sUnit):
 	iY = caster.getY()
 	iL = 1
 	if sUnit == 'UNIT_MAGIC_MISSILE':
-		iL = 1 + int( caster.getLevel() / 3 )
+		iL = int( caster.getLevel() / 3 ) + 1
 
 	for i in range(iL):
 		newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sUnit), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)

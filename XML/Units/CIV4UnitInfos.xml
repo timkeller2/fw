@@ -81712,7 +81712,7 @@
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
             <Description>Magician</Description>
-            <Civilopedia>May be recruited in cities with a monument and a culture of 500 or greater.  Only one may be recruited per monument.</Civilopedia>
+            <Civilopedia>May be recruited in cities with a monument and a culture of 1000 or greater.</Civilopedia>
             <Strategy>TXT_KEY_UNIT_ADEPT_STRATEGY</Strategy>
             <Advisor>ADVISOR_MILITARY</Advisor>
             <bAnimal>0</bAnimal>
@@ -81910,6 +81910,10 @@
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
             <FreePromotions>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_GENERALIST</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
