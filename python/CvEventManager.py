@@ -1539,7 +1539,7 @@ class CvEventManager:
 		if city.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ASYLUM')) > 0:
 			if unit.isAlive():
 				if isWorldUnitClass(unit.getUnitClassType()) == False:
-					if CyGame().getSorenRandNum(100, "Bob") <= 10:
+					if CyGame().getSorenRandNum(100, "CrazyBob") <= 5:
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CRAZED'), True)
 						unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_ENRAGED'), True)
 
@@ -1594,6 +1594,12 @@ class CvEventManager:
 		aPlayer = gc.getPlayer(iAttacker)
 		iGameTurn = CyGame().getGameTurn()
 
+		## Disease, Plague and Posion cured when reborn
+		if unit.isImmortal():
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'),False)
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'),False)
+			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'),False)
+		
 		if (unit.isAlive() and unit.isImmortal() == False):
 			iX = unit.getX()
 			iY = unit.getY()

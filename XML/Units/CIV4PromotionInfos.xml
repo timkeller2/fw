@@ -17296,8 +17296,8 @@
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_SCROLL_SB</Type>
-            <Description>Scroll of Summon Skeleton</Description>
-            <Help></Help>
+            <Description>Scroll of Summon Elemental</Description>
+            <Help>[ICON_BULLET]Summons a minor elemental whose strength is equal to 1 + caster's level / 2.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>

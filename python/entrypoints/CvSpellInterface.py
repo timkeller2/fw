@@ -1276,7 +1276,7 @@ def reqForTheHorde(caster):
 	return True
 
 def spellForTheHorde(caster):
-	pPlayer = gc.getPlayer(caster.getOwner())
+	pPlayer = PyPlayer(caster.getOwner())
 	bPlayer = PyPlayer(gc.getBARBARIAN_PLAYER())
 	iEnrage = bPlayer.getNumUnits()
 	
@@ -4647,7 +4647,8 @@ def spellSummonScroll(caster,sUnit):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
 
 		if sUnit == 'UNIT_KIKIJIB':
-			newUnit.setDuration(newUnit.getDuration()/2)
+			if not caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SCROLL_SB')):
+				newUnit.setDuration(newUnit.getDuration()/2)
 			i = caster.getLevel() / 2 + 1
 			newUnit.setBaseCombatStr( i )
 			newUnit.setBaseCombatStrDefense( i )

@@ -2260,6 +2260,7 @@
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
+            <RemovePromotionType1>PROMOTION_SCROLL_SB</RemovePromotionType1>
             <PyResult>spellSummonScroll(pCaster,'UNIT_KIKIJIB')</PyResult>
             <Effect>EFFECT_SPELL2</Effect>
             <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>
@@ -10377,10 +10378,10 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_SCROLL_SB</Type>
-            <Description>Use Scroll of Summon Skeleton</Description>
+            <Description>Use Scroll of Summon Minor Elemental</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Summons a skeleton to aid the caster.</Help>
+            <Help>[ICON_BULLET]Summons a minor elemental whose strength is equal to 1 + caster's level / 2.</Help>
             <PromotionPrereq1>PROMOTION_SCROLL_SB</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -10437,7 +10438,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_SKELETON')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_KIKIJIB')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_FIRE_SUMMON</Effect>
             <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>
