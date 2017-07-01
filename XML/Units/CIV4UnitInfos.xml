@@ -7639,7 +7639,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-            <iMinAreaSize>20</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>3</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
@@ -17826,7 +17826,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-            <iMinAreaSize>20</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>4</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
@@ -19166,7 +19166,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-            <iMinAreaSize>20</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>3</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
@@ -32042,7 +32042,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-            <iMinAreaSize>20</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>3</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
@@ -33233,7 +33233,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-            <iMinAreaSize>20</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>3</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
@@ -33458,7 +33458,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-            <iMinAreaSize>5</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>2</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
@@ -50281,7 +50281,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-            <iMinAreaSize>20</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>3</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
@@ -58971,7 +58971,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-            <iMinAreaSize>20</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>4</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
@@ -59204,7 +59204,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-            <iMinAreaSize>20</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>4</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
@@ -60143,7 +60143,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-            <iMinAreaSize>20</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>3</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
@@ -60372,7 +60372,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-            <iMinAreaSize>20</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>4</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
@@ -70806,7 +70806,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-            <iMinAreaSize>5</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>2</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
@@ -79141,7 +79141,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>25</iAdvancedStartCostIncrease>
-            <iMinAreaSize>20</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>3</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>3</iAirRange>
@@ -79662,7 +79662,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>25</iAdvancedStartCostIncrease>
-            <iMinAreaSize>20</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>3</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
@@ -88999,7 +88999,7 @@
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-            <iMinAreaSize>2</iMinAreaSize>
+            <iMinAreaSize>1</iMinAreaSize>
             <iMoves>1</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>

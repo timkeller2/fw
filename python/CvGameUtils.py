@@ -292,6 +292,7 @@ class CvGameUtils:
 		ePlayer = pCity.getOwner()
 		pPlayer = gc.getPlayer(ePlayer)
 		eUnitClass = gc.getUnitInfo(eUnit).getUnitClassType()
+		eUnitCombat = gc.getUnitInfo(eUnit).getUnitCombatType()
 		eTeam = gc.getTeam(pPlayer.getTeam())
 
 		sCityInfo = { 'OBELISK': 1, 'TEMPLE': 1 }
@@ -382,6 +383,10 @@ class CvGameUtils:
 						if eTeam2.isHasTech(gc.getInfoTypeForString('TECH_OPTICS')) and eTeam2.isHasTech(gc.getInfoTypeForString('TECH_IRON_WORKING')):
 							iPrivateercounter = iPrivateercounter +1
 				if iPrivateercounter > 1:
+					return True
+					
+			if eUnitCombat == gc.getInfoTypeForString('UNITCOMBAT_NAVAL'):
+				if gc.getUnitInfo(eUnit).plot().area().getNumTiles() < 20:
 					return True
           
 		if eUnit == gc.getInfoTypeForString('UNIT_PRIEST_OF_KILMORPH'):
