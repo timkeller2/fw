@@ -89098,8 +89098,9 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
+            <bNeverObsolete>1</bNeverObsolete>
             <iCombatDefense>3</iCombatDefense>
-            <iTier>1</iTier>
+            <iTier>2</iTier>
         </UnitInfo>
     </UnitInfos>
 </Civ4UnitInfos>
