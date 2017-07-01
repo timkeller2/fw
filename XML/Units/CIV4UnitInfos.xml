@@ -28993,7 +28993,7 @@
             </UniqueNames>
             <Special>NONE</Special>
             <Capture>NONE</Capture>
-            <Combat>NONE</Combat>
+            <Combat>UNITCOMBAT_MELEE</Combat>
             <Domain>DOMAIN_LAND</Domain>
             <DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
             <Invisible>NONE</Invisible>
