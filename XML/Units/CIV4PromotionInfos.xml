@@ -21331,7 +21331,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CAST_SUMMON_KIKIJIB</Type>
             <Description>Cast Summon Elemental</Description>
-            <Help></Help>
+            <Help>[ICON_BULLET]Summons a minor elemental whose strength is equal to 1 + caster's level / 2.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_GENERALIST</PromotionPrereq>
