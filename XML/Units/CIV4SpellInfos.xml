@@ -11289,7 +11289,7 @@
             <iAIWeight>100</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
@@ -11363,7 +11363,7 @@
             <iAIWeight>0</iAIWeight>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <bIgnoreHasCasted>1</bIgnoreHasCasted>
+            <bIgnoreHasCasted>0</bIgnoreHasCasted>
             <bResistable>0</bResistable>
             <iRange>0</iRange>
             <iResistModify>0</iResistModify>
