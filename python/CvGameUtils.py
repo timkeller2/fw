@@ -386,7 +386,7 @@ class CvGameUtils:
 					return True
 					
 			if eUnitCombat == gc.getInfoTypeForString('UNITCOMBAT_NAVAL'):
-				if gc.getUnitInfo(eUnit).plot().area().getNumTiles() < 20:
+				if pCity.plot().area().getNumTiles() < 20:
 					return True
           
 		if eUnit == gc.getInfoTypeForString('UNIT_PRIEST_OF_KILMORPH'):
