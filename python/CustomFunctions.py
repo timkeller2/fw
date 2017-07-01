@@ -3245,11 +3245,11 @@ class CustomFunctions:
 							
 				## Low level vessels can take storm damage
 				if pPlayer.isHuman() and iTerrain == iOcean and ( not pPlot.isOwned() or pPlot.getOwner() != pUnit.getOwner()):
-					if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GALLEY') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_TRIREME'):
+					if pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_GALLEY') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_TRIREME') or pUnit.getUnitType() == gc.getInfoTypeForString('UNIT_RAFT'):
 						iDam = CyGame().getSorenRandNum(12, "Storm Damage") - pUnit.baseCombatStr()
 						
 						if iDam > 0:
-							iDam = ( iDam * 100 ) / pUnit.baseCombatStr()
+							iDam = iDam * 10
 							pUnit.doDamageNoCaster(iDam, 100, gc.getInfoTypeForString('DAMAGE_LIGHTNING'), False)
 							
 				## Merchant Ships give income every 25 turns or so, more with speed and experience

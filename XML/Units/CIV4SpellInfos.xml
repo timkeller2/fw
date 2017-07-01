@@ -2251,6 +2251,20 @@
             <Button>Art/Interface/Buttons/Units/Skeleton.dds</Button>
         </SpellInfo>
         <SpellInfo>
+            <Type>SPELL_SUMMON_ELEMENTAL</Type>
+            <Description>Summon Elemental</Description>
+            <Civilopedia></Civilopedia>
+            <PromotionPrereq1>PROMOTION_CAST_SUMMON_KIKIJIB</PromotionPrereq1>
+            <PromotionPrereq2></PromotionPrereq2>
+            <bAllowAI>1</bAllowAI>
+            <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_KIKIJIB')</PyResult>
+            <Effect>EFFECT_SPELL2</Effect>
+            <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>
+            <Button>Art/Interface/Buttons/Units/Earth Elemental.dds</Button>
+        </SpellInfo>
+        <SpellInfo>
             <Type>SPELL_RALLY</Type>
             <Description>TXT_KEY_SPELL_RALLY</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
@@ -3175,6 +3189,21 @@
             <Effect>EFFECT_FIRE_SUMMON</Effect>
             <Sound>AS3D_SPELL_FIREBALL</Sound>
             <Button>Art/Interface/Buttons/Units/Azer.dds</Button>
+        </SpellInfo>
+        <SpellInfo>
+            <Type>SPELL_SUMMON_KIKIJIB</Type>
+            <Description>Summon Kikijib</Description>
+            <Civilopedia></Civilopedia>
+            <PromotionPrereq1>PROMOTION_EARTH2</PromotionPrereq1>
+            <PromotionPrereq2>PROMOTION_SUMMONER</PromotionPrereq2>
+            <bAllowAI>1</bAllowAI>
+            <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <CreateUnitType>UNIT_KIKIJIB</CreateUnitType>
+            <iCreateUnitNum>1</iCreateUnitNum>
+            <Effect>EFFECT_FIRE_SUMMON</Effect>
+            <Sound>AS3D_SPELL_FIREBALL</Sound>
+            <Button>Art/Interface/Buttons/Units/Earth Elemental.dds</Button>
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_SUMMON_SAND_LION</Type>

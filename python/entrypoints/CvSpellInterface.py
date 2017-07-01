@@ -4646,6 +4646,12 @@ def spellSummonScroll(caster,sUnit):
 		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION2')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
 
+		if sUnit == 'UNIT_KIKIJIB':
+			newUnit.setDuration(newUnit.getDuration()/2)
+			i = caster.getLevel() / 2 + 1
+			newUnit.setBaseCombatStr( i )
+			newUnit.setBaseCombatStrDefense( i )
+			
 		if sUnit == 'UNIT_BUCCANEER':
 			newUnit.setDuration(0)
 			i = caster.baseCombatStr() / 4
