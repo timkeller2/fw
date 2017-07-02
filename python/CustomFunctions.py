@@ -78,8 +78,26 @@ class CustomFunctions:
 					sMsg = unit.getName() + ' is born fearing dragons and beasts...'
 					CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Units/Acheron.dds',ColorTypes(8),unit.getX(),unit.getY(),True,True)
 					CyInterface().addCombatMessage(iPlayer,sMsg)
-				
 
+	def reqMageArmor(self,caster):
+		pPlot = caster.plot()
+		for i in range(pPlot.getNumUnits()):
+			pUnit = pPlot.getUnit(i)
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGE_ARMOR')):
+				return True
+		return False
+		
+	def spellMageArmor(self,caster):
+		iNumArmored = caster.getLevel() / 2 + retCombat(caster)
+		pPlot = caster.plot()
+		for i in range(pPlot.getNumUnits()):
+			pUnit = pPlot.getUnit(i)
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGE_ARMOR')):
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGE_ARMOR'),True)
+				iNumArmored = iNumArmored - 1
+				if ( iNumArmored < 1 ):
+					return
+	
 	def reqJudge(self,caster):
 		if caster.plot().isCity():
 			pCity = caster.plot().getPlotCity()
@@ -3241,6 +3259,11 @@ class CustomFunctions:
 
 						if iNoTargets == iBuffs:
 							break
+
+				## Units with mage armor, buff if they can
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CAST_MAGE_ARMOR')) and not pUnit.isHasCasted() and self.reqMageArmor(pUnit):
+					self.spellMageArmor(pUnit)
+					pUnit.setHasCasted(True)
 
 				## Living units that fly take endurance damage
 				if pPlayer.isHuman() and (pUnit.isAlive() or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL'))) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FLYING')):

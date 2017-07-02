@@ -4333,23 +4333,10 @@ def spellTurnUndead(caster):
 							return
 
 def reqMageArmor(caster):
-	pPlot = caster.plot()
-	for i in range(pPlot.getNumUnits()):
-		pUnit = pPlot.getUnit(i)
-		if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGE_ARMOR')):
-			return True
-	return False
-
+	return cf.reqMageArmor(caster)
+	
 def spellMageArmor(caster):
-	iNumArmored = caster.getLevel() / 2 + retCombat(caster)
-	pPlot = caster.plot()
-	for i in range(pPlot.getNumUnits()):
-		pUnit = pPlot.getUnit(i)
-		if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGE_ARMOR')):
-			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGE_ARMOR'),True)
-			iNumArmored = iNumArmored - 1
-			if ( iNumArmored < 1 ):
-				return
+	cf.spellMageArmor(caster)
 
 def spellHealingTouch(caster):
 	cf.spellHealingTouch(caster)
