@@ -2847,6 +2847,11 @@ class CustomFunctions:
 						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WORKER_SHIELD'), True)
 					else:
 						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WORKER_SHIELD'), False)
+					if CyGame().getSorenRandNum(3, "UnitGuard") == 1 and pUnit.getDamage() < 50:
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_GUARDING'), True)
+					else:
+						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_GUARDING'), False)
+						
 				
 				## Fix an AI spinlock problem...
 				if pUnit.getUnitAIType() == UnitAITypes.UNITAI_WORKER and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_WORKER') and not pPlayer.isHuman():

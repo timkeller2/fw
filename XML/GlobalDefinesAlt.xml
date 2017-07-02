@@ -83,7 +83,7 @@
     </Define>
     <Define>
         <DefineName>MAX_EXPERIENCE_PER_COMBAT</DefineName>
-        <iDefineIntVal>20</iDefineIntVal>
+        <iDefineIntVal>10</iDefineIntVal>
     </Define>
     <Define>
         <DefineName>MAX_EXPERIENCE_AFTER_UPGRADE</DefineName>

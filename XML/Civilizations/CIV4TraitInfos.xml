@@ -603,7 +603,7 @@
 			<bSprawling>0</bSprawling>
 			<iFreeXPFromCombat>0</iFreeXPFromCombat>
 			<iMaxCities>-1</iMaxCities>
-			<iPillagingGold>200</iPillagingGold>
+			<iPillagingGold>300</iPillagingGold>
 			<iStartingGold>0</iStartingGold>
 			<iSummonDuration>0</iSummonDuration>
 			<iUpgradeCostModifier>0</iUpgradeCostModifier>
@@ -612,28 +612,8 @@
 			<CommerceChanges/>
 			<CommerceModifiers/>
 			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_BOUNTY_HUNTER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
 			</FreePromotions>
 			<FreePromotionUnitCombats>
-				<FreePromotionUnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bFreePromotionUnitCombat>1</bFreePromotionUnitCombat>
-				</FreePromotionUnitCombat>
-				<FreePromotionUnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bFreePromotionUnitCombat>1</bFreePromotionUnitCombat>
-				</FreePromotionUnitCombat>
-				<FreePromotionUnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bFreePromotionUnitCombat>1</bFreePromotionUnitCombat>
-				</FreePromotionUnitCombat>
-				<FreePromotionUnitCombat>
-					<UnitCombatType>UNITCOMBAT_NAVAL</UnitCombatType>
-					<bFreePromotionUnitCombat>1</bFreePromotionUnitCombat>
-				</FreePromotionUnitCombat>
 			</FreePromotionUnitCombats>
 		</TraitInfo>
 		<TraitInfo>
