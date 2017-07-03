@@ -10549,6 +10549,9 @@
             <GlobalSeaPlotYieldChanges>
             </GlobalSeaPlotYieldChanges>
             <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>1</iYield>
+                <iYield>0</iYield>
             </YieldChanges>
             <YieldModifiers>
             </YieldModifiers>
@@ -10571,10 +10574,6 @@
             <ReligionChanges>
             </ReligionChanges>
             <SpecialistCounts>
-                <SpecialistCount>
-                    <SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-                    <iSpecialistCount>1</iSpecialistCount>
-                </SpecialistCount>
             </SpecialistCounts>
             <FreeSpecialistCounts>
             </FreeSpecialistCounts>
@@ -36791,7 +36790,7 @@
             <PowerBonus>NONE</PowerBonus>
             <FreeBonus>NONE</FreeBonus>
             <iNumFreeBonuses>0</iNumFreeBonuses>
-            <FreeBuilding>BUILDINGCLASS_DUNGEON</FreeBuilding>
+            <FreeBuilding>NONE</FreeBuilding>
             <FreePromotion>PROMOTION_SENTRY</FreePromotion>
             <CivicOption>NONE</CivicOption>
             <GreatPeopleUnitClass>UNITCLASS_COMMANDER</GreatPeopleUnitClass>
