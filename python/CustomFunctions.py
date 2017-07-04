@@ -88,7 +88,7 @@ class CustomFunctions:
 		return False
 		
 	def spellMageArmor(self,caster):
-		iNumArmored = caster.getLevel() / 2 + retCombat(caster)
+		iNumArmored = caster.getLevel() / 2 + self.retCombat(caster)
 		pPlot = caster.plot()
 		for i in range(pPlot.getNumUnits()):
 			pUnit = pPlot.getUnit(i)
