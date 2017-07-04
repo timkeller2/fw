@@ -3351,7 +3351,7 @@
                     <iFreeUnits>1</iFreeUnits>
                 </FreeUnitClass>
                 <FreeUnitClass>
-                    <UnitClassType>UNITCLASS_SCOUT</UnitClassType>
+                    <UnitClassType>UNITCLASS_MAGICIAN</UnitClassType>
                     <iFreeUnits>1</iFreeUnits>
                 </FreeUnitClass>
             </FreeUnitClasses>

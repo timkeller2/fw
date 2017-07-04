@@ -8751,7 +8751,7 @@
             <Description>Copy scrolls from the library.</Description>
             <Civilopedia>Visit the library to copy scrolls.</Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Visit the library to copy scrolls.  (Magic Missile, Mage Armor, Summon Skeleton and others)</Help>
+            <Help>[ICON_BULLET]Visit the library to copy scrolls.  (Magic Missile, Mage Armor, Summon Elemental and others)</Help>
             <PromotionPrereq1>NONE</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -10452,7 +10452,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_SCROLL_SB_BURGLAR</Type>
-            <Description>Use Magic Item Scroll of Summon Skeleton</Description>
+            <Description>Use Magic Item Scroll of Summon Minor Elemental</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>[ICON_BULLET]Summons a skeleton to aid the caster.</Help>
@@ -13046,7 +13046,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_TAKE_SCROLL_SB</Type>
-            <Description>Take the Scroll of Summon Skeleton...</Description>
+            <Description>Take the Scroll of Summon Minor Elemental...</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy>NONE</Strategy>
             <Help>TXT_KEY_SPELL_TAKE_EQUIPMENT_HELP</Help>

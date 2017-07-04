@@ -9294,7 +9294,7 @@
             <bWaterWalking>0</bWaterWalking>
             <iAIWeight>0</iAIWeight>
             <iBetrayalChance>0</iBetrayalChance>
-            <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
+            <iBetterDefenderThanPercent>-10</iBetterDefenderThanPercent>
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
             <iCombatHealPercent>0</iCombatHealPercent>
