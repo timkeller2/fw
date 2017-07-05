@@ -65501,8 +65501,8 @@
             <Combat>UNITCOMBAT_BEAST</Combat>
             <Domain>DOMAIN_SEA</Domain>
             <DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
-            <Invisible>NONE</Invisible>
-            <SeeInvisible>NONE</SeeInvisible>
+            <Invisible>INVISIBLE_ANIMAL</Invisible>
+            <SeeInvisible>INVISIBLE_ANIMAL</SeeInvisible>
             <Description>TXT_KEY_UNIT_SEA_SERPENT</Description>
             <Civilopedia>TXT_KEY_UNIT_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy></Strategy>
@@ -80347,8 +80347,8 @@
             <Combat>UNITCOMBAT_BEAST</Combat>
             <Domain>DOMAIN_SEA</Domain>
             <DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
-            <Invisible>NONE</Invisible>
-            <SeeInvisible>NONE</SeeInvisible>
+            <Invisible>INVISIBLE_ANIMAL</Invisible>
+            <SeeInvisible>INVISIBLE_ANIMAL</SeeInvisible>
             <Description>Giant Sea Serpent</Description>
             <Civilopedia>TXT_KEY_UNIT_PLACEHOLDER_PEDIA</Civilopedia>
             <Strategy></Strategy>

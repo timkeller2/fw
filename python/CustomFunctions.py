@@ -1370,7 +1370,7 @@ class CustomFunctions:
 		return 'UNIT_IMP'
 
 	def sAnimalUnit(self):
-		i = CyGame().getSorenRandNum(9, "AnimalUnitSelect") + 1
+		i = CyGame().getSorenRandNum(10, "AnimalUnitSelect") + 1
 		if(i==1):
 			return 'UNIT_BABY_SPIDER'
 		elif(i==2):
@@ -1389,6 +1389,8 @@ class CustomFunctions:
 			return 'UNIT_WOLF'
 		elif(i==9):
 			return 'UNIT_GRIFFON'
+		elif(i==10):
+			return 'UNIT_SCORPION'
 
 		return 'UNIT_GIANT_SPIDER'
 
@@ -2783,15 +2785,23 @@ class CustomFunctions:
 			
 			# Add computer defenders for dungeons
 			if iGameTurn == 0:
-				if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_DUNGEON') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_BARROW') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_RUINS'):
-					bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
-					newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_WARRIOR'), pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
-					self.equip(newUnit)
-					newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), True)
-			
+				sDefender = 'NONE'
+				if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_DUNGEON'):
+					sDefender = 'UNIT_WARRIOR'
+				if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_BARROW'):
+					sDefender = 'UNIT_SKELETON'
+				if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_GRAVEYARD'):
+					sDefender = 'UNIT_ZOMBIE'
+				if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_RUINS'):
+					sDefender = 'UNIT_LIZARDMAN'
+				if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_GOODY_HUT'):
+					sDefender = 'UNIT_GOBLIN'
 				if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_SHIP_WRECK'):
+					sDefender = 'UNIT_STYGIAN_GUARD'
+			
+				if sDefender != 'NONE':
 					bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
-					newUnit = bPlayer.initUnit(gc.getInfoTypeForString('UNIT_SEA_SERPENT'), pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
+					newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sDefender), pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
 					self.equip(newUnit)
 					newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), True)
 			
@@ -3496,8 +3506,10 @@ class CustomFunctions:
 					## Do I have shelter?
 					if not (pPlot.isCity() or iShelter > 0):
 						iDam = CyGame().getSorenRandNum(15, "IceDamage") - 3
-						if iDam > 3:
+						if iDam > 0:
 							pUnit.doDamageNoCaster(iDam, 100, gc.getInfoTypeForString('DAMAGE_COLD'), False)
+							if iDam > 7:
+								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SLOW'), True)
 							sMsg = 'Blistering wind, ice and cold inflict damage on ' + pUnit.getName() + '...  (Seek shelter in a city, defensive structure or a warmer climate.)'
 							CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CONTAGION',1,pUnit.getButton(),ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
 						

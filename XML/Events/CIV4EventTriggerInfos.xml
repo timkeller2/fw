@@ -28506,7 +28506,7 @@
             </TriggerTexts>
             <bSinglePlayer>0</bSinglePlayer>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>600</iWeight>
+            <iWeight>-1</iWeight>
             <bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
             <bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
             <Civic>NONE</Civic>
@@ -28606,7 +28606,7 @@
             </TriggerTexts>
             <bSinglePlayer>0</bSinglePlayer>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>800</iWeight>
+            <iWeight>-1</iWeight>
             <bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
             <bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
             <Civic>NONE</Civic>
@@ -28706,7 +28706,7 @@
             </TriggerTexts>
             <bSinglePlayer>0</bSinglePlayer>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>1000</iWeight>
+            <iWeight>-1</iWeight>
             <bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
             <bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
             <Civic>NONE</Civic>
@@ -28805,8 +28805,8 @@
                 </TriggerText>
             </TriggerTexts>
             <bSinglePlayer>0</bSinglePlayer>
-            <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>1000</iWeight>
+            <iPercentGamesActive>35</iPercentGamesActive>
+            <iWeight>-1</iWeight>
             <bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
             <bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
             <Civic>NONE</Civic>
@@ -28906,7 +28906,7 @@
             </TriggerTexts>
             <bSinglePlayer>0</bSinglePlayer>
             <iPercentGamesActive>100</iPercentGamesActive>
-            <iWeight>1000</iWeight>
+            <iWeight>-1</iWeight>
             <bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
             <bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
             <Civic>NONE</Civic>
