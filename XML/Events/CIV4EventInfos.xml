@@ -58586,7 +58586,7 @@
             <iTechMinTurnsLeft>0</iTechMinTurnsLeft>
             <PrereqTech>NONE</PrereqTech>
             <UnitClass>UNITCLASS_BURGLAR</UnitClass>
-            <iNumFreeUnits>2</iNumFreeUnits>
+            <iNumFreeUnits>1</iNumFreeUnits>
             <bDisbandUnit>0</bDisbandUnit>
             <iUnitExperience>0</iUnitExperience>
             <iUnitImmobileTurns>0</iUnitImmobileTurns>
