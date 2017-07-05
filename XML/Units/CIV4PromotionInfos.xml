@@ -20670,7 +20670,7 @@
         <PromotionInfo>
             <Type>PROMOTION_PROLIFIC</Type>
             <Description>Prolific</Description>
-            <Help>[ICON_BULLET]Gives a 1% chance of having young per turn.[NEWLINE][ICON_BULLET]Requires level 4.</Help>
+            <Help>[ICON_BULLET]Gives a 2% chance of having young per turn.[NEWLINE][ICON_BULLET]Requires level 4.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <UnitCombats>
                 <UnitCombat>
@@ -21016,7 +21016,7 @@
         <PromotionInfo>
             <Type>PROMOTION_PROLIFIC2</Type>
             <Description>Prolific II</Description>
-            <Help>[ICON_BULLET]Increases the chance of having young by 1% per turn (2%).</Help>
+            <Help>[ICON_BULLET]Increases the chance of having young by 1% per turn (3%).</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_PROLIFIC</PromotionPrereq>
             <UnitCombats>
@@ -21032,7 +21032,7 @@
         <PromotionInfo>
             <Type>PROMOTION_PROLIFIC3</Type>
             <Description>Prolific III</Description>
-            <Help>[ICON_BULLET]Increases the chance of having young by 2% per turn (4%).</Help>
+            <Help>[ICON_BULLET]Increases the chance of having young by 2% per turn (5%).</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_PROLIFIC2</PromotionPrereq>
             <UnitCombats>
