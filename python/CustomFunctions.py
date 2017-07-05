@@ -53,11 +53,11 @@ class CustomFunctions:
 					sMsg = 'A ' + str( unit.getName() ) + ' of unusual skill has become apparent!'
 					CyInterface().addMessage(unit.getOwner(),false,25,sMsg,'AS3D_SPELL_CHARM_PERSON',1,unit.getButton(),ColorTypes(8),unit.getX(),unit.getY(),True,True)
 
-			if CyGame().getSorenRandNum(30, "RandomSinister") == 2:
+			if CyGame().getSorenRandNum(50, "RandomSinister") == 2:
 				if unit.baseCombatStr() > 1:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SINISTER'), True)
 
-			if CyGame().getSorenRandNum(30, "RandomDexterous") == 3:
+			if CyGame().getSorenRandNum(50, "RandomDexterous") == 3:
 				if unit.baseCombatStr() > 1:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DEXTEROUS'), True)
 

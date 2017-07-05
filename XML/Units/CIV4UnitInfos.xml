@@ -75747,7 +75747,7 @@
             <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>25</iAdvancedStartCostIncrease>
             <iMinAreaSize>-1</iMinAreaSize>
-            <iMoves>3</iMoves>
+            <iMoves>1</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
             <iAirRange>0</iAirRange>
             <iAirUnitCap>0</iAirUnitCap>
@@ -75847,10 +75847,6 @@
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
                 <FreePromotion>
-                    <PromotionType>PROMOTION_IMMUNE_FIRE</PromotionType>
-                    <bFreePromotion>1</bFreePromotion>
-                </FreePromotion>
-                <FreePromotion>
                     <PromotionType>PROMOTION_ELEMENTAL</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
@@ -75888,7 +75884,7 @@
             <DamageTypeCombats>
                 <DamageTypeCombat>
                     <DamageType>DAMAGE_LIGHTNING</DamageType>
-                    <iCombat>2</iCombat>
+                    <iCombat>1</iCombat>
                 </DamageTypeCombat>
             </DamageTypeCombats>
             <BonusAffinities>
