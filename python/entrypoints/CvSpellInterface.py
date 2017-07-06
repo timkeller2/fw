@@ -4684,6 +4684,10 @@ def reqVolley(caster,volleytype):
 			bCan = True
 		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DIMENSIONAL1')):
 			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_METAMAGIC1')):
+			bCan = True
+		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ICE1')):
+			bCan = True
 		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EARTH1')):
 			bCan = True
 		elif caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WATER1')):
@@ -4724,9 +4728,9 @@ def reqVolley(caster,volleytype):
 					iMod = ( caster.baseCombatStr() * 10 ) / iDefStr
 					iMax = 50
 					if volleytype == 'adept':
-						iMax = 20 + 5 * caster.getLevel()
-						if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 10 + 3 * caster.getLevel():
-							iMax = 10 + 3 * caster.getLevel()
+						iMax = 5 * caster.getLevel()
+						if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 3 * caster.getLevel():
+							iMax = 3 * caster.getLevel()
 						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE')):
 							iMax = iMax / 2
 						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE_TEMP')):
@@ -4751,7 +4755,8 @@ def spellVolley(caster,volleytype):
 	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION2')):
 		iRange += 1
 
-	for i in range((1+int(caster.getLevel()/6))):
+#	for i in range((1+int(caster.getLevel()/6))):
+	for i in range(1):
 		iBestValue = 0
 		pBestUnit = -1
 		pBestPlot = -1
@@ -4766,9 +4771,9 @@ def spellVolley(caster,volleytype):
 					iMod = ( caster.baseCombatStr() * 10 ) / iDefStr
 					iMax = 50
 					if volleytype == 'adept':
-						iMax = 20 + 5 * caster.getLevel()
-						if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 10 + 3 * caster.getLevel():
-							iMax = 10 + 3 * caster.getLevel()
+						iMax = 5 * caster.getLevel()
+						if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 3 * caster.getLevel():
+							iMax = 3 * caster.getLevel()
 						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE')):
 							iMax = iMax / 2
 						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE_TEMP')):
@@ -4790,12 +4795,12 @@ def spellVolley(caster,volleytype):
 			iDefStr = pBestUnit.baseCombatStr()
 			if iDefStr < 1:
 				iDefStr = 1
-			iMod = ( caster.baseCombatStr() * 10 ) / iDefStr
+			iMod = ( caster.baseCombatStr() * caster.getLevel() ) / iDefStr
 			iMax = 50
 			if volleytype == 'adept':
-				iMax = 20 + 5 * caster.getLevel()
-				if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 10 + 3 * caster.getLevel():
-					iMax = 10 + 3 * caster.getLevel()
+				iMax = 5 * caster.getLevel()
+				if caster.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ADEPT') and iMax > 3 * caster.getLevel():
+					iMax = 3 * caster.getLevel()
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_RESISTANCE')):
 						iMax = iMax / 2
 						iMod = iMod / 2
@@ -4805,7 +4810,7 @@ def spellVolley(caster,volleytype):
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MAGIC_IMMUNE')):
 						iMax = 0
 						iMod = 0
-			iDamage = iMod + CyGame().getSorenRandNum( iMod , "VolleyOfArrows" )
+			iDamage = iMod / 2 + CyGame().getSorenRandNum( iMod , "VolleyOfArrows" )
 			if (pBestUnit.isAlive() == False and volleytype == 'archer'):
 				iDamage = iDamage / 2
 			if pBestUnit.plot().isCity():

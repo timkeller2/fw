@@ -8342,6 +8342,7 @@
             <bMutation>1</bMutation>
             <bPrereqAlive>1</bPrereqAlive>
             <iAIWeight>-100</iAIWeight>
+            <iExpireChance>5</iExpireChance>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
@@ -13321,7 +13322,7 @@
             <bAlwaysHeal>0</bAlwaysHeal>
             <bHillsDoubleMove>0</bHillsDoubleMove>
             <bImmuneToFirstStrikes>0</bImmuneToFirstStrikes>
-            <iVisibilityChange>0</iVisibilityChange>
+            <iVisibilityChange>-1</iVisibilityChange>
             <iMovesChange>-1</iMovesChange>
             <iMoveDiscountChange>0</iMoveDiscountChange>
             <iAirRangeChange>0</iAirRangeChange>
@@ -13933,7 +13934,7 @@
             <iCombatPercentDefense>20</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
-            <iExpireChance>10</iExpireChance>
+            <iExpireChance>25</iExpireChance>
             <iExtraCombatStr>0</iExtraCombatStr>
             <iExtraCombatDefense>0</iExtraCombatDefense>
             <iFreeXPPerTurn>0</iFreeXPPerTurn>
@@ -21473,11 +21474,11 @@
             </DamageTypeResists>
         </PromotionInfo>
         <PromotionInfo>
-            <Type>PROMOTION_FUTURE_LEARNING1</Type>
-            <Description>Future Learning</Description>
+            <Type>PROMOTION_LACKS_SIGHT</Type>
+            <Description>Lacks Sight</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>0</iCombatPercent>
-            <Button>Art/Interface/Buttons/Promotions/air1.dds</Button>
+            <iVisibilityChange>-5</iVisibilityChange>
+            <Button>Art/Interface/Buttons/Promotions/Sun1.dds</Button>
             <iCombatPercentDefense>0</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>

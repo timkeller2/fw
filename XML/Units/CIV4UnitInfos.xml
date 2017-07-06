@@ -31219,6 +31219,10 @@
                     <PromotionType>PROMOTION_ELEMENTAL</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_LACKS_SIGHT</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
@@ -53122,6 +53126,10 @@
                 </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_IMMUNE_FIRE</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_LACKS_SIGHT</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
             </FreePromotions>
@@ -75848,6 +75856,10 @@
                 </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_ELEMENTAL</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_LACKS_SIGHT</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
             </FreePromotions>
