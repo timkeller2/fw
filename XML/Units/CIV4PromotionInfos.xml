@@ -8594,7 +8594,7 @@
             <iFriendlyHealChange>0</iFriendlyHealChange>
             <iSameTileHealChange>0</iSameTileHealChange>
             <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>20</iCombatPercent>
+            <iCombatPercent>0</iCombatPercent>
             <iCityAttack>0</iCityAttack>
             <iCityDefense>0</iCityDefense>
             <iHillsAttack>0</iHillsAttack>
@@ -8662,7 +8662,7 @@
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
             <iCombatHealPercent>0</iCombatHealPercent>
-            <iCombatPercentDefense>20</iCombatPercentDefense>
+            <iCombatPercentDefense>0</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
@@ -8846,7 +8846,7 @@
         <PromotionInfo>
             <Type>PROMOTION_GRAND_MASTER</Type>
             <Description>Grand Master</Description>
-            <Help>[ICON_BULLET]The most experienced unit of each class type may be promoted to grand master upon attaining level 6.[NEWLINE][ICON_BULLET]There must be at least 12 units of like type in the world before a grand master can exist for the class.</Help>
+            <Help>[ICON_BULLET]The most experienced unit of each class type may be promoted to grand master upon attaining level 6.[NEWLINE][ICON_BULLET]There must be at least 25 units of like type in the world before a grand master can exist for the class.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
