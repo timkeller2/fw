@@ -4595,14 +4595,19 @@ def spellDiplomacy(caster):
 		
 			
 
-def spellSummonScroll(caster,sUnit):
+def spellSummonScroll(caster,sUnit,mode):
 	bPlayer = gc.getPlayer(caster.getOwner())
 	iX = caster.getX()
 	iY = caster.getY()
 	iL = 1
 	if sUnit == 'UNIT_MAGIC_MISSILE':
-		iL = int( caster.getLevel() / 3 ) + 1
-
+		if mode == 'scroll':
+			iL = int( caster.getLevel() / 3 ) + 1
+		else:	
+			iL = int( caster.getLevel() / 3 )
+			caster.changeDamage(10,0)
+	if iL < 1:
+		iL = 1
 	for i in range(iL):
 		newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sUnit), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 		if (sUnit == 'UNIT_MAGIC_MISSILE' or sUnit == 'UNIT_FIREBALL'):
@@ -4636,7 +4641,7 @@ def spellSummonScroll(caster,sUnit):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
 
 		if sUnit == 'UNIT_KIKIJIB':
-			if not caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SCROLL_SB')):
+			if mode == 'caster':
 				newUnit.setDuration(newUnit.getDuration()/2)
 				caster.changeDamage(10,0)
 			i = caster.getLevel() / 2 + 1

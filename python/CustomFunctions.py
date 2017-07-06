@@ -87,8 +87,14 @@ class CustomFunctions:
 				return True
 		return False
 		
-	def spellMageArmor(self,caster):
-		iNumArmored = caster.getLevel() / 2 + self.retCombat(caster)
+	def spellMageArmor(self,caster,mode):
+		if mode == 'caster':
+			iNumArmored = caster.getLevel() / 3
+			caster.changeDamage(10,0)
+		else:
+			iNumArmored = caster.getLevel() / 2 + self.retCombat(caster)
+		if iNumArmored < 1:
+			iNumArmored = 1
 		pPlot = caster.plot()
 		for i in range(pPlot.getNumUnits()):
 			pUnit = pPlot.getUnit(i)
@@ -3270,10 +3276,10 @@ class CustomFunctions:
 						if iNoTargets == iBuffs:
 							break
 
-				## Units with mage armor, buff if they can
-				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CAST_MAGE_ARMOR')) and not pUnit.isHasCasted() and self.reqMageArmor(pUnit):
-					self.spellMageArmor(pUnit)
-					pUnit.setHasCasted(True)
+				# Units with mage armor, buff if they can
+				# if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CAST_MAGE_ARMOR')) and not pUnit.isHasCasted() and self.reqMageArmor(pUnit):
+					# self.spellMageArmor(pUnit)
+					# pUnit.setHasCasted(True)
 
 				## Living units that fly take endurance damage
 				if pPlayer.isHuman() and (pUnit.isAlive() or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ANGEL'))) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_FLYING')):

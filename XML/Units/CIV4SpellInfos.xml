@@ -11,7 +11,7 @@
             <Description>Mage Armor</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Grants mage armor to (level/2+combat promotions) units.</Help>
+            <Help>[ICON_BULLET]Grants mage armor to one unit for every 3 levels of the caster.[NEWLINE][ICON_BULLET]Does 10 exertion damage to the caster.</Help>
             <PromotionPrereq1>PROMOTION_CAST_MAGE_ARMOR</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -68,7 +68,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellMageArmor(pCaster)</PyResult>
+            <PyResult>spellMageArmor(pCaster,'caster')</PyResult>
             <PyRequirement>reqMageArmor(pCaster)</PyRequirement>
             <Effect>EFFECT_SPELL1</Effect>
             <Sound>AS3D_SPELL_ENCHANTMENT</Sound>
@@ -85,7 +85,7 @@
             <Description>Magic Missile</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Hurls (level / 3 + 1) magic missiles.</Help>
+            <Help>[ICON_BULLET]Hurls (level / 3) magic missiles.[NEWLINE][ICON_BULLET]Does 10 exertion damage to the caster.</Help>
             <PromotionPrereq1>PROMOTION_CAST_MAGIC_MISSILE</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -142,7 +142,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_MAGIC_MISSILE')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_MAGIC_MISSILE','caster')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_WATER_SUMMON</Effect>
             <Sound>AS3D_SPELL_DJINN</Sound>
@@ -2402,14 +2402,14 @@
             <Type>SPELL_SUMMON_ELEMENTAL</Type>
             <Description>Summon Elemental</Description>
             <Civilopedia></Civilopedia>
-            <Help>[ICON_BULLET]Summons a minor elemental whose strength is equal to 1 + caster's level / 2.[NEWLINE][ICON_BULLET]The exertion from this spell damages the caster 10%.</Help>
+            <Help>[ICON_BULLET]Summons a minor elemental whose strength is equal to 1 + caster's level / 2.[NEWLINE][ICON_BULLET]Does 10 exertion damage to the caster.</Help>
             <PromotionPrereq1>PROMOTION_CAST_SUMMON_KIKIJIB</PromotionPrereq1>
             <PromotionPrereq2></PromotionPrereq2>
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
             <RemovePromotionType1>PROMOTION_SCROLL_SB</RemovePromotionType1>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_KIKIJIB')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_KIKIJIB','caster')</PyResult>
             <Effect>EFFECT_SPELL2</Effect>
             <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>
             <Button>Art/Interface/Buttons/Units/Earth Elemental.dds</Button>
@@ -8733,7 +8733,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_BUCCANEER')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_BUCCANEER','ability')</PyResult>
             <PyRequirement>reqCreateBuccaneer(pCaster)</PyRequirement>
             <Effect>EFFECT_CREATION</Effect>
             <Sound>AS3D_SPELL_HEAL</Sound>
@@ -10290,7 +10290,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_MAGIC_MISSILE')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_MAGIC_MISSILE','scroll')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_WATER_SUMMON</Effect>
             <Sound>AS3D_SPELL_DJINN</Sound>
@@ -10364,7 +10364,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_MAGIC_MISSILE')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_MAGIC_MISSILE','scroll')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_WATER_SUMMON</Effect>
             <Sound>AS3D_SPELL_DJINN</Sound>
@@ -10438,7 +10438,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellMageArmor(pCaster)</PyResult>
+            <PyResult>spellMageArmor(pCaster,'scroll')</PyResult>
             <PyRequirement>reqMageArmor(pCaster)</PyRequirement>
             <Effect>EFFECT_SPELL1</Effect>
             <Sound>AS3D_SPELL_ENCHANTMENT</Sound>
@@ -10586,7 +10586,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_KIKIJIB')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_KIKIJIB','scroll')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_FIRE_SUMMON</Effect>
             <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>
@@ -10660,7 +10660,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_SKELETON')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_SKELETON','scroll')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_FIRE_SUMMON</Effect>
             <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>
@@ -10882,7 +10882,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_FIREBALL')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_FIREBALL','scroll')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_FIRE_SUMMON</Effect>
             <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>
@@ -10956,7 +10956,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_FIREBALL')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_FIREBALL','scroll')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_FIRE_SUMMON</Effect>
             <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>
@@ -11030,7 +11030,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_EARTH_ELEMENTAL')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_EARTH_ELEMENTAL','scroll')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_FIRE_SUMMON</Effect>
             <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>
@@ -11104,7 +11104,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult>spellSummonScroll(pCaster,'UNIT_EARTH_ELEMENTAL')</PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_EARTH_ELEMENTAL',scroll')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_FIRE_SUMMON</Effect>
             <Sound>AS3D_SPELL_FIRE_ELEMENTAL</Sound>

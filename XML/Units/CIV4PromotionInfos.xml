@@ -13970,7 +13970,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CAST_MAGE_ARMOR</Type>
             <Description>Cast Mage Armor</Description>
-            <Help></Help>
+            <Help>[ICON_BULLET]Adds mage armor to a number of unit for every 3 levels of the caster.[NEWLINE][ICON_BULLET]Exertion causes 10% damage to the caster.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_GENERALIST</PromotionPrereq>
@@ -21048,7 +21048,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CAST_MAGIC_MISSILE</Type>
             <Description>Cast Magic Missile</Description>
-            <Help></Help>
+            <Help>[ICON_BULLET]Casts a magic missile for every 3 levels of the caster.[NEWLINE][ICON_BULLET]Exertion causes 10% damage to the caster.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_GENERALIST</PromotionPrereq>
@@ -21192,7 +21192,7 @@
         <PromotionInfo>
             <Type>PROMOTION_GENERALIST</Type>
             <Description>Magical Generalist</Description>
-            <Help></Help>
+            <Help>[ICON_BULLET]Allows training in some general magical spells which require extreme exertion from the caster, causing 10% damage to the caster per cast.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -21332,7 +21332,7 @@
         <PromotionInfo>
             <Type>PROMOTION_CAST_SUMMON_KIKIJIB</Type>
             <Description>Cast Summon Elemental</Description>
-            <Help>[ICON_BULLET]Summons a minor elemental whose strength is equal to 1 + caster's level / 2.</Help>
+            <Help>[ICON_BULLET]Summons a minor elemental whose strength is equal to 1 + caster's level / 2.[NEWLINE][ICON_BULLET]Exertion causes 10% damage to the caster.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_GENERALIST</PromotionPrereq>
