@@ -2402,7 +2402,7 @@
             <Type>SPELL_SUMMON_ELEMENTAL</Type>
             <Description>Summon Elemental</Description>
             <Civilopedia></Civilopedia>
-            <Help>[ICON_BULLET]Summons a minor elemental whose strength is equal to 1 + caster's level / 2.</Help>
+            <Help>[ICON_BULLET]Summons a minor elemental whose strength is equal to 1 + caster's level / 2.[NEWLINE][ICON_BULLET]The exertion from this spell damages the caster 10%.</Help>
             <PromotionPrereq1>PROMOTION_CAST_SUMMON_KIKIJIB</PromotionPrereq1>
             <PromotionPrereq2></PromotionPrereq2>
             <bAllowAI>1</bAllowAI>

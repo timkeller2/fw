@@ -1727,7 +1727,7 @@
             <PrereqCivilization>NONE</PrereqCivilization>
             <PythonAtRange></PythonAtRange>
             <PythonOnMove></PythonOnMove>
-            <SpawnUnitType>NONE</SpawnUnitType>
+            <SpawnUnitType>UNIT_GOBLIN</SpawnUnitType>
         </ImprovementInfo>
         <ImprovementInfo>
             <Type>IMPROVEMENT_GRAVEYARD</Type>
