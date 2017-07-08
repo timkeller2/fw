@@ -4369,9 +4369,9 @@ def reqLearnMagic(caster):
 		return False
 
 	strCheckData = cPickle.loads(pCity.getScriptData())
-	if strCheckData['BUILDING_MAGE_GUILD'] > CyGame().getGameTurn():
+	if ( ( CyGame().getGameTurn() - strCheckData['BUILDING_MAGE_GUILD'] ) * pCity.getPopulation() ) / 15 < iCost / 3:
 		return False
-
+		
 	return True
 
 def reqHireAdventurer(caster):

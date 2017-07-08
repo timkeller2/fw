@@ -8822,9 +8822,9 @@
         <SpellInfo>
             <Type>SPELL_TELEPORT_MANA</Type>
             <Description>Teleport</Description>
-            <Civilopedia>The caster can teleport passengers equal to 1/4, 1/2 or equal to his level based on what level of dimensional training he has.</Civilopedia>
+            <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Teleport the caster (and potentially passengers, see civilopedia) to a teleportal created by another mage or, if none exists, the capital city.[ICON_BULLET]You may not teleport if charmed.</Help>
+            <Help>[ICON_BULLET]Teleport the caster and potentially passengers to a teleportal created by another mage or, if none exists, the capital city.[NEWLINE][ICON_BULLET]You may not teleport if charmed.[NEWLINE][ICON_BULLET]The caster can teleport passengers equal to 1/4, 1/2 or equal to his level based on what level of dimensional training he has.</Help>
             <PromotionPrereq1>PROMOTION_DIMENSIONAL1</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_CHANNELING1</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
