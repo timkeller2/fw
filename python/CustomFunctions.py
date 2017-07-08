@@ -2826,6 +2826,13 @@ class CustomFunctions:
 			iShelter = iThisPlotTrain	
 			iDiseaseInPlot = 0
 			iPlagueInPlot = 0
+			iTreat = 0
+			iDisMult = 2
+			pCity = pPlot.getPlotCity()
+			if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_HERBALIST')) > 0:
+				iTreat += 1
+			if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_INFIRMARY')) > 0:
+				iTreat += 3
 
 			## Set Up Player and Team Variables for the Plot
 			plotPlayer = gc.getPlayer(pPlot.getOwner())
@@ -3435,8 +3442,6 @@ class CustomFunctions:
 					oNewUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), False)
 
 				## Disease and Plague causes damage over time and can be recovered from
-				iTreat = 0
-				iDisMult = 2
 				if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'))):
 					iRecover = 3 - int( pUnit.getDamage() / 10 )
 					if not pPlayer.isHuman():
@@ -3446,10 +3451,8 @@ class CustomFunctions:
 						pCity = pUnit.plot().getPlotCity()
 						if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_HERBALIST')) > 0:
 							iRecover += 2
-							iTreat += 1
 						if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_INFIRMARY')) > 0:
 							iRecover += 4
-							iTreat += 3
 					if iRecover < 1:
 						iRecover = CyGame().getSorenRandNum(3, "MiracleRecovery")
 
