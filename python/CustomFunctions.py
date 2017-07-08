@@ -3437,7 +3437,7 @@ class CustomFunctions:
 				## Disease and Plague causes damage over time and can be recovered from
 				iTreat = 0
 				iDisMult = 2
-				if pUnit.isAlive() and (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'))):
+				if (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'))):
 					iRecover = 3 - int( pUnit.getDamage() / 10 )
 					if not pPlayer.isHuman():
 						iRecover += 10
@@ -3457,16 +3457,16 @@ class CustomFunctions:
 					iHalfDamage = int( iDamage / 2 )
 
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED')):
-						if pUnit.getDamage() < 3:
+						if pUnit.getDamage() < 3 or not pUnit.isAlive():
 							pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'), False)
 						else:
 							pUnit.doDamageNoCaster(iHalfDamage, 100, gc.getInfoTypeForString('DAMAGE_POISON'), False)
 
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED')):
-						iDiseaseInPlot += 1
-						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')):
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')) or not pUnit.isAlive():
 							pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'), False)
 						else:
+							iDiseaseInPlot += 1
 							pUnit.doDamageNoCaster(iDamage, 100, gc.getInfoTypeForString('DAMAGE_POISON'), False)
 							if CyGame().getSorenRandNum(100, "RecoverDisease") < iRecover:
 								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'), False)
@@ -3474,10 +3474,10 @@ class CustomFunctions:
 								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS2D_FEATUREGROWTH',1,pUnit.getButton(),ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
 						
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED')):
-						iPlagueInPlot += 1
-						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUE_CARRIER')):
+						if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMUNE_DISEASE')) or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUE_CARRIER')) or not pUnit.isAlive():
 							pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), False)
 						else:
+							iPlagueInPlot += 1
 							pUnit.doDamageNoCaster(iDamage, 100, gc.getInfoTypeForString('DAMAGE_POISON'), False)
 							if CyGame().getSorenRandNum(100, "RecoverPlague") < iRecover / 2:
 								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'), False)

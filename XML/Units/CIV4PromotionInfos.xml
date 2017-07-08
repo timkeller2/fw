@@ -2148,13 +2148,9 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <UnitCombats>
-                <UnitCombat>
-                    <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-                    <bUnitCombat>1</bUnitCombat>
-                </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Dexterous.dds</Button>
-            <bValidate>1</bValidate>
+            <bValidate>0</bValidate>
             <iExtraCombatStr>1</iExtraCombatStr>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
@@ -7102,13 +7098,9 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <UnitCombats>
-                <UnitCombat>
-                    <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-                    <bUnitCombat>1</bUnitCombat>
-                </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Sinister.dds</Button>
-            <bValidate>1</bValidate>
+            <bValidate>0</bValidate>
             <iExtraCombatStr>1</iExtraCombatStr>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
