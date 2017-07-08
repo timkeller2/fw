@@ -2970,6 +2970,10 @@ class CustomFunctions:
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HERALDS_CALL')):
 					pUnit.kill(True,0)
 
+				## Demon Units Heal at Demon Altars	
+				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')) and pUnit.getDamage() > 0 and pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_DEMONS_ALTAR')) > 0:
+					pUnit.changeDamage(-13, 0)
+					
 				## Equip barbarian units
 				if (pPlayer.isBarbarian() and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_THROWING_AXES'))):
 					self.equip(pUnit)

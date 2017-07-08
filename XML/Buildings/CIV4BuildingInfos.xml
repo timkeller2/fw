@@ -9953,7 +9953,7 @@
             <Type>BUILDING_DEMONS_ALTAR</Type>
             <SpecialBuildingType>NONE</SpecialBuildingType>
             <Description>TXT_KEY_BUILDING_DEMONS_ALTAR</Description>
-            <Civilopedia>TXT_KEY_BUILDING_PLACEHOLDER_PEDIA</Civilopedia>
+            <Civilopedia>[ICON_BULLET]Heals demon units 13% per turn</Civilopedia>
             <Strategy></Strategy>
             <Help>TXT_KEY_BUILDING_DEMONS_ALTAR_HELP</Help>
             <Advisor>ADVISOR_RELIGION</Advisor>
