@@ -385,9 +385,9 @@ class CvGameUtils:
 				if iPrivateercounter > 1:
 					return True
 					
-			if eUnitCombat == gc.getInfoTypeForString('UNITCOMBAT_NAVAL'):
-				if pCity.plot().area().getNumTiles() < 20:
-					return True
+			# if eUnitCombat == gc.getInfoTypeForString('UNITCOMBAT_NAVAL'):
+				# if pCity.plot().area().getNumTiles() < 20:
+					# return True
           
 		if eUnit == gc.getInfoTypeForString('UNIT_PRIEST_OF_KILMORPH'):
 			if pPlayer.getStateReligion() == gc.getInfoTypeForString('RELIGION_RUNES_OF_KILMORPH'):
