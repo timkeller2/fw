@@ -792,7 +792,7 @@ class CustomFunctions:
 		pCity.setScriptData(cPickle.dumps(strSetData))
 
 		iStock = ( ( CyGame().getGameTurn() - strSetData[sBuilding] ) * pCity.getPopulation() ) / 15
-		iMaxStock = pCity.getPopulation() * 6
+		iMaxStock = ( pCity.getPopulation() * 6 * pCity,getPopulation() ) / 15
 		if iMaxStock < 1:
 			iMaxStock = 1
 		iPercent = ( iStock * 100 ) / iMaxStock

@@ -26227,7 +26227,7 @@
             </TerrainPassableTechs>
             <FeaturePassableTechs>
             </FeaturePassableTechs>
-            <iCombat>4</iCombat>
+            <iCombat>3</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>0</iAirCombat>
             <iAirCombatLimit>0</iAirCombatLimit>
@@ -26308,7 +26308,7 @@
             <iHotKeyPriority>0</iHotKeyPriority>
             <FreePromotions>
                 <FreePromotion>
-                    <PromotionType>PROMOTION_DISEASED</PromotionType>
+                    <PromotionType>PROMOTION_DISEASE_CARRIER</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
                 <FreePromotion>
@@ -26318,7 +26318,7 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
-            <iCombatDefense>4</iCombatDefense>
+            <iCombatDefense>3</iCombatDefense>
             <iTier>2</iTier>
             <iWeaponTier>3</iWeaponTier>
             <DamageTypeCombats>

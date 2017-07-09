@@ -3866,7 +3866,7 @@ def reqBecomeChief(caster):
 	return False
 	
 def reqBecomeGrandMaster(caster):
-	if caster.getLevel() < 6:
+	if caster.getLevel() < 8:
 		return False
 	if caster.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE'):
 		return False
@@ -3886,7 +3886,7 @@ def reqBecomeGrandMaster(caster):
 						if caster.getLevel() <= pUnit.getLevel():
 							return False
 
-	if iCount < 12:
+	if iCount < 25:
 		return False
 
 	return True
@@ -4041,6 +4041,8 @@ def sellToMarket(caster):
 
 def reqWorkerAddToCity(caster):
 	pCity = caster.plot().getPlotCity()
+	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DEMON')):
+		return False
 	if pCity.getPopulation() < 6:
 		return True
 	return False

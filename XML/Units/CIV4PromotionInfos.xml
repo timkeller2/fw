@@ -8838,7 +8838,7 @@
         <PromotionInfo>
             <Type>PROMOTION_GRAND_MASTER</Type>
             <Description>Grand Master</Description>
-            <Help>[ICON_BULLET]The most experienced unit of each class type may be promoted to grand master upon attaining level 6.[NEWLINE][ICON_BULLET]There must be at least 25 units of like type in the world before a grand master can exist for the class.</Help>
+            <Help>[ICON_BULLET]The most experienced unit of each class type may be promoted to grand master upon attaining level 8.[NEWLINE][ICON_BULLET]There must be at least 25 units of like type in the world before a grand master can exist for the class.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -21475,13 +21475,14 @@
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
-            <Type>PROMOTION_FUTURE_LEARNING2</Type>
-            <Description>Future Learning</Description>
+            <Type>PROMOTION_DISEASE_CARRIER</Type>
+            <Description>Disease Carrier</Description>
+            <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>0</iCombatPercent>
-            <Button>Art/Interface/Buttons/Promotions/air1.dds</Button>
-            <iCombatPercentDefense>0</iCombatPercentDefense>
+            <TechPrereq>TECH_NEVER</TechPrereq>
+            <Button>Art/Interface/Buttons/Promotions/Diseased.dds</Button>
             <iMinLevel>-1</iMinLevel>
+            <PromotionCombatApply>PROMOTION_DISEASED</PromotionCombatApply>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_FUTURE_LEARNING3</Type>
