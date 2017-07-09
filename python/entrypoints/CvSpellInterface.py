@@ -3886,7 +3886,7 @@ def reqBecomeGrandMaster(caster):
 						if caster.getLevel() <= pUnit.getLevel():
 							return False
 
-	if iCount < 25:
+	if iCount < 12:
 		return False
 
 	return True
