@@ -2406,7 +2406,7 @@
             <Help>[ICON_BULLET]Summons a minor elemental whose strength is equal to 1 + caster's level / 2.[NEWLINE][ICON_BULLET]Does 10 exertion damage to the caster.</Help>
             <PromotionPrereq1>PROMOTION_CAST_SUMMON_KIKIJIB</PromotionPrereq1>
             <PromotionPrereq2></PromotionPrereq2>
-            <bAllowAI>1</bAllowAI>
+            <bAllowAI>0</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
             <RemovePromotionType1>PROMOTION_SCROLL_SB</RemovePromotionType1>
@@ -6616,7 +6616,7 @@
             <ReligionPrereq>NONE</ReligionPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <TechPrereq>NONE</TechPrereq>
-            <bAllowAI>1</bAllowAI>
+            <bAllowAI>0</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
             <bCausesWar>0</bCausesWar>
             <bGlobal>0</bGlobal>
