@@ -28335,7 +28335,7 @@
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
             <iDefense>25</iDefense>
-            <iBombardDefense>0</iBombardDefense>
+            <iBombardDefense>10</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
             <iAsset>1</iAsset>
@@ -38653,7 +38653,7 @@
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
             <iDefense>50</iDefense>
-            <iBombardDefense>25</iBombardDefense>
+            <iBombardDefense>30</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
             <iAsset>1</iAsset>
@@ -38873,7 +38873,7 @@
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
             <iDefense>50</iDefense>
-            <iBombardDefense>25</iBombardDefense>
+            <iBombardDefense>40</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
             <iAsset>1</iAsset>
@@ -41381,7 +41381,7 @@
             <iGlobalPopulationChange>0</iGlobalPopulationChange>
             <iFreeTechs>0</iFreeTechs>
             <iDefense>50</iDefense>
-            <iBombardDefense>25</iBombardDefense>
+            <iBombardDefense>10</iBombardDefense>
             <iAllCityDefense>0</iAllCityDefense>
             <iEspionageDefense>0</iEspionageDefense>
             <iAsset>2</iAsset>

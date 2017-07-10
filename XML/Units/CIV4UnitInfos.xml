@@ -30355,7 +30355,7 @@
             <Special>SPECIALUNIT_SPELL</Special>
             <Capture>NONE</Capture>
             <Combat>NONE</Combat>
-            <Domain>DOMAIN_AIR</Domain>
+            <Domain>DOMAIN_LAND</Domain>
             <DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
             <Invisible>NONE</Invisible>
             <SeeInvisible>INVISIBLE_LAND</SeeInvisible>
@@ -30366,7 +30366,7 @@
             <bAnimal>0</bAnimal>
             <bFood>0</bFood>
             <bNoBadGoodies>0</bNoBadGoodies>
-            <bOnlyDefensive>0</bOnlyDefensive>
+            <bOnlyDefensive>1</bOnlyDefensive>
             <bNoCapture>0</bNoCapture>
             <bQuickCombat>0</bQuickCombat>
             <bRivalTerritory>1</bRivalTerritory>
@@ -30451,9 +30451,9 @@
             <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <iMinAreaSize>-1</iMinAreaSize>
-            <iMoves>1</iMoves>
+            <iMoves>2</iMoves>
             <bNoRevealMap>0</bNoRevealMap>
-            <iAirRange>1</iAirRange>
+            <iAirRange>0</iAirRange>
             <iAirUnitCap>4</iAirUnitCap>
             <iDropRange>0</iDropRange>
             <iNukeRange>-1</iNukeRange>
@@ -30546,6 +30546,14 @@
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
             <FreePromotions>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_FLYING</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_PERFECT_SIGHT</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
