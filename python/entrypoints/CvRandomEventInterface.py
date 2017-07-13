@@ -6799,8 +6799,8 @@ def doDireBeasts(argsList):
 		if ( CyGame().getSorenRandNum(2, "Ape") == 1):
 			newUnit = cf.addBarbUnit(gc.getInfoTypeForString('UNIT_GORILLA'))
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DIRE'), True)
-		if ( CyGame().getSorenRandNum(3, "Wyrmling") == 1):
-			cf.addIslandUnit(gc.getInfoTypeForString('UNIT_YOUNG_DRAGON'))
+		# if ( CyGame().getSorenRandNum(3, "Wyrmling") == 1):
+			# cf.addIslandUnit(gc.getInfoTypeForString('UNIT_YOUNG_DRAGON'))
 
 def doRogueVampire(argsList):
 	kTriggeredData = argsList[0]
