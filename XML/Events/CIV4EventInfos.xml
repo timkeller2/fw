@@ -57028,7 +57028,7 @@
             </ClearEvents>
             <PythonCallback>axesforall</PythonCallback>
             <PythonExpireCheck></PythonExpireCheck>
-            <PythonCanDo>trainingyard2</PythonCanDo>
+            <PythonCanDo>cantrainingyard2</PythonCanDo>
             <PythonHelp></PythonHelp>
             <Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
             <iAIValue>1000</iAIValue>

@@ -4337,8 +4337,8 @@ def spellTurnUndead(caster):
 def reqMageArmor(caster):
 	return cf.reqMageArmor(caster)
 	
-def spellMageArmor(caster):
-	cf.spellMageArmor(caster)
+def spellMageArmor(caster,mode):
+	cf.spellMageArmor(caster,mode)
 
 def spellHealingTouch(caster):
 	cf.spellHealingTouch(caster)
