@@ -4532,6 +4532,8 @@ def spellDiplomacy(caster):
 						iDif = 1
 					if pUnit.baseCombatStr() < 2:
 						iDif = 6
+					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HERO')):
+						iDif = iDif * 4
 					if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LOYALTY')):
 						iDif = iDif * 2
 					if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_RECON'):
