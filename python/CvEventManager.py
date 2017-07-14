@@ -779,9 +779,9 @@ class CvEventManager:
 			sCityInfo['BUILDING_LIBRARY'] = CyGame().getGameTurn()
 			pCity.setScriptData(cPickle.dumps(sCityInfo))
 			
-		if iBuildingType == gc.getInfoTypeForString('BUILDING_TRAINING_YARD'):
-			sCityInfo['BUILDING_TRAINING_YARD'] = CyGame().getGameTurn()
-			pCity.setScriptData(cPickle.dumps(sCityInfo))
+		# if iBuildingType == gc.getInfoTypeForString('BUILDING_TRAINING_YARD'):
+			# sCityInfo['BUILDING_TRAINING_YARD'] = CyGame().getGameTurn()
+			# pCity.setScriptData(cPickle.dumps(sCityInfo))
 			
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_CRAFTSMEN_GUILD'):
 			sCityInfo['BUILDING_CRAFTSMEN_GUILD'] = CyGame().getGameTurn()
