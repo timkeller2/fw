@@ -4505,6 +4505,10 @@
             <Button>Art/Interface/Buttons/Promotions/Illusion.dds</Button>
             <bNotAlive>1</bNotAlive>
             <bRace>1</bRace>
+            <bAlwaysHeal>1</bAlwaysHeal>
+            <iEnemyHealChange>50</iEnemyHealChange>
+            <iNeutralHealChange>50</iNeutralHealChange>
+            <iFriendlyHealChange>50</iFriendlyHealChange>
             <iCombatHealPercent>100</iCombatHealPercent>
             <iCombatLimit>90</iCombatLimit>
             <PromotionSummonPerk>PROMOTION_ILLUSION</PromotionSummonPerk>
