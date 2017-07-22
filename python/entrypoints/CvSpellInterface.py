@@ -4406,9 +4406,10 @@ def reqHireAdventurer(caster):
 	if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_TAVERN')) == 0:
 		return False
 
-	strCheckData = cPickle.loads(pCity.getScriptData())
-	if strCheckData['BUILDING_TAVERN'] > CyGame().getGameTurn() - 30:
-		return False
+	# strCheckData = cPickle.loads(pCity.getScriptData())
+	# if strCheckData['BUILDING_TAVERN'] > CyGame().getGameTurn() - 30:
+		# return False
+	return False  ## Take Out	
 
 	return True
 
