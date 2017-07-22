@@ -2391,10 +2391,8 @@
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <CreateUnitType>UNIT_SKELETON</CreateUnitType>
-            <iCreateUnitNum>1</iCreateUnitNum>
-            <bPermanentUnitCreate>1</bPermanentUnitCreate>
-            <PyResult>spellRaiseSkeleton(pCaster)</PyResult>
+            <PyResult>spellSummonCustom(pCaster,'UNIT_SKELETON')</PyResult>
+            <PyRequirement>reqRaiseSkeleton(pCaster)</PyRequirement>
             <Effect>EFFECT_SPELL2</Effect>
             <Sound>AS3D_SPELL_RAISE_SKELETON</Sound>
             <Button>Art/Interface/Buttons/Units/Skeleton.dds</Button>
@@ -13712,3 +13710,4 @@
         </SpellInfo>
     </SpellInfos>
 </Civ4SpellInfos>
+

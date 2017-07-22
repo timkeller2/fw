@@ -2094,6 +2094,29 @@ def spellRagingSeas(caster):
 			if pPlot.isVisibleToWatchingHuman():
 				CyEngine().triggerEffect(iSpring,pPlot.getPoint())
 
+def reqRaiseSkeleton(caster):
+	iSkeleton = gc.getInfoTypeForString('UNIT_SKELETON')
+	iNecro = gc.getInfoTypeForString('PROMOTION_DEATH1')
+	iSummon = gc.getInfoTypeForString('PROMOTION_CHANNELING1')
+	pPlayer = gc.getPlayer(caster.getOwner())
+	
+	iClassUnits = 0
+	iCasters = 0
+	py = PyPlayer(caster.getOwner())
+	for pUnit in py.getUnitList():
+		if pUnit.getUnitType() == iSkeleton:
+			iClassUnits += 1
+		if pUnit.isHasPromotion(iNecro)	and pUnit.isHasPromotion(iSummon):
+			iCasters += 1
+
+	if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TOWER_OF_NECROMANCY')) > 0:
+		iCasters += 5
+	
+	if iClassUnits < iCasters:
+		return True
+
+	return False
+
 def spellRaiseSkeleton(caster):
 	pPlot = caster.plot()
 	if pPlot.getImprovementType() == gc.getInfoTypeForString('IMPROVEMENT_GRAVEYARD'):
@@ -4596,7 +4619,36 @@ def spellDiplomacy(caster):
 			CyInterface().addCombatMessage(caster.getOwner(),sMsg)
 			cf.setObjectInt(caster,'CheckDiplo',CyGame().getGameTurn())
 			caster.setHasCasted(False)
-		
+
+			
+def spellSummonCustom(caster,sUnit):
+	bPlayer = gc.getPlayer(caster.getOwner())
+	iX = caster.getX()
+	iY = caster.getY()
+	iL = 1
+	for i in range(iL):
+		newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sUnit), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+		if sUnit == 'UNIT_SKELETON':
+			newUnit.setDuration(0)
+
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUMMONER')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUMMONING')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER1'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT2')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER2'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT3')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER3'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT4')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER4'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT5')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_EMPOWER5'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION1')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
+		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_EXTENSION2')):
+			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2'),True)
 			
 
 def spellSummonScroll(caster,sUnit,mode):
