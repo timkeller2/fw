@@ -15697,7 +15697,7 @@
             <PowerBonus>NONE</PowerBonus>
             <FreeBonus>NONE</FreeBonus>
             <iNumFreeBonuses>0</iNumFreeBonuses>
-            <FreeBuilding>NONE</FreeBuilding>
+            <FreeBuilding>BUILDINGCLASS_FORGE</FreeBuilding>
             <FreePromotion>NONE</FreePromotion>
             <CivicOption>NONE</CivicOption>
             <GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
@@ -15793,9 +15793,6 @@
             <YieldChanges>
             </YieldChanges>
             <YieldModifiers>
-                <iYield>0</iYield>
-                <iYield>50</iYield>
-                <iYield>0</iYield>
             </YieldModifiers>
             <CommerceChanges>
             </CommerceChanges>
@@ -15852,22 +15849,6 @@
             <BuildingClassNeededs>
             </BuildingClassNeededs>
             <SpecialistYieldChanges>
-                <SpecialistYieldChange>
-                    <SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-                    <YieldChanges>
-                        <iYield>0</iYield>
-                        <iYield>2</iYield>
-                        <iYield>0</iYield>
-                    </YieldChanges>
-                </SpecialistYieldChange>
-                <SpecialistYieldChange>
-                    <SpecialistType>SPECIALIST_GREAT_ENGINEER</SpecialistType>
-                    <YieldChanges>
-                        <iYield>0</iYield>
-                        <iYield>3</iYield>
-                        <iYield>0</iYield>
-                    </YieldChanges>
-                </SpecialistYieldChange>
             </SpecialistYieldChanges>
             <BonusYieldModifiers>
             </BonusYieldModifiers>

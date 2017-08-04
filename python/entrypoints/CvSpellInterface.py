@@ -4406,10 +4406,9 @@ def reqHireAdventurer(caster):
 	if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_TAVERN')) == 0:
 		return False
 
-	# strCheckData = cPickle.loads(pCity.getScriptData())
-	# if strCheckData['BUILDING_TAVERN'] > CyGame().getGameTurn() - 30:
-		# return False
-	return False  ## Take Out	
+	iCheck = cf.getObjectInt(pCity,'BUILDING_TAVERN')
+	if iCheck > CyGame().getGameTurn() - 30:
+		return False
 
 	return True
 
@@ -4631,6 +4630,7 @@ def spellSummonCustom(caster,sUnit):
 		newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sUnit), iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 		if sUnit == 'UNIT_SKELETON':
 			newUnit.setDuration(0)
+			newUnit.setImmobileTimer(1)
 
 		if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SUMMONER')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1'),True)
