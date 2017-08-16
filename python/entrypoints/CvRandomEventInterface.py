@@ -8279,7 +8279,7 @@ def canmonument3(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_LIBRARY'] ) * pCity.getPopulation() ) / 15 > 2:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_MAGE_GUILD'] ) * pCity.getPopulation() ) / 15 > 2:
 		return True
 
 	return False
@@ -8292,7 +8292,7 @@ def canmonument5(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_LIBRARY'] ) * pCity.getPopulation() ) / 15 > 4:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_MAGE_GUILD'] ) * pCity.getPopulation() ) / 15 > 4:
 		return True
 
 	return False
@@ -8305,7 +8305,7 @@ def canmonument12(argsList):
 
 	pCity = pUnit.plot().getPlotCity()
 	strSetData = cPickle.loads(pCity.getScriptData())
-	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_LIBRARY'] ) * pCity.getPopulation() ) / 15 > 11:
+	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_MAGE_GUILD'] ) * pCity.getPopulation() ) / 15 > 11:
 		return True
 
 	return False
@@ -8318,7 +8318,7 @@ def monument3(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 				   
-	cf.pay(pCity,'BUILDING_LIBRARY',3,iPlayer,'library')
+	cf.pay(pCity,'BUILDING_MAGE_GUILD',3,iPlayer,'mage guild')
 	
 def monument5(argsList):
 	iEvent = argsList[0]
@@ -8328,7 +8328,7 @@ def monument5(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	cf.pay(pCity,'BUILDING_LIBRARY',5,iPlayer,'library')
+	cf.pay(pCity,'BUILDING_MAGE_GUILD',5,iPlayer,'mage guild')
 	
 def monument12(argsList):
 	iEvent = argsList[0]
@@ -8338,7 +8338,7 @@ def monument12(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	cf.pay(pCity,'BUILDING_LIBRARY',12,iPlayer,'library')
+	cf.pay(pCity,'BUILDING_MAGE_GUILD',12,iPlayer,'mage guild')
 	
 def herbalist4(argsList):
 	iEvent = argsList[0]
@@ -8388,7 +8388,7 @@ def library3(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	cf.pay(pCity,'BUILDING_MAGE_GUILD',3,iPlayer,'library')
+	cf.pay(pCity,'BUILDING_MAGE_GUILD',3,iPlayer,'mage guild')
 	
 def mageguild5(argsList):
 	iEvent = argsList[0]

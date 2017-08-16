@@ -847,39 +847,39 @@
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING1</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING1</Description>
-            <Help>[ICON_BULLET]Auto buff if fortified: Enchanted Blade, Courage, Loyalty, Fair Winds. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET]+20 Max Spellcaster XP</Help>
+            <Help>[ICON_BULLET]Auto buff if fortified: Enchanted Blade, Courage, Loyalty, Fair Winds. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET]+10 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling1.dds</Button>
             <iBetterDefenderThanPercent>0</iBetterDefenderThanPercent>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>20</iSpellCasterXP>
+            <iSpellCasterXP>10</iSpellCasterXP>
             <iSpellDamageModify>0</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_CHANNELING2</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING2</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING2</Description>
-            <Help>[ICON_BULLET]Auto buff if fortified: Flaming Arrows, Poisoned Blade, Blessing and Shield of Faith. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET]+30 Max Spellcaster XP</Help>
+            <Help>[ICON_BULLET]Auto buff if fortified: Flaming Arrows, Poisoned Blade, Blessing and Shield of Faith. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET]+20 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling2.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
             <iCasterResistModify>-10</iCasterResistModify>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>30</iSpellCasterXP>
+            <iSpellCasterXP>20</iSpellCasterXP>
             <iSpellDamageModify>0</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_CHANNELING3</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_CHANNELING3</Type>
             <Description>TXT_KEY_PROMOTION_CHANNELING3</Description>
-            <Help>[ICON_BULLET]Auto buff if fortified: Valor, Stone Skin and Spirit Guide. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET]+40 Max Spellcaster XP</Help>
+            <Help>[ICON_BULLET]Auto buff if fortified: Valor, Stone Skin and Spirit Guide. (Range = level + fortified turns (level x 2 max), spell extension doubles and quadruples range respectively)[NEWLINE][ICON_BULLET]+30 Max Spellcaster XP</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <Button>Art/Interface/Buttons/Promotions/Channeling3.dds</Button>
             <iBetterDefenderThanPercent>-25</iBetterDefenderThanPercent>
             <iCasterResistModify>-10</iCasterResistModify>
             <iMinLevel>-1</iMinLevel>
             <iSpellDamageModify>0</iSpellDamageModify>
-            <iSpellCasterXP>40</iSpellCasterXP>
+            <iSpellCasterXP>30</iSpellCasterXP>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_CHAOS1</Type>
@@ -20604,7 +20604,7 @@
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellCasterXP>7</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY2</PromotionNextLevel>
         </PromotionInfo>
@@ -20618,7 +20618,7 @@
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellCasterXP>7</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY3</PromotionNextLevel>
         </PromotionInfo>
@@ -20632,7 +20632,7 @@
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellCasterXP>7</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY4</PromotionNextLevel>
         </PromotionInfo>
@@ -20646,7 +20646,7 @@
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellCasterXP>7</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
             <PromotionNextLevel>PROMOTION_WIMPY5</PromotionNextLevel>
         </PromotionInfo>
@@ -20660,7 +20660,7 @@
             <bMutation>0</bMutation>
             <iCombatPercentDefense>-7</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
-            <iSpellCasterXP>5</iSpellCasterXP>
+            <iSpellCasterXP>7</iSpellCasterXP>
             <iSpellDamageModify>1</iSpellDamageModify>
         </PromotionInfo>
         <PromotionInfo>

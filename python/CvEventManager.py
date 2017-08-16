@@ -775,14 +775,6 @@ class CvEventManager:
 			sCityInfo['COUNCIL'] = 0
 			pCity.setScriptData(cPickle.dumps(sCityInfo))
 			
-		if iBuildingType == gc.getInfoTypeForString('BUILDING_LIBRARY'):
-			sCityInfo['BUILDING_LIBRARY'] = CyGame().getGameTurn()
-			pCity.setScriptData(cPickle.dumps(sCityInfo))
-			
-		# if iBuildingType == gc.getInfoTypeForString('BUILDING_TRAINING_YARD'):
-			# sCityInfo['BUILDING_TRAINING_YARD'] = CyGame().getGameTurn()
-			# pCity.setScriptData(cPickle.dumps(sCityInfo))
-			
 		if iBuildingType == gc.getInfoTypeForString('BUILDING_CRAFTSMEN_GUILD'):
 			sCityInfo['BUILDING_CRAFTSMEN_GUILD'] = CyGame().getGameTurn()
 			pCity.setScriptData(cPickle.dumps(sCityInfo))
@@ -1531,6 +1523,7 @@ class CvEventManager:
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_GOLEM')):
 			if city.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_BLASTING_WORKSHOP')) > 0:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FIRE2'), True)
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CHANNELING2'), True)
 			if city.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_PALLENS_ENGINE')) > 0:
 				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PERFECT_SIGHT'), True)
 			if city.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ADULARIA_CHAMBER')) > 0:

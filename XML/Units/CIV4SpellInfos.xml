@@ -1464,6 +1464,7 @@
             <Civilopedia>TXT_KEY_UNIT_FIREBALL_PEDIA</Civilopedia>
             <Help>Units that are not arcane or recon suffer feedback damage approximately (100 / (strength+level))%.</Help>
             <PromotionPrereq1>PROMOTION_FIRE2</PromotionPrereq1>
+            <PromotionPrereq2>PROMOTION_CHANNELING2</PromotionPrereq2>
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
@@ -8908,7 +8909,7 @@
             <CivilizationPrereq>NONE</CivilizationPrereq>
             <ReligionPrereq>NONE</ReligionPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
-            <TechPrereq>NONE</TechPrereq>
+            <TechPrereq>TECH_NEVER</TechPrereq>
             <bAllowAI>0</bAllowAI>
             <bAdjacentToWaterOnly>0</bAdjacentToWaterOnly>
             <bCausesWar>0</bCausesWar>

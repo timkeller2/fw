@@ -29872,6 +29872,12 @@
             <bPickCorporation>0</bPickCorporation>
             <bHeadquarters>0</bHeadquarters>
             <Events>
+                <Event>EVENT_LIBRARY_1</Event>
+                <Event>EVENT_LIBRARY_2</Event>
+                <Event>EVENT_LIBRARY_3</Event>
+                <Event>EVENT_LIBRARY_4</Event>
+                <Event>EVENT_LIBRARY_5</Event>
+                <Event>EVENT_LIBRARY_6</Event>
                 <Event>EVENT_MAGE_GUILD_1</Event>
                 <Event>EVENT_MAGE_GUILD_2</Event>
                 <Event>EVENT_MAGE_GUILD_3</Event>

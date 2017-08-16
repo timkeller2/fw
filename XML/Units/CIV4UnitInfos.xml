@@ -7739,6 +7739,10 @@
                     <PromotionType>PROMOTION_FIRE2</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
                 </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_CHANNELING2</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
