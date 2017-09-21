@@ -3993,6 +3993,7 @@
             <iMinLevel>-1</iMinLevel>
             <iResistMagic>20</iResistMagic>
             <iGroupSize>1</iGroupSize>
+            <iBetterDefenderThanPercent>100</iBetterDefenderThanPercent>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_HEROIC_DEFENSE</Type>
