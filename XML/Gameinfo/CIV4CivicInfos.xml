@@ -369,6 +369,14 @@
                         <iYield>2</iYield>
                     </ImprovementYields>
                 </ImprovementYieldChange>
+                <ImprovementYieldChange>
+                    <ImprovementType>IMPROVEMENT_IMPROVED_FARM</ImprovementType>
+                    <ImprovementYields>
+                        <iYield>-1</iYield>
+                        <iYield>0</iYield>
+                        <iYield>3</iYield>
+                    </ImprovementYields>
+                </ImprovementYieldChange>
             </ImprovementYieldChanges>
             <WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_MONARCH</WeLoveTheKing>
             <bHidden>0</bHidden>
@@ -1821,6 +1829,14 @@
                         <iYield>0</iYield>
                     </ImprovementYields>
                 </ImprovementYieldChange>
+                <ImprovementYieldChange>
+                    <ImprovementType>IMPROVEMENT_IMPROVED_MINE</ImprovementType>
+                    <ImprovementYields>
+                        <iYield>0</iYield>
+                        <iYield>1</iYield>
+                        <iYield>0</iYield>
+                    </ImprovementYields>
+                </ImprovementYieldChange>
             </ImprovementYieldChanges>
             <WeLoveTheKing></WeLoveTheKing>
             <bHidden>0</bHidden>
@@ -2309,6 +2325,14 @@
                         <iYield>1</iYield>
                         <iYield>-1</iYield>
                         <iYield>0</iYield>
+                    </ImprovementYields>
+                </ImprovementYieldChange>
+                <ImprovementYieldChange>
+                    <ImprovementType>IMPROVEMENT_IMPROVED_FARM</ImprovementType>
+                    <ImprovementYields>
+                        <iYield>1</iYield>
+                        <iYield>-1</iYield>
+                        <iYield>1</iYield>
                     </ImprovementYields>
                 </ImprovementYieldChange>
             </ImprovementYieldChanges>

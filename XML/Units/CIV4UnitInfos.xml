@@ -67861,7 +67861,15 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_IMPROVED_FARM</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_MINE</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_IMPROVED_MINE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -67870,6 +67878,10 @@
                 </Build>
                 <Build>
                     <BuildType>BUILD_LUMBERMILL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_IMPROVED_LUMBERMILL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -67898,6 +67910,10 @@
                 </Build>
                 <Build>
                     <BuildType>BUILD_COTTAGE</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_VILLAGE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -74186,7 +74202,15 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_IMPROVED_FARM</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_MINE</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_IMPROVED_MINE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -74195,6 +74219,10 @@
                 </Build>
                 <Build>
                     <BuildType>BUILD_LUMBERMILL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_IMPROVED_LUMBERMILL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -74223,6 +74251,10 @@
                 </Build>
                 <Build>
                     <BuildType>BUILD_COTTAGE</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_VILLAGE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -74468,7 +74500,15 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_IMPROVED_FARM</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_MINE</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_IMPROVED_MINE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -74477,6 +74517,10 @@
                 </Build>
                 <Build>
                     <BuildType>BUILD_LUMBERMILL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_IMPROVED_LUMBERMILL</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -74505,6 +74549,10 @@
                 </Build>
                 <Build>
                     <BuildType>BUILD_COTTAGE</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_VILLAGE</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
