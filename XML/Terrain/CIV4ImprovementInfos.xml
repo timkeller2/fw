@@ -1391,7 +1391,7 @@
             <iAirBombDefense>0</iAirBombDefense>
             <iDefenseModifier>0</iDefenseModifier>
             <iHappiness>0</iHappiness>
-            <iPillageGold>25</iPillageGold>
+            <iPillageGold>15</iPillageGold>
             <bOutsideBorders>0</bOutsideBorders>
             <TerrainMakesValids>
                 <TerrainMakesValid>
@@ -1456,7 +1456,7 @@
                     </YieldChanges>
                 </BonusTypeStruct>
             </BonusTypeStructs>
-            <ImprovementPillage></ImprovementPillage>
+            <ImprovementPillage>IMPROVEMENT_FARM</ImprovementPillage>
             <ImprovementUpgrade></ImprovementUpgrade>
             <TechYieldChanges>
                 <TechYieldChange>
@@ -2567,7 +2567,7 @@
             <iAirBombDefense>0</iAirBombDefense>
             <iDefenseModifier>0</iDefenseModifier>
             <iHappiness>0</iHappiness>
-            <iPillageGold>5</iPillageGold>
+            <iPillageGold>15</iPillageGold>
             <bOutsideBorders>0</bOutsideBorders>
             <TerrainMakesValids>
             </TerrainMakesValids>
@@ -2577,7 +2577,7 @@
                     <bMakesValid>1</bMakesValid>
                 </FeatureMakesValid>
             </FeatureMakesValids>
-            <ImprovementPillage></ImprovementPillage>
+            <ImprovementPillage>IMPROVEMENT_LUMBERMILL</ImprovementPillage>
             <ImprovementUpgrade></ImprovementUpgrade>
             <TechYieldChanges>
             </TechYieldChanges>
@@ -4325,7 +4325,7 @@
             <iAirBombDefense>0</iAirBombDefense>
             <iDefenseModifier>0</iDefenseModifier>
             <iHappiness>0</iHappiness>
-            <iPillageGold>10</iPillageGold>
+            <iPillageGold>30</iPillageGold>
             <bOutsideBorders>0</bOutsideBorders>
             <TerrainMakesValids>
             </TerrainMakesValids>
@@ -4399,7 +4399,7 @@
                     </YieldChanges>
                 </BonusTypeStruct>
             </BonusTypeStructs>
-            <ImprovementPillage></ImprovementPillage>
+            <ImprovementPillage>IMPROVEMENT_MINE</ImprovementPillage>
             <ImprovementUpgrade></ImprovementUpgrade>
             <TechYieldChanges>
                 <TechYieldChange>

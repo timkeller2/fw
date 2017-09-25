@@ -27,16 +27,21 @@
 		</RouteInfo>
 		<RouteInfo>
 			<Type>ROUTE_RAILROAD</Type>
-			<Description>TXT_KEY_ROUTE_RAILROAD</Description>
+			<Description>Improved Road</Description>
 			<iValue>2</iValue>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>20</iMovement>
-			<iFlatMovement>6</iFlatMovement>
+			<iFlatMovement>20</iFlatMovement>
 			<BonusType>NONE</BonusType>
 			<PrereqOrBonuses/>
 			<Yields/>
-			<TechMovementChanges/>
+			<TechMovementChanges>
+				<TechMovementChange>
+					<PrereqTech>TECH_ENGINEERING</PrereqTech>
+					<iMovementChange>-8</iMovementChange>
+				</TechMovementChange>
+			</TechMovementChanges>
 			<Button>Art/Interface/Buttons/Builds/BuildRailroad.dds</Button>
 		</RouteInfo>
 	</RouteInfos>
