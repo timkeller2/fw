@@ -513,9 +513,12 @@ def reqArenaBattle(caster):
 
 def spellArenaBattle(caster):
 	pCity = caster.plot().getPlotCity()
-	pCity.changeHappinessTimer(3)
+	iBattleGlory = CyGame().getSorenRandNum(6, "Arena Battle") + caster.getLevel() * 2
+	if iBattleGlory < 3:
+		iBattleGlory = 3
+	pCity.changeHappinessTimer(iBattleGlory)
 	if CyGame().getSorenRandNum(100, "Arena Battle") < 50:
-		caster.changeExperience(CyGame().getSorenRandNum(6, "Arena Battle") + 1, -1, False, False, False)
+		caster.changeExperience(iBattleGlory, -1, False, False, False)
 		caster.setDamage(25, caster.getOwner())
 		CyInterface().addMessage(caster.getOwner(),True,25,CyTranslator().getText("TXT_KEY_MESSAGE_ARENA_WIN", ()),'',1,'Art/Interface/Buttons/Buildings/Arena.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 		if caster.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_SLAVE'):
@@ -3154,6 +3157,8 @@ def reqTaunt(caster):
 	iX = caster.getX()
 	iY = caster.getY()
 	pPlayer = gc.getPlayer(caster.getOwner())
+	if cf.getObjectInt(caster,'LastTaunt') >= CyGame().getGameTurn() - 5 + caster.getLevel() / 2:
+		return False
 	iTeam = pPlayer.getTeam()
 	eTeam = gc.getTeam(iTeam)
 	bValid = False
@@ -3170,6 +3175,7 @@ def reqTaunt(caster):
 	return bValid
 
 def spellTaunt(caster):
+	cf.setObjectInt(caster,'LastTaunt',CyGame().getGameTurn())
 	iEnraged = gc.getInfoTypeForString('PROMOTION_ENRAGED')
 	iSpell = gc.getInfoTypeForString('SPELL_TAUNT')
 	iX = caster.getX()
@@ -3190,6 +3196,7 @@ def spellTaunt(caster):
 							if caster.getDomainType() == pUnit.getDomainType():
 								if not pUnit.isResisted(caster, iSpell):
 									pUnit.attack(pPlot, False)
+									break
 
 def reqTeachSpellcasting(caster):
 	iAnimal = gc.getInfoTypeForString('UNITCOMBAT_ANIMAL')

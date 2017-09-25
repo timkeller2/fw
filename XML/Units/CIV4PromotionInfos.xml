@@ -746,7 +746,6 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Buccaneers.dds</Button>
-            <iCombatPercentDefense>25</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
@@ -784,9 +783,9 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Burningblood.dds</Button>
+            <iExtraCombatDefense>1</iExtraCombatDefense>
             <bImmuneToFear>1</bImmuneToFear>
             <iBetrayalChance>20</iBetrayalChance>
-            <iCombatPercentDefense>20</iCombatPercentDefense>
             <iExpireChance>10</iExpireChance>
             <iMinLevel>-1</iMinLevel>
             <PromotionCombatType>PROMOTION_FEAR</PromotionCombatType>
@@ -2945,7 +2944,7 @@
             <Button>Art/Interface/Buttons/Promotions/Enraged.dds</Button>
             <bAIControl>1</bAIControl>
             <bRemovedByCombat>1</bRemovedByCombat>
-            <iCombatPercentDefense>-20</iCombatPercentDefense>
+            <iExtraCombatDefense>-1</iExtraCombatDefense>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
@@ -3528,7 +3527,7 @@
         <PromotionInfo>
             <Type>PROMOTION_FLYING</Type>
             <Description>TXT_KEY_PROMOTION_FLYING</Description>
-            <Help>[ICON_BULLET]+40% Combat Defense</Help>
+            <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <bAmphib>1</bAmphib>
@@ -3542,7 +3541,7 @@
                 </UnitCombatMod>
             </UnitCombatMods>
             <Button>Art/Interface/Buttons/Promotions/Flying.dds</Button>
-            <iCombatPercentDefense>40</iCombatPercentDefense>
+            <iExtraCombatDefense>2</iExtraCombatDefense>
             <bFlying>1</bFlying>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
@@ -7025,7 +7024,7 @@
             <Button>Art/Interface/Buttons/Promotions/ShieldofFaith.dds</Button>
             <bDispellable>1</bDispellable>
             <iAIWeight>100</iAIWeight>
-            <iCombatPercentDefense>30</iCombatPercentDefense>
+            <iExtraCombatDefense>1</iExtraCombatDefense>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
@@ -8535,10 +8534,8 @@
         <PromotionInfo>
             <Type>PROMOTION_GUARDING</Type>
             <Description>Guarding</Description>
-            <Help>[ICON_BULLET]+20% Combat Defense</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
-            <iCombatPercent>-20</iCombatPercent>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
@@ -8550,9 +8547,10 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Guardsman.dds</Button>
-            <iCombatPercentDefense>20</iCombatPercentDefense>
             <bTargetWeakestUnitCounter>1</bTargetWeakestUnitCounter>
             <iBetterDefenderThanPercent>100</iBetterDefenderThanPercent>
+            <iExtraCombatStr>-1</iExtraCombatStr>
+            <iExtraCombatDefense>1</iExtraCombatDefense>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_CHIEF</Type>
@@ -15122,7 +15120,7 @@
         <PromotionInfo>
             <Type>PROMOTION_IMPROVED_ARMOR</Type>
             <Description>Improved Armor</Description>
-            <Help>[ICON_BULLET]+20% Combat Defense</Help>
+            <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -15255,12 +15253,12 @@
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
             <iCombatHealPercent>0</iCombatHealPercent>
-            <iCombatPercentDefense>20</iCombatPercentDefense>
+            <iCombatPercentDefense>0</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
             <iExtraCombatStr>0</iExtraCombatStr>
-            <iExtraCombatDefense>0</iExtraCombatDefense>
+            <iExtraCombatDefense>1</iExtraCombatDefense>
             <iFreeXPPerTurn>0</iFreeXPPerTurn>
             <iFreeXPFromCombat>0</iFreeXPFromCombat>
             <iModifyGlobalCounter>0</iModifyGlobalCounter>
@@ -15294,7 +15292,7 @@
         <PromotionInfo>
             <Type>PROMOTION_HEAVY_ARMOR</Type>
             <Description>Heavy Armor</Description>
-            <Help>[ICON_BULLET]+20% Combat Defense</Help>
+            <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -15419,12 +15417,12 @@
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
             <iCombatHealPercent>0</iCombatHealPercent>
-            <iCombatPercentDefense>20</iCombatPercentDefense>
+            <iCombatPercentDefense>0</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
             <iExtraCombatStr>0</iExtraCombatStr>
-            <iExtraCombatDefense>0</iExtraCombatDefense>
+            <iExtraCombatDefense>1</iExtraCombatDefense>
             <iFreeXPPerTurn>0</iFreeXPPerTurn>
             <iFreeXPFromCombat>0</iFreeXPFromCombat>
             <iModifyGlobalCounter>0</iModifyGlobalCounter>
@@ -15599,7 +15597,7 @@
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
             <iCombatHealPercent>0</iCombatHealPercent>
-            <iCombatPercentDefense>20</iCombatPercentDefense>
+            <iCombatPercentDefense>0</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
@@ -21473,7 +21471,7 @@
             <Type>PROMOTION_LACKS_SIGHT</Type>
             <Description>Lacks Sight</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iVisibilityChange>-5</iVisibilityChange>
+            <iVisibilityChange>-2</iVisibilityChange>
             <Button>Art/Interface/Buttons/Promotions/Sun1.dds</Button>
             <iCombatPercentDefense>0</iCombatPercentDefense>
             <iMinLevel>-1</iMinLevel>
