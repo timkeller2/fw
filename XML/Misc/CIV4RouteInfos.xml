@@ -9,7 +9,7 @@
 		<RouteInfo>
 			<Type>ROUTE_ROAD</Type>
 			<Description>TXT_KEY_ROUTE_ROAD</Description>
-			<iValue>1</iValue>
+			<iValue>2</iValue>
 			<iAdvancedStartCost>12</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>30</iMovement>
@@ -28,7 +28,7 @@
 		<RouteInfo>
 			<Type>ROUTE_RAILROAD</Type>
 			<Description>Improved Road</Description>
-			<iValue>2</iValue>
+			<iValue>1</iValue>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>20</iMovement>
