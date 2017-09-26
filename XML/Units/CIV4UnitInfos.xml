@@ -46763,6 +46763,7 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
+            <bFreeXP>1</bFreeXP>
             <iCombatDefense>2</iCombatDefense>
             <iTier>1</iTier>
             <PrereqCiv>CIVILIZATION_MALAKIM</PrereqCiv>
@@ -67857,6 +67858,10 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_IMPROVED_ROAD</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_FARM</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -67913,11 +67918,15 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_VILLAGE</BuildType>
+                    <BuildType>BUILD_HAMLET</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
                     <BuildType>BUILD_CANAL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_TOWER</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -74198,6 +74207,10 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_IMPROVED_ROAD</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_FARM</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -74254,11 +74267,15 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_VILLAGE</BuildType>
+                    <BuildType>BUILD_HAMLET</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
                     <BuildType>BUILD_CANAL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_TOWER</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
@@ -74496,6 +74513,10 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
+                    <BuildType>BUILD_IMPROVED_ROAD</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
                     <BuildType>BUILD_FARM</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
@@ -74552,11 +74573,15 @@
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
-                    <BuildType>BUILD_VILLAGE</BuildType>
+                    <BuildType>BUILD_HAMLET</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>
                     <BuildType>BUILD_CANAL</BuildType>
+                    <bBuild>1</bBuild>
+                </Build>
+                <Build>
+                    <BuildType>BUILD_TOWER</BuildType>
                     <bBuild>1</bBuild>
                 </Build>
                 <Build>

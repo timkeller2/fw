@@ -6296,7 +6296,7 @@
             <iFeatureGrowth>0</iFeatureGrowth>
             <iUpgradeTime>0</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
-            <iDefenseModifier>25</iDefenseModifier>
+            <iDefenseModifier>15</iDefenseModifier>
             <iHappiness>0</iHappiness>
             <iPillageGold>0</iPillageGold>
             <bOutsideBorders>0</bOutsideBorders>
