@@ -654,7 +654,7 @@ class CustomFunctions:
 		
 		
 	def iCrowdingDamage(self, pUnit):
-		roomFor = 10
+		roomFor = 8
 		pPlot = pUnit.plot()
 		if pPlot.isCity():
 			roomFor = roomFor + pPlot.getPlotCity().getPopulation()
@@ -2441,7 +2441,7 @@ class CustomFunctions:
 		for i in range (CyMap().numPlots()):
 			crowdMessage = True
 			checkRoom = True
-			roomFor = 10
+			roomFor = 8
 			pPlot = CyMap().plotByIndex(i)
 			if pPlot.isCity():
 				roomFor = roomFor + pPlot.getPlotCity().getPopulation()

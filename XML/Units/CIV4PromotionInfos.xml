@@ -11431,7 +11431,7 @@
             <iCombatHealPercent>0</iCombatHealPercent>
             <iCombatPercentDefense>10</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
-            <iCombatPercentInBorders>0</iCombatPercentInBorders>
+            <iCombatPercentInBorders>25</iCombatPercentInBorders>
             <iExpireChance>0</iExpireChance>
             <iExtraCombatStr>0</iExtraCombatStr>
             <iExtraCombatDefense>0</iExtraCombatDefense>
