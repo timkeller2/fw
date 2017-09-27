@@ -599,7 +599,7 @@
             <iFeatureGrowth>0</iFeatureGrowth>
             <iUpgradeTime>0</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
-            <iDefenseModifier>50</iDefenseModifier>
+            <iDefenseModifier>60</iDefenseModifier>
             <iHappiness>0</iHappiness>
             <iPillageGold>10</iPillageGold>
             <bOutsideBorders>0</bOutsideBorders>
@@ -695,7 +695,7 @@
             <iFeatureGrowth>0</iFeatureGrowth>
             <iUpgradeTime>0</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
-            <iDefenseModifier>75</iDefenseModifier>
+            <iDefenseModifier>80</iDefenseModifier>
             <iHappiness>1</iHappiness>
             <iPillageGold>15</iPillageGold>
             <bOutsideBorders>0</bOutsideBorders>
@@ -1622,7 +1622,7 @@
             <iFeatureGrowth>0</iFeatureGrowth>
             <iUpgradeTime>0</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
-            <iDefenseModifier>25</iDefenseModifier>
+            <iDefenseModifier>40</iDefenseModifier>
             <iHappiness>0</iHappiness>
             <iPillageGold>5</iPillageGold>
             <bOutsideBorders>0</bOutsideBorders>
@@ -1682,7 +1682,7 @@
             <iAppearanceProbability>0</iAppearanceProbability>
             <iHealRateChange>5</iHealRateChange>
             <iRange>2</iRange>
-            <iRangeDefenseModifier>25</iRangeDefenseModifier>
+            <iRangeDefenseModifier>20</iRangeDefenseModifier>
             <iVisibilityChange>1</iVisibilityChange>
             <BonusConvert>NONE</BonusConvert>
             <FeatureUpgrade>NONE</FeatureUpgrade>
@@ -4742,7 +4742,7 @@
             <iFeatureGrowth>0</iFeatureGrowth>
             <iUpgradeTime>0</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
-            <iDefenseModifier>0</iDefenseModifier>
+            <iDefenseModifier>100</iDefenseModifier>
             <iHappiness>0</iHappiness>
             <iPillageGold>0</iPillageGold>
             <bOutsideBorders>0</bOutsideBorders>
