@@ -1869,7 +1869,7 @@
             <bGraphicalOnly>1</bGraphicalOnly>
             <Button>Art/Interface/Buttons/Promotions/Elf.dds</Button>
             <bRace>1</bRace>
-            <iWorkRateModify>-20</iWorkRateModify>
+            <iWorkRateModify>-25</iWorkRateModify>
             <UnitArtStyleType>UNIT_ARTSTYLE_DARK_ELF</UnitArtStyleType>
             <DamageTypeResists>
                 <DamageTypeResist>
@@ -2687,7 +2687,7 @@
             </FeatureDoubleMoves>
             <Button>Art/Interface/Buttons/Promotions/Elf.dds</Button>
             <bRace>1</bRace>
-            <iWorkRateModify>-20</iWorkRateModify>
+            <iWorkRateModify>-25</iWorkRateModify>
             <UnitArtStyleType>UNIT_ARTSTYLE_ELF</UnitArtStyleType>
             <DamageTypeResists>
                 <DamageTypeResist>

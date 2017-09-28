@@ -43102,7 +43102,7 @@
             <Type>BUILDING_CRAFTSMEN_GUILD</Type>
             <SpecialBuildingType>NONE</SpecialBuildingType>
             <Description>Craftsmen Guild</Description>
-            <Civilopedia>This building allows equipment to be purchased by units.  The supply may be depleted, but replenishes with time based on population.  Heavy equipment requires a population of at least 10.  Master crafted equipment requires a population of at least 15.</Civilopedia>
+            <Civilopedia>This building allows equipment to be purchased by units.  The supply may be depleted, but replenishes with time based on population.</Civilopedia>
             <Strategy></Strategy>
             <Help></Help>
             <Advisor>ADVISOR_GROWTH</Advisor>
@@ -43231,9 +43231,6 @@
             <YieldChanges>
             </YieldChanges>
             <YieldModifiers>
-                <iYield>0</iYield>
-                <iYield>10</iYield>
-                <iYield>0</iYield>
             </YieldModifiers>
             <CommerceChanges>
             </CommerceChanges>
