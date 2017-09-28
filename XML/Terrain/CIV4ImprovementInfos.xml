@@ -1352,7 +1352,7 @@
             <Description>Improved Farm</Description>
             <Civilopedia></Civilopedia>
             <Help></Help>
-            <ArtDefineTag>ART_DEF_IMPROVEMENT_FARM</ArtDefineTag>
+            <ArtDefineTag>ART_DEF_IMPROVEMENT_IMPROVED_FARM</ArtDefineTag>
             <PrereqNatureYields>
                 <iYield>1</iYield>
                 <iYield>0</iYield>
@@ -2558,7 +2558,7 @@
             <Description>Improved Lumbermill</Description>
             <Civilopedia></Civilopedia>
             <Help></Help>
-            <ArtDefineTag>ART_DEF_IMPROVEMENT_LUMBERMILL</ArtDefineTag>
+            <ArtDefineTag>ART_DEF_IMPROVEMENT_IMPROVED_LUMBERMILL</ArtDefineTag>
             <YieldChanges>
                 <iYieldChange>0</iYieldChange>
                 <iYieldChange>2</iYieldChange>
@@ -4321,7 +4321,7 @@
             <Description>Improved Mine</Description>
             <Civilopedia></Civilopedia>
             <Help></Help>
-            <ArtDefineTag>ART_DEF_IMPROVEMENT_MINE</ArtDefineTag>
+            <ArtDefineTag>ART_DEF_IMPROVEMENT_IMPROVED_MINE</ArtDefineTag>
             <YieldChanges>
                 <iYieldChange>0</iYieldChange>
                 <iYieldChange>3</iYieldChange>

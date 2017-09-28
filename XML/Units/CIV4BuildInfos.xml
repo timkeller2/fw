@@ -42,7 +42,7 @@
 			<bShiftDown>1</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildRoad.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,8</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildImprovedRoad.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,8</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_FARM</Type>
@@ -152,7 +152,7 @@
 			<bShiftDown>1</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildFarm.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,7</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildImprovedFarm.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,7</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_FISHING_BOATS</Type>
@@ -300,7 +300,7 @@
 			<bShiftDown>1</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildMine.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,7</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildImprovedMine.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,7</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_WORKSHOP</Type>
@@ -393,7 +393,7 @@
 			<bShiftDown>1</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>1</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildLumberMill.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,7</Button>
+			<Button>,Art/Interface/Buttons/Builds/BuildImprovedLumberMill.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,5,7</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_WINDMILL</Type>
