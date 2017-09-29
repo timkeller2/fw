@@ -4540,12 +4540,13 @@ def spellDiplomacy(caster):
 			for i in range(pPlot.getNumUnits()):
 				pUnit = pPlot.getUnit(i)
 				if pUnit.getOwner() != caster.getOwner() and pUnit.baseCombatStr() > 0 and ( pUnit.maxMoves() > 0 or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) ):
+					iWill = pUnit.baseCombatStr() + cf.iNoble(pUnit,0) * 3
 					if pUnit.getOwner() in iSupport:
-						iSupport[pUnit.getOwner()] += pUnit.baseCombatStr()
+						iSupport[pUnit.getOwner()] += iWill
 						if iiX == iX and iiY == iY:
-							iSupport[pUnit.getOwner()] += pUnit.baseCombatStr()
+							iSupport[pUnit.getOwner()] += iWill
 					else:
-						iSupport[pUnit.getOwner()] = pUnit.baseCombatStr()
+						iSupport[pUnit.getOwner()] = iWill
 
 	# Determine Best Unit to try to hire
 	sDip = 'Evaluating diplomacy options...'
