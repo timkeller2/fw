@@ -4542,6 +4542,8 @@ def spellDiplomacy(caster):
 				if pUnit.getOwner() != caster.getOwner() and pUnit.baseCombatStr() > 0 and ( pUnit.maxMoves() > 0 or pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP')) ):
 					if pUnit.getOwner() in iSupport:
 						iSupport[pUnit.getOwner()] += pUnit.baseCombatStr()
+						if iiX == iX and iiY == iY:
+							iSupport[pUnit.getOwner()] += pUnit.baseCombatStr()
 					else:
 						iSupport[pUnit.getOwner()] = pUnit.baseCombatStr()
 
