@@ -67614,6 +67614,10 @@
             <bHiddenNationality>0</bHiddenNationality>
             <bAlwaysHostile>0</bAlwaysHostile>
             <UnitClassUpgrades>
+                <UnitClassUpgrade>
+                    <UnitClassUpgradeType>UNITCLASS_SKELETON_WARRIOR</UnitClassUpgradeType>
+                    <bUnitClassUpgrade>1</bUnitClassUpgrade>
+                </UnitClassUpgrade>
             </UnitClassUpgrades>
             <UnitClassTargets>
             </UnitClassTargets>
@@ -76079,7 +76083,7 @@
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>NONE</PrereqBuilding>
-            <PrereqTech>NONE</PrereqTech>
+            <PrereqTech>TECH_FANATICISM</PrereqTech>
             <TechTypes>
             </TechTypes>
             <BonusType>NONE</BonusType>
@@ -76222,7 +76226,7 @@
             <iEnslavementChance>0</iEnslavementChance>
             <iFreePromotionPick>0</iFreePromotionPick>
             <iGoldFromCombat>0</iGoldFromCombat>
-            <iMinLevel>9</iMinLevel>
+            <iMinLevel>13</iMinLevel>
             <iMiscastChance>0</iMiscastChance>
             <iModifyGlobalCounter>0</iModifyGlobalCounter>
             <iPrereqGlobalCounter>0</iPrereqGlobalCounter>
@@ -76341,7 +76345,7 @@
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>NONE</PrereqBuilding>
-            <PrereqTech>NONE</PrereqTech>
+            <PrereqTech>TECH_NECROMANCY</PrereqTech>
             <TechTypes>
             </TechTypes>
             <BonusType>NONE</BonusType>
@@ -76476,7 +76480,7 @@
             <iEnslavementChance>0</iEnslavementChance>
             <iFreePromotionPick>0</iFreePromotionPick>
             <iGoldFromCombat>0</iGoldFromCombat>
-            <iMinLevel>5</iMinLevel>
+            <iMinLevel>6</iMinLevel>
             <iMiscastChance>0</iMiscastChance>
             <iModifyGlobalCounter>0</iModifyGlobalCounter>
             <iPrereqGlobalCounter>0</iPrereqGlobalCounter>
