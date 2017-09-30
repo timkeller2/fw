@@ -1,8 +1,16 @@
-Git Civ4 Assets.lnk
-Pak0.FPK
-XML/Scenarios/
-*.bat
-res/
-sounds/*
-!sounds/fw
-ssmc4.bat
+*.lnk
+
+PakBuild/
+PrivateMaps/
+Resource/
+Fall from Heaven 2.ini
+FfH Editor.xlsm
+icon.bmp
+Readme 041.rtf
+
+Assets/Pak0.FPK
+Assets/XML/Scenarios/
+Assets/*.bat
+Assets/res/
+Assets/sounds/*
+!Assets/sounds/fw/
