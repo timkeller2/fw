@@ -2457,8 +2457,8 @@
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <bHillsDoubleMove>1</bHillsDoubleMove>
-            <iHillsAttack>25</iHillsAttack>
-            <iHillsDefense>25</iHillsDefense>
+            <iHillsAttack>10</iHillsAttack>
+            <iHillsDefense>10</iHillsDefense>
             <Button>Art/Interface/Buttons/Promotions/Dwarf.dds</Button>
             <bRace>1</bRace>
             <iWorkRateModify>25</iWorkRateModify>
