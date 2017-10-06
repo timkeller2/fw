@@ -2688,6 +2688,8 @@ class CustomFunctions:
 									newUnit.setBaseCombatStr(newUnit.baseCombatStr() + 2)
 									newUnit.setBaseCombatStrDefense(newUnit.baseCombatStrDefense() + 2)
 									self.equip(newUnit)
+									sMsg = newUnit.getName() + ' rises to lead the barbarians!'
+									self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner())
 						
 					## Island Resort Vacations
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ISLAND_RESORT')) > 0:
