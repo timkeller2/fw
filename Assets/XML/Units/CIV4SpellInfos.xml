@@ -7249,7 +7249,7 @@
             <bRemoveHasCasted>0</bRemoveHasCasted>
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
-            <iCost>0</iCost>
+            <iCost>5</iCost>
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
@@ -7323,7 +7323,7 @@
             <bRemoveHasCasted>0</bRemoveHasCasted>
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
-            <iCost>0</iCost>
+            <iCost>5</iCost>
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>

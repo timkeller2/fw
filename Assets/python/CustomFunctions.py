@@ -2659,7 +2659,36 @@ class CustomFunctions:
 						sCityInfo = cPickle.loads(pCity.getScriptData())
 					except EOFError:
 						self.initCityVars(pCity)
-					
+
+					## Barbarian City Defense
+					if iGameTurn == 0 and pPlayer.isBarbarian():
+						iCityGarrison1 = gc.getInfoTypeForString('PROMOTION_CITY_GARRISON1')
+						iCityGarrison2 = gc.getInfoTypeForString('PROMOTION_CITY_GARRISON2')
+						newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_WARRIOR'), pCity.getX(), pCity.getY(), UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.DIRECTION_SOUTH)
+						newUnit.setHasPromotion(iCityGarrison1, True)
+						newUnit.setHasPromotion(iCityGarrison2, True)
+						if CyGame().getUnitCreatedCount(gc.getInfoTypeForString('UNIT_AXEMAN')) > 5:
+							newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_ARCHER'), pCity.getX(), pCity.getY(), UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.DIRECTION_SOUTH)
+							
+					## Barbarian City Menace		
+					iForceChance = 30 - pCity.getPopulation() + pPlayer.getNumCities()
+					if iForceChance < 10:
+						iForceChance = 10
+					if(CyGame().getSorenRandNum(iForceChance, "BarbStuff") == 1) and pPlayer.isBarbarian():
+						iForceSize = int( CyGame().getSorenRandNum(4, "ForceSize") + ( pCity.getPopulation() / 3 ))
+						pCity.changeCulture(pCity.getOwner(), iForceSize, True)
+						if(pCity.getX() > 0 and pCity.getY() > 0 and pCity.getPopulation() > 0 and iForceSize > 0):
+							for ii in range ( iForceSize ):
+								oNewUnit = gc.getInfoTypeForString(self.sBarbUnit())
+								newUnit = pPlayer.initUnit(oNewUnit, pCity.getX(), pCity.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+								newUnit.finishMoves()
+								self.equip(newUnit)
+								if ii == 0:
+									newUnit.setName(self.MarnokNameGenerator(newUnit))
+									newUnit.setBaseCombatStr(newUnit.baseCombatStr() + 2)
+									newUnit.setBaseCombatStrDefense(newUnit.baseCombatStrDefense() + 2)
+									self.equip(newUnit)
+						
 					## Island Resort Vacations
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ISLAND_RESORT')) > 0:
 						py = PyPlayer(iPlayer)
