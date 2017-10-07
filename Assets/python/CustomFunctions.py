@@ -872,12 +872,12 @@ class CustomFunctions:
 		strSetData['ECON'] = 0 
 		city.setScriptData(cPickle.dumps(strSetData))
 
-	def msgAll(self, sMsg, x, y, sendingPlayer):
+	def msgAll(self, sMsg, x, y, sendingPlayer, pic):
 		for iPlayer in range(gc.getMAX_PLAYERS()):
 			mPlayer = gc.getPlayer(iPlayer)
-			if mPlayer.isAlive() and (mPlayer.canContact(sendingPlayer) or iPlayer == sendingPlayer):
+			if mPlayer.isAlive() and (mPlayer.canContact(sendingPlayer) or iPlayer == sendingPlayer or gc.getPlayer(sendingPlayer).isBarbarian()):
 				py = PyPlayer(iPlayer)
-				CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),x,y,True,True)
+				CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,pic,ColorTypes(8),x,y,True,True)
 				CyInterface().addCombatMessage(iPlayer,sMsg)
 
 	def generateLoot(self, iUnit, iHaveScrolls):
@@ -1588,7 +1588,7 @@ class CustomFunctions:
 		iLead = CyGame().getPlayerScore(iPlayer) - CyGame().getPlayerScore(CyGame().getRankPlayer(1))
 		if (CyGame().getPlayerScore(iPlayer) >= 650 + CyGame().getPlayerScore(CyGame().getRankPlayer(1)) and (CyGame().getSorenRandNum(6, "Warn Leading Player") == 1 or CyGame().getPlayerScore(iPlayer) >= 2 * CyGame().getPlayerScore(CyGame().getRankPlayer(1)) )):
 			sMsg = pPlayer.getName() + ' is pulling ahead.  There is talk of war in the taverns of the world...'
-			self.msgAll(sMsg,pPlayer.getCapitalCity().getX(), pPlayer.getCapitalCity().getY(),iPlayer)
+			self.msgAll(sMsg,pPlayer.getCapitalCity().getX(), pPlayer.getCapitalCity().getY(),iPlayer,'Art/Interface/Buttons/Units/Commander.dds')
 
 			# Final War started no more often than every 15 turns
 			strSetData = cPickle.loads(CyGameInstance.getScriptData())
@@ -2687,9 +2687,14 @@ class CustomFunctions:
 									newUnit.setName(self.MarnokNameGenerator(newUnit))
 									newUnit.setBaseCombatStr(newUnit.baseCombatStr() + 2)
 									newUnit.setBaseCombatStrDefense(newUnit.baseCombatStrDefense() + 2)
-									self.equip(newUnit)
+									self.generateLoot(newUnit,newUnit.baseCombatStr()*2)
+									self.generateLoot(newUnit,newUnit.baseCombatStr()*2)
+									newUnit.changeExperience(iForceSize+1, -1, False, False, False)
+									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CITY_RAIDER1'), True)
+									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HERO'), True)
+									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LOYALTY'), True)
 									sMsg = newUnit.getName() + ' rises to lead the barbarians!'
-									self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner())
+									self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner(),newUnit.getButton())
 						
 					## Island Resort Vacations
 					if pCity.getNumRealBuilding(gc.getInfoTypeForString('BUILDING_ISLAND_RESORT')) > 0:
@@ -2773,17 +2778,17 @@ class CustomFunctions:
 						if CyGame().getSorenRandNum(100, "ReportDispute") < sCityInfo['JUDGE']:
 							if CyGame().getSorenRandNum(sCityInfo['JUDGE'], "Dispute Self Resolved") < 2:
 								sMsg = 'The people of ' + pCity.getName() + ' have resolved their ' + self.sDisputeLevel(sCityInfo['JUDGE']) + ' dispute without a noble!  It caused somewhat of a mess, but it is now resolved...'
-								self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner())
+								self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner(),'Art/Interface/Buttons/Units/Commander.dds')
 								pCity.changeHurryAngerTimer((sCityInfo['JUDGE']/2)+1)
 								sCityInfo['JUDGE'] = 0
 							else:
 								sMsg = 'The people of ' + pCity.getName() + ' owned by ' + pPlayer.getName() + ' still await a noble to help them resolve a ' + self.sDisputeLevel(sCityInfo['JUDGE']) + ' dispute...'
-								self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner())
+								self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner(),'Art/Interface/Buttons/Units/Commander.dds')
 					else:
 						if iDisputes > 0 and CyGame().getSorenRandNum(3000, "Dispute") < pCity.getPopulation():
 							iSize = CyGame().getSorenRandNum(pCity.getPopulation()*3, "DisputeSize")
 							sMsg = 'A ' + self.sDisputeLevel(iSize) + ' dispute has broken out in ' + pCity.getName() + ' owned by ' + pPlayer.getName() + '.  They seek a noble to help resolve the situation...'
-							self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner())
+							self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner(),'Art/Interface/Buttons/Units/Commander.dds')
 							sCityInfo['JUDGE'] = iSize
 							iDisputes -= 1
 	

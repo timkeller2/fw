@@ -47471,7 +47471,7 @@
             <bAnimal>0</bAnimal>
             <bFood>0</bFood>
             <bNoBadGoodies>0</bNoBadGoodies>
-            <bOnlyDefensive>1</bOnlyDefensive>
+            <bOnlyDefensive>0</bOnlyDefensive>
             <bNoCapture>0</bNoCapture>
             <bQuickCombat>0</bQuickCombat>
             <bRivalTerritory>1</bRivalTerritory>
@@ -47579,7 +47579,7 @@
             </TerrainPassableTechs>
             <FeaturePassableTechs>
             </FeaturePassableTechs>
-            <iCombat>2</iCombat>
+            <iCombat>1</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>0</iAirCombat>
             <iAirCombatLimit>0</iAirCombatLimit>
@@ -47678,10 +47678,32 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
-            <iCombatDefense>2</iCombatDefense>
+            <iCombatDefense>1</iCombatDefense>
             <iTier>1</iTier>
-            <iWithdrawlProbDefensive>100</iWithdrawlProbDefensive>
+            <iWithdrawlProbDefensive>0</iWithdrawlProbDefensive>
             <Image>Art/Interface/Popups/Loki.dds</Image>
+            <BonusAffinities>
+                <BonusAffinity>
+                    <BonusType>BONUS_MANA_CHAOS</BonusType>
+                    <iAffinity>1</iAffinity>
+                </BonusAffinity>
+                <BonusAffinity>
+                    <BonusType>BONUS_MANA_ENTROPY</BonusType>
+                    <iAffinity>1</iAffinity>
+                </BonusAffinity>
+                <BonusAffinity>
+                    <BonusType>BONUS_MANA_MIND</BonusType>
+                    <iAffinity>1</iAffinity>
+                </BonusAffinity>
+                <BonusAffinity>
+                    <BonusType>BONUS_MANA_SHADOW</BonusType>
+                    <iAffinity>1</iAffinity>
+                </BonusAffinity>
+                <BonusAffinity>
+                    <BonusType>BONUS_MANA_DIMENSIONAL</BonusType>
+                    <iAffinity>1</iAffinity>
+                </BonusAffinity>
+            </BonusAffinities>
         </UnitInfo>
         <UnitInfo>
             <Class>UNITCLASS_LONGBOWMAN</Class>
