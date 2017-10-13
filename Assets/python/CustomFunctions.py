@@ -2397,17 +2397,23 @@ class CustomFunctions:
 		
 		### FW Changes
 		iAdj = 0
+		iCache = 20
 
 		if CyMap().getWorldSize() == gc.getInfoTypeForString('WORLDSIZE_DUEL'):
 			iAdj = 6
+			iCache = 8
 		if CyMap().getWorldSize() == gc.getInfoTypeForString('WORLDSIZE_TINY'):
 			iAdj = 4
+			iCache = 12
 		if CyMap().getWorldSize() == gc.getInfoTypeForString('WORLDSIZE_SMALL'):
 			iAdj = 2
+			iCache = 16
 		if CyMap().getWorldSize() == gc.getInfoTypeForString('WORLDSIZE_LARGE'):
 			iAdj = -1
+			iCache = 24
 		if CyMap().getWorldSize() == gc.getInfoTypeForString('WORLDSIZE_HUGE'):
 			iAdj = -2
+			iCache = 36
 
 		if CyGame().getGameSpeedType() == gc.getInfoTypeForString('GAMESPEED_NORMAL'):
 			iAdj = iAdj + 4
@@ -2420,7 +2426,7 @@ class CustomFunctions:
 			self.addUnit(gc.getInfoTypeForString(self.sAnimalUnit()))
 		if CyGame().getSorenRandNum(4+iAdj, "BarbarianStuff") == 1:
 			self.addBarbUnit(gc.getInfoTypeForString(self.sBarbUnit()))
-		if CyGame().getSorenRandNum(10+iAdj, "HiddenCache") == 1 or iGameTurn < 4:
+		if iGameTurn < iCache:
 			self.addBarbUnitA(gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'))
 		if self.bTechExist('TECH_NECROMANCY') and CyGame().getSorenRandNum(4+iAdj, "UndeadStuff") == 1:
 			self.addBarbUnit(gc.getInfoTypeForString(self.sUndeadUnit()))
@@ -2671,11 +2677,11 @@ class CustomFunctions:
 							newUnit = pPlayer.initUnit(gc.getInfoTypeForString('UNIT_ARCHER'), pCity.getX(), pCity.getY(), UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.DIRECTION_SOUTH)
 							
 					## Barbarian City Menace		
-					iForceChance = 30 - pCity.getPopulation() + pPlayer.getNumCities()
+					iForceChance = 100 - pCity.getPopulation() * 3 + pPlayer.getNumCities()
 					if iForceChance < 10:
 						iForceChance = 10
 					if(CyGame().getSorenRandNum(iForceChance, "BarbStuff") == 1) and pPlayer.isBarbarian():
-						iForceSize = int( CyGame().getSorenRandNum(4, "ForceSize") + ( pCity.getPopulation() / 3 ))
+						iForceSize = int( CyGame().getSorenRandNum(6, "ForceSize") + ( pCity.getPopulation() / 2 ))
 						pCity.changeCulture(pCity.getOwner(), iForceSize, True)
 						if(pCity.getX() > 0 and pCity.getY() > 0 and pCity.getPopulation() > 0 and iForceSize > 0):
 							for ii in range ( iForceSize ):
@@ -2685,10 +2691,10 @@ class CustomFunctions:
 								self.equip(newUnit)
 								if ii == 0:
 									newUnit.setName(self.MarnokNameGenerator(newUnit))
-									newUnit.setBaseCombatStr(newUnit.baseCombatStr() + 2)
-									newUnit.setBaseCombatStrDefense(newUnit.baseCombatStrDefense() + 2)
-									self.generateLoot(newUnit,newUnit.baseCombatStr()*2)
-									self.generateLoot(newUnit,newUnit.baseCombatStr()*2)
+									newUnit.setBaseCombatStr(newUnit.baseCombatStr() * 1.5 + 1)
+									newUnit.setBaseCombatStrDefense(newUnit.baseCombatStrDefense() * 1.5 + 1)
+									self.generateLoot(newUnit,newUnit.baseCombatStr())
+									self.generateLoot(newUnit,newUnit.baseCombatStr())
 									newUnit.changeExperience(iForceSize+1, -1, False, False, False)
 									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CITY_RAIDER1'), True)
 									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HERO'), True)

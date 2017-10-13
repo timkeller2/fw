@@ -4118,7 +4118,7 @@ def spellBurglar(caster):
 			if pPlot != pCasterPlot:
 				for i in range(pPlot.getNumUnits()):
 					pUnit = pPlot.getUnit(i)
-					if pUnit.baseCombatStr() < 1 and pUnit.maxMoves() < 1 and iL > 0:
+					if pUnit.baseCombatStr() < 1 and pUnit.maxMoves() < 1 and iL > 0 and pUnit.getUnitType() != gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'):
 						target.append(pUnit)
 						iL = iL - 1
 
