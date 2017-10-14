@@ -69115,7 +69115,7 @@
             <Invisible>NONE</Invisible>
             <SeeInvisible>NONE</SeeInvisible>
             <Description>TXT_KEY_UNIT_STYGIAN_GUARD</Description>
-            <Civilopedia>TXT_KEY_UNIT_PLACEHOLDER_PEDIA</Civilopedia>
+            <Civilopedia>[ICON_BULLET]You may only have 3 stygian guards for each Temple of the Overlords you control.</Civilopedia>
             <Strategy>TXT_KEY_UNIT_STYGIAN_GUARD_STRATEGY</Strategy>
             <Advisor>ADVISOR_MILITARY</Advisor>
             <bAnimal>0</bAnimal>
@@ -69209,7 +69209,7 @@
             <StateReligion>RELIGION_OCTOPUS_OVERLORDS</StateReligion>
             <PrereqReligion>RELIGION_OCTOPUS_OVERLORDS</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
-            <PrereqBuilding>BUILDING_TEMPLE_OF_THE_DEEP</PrereqBuilding>
+            <PrereqBuilding>BUILDING_TEMPLE_OF_THE_OVERLORDS</PrereqBuilding>
             <PrereqTech>TECH_FANATICISM</PrereqTech>
             <TechTypes>
             </TechTypes>

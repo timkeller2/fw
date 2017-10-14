@@ -493,6 +493,10 @@ class CvGameUtils:
 			if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_MAGE_GUILD')) * 3 <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_MAGE')):
 				return True
 					
+		if eUnit == gc.getInfoTypeForString('UNIT_STYGIAN_GUARD'):
+			if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_TEMPLE_OF_THE_OVERLORDS')) * 3 <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_STYGIAN_GUARD')):
+				return True
+					
 		if eUnit == gc.getInfoTypeForString('UNIT_ILLUSIONIST'):
 			if pPlayer.countNumBuildings(gc.getInfoTypeForString('BUILDING_MAGE_GUILD')) * 3 <= pPlayer.getUnitClassCount(gc.getInfoTypeForString('UNITCLASS_ILLUSIONIST')):
 				return True

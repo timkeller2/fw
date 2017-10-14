@@ -340,7 +340,7 @@ class CustomFunctions:
 
 		if caster.plot().isCity():
 			pCity = caster.plot().getPlotCity()
-			iMult = pCity.getPopulation()
+			iMult = int( pCity.getPopulation() / 2 )
 			if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_TAVERN')) != 0:
 				iMult += iSearch
 		else:
@@ -395,7 +395,7 @@ class CustomFunctions:
 		if caster.plot().isCity():
 			pCity = caster.plot().getPlotCity()
 			sName = pCity.getName()
-			iMult = pCity.getPopulation()
+			iMult = int( pCity.getPopulation() / 2 )
 			if pCity.getNumBuilding(gc.getInfoTypeForString('BUILDING_TAVERN')) != 0:
 				iMult += iSearch
 
@@ -2691,8 +2691,8 @@ class CustomFunctions:
 								self.equip(newUnit)
 								if ii == 0:
 									newUnit.setName(self.MarnokNameGenerator(newUnit))
-									newUnit.setBaseCombatStr(newUnit.baseCombatStr() * 1.5 + 1)
-									newUnit.setBaseCombatStrDefense(newUnit.baseCombatStrDefense() * 1.5 + 1)
+									newUnit.setBaseCombatStr(int(newUnit.baseCombatStr() * 1.5) + 1)
+									newUnit.setBaseCombatStrDefense(int(newUnit.baseCombatStrDefense() * 1.5) + 1)
 									self.generateLoot(newUnit,newUnit.baseCombatStr())
 									self.generateLoot(newUnit,newUnit.baseCombatStr())
 									newUnit.changeExperience(iForceSize+1, -1, False, False, False)
