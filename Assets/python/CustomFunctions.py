@@ -2930,7 +2930,7 @@ class CustomFunctions:
 						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WORKER_SHIELD'), True)
 					else:
 						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_WORKER_SHIELD'), False)
-					if CyGame().getSorenRandNum(3, "UnitGuard") == 1 and pUnit.getDamage() < 50:
+					if CyGame().getSorenRandNum(3, "UnitGuard") == 1 and pUnit.getDamage() < 50 and pUnit.baseMoves() > 0:
 						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_GUARDING'), True)
 					else:
 						pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_GUARDING'), False)
