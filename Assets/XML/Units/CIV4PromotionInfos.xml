@@ -5310,11 +5310,11 @@
             <bTargetWeakestUnit>1</bTargetWeakestUnit>
         </PromotionInfo>
         <PromotionInfo>
-            <Type>PROMOTION_FIELD_MEDIC1</Type>
-            <Description>Field Medic</Description>
+            <Type>PROMOTION_BASIC_HEALING</Type>
+            <Description>Basic Healing</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <PromotionPrereq>PROMOTION_DRILL1</PromotionPrereq>
-            <iSameTileHealChange>3</iSameTileHealChange>
+            <PromotionPrereq></PromotionPrereq>
+            <iSameTileHealChange>2</iSameTileHealChange>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_DISCIPLE</UnitCombatType>
@@ -5330,6 +5330,46 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>,Art/Interface/Buttons/Promotions/Medic1.dds,Art/Interface/Buttons/Promotions_Atlas.dds,3,4</Button>
+            <PromotionNextLevel>PROMOTION_FIELD_MEDIC1</PromotionNextLevel>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_FIELD_MEDIC1</Type>
+            <Description>Field Medic</Description>
+            <Sound>AS2D_IF_LEVELUP</Sound>
+            <PromotionPrereq>PROMOTION_BASIC_HEALING</PromotionPrereq>
+            <iSameTileHealChange>3</iSameTileHealChange>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_BEAST</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_DISCIPLE</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_NAVAL</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>,Art/Interface/Buttons/Promotions/Medic1.dds,Art/Interface/Buttons/Promotions_Atlas.dds,3,4</Button>
+            <PromotionPrereqAnd>PROMOTION_DRILL1</PromotionPrereqAnd>
             <PromotionNextLevel>PROMOTION_MEDIC1</PromotionNextLevel>
         </PromotionInfo>
         <PromotionInfo>

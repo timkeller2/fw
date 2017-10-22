@@ -57,6 +57,10 @@ class CustomFunctions:
 				if unit.baseCombatStr() > 1:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SINISTER'), True)
 
+			if CyGame().getSorenRandNum(50, "RandomHealer") == 4:
+				if unit.baseCombatStr() > 1:
+					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BASIC_HEALING'), True)
+
 			if CyGame().getSorenRandNum(50, "RandomDexterous") == 3:
 				if unit.baseCombatStr() > 1:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DEXTEROUS'), True)
