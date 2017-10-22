@@ -122,6 +122,14 @@ class CvGameUtils:
 			iterrain=pPlot.getTerrainType()
 			if iBuild == gc.getInfoTypeForString('BUILD_FORT'):
 				return 0
+			if iBuild == gc.getInfoTypeForString('BUILD_IMPROVED_ROAD'):
+				return 0
+			if iBuild == gc.getInfoTypeForString('BUILD_IMPROVED_FARM'):
+				return 0
+			if iBuild == gc.getInfoTypeForString('BUILD_IMPROVED_LUMBERMILL'):
+				return 0
+			if iBuild == gc.getInfoTypeForString('BUILD_IMPROVED_MINE'):
+				return 0
 			if iBuild == gc.getInfoTypeForString('BUILD_WINDMILL'):
 				if pPlayer.getCivics(gc.getInfoTypeForString('CIVICOPTION_LABOR')) == gc.getInfoTypeForString('CIVIC_ARETE'):
 					return 0
