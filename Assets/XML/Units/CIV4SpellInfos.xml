@@ -13420,7 +13420,7 @@
             <PromotionPrereq1>PROMOTION_GUARDSMAN</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
-            <bHasCasted>0</bHasCasted>
+            <bHasCasted>1</bHasCasted>
             <AddPromotionType1>PROMOTION_GUARDING</AddPromotionType1>
             <bBuffCasterOnly>1</bBuffCasterOnly>
             <Effect>EFFECT_STONESKIN</Effect>
