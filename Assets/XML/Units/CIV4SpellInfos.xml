@@ -460,17 +460,19 @@
             <Type>SPELL_BLUR</Type>
             <Description>TXT_KEY_SPELL_BLUR</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
+            <Help>[ICON_BULLET]Add Blur to a number of living units equal to the caster's level.</Help>
             <PromotionPrereq1>PROMOTION_SHADOW1</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_CHANNELING1</PromotionPrereq2>
             <bAllowAI>1</bAllowAI>
             <iAIWeightWar>50</iAIWeightWar>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <AddPromotionType1>PROMOTION_BLUR</AddPromotionType1>
+            <PyResult>spellBlur(pCaster)</PyResult>
+            <PyRequirement>reqBlur(pCaster)</PyRequirement>
             <Effect>EFFECT_SPELL1</Effect>
             <Sound>AS3D_SPELL_CHARM_PERSON</Sound>
             <Button>Art/Interface/Buttons/Promotions/Blur.dds</Button>
-        </SpellInfo>
+		</SpellInfo>
         <SpellInfo>
             <Type>SPELL_BREATH_FIRE</Type>
             <Description>TXT_KEY_SPELL_BREATH_FIRE</Description>

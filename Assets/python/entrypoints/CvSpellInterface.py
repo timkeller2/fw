@@ -5291,6 +5291,26 @@ def spellHaste(caster):
 				if (iNumBlessed >= iL):
 					return
 
+def reqBlur(caster):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLUR')):
+			return True
+	return False
+
+def spellBlur(caster):
+	iNumBlessed = 0
+	iL = caster.getLevel()
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BLUR')):
+			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLUR'),True)
+			iNumBlessed = iNumBlessed + 1
+			if (iNumBlessed >= iL):
+				return
+
 def reqRegeneration(caster):
 	pPlot = caster.plot()
 	for i in range(pPlot.getNumUnits()):
