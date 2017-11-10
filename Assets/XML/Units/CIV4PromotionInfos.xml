@@ -783,7 +783,7 @@
                 </UnitCombat>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/Burningblood.dds</Button>
-            <iExtraCombatDefense>1</iExtraCombatDefense>
+            <bImmuneToCapture>1</bImmuneToCapture>
             <bImmuneToFear>1</bImmuneToFear>
             <iBetrayalChance>20</iBetrayalChance>
             <iExpireChance>10</iExpireChance>
