@@ -82278,7 +82278,7 @@
             <DiploVoteType>NONE</DiploVoteType>
             <EquipmentPromotion>NONE</EquipmentPromotion>
             <PrereqAlignment>NONE</PrereqAlignment>
-            <PrereqBuildingClass>NONE</PrereqBuildingClass>
+            <PrereqBuildingClass>BUILDINGCLASS_CARNIVAL</PrereqBuildingClass>
             <PrereqCivic>NONE</PrereqCivic>
             <PromotionFromCombat>NONE</PromotionFromCombat>
             <Image>NONE</Image>
