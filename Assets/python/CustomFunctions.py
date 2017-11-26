@@ -2782,25 +2782,26 @@ class CustomFunctions:
 						sCityInfo['TR3'] = 0
 						
 					## Process disputes for nobles to solve
-					if 'JUDGE' not in sCityInfo:
-						sCityInfo['JUDGE'] = 0
-					if sCityInfo['JUDGE'] > 0:
-						if CyGame().getSorenRandNum(100, "ReportDispute") < sCityInfo['JUDGE']:
-							if CyGame().getSorenRandNum(sCityInfo['JUDGE'], "Dispute Self Resolved") < 2:
-								sMsg = 'The people of ' + pCity.getName() + ' have resolved their ' + self.sDisputeLevel(sCityInfo['JUDGE']) + ' dispute without a noble!  It caused somewhat of a mess, but it is now resolved...'
+					if pPlayer.isHuman():
+						if 'JUDGE' not in sCityInfo:
+							sCityInfo['JUDGE'] = 0
+						if sCityInfo['JUDGE'] > 0:
+							if CyGame().getSorenRandNum(100, "ReportDispute") < sCityInfo['JUDGE']:
+								if CyGame().getSorenRandNum(sCityInfo['JUDGE'], "Dispute Self Resolved") < 2:
+									sMsg = 'The people of ' + pCity.getName() + ' have resolved their ' + self.sDisputeLevel(sCityInfo['JUDGE']) + ' dispute without a noble!  It caused somewhat of a mess, but it is now resolved...'
+									self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner(),'Art/Interface/Buttons/Units/Commander.dds')
+									pCity.changeHurryAngerTimer((sCityInfo['JUDGE']/2)+1)
+									sCityInfo['JUDGE'] = 0
+								else:
+									sMsg = 'The people of ' + pCity.getName() + ' owned by ' + pPlayer.getName() + ' still await a noble to help them resolve a ' + self.sDisputeLevel(sCityInfo['JUDGE']) + ' dispute...'
+									self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner(),'Art/Interface/Buttons/Units/Commander.dds')
+						else:
+							if iDisputes > 0 and CyGame().getSorenRandNum(3000, "Dispute") < pCity.getPopulation():
+								iSize = CyGame().getSorenRandNum(pCity.getPopulation()*3, "DisputeSize")
+								sMsg = 'A ' + self.sDisputeLevel(iSize) + ' dispute has broken out in ' + pCity.getName() + ' owned by ' + pPlayer.getName() + '.  They seek a noble to help resolve the situation...'
 								self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner(),'Art/Interface/Buttons/Units/Commander.dds')
-								pCity.changeHurryAngerTimer((sCityInfo['JUDGE']/2)+1)
-								sCityInfo['JUDGE'] = 0
-							else:
-								sMsg = 'The people of ' + pCity.getName() + ' owned by ' + pPlayer.getName() + ' still await a noble to help them resolve a ' + self.sDisputeLevel(sCityInfo['JUDGE']) + ' dispute...'
-								self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner(),'Art/Interface/Buttons/Units/Commander.dds')
-					else:
-						if iDisputes > 0 and CyGame().getSorenRandNum(3000, "Dispute") < pCity.getPopulation():
-							iSize = CyGame().getSorenRandNum(pCity.getPopulation()*3, "DisputeSize")
-							sMsg = 'A ' + self.sDisputeLevel(iSize) + ' dispute has broken out in ' + pCity.getName() + ' owned by ' + pPlayer.getName() + '.  They seek a noble to help resolve the situation...'
-							self.msgAll(sMsg,pCity.getX(),pCity.getY(),pCity.getOwner(),'Art/Interface/Buttons/Units/Commander.dds')
-							sCityInfo['JUDGE'] = iSize
-							iDisputes -= 1
+								sCityInfo['JUDGE'] = iSize
+								iDisputes -= 1
 	
 					## Give computer players monoliths to help them out a little
 					if pCity.getPopulation() > 2 and pPlayer.isHuman() == False:
