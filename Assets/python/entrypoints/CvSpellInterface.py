@@ -5245,6 +5245,28 @@ def spellEnchantedBlade(caster):
 				if (iNumBlessed >= int( iL / 3 )):
 					return
 
+def reqShieldOfFaith(caster):
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if pUnit.isAlive() or pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_ANGEL'):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SHIELD_OF_FAITH')):
+				return True
+	return False
+
+def spellShieldOfFaith(caster):
+	iNumBlessed = 0
+	iL = caster.getLevel()
+	pPlot = caster.plot()
+	for i in range(pPlot.getNumUnits()):
+		pUnit = pPlot.getUnit(i)
+		if pUnit.isAlive() or pUnit.getRace() == gc.getInfoTypeForString('PROMOTION_ANGEL'):
+			if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SHIELD_OF_FAITH')):
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SHIELD_OF_FAITH'),True)
+				iNumBlessed = iNumBlessed + 1
+				if (iNumBlessed >= int( iL / 3 )):
+					return
+
 def reqCourage(caster):
 	pPlot = caster.plot()
 	for i in range(pPlot.getNumUnits()):

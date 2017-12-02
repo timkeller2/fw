@@ -2865,13 +2865,15 @@
             <Type>SPELL_SHIELD_OF_FAITH</Type>
             <Description>TXT_KEY_SPELL_SHIELD_OF_FAITH</Description>
             <Civilopedia>TXT_KEY_SPELL_SHIELD_OF_FAITH_PEDIA</Civilopedia>
+            <Help>[ICON_BULLET]Add Shield of Faith to a number of living and angelic units equal to one third the caster's level.</Help>
             <PromotionPrereq1>PROMOTION_CHANNELING2</PromotionPrereq1>
             <PromotionPrereq2>PROMOTION_DIVINE</PromotionPrereq2>
             <ReligionPrereq>RELIGION_RUNES_OF_KILMORPH</ReligionPrereq>
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <AddPromotionType1>PROMOTION_SHIELD_OF_FAITH</AddPromotionType1>
+            <PyResult>spellShieldOfFaith(pCaster)</PyResult>
+            <PyRequirement>reqShieldOfFaith(pCaster)</PyRequirement>
             <Effect>EFFECT_SWORDS_SPARKS</Effect>
             <Sound>AS3D_SPELL_ENCHANTMENT</Sound>
             <Button>Art/Interface/Buttons/Promotions/ShieldofFaith.dds</Button>

@@ -7034,7 +7034,7 @@
             <Description>TXT_KEY_PROMOTION_SHIELD_OF_FAITH</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
-            <iCombatPercent>10</iCombatPercent>
+            <iCombatPercent>0</iCombatPercent>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ADEPT</UnitCombatType>
@@ -7065,6 +7065,7 @@
             <bDispellable>1</bDispellable>
             <iAIWeight>100</iAIWeight>
             <iExtraCombatDefense>1</iExtraCombatDefense>
+            <iExpireChance>5</iExpireChance>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
