@@ -6999,14 +6999,16 @@ def canheavyweapons(argsList):
 	kTriggeredData = argsList[1]
 	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
 	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
-
 	pCity = pUnit.plot().getPlotCity()
-	strSetData = cPickle.loads(pCity.getScriptData())
-	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] ) * pCity.getPopulation() ) / 15 < 10:
-		return False
 
 	if cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_HEAVY_WEAPONS')):
 		strSetData = cPickle.loads(pCity.getScriptData())
+
+		strSetData = cPickle.loads(pCity.getScriptData())
+		if ( ( CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] ) * pCity.getPopulation() ) / 15 < 10:
+			return False
+			
+		return True	
 
 	return False
 
@@ -7028,14 +7030,16 @@ def canheavyarmor(argsList):
 	kTriggeredData = argsList[1]
 	pPlayer = gc.getPlayer(kTriggeredData.ePlayer)
 	pUnit = pPlayer.getUnit(kTriggeredData.iUnitId)
-
 	pCity = pUnit.plot().getPlotCity()
-	strSetData = cPickle.loads(pCity.getScriptData())
-	if ( ( CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] ) * pCity.getPopulation() ) / 15 < 10:
-		return False
 
 	if cf.cantake(pUnit,gc.getInfoTypeForString('PROMOTION_HEAVY_ARMOR')):
 		strSetData = cPickle.loads(pCity.getScriptData())
+
+		strSetData = cPickle.loads(pCity.getScriptData())
+		if ( ( CyGame().getGameTurn() - strSetData['BUILDING_CRAFTSMEN_GUILD'] ) * pCity.getPopulation() ) / 15 < 10:
+			return False
+			
+		return True	
 
 	return False
 
@@ -8496,7 +8500,7 @@ def trainingyard6(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',10,iPlayer,'craftsmen guild')
+	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',6,iPlayer,'craftsmen guild')
 	
 def trainingyard10(argsList):
 	iEvent = argsList[0]
@@ -8506,7 +8510,7 @@ def trainingyard10(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',20,iPlayer,'craftsmen guild')
+	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',10,iPlayer,'craftsmen guild')
 	
 def trainingyard25(argsList):
 	iEvent = argsList[0]
@@ -8516,7 +8520,17 @@ def trainingyard25(argsList):
 	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
 	pCity = pUnit.plot().getPlotCity()
 
-	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',30,iPlayer,'craftsmen guild')
+	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',25,iPlayer,'craftsmen guild')
+	
+def trainingyard50(argsList):
+	iEvent = argsList[0]
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+	bPlayer = gc.getPlayer(iPlayer)
+	pUnit = bPlayer.getUnit(kTriggeredData.iUnitId)
+	pCity = pUnit.plot().getPlotCity()
+
+	cf.pay(pCity,'BUILDING_CRAFTSMEN_GUILD',50,iPlayer,'craftsmen guild')
 	
 def alchemylab5(argsList):
 	iEvent = argsList[0]
