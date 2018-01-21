@@ -14135,7 +14135,7 @@
             <iLeaderExperience>0</iLeaderExperience>
             <iCombatDefense>2</iCombatDefense>
             <UnitConvertFromCombat>UNIT_GIANT_SPIDER</UnitConvertFromCombat>
-            <iUnitConvertFromCombatChance>50</iUnitConvertFromCombatChance>
+            <iUnitConvertFromCombatChance>100</iUnitConvertFromCombatChance>
             <DamageTypeCombats>
                 <DamageTypeCombat>
                     <DamageType>DAMAGE_POISON</DamageType>
@@ -33813,6 +33813,8 @@
             <iCombatDefense>4</iCombatDefense>
             <iMinLevel>6</iMinLevel>
             <iTier>2</iTier>
+            <UnitCreateFromCombat>UNIT_BABY_SPIDER</UnitCreateFromCombat>
+            <iUnitCreateFromCombatChance>25</iUnitCreateFromCombatChance>
             <DamageTypeCombats>
                 <DamageTypeCombat>
                     <DamageType>DAMAGE_POISON</DamageType>
@@ -65759,6 +65761,10 @@
             <iLeaderExperience>0</iLeaderExperience>
             <iCombatDefense>8</iCombatDefense>
             <iTier>3</iTier>
+            <UnitConvertFromCombat>UNIT_GIANT_SEA_SERPENT</UnitConvertFromCombat>
+            <iUnitConvertFromCombatChance>20</iUnitConvertFromCombatChance>
+            <UnitCreateFromCombat>UNIT_SEA_SERPENT</UnitCreateFromCombat>
+            <iUnitCreateFromCombatChance>20</iUnitCreateFromCombatChance>
         </UnitInfo>
         <UnitInfo>
             <Class>UNITCLASS_SERAPH</Class>
@@ -80712,8 +80718,8 @@
             <Image>NONE</Image>
             <UnitConvertFromCombat>NONE</UnitConvertFromCombat>
             <iUnitConvertFromCombatChance>0</iUnitConvertFromCombatChance>
-            <UnitCreateFromCombat>NONE</UnitCreateFromCombat>
-            <iUnitCreateFromCombatChance>0</iUnitCreateFromCombatChance>
+            <UnitCreateFromCombat>UNIT_SEA_SERPENT</UnitCreateFromCombat>
+            <iUnitCreateFromCombatChance>35</iUnitCreateFromCombatChance>
             <DamageTypeCombats>
             </DamageTypeCombats>
             <BonusAffinities>

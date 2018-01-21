@@ -651,27 +651,6 @@
             <Button>Art/Interface/Buttons/Spells/Consumesoul.dds</Button>
         </SpellInfo>
         <SpellInfo>
-            <Type>SPELL_CONTAGION</Type>
-            <Description>TXT_KEY_SPELL_CONTAGION</Description>
-            <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <UnitClassPrereq>UNITCLASS_MARY</UnitClassPrereq>
-            <bAllowAI>1</bAllowAI>
-            <bCausesWar>1</bCausesWar>
-            <bDisplayWhenDisabled>1</bDisplayWhenDisabled>
-            <bHasCasted>1</bHasCasted>
-            <bResistable>1</bResistable>
-            <iRange>1</iRange>
-            <iDamage>10</iDamage>
-            <iDamageLimit>40</iDamageLimit>
-            <DamageType>DAMAGE_DEATH</DamageType>
-            <AddPromotionType1>PROMOTION_PLAGUED</AddPromotionType1>
-            <bImmuneTeam>1</bImmuneTeam>
-            <bImmuneNotAlive>1</bImmuneNotAlive>
-            <Effect>EFFECT_SPELL1</Effect>
-            <Sound>AS3D_SPELL_CONTAGION</Sound>
-            <Button>Art/Interface/Buttons/Spells/Contagion.dds</Button>
-        </SpellInfo>
-        <SpellInfo>
             <Type>SPELL_CONVERT_CITY_BASIUM</Type>
             <Description>TXT_KEY_SPELL_CONVERT_CITY</Description>
             <Civilopedia>TXT_KEY_SPELL_CONVERT_CITY_PEDIA</Civilopedia>
