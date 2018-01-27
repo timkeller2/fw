@@ -32988,7 +32988,7 @@
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>NONE</PrereqBuilding>
-            <PrereqTech>TECH_ARCANE_LORE</PrereqTech>
+            <PrereqTech>NONE</PrereqTech>
             <TechTypes>
             </TechTypes>
             <BonusType>NONE</BonusType>
