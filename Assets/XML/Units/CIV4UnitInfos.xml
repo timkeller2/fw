@@ -75803,9 +75803,9 @@
             <bFirstStrikeImmune>1</bFirstStrikeImmune>
             <bNoDefensiveBonus>0</bNoDefensiveBonus>
             <bIgnoreBuildingDefense>0</bIgnoreBuildingDefense>
-            <bCanMoveImpassable>0</bCanMoveImpassable>
-            <bCanMoveAllTerrain>0</bCanMoveAllTerrain>
-            <bFlatMovementCost>0</bFlatMovementCost>
+            <bCanMoveImpassable>1</bCanMoveImpassable>
+            <bCanMoveAllTerrain>1</bCanMoveAllTerrain>
+            <bFlatMovementCost>1</bFlatMovementCost>
             <bIgnoreTerrainCost>0</bIgnoreTerrainCost>
             <bNukeImmune>0</bNukeImmune>
             <bPrereqBonuses>0</bPrereqBonuses>
@@ -75971,10 +75971,6 @@
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
             <FreePromotions>
-                <FreePromotion>
-                    <PromotionType>PROMOTION_FLYING</PromotionType>
-                    <bFreePromotion>1</bFreePromotion>
-                </FreePromotion>
                 <FreePromotion>
                     <PromotionType>PROMOTION_ELEMENTAL</PromotionType>
                     <bFreePromotion>1</bFreePromotion>
