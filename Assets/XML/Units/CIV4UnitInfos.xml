@@ -32988,7 +32988,7 @@
             <PrereqReligion>NONE</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>NONE</PrereqBuilding>
-            <PrereqTech>NONE</PrereqTech>
+            <PrereqTech>TECH_ARCANE_LORE</PrereqTech>
             <TechTypes>
             </TechTypes>
             <BonusType>NONE</BonusType>
@@ -33125,7 +33125,7 @@
             <bFreeXP>1</bFreeXP>
             <iCombatDefense>4</iCombatDefense>
             <iFreePromotionPick>1</iFreePromotionPick>
-            <iMinLevel>10</iMinLevel>
+            <iMinLevel>13</iMinLevel>
             <iTier>3</iTier>
             <Image>Art/Interface/Popups/Gaelan.dds</Image>
         </UnitInfo>
