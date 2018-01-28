@@ -124,8 +124,8 @@
             <CreateFeatureType>NONE</CreateFeatureType>
             <CreateImprovementType>NONE</CreateImprovementType>
             <SpreadReligion>NONE</SpreadReligion>
-            <CreateUnitType>UNIT_MAGIC_MISSILE</CreateUnitType>
-            <iCreateUnitNum>1</iCreateUnitNum>
+            <CreateUnitType></CreateUnitType>
+            <iCreateUnitNum>0</iCreateUnitNum>
             <bPermanentUnitCreate>0</bPermanentUnitCreate>
             <CreateUnitPromotion>NONE</CreateUnitPromotion>
             <bImmuneTeam>0</bImmuneTeam>
@@ -142,7 +142,7 @@
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>
-            <PyResult></PyResult>
+            <PyResult>spellSummonScroll(pCaster,'UNIT_MAGIC_MISSILE','caster')</PyResult>
             <PyRequirement></PyRequirement>
             <Effect>EFFECT_WATER_SUMMON</Effect>
             <Sound>AS3D_SPELL_DJINN</Sound>
@@ -153,7 +153,6 @@
             <bGraphicalOnly>0</bGraphicalOnly>
             <iHotKeyPriority>0</iHotKeyPriority>
             <Button>Art/Interface/Buttons/Units/Fireball.dds</Button>
-<!-- spellSummonScroll(pCaster,'UNIT_MAGIC_MISSILE','caster') -->			
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_ADD_TO_CITY</Type>
