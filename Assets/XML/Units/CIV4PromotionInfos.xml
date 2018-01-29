@@ -21043,10 +21043,10 @@
             <Type>PROMOTION_WORKER_SHIELD</Type>
             <Description>Worker Shield</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>0</iCombatPercent>
+            <iCombatPercent>20</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/Defensive.dds</Button>
             <iCombatPercentDefense>0</iCombatPercentDefense>
-            <iExtraCombatDefense>2</iExtraCombatDefense>
+            <iExtraCombatDefense>4</iExtraCombatDefense>
             <iMinLevel>-1</iMinLevel>
         </PromotionInfo>
         <PromotionInfo>
