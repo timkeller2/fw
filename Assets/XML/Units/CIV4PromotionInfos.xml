@@ -11542,7 +11542,7 @@
             <iFriendlyHealChange>0</iFriendlyHealChange>
             <iSameTileHealChange>0</iSameTileHealChange>
             <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>5</iCombatPercent>
+            <iCombatPercent>0</iCombatPercent>
             <iCityAttack>0</iCityAttack>
             <iCityDefense>0</iCityDefense>
             <iHillsAttack>0</iHillsAttack>
@@ -11718,7 +11718,7 @@
             <iFriendlyHealChange>0</iFriendlyHealChange>
             <iSameTileHealChange>0</iSameTileHealChange>
             <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>5</iCombatPercent>
+            <iCombatPercent>0</iCombatPercent>
             <iCityAttack>0</iCityAttack>
             <iCityDefense>0</iCityDefense>
             <iHillsAttack>0</iHillsAttack>
@@ -11894,7 +11894,7 @@
             <iFriendlyHealChange>0</iFriendlyHealChange>
             <iSameTileHealChange>0</iSameTileHealChange>
             <iAdjacentTileHealChange>0</iAdjacentTileHealChange>
-            <iCombatPercent>5</iCombatPercent>
+            <iCombatPercent>0</iCombatPercent>
             <iCityAttack>0</iCityAttack>
             <iCityDefense>0</iCityDefense>
             <iHillsAttack>0</iHillsAttack>
@@ -21528,13 +21528,14 @@
             <PromotionCombatApply>PROMOTION_DISEASED</PromotionCombatApply>
         </PromotionInfo>
         <PromotionInfo>
-            <Type>PROMOTION_FUTURE_LEARNING3</Type>
-            <Description>Future Learning</Description>
+            <Type>PROMOTION_HONOR_GUARD</Type>
+            <Description>Honor Guard</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>0</iCombatPercent>
-            <Button>Art/Interface/Buttons/Promotions/air1.dds</Button>
-            <iCombatPercentDefense>0</iCombatPercentDefense>
-            <iMinLevel>-1</iMinLevel>
+            <TechPrereq>TECH_NEVER</TechPrereq>
+            <UnitCombats>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/Guardsman.dds</Button>
+            <iBetterDefenderThanPercent>100</iBetterDefenderThanPercent>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_FUTURE_LEARNING4</Type>
