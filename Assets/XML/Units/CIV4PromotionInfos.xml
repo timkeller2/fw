@@ -21528,14 +21528,14 @@
             <PromotionCombatApply>PROMOTION_DISEASED</PromotionCombatApply>
         </PromotionInfo>
         <PromotionInfo>
-            <Type>PROMOTION_HONOR_GUARD</Type>
-            <Description>Honor Guard</Description>
+            <Type>PROMOTION_TAKING_COVER</Type>
+            <Description>Taking Cover</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <UnitCombats>
             </UnitCombats>
-            <Button>Art/Interface/Buttons/Promotions/Guardsman.dds</Button>
-            <iBetterDefenderThanPercent>100</iBetterDefenderThanPercent>
+            <Button>Art/Interface/Buttons/Promotions/ShieldofFaith.dds</Button>
+            <iBetterDefenderThanPercent>-50</iBetterDefenderThanPercent>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_FUTURE_LEARNING4</Type>

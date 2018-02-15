@@ -13469,25 +13469,25 @@
             <Button>Art/Interface/Buttons/Promotions/Guardsman.dds</Button>
         </SpellInfo>
         <SpellInfo>
-            <Type>SPELL_HONOR_GUARD</Type>
-            <Description>Honor Guard</Description>
+            <Type>SPELL_TAKE_COVER</Type>
+            <Description>Take Cover</Description>
             <Civilopedia></Civilopedia>
             <bAllowAI>0</bAllowAI>
             <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
             <bHasCasted>1</bHasCasted>
-            <AddPromotionType1>PROMOTION_HONOR_GUARD</AddPromotionType1>
+            <AddPromotionType1>PROMOTION_TAKING_COVER</AddPromotionType1>
             <bBuffCasterOnly>1</bBuffCasterOnly>
             <Effect>EFFECT_STONESKIN</Effect>
             <Sound>AS3D_SPELL_STONESKIN</Sound>
-            <Button>Art/Interface/Buttons/Promotions/Guardsman.dds</Button>
+            <Button>Art/Interface/Buttons/Promotions/ShieldofFaith.dds</Button>
         </SpellInfo>
         <SpellInfo>
-            <Type>SPELL_OFF_DUTY_HONOR</Type>
-            <Description>Don't Guard</Description>
+            <Type>SPELL_RETURN_TO_ACTION</Type>
+            <Description>Return to Action</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
             <Help></Help>
-            <PromotionPrereq1>PROMOTION_HONOR_GUARD</PromotionPrereq1>
+            <PromotionPrereq1>PROMOTION_TAKING_COVER</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
             <UnitClassPrereq>NONE</UnitClassPrereq>
@@ -13516,7 +13516,7 @@
             <AddPromotionType1>NONE</AddPromotionType1>
             <AddPromotionType2>NONE</AddPromotionType2>
             <AddPromotionType3>NONE</AddPromotionType3>
-            <RemovePromotionType1>PROMOTION_HONOR_GUARD</RemovePromotionType1>
+            <RemovePromotionType1>PROMOTION_TAKING_COVER</RemovePromotionType1>
             <RemovePromotionType2>NONE</RemovePromotionType2>
             <RemovePromotionType3>NONE</RemovePromotionType3>
             <bBuffCasterOnly>1</bBuffCasterOnly>
