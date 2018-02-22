@@ -584,7 +584,7 @@
             <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <Era>ERA_CLASSICAL</Era>
-            <FirstFreeUnitClass>UNITCLASS_PRIEST_OF_KILMORPH</FirstFreeUnitClass>
+            <FirstFreeUnitClass>UNITCLASS_DISCIPLE_RUNES_OF_KILMORPH</FirstFreeUnitClass>
             <iFeatureProductionModifier>0</iFeatureProductionModifier>
             <iWorkerSpeedModifier>0</iWorkerSpeedModifier>
             <iTradeRoutes>0</iTradeRoutes>
@@ -1320,7 +1320,7 @@
             <iAdvancedStartCost>100</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <Era>ERA_CLASSICAL</Era>
-            <FirstFreeUnitClass>UNITCLASS_PRIEST_OF_THE_VEIL</FirstFreeUnitClass>
+            <FirstFreeUnitClass>UNITCLASS_DISCIPLE_THE_ASHEN_VEIL</FirstFreeUnitClass>
             <iFeatureProductionModifier>0</iFeatureProductionModifier>
             <iWorkerSpeedModifier>0</iWorkerSpeedModifier>
             <iTradeRoutes>0</iTradeRoutes>
@@ -2659,7 +2659,7 @@
             <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <Era>ERA_CLASSICAL</Era>
-            <FirstFreeUnitClass>UNITCLASS_PRIEST_OF_LEAVES</FirstFreeUnitClass>
+            <FirstFreeUnitClass>UNITCLASS_DISCIPLE_FELLOWSHIP_OF_LEAVES</FirstFreeUnitClass>
             <iFeatureProductionModifier>0</iFeatureProductionModifier>
             <iWorkerSpeedModifier>0</iWorkerSpeedModifier>
             <iTradeRoutes>0</iTradeRoutes>
@@ -2954,7 +2954,7 @@
             <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <Era>ERA_MEDIEVAL</Era>
-            <FirstFreeUnitClass>UNITCLASS_PRIEST_OF_THE_VEIL</FirstFreeUnitClass>
+            <FirstFreeUnitClass>UNITCLASS_DISCIPLE_THE_ASHEN_VEIL</FirstFreeUnitClass>
             <iFeatureProductionModifier>0</iFeatureProductionModifier>
             <iWorkerSpeedModifier>0</iWorkerSpeedModifier>
             <iTradeRoutes>0</iTradeRoutes>
@@ -3765,7 +3765,7 @@
             <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
             <Era>ERA_CLASSICAL</Era>
-            <FirstFreeUnitClass>UNITCLASS_PRIEST_OF_THE_OVERLORDS</FirstFreeUnitClass>
+            <FirstFreeUnitClass>UNITCLASS_DISCIPLE_OCTOPUS_OVERLORDS</FirstFreeUnitClass>
             <iFeatureProductionModifier>0</iFeatureProductionModifier>
             <iWorkerSpeedModifier>0</iWorkerSpeedModifier>
             <iTradeRoutes>0</iTradeRoutes>
