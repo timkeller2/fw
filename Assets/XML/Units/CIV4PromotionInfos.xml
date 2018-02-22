@@ -2041,6 +2041,7 @@
             <Description>TXT_KEY_PROMOTION_DEFENSIVE</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereqOr1>PROMOTION_COMBAT2</PromotionPrereqOr1>
+            <iCombatPercent>10</iCombatPercent>
             <UnitCombats>
                 <UnitCombat>
                     <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>

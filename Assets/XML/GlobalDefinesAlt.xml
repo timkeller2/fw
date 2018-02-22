@@ -481,4 +481,8 @@
 		<DefineName>CITY_GROWTH_MULTIPLIER</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
+	<Define>
+		<DefineName>FORTIFY_MODIFIER_PER_TURN</DefineName>
+		<iDefineIntVal>6</iDefineIntVal>
+	</Define>
 </Civ4Defines>
