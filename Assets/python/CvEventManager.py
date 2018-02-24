@@ -1588,7 +1588,7 @@ class CvEventManager:
 		iGameTurn = CyGame().getGameTurn()
 
 		## Disease, Plague and Posion cured when reborn
-		if unit.isImmortal():
+		if unit.isImmortal() or unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_IMMORTAL')):
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DISEASED'),False)
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_PLAGUED'),False)
 			unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISONED'),False)
