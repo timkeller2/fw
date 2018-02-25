@@ -30,7 +30,7 @@
 			<Description>Build Improved Road</Description>
 			<Help/>
 			<PrereqTech>TECH_EXPLORATION</PrereqTech>
-			<iTime>800</iTime>
+			<iTime>1200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>NONE</ImprovementType>
@@ -104,7 +104,7 @@
 			<Description>Build Improved Farm</Description>
 			<Help/>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-			<iTime>2000</iTime>
+			<iTime>3000</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_IMPROVED_FARM</ImprovementType>
@@ -252,7 +252,7 @@
 			<Description>Build Improved Mine</Description>
 			<Help/>
 			<PrereqTech>TECH_MINING</PrereqTech>
-			<iTime>1600</iTime>
+			<iTime>2400</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_IMPROVED_MINE</ImprovementType>
@@ -381,7 +381,7 @@
 			<Description>Build Improved Lumbermill</Description>
 			<Help/>
 			<PrereqTech>TECH_CRAFTING</PrereqTech>
-			<iTime>3200</iTime>
+			<iTime>4800</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_IMPROVED_LUMBERMILL</ImprovementType>

@@ -21507,7 +21507,7 @@
             <UnitCombats>
             </UnitCombats>
             <Button>Art/Interface/Buttons/Promotions/ShieldofFaith.dds</Button>
-            <iBetterDefenderThanPercent>-50</iBetterDefenderThanPercent>
+            <iBetterDefenderThanPercent>-200</iBetterDefenderThanPercent>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_FUTURE_LEARNING4</Type>
