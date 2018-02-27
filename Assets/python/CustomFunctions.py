@@ -66,7 +66,7 @@ class CustomFunctions:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DEXTEROUS'), True)
 
 			if unit.getGameTurnCreated() < 1 and pPlayer.isHuman():
-				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_NOBILITY'), True)
+				unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_DEFENSIVE'), True)
 						
 			## Dire beasts and dragons add a chance that new living units will start with the Cult of the Dragon promotion...
 			if unit.isAlive():
@@ -173,7 +173,9 @@ class CustomFunctions:
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_COMBAT1'),True)
 		if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PERFECT_SIGHT')):
 			newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY'),True)
-		
+
+		newUnit.changeExperience(pUnit.getLevel(),-1,False,False,False)
+			
 		pUnit.changeExperience(1, -1, False, False, False)
 		pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_FATIGUED'), True)
 		sMsg = str( pUnit.getName() ) + ' has young...'
@@ -815,26 +817,14 @@ class CustomFunctions:
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR2')):
 			i += 2
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR3')):
-			i += 3
-			
-		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1')):
-			i += 1
-		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY2')):
-			i += 1
+			i += 4
 			
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY')):
 			i += 1
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY2')):
 			i += 1
-			
-		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL1')):
-			i += 1
-		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL2')):
-			i += 1
-		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL3')):
-			i += 1
-		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DRILL4')):
-			i += 1
+		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PERFECT_SIGHT')):
+			i += 2
 
 		iExtendedSearch = unit.getFortifyTurns()
 		if iExtendedSearch > int( i / 2 ):
