@@ -83,6 +83,44 @@ class CustomFunctions:
 					CyInterface().addMessage(iPlayer,false,25,sMsg,'',1,'Art/Interface/Buttons/Units/Acheron.dds',ColorTypes(8),unit.getX(),unit.getY(),True,True)
 					CyInterface().addCombatMessage(iPlayer,sMsg)
 
+	def reqRepair(self,caster):
+		pPlot = caster.plot()
+		iGolem = gc.getInfoTypeForString('PROMOTION_GOLEM')
+		iDwarf = gc.getInfoTypeForString('PROMOTION_DWARF')
+		iNaval = gc.getInfoTypeForString('UNITCOMBAT_NAVAL')
+		iSiege = gc.getInfoTypeForString('UNITCOMBAT_SIEGE')
+		for i in range(pPlot.getNumUnits()):
+			pUnit = pPlot.getUnit(i)
+			if (pUnit.getUnitCombatType() == iSiege or pUnit.getUnitCombatType() == iNaval or (pUnit.isHasPromotion(iGolem) and caster.isHasPromotion(iDwarf))):
+				if pUnit.getDamage() > 0:
+					return True
+		return False
+
+	def spellRepair(self,caster,amount):
+		pPlot = caster.plot()
+		iL = caster.getLevel()
+		iNumHealed = 0
+		sMsg = caster.getName() + ' repairs '
+		iGolem = gc.getInfoTypeForString('PROMOTION_GOLEM')
+		iDwarf = gc.getInfoTypeForString('PROMOTION_DWARF')
+		iNaval = gc.getInfoTypeForString('UNITCOMBAT_NAVAL')
+		iSiege = gc.getInfoTypeForString('UNITCOMBAT_SIEGE')
+		for i in range(pPlot.getNumUnits()):
+			pUnit = pPlot.getUnit(i)
+			if (pUnit.getUnitCombatType() == iSiege or pUnit.getUnitCombatType() == iNaval or (pUnit.isHasPromotion(iGolem) and caster.isHasPromotion(iDwarf))) and pUnit.getDamage() > 0:
+				iDefStr = pUnit.baseCombatStr()
+				if iDefStr < 1:
+					iDefStr = 1
+				iMod = ( iL * 10 ) / iDefStr + 5
+				iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
+				pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
+				sMsg = sMsg + pUnit.getName() + ' (' + str(iHealAmount) + '), '
+				iNumHealed = iNumHealed + 1
+				if ( iNumHealed + 1 > iL / 3 ):
+					break
+
+		CyInterface().addMessage(caster.getOwner(),False,25,sMsg,'AS3D_SPELL_REPAIR',1,caster.getButton(),ColorTypes(12),caster.getX(),caster.getY(),True,True)
+					
 	def reqMageArmor(self,caster):
 		pPlot = caster.plot()
 		for i in range(pPlot.getNumUnits()):
@@ -3034,6 +3072,11 @@ class CustomFunctions:
 				## Units with healing touch auto-use it if they can.
 				if pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_CAST_HEALING_TOUCH')) and not pUnit.isHasCasted() and self.reqHeal(pUnit):
 					self.spellFieldMedic(pUnit)
+					pUnit.setHasCasted(True)
+
+				## Units that can repair do.
+				if (pUnit.getUnitClassType() == gc.getInfoTypeForString('UNITCLASS_WORKER') or (pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DWARF')) and pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ENCHANTMENT1')))) and not pUnit.isHasCasted() and self.reqRepair(pUnit):
+					self.spellRepair(pUnit,10)
 					pUnit.setHasCasted(True)
 
 				## Fortified Priests Auto-Buff if they can

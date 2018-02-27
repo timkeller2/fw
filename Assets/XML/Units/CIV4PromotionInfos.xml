@@ -3789,6 +3789,7 @@
         <PromotionInfo>
             <Type>PROMOTION_GOLEM</Type>
             <Description>TXT_KEY_PROMOTION_GOLEM</Description>
+            <Help>[ICON_BULLET]Immune to Injury Damage</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
             <iNeutralHealChange>-5</iNeutralHealChange>

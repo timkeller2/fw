@@ -2354,38 +2354,10 @@ def spellCoronate(caster):
 	cf.changeObjectInt(pCity,'Nobles',1)
 
 def reqRepair(caster):
-	pPlot = caster.plot()
-	iGolem = gc.getInfoTypeForString('PROMOTION_GOLEM')
-	iDwarf = gc.getInfoTypeForString('PROMOTION_DWARF')
-	iNaval = gc.getInfoTypeForString('UNITCOMBAT_NAVAL')
-	iSiege = gc.getInfoTypeForString('UNITCOMBAT_SIEGE')
-	for i in range(pPlot.getNumUnits()):
-		pUnit = pPlot.getUnit(i)
-		if (pUnit.getUnitCombatType() == iSiege or pUnit.getUnitCombatType() == iNaval or (pUnit.isHasPromotion(iGolem) and caster.isHasPromotion(iDwarf))):
-			if pUnit.getDamage() > 0:
-				return True
-	return False
+	return cf.reqRepair(caster)
 
 def spellRepair(caster,amount):
-	pPlot = caster.plot()
-	iL = caster.getLevel()
-	iNumHealed = 0
-	iGolem = gc.getInfoTypeForString('PROMOTION_GOLEM')
-	iDwarf = gc.getInfoTypeForString('PROMOTION_DWARF')
-	iNaval = gc.getInfoTypeForString('UNITCOMBAT_NAVAL')
-	iSiege = gc.getInfoTypeForString('UNITCOMBAT_SIEGE')
-	for i in range(pPlot.getNumUnits()):
-		pUnit = pPlot.getUnit(i)
-		if (pUnit.getUnitCombatType() == iSiege or pUnit.getUnitCombatType() == iNaval or (pUnit.isHasPromotion(iGolem) and caster.isHasPromotion(iDwarf))) and pUnit.getDamage() > 0:
-			iDefStr = pUnit.baseCombatStr()
-			if iDefStr < 1:
-				iDefStr = 1
-			iMod = ( iL * 10 ) / iDefStr + 5
-			iHealAmount = CyGame().getSorenRandNum(iMod, "Healing Touch Amount") + iMod
-			pUnit.changeDamage(-iHealAmount,0) #player doesn't matter - it won't kill
-			iNumHealed = iNumHealed + 1
-			if ( iNumHealed + 1 > 0 ):
-				return
+	cf.spellRepair(caster,amount)
 			
 def reqRessurection(caster):
 	pPlayer = gc.getPlayer(caster.getOwner())
