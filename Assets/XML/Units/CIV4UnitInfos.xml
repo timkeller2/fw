@@ -26227,7 +26227,7 @@
             </TerrainPassableTechs>
             <FeaturePassableTechs>
             </FeaturePassableTechs>
-            <iCombat>3</iCombat>
+            <iCombat>1</iCombat>
             <iCombatLimit>100</iCombatLimit>
             <iAirCombat>0</iAirCombat>
             <iAirCombatLimit>0</iAirCombatLimit>
@@ -26318,7 +26318,7 @@
             </FreePromotions>
             <LeaderPromotion>NONE</LeaderPromotion>
             <iLeaderExperience>0</iLeaderExperience>
-            <iCombatDefense>3</iCombatDefense>
+            <iCombatDefense>1</iCombatDefense>
             <iTier>2</iTier>
             <iWeaponTier>3</iWeaponTier>
             <DamageTypeCombats>
@@ -62888,7 +62888,7 @@
             <PrereqReligion>RELIGION_THE_ASHEN_VEIL</PrereqReligion>
             <PrereqCorporation>NONE</PrereqCorporation>
             <PrereqBuilding>NONE</PrereqBuilding>
-            <PrereqTech>TECH_CORRUPTION_OF_SPIRIT</PrereqTech>
+            <PrereqTech>TECH_INFERNAL_PACT</PrereqTech>
             <TechTypes>
             </TechTypes>
             <BonusType>NONE</BonusType>
@@ -62899,7 +62899,7 @@
             <Flavors>
             </Flavors>
             <iAIWeight>200</iAIWeight>
-            <iCost>180</iCost>
+            <iCost>270</iCost>
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
@@ -71318,7 +71318,7 @@
             <Flavors>
             </Flavors>
             <iAIWeight>200</iAIWeight>
-            <iCost>180</iCost>
+            <iCost>270</iCost>
             <iHurryCostModifier>0</iHurryCostModifier>
             <iAdvancedStartCost>-1</iAdvancedStartCost>
             <iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
