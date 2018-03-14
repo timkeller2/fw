@@ -14542,7 +14542,7 @@
             <iGlobalHurryModifier>0</iGlobalHurryModifier>
             <iExperience>0</iExperience>
             <iGlobalExperience>0</iGlobalExperience>
-            <iFoodKept>20</iFoodKept>
+            <iFoodKept>25</iFoodKept>
             <iAirlift>0</iAirlift>
             <iAirModifier>0</iAirModifier>
             <iAirUnitCapacity>0</iAirUnitCapacity>
@@ -17079,7 +17079,7 @@
             <SpecialBuildingType>NONE</SpecialBuildingType>
             <Description>TXT_KEY_BUILDING_HERBALIST</Description>
             <Civilopedia></Civilopedia>
-            <Strategy></Strategy>
+            <Strategy>[ICON_BULLET]Allows the purchase of various potions, usually in conjunction with other buildings.  The larger the city, the faster the stock will build up. (s)</Strategy>
             <Help></Help>
             <Advisor>ADVISOR_GROWTH</Advisor>
             <ArtDefineTag>ART_DEF_BUILDING_HERBALIST</ArtDefineTag>
@@ -30345,7 +30345,7 @@
             <iGlobalHurryModifier>0</iGlobalHurryModifier>
             <iExperience>0</iExperience>
             <iGlobalExperience>0</iGlobalExperience>
-            <iFoodKept>20</iFoodKept>
+            <iFoodKept>25</iFoodKept>
             <iAirlift>0</iAirlift>
             <iAirModifier>0</iAirModifier>
             <iAirUnitCapacity>0</iAirUnitCapacity>
