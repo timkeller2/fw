@@ -238,7 +238,7 @@
             <SpecialBuildingType>NONE</SpecialBuildingType>
             <Description>TXT_KEY_BUILDING_ALCHEMY_LAB</Description>
             <Civilopedia>TXT_KEY_BUILDING_ALCHEMY_LAB_PEDIA</Civilopedia>
-            <Strategy></Strategy>
+            <Strategy>Allows the purchase of various items, usually in conjunction with other buildings.  The larger the city, the faster the stock will build up.[NEWLINE][NEWLINE]Potions: Enduring Strength 5s, Vampiric Blood Fury 25s, Greater Healing 10s, Heal 10s, Immortality 25s; Items: Boots of Haste 25s</Strategy>
             <Help></Help>
             <Advisor>ADVISOR_SCIENCE</Advisor>
             <ArtDefineTag>ART_DEF_BUILDING_ALCHEMY_LAB</ArtDefineTag>
@@ -17079,7 +17079,7 @@
             <SpecialBuildingType>NONE</SpecialBuildingType>
             <Description>TXT_KEY_BUILDING_HERBALIST</Description>
             <Civilopedia></Civilopedia>
-            <Strategy>[ICON_BULLET]Allows the purchase of various potions, usually in conjunction with other buildings.  The larger the city, the faster the stock will build up. (s)</Strategy>
+            <Strategy>Allows the purchase of various potions, usually in conjunction with other buildings.  The larger the city, the faster the stock will build up.[NEWLINE][NEWLINE]Items: Bandages 4s, Hearty Rations 6s (Smoke House), Extra Rations 6s (Granary), Moderate Healing 9s (Knowledge of the Ether), Regeneration 9s (Sanitation), Minor Immortality 20s (Pagan Temple)</Strategy>
             <Help></Help>
             <Advisor>ADVISOR_GROWTH</Advisor>
             <ArtDefineTag>ART_DEF_BUILDING_HERBALIST</ArtDefineTag>
@@ -19765,7 +19765,7 @@
             <SpecialBuildingType>NONE</SpecialBuildingType>
             <Description>TXT_KEY_BUILDING_MAGE_GUILD</Description>
             <Civilopedia>TXT_KEY_BUILDING_MAGE_GUILD_PEDIA</Civilopedia>
-            <Strategy></Strategy>
+            <Strategy>Allows the purchase of various magical items.  The larger the city, the faster the stock will build up.[NEWLINE][NEWLINE]Scrolls: Magic Missile 3s, Mage Armor 5s, Summon Kikijib 5s, Magic Resistance 5s, Fireball 5s, Flight 12s, Summon Earth Elemental 25s, Lightning Burst 25s, Crush 25s; Items: Spell Staff 25s, Battle Robe 100s</Strategy>
             <Help></Help>
             <Advisor>ADVISOR_MILITARY</Advisor>
             <ArtDefineTag>ART_DEF_BUILDING_MAGE_GUILD</ArtDefineTag>
@@ -43102,7 +43102,7 @@
             <Type>BUILDING_CRAFTSMEN_GUILD</Type>
             <SpecialBuildingType>NONE</SpecialBuildingType>
             <Description>Craftsmen Guild</Description>
-            <Civilopedia>This building allows equipment to be purchased by units.  The supply may be depleted, but replenishes with time based on population.</Civilopedia>
+            <Civilopedia>This building allows equipment to be purchased by units.  The supply may be depleted, but replenishes with time based on population.[NEWLINE][NEWLINE]Items: Throwing Axes 2s, Improved Weapons 6s, Improved Armor 6s, Heavy Weapons 10s, Heavy Armor 10s, Mastercrafted Weapons and Armor 50s each.</Civilopedia>
             <Strategy></Strategy>
             <Help></Help>
             <Advisor>ADVISOR_GROWTH</Advisor>
