@@ -26,6 +26,10 @@ class CustomFunctions:
 
 			if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH1')) == False and unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_WIMPY1')) == False:
 				iTough = CyGame().getSorenRandNum(100, "Toughness")
+				if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_DWARF')):
+					iTough -= 3
+				if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_ELF')):
+					iTough += 3
 				if iTough < 2:
 					unit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_TOUGH5'), True)
 				if iTough < 6:

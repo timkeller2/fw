@@ -104,7 +104,7 @@
 		<VictoryInfo>
 			<Type>VICTORY_RELIGIOUS</Type>
 			<Description>TXT_KEY_VICTORY_RELIGIOUS</Description>
-			<Civilopedia>TXT_KEY_VICTORY_CULTURAL_PEDIA</Civilopedia>
+			<Civilopedia>[ICON_BULLET]Minimum of 5 cities</Civilopedia>
 			<bTargetScore>0</bTargetScore>
 			<bEndScore>0</bEndScore>
 			<bConquest>0</bConquest>

@@ -540,7 +540,7 @@
 			<Type>TRAIT_BARBARIAN</Type>
 			<Description>TXT_KEY_TRAIT_BARBARIAN</Description>
 			<ShortDescription>TXT_KEY_TRAIT_BARBARIAN_SHORT</ShortDescription>
-			<Help/>
+			<Help>[NEWLINE][ICON_BULLET]Until score leads by 50%</Help>
 			<iHealth>0</iHealth>
 			<iHappiness>0</iHappiness>
 			<iMaxAnarchy>-1</iMaxAnarchy>
