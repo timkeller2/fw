@@ -1836,6 +1836,7 @@
             <Description>TXT_KEY_PROMOTION_ELF</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
+            <iCombatPercent>-5</iCombatPercent>
             <FeatureAttacks>
                 <FeatureAttack>
                     <FeatureType>FEATURE_FOREST</FeatureType>
@@ -1868,6 +1869,7 @@
             </FeatureDoubleMoves>
             <bGraphicalOnly>1</bGraphicalOnly>
             <Button>Art/Interface/Buttons/Promotions/Elf.dds</Button>
+            <iCombatPercentDefense>-5</iCombatPercentDefense>
             <bRace>1</bRace>
             <iWorkRateModify>-25</iWorkRateModify>
             <UnitArtStyleType>UNIT_ARTSTYLE_DARK_ELF</UnitArtStyleType>
@@ -2656,6 +2658,7 @@
             <Description>TXT_KEY_PROMOTION_ELF</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <TechPrereq>TECH_NEVER</TechPrereq>
+            <iCombatPercent>-10</iCombatPercent>
             <FeatureAttacks>
                 <FeatureAttack>
                     <FeatureType>FEATURE_FOREST</FeatureType>
@@ -2687,6 +2690,7 @@
                 </FeatureDoubleMove>
             </FeatureDoubleMoves>
             <Button>Art/Interface/Buttons/Promotions/Elf.dds</Button>
+            <iCombatPercentDefense>-10</iCombatPercentDefense>
             <bRace>1</bRace>
             <iWorkRateModify>-25</iWorkRateModify>
             <UnitArtStyleType>UNIT_ARTSTYLE_ELF</UnitArtStyleType>
