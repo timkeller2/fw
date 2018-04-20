@@ -1282,44 +1282,42 @@ def spellForTheHorde(caster):
 	pPlayer = PyPlayer(caster.getOwner())
 	bPlayer = PyPlayer(gc.getBARBARIAN_PLAYER())
 	iEnrage = bPlayer.getNumUnits()
-	
-	for pUnit in pPlayer.getUnitList():
-		if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG')):
-			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG'),True)
-			iEnrage -= 1
-			if iEnrage < 1:
-				return
 
-	for pUnit in pPlayer.getUnitList():
-		if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1')):
-			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
-			iEnrage -= 1
-			if iEnrage < 1:
-				return
+	iCheck = cf.getObjectInt(caster,'CheckForTheHorde')
+	if CyGame().getGameTurn() == iCheck:
+		for pUnit in pPlayer.getUnitList():
+			if pUnit.baseCombatStr() > 0:
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY'),True)
+		
+		for pUnit in pPlayer.getUnitList():
+			if pUnit.baseCombatStr() > 0:
+				if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG')):
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_STRONG'),True)
+					iEnrage -= 1
+					if iEnrage < 1:
+						return
 
-	for pUnit in pPlayer.getUnitList():
-		pUnit.changeExperience(5, -1, False, False, False)
-		iEnrage -= 1
-		if iEnrage < 1:
-			return
+		for pUnit in pPlayer.getUnitList():
+			if pUnit.baseCombatStr() > 0:
+				if not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1')):
+					pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_MOBILITY1'),True)
+					iEnrage -= 1
+					if iEnrage < 1:
+						return
 
-	# iCreep = gc.getInfoTypeForString('PROMOTION_CREEP')
-	# iHero = gc.getInfoTypeForString('PROMOTION_HERO')
-	# iOrc = gc.getInfoTypeForString('PROMOTION_ORC')
-	# py = PyPlayer(gc.getBARBARIAN_PLAYER())
-	# for pUnit in py.getUnitList():
-		# if (pUnit.getRace() == iOrc and pUnit.isHasPromotion(iHero) == False and pUnit.isHasPromotion(iCreep) == False and pUnit.baseCombatStr() < 8):
-			# if CyGame().getSorenRandNum(100, "Bob") < 50:
-				# pPlot = pUnit.plot()
-				# for i in range(pPlot.getNumUnits(), -1, -1):
-					# pNewPlot = -1
-					# pLoopUnit = pPlot.getUnit(i)
-					# if pLoopUnit.isHiddenNationality():
-						# pNewPlot = cf.findClearPlot(pLoopUnit, -1)
-						# if pNewPlot != -1:
-							# pLoopUnit.setXY(pNewPlot.getX(), pNewPlot.getY(), false, true, true)
-				# newUnit = pPlayer.initUnit(pUnit.getUnitType(), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-				# newUnit.convert(pUnit)
+		for pUnit in pPlayer.getUnitList():
+			if pUnit.baseCombatStr() > 0:
+				pUnit.changeExperience(5, -1, False, False, False)
+				iEnrage -= 1
+				if iEnrage < 1:
+					return
+	else:
+		sMsg = str(iEnrage) + ' barbarians units exist in the world waiting to cheer your forces on!  Call for the Horde again to make the seize the day!'
+		CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,caster.getButton(),ColorTypes(8),caster.getX(),caster.getY(),True,True)
+		CyInterface().addCombatMessage(caster.getOwner(),sMsg)
+		cf.setObjectInt(caster,'CheckForTheHorde',CyGame().getGameTurn())
+		caster.setHasCasted(False)
+
 
 def reqFormWolfPack(caster):
 	pPlot = caster.plot()
