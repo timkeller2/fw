@@ -1281,6 +1281,7 @@ def reqForTheHorde(caster):
 def spellForTheHorde(caster):
 	pPlayer = PyPlayer(caster.getOwner())
 	bPlayer = PyPlayer(gc.getBARBARIAN_PLAYER())
+	fPlayer = gc.getPlayer(caster.getOwner())
 	iEnrage = bPlayer.getNumUnits()
 
 	iCheck = cf.getObjectInt(caster,'CheckForTheHorde')
@@ -1317,7 +1318,7 @@ def spellForTheHorde(caster):
 		CyInterface().addCombatMessage(caster.getOwner(),sMsg)
 		cf.setObjectInt(caster,'CheckForTheHorde',CyGame().getGameTurn())
 		caster.setHasCasted(False)
-		pPlayer.setFeatAccomplished(FeatTypes.FEAT_GLOBAL_SPELL, False)
+		fPlayer.setFeatAccomplished(FeatTypes.FEAT_GLOBAL_SPELL, False)
 
 
 def reqFormWolfPack(caster):
