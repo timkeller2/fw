@@ -3397,11 +3397,13 @@ def spellVeilOfNight(caster):
 
 					# continue
 
-	iHiddenNationality = gc.getInfoTypeForString('PROMOTION_POISON_DAGGER')
+	iHiddenNationality = gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')
 	py = PyPlayer(caster.getOwner())
 	for pUnit in py.getUnitList():
-		if pUnit.baseCombatStr() > 0 and pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_RECON'):
+		if pUnit.baseCombatStr() > 0:
 			pUnit.setHasPromotion(iHiddenNationality, True)
+			if pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_RECON'):
+				pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_POISON_DAGGER'), True)
 
 def reqVitalize(caster):
 	pPlot = caster.plot()
