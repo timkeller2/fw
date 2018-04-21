@@ -7161,9 +7161,9 @@
         <SpellInfo>
             <Type>SPELL_DIPLOMACY</Type>
             <Description>Diplomacy</Description>
-            <Civilopedia>When using diplomacy, non-living units cost double, recon units cost double and loyal units cost double.  The more nobility promotions you have and the stronger your stack, the more chance diplomacy will work.  The enemy unit is less likely to join if he has allied units within five spaces.  Your noble may only hire units that have (level+str) equal to or less than his.</Civilopedia>
+            <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Attempt to hire an enemy unit equal or lower level than yourself for 15gp per (str+level).  When using diplomacy, non-living, recon, animal, beast and loyal units cost double.  The more nobility promotions you have and the stronger your stack, the more chance diplomacy will work.  The enemy unit is less likely to join if he has allied units within five spaces.  Your noble may only hire units that have (level+str) equal to or less than his.</Help>
+            <Help>[ICON_BULLET]Attempt to hire an enemy unit equal or lower level than yourself for 15gp per (str+level).[NEWLINE][ICON_BULLET]Non-living, recon, animal, beast and loyal units cost double.[NEWLINE][ICON_BULLET]The more nobility promotions you have and the stronger your stack, the more chance diplomacy will work.[NEWLINE][ICON_BULLET]The enemy unit is less likely to join if he has allied units within five spaces.[NEWLINE][ICON_BULLET]Units with 3 other units of the same civ on the tile are immune to diplomacy.[NEWLINE][ICON_BULLET]You must have at least a 20% chance in order to attempt.</Help>
             <PromotionPrereq1>PROMOTION_NOBILITY</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
@@ -7216,7 +7216,7 @@
             <bRemoveHasCasted>0</bRemoveHasCasted>
             <bSacrificeCaster>0</bSacrificeCaster>
             <iChangePopulation>0</iChangePopulation>
-            <iCost>5</iCost>
+            <iCost>0</iCost>
             <iImmobileTurns>0</iImmobileTurns>
             <iMiscastChance>0</iMiscastChance>
             <PyMiscast></PyMiscast>

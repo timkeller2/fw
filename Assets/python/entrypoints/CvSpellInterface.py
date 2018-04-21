@@ -2437,6 +2437,10 @@ def reqRevelry(caster):
 def spellRevelry(caster):
 	pPlayer = gc.getPlayer(caster.getOwner())
 	pPlayer.changeGoldenAgeTurns(CyGame().goldenAgeLength() * 2)
+	py = PyPlayer(caster.getOwner())
+	for pUnit in py.getUnitList():
+		if pUnit.baseCombatStr() > 0:
+			pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_BLESSED'), True)
 
 def reqRevelation(caster):
 	pPlayer = gc.getPlayer(caster.getOwner())
@@ -4528,6 +4532,7 @@ def spellDiplomacy(caster):
 
 	# Calculate Enemy Support
 	iSupport = {}
+	iStack = {}
 	for iiX in range(iX-5, iX+6, 1):
 		for iiY in range(iY-5, iY+6, 1):
 			pPlot = CyMap().plot(iiX,iiY)
@@ -4539,6 +4544,7 @@ def spellDiplomacy(caster):
 						iSupport[pUnit.getOwner()] += iWill
 						if iiX == iX and iiY == iY:
 							iSupport[pUnit.getOwner()] += iWill
+							iStack[pUnit.getOwner()] += 1
 					else:
 						iSupport[pUnit.getOwner()] = iWill
 
@@ -4589,7 +4595,7 @@ def spellDiplomacy(caster):
 					sDip = pUnit.getName() + ': Diplomacy: '+str(iL)+' Dif: ' + str(iDif) + ' Potential Offer: ' + str( iValue * 15 ) + ' Enemy Help: ' + str( iSupport[pUnit.getOwner()] ) + ' Chance: ' + str( iChance ) + ' Decision: ' + str( iWeight ) + '...'
 					CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
-					if iWeight > iBestValue and iChance > 14 and iValue * 15 < pPlayer.getGold() and iValue > 0 and pUnit.getLevel() + pUnit.baseCombatStr() <= caster.getLevel() + caster.baseCombatStr() and CyMap().plot(iX,iY).getNumUnits() < 4 and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE'):
+					if iWeight > iBestValue and iChance > 19 and iValue * 15 < pPlayer.getGold() and iValue > 0 and pUnit.getLevel() + pUnit.baseCombatStr() <= caster.getLevel() + caster.baseCombatStr() and iStack[pUnit.getOwner()] < 4 and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE'):
 						iBestValue = iValue
 						iBestWeight = iWeight
 						iBestChance = iChance
