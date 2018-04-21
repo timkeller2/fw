@@ -4566,7 +4566,7 @@
             <Type>SPELL_VEIL_OF_NIGHT</Type>
             <Description>TXT_KEY_SPELL_VEIL_OF_NIGHT</Description>
             <Civilopedia>TXT_KEY_SPELL_PLACEHOLDER_PEDIA</Civilopedia>
-            <Help>TXT_KEY_SPELL_VEIL_OF_NIGHT_HELP</Help>
+            <Help>[ICON_BULLET]Give each recon unit a single use poisoned dagger.</Help>
             <CivilizationPrereq>CIVILIZATION_SVARTALFAR</CivilizationPrereq>
             <bAllowAI>1</bAllowAI>
             <bGlobal>1</bGlobal>

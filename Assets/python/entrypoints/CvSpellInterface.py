@@ -1312,7 +1312,7 @@ def spellForTheHorde(caster):
 				if iEnrage < 1:
 					return
 	else:
-		sMsg = str(iEnrage) + ' barbarians units exist in the world waiting to cheer your forces on!  Call for the Horde again to make the seize the day!'
+		sMsg = str(iEnrage) + ' barbarians units exist in the world waiting to urge the horde on!  Call for the Horde again to seize the day!'
 		CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,caster.getButton(),ColorTypes(8),caster.getX(),caster.getY(),True,True)
 		CyInterface().addCombatMessage(caster.getOwner(),sMsg)
 		cf.setObjectInt(caster,'CheckForTheHorde',CyGame().getGameTurn())
@@ -3375,10 +3375,32 @@ def reqVeilOfNight(caster):
 	return True
 
 def spellVeilOfNight(caster):
-	iHiddenNationality = gc.getInfoTypeForString('PROMOTION_HIDDEN_NATIONALITY')
+	# Treachery
+	# tPlayer = gc.getPlayer(caster.getOwner())
+	# pCity = tPlayer.getCapitalCity()
+	# for iPlayer in range(gc.getMAX_PLAYERS()):
+		# pPlayer = gc.getPlayer(iPlayer)
+		# if pPlayer.isAlive() and iPlayer != caster.getOwner():
+			# for pyUnit in PyPlayer(iPlayer).getUnitList() :
+				# pUnit = pyUnit.GetUy()
+				# if pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_DISCIPLE') and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_LOYALTY')) and not pUnit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_HERO')):
+					# sMsg = 'In a move of utter treachery ' + pUnit.getName() + ' leaves the service of ' + pPlayer.getName() + ' and joins ' + tPlayer.getName() + '!'
+					# for lPlayer in range(gc.getMAX_PLAYERS()):
+						# pPlayer = gc.getPlayer(iPlayer)
+						# if pPlayer.isAlive():
+							# py = PyPlayer(iPlayer)
+							# CyInterface().addMessage(iPlayer,true,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
+
+
+					# newUnit = pPlayer.initUnit(pUnit.getUnitType(), pCity.getX(), pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+					# newUnit.convert(pUnit)
+
+					# continue
+
+	iHiddenNationality = gc.getInfoTypeForString('PROMOTION_POISON_DAGGER')
 	py = PyPlayer(caster.getOwner())
 	for pUnit in py.getUnitList():
-		if pUnit.baseCombatStr() > 0:
+		if pUnit.baseCombatStr() > 0 and pUnit.getUnitCombatType() == gc.getInfoTypeForString('UNITCOMBAT_RECON'):
 			pUnit.setHasPromotion(iHiddenNationality, True)
 
 def reqVitalize(caster):
@@ -4565,7 +4587,7 @@ def spellDiplomacy(caster):
 					sDip = pUnit.getName() + ': Diplomacy: '+str(iL)+' Dif: ' + str(iDif) + ' Potential Offer: ' + str( iValue * 15 ) + ' Enemy Help: ' + str( iSupport[pUnit.getOwner()] ) + ' Chance: ' + str( iChance ) + ' Decision: ' + str( iWeight ) + '...'
 					CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
-					if iWeight > iBestValue and iChance > 9 and iValue * 15 < pPlayer.getGold() and iValue > 0 and pUnit.getLevel() + pUnit.baseCombatStr() <= caster.getLevel() + caster.baseCombatStr() and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE'):
+					if iWeight > iBestValue and iChance > 14 and iValue * 15 < pPlayer.getGold() and iValue > 0 and pUnit.getLevel() + pUnit.baseCombatStr() <= caster.getLevel() + caster.baseCombatStr() and CyMap().plot(iX,iY).getNumUnits() < 4 and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE'):
 						iBestValue = iValue
 						iBestWeight = iWeight
 						iBestChance = iChance
