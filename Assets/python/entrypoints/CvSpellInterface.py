@@ -1317,6 +1317,7 @@ def spellForTheHorde(caster):
 		CyInterface().addCombatMessage(caster.getOwner(),sMsg)
 		cf.setObjectInt(caster,'CheckForTheHorde',CyGame().getGameTurn())
 		caster.setHasCasted(False)
+		pPlayer.setFeatAccomplished(FeatTypes.FEAT_GLOBAL_SPELL, False)
 
 
 def reqFormWolfPack(caster):
