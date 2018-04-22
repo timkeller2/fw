@@ -4933,7 +4933,7 @@
             <Help></Help>
             <ArtDefineTag>ART_DEF_IMPROVEMENT_PIRATE_COVE</ArtDefineTag>
             <YieldChanges>
-                <iYieldChange>1</iYieldChange>
+                <iYieldChange>0</iYieldChange>
                 <iYieldChange>0</iYieldChange>
                 <iYieldChange>1</iYieldChange>
             </YieldChanges>
@@ -4956,7 +4956,7 @@
             <iTilesPerGoody>0</iTilesPerGoody>
             <iGoodyRange>0</iGoodyRange>
             <iFeatureGrowth>0</iFeatureGrowth>
-            <iUpgradeTime>20</iUpgradeTime>
+            <iUpgradeTime>30</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
             <iDefenseModifier>10</iDefenseModifier>
             <iHappiness>0</iHappiness>
@@ -4999,7 +4999,7 @@
             <ArtDefineTag>ART_DEF_IMPROVEMENT_PIRATE_COVE</ArtDefineTag>
             <YieldChanges>
                 <iYieldChange>1</iYieldChange>
-                <iYieldChange>1</iYieldChange>
+                <iYieldChange>0</iYieldChange>
                 <iYieldChange>2</iYieldChange>
             </YieldChanges>
             <bActsAsCity>0</bActsAsCity>
@@ -5021,7 +5021,7 @@
             <iTilesPerGoody>0</iTilesPerGoody>
             <iGoodyRange>0</iGoodyRange>
             <iFeatureGrowth>0</iFeatureGrowth>
-            <iUpgradeTime>40</iUpgradeTime>
+            <iUpgradeTime>60</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
             <iDefenseModifier>20</iDefenseModifier>
             <iHappiness>0</iHappiness>
@@ -5064,8 +5064,8 @@
             <ArtDefineTag>ART_DEF_IMPROVEMENT_PIRATE_COVE</ArtDefineTag>
             <YieldChanges>
                 <iYieldChange>2</iYieldChange>
-                <iYieldChange>2</iYieldChange>
-                <iYieldChange>2</iYieldChange>
+                <iYieldChange>1</iYieldChange>
+                <iYieldChange>3</iYieldChange>
             </YieldChanges>
             <bActsAsCity>0</bActsAsCity>
             <bHillsMakesValid>0</bHillsMakesValid>

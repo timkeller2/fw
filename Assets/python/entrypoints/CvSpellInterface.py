@@ -4530,7 +4530,7 @@ def spellDiplomacy(caster):
 	eTeam = gc.getTeam(iTeam)
 
 	# Determine Diplomacy Strength
-	iL = cf.iNoble(caster,1) 
+	iL = cf.iNoble(caster,1)
 
 	# Calculate Enemy Support
 	iSupport = {}
