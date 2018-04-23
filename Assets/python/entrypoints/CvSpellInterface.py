@@ -4597,7 +4597,7 @@ def spellDiplomacy(caster):
 					sDip = pUnit.getName() + ': Diplomacy: '+str(iL)+' Dif: ' + str(iDif) + ' Potential Offer: ' + str( iValue * 15 ) + ' Enemy Help: ' + str( iSupport[pUnit.getOwner()] ) + ' Chance: ' + str( iChance ) + ' Decision: ' + str( iWeight ) + '...'
 					CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
-					if iWeight > iBestValue and iChance > 19 and iValue * 15 < pPlayer.getGold() and iValue > 0 and pUnit.getLevel() + pUnit.baseCombatStr() <= caster.getLevel() + caster.baseCombatStr() and iStack[pUnit.getOwner()] < 4 and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE'):
+					if iWeight > iBestValue and iChance > 19 and iValue * 15 < pPlayer.getGold() and iValue > 0 and pUnit.getLevel() + pUnit.baseCombatStr() <= caster.getLevel() + caster.baseCombatStr() and iStack[pUnit.getOwner()] < 4 and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
 						iBestValue = iValue
 						iBestWeight = iWeight
 						iBestChance = iChance

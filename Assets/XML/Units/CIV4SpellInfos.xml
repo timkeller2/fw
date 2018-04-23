@@ -7163,7 +7163,7 @@
             <Description>Diplomacy</Description>
             <Civilopedia></Civilopedia>
             <Strategy>NONE</Strategy>
-            <Help>[ICON_BULLET]Attempt to hire an enemy unit equal or lower level than yourself for 15gp per (str+level).[NEWLINE][ICON_BULLET]Non-living, recon, animal, beast and loyal units cost double, hero units quadruple.[NEWLINE][ICON_BULLET]The more nobility promotions (+1 each) you have and the stronger your unit (+1/2 str) and stack (+1/7 str), the more chance diplomacy will work (vs enemy str+lev+str of all allies within 5 tiles).[NEWLINE][ICON_BULLET]Units with 3 other units of the same civ on the tile are immune to diplomacy.[NEWLINE][ICON_BULLET]You must have at least a 20% chance in order to attempt.</Help>
+            <Help>[ICON_BULLET]Attempt to hire an enemy unit equal or lower level than yourself for 15gp per (str+level).[NEWLINE][ICON_BULLET]Non-living, recon, beast and loyal units cost double, hero units quadruple.[NEWLINE][ICON_BULLET]The more nobility promotions (+1 each) you have and the stronger your unit (+1/2 str) and stack (+1/7 str), the more chance diplomacy will work (vs enemy str+lev+str of all allies within 5 tiles).[NEWLINE][ICON_BULLET]Units with 3 other units of the same civ on the tile are immune to diplomacy.[NEWLINE][ICON_BULLET]You must have at least a 20% chance in order to attempt.[NEWLINE][ICON_BULLET]Animal units are immune to diplomacy.</Help>
             <PromotionPrereq1>PROMOTION_NOBILITY</PromotionPrereq1>
             <PromotionPrereq2>NONE</PromotionPrereq2>
             <UnitPrereq>NONE</UnitPrereq>
