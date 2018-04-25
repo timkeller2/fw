@@ -2334,11 +2334,11 @@ def spellReligiousFervor(caster):
 		newUnit.changeExperience(iCount, -1, False, False, False)
 		newUnit.setReligion(iReligion)
 
-def reqCoronate(caster):
+def reqCoronate(caster,sProm):
 	pPlot = caster.plot()
 	pCity = pPlot.getPlotCity()
 	iPlayer = caster.getOwner()
-	if caster.isHasPromotion(gc.getInfoTypeForString('PROMOTION_NOBILITY')):
+	if caster.isHasPromotion(gc.getInfoTypeForString(sProm)):
 		return False
 	if pCity.getCulture(iPlayer) < 1000:
 		return False

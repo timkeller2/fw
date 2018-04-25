@@ -13672,7 +13672,7 @@
         </SpellInfo>
         <SpellInfo>
             <Type>SPELL_CORONATE</Type>
-            <Description>Add this unit to the Nobility</Description>
+            <Description>Coronate as Prince</Description>
             <Help>Cities with enough culture may add a unit to the nobility.  This also occurs at 1000, 4000, 9000, 16000, 25000, 36000 and 49000 culture.</Help>
             <bAllowAI>1</bAllowAI>
             <iAIWeightWar>50</iAIWeightWar>
@@ -13684,7 +13684,45 @@
             <bBuffCasterOnly>1</bBuffCasterOnly>
             <iCost>100</iCost>
             <PyResult>spellCoronate(pCaster)</PyResult>
-            <PyRequirement>reqCoronate(pCaster)</PyRequirement>
+            <PyRequirement>reqCoronate(pCaster,'PROMOTION_NOBILITY')</PyRequirement>
+            <Effect>EFFECT_SWORDS_SPARKS</Effect>
+            <Sound>AS3D_SPELL_BLESS</Sound>
+            <Button>Art/Interface/Buttons/Civics/Socialorder.dds</Button>
+        </SpellInfo>
+        <SpellInfo>
+            <Type>SPELL_CORONATE_ESTATES</Type>
+            <Description>Appoint as Administrator</Description>
+            <Help>Cities with enough culture may add a unit to the nobility.  This also occurs at 1000, 4000, 9000, 16000, 25000, 36000 and 49000 culture.</Help>
+            <bAllowAI>1</bAllowAI>
+            <iAIWeightWar>50</iAIWeightWar>
+            <bInBordersOnly>1</bInBordersOnly>
+            <bInCityOnly>1</bInCityOnly>
+            <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <AddPromotionType1>PROMOTION_ESTATES1</AddPromotionType1>
+            <bBuffCasterOnly>1</bBuffCasterOnly>
+            <iCost>10</iCost>
+            <PyResult>spellCoronate(pCaster)</PyResult>
+            <PyRequirement>reqCoronate(pCaster,'PROMOTION_ESTATES1')</PyRequirement>
+            <Effect>EFFECT_SWORDS_SPARKS</Effect>
+            <Sound>AS3D_SPELL_BLESS</Sound>
+            <Button>Art/Interface/Buttons/Civics/Socialorder.dds</Button>
+        </SpellInfo>
+        <SpellInfo>
+            <Type>SPELL_CORONATE</Type>
+            <Description>Appoint as Governor</Description>
+            <Help>Cities with enough culture may add a unit to the nobility.  This also occurs at 1000, 4000, 9000, 16000, 25000, 36000 and 49000 culture.</Help>
+            <bAllowAI>1</bAllowAI>
+            <iAIWeightWar>50</iAIWeightWar>
+            <bInBordersOnly>1</bInBordersOnly>
+            <bInCityOnly>1</bInCityOnly>
+            <bDisplayWhenDisabled>0</bDisplayWhenDisabled>
+            <bHasCasted>1</bHasCasted>
+            <AddPromotionType1>PROMOTION_GOVERNOR1</AddPromotionType1>
+            <bBuffCasterOnly>1</bBuffCasterOnly>
+            <iCost>25</iCost>
+            <PyResult>spellCoronate(pCaster)</PyResult>
+            <PyRequirement>reqCoronate(pCaster,'PROMOTION_GOVERNOR1')</PyRequirement>
             <Effect>EFFECT_SWORDS_SPARKS</Effect>
             <Sound>AS3D_SPELL_BLESS</Sound>
             <Button>Art/Interface/Buttons/Civics/Socialorder.dds</Button>
