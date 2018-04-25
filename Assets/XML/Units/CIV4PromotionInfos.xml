@@ -18759,7 +18759,7 @@
             <iBetterDefenderThanPercent>0</iBetterDefenderThanPercent>
             <iCasterResistModify>0</iCasterResistModify>
             <iCombatCapturePercent>0</iCombatCapturePercent>
-            <iCombatHealPercent>10</iCombatHealPercent>
+            <iCombatHealPercent>0</iCombatHealPercent>
             <iCombatPercentDefense>0</iCombatPercentDefense>
             <iCombatPercentGlobalCounter>0</iCombatPercentGlobalCounter>
             <iCombatPercentInBorders>0</iCombatPercentInBorders>

@@ -2892,11 +2892,11 @@ class CustomFunctions:
 			
 			iThisPlotTrain = 0
 			iThisPlotTrainAnimal = 0
-			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_TOWER'):
+			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_TOWER') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_PIRATE_COVE'):
 				iThisPlotTrain = 1
-			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_FORT'):
+			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_FORT') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_PIRATE_HARBOR'):
 				iThisPlotTrain = 2
-			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CASTLE'):
+			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CASTLE') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_PIRATE_PORT'):
 				iThisPlotTrain = 4
 			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CITADEL'):
 				iThisPlotTrain = 8

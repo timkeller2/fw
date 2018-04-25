@@ -4930,7 +4930,7 @@
             <Type>IMPROVEMENT_PIRATE_COVE</Type>
             <Description>TXT_KEY_IMPROVEMENT_PIRATE_COVE</Description>
             <Civilopedia>TXT_KEY_IMPROVEMENT_PIRATE_COVE_PEDIA</Civilopedia>
-            <Help></Help>
+            <Help>[ICON_BULLET]One unit may train in the cove increasing their residual xp gain from 4% to 10%!</Help>
             <ArtDefineTag>ART_DEF_IMPROVEMENT_PIRATE_COVE</ArtDefineTag>
             <YieldChanges>
                 <iYieldChange>0</iYieldChange>
@@ -4981,9 +4981,9 @@
             <bUnique>0</bUnique>
             <iAppearanceProbability>0</iAppearanceProbability>
             <iHealRateChange>0</iHealRateChange>
-            <iRange>0</iRange>
-            <iRangeDefenseModifier>0</iRangeDefenseModifier>
-            <iVisibilityChange>0</iVisibilityChange>
+            <iRange>1</iRange>
+            <iRangeDefenseModifier>5</iRangeDefenseModifier>
+            <iVisibilityChange>1</iVisibilityChange>
             <BonusConvert>NONE</BonusConvert>
             <FeatureUpgrade>NONE</FeatureUpgrade>
             <PrereqCivilization>NONE</PrereqCivilization>
@@ -4995,7 +4995,7 @@
             <Type>IMPROVEMENT_PIRATE_HARBOR</Type>
             <Description>TXT_KEY_IMPROVEMENT_PIRATE_HARBOR</Description>
             <Civilopedia>TXT_KEY_IMPROVEMENT_PIRATE_COVE_PEDIA</Civilopedia>
-            <Help></Help>
+            <Help>[ICON_BULLET]Two units may train in the harbor increasing their residual xp gain from 4% to 10%!</Help>
             <ArtDefineTag>ART_DEF_IMPROVEMENT_PIRATE_COVE</ArtDefineTag>
             <YieldChanges>
                 <iYieldChange>1</iYieldChange>
@@ -5046,9 +5046,9 @@
             <bUnique>0</bUnique>
             <iAppearanceProbability>0</iAppearanceProbability>
             <iHealRateChange>10</iHealRateChange>
-            <iRange>1</iRange>
-            <iRangeDefenseModifier>5</iRangeDefenseModifier>
-            <iVisibilityChange>0</iVisibilityChange>
+            <iRange>2</iRange>
+            <iRangeDefenseModifier>10</iRangeDefenseModifier>
+            <iVisibilityChange>1</iVisibilityChange>
             <BonusConvert>NONE</BonusConvert>
             <FeatureUpgrade>NONE</FeatureUpgrade>
             <PrereqCivilization>NONE</PrereqCivilization>
@@ -5060,7 +5060,7 @@
             <Type>IMPROVEMENT_PIRATE_PORT</Type>
             <Description>TXT_KEY_IMPROVEMENT_PIRATE_PORT</Description>
             <Civilopedia>TXT_KEY_IMPROVEMENT_PIRATE_COVE_PEDIA</Civilopedia>
-            <Help></Help>
+            <Help>[ICON_BULLET]Four units may train in the port increasing their residual xp gain from 4% to 10%!</Help>
             <ArtDefineTag>ART_DEF_IMPROVEMENT_PIRATE_COVE</ArtDefineTag>
             <YieldChanges>
                 <iYieldChange>2</iYieldChange>
@@ -5111,9 +5111,9 @@
             <bUnique>0</bUnique>
             <iAppearanceProbability>0</iAppearanceProbability>
             <iHealRateChange>20</iHealRateChange>
-            <iRange>2</iRange>
-            <iRangeDefenseModifier>10</iRangeDefenseModifier>
-            <iVisibilityChange>0</iVisibilityChange>
+            <iRange>3</iRange>
+            <iRangeDefenseModifier>20</iRangeDefenseModifier>
+            <iVisibilityChange>2</iVisibilityChange>
             <BonusConvert>NONE</BonusConvert>
             <FeatureUpgrade>NONE</FeatureUpgrade>
             <PrereqCivilization>NONE</PrereqCivilization>
