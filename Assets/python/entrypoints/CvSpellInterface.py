@@ -1887,6 +1887,29 @@ def spellPillarofFire(caster):
 					pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SMOKE'))
 		CyEngine().triggerEffect(gc.getInfoTypeForString('EFFECT_PILLAR_OF_FIRE'),pBestPlot.getPoint())
 
+def reqUnderwaterMine(caster):
+	pPlot = caster.plot()
+	iPirateCove = gc.getInfoTypeForString('IMPROVEMENT_UNDERWATER_MINE')
+	iCoast = gc.getInfoTypeForString('TERRAIN_COAST')
+	if pPlot.getOwner() != caster.getOwner():
+		return False
+	if pPlot.getTerrainType() != iCoast:
+		return False
+	if pPlot.getImprovementType() != -1:
+		return False
+	if pPlot.getBonusType(-1) != -1:
+		return False
+	iX = caster.getX()
+	iY = caster.getY()
+	for iiX in range(iX-1, iX+2, 1):
+		for iiY in range(iY-1, iY+2, 1):
+			pPlot = CyMap().plot(iiX,iiY)
+			if not pPlot.isNone():
+				iImprovement = pPlot.getImprovementType()
+				if iImprovement == iPirateCove and pPlot.getTerrainType() == iCoast:
+					return False
+	return True
+
 def reqPirateCove(caster):
 	pPlot = caster.plot()
 	iPirateCove = gc.getInfoTypeForString('IMPROVEMENT_PIRATE_COVE')

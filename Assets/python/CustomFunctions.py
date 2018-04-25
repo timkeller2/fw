@@ -2892,13 +2892,13 @@ class CustomFunctions:
 			
 			iThisPlotTrain = 0
 			iThisPlotTrainAnimal = 0
-			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_TOWER') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_PIRATE_COVE'):
+			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_TOWER'):
 				iThisPlotTrain = 1
-			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_FORT') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_PIRATE_HARBOR'):
+			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_FORT') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_PIRATE_COVE'):
 				iThisPlotTrain = 2
-			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CASTLE') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_PIRATE_PORT'):
+			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CASTLE') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_PIRATE_HARBOR'):
 				iThisPlotTrain = 4
-			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CITADEL'):
+			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CITADEL') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_PIRATE_PORT'):
 				iThisPlotTrain = 8
 			if pPlot.getFeatureType() == iJungle:
 				iThisPlotTrainAnimal = 3
