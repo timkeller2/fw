@@ -6261,7 +6261,7 @@
             <iFeatureGrowth>0</iFeatureGrowth>
             <iUpgradeTime>0</iUpgradeTime>
             <iAirBombDefense>0</iAirBombDefense>
-            <iDefenseModifier>15</iDefenseModifier>
+            <iDefenseModifier>10</iDefenseModifier>
             <iHappiness>0</iHappiness>
             <iPillageGold>0</iPillageGold>
             <bOutsideBorders>0</bOutsideBorders>
@@ -6316,9 +6316,9 @@
             <bUnique>0</bUnique>
             <iAppearanceProbability>60</iAppearanceProbability>
             <iHealRateChange>0</iHealRateChange>
-            <iRange>3</iRange>
-            <iRangeDefenseModifier>15</iRangeDefenseModifier>
-            <iVisibilityChange>2</iVisibilityChange>
+            <iRange>4</iRange>
+            <iRangeDefenseModifier>10</iRangeDefenseModifier>
+            <iVisibilityChange>4</iVisibilityChange>
             <BonusConvert>NONE</BonusConvert>
             <FeatureUpgrade>NONE</FeatureUpgrade>
             <PrereqCivilization>NONE</PrereqCivilization>
