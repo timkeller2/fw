@@ -4572,6 +4572,7 @@ def spellDiplomacy(caster):
 							iStack[pUnit.getOwner()] += 1
 					else:
 						iSupport[pUnit.getOwner()] = iWill
+						iStack[pUnit.getOwner()] = 1
 
 	# Determine Best Unit to try to hire
 	sDip = 'Evaluating diplomacy options...'

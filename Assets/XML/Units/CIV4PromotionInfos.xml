@@ -13014,7 +13014,7 @@
             <PromotionPrereq>PROMOTION_PATH_FINDING1</PromotionPrereq>
             <PromotionPrereqOr1>NONE</PromotionPrereqOr1>
             <PromotionPrereqOr2>NONE</PromotionPrereqOr2>
-            <TechPrereq>TECH_HUNTING</TechPrereq>
+            <TechPrereq>NONE</TechPrereq>
             <StateReligionPrereq>NONE</StateReligionPrereq>
             <bLeader>0</bLeader>
             <bBlitz>0</bBlitz>
