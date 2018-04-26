@@ -2894,7 +2894,7 @@ class CustomFunctions:
 			iThisPlotTrainAnimal = 0
 			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_TOWER'):
 				iThisPlotTrain = 1
-			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_FORT') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_PIRATE_COVE'):
+			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_FORT') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_PIRATE_COVE') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CANAL'):
 				iThisPlotTrain = 2
 			if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_CASTLE') or iImprovement == gc.getInfoTypeForString('IMPROVEMENT_PIRATE_HARBOR'):
 				iThisPlotTrain = 4
@@ -3607,8 +3607,8 @@ class CustomFunctions:
 							pUnit.doDamageNoCaster(iDam, 100, gc.getInfoTypeForString('DAMAGE_COLD'), False)
 							if iDam > 7:
 								pUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SLOW'), True)
-							sMsg = 'Blistering wind, ice and cold inflict damage on ' + pUnit.getName() + '...  (Seek shelter in a city, defensive structure or a warmer climate.)'
-							CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CONTAGION',1,pUnit.getButton(),ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
+								sMsg = 'Blistering wind, ice and cold inflict damage on ' + pUnit.getName() + '...  (Seek shelter in a city, defensive structure or a warmer climate.)'
+								CyInterface().addMessage(pUnit.getOwner(),false,25,sMsg,'AS3D_SPELL_CONTAGION',1,pUnit.getButton(),ColorTypes(7),pUnit.getX(),pUnit.getY(),True,True)
 						
 				if pUnit.getGameTurnCreated() == iGameTurn:
 					self.tough(pUnit)

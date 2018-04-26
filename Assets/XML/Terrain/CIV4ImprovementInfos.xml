@@ -6242,7 +6242,7 @@
             <Help></Help>
             <ArtDefineTag>ART_DEF_IMPROVEMENT_TOWER</ArtDefineTag>
             <bActsAsCity>0</bActsAsCity>
-            <bHillsMakesValid>1</bHillsMakesValid>
+            <bHillsMakesValid>0</bHillsMakesValid>
             <bFreshWaterMakesValid>0</bFreshWaterMakesValid>
             <bRiverSideMakesValid>0</bRiverSideMakesValid>
             <bNoFreshWater>0</bNoFreshWater>
@@ -6300,6 +6300,10 @@
                 </TerrainMakesValid>
                 <TerrainMakesValid>
                     <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_SNOW</TerrainType>
                     <bMakesValid>1</bMakesValid>
                 </TerrainMakesValid>
             </TerrainMakesValids>

@@ -4621,7 +4621,7 @@ def spellDiplomacy(caster):
 					sDip = pUnit.getName() + ': Diplomacy: '+str(iL)+' Dif: ' + str(iDif) + ' Potential Offer: ' + str( iValue * 15 ) + ' Enemy Help: ' + str( iSupport[pUnit.getOwner()] ) + ' Chance: ' + str( iChance ) + ' Decision: ' + str( iWeight ) + '...'
 					CyInterface().addCombatMessage(caster.getOwner(),sDip)
 
-					if iWeight > iBestValue and iChance > 19 and iValue * 15 < pPlayer.getGold() and iValue > 0 and pUnit.getLevel() + pUnit.baseCombatStr() <= caster.getLevel() + caster.baseCombatStr() and iStack[pUnit.getOwner()] < 4 and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
+					if iWeight > iBestValue and iValue * 15 < pPlayer.getGold() and iValue > 0 and pUnit.getLevel() + pUnit.baseCombatStr() <= caster.getLevel() + caster.baseCombatStr() and iStack[pUnit.getOwner()] < 4 and pUnit.getUnitClassType() != gc.getInfoTypeForString('UNITCLASS_HIDDEN_CACHE') and pUnit.getUnitCombatType() != gc.getInfoTypeForString('UNITCOMBAT_ANIMAL'):
 						iBestValue = iValue
 						iBestWeight = iWeight
 						iBestChance = iChance
@@ -4631,7 +4631,7 @@ def spellDiplomacy(caster):
 	# Found a unit that meets our criteria!
 	if pBestUnit != -1:
 		iCheck = cf.getObjectInt(caster,'CheckDiplo')
-		if CyGame().getGameTurn() == iCheck:
+		if CyGame().getGameTurn() == iCheck and iBestChance > 19:
 			sMsg = 'Attempting to hire a ' + pBestUnit.getName() + ' for ' + str( iBestValue * 15 ) + ' gold with a ' + str(iChance) + '% chance...'
 			CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 			CyInterface().addCombatMessage(caster.getOwner(),sMsg)
@@ -4650,11 +4650,15 @@ def spellDiplomacy(caster):
 				CyInterface().addMessage(caster.getOwner(),true,25,'Diplomacy Failure... ','',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 				CyInterface().addCombatMessage(caster.getOwner(),'Diplomacy Failure... ')
 		else:
-			sMsg = 'Attempt to hire a ' + pBestUnit.getName() + ' for ' + str( iBestValue * 15 ) + ' gold with a ' + str(iChance) + '% chance?'
+			if iBestChance < 20:
+				sMsg = 'Chances too low to attempt to hire a ' + pBestUnit.getName() + ' for ' + str( iBestValue * 15 ) + ' gold with a ' + str(iChance) + '% chance...'
+			else:
+				sMsg = 'Attempt to hire a ' + pBestUnit.getName() + ' for ' + str( iBestValue * 15 ) + ' gold with a ' + str(iChance) + '% chance?'
+				cf.setObjectInt(caster,'CheckDiplo',CyGame().getGameTurn())
+				caster.setHasCasted(False)
+				
 			CyInterface().addMessage(caster.getOwner(),true,25,sMsg,'',1,'Art/Interface/Buttons/Units/Commander.dds',ColorTypes(8),caster.getX(),caster.getY(),True,True)
 			CyInterface().addCombatMessage(caster.getOwner(),sMsg)
-			cf.setObjectInt(caster,'CheckDiplo',CyGame().getGameTurn())
-			caster.setHasCasted(False)
 
 			
 def spellSummonCustom(caster,sUnit):
