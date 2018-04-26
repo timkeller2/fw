@@ -34,7 +34,7 @@
 			<iCost>0</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>NONE</ImprovementType>
-			<RouteType>ROUTE_IMPROVED_ROAD</RouteType>
+			<RouteType>ROUTE_RAILROAD</RouteType>
 			<EntityEvent>ENTITY_EVENT_SHOVEL</EntityEvent>
 			<FeatureStructs/>
 			<HotKey>KB_R</HotKey>
@@ -852,7 +852,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildFort.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,9</Button>
+			<Button>Art/Interface/Buttons/Builds/BuildFort.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_TOWER</Type>
@@ -907,7 +907,7 @@
 			<bShiftDown>1</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildTower.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,9</Button>
+			<Button>Art/Interface/Buttons/Improvements/Tower.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_FORT</Type>
@@ -962,7 +962,7 @@
 			<bShiftDown>0</bShiftDown>
 			<bCtrlDown>1</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildFort.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,9</Button>
+			<Button>Art/Interface/Buttons/Improvements/Goblin Fort.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_CASTLE</Type>

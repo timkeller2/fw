@@ -4266,7 +4266,7 @@
             <YieldChanges>
                 <iYieldChange>0</iYieldChange>
                 <iYieldChange>3</iYieldChange>
-                <iYieldChange>1</iYieldChange>
+                <iYieldChange>0</iYieldChange>
             </YieldChanges>
             <bActsAsCity>0</bActsAsCity>
             <bHillsMakesValid>1</bHillsMakesValid>
@@ -4371,7 +4371,7 @@
                     <PrereqTech>TECH_BLASTING_POWDER</PrereqTech>
                     <TechYields>
                         <iYield>0</iYield>
-                        <iYield>2</iYield>
+                        <iYield>1</iYield>
                         <iYield>0</iYield>
                     </TechYields>
                 </TechYieldChange>

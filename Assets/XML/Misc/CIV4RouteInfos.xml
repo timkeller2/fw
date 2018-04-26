@@ -9,7 +9,7 @@
 		<RouteInfo>
 			<Type>ROUTE_ROAD</Type>
 			<Description>TXT_KEY_ROUTE_ROAD</Description>
-			<iValue>2</iValue>
+			<iValue>1</iValue>
 			<iAdvancedStartCost>12</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>30</iMovement>
@@ -26,9 +26,9 @@
 			<Button>Art/Interface/Buttons/Builds/BuildRoad.dds</Button>
 		</RouteInfo>
 		<RouteInfo>
-			<Type>ROUTE_IMPROVED_ROAD</Type>
+			<Type>ROUTE_RAILROAD</Type>
 			<Description>Improved Road</Description>
-			<iValue>1</iValue>
+			<iValue>3</iValue>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>20</iMovement>
@@ -39,26 +39,7 @@
 			<TechMovementChanges>
 				<TechMovementChange>
 					<PrereqTech>TECH_ENGINEERING</PrereqTech>
-					<iMovementChange>-8</iMovementChange>
-				</TechMovementChange>
-			</TechMovementChanges>
-			<Button>Art/Interface/Buttons/Builds/BuildRailRoad.dds</Button>
-		</RouteInfo>
-		<RouteInfo>
-			<Type>ROUTE_RAILROAD</Type>
-			<Description>Improved Road</Description>
-			<iValue>1</iValue>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
-			<iMovement>20</iMovement>
-			<iFlatMovement>20</iFlatMovement>
-			<BonusType>NONE</BonusType>
-			<PrereqOrBonuses/>
-			<Yields/>
-			<TechMovementChanges>
-				<TechMovementChange>
-					<PrereqTech>TECH_NEVER</PrereqTech>
-					<iMovementChange>-8</iMovementChange>
+					<iMovementChange>-10</iMovementChange>
 				</TechMovementChange>
 			</TechMovementChanges>
 			<Button>Art/Interface/Buttons/Builds/BuildRailroad.dds</Button>

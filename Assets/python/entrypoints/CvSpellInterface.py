@@ -5583,6 +5583,46 @@ def spellCompFireball(caster,ifire):
 				pUnit.doDamage(iDamage, 100, caster, gc.getInfoTypeForString('DAMAGE_FIRE'), true)
 			return
 	
+def reqImproveRoad(caster):
+	pPlot = caster.plot()
+	if pPlot.getRouteType() == gc.getInfoTypeForString('ROUTE_ROAD'):
+		return True
+	return False	
+	
+def spellImproveRoad(caster):
+	pPlot = caster.plot()
+	pPlot.setRouteType(gc.getInfoTypeForString('ROUTE_RAILROAD'))
+
+def reqImproveFarm(caster):
+	pPlot = caster.plot()
+	if pPlot.getImprovementType() == gc.getInfoTypeForString('IMPROVEMENT_FARM'):
+		return True
+	return False	
+	
+def spellImproveFarm(caster):
+	pPlot = caster.plot()
+	pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_IMPROVED_FARM'))
+
+def reqImproveMine(caster):
+	pPlot = caster.plot()
+	if pPlot.getImprovementType() == gc.getInfoTypeForString('IMPROVEMENT_MINE'):
+		return True
+	return False	
+	
+def spellImproveMine(caster):
+	pPlot = caster.plot()
+	pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_IMPROVED_MINE'))
+
+def reqImproveLumbermill(caster):
+	pPlot = caster.plot()
+	if pPlot.getImprovementType() == gc.getInfoTypeForString('IMPROVEMENT_LUMBERMILL'):
+		return True
+	return False	
+	
+def spellImproveLumbermill(caster):
+	pPlot = caster.plot()
+	pPlot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_IMPROVED_LUMBERMILL'))
+
 def reqRecruitGiant(caster):
 	iX = caster.getX()
 	iY = caster.getY()
