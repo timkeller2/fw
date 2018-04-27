@@ -6247,7 +6247,7 @@
         <PromotionInfo>
             <Type>PROMOTION_PERFECT_SIGHT</Type>
             <Description>TXT_KEY_PROMOTION_PERFECT_SIGHT</Description>
-            <Help>[ICON_BULLET]+2 Search[NEWLINE][ICON_BULLET]Adds Sentry to new animal young.</Help>
+            <Help>[ICON_BULLET]Adds Sentry to new animal young.</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_SENTRY2</PromotionPrereq>
             <UnitCombats>
@@ -6676,7 +6676,7 @@
         <PromotionInfo>
             <Type>PROMOTION_SENTRY</Type>
             <Description>TXT_KEY_PROMOTION_SENTRY</Description>
-            <Help>[ICON_BULLET]+1 Search</Help>
+            <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereqOr1>PROMOTION_COMBAT3</PromotionPrereqOr1>
             <PromotionPrereqOr2>PROMOTION_PATH_FINDING2</PromotionPrereqOr2>
@@ -6726,7 +6726,7 @@
         <PromotionInfo>
             <Type>PROMOTION_SENTRY2</Type>
             <Description>TXT_KEY_PROMOTION_SENTRY2</Description>
-            <Help>[ICON_BULLET]+1 Search</Help>
+            <Help></Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <PromotionPrereq>PROMOTION_SENTRY</PromotionPrereq>
             <iVisibilityChange>1</iVisibilityChange>
@@ -10832,7 +10832,7 @@
         <PromotionInfo>
             <Type>PROMOTION_BURGLAR1</Type>
             <Description>Burglar I</Description>
-            <Help>[ICON_BULLET]+1 Search[NEWLINE][ICON_BULLET]Burglar promotions help units find the many secret caches throughout Erebus.  A potentially very rewarding occupation, if also difficult.[NEWLINE][ICON_BULLET]Burglar promotions optionally supplemented with Sentry promotions increase the chance of finding good loot in dungeons and looting hidden caches.[NEWLINE][ICON_BULLET]You must be fortified (searching the area) for at least a turn or be in a city to gain the search controls, the longer the more effective your results will be.</Help>
+            <Help>[ICON_BULLET]+1 Search[NEWLINE][ICON_BULLET]Burglar promotions help units find the many secret caches throughout Erebus.  A potentially very rewarding occupation, if also difficult.[NEWLINE][ICON_BULLET]Burglar promotions increase the chance of finding good loot in dungeons and looting hidden caches.[NEWLINE][ICON_BULLET]Search Strength = ((Level+Fortify)xSearch)/5+1</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -10976,7 +10976,7 @@
         <PromotionInfo>
             <Type>PROMOTION_BURGLAR2</Type>
             <Description>Burglar II</Description>
-            <Help>[ICON_BULLET]+2 Search</Help>
+            <Help>[ICON_BULLET]+1 Search[NEWLINE][ICON_BULLET]Search Strength = ((Level+Fortify)xSearch)/5+1</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_BURGLAR1</PromotionPrereq>
@@ -11156,7 +11156,7 @@
         <PromotionInfo>
             <Type>PROMOTION_BURGLAR3</Type>
             <Description>Burglar III</Description>
-            <Help>[ICON_BULLET]+4 Search</Help>
+            <Help>[ICON_BULLET]+1 Search[NEWLINE][ICON_BULLET]Search Strength = ((Level+Fortify)xSearch)/5+1</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_BURGLAR2</PromotionPrereq>

@@ -857,25 +857,12 @@ class CustomFunctions:
 		if i == 0:
 			return 0
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR2')):
-			i += 2
+			i += 1
 		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_BURGLAR3')):
-			i += 4
+			i += 1
 			
-		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY')):
-			i += 1
-		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_SENTRY2')):
-			i += 1
-		if unit.isHasPromotion(gc.getInfoTypeForString('PROMOTION_PERFECT_SIGHT')):
-			i += 2
-
-		iExtendedSearch = unit.getFortifyTurns()
-		if iExtendedSearch > int( i / 2 ):
-			iExtendedSearch = int( i / 2 )
-		if iExtendedSearch > 5:
-			iExtendedSearch = 5
-
-		i += iExtendedSearch	
-
+		i = ( ( unit.getLevel() + unit.getFortifyTurns() ) * i ) / 5 + 1
+			
 		return i
 
 	def bTechExist(self, sTech):
@@ -1256,7 +1243,7 @@ class CustomFunctions:
 			self.generateLoot(iUnit,iHaveScrolls)
 
 
-	def sBarbUnit(self):
+	def sSeaUnit(self):
 		i = CyGame().getSorenRandNum(100, "BarbUnitSelect")
 
 		if self.bTechExist('TECH_BRONZE_WORKING'):
@@ -1267,10 +1254,47 @@ class CustomFunctions:
 			i += 60
 
 		if(i<50):
-			return 'UNIT_GOBLIN'
+			return 'UNIT_RAFT'
 		elif(i<100):
-			return 'UNIT_WARRIOR'
+			return 'UNIT_GALLEY'
 		elif(i<150):
+			ii = CyGame().getSorenRandNum(6, "BarbUnitSelectTier")
+			if( ii < 3 ):
+				return 'UNIT_TRIREME'
+			elif( ii < 5 ):
+				return 'UNIT_SEA_SERPENT'
+			elif( ii == 5 ):
+				return 'UNIT_CARAVEL'
+		elif(i<200):
+			ii = CyGame().getSorenRandNum(6, "BarbUnitSelectTier")
+			if( ii < 3 ):
+				return 'UNIT_PRIVATEER'
+			elif( ii < 4 ):
+				return 'UNIT_GIANT_SEA_SERPENT'
+			elif( ii < 5 ):
+				return 'UNIT_MAN_O_WAR'
+			elif( ii == 5 ):
+				return 'UNIT_FRIGATE'
+		elif(i>200):
+			return 'UNIT_KRAKEN'
+			
+		return 'UNIT_SEA_SERPENT'
+
+	def sBarbUnit(self):
+		i = CyGame().getSorenRandNum(100, "BarbUnitSelect")
+
+		if self.bTechExist('TECH_BRONZE_WORKING'):
+			i += 30
+		if self.bTechExist('TECH_IRON_WORKING'):
+			i += 30
+		if self.bTechExist('TECH_MITHRIL_WORKING'):
+			i += 60
+
+		if(i<45):
+			return 'UNIT_GOBLIN'
+		elif(i<90):
+			return 'UNIT_WARRIOR'
+		elif(i<140):
 			ii = CyGame().getSorenRandNum(6, "BarbUnitSelectTier")
 			if( ii < 3 ):
 				return 'UNIT_AXEMAN'
@@ -1290,6 +1314,7 @@ class CustomFunctions:
 				return 'UNIT_LIZARDMAN'
 		elif(i>200):
 			return 'UNIT_OGRE'
+			
 		return 'UNIT_WARRIOR'
 
 	def sComputerUnit(self):
@@ -1327,7 +1352,7 @@ class CustomFunctions:
 			elif( ii == 5 ):
 				return 'UNIT_RANGER'
 
-		return 'UNIT_WARRIOR'
+		return 'UNIT_PHALANX'
 
 	def sUndeadUnit(self):
 		i = CyGame().getSorenRandNum(100, "BarbUnitSelect")
@@ -1475,6 +1500,33 @@ class CustomFunctions:
 				return True
 
 		return False
+
+	def addSeaUnit(self, iUnit):
+		biPlayer = gc.getBARBARIAN_PLAYER()
+		pBestPlot = -1
+		iBestPlot = -1
+		for i in range (CyMap().numPlots()):
+			pPlot = CyMap().plotByIndex(i)
+			iPlot = -1
+			if pPlot.isWater() == True:
+				if pPlot.getNumUnits() == 0:
+					if pPlot.isCity() == False:
+						if pPlot.isImpassable() == False:
+							iPlot = CyGame().getSorenRandNum(500, "Add Unit")
+							iPlot = iPlot + (pPlot.area().getNumTiles() * 10)
+							if (pPlot.isOwned() and pPlot.isBarbarian() != True):
+								iPlot = iPlot / 2
+							if pPlot.isVisibleEnemyUnit(biPlayer):
+								iPlot = iPlot / 2
+							if iPlot > iBestPlot:
+								iBestPlot = iPlot
+								pBestPlot = pPlot
+		if iBestPlot != -1:
+			bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
+			newUnit = bPlayer.initUnit(iUnit, pBestPlot.getX(), pBestPlot.getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+			newUnit.finishMoves()
+			self.equip(newUnit)
+			return newUnit
 
 	def addUnit(self, iUnit):
 		biPlayer = gc.getBARBARIAN_PLAYER()
@@ -2462,6 +2514,8 @@ class CustomFunctions:
 			self.addUnit(gc.getInfoTypeForString(self.sAnimalUnit()))
 		if CyGame().getSorenRandNum(4+iAdj, "BarbarianStuff") == 1:
 			self.addBarbUnit(gc.getInfoTypeForString(self.sBarbUnit()))
+		if CyGame().getSorenRandNum(6+iAdj, "SeaBarbarianStuff") == 1:
+			self.addSeaUnit(gc.getInfoTypeForString(self.sSeaUnit()))
 		if iGameTurn < iCache:
 			self.addBarbUnitA(gc.getInfoTypeForString('UNIT_HIDDEN_CACHE'))
 		if self.bTechExist('TECH_NECROMANCY') and CyGame().getSorenRandNum(4+iAdj, "UndeadStuff") == 1:
@@ -2733,6 +2787,8 @@ class CustomFunctions:
 									self.generateLoot(newUnit,newUnit.baseCombatStr())
 									newUnit.changeExperience(iForceSize+1, -1, False, False, False)
 									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CITY_RAIDER1'), True)
+									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CITY_RAIDER2'), True)
+									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CITY_RAIDER3'), True)
 									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_HERO'), True)
 									newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_LOYALTY'), True)
 									sMsg = newUnit.getName() + ' rises to lead the barbarians!'
@@ -2871,6 +2927,7 @@ class CustomFunctions:
 			# Add computer defenders for dungeons
 			if iGameTurn == 0:
 				sDefender = 'NONE'
+				sDefender2 = self.sBarbUnit()
 				if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_DUNGEON'):
 					sDefender = 'UNIT_WARRIOR'
 				if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_BARROW'):
@@ -2883,12 +2940,16 @@ class CustomFunctions:
 					sDefender = 'UNIT_GOBLIN'
 				if iImprovement == gc.getInfoTypeForString('IMPROVEMENT_SHIP_WRECK'):
 					sDefender = 'UNIT_STYGIAN_GUARD'
+					sDefender2 = 'UNIT_SEA_SERPENT'
 			
 				if sDefender != 'NONE':
 					bPlayer = gc.getPlayer(gc.getBARBARIAN_PLAYER())
 					newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sDefender), pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
 					self.equip(newUnit)
 					newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_CREEP'), True)
+					newUnit = bPlayer.initUnit(gc.getInfoTypeForString(sDefender2), pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
+					self.equip(newUnit)
+					newUnit.setHasPromotion(gc.getInfoTypeForString('PROMOTION_SLEEPING'), True)
 			
 			iThisPlotTrain = 0
 			iThisPlotTrainAnimal = 0
