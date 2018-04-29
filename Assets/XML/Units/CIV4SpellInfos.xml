@@ -2042,7 +2042,7 @@
             <Type>SPELL_MAELSTROM</Type>
             <Description>TXT_KEY_SPELL_MAELSTROM</Description>
             <Civilopedia></Civilopedia>
-            <Help>Does 1/lev% damage to all units within range 1 except the caster's tile, unless the caster has channeling3 in which case the damage is 2/lev% and range 2.  Affects lev x 2 units, double if chan 3.</Help>
+            <Help>Does lev% damage to all units within range 1 except the caster's tile, unless the caster has channeling3 in which case the damage is 2xlev% and range 2.  Affects lev x 2 units, double if chan 3.</Help>
             <PromotionPrereq1>PROMOTION_AIR2</PromotionPrereq1>
             <bAllowAI>1</bAllowAI>
             <bDisplayWhenDisabled>1</bDisplayWhenDisabled>

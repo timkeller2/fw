@@ -10832,7 +10832,7 @@
         <PromotionInfo>
             <Type>PROMOTION_BURGLAR1</Type>
             <Description>Burglar I</Description>
-            <Help>[ICON_BULLET]+1 Search[NEWLINE][ICON_BULLET]Burglar promotions help units find the many secret caches throughout Erebus.  A potentially very rewarding occupation, if also difficult.[NEWLINE][ICON_BULLET]Burglar promotions increase the chance of finding good loot in dungeons and looting hidden caches.[NEWLINE][ICON_BULLET]Search Strength = ((Level+Fortify)xSearch)/5+1</Help>
+            <Help>[ICON_BULLET]+1 Search[NEWLINE][ICON_BULLET]Burglar promotions help units find the many secret caches throughout Erebus.  A potentially very rewarding occupation, if also difficult.[NEWLINE][ICON_BULLET]Burglar promotions increase the chance of finding good loot in dungeons and looting hidden caches.[NEWLINE][ICON_BULLET]Search Strength = ((Level+Fortify)xSearch)/5+1[NEWLINE][ICON_BULLET]Search Range = Search Strength + City Population / 2[NEWLINE][ICON_BULLET]Cache Interaction Range = Search Strength / 4</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>NONE</PromotionPrereq>
@@ -10976,7 +10976,7 @@
         <PromotionInfo>
             <Type>PROMOTION_BURGLAR2</Type>
             <Description>Burglar II</Description>
-            <Help>[ICON_BULLET]+1 Search[NEWLINE][ICON_BULLET]Search Strength = ((Level+Fortify)xSearch)/5+1</Help>
+            <Help>[ICON_BULLET]+1 Search[NEWLINE][ICON_BULLET]Search Strength = ((Level+Fortify)xSearch)/5+1[NEWLINE][ICON_BULLET]Search Range = Search Strength + City Population / 2[NEWLINE][ICON_BULLET]Cache Interaction Range = Search Strength / 4</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_BURGLAR1</PromotionPrereq>
@@ -11156,7 +11156,7 @@
         <PromotionInfo>
             <Type>PROMOTION_BURGLAR3</Type>
             <Description>Burglar III</Description>
-            <Help>[ICON_BULLET]+1 Search[NEWLINE][ICON_BULLET]Search Strength = ((Level+Fortify)xSearch)/5+1</Help>
+            <Help>[ICON_BULLET]+1 Search[NEWLINE][ICON_BULLET]Search Strength = ((Level+Fortify)xSearch)/5+1[NEWLINE][ICON_BULLET]Search Range = Search Strength + City Population / 2[NEWLINE][ICON_BULLET]Cache Interaction Range = Search Strength / 4</Help>
             <Sound>AS2D_IF_LEVELUP</Sound>
             <LayerAnimationPath>NONE</LayerAnimationPath>
             <PromotionPrereq>PROMOTION_BURGLAR2</PromotionPrereq>
