@@ -21692,13 +21692,18 @@
             <Button>,Art/Interface/Buttons/Promotions/Navigation2.dds,Art/Interface/Buttons/Promotions_Atlas.dds,8,4</Button>
         </PromotionInfo>
         <PromotionInfo>
-            <Type>PROMOTION_FUTURE_LEARNING6</Type>
-            <Description>Future Learning</Description>
+            <Type>PROMOTION_SADDLE</Type>
+            <Description>Saddle</Description>
             <Sound>AS2D_IF_LEVELUP</Sound>
-            <iCombatPercent>0</iCombatPercent>
-            <Button>Art/Interface/Buttons/Promotions/air1.dds</Button>
-            <iCombatPercentDefense>0</iCombatPercentDefense>
-            <iMinLevel>-1</iMinLevel>
+            <PromotionPrereq>PROMOTION_COMBAT2</PromotionPrereq>
+            <iCargoChange>1</iCargoChange>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/Expandedhull.dds</Button>
         </PromotionInfo>
         <PromotionInfo>
             <Type>PROMOTION_FUTURE_LEARNING7</Type>

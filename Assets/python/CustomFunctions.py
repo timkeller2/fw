@@ -19,7 +19,7 @@ class CustomFunctions:
 
 	def tough(self,unit):
 		
-		if self.getObjectInt(unit,'tough') == 0:
+		if self.getObjectInt(unit,'tough') == 0 and unit.getDuration() == 0:
 			self.setObjectInt(unit,'tough',1)
 			pPlayer = gc.getPlayer(unit.getOwner())
 			iPlayer = unit.getOwner()

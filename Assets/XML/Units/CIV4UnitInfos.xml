@@ -15242,7 +15242,7 @@
             <iBombRate>0</iBombRate>
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
-            <DomainCargo>NONE</DomainCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
@@ -15478,7 +15478,7 @@
             <iBombRate>0</iBombRate>
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
-            <DomainCargo>NONE</DomainCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
@@ -29843,7 +29843,7 @@
             <iBombRate>0</iBombRate>
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
-            <DomainCargo>NONE</DomainCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
@@ -33773,7 +33773,7 @@
             <iBombRate>0</iBombRate>
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
-            <DomainCargo>NONE</DomainCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
@@ -33996,7 +33996,7 @@
             <iBombRate>0</iBombRate>
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
-            <DomainCargo>NONE</DomainCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
@@ -34681,7 +34681,7 @@
             <iBombRate>0</iBombRate>
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
-            <DomainCargo>NONE</DomainCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
@@ -47186,7 +47186,7 @@
             <iBombRate>0</iBombRate>
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
-            <DomainCargo>NONE</DomainCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
@@ -47405,7 +47405,7 @@
             <iBombRate>0</iBombRate>
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
-            <DomainCargo>NONE</DomainCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
@@ -64815,7 +64815,7 @@
             <iBombRate>0</iBombRate>
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
-            <DomainCargo>NONE</DomainCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
@@ -65718,7 +65718,7 @@
             <iBombRate>0</iBombRate>
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
-            <DomainCargo>NONE</DomainCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
@@ -70476,7 +70476,7 @@
             <iBombRate>0</iBombRate>
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
-            <DomainCargo>NONE</DomainCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
@@ -73653,7 +73653,7 @@
             <iBombRate>0</iBombRate>
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
-            <DomainCargo>NONE</DomainCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
@@ -73888,7 +73888,7 @@
             <iBombRate>0</iBombRate>
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
-            <DomainCargo>NONE</DomainCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
@@ -80592,7 +80592,7 @@
             <iBombRate>0</iBombRate>
             <iBombardRate>0</iBombardRate>
             <SpecialCargo>NONE</SpecialCargo>
-            <DomainCargo>NONE</DomainCargo>
+            <DomainCargo>DOMAIN_LAND</DomainCargo>
             <iCargo>0</iCargo>
             <iConscription>0</iConscription>
             <iCultureGarrison>0</iCultureGarrison>
